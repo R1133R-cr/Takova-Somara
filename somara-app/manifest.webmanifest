@@ -1,0 +1,18 @@
+{
+  "name": "Somara — Aprende, Cresce, Brilha",
+  "short_name": "Somara",
+  "description": "App didáctica gamificada da Takova. Matemática do 1º ciclo, nível a nível.",
+  "lang": "pt",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#00272c",
+  "theme_color": "#00272c",
+  "categories": ["education", "games"],
+  "icons": [
+    { "src": "assets/img/somara-icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/img/somara-emblem.png", "sizes": "640x640", "type": "image/png", "purpose": "any" },
+    { "src": "assets/img/somara-emblem.png", "sizes": "640x640", "type": "image/png", "purpose": "maskable" }
+  ]
+}

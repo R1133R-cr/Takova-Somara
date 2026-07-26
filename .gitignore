@@ -1,0 +1,21 @@
+# Dependências / build
+node_modules/
+dist/
+build/
+
+# Sistema / editor
+Thumbs.db
+.DS_Store
+*.log
+*.tmp
+
+# Config local (caminhos da máquina)
+.claude/
+
+# Material de origem — pesado e/ou com direitos de autor (não versionar)
+Features/Manuais/*.pdf
+Takova Design System-handoff.zip
+Takova Design System-handoff/
+
+# Temporários
+scratchpad/

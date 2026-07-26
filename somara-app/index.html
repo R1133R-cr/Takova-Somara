@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Somara — Aprende, Cresce, Brilha</title>
+<meta name="description" content="Somara: app didáctica gamificada da Takova. Matemática do 1º ciclo, nível a nível, como um jogo.">
+<meta name="theme-color" content="#00272c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/img/somara-icon-64.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/somara-icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/somara.css">
+</head>
+<body>
+<div class="app" id="app">
+  <div class="topbar" id="topbar" style="display:none"></div>
+  <section class="screen" id="screen-welcome" aria-label="Boas-vindas"></section>
+  <section class="screen" id="screen-onboarding" aria-label="Configuração inicial"></section>
+  <section class="screen" id="screen-map" aria-label="Mapa de níveis"></section>
+  <section class="screen" id="screen-lesson" aria-label="Lição"></section>
+  <section class="screen" id="screen-complete" aria-label="Nível concluído"></section>
+  <section class="screen" id="screen-profile" aria-label="Perfil"></section>
+  <div class="modal-scrim" id="modal-lives"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+<script src="assets/js/content.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

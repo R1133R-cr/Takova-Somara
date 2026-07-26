@@ -1,0 +1,100 @@
+<h2 class="sr-only">Demonstração interactiva de um efeito de cursor com pirilampos bioluminescentes que seguem o rato sobre um fundo escuro.</h2>
+<div style="position: relative; width: 100%; height: 380px; background: #0a1410; border-radius: var(--border-radius-lg); overflow: hidden; cursor: none;">
+  <canvas id="ffcanvas" style="display:block; width:100%; height:100%;"></canvas>
+  <div id="ffhint" style="position:absolute; top:14px; left:16px; font-family:var(--font-sans); font-size:13px; color:rgba(180,220,200,0.55); pointer-events:none; transition:opacity .6s;">mexe o rato aqui dentro</div>
+</div>
+<script>
+(function(){
+  const cv = document.getElementById('ffcanvas');
+  const ctx = cv.getContext('2d');
+  const hint = document.getElementById('ffhint');
+  let W, H, dpr;
+  function resize(){
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const mouse = { x: -999, y: -999, active: false };
+  cv.addEventListener('mousemove', e => {
+    const r = cv.getBoundingClientRect();
+    mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top;
+    mouse.active = true;
+    hint.style.opacity = '0';
+  });
+  cv.addEventListener('mouseleave', () => { mouse.active = false; });
+
+  const N = 46;
+  const flies = [];
+  for (let i=0;i<N;i++){
+    flies.push({
+      x: Math.random()*W, y: Math.random()*H,
+      vx: (Math.random()-0.5)*0.25, vy: (Math.random()-0.5)*0.25,
+      r: 1.2 + Math.random()*1.6,
+      phase: Math.random()*Math.PI*2,
+      blink: 0.6 + Math.random()*1.4,
+      wander: Math.random()*Math.PI*2
+    });
+  }
+
+  function draw(t){
+    ctx.clearRect(0,0,W,H);
+    ctx.globalCompositeOperation = 'lighter';
+    for (const f of flies){
+      f.wander += (Math.random()-0.5)*0.3;
+      f.vx += Math.cos(f.wander)*0.012;
+      f.vy += Math.sin(f.wander)*0.012;
+
+      if (mouse.active){
+        const dx = mouse.x - f.x, dy = mouse.y - f.y;
+        const d2 = dx*dx + dy*dy;
+        const d = Math.sqrt(d2) || 1;
+        if (d < 170){
+          const pull = (1 - d/170) * 0.05;
+          f.vx += (dx/d) * pull;
+          f.vy += (dy/d) * pull;
+        }
+        if (d < 22){
+          f.vx -= (dx/d) * 0.06;
+          f.vy -= (dy/d) * 0.06;
+        }
+      }
+
+      f.vx *= 0.96; f.vy *= 0.96;
+      const sp = Math.hypot(f.vx,f.vy);
+      if (sp > 0.9){ f.vx *= 0.9/sp; f.vy *= 0.9/sp; }
+      f.x += f.vx; f.y += f.vy;
+
+      if (f.x < -10) f.x = W+10; if (f.x > W+10) f.x = -10;
+      if (f.y < -10) f.y = H+10; if (f.y > H+10) f.y = -10;
+
+      const glow = 0.45 + 0.55 * (0.5 + 0.5*Math.sin(t*0.001*f.blink + f.phase));
+      const R = f.r * (6 + glow*4);
+      const g = ctx.createRadialGradient(f.x,f.y,0,f.x,f.y,R);
+      g.addColorStop(0, 'rgba(214,255,170,'+(0.55*glow)+')');
+      g.addColorStop(0.3, 'rgba(150,230,120,'+(0.30*glow)+')');
+      g.addColorStop(1, 'rgba(120,200,90,0)');
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(f.x,f.y,R,0,Math.PI*2); ctx.fill();
+
+      ctx.fillStyle = 'rgba(235,255,200,'+(0.85*glow)+')';
+      ctx.beginPath(); ctx.arc(f.x,f.y,f.r*0.9,0,Math.PI*2); ctx.fill();
+    }
+
+    if (mouse.active){
+      const cg = ctx.createRadialGradient(mouse.x,mouse.y,0,mouse.x,mouse.y,26);
+      cg.addColorStop(0,'rgba(255,240,200,0.18)');
+      cg.addColorStop(1,'rgba(255,240,200,0)');
+      ctx.fillStyle = cg;
+      ctx.beginPath(); ctx.arc(mouse.x,mouse.y,26,0,Math.PI*2); ctx.fill();
+    }
+
+    ctx.globalCompositeOperation = 'source-over';
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+</script>
