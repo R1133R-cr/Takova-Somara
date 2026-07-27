@@ -196,7 +196,9 @@ img { max-width: 100%; display: block; }
 .lx-bar { flex: 1; height: 14px; border-radius: var(--r-pill); background: var(--gm-surface); overflow: hidden; }
 .lx-bar > i { display: block; height: 100%; background: var(--chart); border-radius: inherit; transition: width 350ms var(--ease); }
 .lx-lives { display: flex; align-items: center; gap: 4px; color: var(--life); font-family: var(--font-display); font-weight: 600; }
-.q-area { padding: 26px 22px; }
+.q-area { padding: 26px 22px; position: relative; }
+.q-speak { position: absolute; top: 16px; right: 20px; width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--gm-surface); color: var(--chart); font-size: 19px; box-shadow: 0 3px 0 rgba(0,0,0,.3); z-index: 2; }
+.q-speak:active { transform: translateY(2px); box-shadow: 0 1px 0 rgba(0,0,0,.3); }
 .q-area h2 { font-size: 25px; line-height: 1.25; }
 .count-box { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; font-size: 40px; margin: 26px 0; padding: 22px; background: var(--gm-surface); border-radius: var(--r-lg); }
 .opts { display: flex; flex-direction: column; gap: 12px; margin-top: 26px; }

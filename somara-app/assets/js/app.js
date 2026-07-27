@@ -31,6 +31,16 @@
   function toast(msg) { var t = $("#toast"); t.textContent = msg; t.classList.remove("show"); void t.offsetWidth; t.classList.add("show"); }
   function isNum(a) { return /^-?[0-9]+$/.test(String(a)); }
 
+  /* ---- voz (TTS) + efeitos sonoros ---- */
+  var TTS = ("speechSynthesis" in window);
+  function speak(txt) { if (!TTS) return; try { speechSynthesis.cancel(); var u = new SpeechSynthesisUtterance(String(txt)); u.lang = "pt-PT"; u.rate = 0.95; u.pitch = 1.05; speechSynthesis.speak(u); } catch (e) {} }
+  var AC = null;
+  function actx() { try { if (!AC) AC = new (window.AudioContext || window.webkitAudioContext)(); if (AC.state === "suspended") AC.resume(); } catch (e) {} return AC; }
+  function beep(freqs, type, dur, gap) { var c = actx(); if (!c) return; var t = c.currentTime; freqs.forEach(function (f, k) { var o = c.createOscillator(), g = c.createGain(); o.type = type || "sine"; o.frequency.value = f; var st = t + k * (gap || 0.12); o.connect(g); g.connect(c.destination); g.gain.setValueAtTime(0.0001, st); g.gain.exponentialRampToValueAtTime(0.14, st + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, st + (dur || 0.16)); o.start(st); o.stop(st + (dur || 0.16) + 0.03); }); }
+  function sndOk() { beep([660, 988], "triangle", 0.16, 0.11); }
+  function sndNo() { beep([196, 150], "sawtooth", 0.22, 0.14); }
+  function sndLevel() { beep([523, 659, 784, 1047], "triangle", 0.17, 0.12); }
+
   /* ---- níveis do curso actual (lista plana) ---- */
   var LEVELS = [];
   function buildLevels() { LEVELS = []; CURSO.units.forEach(function (u) { u.niveis.forEach(function (n) { LEVELS.push({ unit: u, nivel: n }); }); }); }
@@ -139,12 +149,14 @@
     else body = "<h2>" + esc(q.q) + '</h2><input class="field" id="q-input" inputmode="' + (isNum(q.a) ? "numeric" : "text") + '" autocomplete="off" autocapitalize="characters" placeholder="Escreve a resposta" style="margin-top:24px;text-align:center;font-size:24px" />';
     $("#screen-lesson").innerHTML =
       '<div class="lesson-top"><button class="lx-close" id="lx-x" aria-label="Sair">✕</button><div class="lx-bar"><i style="width:' + prog + '%"></i></div><div class="lx-lives" id="lx-lives">❤️ ' + S.lives + "</div></div>" +
-      '<div class="q-area grow scroll">' + body + '</div><div id="lx-dock"></div><div class="xp-pop" id="xp-pop"></div>';
+      '<div class="q-area grow scroll"><button class="q-speak" id="q-speak" aria-label="Ouvir a pergunta">🔊</button>' + body + '</div><div id="lx-dock"></div><div class="xp-pop" id="xp-pop"></div>';
     $("#lx-x").onclick = function () { if (confirm("Sair da lição? Este nível não conta.")) { renderMap(); show("screen-map"); } };
     if (q.t === "input") { var inp = $("#q-input"); inp.oninput = function () { $("#dock-btn").disabled = !inp.value.trim(); }; inp.onkeydown = function (ev) { if (ev.key === "Enter" && inp.value.trim()) evaluate(); }; setTimeout(function () { inp.focus(); }, 60); }
     else wireOpts();
     $("#lx-dock").innerHTML = '<div class="pad" style="padding-top:6px"><button class="sbtn" id="dock-btn" disabled>Verificar</button></div>';
     $("#dock-btn").onclick = evaluate;
+    var sp = $("#q-speak");
+    if (TTS) { if (sp) sp.onclick = function () { speak(q.q); }; speak(q.q); } else if (sp) sp.style.display = "none";
   }
   function opts(o) { return '<div class="opts" id="opts">' + o.map(function (x, k) { return '<button class="opt" data-k="' + k + '">' + esc(x) + "</button>"; }).join("") + "</div>"; }
   function wireOpts() { $("#opts").querySelectorAll(".opt").forEach(function (b) { b.onclick = function () { if (L.phase !== "answer") return; $("#opts").querySelectorAll(".opt").forEach(function (x) { x.setAttribute("aria-pressed", "false"); }); b.setAttribute("aria-pressed", "true"); L.sel = parseInt(b.getAttribute("data-k"), 10); $("#dock-btn").disabled = false; }; }); }
@@ -153,8 +165,8 @@
     if (q.t === "input") { var v = ($("#q-input").value || "").trim(); correct = v.toUpperCase() === String(q.a).trim().toUpperCase(); L.sel = v; }
     else correct = L.sel === q.a;
     L.phase = "feedback";
-    if (correct) { L.ok++; S.xp += XP_OK; save(); if (q.t !== "input") mark(L.sel, "correct"); xpPop("+" + XP_OK + " XP"); }
-    else { loseLife(); if (q.t !== "input") { mark(L.sel, "wrong"); mark(q.a, "correct"); shake(L.sel); } }
+    if (correct) { sndOk(); L.ok++; S.xp += XP_OK; save(); if (q.t !== "input") mark(L.sel, "correct"); xpPop("+" + XP_OK + " XP"); }
+    else { sndNo(); loseLife(); if (q.t !== "input") { mark(L.sel, "wrong"); mark(q.a, "correct"); shake(L.sel); } }
     feedback(correct, q);
   }
   function mark(k, c) { var o = $("#opts"); if (o) { var b = o.querySelector('.opt[data-k="' + k + '"]'); if (b) b.classList.add(c); } }
@@ -164,11 +176,12 @@
     var right = q.t === "input" ? q.a : q.options[q.a];
     var m = ok ? ["Boa! Certíssimo ⚡", "Continua assim!"] : ["Quase!", "Resposta certa: " + esc(right)];
     $("#lx-dock").innerHTML = '<div class="feedback ' + (ok ? "ok" : "no") + '"><div class="fb-row"><div class="fb-face"><img src="assets/img/roby-' + (ok ? "feliz" : "triste") + '.png" alt=""></div><div><div class="fb-t">' + m[0] + '</div><div class="fb-sub">' + m[1] + '</div></div></div><button class="sbtn ' + (ok ? "" : "sbtn--danger") + '" id="dock-btn">Continuar</button></div>';
-    $("#dock-btn").onclick = next;
+    if (TTS) speak(m[0]); $("#dock-btn").onclick = next;
   }
   function next() { if (S.lives <= 0) { openLives(); return; } L.idx++; L.phase = "answer"; L.sel = null; if (L.idx >= L.qs.length) return done(); renderQuestion(); }
   function loseLife() { S.lives = Math.max(0, S.lives - 1); save(); var el = $("#lx-lives"); if (el) { el.textContent = "❤️ " + S.lives; el.classList.add("lost"); setTimeout(function () { el.classList.remove("lost"); }, 500); } }
   function done() {
+    sndLevel();
     var acc = Math.round(L.ok / L.qs.length * 100);
     S.progress[keyOf(L)] = { done: true, acc: acc }; S.xp += XP_LEVEL; save();
     $("#screen-complete").innerHTML =

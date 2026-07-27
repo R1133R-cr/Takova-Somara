@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TAKOVA — Site &amp; Somara</title>
+<meta name="description" content="TAKOVA — tecnologia e serviços académicos em Lichinga, Niassa. Site institucional e a app didáctica Somara.">
+<meta name="theme-color" content="#00272c">
+<link rel="icon" href="somara-app/assets/img/somara-icon-64.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; font-family: "Roboto", system-ui, sans-serif; color: #eaf5ef;
+         background: radial-gradient(120% 90% at 80% -10%, #0a3b3f 0%, #00272c 55%, #00181c 100%);
+         display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px 20px; }
+  .brand { font-weight: 900; letter-spacing: .12em; font-size: 34px; color: #fff; }
+  .brand b { color: #e1ff51; }
+  .sub { color: #a9c4bb; margin: 10px 0 34px; text-align: center; max-width: 460px; line-height: 1.6; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; width: 100%; max-width: 720px; }
+  .card { display: block; text-decoration: none; color: inherit; background: rgba(255,255,255,.04);
+          border: 1px solid rgba(255,255,255,.10); border-radius: 20px; padding: 26px; transition: transform .2s, border-color .2s, background .2s; }
+  .card:hover { transform: translateY(-4px); border-color: #2e8b57; background: rgba(46,139,87,.10); }
+  .k { font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #e1ff51; }
+  .card h2 { margin: 8px 0 6px; font-size: 22px; }
+  .card p { margin: 0; color: #a9c4bb; font-size: 14px; line-height: 1.55; }
+  .go { display: inline-block; margin-top: 16px; font-weight: 700; color: #e1ff51; }
+  footer { margin-top: 34px; color: #6f8f86; font-size: 13px; text-align: center; }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+</style>
+</head>
+<body>
+  <div class="brand">TA<b>KOVA</b></div>
+  <p class="sub">Tecnologia e serviços académicos em Lichinga, Niassa. Escolhe onde queres entrar.</p>
+  <div class="grid">
+    <a class="card" href="takova-website/index.html">
+      <div class="k">Empresa</div>
+      <h2>Website institucional</h2>
+      <p>Serviços, trabalhos científicos, sobre e contacto da Takova.</p>
+      <span class="go">Abrir site →</span>
+    </a>
+    <a class="card" href="somara-app/index.html">
+      <div class="k">Produto</div>
+      <h2>Somara — app didáctica</h2>
+      <p>Aprende matemática e português, nível a nível, com o Roby. Estilo amarelinha.</p>
+      <span class="go">Abrir Somara →</span>
+    </a>
+  </div>
+  <footer>© <span id="y">2026</span> Takova · Soluções que Transformam, Tecnologia que Resolve</footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
