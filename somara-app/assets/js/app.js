@@ -53,7 +53,7 @@
   function renderWelcome() {
     $("#screen-welcome").innerHTML =
       '<div class="pad center grow welcome">' +
-        '<div class="roby-card"><img src="assets/img/roby-welcome.png" alt="Roby, o teu guia" /></div>' +
+        '<div class="roby-hero"><img src="assets/img/roby-hero.png" alt="Roby, o teu guia" /></div>' +
         '<div class="wordmark">SOMARA</div>' +
         '<div class="tagline">Aprende · Cresce · Brilha</div>' +
         '<p class="sub">Sou o <b>Roby</b>! Vamos aprender matemática e português, nível a nível, como uma amarelinha. Da creche ao superior.</p>' +
@@ -163,7 +163,7 @@
   function feedback(ok, q) {
     var right = q.t === "input" ? q.a : q.options[q.a];
     var m = ok ? ["Boa! Certíssimo ⚡", "Continua assim!"] : ["Quase!", "Resposta certa: " + esc(right)];
-    $("#lx-dock").innerHTML = '<div class="feedback ' + (ok ? "ok" : "no") + '"><div class="fb-row"><div class="fb-ic">' + (ok ? "✓" : "✕") + '</div><div><div class="fb-t">' + m[0] + '</div><div class="fb-sub">' + m[1] + '</div></div></div><button class="sbtn ' + (ok ? "" : "sbtn--danger") + '" id="dock-btn">Continuar</button></div>';
+    $("#lx-dock").innerHTML = '<div class="feedback ' + (ok ? "ok" : "no") + '"><div class="fb-row"><div class="fb-face"><img src="assets/img/roby-' + (ok ? "feliz" : "triste") + '.png" alt=""></div><div><div class="fb-t">' + m[0] + '</div><div class="fb-sub">' + m[1] + '</div></div></div><button class="sbtn ' + (ok ? "" : "sbtn--danger") + '" id="dock-btn">Continuar</button></div>';
     $("#dock-btn").onclick = next;
   }
   function next() { if (S.lives <= 0) { openLives(); return; } L.idx++; L.phase = "answer"; L.sel = null; if (L.idx >= L.qs.length) return done(); renderQuestion(); }
