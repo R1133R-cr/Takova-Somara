@@ -25,7 +25,8 @@ window.SOMARA_CONTENT = {
             { t: "count", q: "Quantas bolas há?", emoji: "⚽", n: 9, options: ["8", "9", "10"], a: 1 },
             { t: "input", q: "Escreve o número: seis", a: "6" },
             { t: "choice", q: "Qual é o maior?", options: ["6", "8", "10"], a: 2 },
-            { t: "count", q: "Quantos patos há?", emoji: "🦆", n: 6, options: ["5", "6", "7"], a: 1 }
+            { t: "count", q: "Quantos patos há?", emoji: "🦆", n: 6, options: ["5", "6", "7"], a: 1 },
+            { t: "match", q: "Liga cada número à sua palavra.", pairs: [["6", "seis"], ["8", "oito"], ["10", "dez"]] }
           ]}
         ]},
         { id: "u2", titulo: "Comparar e ordenar", niveis: [
@@ -102,7 +103,8 @@ window.SOMARA_CONTENT = {
             { t: "choice", q: "Quantos lados tem um triângulo?", options: ["2", "3", "4"], a: 1 },
             { t: "choice", q: "Um quadrado tem __ lados iguais.", options: ["3", "4", "5"], a: 1 },
             { t: "choice", q: "Qual forma NÃO tem lados?", options: ["quadrado", "triângulo", "círculo"], a: 2 },
-            { t: "choice", q: "Uma porta tem a forma de um...", options: ["rectângulo", "círculo", "triângulo"], a: 0 }
+            { t: "choice", q: "Uma porta tem a forma de um...", options: ["rectângulo", "círculo", "triângulo"], a: 0 },
+            { t: "drag", q: "Arrasta a bola para a forma certa.", chip: "⚽", zones: ["Círculo", "Quadrado", "Triângulo"], a: 0 }
           ]},
           { id: "n2", titulo: "Contar meticais", questoes: [
             { t: "choice", q: "Tens 5 MT e mais 5 MT. Quanto tens?", options: ["5 MT", "10 MT", "15 MT"], a: 1 },
@@ -141,7 +143,8 @@ window.SOMARA_CONTENT = {
             { t: "choice", q: "Qual palavra começa por E?", options: ["Bola", "Escola", "Casa"], a: 1 },
             { t: "input", q: "Completa com a vogal: ov_ (ovo)", a: "O" },
             { t: "choice", q: "IGREJA começa por...", options: ["I", "G"], a: 0 },
-            { t: "choice", q: "Qual palavra começa por O?", options: ["Ovo", "Pato", "Uva"], a: 0 }
+            { t: "choice", q: "Qual palavra começa por O?", options: ["Ovo", "Pato", "Uva"], a: 0 },
+            { t: "drag", q: "Arrasta a uva para a vogal com que UVA começa.", chip: "🍇", zones: ["A", "O", "U"], a: 2 }
           ]}
         ]},
         { id: "u2", titulo: "Sílabas com P", niveis: [
@@ -217,7 +220,8 @@ window.SOMARA_CONTENT = {
             { t: "choice", q: "A Ana come uma maçã. O que come a Ana?", options: ["uma banana", "uma maçã", "um pão"], a: 1 },
             { t: "choice", q: "Está a chover. O que levamos para a rua?", options: ["chapéu-de-chuva", "óculos de sol", "uma bola"], a: 0 },
             { t: "choice", q: "O Sol brilha de dia. Quando brilha o Sol?", options: ["de noite", "de dia"], a: 1 },
-            { t: "choice", q: "A vaca dá-nos...", options: ["leite", "lã", "mel"], a: 0 }
+            { t: "choice", q: "A vaca dá-nos...", options: ["leite", "lã", "mel"], a: 0 },
+            { t: "match", q: "Liga cada animal ao som que faz.", pairs: [["Gato", "Miau"], ["Cão", "Au-au"], ["Vaca", "Mu"]] }
           ]}
         ]}
       ]

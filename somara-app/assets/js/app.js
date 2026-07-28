@@ -145,16 +145,22 @@
     L = { i: i, unit: lv.unit, nivel: lv.nivel, qs: lv.nivel.questoes, idx: 0, ok: 0, phase: "answer", sel: null };
     show("screen-lesson"); renderQuestion();
   }
+  var TUTOR_FACE = "confiante";
+  function tutor(q) { return '<div class="tutor-row"><div class="tutor-avatar"><img src="assets/img/roby-' + TUTOR_FACE + '.png" alt=""></div><div class="speech-bubble"><h2>' + esc(q) + "</h2></div></div>"; }
   function renderQuestion() {
     var q = L.qs[L.idx], prog = Math.round(L.idx / L.qs.length * 100), body = "";
-    if (q.t === "count") { var e = ""; for (var j = 0; j < q.n; j++) e += "<span>" + q.emoji + "</span>"; body = "<h2>" + esc(q.q) + '</h2><div class="count-box">' + e + "</div>" + opts(q.options); }
-    else if (q.t === "choice") body = "<h2>" + esc(q.q) + "</h2>" + opts(q.options);
-    else body = "<h2>" + esc(q.q) + '</h2><input class="field" id="q-input" inputmode="' + (isNum(q.a) ? "numeric" : "text") + '" autocomplete="off" autocapitalize="characters" placeholder="Escreve a resposta" style="margin-top:24px;text-align:center;font-size:24px" />';
+    if (q.t === "count") { var e = ""; for (var j = 0; j < q.n; j++) e += "<span>" + q.emoji + "</span>"; body = tutor(q.q) + '<div class="count-box">' + e + "</div>" + opts(q.options); }
+    else if (q.t === "choice") body = tutor(q.q) + opts(q.options);
+    else if (q.t === "match") body = tutor(q.q) + matchGrid(q) + '<p class="match-hint">Toca num de cada lado para ligar.</p>';
+    else if (q.t === "drag") body = tutor(q.q) + dragArea(q);
+    else body = tutor(q.q) + '<input class="field" id="q-input" inputmode="' + (isNum(q.a) ? "numeric" : "text") + '" autocomplete="off" autocapitalize="characters" placeholder="Escreve a resposta" style="margin-top:24px;text-align:center;font-size:24px" />';
     $("#screen-lesson").innerHTML =
       '<div class="lesson-top"><button class="lx-close" id="lx-x" aria-label="Sair">✕</button><div class="lx-bar"><i style="width:' + prog + '%"></i></div><div class="lx-lives" id="lx-lives">❤️ ' + S.lives + "</div></div>" +
       '<div class="q-area grow scroll"><button class="q-speak" id="q-speak" aria-label="Ouvir a pergunta">🔊</button>' + body + '</div><div id="lx-dock"></div><div class="xp-pop" id="xp-pop"></div>';
     $("#lx-x").onclick = function () { if (confirm("Sair da lição? Este nível não conta.")) { renderMap(); show("screen-map"); } };
     if (q.t === "input") { var inp = $("#q-input"); inp.oninput = function () { $("#dock-btn").disabled = !inp.value.trim(); }; inp.onkeydown = function (ev) { if (ev.key === "Enter" && inp.value.trim()) evaluate(); }; setTimeout(function () { inp.focus(); }, 60); }
+    else if (q.t === "match") wireMatch(q);
+    else if (q.t === "drag") wireDrag(q);
     else wireOpts();
     $("#lx-dock").innerHTML = '<div class="pad" style="padding-top:6px"><button class="sbtn" id="dock-btn" disabled>Verificar</button></div>';
     $("#dock-btn").onclick = evaluate;
@@ -163,20 +169,108 @@
   }
   function opts(o) { return '<div class="opts" id="opts">' + o.map(function (x, k) { return '<button class="opt" data-k="' + k + '">' + esc(x) + "</button>"; }).join("") + "</div>"; }
   function wireOpts() { $("#opts").querySelectorAll(".opt").forEach(function (b) { b.onclick = function () { if (L.phase !== "answer") return; $("#opts").querySelectorAll(".opt").forEach(function (x) { x.setAttribute("aria-pressed", "false"); }); b.setAttribute("aria-pressed", "true"); L.sel = parseInt(b.getAttribute("data-k"), 10); $("#dock-btn").disabled = false; }; }); }
+
+  /* ---- Ligar pares (match): toca um de cada lado; certo fica preso, errado treme e liberta ---- */
+  var MX = null;
+  function shuffled(n) { var a = []; for (var i = 0; i < n; i++) a.push(i); for (i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function matchGrid(q) {
+    var order = shuffled(q.pairs.length);
+    MX = { order: order, doneL: {}, doneR: {}, selL: null, selR: null };
+    var left = q.pairs.map(function (p, i) { return '<button class="match-item" data-side="l" data-i="' + i + '">' + esc(p[0]) + "</button>"; }).join("");
+    var right = order.map(function (ri) { return '<button class="match-item" data-side="r" data-i="' + ri + '">' + esc(q.pairs[ri][1]) + "</button>"; }).join("");
+    return '<div class="match-grid" id="match-grid"><div class="match-col">' + left + '</div><div class="match-col">' + right + "</div></div>";
+  }
+  function wireMatch(q) {
+    var grid = $("#match-grid");
+    grid.querySelectorAll(".match-item").forEach(function (b) {
+      b.onclick = function () {
+        if (L.phase !== "answer") return;
+        var side = b.getAttribute("data-side"), i = parseInt(b.getAttribute("data-i"), 10);
+        if (side === "l") { if (MX.doneL[i]) return; grid.querySelectorAll('.match-item[data-side="l"]').forEach(function (x) { x.classList.remove("selected"); }); b.classList.add("selected"); MX.selL = i; }
+        else { if (MX.doneR[i]) return; grid.querySelectorAll('.match-item[data-side="r"]').forEach(function (x) { x.classList.remove("selected"); }); b.classList.add("selected"); MX.selR = i; }
+        if (MX.selL !== null && MX.selR !== null) {
+          var lBtn = grid.querySelector('.match-item[data-side="l"][data-i="' + MX.selL + '"]');
+          var rBtn = grid.querySelector('.match-item[data-side="r"][data-i="' + MX.selR + '"]');
+          if (MX.selL === MX.selR) {
+            lBtn.classList.remove("selected"); rBtn.classList.remove("selected");
+            lBtn.classList.add("locked"); rBtn.classList.add("locked");
+            MX.doneL[MX.selL] = true; MX.doneR[MX.selR] = true;
+            MX.selL = null; MX.selR = null;
+            if (Object.keys(MX.doneL).length === q.pairs.length) $("#dock-btn").disabled = false;
+          } else {
+            lBtn.classList.add("shake"); rBtn.classList.add("shake");
+            setTimeout(function () { lBtn.classList.remove("shake", "selected"); rBtn.classList.remove("shake", "selected"); }, 400);
+            MX.selL = null; MX.selR = null;
+          }
+        }
+      };
+    });
+  }
+
+  /* ---- Arrastar (drag): larga o chip na zona certa; mesma avaliação do "choice" (L.sel = índice) ---- */
+  function dragArea(q) {
+    var zones = q.zones.map(function (z, i) { return '<div class="drop-zone" data-i="' + i + '">' + esc(z) + "</div>"; }).join("");
+    return '<div class="drag-area"><div class="drag-chip" id="drag-chip">' + q.chip + '</div><div class="drop-zones" id="drop-zones">' + zones + "</div></div>";
+  }
+  function wireDrag(q) {
+    var chip = $("#drag-chip"), zonesEl = $("#drop-zones");
+    var startX = 0, startY = 0, dx = 0, dy = 0, dragging = false;
+    function zoneAt(cx, cy) {
+      var zones = zonesEl.querySelectorAll(".drop-zone"), found = null;
+      zones.forEach(function (z) { var r = z.getBoundingClientRect(); if (cx >= r.left && cx <= r.right && cy >= r.top && cy <= r.bottom) found = z; });
+      return found;
+    }
+    function clearHover() { zonesEl.querySelectorAll(".drop-zone").forEach(function (z) { z.classList.remove("hover"); }); }
+    function onDown(ev) {
+      if (L.phase !== "answer" || chip.classList.contains("locked")) return;
+      dragging = true; chip.classList.add("dragging"); chip.setPointerCapture(ev.pointerId);
+      startX = ev.clientX; startY = ev.clientY;
+    }
+    function onMove(ev) {
+      if (!dragging) return;
+      dx = ev.clientX - startX; dy = ev.clientY - startY;
+      chip.style.transform = "translate(" + dx + "px," + dy + "px)";
+      clearHover();
+      var z = zoneAt(ev.clientX, ev.clientY);
+      if (z) z.classList.add("hover");
+    }
+    function onUp(ev) {
+      if (!dragging) return;
+      dragging = false; chip.classList.remove("dragging"); clearHover();
+      var z = zoneAt(ev.clientX, ev.clientY);
+      if (z) { L.sel = parseInt(z.getAttribute("data-i"), 10); $("#dock-btn").disabled = false; chip.classList.add("locked"); }
+      chip.style.transform = "translate(0,0)";
+    }
+    chip.addEventListener("pointerdown", onDown);
+    chip.addEventListener("pointermove", onMove);
+    chip.addEventListener("pointerup", onUp);
+    chip.addEventListener("pointercancel", onUp);
+  }
+
   function evaluate() {
     var q = L.qs[L.idx], correct;
     if (q.t === "input") { var v = ($("#q-input").value || "").trim(); correct = v.toUpperCase() === String(q.a).trim().toUpperCase(); L.sel = v; }
+    else if (q.t === "match") correct = true; /* só chega aqui quando todos os pares já estão certos */
     else correct = L.sel === q.a;
     L.phase = "feedback";
-    if (correct) { sndOk(); L.ok++; S.xp += XP_OK; save(); if (q.t !== "input") mark(L.sel, "correct"); xpPop("+" + XP_OK + " XP"); }
-    else { sndNo(); loseLife(); if (q.t !== "input") { mark(L.sel, "wrong"); mark(q.a, "correct"); shake(L.sel); } }
+    if (correct) {
+      sndOk(); L.ok++; S.xp += XP_OK; save();
+      if (q.t === "choice" || q.t === "count") mark(L.sel, "correct");
+      else if (q.t === "drag") markZone(L.sel, "correct");
+      xpPop("+" + XP_OK + " XP");
+    } else {
+      sndNo(); loseLife();
+      if (q.t === "choice" || q.t === "count") { mark(L.sel, "wrong"); mark(q.a, "correct"); shake(L.sel); }
+      else if (q.t === "drag") { markZone(L.sel, "wrong"); markZone(q.a, "correct"); }
+    }
     feedback(correct, q);
   }
   function mark(k, c) { var o = $("#opts"); if (o) { var b = o.querySelector('.opt[data-k="' + k + '"]'); if (b) b.classList.add(c); } }
   function shake(k) { var o = $("#opts"); if (o) { var b = o.querySelector('.opt[data-k="' + k + '"]'); if (b) b.classList.add("shake"); } }
+  function markZone(i, c) { var z = $("#drop-zones"); if (z) { var b = z.querySelector('.drop-zone[data-i="' + i + '"]'); if (b) b.classList.add(c); } }
   function xpPop(t) { var p = $("#xp-pop"); if (p) { p.textContent = t; p.classList.remove("go"); void p.offsetWidth; p.classList.add("go"); } }
   function feedback(ok, q) {
-    var right = q.t === "input" ? q.a : q.options[q.a];
+    var right = q.t === "input" ? q.a : q.t === "drag" ? q.zones[q.a] : q.t === "match" ? "" : q.options[q.a];
     var m = ok ? ["Boa! Certíssimo ⚡", "Continua assim!"] : ["Quase!", "Resposta certa: " + esc(right)];
     $("#lx-dock").innerHTML = '<div class="feedback ' + (ok ? "ok" : "no") + '"><div class="fb-row"><div class="fb-face"><img src="assets/img/roby-' + (ok ? "feliz" : "triste") + '.png" alt=""></div><div><div class="fb-t">' + m[0] + '</div><div class="fb-sub">' + m[1] + '</div></div></div><button class="sbtn ' + (ok ? "" : "sbtn--danger") + '" id="dock-btn">Continuar</button></div>';
     if (TTS) speak(m[0]); $("#dock-btn").onclick = next;

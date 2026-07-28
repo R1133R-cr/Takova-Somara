@@ -200,6 +200,49 @@ img { max-width: 100%; display: block; }
 .q-speak { position: absolute; top: 16px; right: 20px; width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--gm-surface); color: var(--chart); font-size: 19px; box-shadow: 0 3px 0 rgba(0,0,0,.3); z-index: 2; }
 .q-speak:active { transform: translateY(2px); box-shadow: 0 1px 0 rgba(0,0,0,.3); }
 .q-area h2 { font-size: 25px; line-height: 1.25; }
+
+/* ---- Roby-tutor: balão de fala ---- */
+.tutor-row { display: flex; align-items: flex-start; gap: 12px; padding-right: 46px; }
+.tutor-avatar { width: 54px; height: 54px; border-radius: 50%; overflow: hidden; flex: none; background: var(--gm-surface); box-shadow: 0 3px 0 rgba(0,0,0,.3); }
+.tutor-avatar img { width: 100%; height: 118%; object-fit: cover; object-position: center 22%; display: block; }
+.speech-bubble { position: relative; background: var(--gm-surface); border-radius: var(--r-lg); padding: 14px 16px; flex: 1; }
+.speech-bubble::before { content: ""; position: absolute; left: -6px; top: 20px; width: 14px; height: 14px; background: var(--gm-surface); transform: rotate(45deg); border-radius: 3px; }
+.speech-bubble h2 { margin: 0; }
+
+/* ---- Ligar pares (match) ---- */
+.match-grid { display: flex; gap: 14px; margin-top: 24px; }
+.match-col { flex: 1; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.match-item {
+  border: 2px solid var(--gm-line); background: var(--gm-surface); color: var(--tx);
+  border-radius: var(--r-md); padding: 14px 10px; font-size: 16px; font-weight: 700; font-family: var(--font-body);
+  box-shadow: 0 4px 0 rgba(0,0,0,.28); text-align: center;
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease), transform 120ms var(--ease), opacity var(--dur) var(--ease);
+}
+.match-item:active { transform: translateY(3px); box-shadow: 0 1px 0 rgba(0,0,0,.28); }
+.match-item.selected { border-color: var(--chart); background: rgba(225,255,81,.10); }
+.match-item.locked { border-color: var(--correct); background: rgba(225,255,81,.18); color: var(--chart); opacity: .8; pointer-events: none; box-shadow: none; }
+.match-item.shake { animation: shake .4s var(--ease); }
+.match-hint { text-align: center; color: var(--tx-soft); font-size: 13px; margin-top: 14px; }
+
+/* ---- Arrastar (drag) ---- */
+.drag-area { margin-top: 28px; display: flex; flex-direction: column; align-items: center; gap: 30px; }
+.drag-chip {
+  width: 84px; height: 84px; border-radius: var(--r-lg); background: var(--gm-surface); border: 2px solid var(--gm-line);
+  display: grid; place-items: center; font-size: 42px; box-shadow: 0 4px 0 rgba(0,0,0,.28);
+  touch-action: none; cursor: grab; user-select: none; position: relative; z-index: 5;
+  transition: box-shadow 120ms var(--ease);
+}
+.drag-chip.dragging { cursor: grabbing; box-shadow: 0 12px 24px rgba(0,0,0,.45); transition: none; }
+.drag-chip.locked { opacity: .5; cursor: default; }
+.drop-zones { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; width: 100%; }
+.drop-zone {
+  flex: 1; min-width: 88px; min-height: 72px; border: 2px dashed var(--gm-line); border-radius: var(--r-md);
+  display: flex; align-items: center; justify-content: center; color: var(--tx-soft); font-size: 14px; font-weight: 700; text-align: center; padding: 8px;
+  transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.drop-zone.hover { border-color: var(--chart); background: rgba(225,255,81,.08); border-style: solid; }
+.drop-zone.correct { border-color: var(--correct); background: rgba(225,255,81,.18); border-style: solid; color: var(--chart); }
+.drop-zone.wrong { border-color: var(--wrong); background: rgba(255,93,93,.15); border-style: solid; color: #ff9a9a; }
 .count-box { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; font-size: 40px; margin: 26px 0; padding: 22px; background: var(--gm-surface); border-radius: var(--r-lg); }
 .opts { display: flex; flex-direction: column; gap: 12px; margin-top: 26px; }
 .opt {
