@@ -16,7 +16,10 @@
   var CURSO = C.cursos.filter(function (c) { return c.id === S.cursoId; })[0] || C.cursos[0];
 
   function load() { try { return Object.assign({}, def, JSON.parse(localStorage.getItem(KEY)) || {}); } catch (e) { return Object.assign({}, def); } }
-  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {}
+    if (window.SOMARA_CLOUD && window.SOMARA_CLOUD.available) window.SOMARA_CLOUD.pushState(S);
+  }
 
   var app = document.getElementById("app");
   function $(s, c) { return (c || document).querySelector(s); }
@@ -196,6 +199,67 @@
   }
   function confetti(host) { var cols = ["#e1ff51", "#2e8b57", "#4da378", "#ecc658", "#ffffff"]; for (var i = 0; i < 28; i++) { var c = document.createElement("i"); c.className = "confetti"; c.style.left = Math.random() * 100 + "%"; c.style.background = cols[i % cols.length]; c.style.animationDuration = (1.6 + Math.random() * 1.4) + "s"; c.style.animationDelay = (Math.random() * 0.5) + "s"; host.appendChild(c); void c.offsetWidth; c.classList.add("go"); } }
 
+  /* ---- Conta (Firebase) — sincronizar entre aparelhos ----
+     O "painel do encarregado" é o próprio ecrã de Perfil: ao
+     entrar com a mesma conta noutro telemóvel/PC, vê os mesmos
+     dados. Se cloud.js não estiver configurado, esta secção
+     nem aparece (ver assets/js/firebase-config.js). */
+  function accountCardHtml() {
+    var CL = window.SOMARA_CLOUD;
+    if (!CL || !CL.available) return "";
+    var u = CL.currentUser();
+    if (u) {
+      return '<div class="card account"><div class="k">Conta</div><h4>Sincronizado na nuvem</h4>' +
+        '<p style="color:var(--tx-soft);font-size:14px;line-height:1.5;margin:6px 0 14px">Sessão iniciada como <b>' + esc(u.email) + '</b>. O encarregado pode ver este mesmo Perfil ao entrar com esta conta noutro aparelho.</p>' +
+        '<button class="sbtn sbtn--ghost" id="acc-out">Sair da conta</button></div>';
+    }
+    return '<div class="card account"><div class="k">Conta</div><h4>Guardar na nuvem</h4>' +
+      '<p style="color:var(--tx-soft);font-size:14px;line-height:1.5;margin:6px 0 14px">Cria uma conta para o progresso não se perder e o encarregado ver este Perfil noutro aparelho.</p>' +
+      '<input class="field" id="acc-email" type="email" placeholder="Email do encarregado" autocomplete="email" style="margin-bottom:10px" />' +
+      '<input class="field" id="acc-pass" type="password" placeholder="Palavra-passe (mín. 6)" autocomplete="new-password" style="margin-bottom:12px" />' +
+      '<div id="acc-err" class="acc-err" style="display:none"></div>' +
+      '<div style="display:flex;gap:10px">' +
+        '<button class="sbtn" id="acc-in" style="flex:1">Entrar</button>' +
+        '<button class="sbtn sbtn--ghost" id="acc-up" style="flex:1">Criar conta</button>' +
+      "</div></div>";
+  }
+  function authErrMsg(e) {
+    var c = (e && e.code) || "";
+    if (c.indexOf("email-already-in-use") > -1) return "Este email já tem conta — tenta 'Entrar'.";
+    if (c.indexOf("wrong-password") > -1 || c.indexOf("invalid-credential") > -1) return "Palavra-passe incorrecta.";
+    if (c.indexOf("user-not-found") > -1) return "Não há conta com este email — tenta 'Criar conta'.";
+    if (c.indexOf("invalid-email") > -1) return "Email inválido.";
+    if (c.indexOf("weak-password") > -1) return "Palavra-passe fraca — usa 6 ou mais caracteres.";
+    return "Não foi possível ligar. Verifica a internet e tenta outra vez.";
+  }
+  function wireAccount() {
+    var CL = window.SOMARA_CLOUD;
+    if (!CL || !CL.available) return;
+    var out = $("#acc-out");
+    if (out) out.onclick = function () { CL.signOutUser().then(function () { toast("Sessão terminada"); renderProfile(); }); };
+    var inBtn = $("#acc-in"), upBtn = $("#acc-up");
+    function doAuth(isSignUp) {
+      var email = ($("#acc-email").value || "").trim(), pass = $("#acc-pass").value || "";
+      var err = $("#acc-err"); err.style.display = "none";
+      if (!email || pass.length < 6) { err.textContent = "Email válido e palavra-passe com 6+ caracteres."; err.style.display = "block"; return; }
+      inBtn.disabled = true; upBtn.disabled = true;
+      var p = isSignUp ? CL.signUp(email, pass) : CL.signIn(email, pass);
+      p.then(function () { return CL.pullState(); })
+       .then(function (cloud) {
+          if (cloud && !S.onboarded) {
+            S = Object.assign({}, def, cloud);
+            CURSO = C.cursos.filter(function (c) { return c.id === S.cursoId; })[0] || C.cursos[0];
+            try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {}
+            buildLevels();
+          } else CL.pushState(S);
+          toast("Sessão iniciada ⚡"); renderProfile();
+        })
+       .catch(function (e) { inBtn.disabled = false; upBtn.disabled = false; err.textContent = authErrMsg(e); err.style.display = "block"; });
+    }
+    if (inBtn) inBtn.onclick = function () { doAuth(false); };
+    if (upBtn) upBtn.onclick = function () { doAuth(true); };
+  }
+
   /* ---- PERFIL ---- */
   function renderProfile() {
     var done = 0; C.cursos.forEach(function (cu) { cu.units.forEach(function (u) { u.niveis.forEach(function (n) { var k = cu.id + ":" + u.id + ":" + n.id; if (S.progress[k] && S.progress[k].done) done++; }); }); });
@@ -214,10 +278,12 @@
         '<div class="p-stats"><div class="p-stat"><div class="v" style="color:var(--chart)">' + S.xp + '</div><div class="l">XP</div></div><div class="p-stat"><div class="v" style="color:var(--gold)">' + S.streak + '</div><div class="l">Dias seguidos</div></div><div class="p-stat"><div class="v" style="color:var(--green-300)">' + done + '</div><div class="l">Níveis</div></div></div>' +
         courses +
         '<div class="card guardian"><div class="k">Para o encarregado</div><h4>Acompanhamento</h4><p style="color:var(--tx-soft);font-size:14px;line-height:1.5;margin:8px 0 0">' + esc((S.learner.nome || "O estudante").split(" ")[0]) + ' já ganhou <b style="color:var(--chart)">' + S.xp + " XP</b> e concluiu <b>" + done + "</b> níveis. " + (S.learner.encarregado ? "Resumo semanal para " + esc(S.learner.encarregado) + "." : "Adicione um contacto para receber o resumo semanal.") + "</p></div>" +
+        accountCardHtml() +
         '<button class="sbtn sbtn--ghost" id="p-reset" style="margin-top:8px">Recomeçar do zero</button>' +
       "</div>";
     $("#p-back").onclick = function () { renderMap(); show("screen-map"); };
     $("#p-reset").onclick = function () { if (confirm("Apagar todo o progresso?")) { localStorage.removeItem(KEY); S = load(); CURSO = C.cursos[0]; renderWelcome(); show("screen-welcome"); } };
+    wireAccount();
   }
 
   /* ---- modal sem vidas ---- */

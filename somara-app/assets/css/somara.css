@@ -268,6 +268,7 @@ img { max-width: 100%; display: block; }
 .prog-line .bar > i { display: block; height: 100%; background: var(--green-400); }
 .prog-line .pct { font-size: 12px; color: var(--tx-soft); width: 34px; text-align: right; }
 .guardian { border: 2px dashed var(--gm-line); background: transparent; }
+.acc-err { color: #ff8a8a; font-size: 13px; margin-bottom: 10px; line-height: 1.4; }
 
 /* ---------- Modal (sem vidas) ---------- */
 .modal-scrim { position: absolute; inset: 0; background: rgba(0,10,12,.7); backdrop-filter: blur(3px); display: none; align-items: flex-end; z-index: 30; }
