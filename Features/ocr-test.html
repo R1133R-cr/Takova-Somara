@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<title>OCR — teste de viabilidade</title>
+</head>
+<body>
+<h1>Teste de OCR (pdf.js + Tesseract.js)</h1>
+<p id="status">a iniciar…</p>
+<canvas id="c" style="border:1px solid #999;max-width:500px"></canvas>
+<h2>Texto reconhecido:</h2>
+<pre id="out" style="white-space:pre-wrap;border:1px solid #ccc;padding:10px;max-width:700px"></pre>
+
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script type="module">
+import * as pdfjsLib from './pdf.min.mjs';
+/* Worker servido do MESMO servidor (não de outra origem via Blob) —
+   assim mantém a base URL correcta e quaisquer imports internos do
+   pdf.js (ex.: descodificadores usados só durante o render) resolvem
+   normalmente. A tentativa anterior (Worker a partir de um Blob
+   buscado de outra origem) deixava o render() pendurado para sempre,
+   sem erro, precisamente porque perdia essa base URL. */
+pdfjsLib.GlobalWorkerOptions.workerSrc = './pdf.worker.min.mjs';
+
+function withTimeout(promise, ms, label) {
+  var t;
+  var timeout = new Promise(function (_, rej) { t = setTimeout(function () { rej(new Error('TIMEOUT (' + ms + 'ms) em: ' + label)); }, ms); });
+  return Promise.race([promise.finally(function () { clearTimeout(t); }), timeout]);
+}
+
+(async function () {
+  var status = document.getElementById('status');
+  window.__log = window.__log || [];
+  var log = function (m) { status.textContent = m; console.log(m); window.__log.push(m); };
+  try {
+    var params = new URLSearchParams(location.search);
+    var pdfUrl = params.get('pdf') || 'Manuais/mat.dat';
+    var pageNum = parseInt(params.get('page') || '5', 10);
+    var scale = parseFloat(params.get('scale') || '1.2');
+
+    var t0 = performance.now();
+    log('a obter ' + pdfUrl + ' (pagina ' + pageNum + ')…');
+    var doc = await withTimeout(pdfjsLib.getDocument({ url: pdfUrl }).promise, 30000, 'getDocument');
+    log('pdf carregado (' + doc.numPages + ' paginas). a obter pagina ' + pageNum + '…');
+
+    var page = await withTimeout(doc.getPage(pageNum), 15000, 'getPage');
+    log('pagina obtida. a preparar viewport (scale=' + scale + ')…');
+    var viewport = page.getViewport({ scale: scale });
+    var canvas = document.getElementById('c');
+    canvas.width = viewport.width; canvas.height = viewport.height;
+    var ctx = canvas.getContext('2d');
+    log('viewport ' + Math.round(viewport.width) + 'x' + Math.round(viewport.height) + '. a renderizar…');
+    var renderTask = page.render({ canvasContext: ctx, viewport: viewport });
+    await withTimeout(renderTask.promise, 150000, 'render');
+    var t1 = performance.now();
+    log('pagina renderizada em ' + Math.round(t1 - t0) + 'ms. a correr OCR (pt)…');
+
+    var result = await withTimeout(Tesseract.recognize(canvas, 'por', {
+      logger: function (m) { if (m.status && typeof m.progress === 'number') log('OCR: ' + m.status + ' ' + Math.round(m.progress * 100) + '%'); }
+    }), 120000, 'tesseract');
+    var t2 = performance.now();
+    document.getElementById('out').textContent = result.data.text;
+    log('OCR concluido em ' + Math.round(t2 - t1) + 'ms (total ' + Math.round(t2 - t0) + 'ms). confianca media: ' + Math.round(result.data.confidence) + '%');
+    window.__ocrDone = { ok: true, ms: Math.round(t2 - t0), confidence: result.data.confidence, textLen: result.data.text.length, numPages: doc.numPages, text: result.data.text };
+  } catch (e) {
+    log('ERRO: ' + (e && e.message ? e.message : e));
+    window.__ocrDone = { ok: false, error: String(e && e.message ? e.message : e) };
+  }
+})();
+</script>
+</body>
+</html>
