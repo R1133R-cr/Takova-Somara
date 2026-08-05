@@ -11,8 +11,8 @@
   "theme_color": "#00272c",
   "categories": ["education", "games"],
   "icons": [
-    { "src": "assets/img/somara-icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "assets/img/somara-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "assets/img/somara-icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "assets/img/somara-icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/img/somara-emblem.png", "sizes": "640x640", "type": "image/png", "purpose": "any" },
+    { "src": "assets/img/somara-emblem.png", "sizes": "640x640", "type": "image/png", "purpose": "maskable" }
   ]
 }
