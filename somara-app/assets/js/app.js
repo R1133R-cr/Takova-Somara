@@ -99,7 +99,7 @@
     if ($("#ob-skip")) $("#ob-skip").onclick = finishOnboarding;
     $("#ob-next").onclick = onboardNext;
   }
-  function card(q, h, i) { return '<img class="ob-roby" src="assets/img/roby-dica.png" alt="" /><h2 class="ob-q">' + q + '</h2><p class="ob-hint">' + h + "</p>" + i; }
+  function card(q, h, i) { return '<h2 class="ob-q">' + q + '</h2><p class="ob-hint">' + h + "</p>" + i; }
   function chip(l, on) { return '<button class="chip" aria-pressed="' + (on ? "true" : "false") + '" data-v="' + esc(l) + '">' + l + "</button>"; }
   function chipOff(l) { return '<button class="chip" disabled style="opacity:.5" aria-pressed="false">' + l + ' <span style="font-size:11px">· em breve</span></button>'; }
   function wireChips(sel, cb) { var b = $(sel); if (!b) return; b.querySelectorAll(".chip:not([disabled])").forEach(function (x) { x.onclick = function () { b.querySelectorAll(".chip").forEach(function (y) { y.setAttribute("aria-pressed", "false"); }); x.setAttribute("aria-pressed", "true"); cb(x.getAttribute("data-v")); }; }); }
@@ -269,16 +269,10 @@
   function shake(k) { var o = $("#opts"); if (o) { var b = o.querySelector('.opt[data-k="' + k + '"]'); if (b) b.classList.add("shake"); } }
   function markZone(i, c) { var z = $("#drop-zones"); if (z) { var b = z.querySelector('.drop-zone[data-i="' + i + '"]'); if (b) b.classList.add(c); } }
   function xpPop(t) { var p = $("#xp-pop"); if (p) { p.textContent = t; p.classList.remove("go"); void p.offsetWidth; p.classList.add("go"); } }
-  var FACES_OK = ["feliz", "rindo", "empolgado", "orgulhoso"];
-  var FACES_NO = ["triste", "confuso"];
-  var MSGS_OK = ["Boa! Certíssimo ⚡", "Isso mesmo! Continua assim.", "Muito bem! ⭐", "Acertaste em cheio!"];
-  var MSGS_NO = ["Quase!", "Não foi desta vez.", "Vamos tentar de novo."];
-  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
   function feedback(ok, q) {
     var right = q.t === "input" ? q.a : q.t === "drag" ? q.zones[q.a] : q.t === "match" ? "" : q.options[q.a];
-    var face = ok ? pick(FACES_OK) : pick(FACES_NO);
-    var m = ok ? [pick(MSGS_OK), "Continua assim!"] : [pick(MSGS_NO), "Resposta certa: " + esc(right)];
-    $("#lx-dock").innerHTML = '<div class="feedback ' + (ok ? "ok" : "no") + '"><div class="fb-row"><div class="fb-face"><img src="assets/img/roby-' + face + '.png" alt=""></div><div><div class="fb-t">' + m[0] + '</div><div class="fb-sub">' + m[1] + '</div></div></div><button class="sbtn ' + (ok ? "" : "sbtn--danger") + '" id="dock-btn">Continuar</button></div>';
+    var m = ok ? ["Boa! Certíssimo ⚡", "Continua assim!"] : ["Quase!", "Resposta certa: " + esc(right)];
+    $("#lx-dock").innerHTML = '<div class="feedback ' + (ok ? "ok" : "no") + '"><div class="fb-row"><div class="fb-face"><img src="assets/img/roby-' + (ok ? "feliz" : "triste") + '.png" alt=""></div><div><div class="fb-t">' + m[0] + '</div><div class="fb-sub">' + m[1] + '</div></div></div><button class="sbtn ' + (ok ? "" : "sbtn--danger") + '" id="dock-btn">Continuar</button></div>';
     if (TTS) speak(m[0]); $("#dock-btn").onclick = next;
   }
   function next() { if (S.lives <= 0) { openLives(); return; } L.idx++; L.phase = "answer"; L.sel = null; if (L.idx >= L.qs.length) return done(); renderQuestion(); }

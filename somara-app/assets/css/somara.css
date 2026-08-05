@@ -145,7 +145,6 @@ img { max-width: 100%; display: block; }
 .ob-head { padding: 6px 22px 0; }
 .ob-progress { height: 8px; border-radius: var(--r-pill); background: var(--gm-surface); overflow: hidden; margin-bottom: 20px; }
 .ob-progress > i { display: block; height: 100%; background: var(--chart); border-radius: inherit; transition: width var(--dur) var(--ease); }
-.ob-roby { width: 92px; margin: 4px 0 12px; animation: floaty 6s ease-in-out infinite; }
 .ob-q { font-size: 23px; margin-bottom: 6px; }
 .ob-hint { color: var(--tx-soft); margin-bottom: 20px; line-height: 1.5; }
 .field { width: 100%; padding: 15px 16px; border-radius: var(--r-md); border: 2px solid var(--gm-line); background: var(--gm-surface); color: var(--tx); font-size: 17px; font-family: var(--font-body); }
