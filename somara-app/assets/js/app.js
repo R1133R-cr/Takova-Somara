@@ -117,7 +117,11 @@
   }
 
   /* ---- MAPA — amarelinha, de baixo para cima ---- */
-  function renderMap() {
+  /* fromIndex: quadrado onde o Roby estava antes deste render — quando dado,
+     o Roby salta visivelmente do quadrado antigo para o novo (nível concluído).
+     Sem fromIndex, o Roby aparece directamente no quadrado actual (1ª visita,
+     troca de disciplina, sair da lição). */
+  function renderMap(fromIndex) {
     buildLevels();
     var tabs = C.cursos.map(function (cu, ci) { return '<button class="disc-tab ' + (cu.id === CURSO.id ? "on" : "") + '" data-ci="' + ci + '">' + esc(cu.disciplina) + "</button>"; }).join("");
     var html = '<div class="meta-marker"><div class="meta-badge">★ META</div><div class="meta-sub">' + esc(CURSO.disciplina) + " · " + esc(CURSO.classe) + "</div></div>";
@@ -125,16 +129,36 @@
       var st = statusOf(i), lv = LEVELS[i], side = (i % 2 === 0) ? "L" : "R";
       html += '<div class="cell-row ' + side + '">' +
         '<button class="cell ' + st + '" data-i="' + i + '" ' + (st === "locked" ? "disabled" : "") + '>' +
-          (st === "current" ? '<span class="pedra" title="a tua pedrinha"></span>' : "") +
           '<span class="cell-n">' + (st === "done" ? "✓" : (i + 1)) + "</span>" +
         "</button><span class=\"cell-lab\">" + esc(lv.nivel.titulo) + "</span></div>";
     }
     html += '<div class="entrada-marker"><div class="entrada-badge">ENTRADA</div></div>';
+    html += '<div class="roby-token" id="roby-token"><img src="assets/img/roby-token.png" alt="Roby" /></div>';
     $("#screen-map").innerHTML = '<div class="disc-tabs">' + tabs + "</div><div class=\"grow scroll amarela\" id=\"amarela\">" + html + "</div>";
     $("#screen-map").querySelectorAll(".disc-tab").forEach(function (b) { b.onclick = function () { CURSO = C.cursos[parseInt(b.getAttribute("data-ci"), 10)]; S.cursoId = CURSO.id; save(); renderMap(); }; });
     var box = $("#amarela");
     box.querySelectorAll(".cell[data-i]").forEach(function (b) { b.onclick = function () { startLesson(parseInt(b.getAttribute("data-i"), 10)); }; });
-    requestAnimationFrame(function () { var cur = box.querySelector(".cell.current"); if (cur) cur.scrollIntoView({ block: "center" }); else box.scrollTop = box.scrollHeight; });
+    var curIdx = firstOpen(), landIdx = curIdx < LEVELS.length ? curIdx : LEVELS.length - 1;
+    requestAnimationFrame(function () {
+      var cur = box.querySelector(".cell.current"); if (cur) cur.scrollIntoView({ block: "center" }); else box.scrollTop = box.scrollHeight;
+      if (fromIndex != null && fromIndex !== landIdx && box.querySelector('.cell[data-i="' + fromIndex + '"]')) {
+        positionToken(fromIndex, false);
+        requestAnimationFrame(function () { requestAnimationFrame(function () { positionToken(landIdx, true); }); });
+      } else positionToken(landIdx, false);
+    });
+  }
+  function positionToken(idx, animate) {
+    var box = $("#amarela"), token = box && $("#roby-token"), cell = box && box.querySelector('.cell[data-i="' + idx + '"]');
+    if (!box || !token || !cell) return;
+    var cr = cell.getBoundingClientRect(), br = box.getBoundingClientRect();
+    var x = cr.left - br.left + box.scrollLeft + cr.width / 2, y = cr.top - br.top + box.scrollTop + cr.height / 2;
+    if (animate) {
+      token.classList.add("hop"); token.style.left = x + "px"; token.style.top = y + "px";
+      setTimeout(function () { token.classList.remove("hop"); }, 700);
+    } else {
+      token.style.transition = "none"; token.style.left = x + "px"; token.style.top = y + "px";
+      void token.offsetWidth; token.style.transition = "";
+    }
   }
 
   /* ---- LIÇÃO ---- */
@@ -294,7 +318,7 @@
         '<div class="stat-row"><div class="stat-card xp"><div class="v">+' + (L.ok * XP_OK + XP_LEVEL) + '</div><div class="l">XP ganho</div></div><div class="stat-card acc"><div class="v">' + acc + '%</div><div class="l">Acertos</div></div></div>' +
         '<div style="width:100%;max-width:340px"><button class="sbtn" id="c-next">Continuar</button></div>' +
       "</div>";
-    $("#c-next").onclick = function () { renderMap(); show("screen-map"); };
+    $("#c-next").onclick = function () { renderMap(L.i); show("screen-map"); };
     confetti($("#complete-inner")); show("screen-complete");
   }
   function confetti(host) { var cols = ["#e1ff51", "#2e8b57", "#4da378", "#ecc658", "#ffffff"]; for (var i = 0; i < 28; i++) { var c = document.createElement("i"); c.className = "confetti"; c.style.left = Math.random() * 100 + "%"; c.style.background = cols[i % cols.length]; c.style.animationDuration = (1.6 + Math.random() * 1.4) + "s"; c.style.animationDelay = (Math.random() * 0.5) + "s"; host.appendChild(c); void c.offsetWidth; c.classList.add("go"); } }
