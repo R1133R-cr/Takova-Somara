@@ -1,0 +1,61 @@
+name: Build APK
+
+# Compila a Somara na nuvem. Existe porque a compilação local depende de
+# descarregar ~500 MB de Gradle + toolchain, o que numa ligação lenta leva
+# horas e falha a meio; aqui leva poucos minutos e é sempre reprodutível.
+#
+# Como usar: separador "Actions" do repositório → "Build APK" → "Run
+# workflow". No fim, o APK fica em "Artifacts", pronto a instalar.
+
+on:
+  workflow_dispatch:        # botão manual
+  push:
+    branches: [main]
+    paths: ['somara-flutter/**', '.github/workflows/build-apk.yml']
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: somara-flutter
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.8'
+          channel: stable
+          cache: true          # guarda o SDK entre execuções
+
+      - name: Instalar dependências
+        run: flutter pub get
+
+      # Falhar aqui é muito mais barato do que descobrir o problema com o
+      # APK já instalado no telemóvel de uma criança.
+      - name: Análise estática
+        run: flutter analyze
+
+      - name: Testes (integridade do currículo)
+        run: flutter test
+
+      - name: Compilar APK (release, não assinado)
+        run: flutter build apk --release
+
+      - name: Compilar APK (debug, para testes rápidos)
+        run: flutter build apk --debug
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: somara-apk
+          path: |
+            somara-flutter/build/app/outputs/flutter-apk/app-release.apk
+            somara-flutter/build/app/outputs/flutter-apk/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30
