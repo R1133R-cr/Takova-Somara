@@ -7,7 +7,9 @@ plugins {
 android {
     namespace = "mz.co.takova.somara"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    // Sem ndkVersion de propósito: a app não tem código C/C++ nenhum, e o
+    // motor do Flutter já vem compilado. Declarar o NDK obrigaria a
+    // descarregar ~1 GB de toolchain que nunca chegaria a ser usada.
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17

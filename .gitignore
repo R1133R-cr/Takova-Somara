@@ -20,3 +20,7 @@ Takova Design System-handoff/
 
 # Temporários
 scratchpad/
+
+# Motor do Flutter descarregado a mao (ver android/build.gradle.kts):
+# so existe em maquinas onde o Gradle nao consegue falar com o servidor.
+somara-flutter/android/flutter-engine-repo/

@@ -358,7 +358,11 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
         ],
       );
 
+  // Ocupam a largura toda de propósito: o alvo de toque de uma criança de
+  // seis anos é impreciso, e um botão à medida do texto ("3") daria um alvo
+  // minúsculo. A altura mínima segue a recomendação de 48dp do Android.
   Widget _opcoes(List<String> opts) => Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           for (var i = 0; i < opts.length; i++)
             Padding(
@@ -393,6 +397,8 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 180),
         curve: SCurves.ease,
+        constraints: const BoxConstraints(minHeight: 62),
+        alignment: Alignment.center,
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 17),
         decoration: BoxDecoration(
           color: fundo,
@@ -400,7 +406,8 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
           borderRadius: BorderRadius.circular(S.rMd),
         ),
         child: Text(texto,
-            style: TextStyle(fontSize: 17, fontWeight: FontWeight.w600, color: txt)),
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: txt)),
       ),
     );
   }
