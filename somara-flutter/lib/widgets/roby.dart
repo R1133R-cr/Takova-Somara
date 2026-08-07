@@ -5,6 +5,7 @@ import '../theme.dart';
 /// As poses disponíveis do Roby (ficheiros em assets/img/).
 enum RobyPose {
   token('roby-token'),
+  salto('roby-salto'),
   hero('roby-hero'),
   dica('roby-dica'),
   feliz('roby-feliz'),
@@ -216,7 +217,15 @@ class _RobyTokenState extends State<RobyToken> with TickerProviderStateMixin {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 4),
                     child: Image.asset(
-                      widget.pose.path,
+                      // Troca de pose no ar. Um boneco que mantém a mesma
+                      // silhueta durante o salto lê-se como uma imagem a
+                      // deslizar; mudar para a pose de salto enquanto voa é
+                      // o que o faz parecer que saltou mesmo. A troca dá-se
+                      // depois da descolagem e desfaz-se antes do impacto,
+                      // para a aterragem cair já na pose de pé.
+                      (_hop.isAnimating && t > 0.22 && t < 0.74)
+                          ? RobyPose.salto.path
+                          : widget.pose.path,
                       fit: BoxFit.contain,
                     ),
                   ),
