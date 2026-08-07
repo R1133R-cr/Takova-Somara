@@ -8,7 +8,18 @@ class BoardCell {
   final Rect rect;
   final int index;
   final CellState state;
-  const BoardCell({required this.rect, required this.index, required this.state});
+
+  /// Inclinação do quadrado, em radianos, alinhada com a direcção do
+  /// percurso naquele ponto. É isto que faz o tabuleiro serpentear em vez
+  /// de parecer uma escada de caixas direitas.
+  final double angle;
+
+  const BoardCell({
+    required this.rect,
+    required this.index,
+    required this.state,
+    this.angle = 0,
+  });
 }
 
 /// Desenha a amarelinha como giz no chão, não como caixas de CSS.
@@ -29,9 +40,10 @@ class HopscotchPainter extends CustomPainter {
     return (h - h.floor() - 0.5) * 2 * amount;
   }
 
-  Path _chalkRect(Rect r, int seed, {double amount = 2.4}) {
+  Path _chalkRect(Rect r, int seed, {double amount = 2.4, double angle = 0}) {
     // Cantos com desvio + lados ligeiramente arqueados, como quem risca
-    // depressa no cimento.
+    // depressa no cimento. O quadrado roda em torno do próprio centro para
+    // acompanhar a curva do percurso.
     final p = Path();
     final c = [
       Offset(r.left + _wobble(seed, 0, amount), r.top + _wobble(seed, 1, amount)),
@@ -49,6 +61,31 @@ class HopscotchPainter extends CustomPainter {
       p.quadraticBezierTo(mid.dx, mid.dy, b.dx, b.dy);
     }
     p.close();
+    if (angle == 0) return p;
+    final m = Matrix4.identity()
+      ..translateByDouble(r.center.dx, r.center.dy, 0, 1)
+      ..rotateZ(angle)
+      ..translateByDouble(-r.center.dx, -r.center.dy, 0, 1);
+    return p.transform(m.storage);
+  }
+
+  /// Curva suave que passa por todos os centros, de baixo para cima.
+  /// Usa o ponto médio entre centros consecutivos como fim de cada segmento
+  /// quadrático, com o próprio centro como ponto de controlo — é a forma
+  /// mais simples de obter uma linha sem cotovelos a passar por N pontos.
+  Path _serpentina() {
+    final p = Path();
+    if (cells.length < 2) return p;
+    final pts = cells.map((c) => c.rect.center).toList();
+    p.moveTo(pts.first.dx, pts.first.dy);
+    for (var i = 1; i < pts.length - 1; i++) {
+      final medio = Offset(
+        (pts[i].dx + pts[i + 1].dx) / 2,
+        (pts[i].dy + pts[i + 1].dy) / 2,
+      );
+      p.quadraticBezierTo(pts[i].dx, pts[i].dy, medio.dx, medio.dy);
+    }
+    p.lineTo(pts.last.dx, pts.last.dy);
     return p;
   }
 
@@ -56,22 +93,21 @@ class HopscotchPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     if (cells.isEmpty) return;
 
-    // 1. Trilho que liga os quadrados — o percurso do jogo.
+    // 1. O rasto: uma só linha contínua que serpenteia por todos os
+    // quadrados. Antes eram segmentos rectos entre centros, o que dava
+    // cotovelos; a curva suave é o que faz a amarelinha ondular como uma
+    // cobra em vez de ziguezaguear.
     final trail = Paint()
-      ..color = Colors.white.withValues(alpha: 0.10)
+      ..color = Colors.white.withValues(alpha: 0.13)
       ..strokeWidth = 3
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
-    for (var i = 0; i < cells.length - 1; i++) {
-      final a = cells[i].rect.center;
-      final b = cells[i + 1].rect.center;
-      _dashedLine(canvas, a, b, trail, dash: 9, gap: 8);
-    }
+    _dashedPath(canvas, _serpentina(), trail, dash: 10, gap: 9);
 
     // 2. Os quadrados.
     for (final cell in cells) {
       final seed = cell.index + 1;
-      final path = _chalkRect(cell.rect, seed);
+      final path = _chalkRect(cell.rect, seed, angle: cell.angle);
 
       switch (cell.state) {
         case CellState.done:
@@ -113,19 +149,6 @@ class HopscotchPainter extends CustomPainter {
               ..style = PaintingStyle.stroke,
           );
       }
-    }
-  }
-
-  void _dashedLine(Canvas canvas, Offset a, Offset b, Paint paint,
-      {double dash = 8, double gap = 6}) {
-    final total = (b - a).distance;
-    if (total == 0) return;
-    final dir = (b - a) / total;
-    var d = 0.0;
-    while (d < total) {
-      final end = math.min(d + dash, total);
-      canvas.drawLine(a + dir * d, a + dir * end, paint);
-      d = end + gap;
     }
   }
 
