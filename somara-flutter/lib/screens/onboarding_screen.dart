@@ -21,12 +21,17 @@ class _OnboardingScreenState extends State<OnboardingScreen>
   int _passo = 0;
   late final AnimationController _ac;
 
-  static const _classes = [
-    '1ª classe',
-    '2ª classe',
-    '3ª classe',
-    '4ª classe',
-  ];
+  /// As classes que têm conteúdo, tiradas do próprio currículo.
+  ///
+  /// Estavam escritas à mão e ficaram para trás quando a 5ª classe entrou:
+  /// o conteúdo existia e não havia como o escolher. Assim, acrescentar uma
+  /// classe ao content.json chega para ela aparecer aqui — inclusive quando
+  /// o conteúdo vem actualizado pela internet.
+  List<String> _classesDisponiveis(AppState st) {
+    final vistas = st.conteudo.cursos.map((c) => c.classe).toSet().toList();
+    vistas.sort(); // "1ª classe" … "6ª classe" ordenam bem alfabeticamente
+    return vistas;
+  }
 
   @override
   void initState() {
@@ -60,6 +65,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
 
   @override
   Widget build(BuildContext context) {
+    final classes = _classesDisponiveis(context.read<AppState>());
     return Scaffold(
       backgroundColor: S.gm950,
       body: SafeArea(
@@ -136,7 +142,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                           ),
                         )
                       else
-                        for (final c in _classes)
+                        for (final c in classes)
                           Padding(
                             padding: const EdgeInsets.only(bottom: 12),
                             child: GestureDetector(
