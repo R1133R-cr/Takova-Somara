@@ -9,7 +9,7 @@
      do Roby) continuam CACHE-FIRST — mais rápido, sem desperdiçar
      rede a repetir o que já se sabe que não muda.
    Bump CACHE só é necessário se ASSETS mudar de lista. */
-var CACHE = "somara-v4";
+var CACHE = "somara-v5";
 var APP_SHELL = [
   "./", "index.html", "manifest.webmanifest",
   "assets/css/somara.css",
@@ -21,7 +21,7 @@ var STATIC_ASSETS = [
   "assets/img/roby-hero.png", "assets/img/roby-graduate.png", "assets/img/roby-dica.png",
   "assets/img/roby-feliz.png", "assets/img/roby-rindo.png", "assets/img/roby-empolgado.png", "assets/img/roby-orgulhoso.png",
   "assets/img/roby-triste.png", "assets/img/roby-confuso.png",
-  "assets/img/roby-confiante.png", "assets/img/roby-curioso.png",
+  "assets/img/roby-confiante.png", "assets/img/roby-curioso.png", "assets/img/roby-token.png",
   "assets/img/somara-icon-64.png", "assets/img/somara-icon-180.png",
   "assets/img/somara-icon-192.png", "assets/img/somara-icon-512.png", "assets/img/somara-icon-512-maskable.png"
 ];
