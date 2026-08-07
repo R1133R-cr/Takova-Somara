@@ -14,9 +14,9 @@ void main() {
     c = await Conteudo.carregar();
   });
 
-  test('carrega Matemática e Português da 1ª e da 2ª classe', () {
-    expect(c.cursos.length, 4);
-    for (final classe in ['1ª classe', '2ª classe']) {
+  test('carrega Matemática e Português da 1ª à 3ª classe', () {
+    expect(c.cursos.length, 6);
+    for (final classe in ['1ª classe', '2ª classe', '3ª classe']) {
       final daClasse = c.cursos.where((x) => x.classe == classe);
       expect(daClasse.length, 2, reason: classe);
       expect(daClasse.map((x) => x.disciplina),
@@ -24,13 +24,13 @@ void main() {
     }
   });
 
-  test('todas as 253 questões sobreviveram à migração', () {
+  test('todas as 376 questões sobreviveram à migração', () {
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 253);
+    expect(total, 376);
   });
 
   test('cada classe tem conteúdo suficiente para uma amarelinha', () {
