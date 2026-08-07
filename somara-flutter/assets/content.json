@@ -1,5 +1,5 @@
 {
- "versao": 20260807,
+ "versao": 20260808,
  "cursos": [
   {
    "id": "mat-1c",
@@ -4571,6 +4571,3988 @@
          ],
          "a": 0,
          "audio": "ffbde59e1199.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mat-4c",
+   "disciplina": "Matemática",
+   "classe": "4ª classe",
+   "tag": "MAT",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Números até 1 000 000",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ler e escrever números grandes",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se lê 45 300?",
+         "options": [
+          "Quarenta e cinco mil e trezentos",
+          "Quatro mil e cinquenta e três",
+          "Quarenta e cinco mil e trinta"
+         ],
+         "a": 0,
+         "audio": "2809f6c1e7bc.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve em algarismos: cem mil.",
+         "a": "100000",
+         "audio": "b3197d994046.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve em algarismos: doze mil e quinhentos.",
+         "a": "12500",
+         "audio": "e67f59563ccf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No número 328 471, qual é o algarismo das dezenas de milhar?",
+         "options": [
+          "3",
+          "2",
+          "8"
+         ],
+         "a": 1,
+         "audio": "db71b9ad4642.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quantos zeros tem o número um milhão?",
+         "options": [
+          "5",
+          "6",
+          "7"
+         ],
+         "a": 1,
+         "audio": "e83f68eb21ca.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Comparar e arredondar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual símbolo completa? 45 300 __ 45 030",
+         "options": [
+          "<",
+          ">",
+          "="
+         ],
+         "a": 1,
+         "audio": "eed9b78b912b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Arredonda 4 780 à centena mais próxima.",
+         "options": [
+          "4 700",
+          "4 800",
+          "5 000"
+         ],
+         "a": 1,
+         "audio": "8ccc0930f271.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o maior?",
+         "options": [
+          "99 999",
+          "100 000",
+          "90 999"
+         ],
+         "a": 1,
+         "audio": "279641ef2936.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o número que vem depois de 99 999?",
+         "a": "100000",
+         "audio": "2af37f2bc2a0.mp3"
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta 250 000 para o lugar certo.",
+         "chip": "🔢",
+         "zones": [
+          "Menos de 100 mil",
+          "Entre 100 mil e 500 mil",
+          "Mais de 500 mil"
+         ],
+         "a": 1,
+         "audio": "cfc9aee5b2e8.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Espaço e forma",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Perímetro",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O perímetro de uma figura é:",
+         "options": [
+          "A medida à volta",
+          "O espaço lá dentro",
+          "O número de lados"
+         ],
+         "a": 0,
+         "audio": "13b3f2f95031.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um quadrado tem 5 cm de lado. Qual é o perímetro, em cm?",
+         "a": "20",
+         "audio": "8bf7c46fe30a.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um rectângulo tem 8 cm de comprimento e 3 cm de largura. Qual é o perímetro, em cm?",
+         "a": "22",
+         "audio": "63e8766ddd19.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para calcular o perímetro de um triângulo, somamos:",
+         "options": [
+          "Dois lados",
+          "Os três lados",
+          "A base e a altura"
+         ],
+         "a": 1,
+         "audio": "b33a4b03c0ad.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Área",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A área de uma figura é:",
+         "options": [
+          "A medida à volta",
+          "O espaço que ocupa",
+          "O maior lado"
+         ],
+         "a": 1,
+         "audio": "011a06eebfba.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um rectângulo tem 6 cm por 4 cm. Qual é a área, em centímetros quadrados?",
+         "a": "24",
+         "audio": "fbb6baef663a.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um quadrado tem 7 cm de lado. Qual é a área, em centímetros quadrados?",
+         "a": "49",
+         "audio": "727fd33c6b3a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para calcular a área de um rectângulo fazemos:",
+         "options": [
+          "Comprimento + largura",
+          "Comprimento × largura",
+          "Comprimento − largura"
+         ],
+         "a": 1,
+         "audio": "07c155e60b90.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra ao seu significado.",
+         "pairs": [
+          [
+           "Perímetro",
+           "Medida à volta"
+          ],
+          [
+           "Área",
+           "Espaço que ocupa"
+          ]
+         ],
+         "audio": "1a9a6c2b6313.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Adição e subtracção",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Somar e subtrair números grandes",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 12 450 + 3 250?",
+         "a": "15700",
+         "audio": "e8cb92db9d3f.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 20 000 − 7 500?",
+         "a": "12500",
+         "audio": "a29a61303217.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma escola tem 1 240 alunos e outra tem 985. Quantos são ao todo?",
+         "options": [
+          "2 125",
+          "2 225",
+          "2 025"
+         ],
+         "a": 1,
+         "audio": "2e3af826ced6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 45 000 + 55 000?",
+         "a": "100000",
+         "audio": "f48ec7fc1f9b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para confirmar 5 000 − 1 750 = 3 250, fazemos:",
+         "options": [
+          "3 250 + 1 750",
+          "5 000 + 1 750",
+          "3 250 − 1 750"
+         ],
+         "a": 0,
+         "audio": "39ca3c47ec78.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Multiplicação e divisão",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Multiplicar por dois dígitos",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 24 × 12?",
+         "a": "288",
+         "audio": "d9dd7da8004a.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 150 × 4?",
+         "a": "600",
+         "audio": "51390caaedb6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 36 × 100?",
+         "a": "3600",
+         "audio": "b20f5167a6e4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma caixa leva 24 garrafas. Quantas garrafas há em 15 caixas?",
+         "options": [
+          "340",
+          "360",
+          "380"
+         ],
+         "a": 1,
+         "audio": "9fb014c64cf6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Multiplicar por 1000 acrescenta ao número:",
+         "options": [
+          "Dois zeros",
+          "Três zeros",
+          "Quatro zeros"
+         ],
+         "a": 1,
+         "audio": "c85c7c612adb.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Dividir com resto",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 144 : 12?",
+         "a": "12",
+         "audio": "90f30ad9b24f.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 250 : 5?",
+         "a": "50",
+         "audio": "494b150c3a17.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na divisão 47 : 6, quanto é o quociente e o resto?",
+         "options": [
+          "7 e 5",
+          "8 e 1",
+          "6 e 11"
+         ],
+         "a": 0,
+         "audio": "b29740caefbc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "96 cadernos para 8 turmas, em partes iguais. Quantos recebe cada turma?",
+         "options": [
+          "10",
+          "12",
+          "14"
+         ],
+         "a": 1,
+         "audio": "929b2b359d57.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa divisão, o resto é sempre:",
+         "options": [
+          "Maior que o divisor",
+          "Menor que o divisor",
+          "Igual ao divisor"
+         ],
+         "a": 1,
+         "audio": "27bc100d1b03.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Grandezas e medidas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Converter unidades",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quantos metros tem 1 quilómetro?",
+         "a": "1000",
+         "audio": "00654c85090a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "2 500 metros são quantos quilómetros?",
+         "options": [
+          "2,5 km",
+          "25 km",
+          "250 km"
+         ],
+         "a": 0,
+         "audio": "a3b0b43f6b90.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos gramas tem meio quilograma?",
+         "a": "500",
+         "audio": "2e0679a17c81.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "3 litros são quantos mililitros?",
+         "options": [
+          "300 ml",
+          "3 000 ml",
+          "30 ml"
+         ],
+         "a": 1,
+         "audio": "24521c08d5d4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para medir a distância entre Lichinga e Maputo usamos:",
+         "options": [
+          "Centímetros",
+          "Metros",
+          "Quilómetros"
+         ],
+         "a": 2,
+         "audio": "c07132431694.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Fracções",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Comparar fracções",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual é maior: 1/2 ou 1/4?",
+         "options": [
+          "1/2",
+          "1/4",
+          "São iguais"
+         ],
+         "a": 0,
+         "audio": "750871cce060.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 1/2 + 1/2?",
+         "options": [
+          "1/4",
+          "1 inteiro",
+          "2/4"
+         ],
+         "a": 1,
+         "audio": "598b619e6483.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na fracção 3/5, quantas partes tomamos?",
+         "options": [
+          "3",
+          "5",
+          "8"
+         ],
+         "a": 0,
+         "audio": "fb62219a3b08.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "2/4 é o mesmo que:",
+         "options": [
+          "1/2",
+          "1/4",
+          "3/4"
+         ],
+         "a": 0,
+         "audio": "4d41cbca9931.mp3"
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta 3/4 para o lugar certo.",
+         "chip": "🍕",
+         "zones": [
+          "Menos de metade",
+          "Mais de metade"
+         ],
+         "a": 1,
+         "audio": "68cb607eced6.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Números decimais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ler e escrever decimais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se lê 0,5?",
+         "options": [
+          "Cinco décimas",
+          "Cinco centésimas",
+          "Cinco inteiros"
+         ],
+         "a": 0,
+         "audio": "f1a522887deb.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve em número decimal: uma inteira e cinco décimas.",
+         "a": "1,5",
+         "audio": "71c2446bacef.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é maior: 0,7 ou 0,5?",
+         "options": [
+          "0,7",
+          "0,5",
+          "São iguais"
+         ],
+         "a": 0,
+         "audio": "6296a4253afd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Meio litro escreve-se:",
+         "options": [
+          "0,5 L",
+          "5 L",
+          "50 L"
+         ],
+         "a": 0,
+         "audio": "b8da57e4de5b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O sinal que separa a parte inteira da parte decimal chama-se:",
+         "options": [
+          "Vírgula",
+          "Ponto final",
+          "Traço"
+         ],
+         "a": 0,
+         "audio": "774dd7825447.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Somar e subtrair decimais",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 0,5 + 0,5?",
+         "a": "1",
+         "audio": "94ff578487c1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 1,2 + 2,3?",
+         "options": [
+          "3,5",
+          "3,4",
+          "4,5"
+         ],
+         "a": 0,
+         "audio": "8de8d744a690.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 2,5 − 1,5?",
+         "options": [
+          "1",
+          "1,5",
+          "0,5"
+         ],
+         "a": 0,
+         "audio": "559f35837120.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao somar decimais, alinhamos:",
+         "options": [
+          "Os últimos algarismos",
+          "As vírgulas",
+          "Os primeiros algarismos"
+         ],
+         "a": 1,
+         "audio": "459746b926b8.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Literacia financeira",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Poupança e troco",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Comprei um livro por 320 MT e paguei com 500 MT. Qual é o troco?",
+         "options": [
+          "180 MT",
+          "280 MT",
+          "120 MT"
+         ],
+         "a": 0,
+         "audio": "a0b51bbaeeaf.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Poupo 50 MT por semana. Quanto tenho ao fim de 4 semanas?",
+         "a": "200",
+         "audio": "ccfa9a98c2f0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Tenho 1 000 MT. Gasto 350 MT em comida e 200 MT em transporte. Quanto sobra?",
+         "options": [
+          "450 MT",
+          "550 MT",
+          "350 MT"
+         ],
+         "a": 0,
+         "audio": "c8738e9e9c46.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Poupar significa:",
+         "options": [
+          "Gastar tudo depressa",
+          "Guardar dinheiro para depois",
+          "Pedir emprestado"
+         ],
+         "a": 1,
+         "audio": "ae3295ab210b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um caderno custa 85 MT. Quanto custam 4 cadernos?",
+         "options": [
+          "320 MT",
+          "340 MT",
+          "360 MT"
+         ],
+         "a": 1,
+         "audio": "23e68a50799b.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u9",
+     "titulo": "Equações",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Resolver equações",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Qual é o número que falta? ___ + 250 = 1 000",
+         "a": "750",
+         "audio": "b7ccef339b97.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o número que falta? 12 × ___ = 144",
+         "a": "12",
+         "audio": "33e6bc83ba03.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o número que falta? ___ : 8 = 9",
+         "a": "72",
+         "audio": "bc1094d0c6c4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para descobrir o número em ___ × 5 = 45, fazemos:",
+         "options": [
+          "45 + 5",
+          "45 : 5",
+          "45 × 5"
+         ],
+         "a": 1,
+         "audio": "dd85ce1b8ce4.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o número que falta? 500 − ___ = 175",
+         "a": "325",
+         "audio": "f3fbd10ce22d.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u10",
+     "titulo": "Tabelas e gráficos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ler e interpretar dados",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Numa tabela de despesas, para saber o total do mês fazemos:",
+         "options": [
+          "A soma de todos os valores",
+          "O maior valor",
+          "A diferença"
+         ],
+         "a": 0,
+         "audio": "6fa3610c03c1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um gráfico de barras serve para:",
+         "options": [
+          "Comparar quantidades",
+          "Escrever textos",
+          "Desenhar mapas"
+         ],
+         "a": 0,
+         "audio": "4b0b42d3e344.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A despesa de água foi 150 MT, 200 MT e 250 MT em três meses. Qual é o total?",
+         "a": "600",
+         "audio": "fa8715b195c5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A média de 10, 20 e 30 é:",
+         "options": [
+          "15",
+          "20",
+          "30"
+         ],
+         "a": 1,
+         "audio": "a8bc68c4ccaf.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cn-4c",
+   "disciplina": "Ciências Naturais",
+   "classe": "4ª classe",
+   "tag": "CN",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "O mundo que nos rodeia",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Seres vivos e não vivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um ser vivo?",
+         "options": [
+          "Pedra",
+          "Árvore",
+          "Água"
+         ],
+         "a": 1,
+         "audio": "456a75145f55.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os seres vivos nascem, crescem, reproduzem-se e:",
+         "options": [
+          "Morrem",
+          "Ficam iguais",
+          "Voam"
+         ],
+         "a": 0,
+         "audio": "95539f94d09a.mp3"
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta a pedra para o grupo certo.",
+         "chip": "🪨",
+         "zones": [
+          "Ser vivo",
+          "Ser não vivo"
+         ],
+         "a": 1,
+         "audio": "a247ffbec210.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada ser ao seu grupo.",
+         "pairs": [
+          [
+           "Cão",
+           "Ser vivo"
+          ],
+          [
+           "Nuvem",
+           "Ser não vivo"
+          ]
+         ],
+         "audio": "03b47635cc8f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Que instrumento usamos para ver coisas muito pequenas?",
+         "options": [
+          "Telescópio",
+          "Lupa",
+          "Termómetro"
+         ],
+         "a": 1,
+         "audio": "c9ad24f0251f.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Seres vivos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As plantas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual é a parte da planta que a segura à terra?",
+         "options": [
+          "Raiz",
+          "Caule",
+          "Folha"
+         ],
+         "a": 0,
+         "audio": "89f77b30bfda.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada parte da planta à sua função.",
+         "pairs": [
+          [
+           "Raiz",
+           "Prende à terra"
+          ],
+          [
+           "Folha",
+           "Faz o alimento"
+          ],
+          [
+           "Flor",
+           "Dá o fruto"
+          ]
+         ],
+         "audio": "56124b42f0a7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As plantas precisam de que para viver?",
+         "options": [
+          "Só de terra",
+          "Água, luz e ar",
+          "Só de água"
+         ],
+         "a": 1,
+         "audio": "43ead9630d75.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas plantas é comum em Moçambique?",
+         "options": [
+          "Mandioqueira",
+          "Pinheiro-do-gelo",
+          "Cacto do deserto"
+         ],
+         "a": 0,
+         "audio": "985523a5f276.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As plantas são importantes porque:",
+         "options": [
+          "Dão alimento e oxigénio",
+          "Fazem barulho",
+          "Dão electricidade"
+         ],
+         "a": 0,
+         "audio": "ac11aa45b9a1.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Os animais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um animal doméstico?",
+         "options": [
+          "Leão",
+          "Galinha",
+          "Elefante"
+         ],
+         "a": 1,
+         "audio": "2da1ca6cbbc3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um animal selvagem?",
+         "options": [
+          "Cabrito",
+          "Cão",
+          "Leão"
+         ],
+         "a": 2,
+         "audio": "77db6b57bb7f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O corpo de um animal divide-se em:",
+         "options": [
+          "Cabeça, tronco e membros",
+          "Raiz, caule e folha",
+          "Só cabeça e cauda"
+         ],
+         "a": 0,
+         "audio": "55cf7d63635d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cuidar de um animal doméstico é dar-lhe:",
+         "options": [
+          "Comida, água e abrigo",
+          "Só comida",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "d6998eee3bd4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Proteger animais em perigo de extinção significa:",
+         "options": [
+          "Caçá-los",
+          "Evitar que desapareçam",
+          "Vendê-los"
+         ],
+         "a": 1,
+         "audio": "f9a82343292a.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Ambiente",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A água",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A água do mar é:",
+         "options": [
+          "Doce",
+          "Salgada",
+          "Sem sabor"
+         ],
+         "a": 1,
+         "audio": "f94895505f7a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma fonte de água na comunidade?",
+         "options": [
+          "Poço",
+          "Fogueira",
+          "Estrada"
+         ],
+         "a": 0,
+         "audio": "52ceacb6ba05.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para tornar a água própria para beber podemos:",
+         "options": [
+          "Fervê-la",
+          "Deixá-la ao sol",
+          "Misturá-la com areia"
+         ],
+         "a": 0,
+         "audio": "370a159d4f50.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A água é importante porque:",
+         "options": [
+          "Todos os seres vivos precisam dela",
+          "Só as plantas precisam",
+          "Só serve para lavar"
+         ],
+         "a": 0,
+         "audio": "9f8b2890c043.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Como se chama a água dos rios e dos lagos? (doce ou salgada)",
+         "a": "doce",
+         "audio": "bb9c7ca10633.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Resíduos sólidos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O que devemos fazer ao lixo?",
+         "options": [
+          "Deitar no chão",
+          "Separar e pôr no lugar certo",
+          "Queimar em casa"
+         ],
+         "a": 1,
+         "audio": "32afffcb56c2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Separar o lixo serve para:",
+         "options": [
+          "Poder reaproveitar materiais",
+          "Ocupar mais espaço",
+          "Sujar mais"
+         ],
+         "a": 0,
+         "audio": "f50286d58d50.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O lixo deitado na rua pode causar:",
+         "options": [
+          "Doenças",
+          "Mais chuva",
+          "Melhor ar"
+         ],
+         "a": 0,
+         "audio": "60c0e9af362c.mp3"
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta a garrafa de plástico para o destino certo.",
+         "chip": "🍾",
+         "zones": [
+          "Lixo comum",
+          "Reciclagem"
+         ],
+         "a": 1,
+         "audio": "96006c00df89.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Reduzir os resíduos significa:",
+         "options": [
+          "Produzir menos lixo",
+          "Comprar mais coisas",
+          "Deitar tudo fora"
+         ],
+         "a": 0,
+         "audio": "f05b01bcd8b6.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Corpo humano e saúde",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Os sentidos",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quantos órgãos dos sentidos temos?",
+         "a": "5",
+         "audio": "ed98e90e5e8c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada órgão ao seu sentido.",
+         "pairs": [
+          [
+           "Olhos",
+           "Visão"
+          ],
+          [
+           "Ouvidos",
+           "Audição"
+          ],
+          [
+           "Língua",
+           "Paladar"
+          ]
+         ],
+         "audio": "3fe0a8e5fade.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Com que órgão sentimos os cheiros?",
+         "options": [
+          "Nariz",
+          "Pele",
+          "Olhos"
+         ],
+         "a": 0,
+         "audio": "19fae217996e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A pele serve para:",
+         "options": [
+          "O tacto",
+          "A visão",
+          "A audição"
+         ],
+         "a": 0,
+         "audio": "313ec3a7ca11.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para cuidar dos olhos devemos:",
+         "options": [
+          "Ler com boa luz",
+          "Olhar para o sol",
+          "Esfregá-los com as mãos sujas"
+         ],
+         "a": 0,
+         "audio": "ff6e961ec1a4.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Alimentação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os alimentos que dão energia chamam-se:",
+         "options": [
+          "Energéticos",
+          "Construtores",
+          "Protectores"
+         ],
+         "a": 0,
+         "audio": "c3e8cf853344.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os alimentos que ajudam a crescer chamam-se:",
+         "options": [
+          "Energéticos",
+          "Construtores",
+          "Protectores"
+         ],
+         "a": 1,
+         "audio": "d316af702425.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As frutas e os legumes são alimentos:",
+         "options": [
+          "Protectores",
+          "Construtores",
+          "Energéticos"
+         ],
+         "a": 0,
+         "audio": "8e9d4cf1beef.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é a origem do leite?",
+         "options": [
+          "Animal",
+          "Vegetal",
+          "Mineral"
+         ],
+         "a": 0,
+         "audio": "f4d04528705c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma refeição equilibrada tem:",
+         "options": [
+          "Só um tipo de alimento",
+          "Alimentos dos três grupos",
+          "Só doces"
+         ],
+         "a": 1,
+         "audio": "990f7d412ccd.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n3",
+       "titulo": "Micróbios e doenças",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os micróbios são seres:",
+         "options": [
+          "Muito pequenos",
+          "Muito grandes",
+          "Que não existem"
+         ],
+         "a": 0,
+         "audio": "82f33b214d34.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nem todos os micróbios são maus. Alguns servem para:",
+         "options": [
+          "Fazer iogurte e pão",
+          "Sujar a água",
+          "Causar febre"
+         ],
+         "a": 0,
+         "audio": "43f5a2ddb10a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A cólera é uma doença que se apanha sobretudo por:",
+         "options": [
+          "Água e alimentos contaminados",
+          "Olhar para o sol",
+          "Correr muito"
+         ],
+         "a": 0,
+         "audio": "028001eb9c0e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para evitar doenças devemos:",
+         "options": [
+          "Lavar as mãos",
+          "Beber água do charco",
+          "Comer com mãos sujas"
+         ],
+         "a": 0,
+         "audio": "e7bb569e2b05.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As parasitoses intestinais evitam-se com:",
+         "options": [
+          "Higiene e água tratada",
+          "Dormir mais",
+          "Correr menos"
+         ],
+         "a": 0,
+         "audio": "3d7b43735912.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Luz",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A luz e a sombra",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um corpo luminoso?",
+         "options": [
+          "Sol",
+          "Lua",
+          "Espelho"
+         ],
+         "a": 0,
+         "audio": "dcfc767190fa.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A luz propaga-se:",
+         "options": [
+          "Em linha recta",
+          "Aos ziguezagues",
+          "Em círculos"
+         ],
+         "a": 0,
+         "audio": "c38cfa09845b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A sombra forma-se quando:",
+         "options": [
+          "Um corpo tapa a luz",
+          "Há muita luz",
+          "É de dia"
+         ],
+         "a": 0,
+         "audio": "c2b7c29e4b67.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Lua brilha porque:",
+         "options": [
+          "Produz luz própria",
+          "Reflecte a luz do Sol",
+          "Está quente"
+         ],
+         "a": 1,
+         "audio": "d9a86ee9137c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A luz do Sol é importante porque:",
+         "options": [
+          "Dá calor e ajuda as plantas",
+          "Faz barulho",
+          "Suja o ar"
+         ],
+         "a": 0,
+         "audio": "ea27af5d172a.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Força e energia",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Forças e movimento",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O que faz cair uma pedra ao chão?",
+         "options": [
+          "A força de gravidade",
+          "O vento",
+          "A luz"
+         ],
+         "a": 0,
+         "audio": "5c5d0e7f5b20.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A força do vento pode:",
+         "options": [
+          "Mover um barco à vela",
+          "Parar o Sol",
+          "Criar pedras"
+         ],
+         "a": 0,
+         "audio": "42c59813c4b3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um elástico esticado, ao ser largado:",
+         "options": [
+          "Volta à forma e move o objecto",
+          "Fica igual",
+          "Desaparece"
+         ],
+         "a": 0,
+         "audio": "cc472489621e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num plano inclinado, um objecto tende a:",
+         "options": [
+          "Descer",
+          "Subir sozinho",
+          "Ficar parado sempre"
+         ],
+         "a": 0,
+         "audio": "575a408ce1f4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma fonte de energia?",
+         "options": [
+          "O Sol",
+          "A sombra",
+          "O silêncio"
+         ],
+         "a": 0,
+         "audio": "4a0b849fa31c.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Recursos naturais e solo",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Recursos e solo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um recurso natural?",
+         "options": [
+          "Água",
+          "Telemóvel",
+          "Caderno"
+         ],
+         "a": 0,
+         "audio": "5d173044b9d6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O solo é formado por:",
+         "options": [
+          "Areia, argila e matéria orgânica",
+          "Só pedras",
+          "Só água"
+         ],
+         "a": 0,
+         "audio": "42c408ddd49a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Devemos usar os recursos naturais:",
+         "options": [
+          "Sem pensar",
+          "Com cuidado, para não acabarem",
+          "Só uma vez"
+         ],
+         "a": 1,
+         "audio": "4f57f4700b93.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um solo bom para a agricultura tem:",
+         "options": [
+          "Muita matéria orgânica",
+          "Só pedras",
+          "Só areia"
+         ],
+         "a": 0,
+         "audio": "4833b92ae315.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Matéria e electricidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A matéria",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Tudo o que ocupa espaço e tem massa chama-se:",
+         "options": [
+          "Matéria",
+          "Energia",
+          "Luz"
+         ],
+         "a": 0,
+         "audio": "f5a1b028b416.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quais são os três estados da matéria?",
+         "options": [
+          "Sólido, líquido e gasoso",
+          "Duro, mole e leve",
+          "Grande, médio e pequeno"
+         ],
+         "a": 0,
+         "audio": "2246dca82880.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A água em estado sólido é:",
+         "options": [
+          "Gelo",
+          "Vapor",
+          "Chuva"
+         ],
+         "a": 0,
+         "audio": "7b7c5f5777be.mp3"
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta o ar para o estado certo.",
+         "chip": "💨",
+         "zones": [
+          "Sólido",
+          "Líquido",
+          "Gasoso"
+         ],
+         "a": 2,
+         "audio": "0e3791f62654.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "A electricidade",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A electricidade serve para:",
+         "options": [
+          "Dar luz e fazer funcionar aparelhos",
+          "Fazer chover",
+          "Criar plantas"
+         ],
+         "a": 0,
+         "audio": "50b498d3c93c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nunca devemos tocar em fios eléctricos:",
+         "options": [
+          "Com as mãos molhadas",
+          "Com sapatos",
+          "Durante o dia"
+         ],
+         "a": 0,
+         "audio": "d83d3bb387ae.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para poupar electricidade devemos:",
+         "options": [
+          "Apagar a luz ao sair",
+          "Deixar tudo ligado",
+          "Abrir a janela"
+         ],
+         "a": 0,
+         "audio": "628fa160e41c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes aparelhos usa electricidade?",
+         "options": [
+          "Lâmpada",
+          "Enxada",
+          "Cadeira"
+         ],
+         "a": 0,
+         "audio": "e8361b00d6da.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u9",
+     "titulo": "Agricultura",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A agricultura",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A agricultura serve para:",
+         "options": [
+          "Produzir alimentos",
+          "Construir estradas",
+          "Fazer telemóveis"
+         ],
+         "a": 0,
+         "audio": "1f435b2dcda2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um instrumento agrícola?",
+         "options": [
+          "Enxada",
+          "Régua",
+          "Lâmpada"
+         ],
+         "a": 0,
+         "audio": "520e9a7d5dd1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas culturas é comum em Moçambique?",
+         "options": [
+          "Milho",
+          "Trigo do gelo",
+          "Café da Islândia"
+         ],
+         "a": 0,
+         "audio": "05be2153fa5c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de semear é preciso:",
+         "options": [
+          "Preparar o solo",
+          "Cortar as plantas",
+          "Regar a estrada"
+         ],
+         "a": 0,
+         "audio": "edce033ff1b4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Depois da colheita, os alimentos devem ser:",
+         "options": [
+          "Bem conservados",
+          "Deixados ao sol e à chuva",
+          "Deitados fora"
+         ],
+         "a": 0,
+         "audio": "ecbf65d1cddd.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "abrev": "C. Naturais"
+  },
+  {
+   "id": "mat-5c",
+   "disciplina": "Matemática",
+   "classe": "5ª classe",
+   "tag": "MAT",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Divisibilidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Divisores e múltiplos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quais são os divisores de 12?",
+         "options": [
+          "1, 2, 3, 4, 6, 12",
+          "1, 2, 5, 12",
+          "2, 4, 8, 12"
+         ],
+         "a": 0,
+         "audio": "1145b72a909c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um número é divisível por 2 quando termina em:",
+         "options": [
+          "0, 2, 4, 6 ou 8",
+          "1, 3, 5 ou 7",
+          "Qualquer algarismo"
+         ],
+         "a": 0,
+         "audio": "2164d9c89280.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um número é divisível por 5 quando termina em:",
+         "options": [
+          "0 ou 5",
+          "2 ou 4",
+          "1 ou 6"
+         ],
+         "a": 0,
+         "audio": "6aacf8a0cd2f.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o menor divisor comum de 8 e 12, tirando o 1?",
+         "a": "2",
+         "audio": "b6806130a7b4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "36 é divisível por 3? (soma dos algarismos: 3+6=9)",
+         "options": [
+          "Sim",
+          "Não"
+         ],
+         "a": 0,
+         "audio": "b94f8b3b9f51.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Números primos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um número primo tem quantos divisores?",
+         "options": [
+          "Apenas 1 e ele próprio",
+          "Três",
+          "Muitos"
+         ],
+         "a": 0,
+         "audio": "17b06decc95e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um número primo?",
+         "options": [
+          "9",
+          "7",
+          "15"
+         ],
+         "a": 1,
+         "audio": "d97ff9040636.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes NÃO é primo?",
+         "options": [
+          "2",
+          "5",
+          "21"
+         ],
+         "a": 2,
+         "audio": "95868f7aa70c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A decomposição de 12 em factores primos é:",
+         "options": [
+          "2 × 2 × 3",
+          "3 × 4",
+          "6 × 2"
+         ],
+         "a": 0,
+         "audio": "1a02028e0d79.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o único número primo que é par?",
+         "a": "2",
+         "audio": "2e6d895efec5.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Potenciação",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Potências",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quanto é 2³?",
+         "options": [
+          "6",
+          "8",
+          "9"
+         ],
+         "a": 1,
+         "audio": "96b3732f50ed.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 5²?",
+         "a": "25",
+         "audio": "310b5371aa50.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em 4³, o número 3 chama-se:",
+         "options": [
+          "Base",
+          "Expoente",
+          "Produto"
+         ],
+         "a": 1,
+         "audio": "5e24966d2dfb.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 10³?",
+         "a": "1000",
+         "audio": "1a5b18a6c527.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qualquer número elevado a 1 dá:",
+         "options": [
+          "1",
+          "O próprio número",
+          "0"
+         ],
+         "a": 1,
+         "audio": "4c8ee94c1ffb.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Fracções",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Fracções equivalentes",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual fracção é equivalente a 1/2?",
+         "options": [
+          "2/4",
+          "1/3",
+          "3/5"
+         ],
+         "a": 0,
+         "audio": "6a20e034286c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é maior: 2/3 ou 1/3?",
+         "options": [
+          "2/3",
+          "1/3",
+          "São iguais"
+         ],
+         "a": 0,
+         "audio": "d4bd2ca5986d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 1/4 + 2/4?",
+         "options": [
+          "3/4",
+          "3/8",
+          "2/8"
+         ],
+         "a": 0,
+         "audio": "5512738a0ad3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 3/5 − 1/5?",
+         "options": [
+          "2/5",
+          "2/10",
+          "4/5"
+         ],
+         "a": 0,
+         "audio": "502852ae5ad2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para comparar 1/2 e 1/3 precisamos de:",
+         "options": [
+          "O mesmo denominador",
+          "O mesmo numerador",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "b475658474d4.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Números decimais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Operar com decimais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quanto é 2,5 + 1,25?",
+         "options": [
+          "3,75",
+          "3,30",
+          "4,75"
+         ],
+         "a": 0,
+         "audio": "cb87a8a036dc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 5,0 − 2,5?",
+         "options": [
+          "2,5",
+          "3,5",
+          "2,0"
+         ],
+         "a": 0,
+         "audio": "ca0cfc3d07de.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é maior: 0,25 ou 0,3?",
+         "options": [
+          "0,25",
+          "0,3",
+          "São iguais"
+         ],
+         "a": 1,
+         "audio": "5b1a5ff255f7.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve 1/2 em número decimal.",
+         "a": "0,5",
+         "audio": "63c1b462e2d1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "0,75 é o mesmo que:",
+         "options": [
+          "3/4",
+          "1/4",
+          "7/5"
+         ],
+         "a": 0,
+         "audio": "df2206df9ebb.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Percentagem",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Calcular percentagens",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "50% de 200 é:",
+         "options": [
+          "50",
+          "100",
+          "150"
+         ],
+         "a": 1,
+         "audio": "3c1ef33a7e84.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 10% de 500?",
+         "a": "50",
+         "audio": "66a77e71c8df.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "100% de uma quantidade é:",
+         "options": [
+          "Metade",
+          "A quantidade toda",
+          "O dobro"
+         ],
+         "a": 1,
+         "audio": "281ee8684d5a.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Numa turma de 40 alunos, 25% são raparigas. Quantas são?",
+         "a": "10",
+         "audio": "406084726f66.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "25% é o mesmo que:",
+         "options": [
+          "1/4",
+          "1/2",
+          "1/3"
+         ],
+         "a": 0,
+         "audio": "d3ed1fce2e54.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Espaço e forma",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Circunferência e círculo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A distância do centro da circunferência a qualquer ponto dela chama-se:",
+         "options": [
+          "Raio",
+          "Diâmetro",
+          "Perímetro"
+         ],
+         "a": 0,
+         "audio": "64da2de219cc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O diâmetro é igual a:",
+         "options": [
+          "Metade do raio",
+          "O dobro do raio",
+          "O raio"
+         ],
+         "a": 1,
+         "audio": "d534ce8d77ea.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma circunferência tem raio de 5 cm. Qual é o diâmetro, em cm?",
+         "a": "10",
+         "audio": "613402b6dd2b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A planificação de um cubo tem quantos quadrados?",
+         "options": [
+          "4",
+          "6",
+          "8"
+         ],
+         "a": 1,
+         "audio": "0739793c0bca.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Grandezas e medidas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Tempo e medidas",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quantos minutos tem uma hora e meia?",
+         "a": "90",
+         "audio": "5d8c6ab53ca3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quantos meses tem um ano?",
+         "options": [
+          "10",
+          "12",
+          "52"
+         ],
+         "a": 1,
+         "audio": "854cae017734.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos dias tem o mês de Setembro?",
+         "a": "30",
+         "audio": "9510663964dd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um século tem:",
+         "options": [
+          "10 anos",
+          "100 anos",
+          "1000 anos"
+         ],
+         "a": 1,
+         "audio": "9380d31ec7bd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "2,5 kg são quantos gramas?",
+         "options": [
+          "250 g",
+          "2 500 g",
+          "25 g"
+         ],
+         "a": 1,
+         "audio": "348fae63dcae.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Equações",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Resolver equações",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Qual é o valor de x? x + 15 = 40",
+         "a": "25",
+         "audio": "2e5c66a04b5c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o valor de x? x × 6 = 54",
+         "a": "9",
+         "audio": "cd108682804f.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o valor de x? x − 12 = 30",
+         "a": "42",
+         "audio": "6e81e43dad70.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa equação, o sinal = significa que os dois lados:",
+         "options": [
+          "São iguais",
+          "São diferentes",
+          "Somam"
+         ],
+         "a": 0,
+         "audio": "9bf8c00bd093.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o valor de x? x : 4 = 12",
+         "a": "48",
+         "audio": "0bf479b8b181.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u9",
+     "titulo": "Literacia financeira",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Despesas e receitas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O dinheiro que entra numa família chama-se:",
+         "options": [
+          "Receita",
+          "Despesa",
+          "Dívida"
+         ],
+         "a": 0,
+         "audio": "3458fbb9fbaf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se as despesas forem maiores que as receitas, a família:",
+         "options": [
+          "Fica com falta de dinheiro",
+          "Poupa mais",
+          "Fica igual"
+         ],
+         "a": 0,
+         "audio": "a8d93751bbd1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Receita de 8 000 MT e despesa de 6 500 MT. Quanto sobra?",
+         "a": "1500",
+         "audio": "327a4bc76756.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Fazer um orçamento serve para:",
+         "options": [
+          "Planear os gastos",
+          "Gastar mais depressa",
+          "Esconder dinheiro"
+         ],
+         "a": 0,
+         "audio": "352649ea2131.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Dinheiro electrónico",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma conta móvel serve para:",
+         "options": [
+          "Guardar e enviar dinheiro pelo telemóvel",
+          "Fazer chamadas grátis",
+          "Guardar fotografias"
+         ],
+         "a": 0,
+         "audio": "6ab2b8332a2b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O código secreto (PIN) da conta móvel deve ser:",
+         "options": [
+          "Partilhado com amigos",
+          "Guardado só para ti",
+          "Escrito no telemóvel"
+         ],
+         "a": 1,
+         "audio": "32469b8452af.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se alguém te pedir o PIN por mensagem, deves:",
+         "options": [
+          "Enviar depressa",
+          "Não enviar — é burla",
+          "Enviar só metade"
+         ],
+         "a": 1,
+         "audio": "612f29485e80.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um cartão de crédito permite:",
+         "options": [
+          "Gastar dinheiro que se paga depois",
+          "Ganhar dinheiro",
+          "Gastar sem nunca pagar"
+         ],
+         "a": 0,
+         "audio": "b7227f0ce729.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "por-5c",
+   "disciplina": "Português",
+   "classe": "5ª classe",
+   "tag": "POR",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Nomes e adjectivos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O nome e o seu plural",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Escreve o plural de \"papel\".",
+         "a": "papéis",
+         "audio": "b4cb7f627614.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o plural de \"pão\".",
+         "a": "pães",
+         "audio": "902094b384d1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o plural de \"cão\"?",
+         "options": [
+          "cãos",
+          "cães",
+          "cãoes"
+         ],
+         "a": 1,
+         "audio": "02645c823b1c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o plural de \"lápis\"?",
+         "options": [
+          "lápis",
+          "lápises",
+          "lapes"
+         ],
+         "a": 0,
+         "audio": "317d9137d9d7.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o plural de \"mulher\".",
+         "a": "mulheres",
+         "audio": "96c214614b01.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Graus do adjectivo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "\"Mais alto do que\" é o grau:",
+         "options": [
+          "Normal",
+          "Comparativo",
+          "Superlativo"
+         ],
+         "a": 1,
+         "audio": "5d8dae330438.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Altíssimo\" é o grau:",
+         "options": [
+          "Normal",
+          "Comparativo",
+          "Superlativo"
+         ],
+         "a": 2,
+         "audio": "91c6b1e70c15.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada forma ao seu grau.",
+         "pairs": [
+          [
+           "alto",
+           "Normal"
+          ],
+          [
+           "mais alto",
+           "Comparativo"
+          ],
+          [
+           "altíssimo",
+           "Superlativo"
+          ]
+         ],
+         "audio": "711ceea9f50d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na frase \"A Ana é tão alta como o Pedro\", o grau é:",
+         "options": [
+          "Comparativo de igualdade",
+          "Superlativo",
+          "Normal"
+         ],
+         "a": 0,
+         "audio": "b1636155d618.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Pronomes",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Pronomes pessoais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um pronome pessoal?",
+         "options": [
+          "ele",
+          "casa",
+          "bonito"
+         ],
+         "a": 0,
+         "audio": "7413ec2eee6c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Completa: ___ estudamos na 5ª classe.",
+         "options": [
+          "Nós",
+          "Ele",
+          "Tu"
+         ],
+         "a": 0,
+         "audio": "ad9882977af3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na frase \"Eu vi-o ontem\", o pronome \"o\" refere-se a:",
+         "options": [
+          "Quem fala",
+          "A pessoa de quem se fala",
+          "Ninguém"
+         ],
+         "a": 1,
+         "audio": "1cbc67619635.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O pronome serve para:",
+         "options": [
+          "Substituir o nome",
+          "Indicar acção",
+          "Descrever"
+         ],
+         "a": 0,
+         "audio": "46d975f706fb.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Possessivos e demonstrativos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um pronome possessivo?",
+         "options": [
+          "meu",
+          "este",
+          "ele"
+         ],
+         "a": 0,
+         "audio": "7de02e54348c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um pronome demonstrativo?",
+         "options": [
+          "teu",
+          "aquele",
+          "nós"
+         ],
+         "a": 1,
+         "audio": "82e8a304aca0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Este livro é meu.\" A palavra \"meu\" indica:",
+         "options": [
+          "Posse",
+          "Lugar",
+          "Tempo"
+         ],
+         "a": 0,
+         "audio": "51cd000e8963.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada pronome ao seu tipo.",
+         "pairs": [
+          [
+           "nosso",
+           "Possessivo"
+          ],
+          [
+           "aquela",
+           "Demonstrativo"
+          ],
+          [
+           "alguém",
+           "Indefinido"
+          ]
+         ],
+         "audio": "83a4853650f3.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "A frase",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Sujeito e predicado",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na frase \"O Carlos estuda\", qual é o sujeito?",
+         "options": [
+          "O Carlos",
+          "estuda",
+          "a frase toda"
+         ],
+         "a": 0,
+         "audio": "d680f697b4a4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na frase \"As crianças brincam no pátio\", qual é o predicado?",
+         "options": [
+          "As crianças",
+          "brincam no pátio",
+          "no pátio"
+         ],
+         "a": 1,
+         "audio": "e183ac5ca107.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O sujeito é:",
+         "options": [
+          "Quem pratica a acção",
+          "A acção",
+          "O lugar"
+         ],
+         "a": 0,
+         "audio": "48141e80e01f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O predicado diz:",
+         "options": [
+          "O que o sujeito faz",
+          "Quem é o sujeito",
+          "Onde fica"
+         ],
+         "a": 0,
+         "audio": "07090b15f318.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Advérbios",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um advérbio de lugar?",
+         "options": [
+          "aqui",
+          "bonito",
+          "menino"
+         ],
+         "a": 0,
+         "audio": "c93ee3be0d6b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Ontem\" é um advérbio de:",
+         "options": [
+          "Tempo",
+          "Lugar",
+          "Modo"
+         ],
+         "a": 0,
+         "audio": "2c655b27d62d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Depressa\" é um advérbio de:",
+         "options": [
+          "Tempo",
+          "Modo",
+          "Lugar"
+         ],
+         "a": 1,
+         "audio": "9a20320a9f0d.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada advérbio ao seu tipo.",
+         "pairs": [
+          [
+           "aqui",
+           "Lugar"
+          ],
+          [
+           "hoje",
+           "Tempo"
+          ],
+          [
+           "bem",
+           "Modo"
+          ]
+         ],
+         "audio": "551e83b3ec27.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Tipos de texto",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ler e compreender",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um texto poético organiza-se em:",
+         "options": [
+          "Versos e estrofes",
+          "Parágrafos",
+          "Capítulos"
+         ],
+         "a": 0,
+         "audio": "490d2ae8c0c0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um texto didáctico serve para:",
+         "options": [
+          "Ensinar",
+          "Divertir apenas",
+          "Vender"
+         ],
+         "a": 0,
+         "audio": "aeaeb9d08510.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa notícia, o mais importante vem:",
+         "options": [
+          "No início",
+          "No fim",
+          "A meio"
+         ],
+         "a": 0,
+         "audio": "3a1097576abd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O narrador de um texto narrativo é:",
+         "options": [
+          "Quem conta a história",
+          "Quem lê",
+          "O autor do livro"
+         ],
+         "a": 0,
+         "audio": "3320d8db777a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma carta termina normalmente com:",
+         "options": [
+          "Despedida e assinatura",
+          "Um título",
+          "Uma pergunta"
+         ],
+         "a": 0,
+         "audio": "cbf5a6935def.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Verbos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Conjugar verbos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os verbos terminados em -ar pertencem à:",
+         "options": [
+          "1ª conjugação",
+          "2ª conjugação",
+          "3ª conjugação"
+         ],
+         "a": 0,
+         "audio": "6f67e28ccf4b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O verbo \"comer\" pertence à:",
+         "options": [
+          "1ª conjugação",
+          "2ª conjugação",
+          "3ª conjugação"
+         ],
+         "a": 1,
+         "audio": "f3db95b79fac.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O verbo \"partir\" pertence à:",
+         "options": [
+          "1ª conjugação",
+          "2ª conjugação",
+          "3ª conjugação"
+         ],
+         "a": 2,
+         "audio": "b28fe4f8cf19.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Completa: Nós ___ (cantar) no presente.",
+         "a": "cantamos",
+         "audio": "90a053f12146.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Completa no pretérito: Eles ___ à escola ontem.",
+         "options": [
+          "vão",
+          "foram",
+          "irão"
+         ],
+         "a": 1,
+         "audio": "fe30675d2f58.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Acentuação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A palavra \"café\" tem acento:",
+         "options": [
+          "Agudo",
+          "Grave",
+          "Circunflexo"
+         ],
+         "a": 0,
+         "audio": "cba8777910a5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A palavra \"avô\" tem acento:",
+         "options": [
+          "Agudo",
+          "Circunflexo",
+          "Til"
+         ],
+         "a": 1,
+         "audio": "5ef0d5545b6b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O sinal ~ chama-se:",
+         "options": [
+          "Til",
+          "Cedilha",
+          "Acento agudo"
+         ],
+         "a": 0,
+         "audio": "1d0277449bea.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A cedilha usa-se em:",
+         "options": [
+          "ç",
+          "ã",
+          "é"
+         ],
+         "a": 0,
+         "audio": "df955fb46e62.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve com o acento certo: \"Portugues\" (a língua).",
+         "a": "Português",
+         "audio": "9676ff2b524e.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Vocabulário",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Famílias de palavras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destas pertence à família de \"terra\"?",
+         "options": [
+          "terreno",
+          "tarde",
+          "torre"
+         ],
+         "a": 0,
+         "audio": "24674221741b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o diminutivo de \"casa\"?",
+         "options": [
+          "casinha",
+          "casarão",
+          "casas"
+         ],
+         "a": 0,
+         "audio": "4c89f595ea4d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o aumentativo de \"livro\"?",
+         "options": [
+          "livrinho",
+          "livrão",
+          "livros"
+         ],
+         "a": 1,
+         "audio": "672e0b8dd82b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra ao seu sinónimo.",
+         "pairs": [
+          [
+           "rápido",
+           "veloz"
+          ],
+          [
+           "contente",
+           "alegre"
+          ],
+          [
+           "esperto",
+           "inteligente"
+          ]
+         ],
+         "audio": "f3340dcbf0b7.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o antónimo de \"cheio\".",
+         "a": "vazio",
+         "audio": "8d2bfd32ef07.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cn-5c",
+   "disciplina": "Ciências Naturais",
+   "abrev": "C. Naturais",
+   "classe": "5ª classe",
+   "tag": "CN",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Plantas e animais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As plantas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As plantas produzem o seu alimento através da:",
+         "options": [
+          "Fotossíntese",
+          "Respiração",
+          "Digestão"
+         ],
+         "a": 0,
+         "audio": "e28fef6bdeb7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para a fotossíntese, a planta precisa de:",
+         "options": [
+          "Luz, água e dióxido de carbono",
+          "Só de terra",
+          "Só de escuro"
+         ],
+         "a": 0,
+         "audio": "d28d87e2b8c5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A parte da planta que transporta a água é:",
+         "options": [
+          "O caule",
+          "A flor",
+          "O fruto"
+         ],
+         "a": 0,
+         "audio": "4cc29bc839e9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As plantas libertam para o ar:",
+         "options": [
+          "Oxigénio",
+          "Fumo",
+          "Areia"
+         ],
+         "a": 0,
+         "audio": "5cd08999f3fb.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Os animais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os animais que têm coluna vertebral chamam-se:",
+         "options": [
+          "Vertebrados",
+          "Invertebrados",
+          "Mamíferos"
+         ],
+         "a": 0,
+         "audio": "a87c326adcc2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A minhoca é um animal:",
+         "options": [
+          "Vertebrado",
+          "Invertebrado"
+         ],
+         "a": 1,
+         "audio": "635484644643.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada animal ao seu grupo.",
+         "pairs": [
+          [
+           "Peixe",
+           "Vertebrado"
+          ],
+          [
+           "Aranha",
+           "Invertebrado"
+          ]
+         ],
+         "audio": "664902dd5b61.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os animais que se alimentam só de plantas chamam-se:",
+         "options": [
+          "Herbívoros",
+          "Carnívoros",
+          "Omnívoros"
+         ],
+         "a": 0,
+         "audio": "60af2505e841.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O leão é um animal:",
+         "options": [
+          "Herbívoro",
+          "Carnívoro",
+          "Nenhum"
+         ],
+         "a": 1,
+         "audio": "cc97a4be7c3d.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Água, solo e agricultura",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A água",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A passagem da água de líquido a vapor chama-se:",
+         "options": [
+          "Evaporação",
+          "Condensação",
+          "Solidificação"
+         ],
+         "a": 0,
+         "audio": "a4572dd3c202.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A chuva forma-se pela:",
+         "options": [
+          "Condensação do vapor de água",
+          "Evaporação do solo",
+          "Fotossíntese"
+         ],
+         "a": 0,
+         "audio": "71664dcb2a59.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma forma de tratar a água em casa é:",
+         "options": [
+          "Fervê-la ou usar lixívia própria",
+          "Deixá-la ao sol",
+          "Juntar açúcar"
+         ],
+         "a": 0,
+         "audio": "58d9e572967d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Beber água não tratada pode causar:",
+         "options": [
+          "Cólera e diarreia",
+          "Mais força",
+          "Melhor visão"
+         ],
+         "a": 0,
+         "audio": "738f4a1c5d5d.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Solo e agricultura",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A camada do solo mais rica em matéria orgânica é:",
+         "options": [
+          "A camada de cima",
+          "A camada do meio",
+          "A rocha"
+         ],
+         "a": 0,
+         "audio": "a1839d8ce9ad.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A erosão do solo é causada sobretudo por:",
+         "options": [
+          "Água e vento",
+          "Luz do sol",
+          "Ar parado"
+         ],
+         "a": 0,
+         "audio": "6c962adf715b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para proteger o solo da erosão devemos:",
+         "options": [
+          "Plantar árvores",
+          "Cortar todas as plantas",
+          "Queimar o capim"
+         ],
+         "a": 0,
+         "audio": "0dea3fb6e55b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A rotação de culturas serve para:",
+         "options": [
+          "Manter o solo fértil",
+          "Cansar o solo",
+          "Gastar mais água"
+         ],
+         "a": 0,
+         "audio": "414c1a1dc3b7.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Matéria e recursos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Propriedades da matéria",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A massa mede-se em:",
+         "options": [
+          "Quilogramas",
+          "Litros",
+          "Metros"
+         ],
+         "a": 0,
+         "audio": "1484c7dda05d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O volume mede o:",
+         "options": [
+          "Espaço ocupado",
+          "Peso",
+          "Comprimento"
+         ],
+         "a": 0,
+         "audio": "5d169c267f27.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao aquecer, a maioria dos corpos:",
+         "options": [
+          "Dilata",
+          "Encolhe",
+          "Fica igual"
+         ],
+         "a": 0,
+         "audio": "e7d2b38e386f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um recurso natural renovável é:",
+         "options": [
+          "A energia solar",
+          "O carvão",
+          "O petróleo"
+         ],
+         "a": 0,
+         "audio": "87677956478e.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Corpo humano e higiene",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Os sentidos e o corpo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O órgão principal do sistema nervoso é:",
+         "options": [
+          "O cérebro",
+          "O coração",
+          "O pulmão"
+         ],
+         "a": 0,
+         "audio": "03a0b079e04a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O coração faz parte do sistema:",
+         "options": [
+          "Circulatório",
+          "Digestivo",
+          "Respiratório"
+         ],
+         "a": 0,
+         "audio": "36cc7834bcdc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Respiramos com a ajuda dos:",
+         "options": [
+          "Pulmões",
+          "Rins",
+          "Ossos"
+         ],
+         "a": 0,
+         "audio": "b53d87d2aca2.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada órgão ao seu sistema.",
+         "pairs": [
+          [
+           "Estômago",
+           "Digestivo"
+          ],
+          [
+           "Pulmão",
+           "Respiratório"
+          ],
+          [
+           "Coração",
+           "Circulatório"
+          ]
+         ],
+         "audio": "17e8d71fea62.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Higiene e ambiente",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Lavar as mãos antes de comer evita:",
+         "options": [
+          "Doenças",
+          "Fome",
+          "Cansaço"
+         ],
+         "a": 0,
+         "audio": "532d88d8639b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A malária transmite-se pela picada:",
+         "options": [
+          "Do mosquito",
+          "Da mosca",
+          "Da formiga"
+         ],
+         "a": 0,
+         "audio": "a395ab43994c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para evitar a malária devemos:",
+         "options": [
+          "Dormir com rede mosquiteira",
+          "Deixar água parada",
+          "Abrir as janelas à noite"
+         ],
+         "a": 0,
+         "audio": "9dc4c7de3a54.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Água parada em latas e pneus serve para:",
+         "options": [
+          "Criar mosquitos",
+          "Limpar o ar",
+          "Regar plantas"
+         ],
+         "a": 0,
+         "audio": "926221c06b08.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Queimar lixo perto de casa:",
+         "options": [
+          "Faz mal à saúde",
+          "Limpa o ar",
+          "Não tem problema"
+         ],
+         "a": 0,
+         "audio": "04f6ab7d49df.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n3",
+       "titulo": "O corpo que muda",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As mudanças no corpo durante o crescimento são:",
+         "options": [
+          "Normais em todas as pessoas",
+          "Sinal de doença",
+          "Raras"
+         ],
+         "a": 0,
+         "audio": "144d7fcd4a7e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Durante a puberdade é ainda mais importante:",
+         "options": [
+          "Cuidar da higiene do corpo",
+          "Deixar de tomar banho",
+          "Comer menos"
+         ],
+         "a": 0,
+         "audio": "fb5aad9fb99b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se tiveres dúvidas sobre o teu corpo, deves falar com:",
+         "options": [
+          "Um adulto de confiança ou o professor",
+          "Ninguém",
+          "Só com desconhecidos"
+         ],
+         "a": 0,
+         "audio": "286f771a034f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cada pessoa cresce e muda:",
+         "options": [
+          "No seu próprio ritmo",
+          "Todos ao mesmo tempo",
+          "Só aos 20 anos"
+         ],
+         "a": 0,
+         "audio": "7d481d23d327.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Energia e luz",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Formas de energia",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A energia do Sol chama-se energia:",
+         "options": [
+          "Solar",
+          "Eólica",
+          "Hídrica"
+         ],
+         "a": 0,
+         "audio": "e94d7f2d38ff.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A energia produzida pelo vento chama-se:",
+         "options": [
+          "Eólica",
+          "Solar",
+          "Térmica"
+         ],
+         "a": 0,
+         "audio": "e87af7f9f98e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A barragem de Cahora Bassa produz energia a partir:",
+         "options": [
+          "Da água",
+          "Do vento",
+          "Do carvão"
+         ],
+         "a": 0,
+         "audio": "f5854d3cbfd9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Poupar energia em casa faz-se:",
+         "options": [
+          "Apagando o que não se usa",
+          "Deixando tudo ligado",
+          "Abrindo o frigorífico"
+         ],
+         "a": 0,
+         "audio": "b2988087036a.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Luz e som",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A luz viaja mais depressa que:",
+         "options": [
+          "O som",
+          "Nada",
+          "A electricidade"
+         ],
+         "a": 0,
+         "audio": "437b0643136e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa trovoada vemos o relâmpago antes de ouvir o trovão porque:",
+         "options": [
+          "A luz é mais rápida que o som",
+          "O trovão vem depois",
+          "O som não existe"
+         ],
+         "a": 0,
+         "audio": "4b925d917552.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O som propaga-se através:",
+         "options": [
+          "Do ar, da água e dos sólidos",
+          "Só do ar",
+          "Do vazio"
+         ],
+         "a": 0,
+         "audio": "208830566d60.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um corpo transparente:",
+         "options": [
+          "Deixa passar a luz",
+          "Bloqueia a luz",
+          "Produz luz"
+         ],
+         "a": 0,
+         "audio": "87ad219e04ab.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-5c",
+   "disciplina": "Ciências Sociais",
+   "abrev": "C. Sociais",
+   "classe": "5ª classe",
+   "tag": "CS",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Moçambique no mapa",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Orientação e horizonte",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O Sol nasce a:",
+         "options": [
+          "Este",
+          "Oeste",
+          "Norte"
+         ],
+         "a": 0,
+         "audio": "bdeb58912ff8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quantos são os pontos cardeais?",
+         "options": [
+          "2",
+          "4",
+          "8"
+         ],
+         "a": 1,
+         "audio": "23531df031c3.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada ponto cardeal ao seu lugar.",
+         "pairs": [
+          [
+           "Norte",
+           "Em cima do mapa"
+          ],
+          [
+           "Sul",
+           "Em baixo do mapa"
+          ]
+         ],
+         "audio": "2a66b84bc62a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O instrumento que indica o Norte chama-se:",
+         "options": [
+          "Bússola",
+          "Régua",
+          "Termómetro"
+         ],
+         "a": 0,
+         "audio": "d9d36e95bb04.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Geografia de Moçambique",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quantas províncias tem Moçambique?",
+         "a": "11",
+         "audio": "a1894db6aa29.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é a capital de Moçambique?",
+         "options": [
+          "Beira",
+          "Maputo",
+          "Nampula"
+         ],
+         "a": 1,
+         "audio": "0d1df9c56465.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O rio que faz fronteira a norte com a Tanzânia é o:",
+         "options": [
+          "Rovuma",
+          "Zambeze",
+          "Limpopo"
+         ],
+         "a": 0,
+         "audio": "ec056e17204f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Moçambique é banhado a este pelo:",
+         "options": [
+          "Oceano Índico",
+          "Oceano Atlântico",
+          "Mar Vermelho"
+         ],
+         "a": 0,
+         "audio": "ccddd0c979a3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é a capital da província do Niassa?",
+         "options": [
+          "Lichinga",
+          "Pemba",
+          "Tete"
+         ],
+         "a": 0,
+         "audio": "1f4bc8698cc9.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Os primeiros habitantes",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Antes da chegada dos estrangeiros",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os primeiros habitantes de Moçambique viviam da:",
+         "options": [
+          "Caça e recolecção",
+          "Indústria",
+          "Informática"
+         ],
+         "a": 0,
+         "audio": "21be2c8cc987.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os povos bantu trouxeram o conhecimento de:",
+         "options": [
+          "Agricultura e do ferro",
+          "Escrita alfabética",
+          "Electricidade"
+         ],
+         "a": 0,
+         "audio": "615f827526dc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma das línguas bantu faladas em Maputo, Gaza e Inhambane é o:",
+         "options": [
+          "Tsonga",
+          "Suaíli",
+          "Inglês"
+         ],
+         "a": 0,
+         "audio": "61787d62dba2.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "A chegada dos estrangeiros",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Penetração asiática e portuguesa",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os primeiros comerciantes estrangeiros na costa de Moçambique foram:",
+         "options": [
+          "Árabes e asiáticos",
+          "Ingleses",
+          "Franceses"
+         ],
+         "a": 0,
+         "audio": "e9e177f79744.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O comércio na costa fazia-se sobretudo com:",
+         "options": [
+          "Ouro, marfim e tecidos",
+          "Automóveis",
+          "Telemóveis"
+         ],
+         "a": 0,
+         "audio": "ade92edce307.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os portugueses chegaram à costa moçambicana no século:",
+         "options": [
+          "XV",
+          "XIX",
+          "XX"
+         ],
+         "a": 0,
+         "audio": "14d057d9f155.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A colonização portuguesa trouxe aos moçambicanos:",
+         "options": [
+          "Trabalho forçado e impostos",
+          "Mais liberdade",
+          "Independência"
+         ],
+         "a": 0,
+         "audio": "50dc69bb607d.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Luta de libertação e independência",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A luta armada",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Em que ano começou a Luta de Libertação Nacional?",
+         "options": [
+          "1962",
+          "1964",
+          "1975"
+         ],
+         "a": 1,
+         "audio": "3884c59b30f3.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em que dia e mês começou a Luta de Libertação Nacional? (ex.: 3 de Maio)",
+         "a": "25 de Setembro",
+         "audio": "63ec790239a8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual foi o primeiro presidente da FRELIMO?",
+         "options": [
+          "Eduardo Mondlane",
+          "Samora Machel",
+          "Joaquim Chissano"
+         ],
+         "a": 0,
+         "audio": "cd979fb42859.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A FRELIMO foi criada em 1962 na cidade de:",
+         "options": [
+          "Dar-Es-Salaam",
+          "Maputo",
+          "Lisboa"
+         ],
+         "a": 0,
+         "audio": "da10bcd33277.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As primeiras províncias onde decorreu a luta armada foram:",
+         "options": [
+          "Niassa e Cabo Delgado",
+          "Maputo e Gaza",
+          "Sofala e Manica"
+         ],
+         "a": 0,
+         "audio": "39cfd9c311a1.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "A independência",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Em que ano Moçambique se tornou independente?",
+         "options": [
+          "1964",
+          "1975",
+          "1990"
+         ],
+         "a": 1,
+         "audio": "51cf95bd86cb.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em que dia e mês se comemora a Independência? (ex.: 3 de Maio)",
+         "a": "25 de Junho",
+         "audio": "95192bb1231e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quem proclamou a Independência de Moçambique?",
+         "options": [
+          "Samora Machel",
+          "Eduardo Mondlane",
+          "Armando Guebuza"
+         ],
+         "a": 0,
+         "audio": "94ace9b4264b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Onde foi proclamada a Independência?",
+         "options": [
+          "Estádio da Machava",
+          "Praça dos Heróis",
+          "Ilha de Moçambique"
+         ],
+         "a": 0,
+         "audio": "ab0fa8ca65bc.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada data ao seu acontecimento.",
+         "pairs": [
+          [
+           "25 de Setembro de 1964",
+           "Início da Luta Armada"
+          ],
+          [
+           "25 de Junho de 1975",
+           "Independência"
+          ]
+         ],
+         "audio": "c904fd32f33f.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Moçambique independente",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Símbolos nacionais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quantas cores tem a Bandeira de Moçambique?",
+         "options": [
+          "Três",
+          "Cinco",
+          "Sete"
+         ],
+         "a": 1,
+         "audio": "9fc8effd11ff.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O que está representado na Bandeira Nacional, além das cores?",
+         "options": [
+          "Livro, enxada e arma",
+          "Uma estrela só",
+          "Um leão"
+         ],
+         "a": 0,
+         "audio": "9d5fadf6f743.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O livro na bandeira representa:",
+         "options": [
+          "A educação",
+          "A guerra",
+          "O comércio"
+         ],
+         "a": 0,
+         "audio": "c5b79beed213.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A enxada na bandeira representa:",
+         "options": [
+          "A agricultura",
+          "A pesca",
+          "A escola"
+         ],
+         "a": 0,
+         "audio": "31b176221bb9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O hino nacional de Moçambique chama-se:",
+         "options": [
+          "Pátria Amada",
+          "A Portuguesa",
+          "Nkosi Sikelela"
+         ],
+         "a": 0,
+         "audio": "6e8a035b1127.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "A construção do país",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Depois da Independência, o Estado nacionalizou:",
+         "options": [
+          "A saúde e a educação",
+          "Só as lojas",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "4a5e71fb5325.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A capital de Moçambique passou a chamar-se Maputo em vez de:",
+         "options": [
+          "Lourenço Marques",
+          "Beira",
+          "Nampula"
+         ],
+         "a": 0,
+         "audio": "63c656b3b155.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Moçambique é hoje um país:",
+         "options": [
+          "Independente e soberano",
+          "Colónia",
+          "Província"
+         ],
+         "a": 0,
+         "audio": "1c8996d69201.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O 25 de Junho comemora-se com:",
+         "options": [
+          "Feriado nacional",
+          "Aulas normais",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "8ebb0976733d.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Viver em sociedade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Direitos e deveres",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Todas as crianças têm direito a:",
+         "options": [
+          "Educação e saúde",
+          "Trabalhar em vez de estudar",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "61fd6b2a0efc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um dever de todos os cidadãos é:",
+         "options": [
+          "Respeitar os outros",
+          "Deitar lixo na rua",
+          "Faltar à escola"
+         ],
+         "a": 0,
+         "audio": "cf1999a4f655.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Moçambique tem muitas línguas e culturas. Isso é:",
+         "options": [
+          "Uma riqueza",
+          "Um problema",
+          "Um erro"
+         ],
+         "a": 0,
+         "audio": "506d3b22f915.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se vires alguém a ser maltratado, deves:",
+         "options": [
+          "Contar a um adulto de confiança",
+          "Ficar calado",
+          "Rir"
+         ],
+         "a": 0,
+         "audio": "2998abc5d1d2.mp3"
         }
        ]
       }

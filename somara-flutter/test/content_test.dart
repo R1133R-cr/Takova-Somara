@@ -14,23 +14,58 @@ void main() {
     c = await Conteudo.carregar();
   });
 
-  test('carrega Matemática e Português da 1ª à 3ª classe', () {
-    expect(c.cursos.length, 6);
+  test('cada classe traz as disciplinas que lhe pertencem', () {
+    expect(c.cursos.length, 12);
+
+    // Da 1ª à 3ª são duas disciplinas: Matemática e Português.
     for (final classe in ['1ª classe', '2ª classe', '3ª classe']) {
       final daClasse = c.cursos.where((x) => x.classe == classe);
       expect(daClasse.length, 2, reason: classe);
       expect(daClasse.map((x) => x.disciplina),
           containsAll(['Matemática', 'Português']), reason: classe);
     }
+
+    // A 4ª devia ter quatro e tem duas: faltam os manuais de Português e
+    // de Ciências Sociais dessa classe. Fica registado aqui — este teste
+    // falha no dia em que os livros chegarem, que é quando queremos saber.
+    expect(
+        c.cursos.where((x) => x.classe == '4ª classe').map((x) => x.disciplina),
+        containsAll(['Matemática', 'Ciências Naturais']));
+
+    // A 5ª é a primeira completa, e é ela que obriga a barra de disciplinas
+    // a deslizar.
+    final quinta =
+        c.cursos.where((x) => x.classe == '5ª classe').map((x) => x.disciplina);
+    expect(quinta.length, 4);
+    expect(
+        quinta,
+        containsAll([
+          'Matemática',
+          'Português',
+          'Ciências Naturais',
+          'Ciências Sociais',
+        ]));
   });
 
-  test('todas as 376 questões sobreviveram à migração', () {
+  test('Naturais e Sociais nunca se confundem uma com a outra', () {
+    // O erro que já se cometeu uma vez: chamar "Ciências" a uma delas
+    // apagava a distinção. São disciplinas separadas, com manuais próprios.
+    final nomes = c.cursos.map((x) => x.disciplina).toSet();
+    expect(nomes, isNot(contains('Ciências')));
+    for (final curso in c.cursos.where((x) => x.disciplina.startsWith('Ciências'))) {
+      expect(curso.disciplina, anyOf('Ciências Naturais', 'Ciências Sociais'));
+      expect(curso.abrev, isNotNull,
+          reason: '${curso.id}: nome longo precisa de abreviatura para a aba');
+    }
+  });
+
+  test('todas as 688 questões sobreviveram à migração', () {
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 376);
+    expect(total, 688);
   });
 
   test('cada classe tem conteúdo suficiente para uma amarelinha', () {
