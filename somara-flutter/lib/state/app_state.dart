@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/content.dart';
+import '../models/sequencia.dart';
 
 /// Estado do aluno — o equivalente ao localStorage `somara_state_v2` da
 /// versão web, mas tipado e persistido com shared_preferences.
@@ -18,8 +19,8 @@ class AppState extends ChangeNotifier {
   String classe = '1ª classe';
   bool onboarded = false;
   int xp = 0;
-  int streak = 1;
   int lives = maxLives;
+  Sequencia _sequencia = const Sequencia();
   String cursoId = '';
 
   /// chave "cursoId:unitId:nivelId" → percentagem de acertos
@@ -42,6 +43,11 @@ class AppState extends ChangeNotifier {
   List<({Unidade unit, Nivel nivel})> get niveis => curso.niveisEmSequencia;
 
   String chaveDe(Unidade u, Nivel n) => '${curso.id}:${u.id}:${n.id}';
+
+  /// Dias seguidos de estudo. Conta níveis concluídos, não aberturas da app,
+  /// como o roadmap pede. A contagem vive em [Sequencia], que é testada à
+  /// parte com meses inteiros de calendário.
+  int get streak => _sequencia.visivelEm(DateTime.now());
 
   bool nivelFeito(int i) {
     final lv = niveis[i];
@@ -69,7 +75,7 @@ class AppState extends ChangeNotifier {
         classe = (j['classe'] ?? '1ª classe') as String;
         onboarded = (j['onboarded'] ?? false) as bool;
         xp = (j['xp'] ?? 0) as int;
-        streak = (j['streak'] ?? 1) as int;
+        _sequencia = Sequencia.deJson(j['sequencia'] as Map<String, dynamic>?);
         lives = (j['lives'] ?? maxLives) as int;
         final savedCurso = j['cursoId'] as String?;
         if (savedCurso != null &&
@@ -100,7 +106,7 @@ class AppState extends ChangeNotifier {
         'classe': classe,
         'onboarded': onboarded,
         'xp': xp,
-        'streak': streak,
+        'sequencia': _sequencia.paraJson(),
         'lives': lives,
         'cursoId': cursoId,
         'progresso': progresso,
@@ -138,6 +144,7 @@ class AppState extends ChangeNotifier {
     final pct = total == 0 ? 0 : (acertos * 100 / total).round();
     progresso[chaveDe(lv.unit, lv.nivel)] = pct;
     xp += acertos * xpPorAcerto + xpPorNivel;
+    _sequencia = _sequencia.comActividadeEm(DateTime.now());
     notifyListeners();
     _gravar();
   }
