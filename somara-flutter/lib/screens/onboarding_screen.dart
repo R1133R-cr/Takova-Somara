@@ -21,7 +21,12 @@ class _OnboardingScreenState extends State<OnboardingScreen>
   int _passo = 0;
   late final AnimationController _ac;
 
-  static const _classes = ['1ª classe', '2ª classe', '3ª classe'];
+  static const _classes = [
+    '1ª classe',
+    '2ª classe',
+    '3ª classe',
+    '4ª classe',
+  ];
 
   @override
   void initState() {

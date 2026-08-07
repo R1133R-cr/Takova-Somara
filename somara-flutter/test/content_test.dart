@@ -14,23 +14,31 @@ void main() {
     c = await Conteudo.carregar();
   });
 
-  test('carrega Matemática e Português da 1ª à 3ª classe', () {
-    expect(c.cursos.length, 6);
+  test('cada classe traz as disciplinas que lhe pertencem', () {
+    expect(c.cursos.length, 8);
+
+    // Até à 3ª classe são Matemática e Português. A 4ª troca Português por
+    // Ciências — não por opção, mas porque ainda não temos o manual de
+    // Português dessa classe. Este teste falha no dia em que ele chegar,
+    // que é exactamente quando queremos ser avisados.
     for (final classe in ['1ª classe', '2ª classe', '3ª classe']) {
       final daClasse = c.cursos.where((x) => x.classe == classe);
       expect(daClasse.length, 2, reason: classe);
       expect(daClasse.map((x) => x.disciplina),
           containsAll(['Matemática', 'Português']), reason: classe);
     }
+    final quarta = c.cursos.where((x) => x.classe == '4ª classe');
+    expect(quarta.map((x) => x.disciplina),
+        containsAll(['Matemática', 'Ciências']));
   });
 
-  test('todas as 376 questões sobreviveram à migração', () {
+  test('todas as 510 questões sobreviveram à migração', () {
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 376);
+    expect(total, 510);
   });
 
   test('cada classe tem conteúdo suficiente para uma amarelinha', () {

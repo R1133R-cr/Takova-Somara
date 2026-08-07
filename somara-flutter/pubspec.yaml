@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # of the product and file versions while build-number is used as the build suffix.
 # 0.x = ainda não lançada ao público; passa a 1.0.0 no dia da Play Store.
 # O número depois do + sobe a cada APK entregue e nunca se repete.
-version: 0.5.0+5
+version: 0.6.0+6
 
 environment:
   sdk: ^3.12.2
