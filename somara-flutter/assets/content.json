@@ -2363,7 +2363,7 @@
          "options": [
           "A Lila come papaia.",
           "a lila come papaia",
-          "A Lila come papaia"
+          "A lila Come papaia."
          ],
          "a": 0,
          "audio": "cabac3fcd1ad.mp3"
@@ -3050,6 +3050,1527 @@
          ],
          "a": 0,
          "audio": "ffa54bedef2e.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mat-3c",
+   "disciplina": "Matemática",
+   "classe": "3ª classe",
+   "tag": "MAT",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Números até 10 000",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ler e escrever até 10 000",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se lê o número 3 425?",
+         "options": [
+          "Trezentos e quarenta e dois",
+          "Três mil, quatrocentos e vinte e cinco",
+          "Trinta e quatro mil e vinte e cinco"
+         ],
+         "a": 1,
+         "audio": "4bd62b78b179.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve em algarismos: seis mil, quinhentos e treze.",
+         "a": "6513",
+         "audio": "33cd3f92aa11.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve em algarismos: cinco mil, duzentos e trinta e cinco.",
+         "a": "5235",
+         "audio": "a52e10e1a2a6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No número 4 728, qual é o algarismo das centenas?",
+         "options": [
+          "4",
+          "7",
+          "2"
+         ],
+         "a": 1,
+         "audio": "bb6afbdaf9e3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quantas unidades tem uma dezena de milhar?",
+         "options": [
+          "1 000",
+          "10 000",
+          "100"
+         ],
+         "a": 1,
+         "audio": "479380ac5a87.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Comparar e ordenar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual símbolo completa? 2 340 __ 2 430",
+         "options": [
+          "<",
+          ">",
+          "="
+         ],
+         "a": 0,
+         "audio": "197de664969e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o maior número?",
+         "options": [
+          "7 199",
+          "7 201",
+          "7 099"
+         ],
+         "a": 1,
+         "audio": "55525e216e5f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o número que vem depois de 4 999?",
+         "options": [
+          "4 998",
+          "5 000",
+          "5 001"
+         ],
+         "a": 1,
+         "audio": "cfc694081e2f.mp3"
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta o 3 500 para o lugar certo.",
+         "chip": "🔢",
+         "zones": [
+          "Menor que 3 000",
+          "Entre 3 000 e 4 000",
+          "Maior que 4 000"
+         ],
+         "a": 1,
+         "audio": "3ad0c04d75db.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o número que vem antes de 6 000?",
+         "a": "5999",
+         "audio": "e04706191825.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Espaço e forma",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Rectas e ângulos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Duas rectas que se cruzam formando um ângulo recto chamam-se:",
+         "options": [
+          "Paralelas",
+          "Perpendiculares",
+          "Curvas"
+         ],
+         "a": 1,
+         "audio": "8a260e8f5d28.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Duas rectas que nunca se encontram chamam-se:",
+         "options": [
+          "Paralelas",
+          "Perpendiculares",
+          "Iguais"
+         ],
+         "a": 0,
+         "audio": "d4ddc3474241.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quantos graus tem um ângulo recto?",
+         "options": [
+          "45",
+          "90",
+          "180"
+         ],
+         "a": 1,
+         "audio": "aa11262f7d68.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra ao seu significado.",
+         "pairs": [
+          [
+           "Paralelas",
+           "Nunca se encontram"
+          ],
+          [
+           "Perpendiculares",
+           "Formam ângulo recto"
+          ]
+         ],
+         "audio": "1a9a6c2b6313.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Rectângulo, quadrado e círculo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um quadrado tem os quatro lados:",
+         "options": [
+          "Todos iguais",
+          "Dois a dois iguais",
+          "Todos diferentes"
+         ],
+         "a": 0,
+         "audio": "e68dca002dcf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quantos lados tem um rectângulo?",
+         "options": [
+          "3",
+          "4",
+          "5"
+         ],
+         "a": 1,
+         "audio": "b94c05767dc0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A linha que limita o círculo chama-se:",
+         "options": [
+          "Diâmetro",
+          "Circunferência",
+          "Raio"
+         ],
+         "a": 1,
+         "audio": "0e4f8cdf9cc3.mp3"
+        },
+        {
+         "t": "count",
+         "q": "Quantos lados tem esta figura?",
+         "emoji": "📏",
+         "n": 4,
+         "options": [
+          "3",
+          "4",
+          "5"
+         ],
+         "a": 1,
+         "audio": "72d8ba0baf9b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um sólido geométrico?",
+         "options": [
+          "Quadrado",
+          "Cubo",
+          "Triângulo"
+         ],
+         "a": 1,
+         "audio": "3151d1205994.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Adição e subtracção",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Adição até 4 dígitos",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 245 + 132?",
+         "a": "377",
+         "audio": "dfd4e7c23102.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 1 250 + 340?",
+         "a": "1590",
+         "audio": "47455bb2bac1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Patrícia tinha 320 cadernos e recebeu mais 185. Com quantos ficou?",
+         "options": [
+          "405",
+          "505",
+          "515"
+         ],
+         "a": 1,
+         "audio": "d06468e04c88.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 2 400 + 1 600?",
+         "a": "4000",
+         "audio": "4c68122a2e1c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa adição, mudar a ordem das parcelas muda o resultado?",
+         "options": [
+          "Sim, sempre",
+          "Não, o resultado é o mesmo"
+         ],
+         "a": 1,
+         "audio": "2a59897b6786.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Subtracção até 4 dígitos",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 587 − 243?",
+         "a": "344",
+         "audio": "ffb291f5f4f5.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 1 000 − 250?",
+         "a": "750",
+         "audio": "45e1a62cae58.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Momed tinha 450 meticais e gastou 175. Quanto lhe sobrou?",
+         "options": [
+          "275",
+          "285",
+          "375"
+         ],
+         "a": 0,
+         "audio": "5eb5a7bc0432.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 3 200 − 1 100?",
+         "a": "2100",
+         "audio": "8ecc79f3660b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para confirmar 800 − 350 = 450, podemos fazer:",
+         "options": [
+          "450 + 350",
+          "800 + 350",
+          "450 − 350"
+         ],
+         "a": 0,
+         "audio": "32bb27a50277.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Multiplicação e divisão",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Multiplicar",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 7 × 8?",
+         "a": "56",
+         "audio": "dcfb496a3d88.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 25 × 10?",
+         "a": "250",
+         "audio": "039a9c8d4494.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qualquer número multiplicado por 0 dá:",
+         "options": [
+          "O mesmo número",
+          "0",
+          "1"
+         ],
+         "a": 1,
+         "audio": "d5ea5fa61b7e.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 34 × 2?",
+         "a": "68",
+         "audio": "29847bdc5d0f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cada caixa tem 6 lápis. Quantos lápis há em 5 caixas?",
+         "options": [
+          "11",
+          "30",
+          "36"
+         ],
+         "a": 1,
+         "audio": "1ceb1d18fb9c.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Dividir",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 48 : 6?",
+         "a": "8",
+         "audio": "2742b4ebac63.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 100 : 10?",
+         "a": "10",
+         "audio": "e29467aae1d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na divisão 17 : 5, qual é o resto?",
+         "options": [
+          "1",
+          "2",
+          "3"
+         ],
+         "a": 1,
+         "audio": "5c01f8dc85f7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "24 laranjas para 4 crianças, em partes iguais. Quantas recebe cada uma?",
+         "options": [
+          "4",
+          "6",
+          "8"
+         ],
+         "a": 1,
+         "audio": "ffd94e383b03.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 63 : 9?",
+         "a": "7",
+         "audio": "9af38c014c2f.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Grandezas e medidas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Comprimento e massa",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quantos centímetros tem 1 metro?",
+         "options": [
+          "10",
+          "100",
+          "1 000"
+         ],
+         "a": 1,
+         "audio": "206f00d39d95.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quantos gramas tem 1 quilograma?",
+         "options": [
+          "100",
+          "500",
+          "1 000"
+         ],
+         "a": 2,
+         "audio": "8458ffa2bafd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para medir a altura de uma porta usamos:",
+         "options": [
+          "Metros",
+          "Litros",
+          "Quilogramas"
+         ],
+         "a": 0,
+         "audio": "027a1b316b0b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada grandeza à sua unidade.",
+         "pairs": [
+          [
+           "Comprimento",
+           "Metro"
+          ],
+          [
+           "Massa",
+           "Quilograma"
+          ],
+          [
+           "Capacidade",
+           "Litro"
+          ]
+         ],
+         "audio": "abdd02eb05b6.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Capacidade e tempo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quantos mililitros tem 1 litro?",
+         "options": [
+          "100",
+          "1 000",
+          "10"
+         ],
+         "a": 1,
+         "audio": "2675b33754bd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quantos minutos tem uma hora?",
+         "options": [
+          "30",
+          "60",
+          "100"
+         ],
+         "a": 1,
+         "audio": "488d4eee5cc3.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantas horas tem um dia?",
+         "a": "24",
+         "audio": "ed22e23bf49e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quantos dias tem uma semana?",
+         "options": [
+          "5",
+          "7",
+          "30"
+         ],
+         "a": 1,
+         "audio": "22fddbcedc24.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A aula começou às 8 horas e durou 2 horas. A que horas terminou?",
+         "options": [
+          "9 horas",
+          "10 horas",
+          "11 horas"
+         ],
+         "a": 1,
+         "audio": "0114a951b95a.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Fracção",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Noção de fracção",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Natércia dividiu o bolo em duas partes iguais. Cada parte é:",
+         "options": [
+          "Um meio",
+          "Um terço",
+          "Um quarto"
+         ],
+         "a": 0,
+         "audio": "e6b01e97feac.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve um meio?",
+         "options": [
+          "1/2",
+          "2/1",
+          "1/4"
+         ],
+         "a": 0,
+         "audio": "2ba599300a6d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um bolo dividido em quatro partes iguais. Cada parte é:",
+         "options": [
+          "Um meio",
+          "Um quarto",
+          "Um terço"
+         ],
+         "a": 1,
+         "audio": "061187948953.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na fracção 3/4, o número 4 indica:",
+         "options": [
+          "As partes que tomamos",
+          "Em quantas partes se dividiu"
+         ],
+         "a": 1,
+         "audio": "f5131e456e1e.mp3"
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta a fracção 1/2 para o lugar certo.",
+         "chip": "🍰",
+         "zones": [
+          "Menos de metade",
+          "Exactamente metade",
+          "Mais de metade"
+         ],
+         "a": 1,
+         "audio": "0ba76d7d1c05.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Literacia financeira",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Meticais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual é a moeda de Moçambique?",
+         "options": [
+          "Metical",
+          "Rand",
+          "Kwanza"
+         ],
+         "a": 0,
+         "audio": "044e8d33fb6d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Tenho duas notas de 50 meticais. Quanto tenho ao todo?",
+         "a": "100",
+         "audio": "3f33373787a8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Comprei pão por 35 MT e paguei com 50 MT. Quanto é o troco?",
+         "options": [
+          "10 MT",
+          "15 MT",
+          "25 MT"
+         ],
+         "a": 1,
+         "audio": "be3718777ef1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantas moedas de 10 MT fazem 100 MT?",
+         "a": "10",
+         "audio": "b6211fc17a53.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Tenho 200 MT e quero comprar um caderno de 120 MT e uma caneta de 45 MT. Chega?",
+         "options": [
+          "Sim, e sobra troco",
+          "Não, falta dinheiro"
+         ],
+         "a": 0,
+         "audio": "645d51c089d0.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Equações",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Descobrir o número que falta",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Qual é o número que falta? 5 + ___ = 12",
+         "a": "7",
+         "audio": "8f8a37c1441e.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o número que falta? ___ − 4 = 10",
+         "a": "14",
+         "audio": "a713e112192a.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o número que falta? 3 × ___ = 21",
+         "a": "7",
+         "audio": "fb18588d8724.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para descobrir o número que falta em 8 + ___ = 20, fazemos:",
+         "options": [
+          "20 + 8",
+          "20 − 8",
+          "20 × 8"
+         ],
+         "a": 1,
+         "audio": "8a16854578d1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o número que falta? ___ : 5 = 6",
+         "a": "30",
+         "audio": "4be33c19c498.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u9",
+     "titulo": "Tabelas e gráficos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ler gráficos de barras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Num gráfico de barras, a barra mais alta representa:",
+         "options": [
+          "O menor valor",
+          "O maior valor"
+         ],
+         "a": 1,
+         "audio": "fb16db1d74bd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para que serve uma tabela?",
+         "options": [
+          "Organizar informação",
+          "Desenhar figuras",
+          "Contar histórias"
+         ],
+         "a": 0,
+         "audio": "db7a935524bf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na turma: 12 gostam de futebol, 8 de basquetebol, 5 de natação. Qual é o desporto preferido?",
+         "options": [
+          "Futebol",
+          "Basquetebol",
+          "Natação"
+         ],
+         "a": 0,
+         "audio": "fd744ffa862b.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Na turma: 12 gostam de futebol e 8 de basquetebol. Quantos alunos são ao todo nestes dois desportos?",
+         "a": "20",
+         "audio": "044f089ba4dc.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "por-3c",
+   "disciplina": "Português",
+   "classe": "3ª classe",
+   "tag": "POR",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Família",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O verbo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na frase \"A Ana estuda todos os dias\", qual é o verbo?",
+         "options": [
+          "Ana",
+          "estuda",
+          "dias"
+         ],
+         "a": 1,
+         "audio": "9a302214a031.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Completa: Eu ___ aluno da terceira classe.",
+         "options": [
+          "sou",
+          "és",
+          "somos"
+         ],
+         "a": 0,
+         "audio": "71dad384bf33.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Completa: Nós ___ na sala de aula.",
+         "options": [
+          "estou",
+          "estás",
+          "estamos"
+         ],
+         "a": 2,
+         "audio": "6758c94e333d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O verbo indica:",
+         "options": [
+          "Uma acção",
+          "Uma cor",
+          "Um lugar"
+         ],
+         "a": 0,
+         "audio": "678c99f8e75b.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Completa com o verbo ser: Tu ___ meu amigo.",
+         "a": "és",
+         "audio": "572de00ef604.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Sinónimos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Palavras diferentes com o mesmo significado chamam-se:",
+         "options": [
+          "Sinónimos",
+          "Antónimos",
+          "Verbos"
+         ],
+         "a": 0,
+         "audio": "83f36dad18ab.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o sinónimo de \"bonita\"?",
+         "options": [
+          "feia",
+          "linda",
+          "alta"
+         ],
+         "a": 1,
+         "audio": "2655fa9eba49.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra ao seu sinónimo.",
+         "pairs": [
+          [
+           "bonita",
+           "linda"
+          ],
+          [
+           "boa",
+           "simpática"
+          ],
+          [
+           "magnífico",
+           "óptimo"
+          ]
+         ],
+         "audio": "f3340dcbf0b7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"A casa é bela\" quer dizer o mesmo que:",
+         "options": [
+          "A casa é bonita",
+          "A casa é velha",
+          "A casa é grande"
+         ],
+         "a": 0,
+         "audio": "4295893fa14b.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Escola",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Antónimos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Palavras com significado contrário chamam-se:",
+         "options": [
+          "Sinónimos",
+          "Antónimos",
+          "Sílabas"
+         ],
+         "a": 1,
+         "audio": "fa370b05e7b6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o antónimo de \"alta\"?",
+         "options": [
+          "grande",
+          "baixa",
+          "larga"
+         ],
+         "a": 1,
+         "audio": "cd75764cda18.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o antónimo de \"entrar\"?",
+         "options": [
+          "sair",
+          "ficar",
+          "correr"
+         ],
+         "a": 0,
+         "audio": "d052c224bd99.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra ao seu antónimo.",
+         "pairs": [
+          [
+           "alegre",
+           "triste"
+          ],
+          [
+           "curto",
+           "comprido"
+          ],
+          [
+           "limpo",
+           "sujo"
+          ]
+         ],
+         "audio": "b0bcd3a140d8.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o antónimo de \"ligado\"?",
+         "a": "desligado",
+         "audio": "5537517e484b.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "A sílaba",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quantas sílabas tem a palavra \"escola\"?",
+         "options": [
+          "2",
+          "3",
+          "4"
+         ],
+         "a": 1,
+         "audio": "79e913c635b1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se divide \"professor\" em sílabas?",
+         "options": [
+          "pro-fes-sor",
+          "prof-es-sor",
+          "pro-fe-ssor"
+         ],
+         "a": 0,
+         "audio": "721b48d602ed.mp3"
+        },
+        {
+         "t": "count",
+         "q": "Quantas palavras tem a frase \"O André estava constipado\"?",
+         "emoji": "📝",
+         "n": 4,
+         "options": [
+          "3",
+          "4",
+          "5"
+         ],
+         "a": 1,
+         "audio": "4d30072f323c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A sílaba é um grupo de sons que se pronuncia:",
+         "options": [
+          "De uma só vez",
+          "Devagar",
+          "Duas vezes"
+         ],
+         "a": 0,
+         "audio": "1da49cc4d780.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantas sílabas tem a palavra \"casa\"?",
+         "a": "2",
+         "audio": "4202d8517ece.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Casa",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O adjectivo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na frase \"A casa é bonita\", qual é o adjectivo?",
+         "options": [
+          "casa",
+          "é",
+          "bonita"
+         ],
+         "a": 2,
+         "audio": "2bd537a94512.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O adjectivo serve para:",
+         "options": [
+          "Nomear coisas",
+          "Dizer como são as coisas",
+          "Indicar acções"
+         ],
+         "a": 1,
+         "audio": "44f9d59382fb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas palavras é um adjectivo?",
+         "options": [
+          "correr",
+          "grande",
+          "mesa"
+         ],
+         "a": 1,
+         "audio": "7195155cb702.mp3"
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta a palavra \"limpa\" para o grupo certo.",
+         "chip": "✨",
+         "zones": [
+          "Nome",
+          "Adjectivo",
+          "Verbo"
+         ],
+         "a": 1,
+         "audio": "aeb296b2cebf.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Letra maiúscula",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Escrevemos com letra maiúscula:",
+         "options": [
+          "Todas as palavras",
+          "No início da frase e nos nomes próprios",
+          "Só no fim da frase"
+         ],
+         "a": 1,
+         "audio": "274aee2b8eab.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual está correcto?",
+         "options": [
+          "a maria mora em lichinga",
+          "A Maria mora em Lichinga",
+          "a Maria mora em lichinga"
+         ],
+         "a": 1,
+         "audio": "e5cc47bef4d6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Moçambique\" escreve-se com maiúscula porque é:",
+         "options": [
+          "Um nome próprio",
+          "Um adjectivo",
+          "Um verbo"
+         ],
+         "a": 0,
+         "audio": "0cb7f0bd2bd8.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o nome do teu país com letra maiúscula.",
+         "a": "Moçambique",
+         "audio": "294b3a17a665.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Água e ambiente",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Sinais de pontuação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Que sinal se põe no fim de uma pergunta?",
+         "options": [
+          "Ponto final",
+          "Ponto de interrogação",
+          "Vírgula"
+         ],
+         "a": 1,
+         "audio": "dd41f38b9c1c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Que sinal termina uma frase que afirma alguma coisa?",
+         "options": [
+          "Ponto final",
+          "Ponto de interrogação",
+          "Dois pontos"
+         ],
+         "a": 0,
+         "audio": "361e2607ecc6.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada sinal ao seu nome.",
+         "pairs": [
+          [
+           "?",
+           "Ponto de interrogação"
+          ],
+          [
+           "!",
+           "Ponto de exclamação"
+          ],
+          [
+           ",",
+           "Vírgula"
+          ]
+         ],
+         "audio": "dc31d8f69d3c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Completa: Por onde é a escola___",
+         "options": [
+          ".",
+          "?",
+          ","
+         ],
+         "a": 1,
+         "audio": "e6ff406d9363.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Tipos de texto",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um texto que conta uma história chama-se:",
+         "options": [
+          "Narrativo",
+          "Descritivo",
+          "Poético"
+         ],
+         "a": 0,
+         "audio": "47f55ce608f5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um texto que diz como é uma pessoa ou um lugar chama-se:",
+         "options": [
+          "Narrativo",
+          "Descritivo",
+          "Bilhete"
+         ],
+         "a": 1,
+         "audio": "739413d9fd3c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma história curta com animais que ensina uma lição chama-se:",
+         "options": [
+          "Fábula",
+          "Bilhete",
+          "Carta"
+         ],
+         "a": 0,
+         "audio": "8ae2216ecabf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O parágrafo serve para:",
+         "options": [
+          "Separar as ideias do texto",
+          "Terminar a frase",
+          "Escrever números"
+         ],
+         "a": 0,
+         "audio": "8656c95827fb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um bilhete serve para:",
+         "options": [
+          "Deixar um recado curto",
+          "Contar uma longa história"
+         ],
+         "a": 0,
+         "audio": "7bd04006ff17.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Palavras e frases",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Nomes próprios e comuns",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um nome próprio?",
+         "options": [
+          "menina",
+          "Josina",
+          "escola"
+         ],
+         "a": 1,
+         "audio": "23de8beef192.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"cidade\" é um nome:",
+         "options": [
+          "Próprio",
+          "Comum"
+         ],
+         "a": 1,
+         "audio": "62167ea59089.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um nome comum?",
+         "options": [
+          "Lichinga",
+          "Niassa",
+          "rio"
+         ],
+         "a": 2,
+         "audio": "99ee93729529.mp3"
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta \"Carlos\" para o grupo certo.",
+         "chip": "🧒",
+         "zones": [
+          "Nome próprio",
+          "Nome comum"
+         ],
+         "a": 0,
+         "audio": "670f5615e48b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada nome ao seu tipo.",
+         "pairs": [
+          [
+           "Maputo",
+           "Nome próprio"
+          ],
+          [
+           "professor",
+           "Nome comum"
+          ]
+         ],
+         "audio": "1f22f6719746.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Género e número",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual é o feminino de \"professor\"?",
+         "options": [
+          "professora",
+          "professores",
+          "professoras"
+         ],
+         "a": 0,
+         "audio": "27b1cd71ddd2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o plural de \"casa\"?",
+         "options": [
+          "casa",
+          "casas",
+          "casinha"
+         ],
+         "a": 1,
+         "audio": "420feea80c61.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o plural de \"flor\".",
+         "a": "flores",
+         "audio": "2bb25e8b95b6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o masculino de \"menina\"?",
+         "options": [
+          "menino",
+          "meninas",
+          "meninos"
+         ],
+         "a": 0,
+         "audio": "44ddfddd2c34.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o plural de \"animal\".",
+         "a": "animais",
+         "audio": "5f8cabe4ab81.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n3",
+       "titulo": "Tempos verbais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "\"Eu estudo\" está no tempo:",
+         "options": [
+          "Presente",
+          "Passado",
+          "Futuro"
+         ],
+         "a": 0,
+         "audio": "946a7f6cb82a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Eu estudei\" está no tempo:",
+         "options": [
+          "Presente",
+          "Passado",
+          "Futuro"
+         ],
+         "a": 1,
+         "audio": "62ac269b90de.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Eu vou estudar\" está no tempo:",
+         "options": [
+          "Presente",
+          "Passado",
+          "Futuro"
+         ],
+         "a": 2,
+         "audio": "b0df6025dc8c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada frase ao seu tempo.",
+         "pairs": [
+          [
+           "Ontem cantei",
+           "Passado"
+          ],
+          [
+           "Hoje canto",
+           "Presente"
+          ],
+          [
+           "Amanhã cantarei",
+           "Futuro"
+          ]
+         ],
+         "audio": "be551f0d6367.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Completa no passado: Ontem eu ___ à escola.",
+         "options": [
+          "vou",
+          "fui",
+          "irei"
+         ],
+         "a": 1,
+         "audio": "561158021ec3.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n4",
+       "titulo": "Frase interrogativa",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma frase que faz uma pergunta chama-se:",
+         "options": [
+          "Interrogativa",
+          "Exclamativa",
+          "Declarativa"
+         ],
+         "a": 0,
+         "audio": "63056238a322.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma pergunta?",
+         "options": [
+          "A escola é grande.",
+          "Onde fica a escola?",
+          "Que bonita escola!"
+         ],
+         "a": 1,
+         "audio": "43de5657253a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual palavra usamos para perguntar sobre um lugar?",
+         "options": [
+          "Quando",
+          "Onde",
+          "Porquê"
+         ],
+         "a": 1,
+         "audio": "1894b67d39d1.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra ao que pergunta.",
+         "pairs": [
+          [
+           "Quando",
+           "O tempo"
+          ],
+          [
+           "Onde",
+           "O lugar"
+          ],
+          [
+           "Quem",
+           "A pessoa"
+          ]
+         ],
+         "audio": "4d7b573733da.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Completa: ___ é o teu nome?",
+         "options": [
+          "Qual",
+          "Quando",
+          "Onde"
+         ],
+         "a": 0,
+         "audio": "ffbde59e1199.mp3"
         }
        ]
       }
