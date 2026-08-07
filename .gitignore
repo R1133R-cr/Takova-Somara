@@ -27,3 +27,7 @@ somara-flutter/android/flutter-engine-repo/
 
 # Skills de ferramentas externas (reinstalaveis: npx skills add higgsfield-ai/skills)
 .agents/
+
+# APK compilados — sao gerados a partir do codigo, nao se versionam.
+# O historico das versoes vive nos commits e nas etiquetas do git.
+APKs/
