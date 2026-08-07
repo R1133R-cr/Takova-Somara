@@ -282,7 +282,7 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
         padding: const EdgeInsets.fromLTRB(18, 14, 18, 6),
         child: Row(
           children: [
-            for (final c in st.conteudo.cursos)
+            for (final c in st.cursosVisiveis)
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4),

@@ -25,8 +25,19 @@ class AppState extends ChangeNotifier {
   /// chave "cursoId:unitId:nivelId" → percentagem de acertos
   final Map<String, int> progresso = {};
 
-  Curso get curso =>
-      conteudo.cursos.firstWhere((c) => c.id == cursoId, orElse: () => conteudo.cursos.first);
+  /// Só as disciplinas da classe do aluno. Sem isto, um aluno da 1ª classe
+  /// veria também os separadores da 2ª e podia entrar em exercícios que
+  /// ainda não sabe fazer. Se a classe escolhida ainda não tiver conteúdo
+  /// (3ª, por agora), mostra tudo em vez de deixar o ecrã vazio.
+  List<Curso> get cursosVisiveis {
+    final daClasse = conteudo.cursos.where((c) => c.classe == classe).toList();
+    return daClasse.isEmpty ? conteudo.cursos : daClasse;
+  }
+
+  Curso get curso => cursosVisiveis.firstWhere(
+        (c) => c.id == cursoId,
+        orElse: () => cursosVisiveis.first,
+      );
 
   List<({Unidade unit, Nivel nivel})> get niveis => curso.niveisEmSequencia;
 
@@ -65,6 +76,11 @@ class AppState extends ChangeNotifier {
             conteudo.cursos.any((c) => c.id == savedCurso)) {
           cursoId = savedCurso;
         }
+        // A classe é lida acima; se a disciplina guardada não pertencer a
+        // ela, cai na primeira da classe em vez de abrir um curso errado.
+        if (!cursosVisiveis.any((c) => c.id == cursoId)) {
+          cursoId = cursosVisiveis.first.id;
+        }
         final p = (j['progresso'] as Map?) ?? {};
         p.forEach((k, v) => progresso['$k'] = v as int);
       } catch (_) {
@@ -102,6 +118,11 @@ class AppState extends ChangeNotifier {
     nome = nomeAluno;
     classe = classeAluno;
     onboarded = true;
+    // A disciplina guardada pode ser de outra classe (ex.: mudou de 1ª para
+    // 2ª). Repõe na primeira disciplina da classe nova.
+    if (!cursosVisiveis.any((c) => c.id == cursoId)) {
+      cursoId = cursosVisiveis.first.id;
+    }
     notifyListeners();
     _gravar();
   }

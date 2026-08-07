@@ -13,18 +13,30 @@ void main() {
     c = await Conteudo.carregar();
   });
 
-  test('carrega os dois cursos do 1º ciclo', () {
-    expect(c.cursos.length, 2);
-    expect(c.cursos.map((x) => x.disciplina), containsAll(['Matemática', 'Português']));
+  test('carrega Matemática e Português da 1ª e da 2ª classe', () {
+    expect(c.cursos.length, 4);
+    for (final classe in ['1ª classe', '2ª classe']) {
+      final daClasse = c.cursos.where((x) => x.classe == classe);
+      expect(daClasse.length, 2, reason: classe);
+      expect(daClasse.map((x) => x.disciplina),
+          containsAll(['Matemática', 'Português']), reason: classe);
+    }
   });
 
-  test('todas as 133 questões sobreviveram à migração', () {
+  test('todas as 253 questões sobreviveram à migração', () {
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 133);
+    expect(total, 253);
+  });
+
+  test('cada classe tem conteúdo suficiente para uma amarelinha', () {
+    for (final curso in c.cursos) {
+      expect(curso.niveisEmSequencia.length, greaterThanOrEqualTo(8),
+          reason: '${curso.id}: poucos níveis para o mapa fazer sentido');
+    }
   });
 
   test('os cinco tipos de exercício estão representados', () {

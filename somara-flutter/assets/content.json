@@ -1438,6 +1438,1370 @@
      ]
     }
    ]
+  },
+  {
+   "id": "mat-2c",
+   "disciplina": "Matemática",
+   "classe": "2ª classe",
+   "tag": "MAT",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Números até 100",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ler e escrever até 100",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se escreve o número 57 por extenso?",
+         "options": [
+          "cinquenta e sete",
+          "setenta e cinco",
+          "quinze e sete"
+         ],
+         "a": 0
+        },
+        {
+         "t": "input",
+         "q": "Escreve em algarismos: oitenta e quatro.",
+         "a": "84"
+        },
+        {
+         "t": "input",
+         "q": "Escreve em algarismos: noventa e nove.",
+         "a": "99"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o número que vem depois de 69?",
+         "options": [
+          "68",
+          "70",
+          "79"
+         ],
+         "a": 1
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o número que vem antes de 80?",
+         "options": [
+          "81",
+          "79",
+          "70"
+         ],
+         "a": 1
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Ordenar e comparar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual símbolo completa? 45 __ 54",
+         "options": [
+          "<",
+          ">",
+          "="
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Qual símbolo completa? 78 __ 78",
+         "options": [
+          "<",
+          ">",
+          "="
+         ],
+         "a": 2
+        },
+        {
+         "t": "choice",
+         "q": "Qual símbolo completa? 91 __ 19",
+         "options": [
+          "<",
+          ">",
+          "="
+         ],
+         "a": 1
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é o maior número?",
+         "options": [
+          "63",
+          "36",
+          "60"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Por ordem crescente: 40, 14, 41.",
+         "options": [
+          "14, 40, 41",
+          "41, 40, 14",
+          "40, 41, 14"
+         ],
+         "a": 0
+        }
+       ]
+      },
+      {
+       "id": "n3",
+       "titulo": "Dezena e unidade",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quantas dezenas tem o número 47?",
+         "options": [
+          "4",
+          "7",
+          "47"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Quantas unidades tem o número 47?",
+         "options": [
+          "4",
+          "7",
+          "11"
+         ],
+         "a": 1
+        },
+        {
+         "t": "input",
+         "q": "6 dezenas e 3 unidades formam que número?",
+         "a": "63"
+        },
+        {
+         "t": "choice",
+         "q": "80 = 8 dezenas e ...",
+         "options": [
+          "0 unidades",
+          "8 unidades",
+          "80 unidades"
+         ],
+         "a": 0
+        },
+        {
+         "t": "input",
+         "q": "Decompõe: 25 = 20 + ?",
+         "a": "5"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Somar e tirar até 100",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Adição até 100",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Calcula: 34 + 25 =",
+         "a": "59"
+        },
+        {
+         "t": "input",
+         "q": "Calcula: 46 + 30 =",
+         "a": "76"
+        },
+        {
+         "t": "input",
+         "q": "Calcula: 58 + 7 =",
+         "a": "65"
+        },
+        {
+         "t": "choice",
+         "q": "A Lila tem 40 meticais e ganha 35. Com quanto fica?",
+         "options": [
+          "75 meticais",
+          "5 meticais",
+          "70 meticais"
+         ],
+         "a": 0
+        },
+        {
+         "t": "input",
+         "q": "Calcula: 27 + 27 =",
+         "a": "54"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Subtracção até 100",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Calcula: 68 − 25 =",
+         "a": "43"
+        },
+        {
+         "t": "input",
+         "q": "Calcula: 90 − 40 =",
+         "a": "50"
+        },
+        {
+         "t": "input",
+         "q": "Calcula: 73 − 8 =",
+         "a": "65"
+        },
+        {
+         "t": "choice",
+         "q": "O Tito tinha 55 mangas e vendeu 20. Quantas ficaram?",
+         "options": [
+          "35",
+          "75",
+          "25"
+         ],
+         "a": 0
+        },
+        {
+         "t": "input",
+         "q": "Calcula: 100 − 60 =",
+         "a": "40"
+        }
+       ]
+      },
+      {
+       "id": "n3",
+       "titulo": "Números ordinais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quem chega em 1.º lugar chega em...",
+         "options": [
+          "primeiro",
+          "último",
+          "terceiro"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Como se lê 7.º?",
+         "options": [
+          "sétimo",
+          "sete",
+          "setenta"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Depois de 9.º vem...",
+         "options": [
+          "10.º",
+          "8.º",
+          "19.º"
+         ],
+         "a": 0
+        },
+        {
+         "t": "match",
+         "q": "Liga o número ordinal à palavra.",
+         "pairs": [
+          [
+           "2.º",
+           "segundo"
+          ],
+          [
+           "5.º",
+           "quinto"
+          ],
+          [
+           "20.º",
+           "vigésimo"
+          ]
+         ]
+        },
+        {
+         "t": "choice",
+         "q": "A Lila ficou em 3.º lugar. Quantos chegaram à frente dela?",
+         "options": [
+          "2",
+          "3",
+          "4"
+         ],
+         "a": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Grandezas e Medidas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O relógio",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um dia tem quantas horas?",
+         "options": [
+          "24 horas",
+          "12 horas",
+          "60 horas"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Uma hora tem quantos minutos?",
+         "options": [
+          "60",
+          "24",
+          "100"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "O ponteiro pequeno do relógio marca as...",
+         "options": [
+          "horas",
+          "minutos",
+          "semanas"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Quando o ponteiro grande está no 12 e o pequeno no 3, são...",
+         "options": [
+          "3 horas",
+          "12 horas",
+          "15 horas"
+         ],
+         "a": 0
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta o Sol para a altura do dia em que ele nasce.",
+         "chip": "☀️",
+         "zones": [
+          "De manhã",
+          "À noite"
+         ],
+         "a": 0
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "O calendário",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma semana tem quantos dias?",
+         "options": [
+          "7",
+          "5",
+          "30"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Um ano tem quantos meses?",
+         "options": [
+          "12",
+          "10",
+          "7"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o primeiro mês do ano?",
+         "options": [
+          "Janeiro",
+          "Dezembro",
+          "Março"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Que dia vem depois de terça-feira?",
+         "options": [
+          "quarta-feira",
+          "segunda-feira",
+          "domingo"
+         ],
+         "a": 0
+        },
+        {
+         "t": "match",
+         "q": "Liga cada mês à sua posição no ano.",
+         "pairs": [
+          [
+           "Janeiro",
+           "1.º mês"
+          ],
+          [
+           "Junho",
+           "6.º mês"
+          ],
+          [
+           "Dezembro",
+           "12.º mês"
+          ]
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Multiplicar e contar",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Multiplicação até 50",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Calcula: 2 × 5 =",
+         "a": "10"
+        },
+        {
+         "t": "input",
+         "q": "Calcula: 4 × 3 =",
+         "a": "12"
+        },
+        {
+         "t": "choice",
+         "q": "3 + 3 + 3 + 3 é o mesmo que...",
+         "options": [
+          "4 × 3",
+          "3 × 3",
+          "4 + 3"
+         ],
+         "a": 0
+        },
+        {
+         "t": "input",
+         "q": "Calcula: 5 × 8 =",
+         "a": "40"
+        },
+        {
+         "t": "choice",
+         "q": "Cada caixa tem 6 ovos. Quantos ovos há em 4 caixas?",
+         "options": [
+          "24",
+          "10",
+          "18"
+         ],
+         "a": 0
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Pares, ímpares e contagens",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes números é par?",
+         "options": [
+          "18",
+          "17",
+          "15"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes números é ímpar?",
+         "options": [
+          "23",
+          "20",
+          "16"
+         ],
+         "a": 0
+        },
+        {
+         "t": "input",
+         "q": "Conta de 5 em 5: 5, 10, 15, ?",
+         "a": "20"
+        },
+        {
+         "t": "input",
+         "q": "Conta de 10 em 10: 40, 50, 60, ?",
+         "a": "70"
+        },
+        {
+         "t": "choice",
+         "q": "Contando de 2 em 2 a partir de 0, chegamos ao...",
+         "options": [
+          "8",
+          "9",
+          "7"
+         ],
+         "a": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Espaço e Forma",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Linhas e figuras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma linha que não faz curvas chama-se linha...",
+         "options": [
+          "recta",
+          "curva",
+          "redonda"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Quantos lados tem um quadrado?",
+         "options": [
+          "4",
+          "3",
+          "6"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Quantos lados tem um triângulo?",
+         "options": [
+          "3",
+          "4",
+          "5"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Qual figura não tem lados nem cantos?",
+         "options": [
+          "o círculo",
+          "o quadrado",
+          "o rectângulo"
+         ],
+         "a": 0
+        },
+        {
+         "t": "match",
+         "q": "Liga cada figura ao número de lados.",
+         "pairs": [
+          [
+           "Triângulo",
+           "3 lados"
+          ],
+          [
+           "Quadrado",
+           "4 lados"
+          ],
+          [
+           "Círculo",
+           "sem lados"
+          ]
+         ]
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Sólidos geométricos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma bola tem a forma de...",
+         "options": [
+          "esfera",
+          "cubo",
+          "cilindro"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Um dado tem a forma de...",
+         "options": [
+          "cubo",
+          "esfera",
+          "cone"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Uma lata de conserva tem a forma de...",
+         "options": [
+          "cilindro",
+          "cubo",
+          "esfera"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes sólidos rola?",
+         "options": [
+          "a esfera",
+          "o cubo"
+         ],
+         "a": 0
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta o dado para o sólido com que se parece.",
+         "chip": "🎲",
+         "zones": [
+          "Cubo",
+          "Esfera"
+         ],
+         "a": 0
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "por-2c",
+   "disciplina": "Português",
+   "classe": "2ª classe",
+   "tag": "POR",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Família",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Sílabas e palavras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quantas sílabas tem a palavra «fa-mí-lia»?",
+         "options": [
+          "3",
+          "2",
+          "4"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Como se divide «menino» em sílabas?",
+         "options": [
+          "me-ni-no",
+          "men-ino",
+          "meni-no"
+         ],
+         "a": 0
+        },
+        {
+         "t": "input",
+         "q": "Junta as sílabas e escreve a palavra: MA + NA",
+         "a": "mana"
+        },
+        {
+         "t": "input",
+         "q": "Junta as sílabas e escreve a palavra: PA + PÁ + IA",
+         "a": "papaia"
+        },
+        {
+         "t": "choice",
+         "q": "Quantas sílabas tem «pai»?",
+         "options": [
+          "1",
+          "2",
+          "3"
+         ],
+         "a": 0
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Frases",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Ordena: casa / na / Tito / está / o",
+         "options": [
+          "O Tito está na casa.",
+          "Casa o Tito na está.",
+          "Está o na Tito casa."
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Que frase está bem escrita?",
+         "options": [
+          "A Lila come papaia.",
+          "a lila come papaia",
+          "A Lila come papaia"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Uma pergunta acaba com que sinal?",
+         "options": [
+          "?",
+          ".",
+          "!"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Os nomes das pessoas escrevem-se com letra...",
+         "options": [
+          "maiúscula",
+          "minúscula"
+         ],
+         "a": 0
+        },
+        {
+         "t": "input",
+         "q": "Completa: A minha mãe e o meu pai são os meus ___.",
+         "a": "pais"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Escola",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Dar ordens",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destas frases dá uma ordem?",
+         "options": [
+          "Abre o livro.",
+          "O livro é azul.",
+          "O livro está na mesa."
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "O contrário de «Abre a porta.» é...",
+         "options": [
+          "Fecha a porta.",
+          "A porta é grande.",
+          "Abre a janela."
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Qual é uma frase imperativa?",
+         "options": [
+          "Levanta a mão.",
+          "Eu levanto a mão."
+         ],
+         "a": 0
+        },
+        {
+         "t": "match",
+         "q": "Liga cada ordem à ordem contrária.",
+         "pairs": [
+          [
+           "Abre o livro",
+           "Fecha o livro"
+          ],
+          [
+           "Levanta a mão",
+           "Baixa a mão"
+          ],
+          [
+           "Entra",
+           "Sai"
+          ]
+         ]
+        },
+        {
+         "t": "choice",
+         "q": "Quem ensina na escola é o...",
+         "options": [
+          "professor",
+          "médico",
+          "motorista"
+         ],
+         "a": 0
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Artigos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Completa: ___ caderno é novo.",
+         "options": [
+          "O",
+          "A",
+          "As"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Completa: ___ professora chegou.",
+         "options": [
+          "A",
+          "O",
+          "Os"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Completa com artigo indefinido: Vi ___ cão na rua.",
+         "options": [
+          "um",
+          "o",
+          "as"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o plural de «o livro»?",
+         "options": [
+          "os livros",
+          "a livro",
+          "um livro"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "«Uma» e «um» são artigos...",
+         "options": [
+          "indefinidos",
+          "definidos"
+         ],
+         "a": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Corpo humano",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Pronomes possessivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Completa: Esta é ___ mão. (de mim)",
+         "options": [
+          "a minha",
+          "a tua",
+          "a dele"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Completa: Esse é ___ livro. (de ti)",
+         "options": [
+          "o teu",
+          "o meu",
+          "o dela"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Completa: O Tito perdeu ___ caderno. (dele)",
+         "options": [
+          "o seu",
+          "o meu",
+          "o teu"
+         ],
+         "a": 0
+        },
+        {
+         "t": "match",
+         "q": "Liga a pessoa ao possessivo.",
+         "pairs": [
+          [
+           "Eu",
+           "meu"
+          ],
+          [
+           "Tu",
+           "teu"
+          ],
+          [
+           "Ele",
+           "dele"
+          ]
+         ]
+        },
+        {
+         "t": "choice",
+         "q": "Completa: Estas são ___ orelhas. (de mim)",
+         "options": [
+          "as minhas",
+          "os meus",
+          "a minha"
+         ],
+         "a": 0
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Nomes e adjectivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Completa: A menina é ___.",
+         "options": [
+          "bonita",
+          "bonito",
+          "bonitos"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Completa: Os meninos são ___.",
+         "options": [
+          "altos",
+          "alto",
+          "alta"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o feminino de «menino»?",
+         "options": [
+          "menina",
+          "meninos",
+          "meninho"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o plural de «mão»?",
+         "options": [
+          "mãos",
+          "mães",
+          "manos"
+         ],
+         "a": 0
+        },
+        {
+         "t": "input",
+         "q": "Qual é o plural de «pé»?",
+         "a": "pés"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Saúde e higiene",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Pronomes demonstrativos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para algo que está perto de mim digo...",
+         "options": [
+          "este",
+          "aquele",
+          "esse"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Para algo que está longe dos dois digo...",
+         "options": [
+          "aquele",
+          "este",
+          "esta"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Completa: ___ sabão está na minha mão.",
+         "options": [
+          "Este",
+          "Aquela",
+          "Aqueles"
+         ],
+         "a": 0
+        },
+        {
+         "t": "match",
+         "q": "Liga a distância ao pronome.",
+         "pairs": [
+          [
+           "Perto de mim",
+           "este"
+          ],
+          [
+           "Perto de ti",
+           "esse"
+          ],
+          [
+           "Longe dos dois",
+           "aquele"
+          ]
+         ]
+        },
+        {
+         "t": "choice",
+         "q": "Completa: ___ água está limpa.",
+         "options": [
+          "Esta",
+          "Este",
+          "Estes"
+         ],
+         "a": 0
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Compreender o texto",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Devemos lavar as mãos antes de...",
+         "options": [
+          "comer",
+          "dormir a sesta",
+          "correr"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "A Lila escova os dentes de manhã e à noite. Quantas vezes por dia?",
+         "options": [
+          "2",
+          "1",
+          "3"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Para não adoecer devemos beber água...",
+         "options": [
+          "limpa",
+          "do charco",
+          "suja"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "O Tito cortou o dedo. Deve procurar...",
+         "options": [
+          "o hospital",
+          "a machamba",
+          "o mercado"
+         ],
+         "a": 0
+        },
+        {
+         "t": "drag",
+         "q": "Arrasta o sabão para o que ele serve.",
+         "chip": "🧼",
+         "zones": [
+          "Lavar as mãos",
+          "Comer"
+         ],
+         "a": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Ambiente",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Verbos ser e estar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Completa: A árvore ___ grande.",
+         "options": [
+          "é",
+          "são",
+          "estão"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Completa: As flores ___ bonitas.",
+         "options": [
+          "são",
+          "é",
+          "está"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Completa: O Tito ___ na machamba agora.",
+         "options": [
+          "está",
+          "é",
+          "eram"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Ontem eu ___ na escola.",
+         "options": [
+          "estive",
+          "estou",
+          "estarei"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Amanhã nós ___ no campo.",
+         "options": [
+          "estaremos",
+          "estivemos",
+          "estamos"
+         ],
+         "a": 0
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Cuidar do ambiente",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O lixo deve ser posto...",
+         "options": [
+          "no caixote",
+          "no chão",
+          "no rio"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Cortar árvores sem plantar outras faz...",
+         "options": [
+          "mal ao ambiente",
+          "bem ao ambiente"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "A água do rio serve para...",
+         "options": [
+          "beber e regar",
+          "deitar lixo"
+         ],
+         "a": 0
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra ao seu grupo.",
+         "pairs": [
+          [
+           "Baobá",
+           "árvore"
+          ],
+          [
+           "Zambeze",
+           "rio"
+          ],
+          [
+           "Leão",
+           "animal"
+          ]
+         ]
+        },
+        {
+         "t": "input",
+         "q": "Completa: Devemos ___ árvores para ter sombra.",
+         "a": "plantar"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Comunidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Pronomes indefinidos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Completa: ___ os alunos chegaram.",
+         "options": [
+          "Todos",
+          "Toda",
+          "Todas"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Completa: ___ as meninas cantaram.",
+         "options": [
+          "Todas",
+          "Todos",
+          "Todo"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "«Ninguém faltou» quer dizer que faltaram...",
+         "options": [
+          "zero pessoas",
+          "muitas pessoas"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Completa: ___ pessoa trouxe água.",
+         "options": [
+          "Alguma",
+          "Alguns",
+          "Todos"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "O contrário de «todos» é...",
+         "options": [
+          "nenhum",
+          "muitos",
+          "alguns"
+         ],
+         "a": 0
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Fábula e conto",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Numa fábula, quem costuma falar?",
+         "options": [
+          "os animais",
+          "só as pessoas",
+          "as pedras"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "A lição que uma fábula ensina chama-se...",
+         "options": [
+          "moral",
+          "título",
+          "início"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Um conto começa muitas vezes por...",
+         "options": [
+          "«Era uma vez»",
+          "«Fim»",
+          "«Adeus»"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "A lebre e a tartaruga: quem ganhou a corrida?",
+         "options": [
+          "a tartaruga",
+          "a lebre"
+         ],
+         "a": 0
+        },
+        {
+         "t": "choice",
+         "q": "Essa fábula ensina que devemos ser...",
+         "options": [
+          "persistentes",
+          "preguiçosos",
+          "distraídos"
+         ],
+         "a": 0
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
