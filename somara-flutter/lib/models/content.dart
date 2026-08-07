@@ -131,23 +131,40 @@ class Unidade {
 
 class Curso {
   final String id;
+
+  /// Nome próprio da disciplina, como no currículo — "Ciências Naturais" e
+  /// "Ciências Sociais" são disciplinas diferentes e não se abreviam uma na
+  /// outra.
   final String disciplina;
+
   final String classe;
   final String tag;
+
+  /// Nome curto para a barra de disciplinas, onde o espaço é pouco.
+  /// Sem isto, "Ciências Naturais" ao lado de "Ciências Sociais" fica
+  /// ilegível no telemóvel. Quando falta, usa-se o nome inteiro.
+  final String? abrev;
+
   final List<Unidade> units;
+
   const Curso({
     required this.id,
     required this.disciplina,
     required this.classe,
     required this.tag,
     required this.units,
+    this.abrev,
   });
+
+  /// O que se mostra na aba.
+  String get rotulo => abrev ?? disciplina;
 
   factory Curso.fromJson(Map<String, dynamic> j) => Curso(
         id: j['id'] as String,
         disciplina: j['disciplina'] as String,
         classe: j['classe'] as String,
         tag: (j['tag'] ?? '') as String,
+        abrev: j['abrev'] as String?,
         units: (j['units'] as List)
             .map((u) => Unidade.fromJson(u as Map<String, dynamic>))
             .toList(),

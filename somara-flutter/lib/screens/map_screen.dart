@@ -278,42 +278,74 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
             style: TextStyle(color: S.txSoft, fontSize: 13, letterSpacing: 1.6)),
       );
 
-  Widget _tabsDisciplina(AppState st) => Padding(
+  /// Barra de disciplinas.
+  ///
+  /// Com duas disciplinas dividem-se o ecrã em partes iguais, que é o que
+  /// fica melhor. A partir de três — e a 5ª classe tem quatro — passam a
+  /// deslizar na horizontal: espremer quatro nomes na largura de um
+  /// telemóvel deixaria "Ciências Naturais" ilegível.
+  Widget _tabsDisciplina(AppState st) {
+    final cursos = st.cursosVisiveis;
+    final espremidas = cursos.length > 2;
+
+    Widget aba(Curso c) => GestureDetector(
+          onTap: () => st.trocarCurso(c.id),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 220),
+            curve: SCurves.ease,
+            padding: EdgeInsets.symmetric(
+              vertical: 11,
+              horizontal: espremidas ? 18 : 0,
+            ),
+            decoration: BoxDecoration(
+              color: c.id == st.cursoId ? S.chart : S.surface,
+              border: Border.all(
+                color: c.id == st.cursoId ? S.chart : S.line,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.circular(S.rPill),
+            ),
+            child: Text(
+              c.rotulo,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: c.id == st.cursoId ? S.onChart : S.txSoft,
+                fontWeight: FontWeight.w600,
+                fontSize: 15,
+              ),
+            ),
+          ),
+        );
+
+    if (espremidas) {
+      // A altura tem de acomodar o botão inteiro mais o espaço à volta:
+      // 14+6 de margem, 11+11 de enchimento, a linha de texto e a moldura.
+      // Com menos do que isto o texto sai cortado em baixo.
+      return SizedBox(
+        height: 78,
+        child: ListView.separated(
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsets.fromLTRB(18, 14, 18, 6),
+          itemCount: cursos.length,
+          separatorBuilder: (_, _) => const SizedBox(width: 8),
+          itemBuilder: (_, i) => Center(child: aba(cursos[i])),
+        ),
+      );
+    }
+
+    return Padding(
         padding: const EdgeInsets.fromLTRB(18, 14, 18, 6),
         child: Row(
           children: [
-            for (final c in st.cursosVisiveis)
+            for (final c in cursos)
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4),
-                  child: GestureDetector(
-                    onTap: () => st.trocarCurso(c.id),
-                    child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 220),
-                      curve: SCurves.ease,
-                      padding: const EdgeInsets.symmetric(vertical: 11),
-                      decoration: BoxDecoration(
-                        color: c.id == st.cursoId ? S.chart : S.surface,
-                        border: Border.all(
-                          color: c.id == st.cursoId ? S.chart : S.line,
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(S.rPill),
-                      ),
-                      child: Text(
-                        c.disciplina,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: c.id == st.cursoId ? S.onChart : S.txSoft,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 15,
-                        ),
-                      ),
-                    ),
-                  ),
+                  child: aba(c),
                 ),
               ),
           ],
         ),
       );
+  }
 }

@@ -5349,7 +5349,7 @@
   },
   {
    "id": "cn-4c",
-   "disciplina": "Ciências",
+   "disciplina": "Ciências Naturais",
    "classe": "4ª classe",
    "tag": "CN",
    "units": [
@@ -6239,7 +6239,8 @@
       }
      ]
     }
-   ]
+   ],
+   "abrev": "C. Naturais"
   }
  ]
 }

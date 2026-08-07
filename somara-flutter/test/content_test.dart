@@ -29,7 +29,7 @@ void main() {
     }
     final quarta = c.cursos.where((x) => x.classe == '4ª classe');
     expect(quarta.map((x) => x.disciplina),
-        containsAll(['Matemática', 'Ciências']));
+        containsAll(['Matemática', 'Ciências Naturais']));
   });
 
   test('todas as 510 questões sobreviveram à migração', () {
