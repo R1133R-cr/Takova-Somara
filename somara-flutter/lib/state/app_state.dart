@@ -1,8 +1,10 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/content.dart';
 import '../models/sequencia.dart';
+import '../services/conteudo_remoto.dart';
 
 /// Estado do aluno — o equivalente ao localStorage `somara_state_v2` da
 /// versão web, mas tipado e persistido com shared_preferences.
@@ -62,8 +64,13 @@ class AppState extends ChangeNotifier {
     return niveis.length - 1; // curso todo feito: fica no último
   }
 
+  /// Fica verdadeiro quando se descarregou conteúdo novo. Só entra em vigor
+  /// na próxima abertura: trocar os níveis debaixo dos pés de quem está a
+  /// jogar seria desconcertante.
+  bool haConteudoNovo = false;
+
   Future<void> carregar() async {
-    conteudo = await Conteudo.carregar();
+    conteudo = await ConteudoRemoto.carregar();
     cursoId = conteudo.cursos.first.id;
 
     final prefs = await SharedPreferences.getInstance();
@@ -95,6 +102,18 @@ class AppState extends ChangeNotifier {
     }
     pronto = true;
     notifyListeners();
+
+    // Só agora se vai à rede: a app já abriu e a criança já pode jogar.
+    // Sem `await` de propósito — isto corre por trás e nunca atrasa nada.
+    unawaited(_procurarConteudoNovo());
+  }
+
+  Future<void> _procurarConteudoNovo() async {
+    final houve = await ConteudoRemoto.procurarActualizacao(conteudo.versao);
+    if (houve) {
+      haConteudoNovo = true;
+      notifyListeners();
+    }
   }
 
   Future<void> _gravar() async {

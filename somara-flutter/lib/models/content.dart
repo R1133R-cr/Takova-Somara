@@ -163,15 +163,28 @@ class Curso {
 
 class Conteudo {
   final List<Curso> cursos;
-  const Conteudo(this.cursos);
 
+  /// Data da última alteração ao currículo, como número (ex.: 20260807).
+  /// É por este número que a app decide se o que está na internet é mais
+  /// recente do que aquilo que já tem.
+  final int versao;
+
+  const Conteudo(this.cursos, {this.versao = 0});
+
+  /// Lê o conteúdo que veio dentro da app.
   static Future<Conteudo> carregar() async {
-    final raw = await rootBundle.loadString('assets/content.json');
-    final j = json.decode(raw) as Map<String, dynamic>;
-    return Conteudo(
-      (j['cursos'] as List)
-          .map((c) => Curso.fromJson(c as Map<String, dynamic>))
-          .toList(),
-    );
+    return deTexto(await rootBundle.loadString('assets/content.json'));
+  }
+
+  /// Lê conteúdo a partir de texto — usado tanto para o que vem dentro da
+  /// app como para o que se descarrega. Rebenta com excepção se o texto
+  /// estiver mal formado, e é isso que se quer: quem descarrega apanha o
+  /// erro e fica com o conteúdo anterior.
+  static Conteudo deTexto(String texto) {
+    final j = json.decode(texto) as Map<String, dynamic>;
+    final cursos = (j['cursos'] as List)
+        .map((c) => Curso.fromJson(c as Map<String, dynamic>))
+        .toList();
+    return Conteudo(cursos, versao: (j['versao'] ?? 0) as int);
   }
 }
