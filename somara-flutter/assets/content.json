@@ -24,7 +24,8 @@
           "3",
           "4"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "f72cbcf95d5f.mp3"
         },
         {
          "t": "count",
@@ -36,7 +37,8 @@
           "5",
           "6"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "8110f120811e.mp3"
         },
         {
          "t": "choice",
@@ -46,7 +48,8 @@
           "4",
           "5"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "e7301c4e5cb0.mp3"
         },
         {
          "t": "count",
@@ -58,7 +61,8 @@
           "2",
           "3"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "c70c81e838ef.mp3"
         },
         {
          "t": "choice",
@@ -68,7 +72,8 @@
           "3",
           "5"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "40b00cb2e91c.mp3"
         },
         {
          "t": "choice",
@@ -78,7 +83,8 @@
           "4",
           "6"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "122aaf9cd11d.mp3"
         }
        ]
       },
@@ -96,7 +102,8 @@
           "7",
           "8"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "a7f26ca6c0c3.mp3"
         },
         {
          "t": "choice",
@@ -106,7 +113,8 @@
           "9",
           "11"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "d749539c37e3.mp3"
         },
         {
          "t": "count",
@@ -118,12 +126,14 @@
           "9",
           "10"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "ad377e0809f8.mp3"
         },
         {
          "t": "input",
          "q": "Escreve o número: seis",
-         "a": "6"
+         "a": "6",
+         "audio": "63d1e629e26d.mp3"
         },
         {
          "t": "choice",
@@ -133,7 +143,8 @@
           "8",
           "10"
          ],
-         "a": 2
+         "a": 2,
+         "audio": "279641ef2936.mp3"
         },
         {
          "t": "count",
@@ -145,7 +156,8 @@
           "6",
           "7"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "b8f70e2a36d1.mp3"
         },
         {
          "t": "match",
@@ -163,7 +175,8 @@
            "10",
            "dez"
           ]
-         ]
+         ],
+         "audio": "5218d9171dcf.mp3"
         }
        ]
       }
@@ -184,7 +197,8 @@
           "3",
           "7"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "f2a1e58431ca.mp3"
         },
         {
          "t": "choice",
@@ -193,7 +207,8 @@
           "5",
           "2"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "738959a3766c.mp3"
         },
         {
          "t": "choice",
@@ -202,7 +217,8 @@
           "No primeiro (4)",
           "No segundo (2)"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "61ef9d9d2d0c.mp3"
         },
         {
          "t": "choice",
@@ -212,7 +228,8 @@
           "4",
           "6"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "55525e216e5f.mp3"
         },
         {
          "t": "choice",
@@ -221,7 +238,8 @@
           "maior",
           "menor"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "4a705776ce9e.mp3"
         }
        ]
       },
@@ -237,12 +255,14 @@
           "5",
           "6"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "ab6566f6209a.mp3"
         },
         {
          "t": "input",
          "q": "Falta o número: 4, 5, __ , 7",
-         "a": "6"
+         "a": "6",
+         "audio": "936eb3ccf514.mp3"
         },
         {
          "t": "choice",
@@ -252,7 +272,8 @@
           "1",
           "6"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "14028226d1e3.mp3"
         },
         {
          "t": "choice",
@@ -262,7 +283,8 @@
           "2, 1, 4, 3",
           "4, 3, 1, 2"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "32e96602e6d4.mp3"
         },
         {
          "t": "choice",
@@ -272,7 +294,8 @@
           "2",
           "5"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "17e6be32a1f5.mp3"
         }
        ]
       }
@@ -296,7 +319,8 @@
           "2",
           "3"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "3de7cbddee17.mp3"
         },
         {
          "t": "choice",
@@ -306,7 +330,8 @@
           "3",
           "4"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "295bd09ac077.mp3"
         },
         {
          "t": "choice",
@@ -316,17 +341,20 @@
           "4",
           "5"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "43fca080924e.mp3"
         },
         {
          "t": "input",
          "q": "3 + 1 = ?",
-         "a": "4"
+         "a": "4",
+         "audio": "8c50ab4f7f1f.mp3"
         },
         {
          "t": "input",
          "q": "1 + 4 = ?",
-         "a": "5"
+         "a": "5",
+         "audio": "90a2ae88db15.mp3"
         },
         {
          "t": "choice",
@@ -336,7 +364,8 @@
           "3",
           "6"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "9388055d293e.mp3"
         }
        ]
       },
@@ -352,7 +381,8 @@
           "7",
           "8"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "b554fe0a3852.mp3"
         },
         {
          "t": "choice",
@@ -362,17 +392,20 @@
           "10",
           "11"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "93a7ac854704.mp3"
         },
         {
          "t": "input",
          "q": "6 + 2 = ?",
-         "a": "8"
+         "a": "8",
+         "audio": "5412d06d06c5.mp3"
         },
         {
          "t": "input",
          "q": "3 + 4 = ?",
-         "a": "7"
+         "a": "7",
+         "audio": "91d89b56dc82.mp3"
         },
         {
          "t": "choice",
@@ -382,12 +415,14 @@
           "5 + 4",
           "6 + 4"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "21d122399e98.mp3"
         },
         {
          "t": "input",
          "q": "7 + 3 = ?",
-         "a": "10"
+         "a": "10",
+         "audio": "5ec5ae1decfa.mp3"
         }
        ]
       }
@@ -409,7 +444,8 @@
           "2",
           "3"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "76fbed37944b.mp3"
         },
         {
          "t": "choice",
@@ -419,17 +455,20 @@
           "2",
           "3"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "f7ed5d1279c5.mp3"
         },
         {
          "t": "input",
          "q": "5 − 1 = ?",
-         "a": "4"
+         "a": "4",
+         "audio": "28919ccdcd9a.mp3"
         },
         {
          "t": "input",
          "q": "3 − 3 = ?",
-         "a": "0"
+         "a": "0",
+         "audio": "508083ed8c5b.mp3"
         },
         {
          "t": "choice",
@@ -439,7 +478,8 @@
           "1",
           "2"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "4cbaceca8226.mp3"
         }
        ]
       },
@@ -455,17 +495,20 @@
           "5",
           "6"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "667da9756d7f.mp3"
         },
         {
          "t": "input",
          "q": "10 − 4 = ?",
-         "a": "6"
+         "a": "6",
+         "audio": "1e4b937e9d33.mp3"
         },
         {
          "t": "input",
          "q": "9 − 5 = ?",
-         "a": "4"
+         "a": "4",
+         "audio": "96201db75176.mp3"
         },
         {
          "t": "choice",
@@ -475,17 +518,20 @@
           "7 − 5",
           "7 − 6"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "2c3510815288.mp3"
         },
         {
          "t": "input",
          "q": "10 − 10 = ?",
-         "a": "0"
+         "a": "0",
+         "audio": "969c9312f760.mp3"
         },
         {
          "t": "input",
          "q": "7 − 3 = ?",
-         "a": "4"
+         "a": "4",
+         "audio": "79e096973f8b.mp3"
         }
        ]
       }
@@ -507,7 +553,8 @@
           "11",
           "20"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "ed75e1ca66ad.mp3"
         },
         {
          "t": "choice",
@@ -517,12 +564,14 @@
           "16",
           "11"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "f33687ea313d.mp3"
         },
         {
          "t": "input",
          "q": "Escreve o número: quinze",
-         "a": "15"
+         "a": "15",
+         "audio": "3f900a5262e2.mp3"
         },
         {
          "t": "choice",
@@ -532,7 +581,8 @@
           "18",
           "14"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "279641ef2936.mp3"
         },
         {
          "t": "choice",
@@ -542,7 +592,8 @@
           "19",
           "21"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "c714b67dd9b6.mp3"
         },
         {
          "t": "choice",
@@ -552,7 +603,8 @@
           "20",
           "12"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "d843e44c41e0.mp3"
         }
        ]
       },
@@ -568,17 +620,20 @@
           "15",
           "16"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "bc645f519761.mp3"
         },
         {
          "t": "input",
          "q": "12 + 3 = ?",
-         "a": "15"
+         "a": "15",
+         "audio": "48e730b7cd6a.mp3"
         },
         {
          "t": "input",
          "q": "18 − 2 = ?",
-         "a": "16"
+         "a": "16",
+         "audio": "ecb7b1ed5cc8.mp3"
         },
         {
          "t": "choice",
@@ -588,12 +643,14 @@
           "10",
           "20"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "56863ac94f11.mp3"
         },
         {
          "t": "input",
          "q": "11 + 4 = ?",
-         "a": "15"
+         "a": "15",
+         "audio": "17000eb54518.mp3"
         }
        ]
       }
@@ -615,7 +672,8 @@
           "quadrado",
           "triângulo"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "442e271d7f0a.mp3"
         },
         {
          "t": "choice",
@@ -625,7 +683,8 @@
           "3",
           "4"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "5fe25334eb54.mp3"
         },
         {
          "t": "choice",
@@ -635,7 +694,8 @@
           "4",
           "5"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "237d1f9ea9c3.mp3"
         },
         {
          "t": "choice",
@@ -645,7 +705,8 @@
           "triângulo",
           "círculo"
          ],
-         "a": 2
+         "a": 2,
+         "audio": "9d202ad0eb36.mp3"
         },
         {
          "t": "choice",
@@ -655,7 +716,8 @@
           "círculo",
           "triângulo"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "bd3e3403dfe9.mp3"
         },
         {
          "t": "drag",
@@ -666,7 +728,8 @@
           "Quadrado",
           "Triângulo"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "e7a17078b3da.mp3"
         }
        ]
       },
@@ -682,7 +745,8 @@
           "10 MT",
           "15 MT"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "900fe349721d.mp3"
         },
         {
          "t": "choice",
@@ -692,12 +756,14 @@
           "5 MT",
           "10 MT"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "2d501cdc58c4.mp3"
         },
         {
          "t": "input",
          "q": "2 MT + 3 MT = ? (só o número)",
-         "a": "5"
+         "a": "5",
+         "audio": "7156d4287e8c.mp3"
         },
         {
          "t": "choice",
@@ -706,7 +772,8 @@
           "10 MT",
           "5 MT"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "2b65e9a3b038.mp3"
         },
         {
          "t": "choice",
@@ -716,7 +783,8 @@
           "10 MT",
           "20 MT"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "f49cbb12fcbb.mp3"
         }
        ]
       }
@@ -738,12 +806,14 @@
           "9",
           "10"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "299d2a0a2524.mp3"
         },
         {
          "t": "input",
          "q": "9 − 2 = ?",
-         "a": "7"
+         "a": "7",
+         "audio": "16a3588c7437.mp3"
         },
         {
          "t": "count",
@@ -755,7 +825,8 @@
           "8",
           "9"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "1dd29607b5d7.mp3"
         },
         {
          "t": "choice",
@@ -764,7 +835,8 @@
           "14",
           "18"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "5fbb5888afa6.mp3"
         },
         {
          "t": "choice",
@@ -774,12 +846,14 @@
           "9",
           "10"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "9afded5b1cbd.mp3"
         },
         {
          "t": "input",
          "q": "10 − 7 = ?",
-         "a": "3"
+         "a": "3",
+         "audio": "bac73e665d0f.mp3"
         }
        ]
       }
@@ -809,7 +883,8 @@
           "a",
           "t"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "0a7bbc2e5941.mp3"
         },
         {
          "t": "choice",
@@ -819,12 +894,14 @@
           "i",
           "m"
          ],
-         "a": 2
+         "a": 2,
+         "audio": "1ba214becaae.mp3"
         },
         {
          "t": "input",
          "q": "Completa: A, E, __ , O, U",
-         "a": "I"
+         "a": "I",
+         "audio": "2646cc5d3028.mp3"
         },
         {
          "t": "choice",
@@ -834,7 +911,8 @@
           "5",
           "7"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "6d664619a332.mp3"
         },
         {
          "t": "choice",
@@ -844,7 +922,8 @@
           "V",
           "A"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "2512ac9a11c1.mp3"
         },
         {
          "t": "choice",
@@ -854,7 +933,8 @@
           "U",
           "A"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "815dfdd71ccf.mp3"
         }
        ]
       },
@@ -869,7 +949,8 @@
           "A",
           "S"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "467dcbb3eaca.mp3"
         },
         {
          "t": "choice",
@@ -879,12 +960,14 @@
           "Escola",
           "Casa"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "0d49deffb9e5.mp3"
         },
         {
          "t": "input",
          "q": "Completa com a vogal: ov_ (ovo)",
-         "a": "O"
+         "a": "O",
+         "audio": "00479024fcc6.mp3"
         },
         {
          "t": "choice",
@@ -893,7 +976,8 @@
           "I",
           "G"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "aa2f091d768b.mp3"
         },
         {
          "t": "choice",
@@ -903,7 +987,8 @@
           "Pato",
           "Uva"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "d8da96b8035f.mp3"
         },
         {
          "t": "drag",
@@ -914,7 +999,8 @@
           "O",
           "U"
          ],
-         "a": 2
+         "a": 2,
+         "audio": "d1e65227d640.mp3"
         }
        ]
       }
@@ -936,7 +1022,8 @@
           "AP",
           "PO"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "8764f7e2c96f.mp3"
         },
         {
          "t": "choice",
@@ -946,12 +1033,14 @@
           "PI",
           "PU"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "6d3af21a0435.mp3"
         },
         {
          "t": "input",
          "q": "Escreve: P + O",
-         "a": "PO"
+         "a": "PO",
+         "audio": "783e15c87580.mp3"
         },
         {
          "t": "choice",
@@ -961,7 +1050,8 @@
           "PA",
           "PE"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "07c823bbebf6.mp3"
         },
         {
          "t": "choice",
@@ -971,7 +1061,8 @@
           "PE",
           "PI"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "1b7a47ee25ce.mp3"
         }
        ]
       },
@@ -987,12 +1078,14 @@
           "TOPA",
           "APTO"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "ed52fc3e0b0c.mp3"
         },
         {
          "t": "input",
          "q": "Junta as sílabas: PI + PA",
-         "a": "PIPA"
+         "a": "PIPA",
+         "audio": "346a24480d7c.mp3"
         },
         {
          "t": "choice",
@@ -1001,7 +1094,8 @@
           "TEPO",
           "POTE"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "bb83ee6887fa.mp3"
         },
         {
          "t": "choice",
@@ -1011,7 +1105,8 @@
           "Bola",
           "Mesa"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "f7644460ced4.mp3"
         },
         {
          "t": "choice",
@@ -1021,7 +1116,8 @@
           "pinto",
           "pombo"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "b8569f5ea4c1.mp3"
         }
        ]
       }
@@ -1043,7 +1139,8 @@
           "AM",
           "MO"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "6aa3e0df9f72.mp3"
         },
         {
          "t": "choice",
@@ -1053,12 +1150,14 @@
           "MI",
           "MU"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "9a9f0f88d8b5.mp3"
         },
         {
          "t": "input",
          "q": "Escreve: M + O",
-         "a": "MO"
+         "a": "MO",
+         "audio": "faea5ba20875.mp3"
         },
         {
          "t": "choice",
@@ -1068,7 +1167,8 @@
           "ME",
           "MU"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "b59284a201fd.mp3"
         },
         {
          "t": "choice",
@@ -1078,7 +1178,8 @@
           "MO",
           "MI"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "bdade427e37b.mp3"
         }
        ]
       },
@@ -1094,7 +1195,8 @@
           "LAMA",
           "MELA"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "fdaa12560d16.mp3"
         },
         {
          "t": "choice",
@@ -1103,12 +1205,14 @@
           "PAMA",
           "MAPA"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "3d4c82baa8cc.mp3"
         },
         {
          "t": "input",
          "q": "Junta as sílabas: ME + SA",
-         "a": "MESA"
+         "a": "MESA",
+         "audio": "195a56630cf6.mp3"
         },
         {
          "t": "choice",
@@ -1118,7 +1222,8 @@
           "AMÃM",
           "MÃAM"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "a620c042610d.mp3"
         },
         {
          "t": "choice",
@@ -1127,7 +1232,8 @@
           "MIMO",
           "MOMI"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "af92732accc2.mp3"
         }
        ]
       }
@@ -1149,7 +1255,8 @@
           "AL",
           "LO"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "ba81a56b3a4a.mp3"
         },
         {
          "t": "choice",
@@ -1159,12 +1266,14 @@
           "TE",
           "TI"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "22448d5eebe4.mp3"
         },
         {
          "t": "input",
          "q": "Escreve: L + I",
-         "a": "LI"
+         "a": "LI",
+         "audio": "ed98d3c70ff5.mp3"
         },
         {
          "t": "choice",
@@ -1174,7 +1283,8 @@
           "TA",
           "TU"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "6c3d60052d55.mp3"
         },
         {
          "t": "choice",
@@ -1184,7 +1294,8 @@
           "LE",
           "LI"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "03a5059215ef.mp3"
         }
        ]
       },
@@ -1199,7 +1310,8 @@
           "TATU",
           "TUTA"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "e4949bc8c198.mp3"
         },
         {
          "t": "choice",
@@ -1208,12 +1320,14 @@
           "TALA",
           "LATA"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "a1c8938cea53.mp3"
         },
         {
          "t": "input",
          "q": "Junta as sílabas: TE + LA",
-         "a": "TELA"
+         "a": "TELA",
+         "audio": "dc4c3c508af7.mp3"
         },
         {
          "t": "choice",
@@ -1222,7 +1336,8 @@
           "ALU",
           "LUA"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "6c30456a0f43.mp3"
         },
         {
          "t": "choice",
@@ -1232,7 +1347,8 @@
           "miau",
           "mu"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "ad30f0cd7d49.mp3"
         }
        ]
       }
@@ -1254,7 +1370,8 @@
           "SACA",
           "ACAS"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "5030d8ddc39f.mp3"
         },
         {
          "t": "choice",
@@ -1263,12 +1380,14 @@
           "LOBA",
           "BOLA"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "ded524aafece.mp3"
         },
         {
          "t": "input",
          "q": "Junta as sílabas: SO + PA",
-         "a": "SOPA"
+         "a": "SOPA",
+         "audio": "90b91ee34574.mp3"
         },
         {
          "t": "choice",
@@ -1277,12 +1396,14 @@
           "TOGA",
           "GATO"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "37ec76bdd1bf.mp3"
         },
         {
          "t": "input",
          "q": "Junta as sílabas: DE + DO",
-         "a": "DEDO"
+         "a": "DEDO",
+         "audio": "e90f27f3abb6.mp3"
         },
         {
          "t": "choice",
@@ -1292,7 +1413,8 @@
           "CASA",
           "PÃO"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "b928010c2249.mp3"
         }
        ]
       }
@@ -1313,7 +1435,8 @@
           "pequena",
           "grande (maiúscula)"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "a5cfe45ec1b6.mp3"
         },
         {
          "t": "choice",
@@ -1323,7 +1446,8 @@
           "nada",
           "um número"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "173913715991.mp3"
         },
         {
          "t": "choice",
@@ -1333,7 +1457,8 @@
           "O gato dorme.",
           "gato o dorme"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "80284d319d16.mp3"
         },
         {
          "t": "choice",
@@ -1343,7 +1468,8 @@
           "Bola vermelha a é.",
           "É a bola vermelha"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "246b0f7584d3.mp3"
         },
         {
          "t": "choice",
@@ -1352,7 +1478,8 @@
           "pequena",
           "maiúscula"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "9b2d221eaf69.mp3"
         }
        ]
       }
@@ -1374,7 +1501,8 @@
           "Bobi",
           "Cão"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "dadb4d891599.mp3"
         },
         {
          "t": "choice",
@@ -1384,7 +1512,8 @@
           "uma maçã",
           "um pão"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "7e6352ed84c5.mp3"
         },
         {
          "t": "choice",
@@ -1394,7 +1523,8 @@
           "óculos de sol",
           "uma bola"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "88eb8cdeb3e9.mp3"
         },
         {
          "t": "choice",
@@ -1403,7 +1533,8 @@
           "de noite",
           "de dia"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "6adf0e976183.mp3"
         },
         {
          "t": "choice",
@@ -1413,7 +1544,8 @@
           "lã",
           "mel"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "d10ba7501350.mp3"
         },
         {
          "t": "match",
@@ -1431,7 +1563,8 @@
            "Vaca",
            "Mu"
           ]
-         ]
+         ],
+         "audio": "32fd5c3ea83f.mp3"
         }
        ]
       }
@@ -1461,17 +1594,20 @@
           "setenta e cinco",
           "quinze e sete"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "3f88519fa702.mp3"
         },
         {
          "t": "input",
          "q": "Escreve em algarismos: oitenta e quatro.",
-         "a": "84"
+         "a": "84",
+         "audio": "aaecd10f612e.mp3"
         },
         {
          "t": "input",
          "q": "Escreve em algarismos: noventa e nove.",
-         "a": "99"
+         "a": "99",
+         "audio": "d1fca5d68c1c.mp3"
         },
         {
          "t": "choice",
@@ -1481,7 +1617,8 @@
           "70",
           "79"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "ffb96becaddd.mp3"
         },
         {
          "t": "choice",
@@ -1491,7 +1628,8 @@
           "79",
           "70"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "3abff27faa3c.mp3"
         }
        ]
       },
@@ -1507,7 +1645,8 @@
           ">",
           "="
          ],
-         "a": 0
+         "a": 0,
+         "audio": "fb7a046659e7.mp3"
         },
         {
          "t": "choice",
@@ -1517,7 +1656,8 @@
           ">",
           "="
          ],
-         "a": 2
+         "a": 2,
+         "audio": "54ffbd91db60.mp3"
         },
         {
          "t": "choice",
@@ -1527,7 +1667,8 @@
           ">",
           "="
          ],
-         "a": 1
+         "a": 1,
+         "audio": "74667cf8aa8e.mp3"
         },
         {
          "t": "choice",
@@ -1537,7 +1678,8 @@
           "36",
           "60"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "3b18cba56b22.mp3"
         },
         {
          "t": "choice",
@@ -1547,7 +1689,8 @@
           "41, 40, 14",
           "40, 41, 14"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "ebbe84ce4bd0.mp3"
         }
        ]
       },
@@ -1563,7 +1706,8 @@
           "7",
           "47"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "acd6c5fbe4ff.mp3"
         },
         {
          "t": "choice",
@@ -1573,12 +1717,14 @@
           "7",
           "11"
          ],
-         "a": 1
+         "a": 1,
+         "audio": "67ec99398e1d.mp3"
         },
         {
          "t": "input",
          "q": "6 dezenas e 3 unidades formam que número?",
-         "a": "63"
+         "a": "63",
+         "audio": "d54b8d7065cb.mp3"
         },
         {
          "t": "choice",
@@ -1588,12 +1734,14 @@
           "8 unidades",
           "80 unidades"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "158703dfda07.mp3"
         },
         {
          "t": "input",
          "q": "Decompõe: 25 = 20 + ?",
-         "a": "5"
+         "a": "5",
+         "audio": "7c1d520f5b2f.mp3"
         }
        ]
       }
@@ -1610,17 +1758,20 @@
         {
          "t": "input",
          "q": "Calcula: 34 + 25 =",
-         "a": "59"
+         "a": "59",
+         "audio": "507e7ac9aedf.mp3"
         },
         {
          "t": "input",
          "q": "Calcula: 46 + 30 =",
-         "a": "76"
+         "a": "76",
+         "audio": "78810c4bd492.mp3"
         },
         {
          "t": "input",
          "q": "Calcula: 58 + 7 =",
-         "a": "65"
+         "a": "65",
+         "audio": "50e80d7d70e9.mp3"
         },
         {
          "t": "choice",
@@ -1630,12 +1781,14 @@
           "5 meticais",
           "70 meticais"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "0fdf5405c746.mp3"
         },
         {
          "t": "input",
          "q": "Calcula: 27 + 27 =",
-         "a": "54"
+         "a": "54",
+         "audio": "f2e9cb5392bc.mp3"
         }
        ]
       },
@@ -1646,17 +1799,20 @@
         {
          "t": "input",
          "q": "Calcula: 68 − 25 =",
-         "a": "43"
+         "a": "43",
+         "audio": "d63b3665dd63.mp3"
         },
         {
          "t": "input",
          "q": "Calcula: 90 − 40 =",
-         "a": "50"
+         "a": "50",
+         "audio": "17573978ed65.mp3"
         },
         {
          "t": "input",
          "q": "Calcula: 73 − 8 =",
-         "a": "65"
+         "a": "65",
+         "audio": "9ab3f91f098d.mp3"
         },
         {
          "t": "choice",
@@ -1666,12 +1822,14 @@
           "75",
           "25"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "027fddfea023.mp3"
         },
         {
          "t": "input",
          "q": "Calcula: 100 − 60 =",
-         "a": "40"
+         "a": "40",
+         "audio": "273bea54e94a.mp3"
         }
        ]
       },
@@ -1687,7 +1845,8 @@
           "último",
           "terceiro"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "568ef0055f7c.mp3"
         },
         {
          "t": "choice",
@@ -1697,7 +1856,8 @@
           "sete",
           "setenta"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "be47c08ccef0.mp3"
         },
         {
          "t": "choice",
@@ -1707,7 +1867,8 @@
           "8.º",
           "19.º"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "16262d5e75bb.mp3"
         },
         {
          "t": "match",
@@ -1725,7 +1886,8 @@
            "20.º",
            "vigésimo"
           ]
-         ]
+         ],
+         "audio": "174d7aff1365.mp3"
         },
         {
          "t": "choice",
@@ -1735,7 +1897,8 @@
           "3",
           "4"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "a9f07830b236.mp3"
         }
        ]
       }
@@ -1757,7 +1920,8 @@
           "12 horas",
           "60 horas"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "b851e5e4d367.mp3"
         },
         {
          "t": "choice",
@@ -1767,7 +1931,8 @@
           "24",
           "100"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "70c8ba30a5f6.mp3"
         },
         {
          "t": "choice",
@@ -1777,7 +1942,8 @@
           "minutos",
           "semanas"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "05d55bfad43f.mp3"
         },
         {
          "t": "choice",
@@ -1787,7 +1953,8 @@
           "12 horas",
           "15 horas"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "2ab1e5d058dc.mp3"
         },
         {
          "t": "drag",
@@ -1797,7 +1964,8 @@
           "De manhã",
           "À noite"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "ee307ccd86f9.mp3"
         }
        ]
       },
@@ -1813,7 +1981,8 @@
           "5",
           "30"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "dba35d782340.mp3"
         },
         {
          "t": "choice",
@@ -1823,7 +1992,8 @@
           "10",
           "7"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "98e80f2c1fa3.mp3"
         },
         {
          "t": "choice",
@@ -1833,7 +2003,8 @@
           "Dezembro",
           "Março"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "62b8ada2ccb6.mp3"
         },
         {
          "t": "choice",
@@ -1843,7 +2014,8 @@
           "segunda-feira",
           "domingo"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "615cc9816a9b.mp3"
         },
         {
          "t": "match",
@@ -1861,7 +2033,8 @@
            "Dezembro",
            "12.º mês"
           ]
-         ]
+         ],
+         "audio": "fc0e13644ccf.mp3"
         }
        ]
       }
@@ -1878,12 +2051,14 @@
         {
          "t": "input",
          "q": "Calcula: 2 × 5 =",
-         "a": "10"
+         "a": "10",
+         "audio": "5ff77e950a44.mp3"
         },
         {
          "t": "input",
          "q": "Calcula: 4 × 3 =",
-         "a": "12"
+         "a": "12",
+         "audio": "5928768624ae.mp3"
         },
         {
          "t": "choice",
@@ -1893,12 +2068,14 @@
           "3 × 3",
           "4 + 3"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "aa606c1552fc.mp3"
         },
         {
          "t": "input",
          "q": "Calcula: 5 × 8 =",
-         "a": "40"
+         "a": "40",
+         "audio": "852e4690471a.mp3"
         },
         {
          "t": "choice",
@@ -1908,7 +2085,8 @@
           "10",
           "18"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "32fe0f0a4fea.mp3"
         }
        ]
       },
@@ -1924,7 +2102,8 @@
           "17",
           "15"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "ec48ca9d93a2.mp3"
         },
         {
          "t": "choice",
@@ -1934,17 +2113,20 @@
           "20",
           "16"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "7539078b69f6.mp3"
         },
         {
          "t": "input",
          "q": "Conta de 5 em 5: 5, 10, 15, ?",
-         "a": "20"
+         "a": "20",
+         "audio": "2d2a9a2e73e0.mp3"
         },
         {
          "t": "input",
          "q": "Conta de 10 em 10: 40, 50, 60, ?",
-         "a": "70"
+         "a": "70",
+         "audio": "d641604df158.mp3"
         },
         {
          "t": "choice",
@@ -1954,7 +2136,8 @@
           "9",
           "7"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "3e4cb672ecdd.mp3"
         }
        ]
       }
@@ -1976,7 +2159,8 @@
           "curva",
           "redonda"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "25e7301e1cdd.mp3"
         },
         {
          "t": "choice",
@@ -1986,7 +2170,8 @@
           "3",
           "6"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "3bcabc220222.mp3"
         },
         {
          "t": "choice",
@@ -1996,7 +2181,8 @@
           "4",
           "5"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "5fe25334eb54.mp3"
         },
         {
          "t": "choice",
@@ -2006,7 +2192,8 @@
           "o quadrado",
           "o rectângulo"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "d8d32d1b5d74.mp3"
         },
         {
          "t": "match",
@@ -2024,7 +2211,8 @@
            "Círculo",
            "sem lados"
           ]
-         ]
+         ],
+         "audio": "e0e3b697a0f9.mp3"
         }
        ]
       },
@@ -2040,7 +2228,8 @@
           "cubo",
           "cilindro"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "442e271d7f0a.mp3"
         },
         {
          "t": "choice",
@@ -2050,7 +2239,8 @@
           "esfera",
           "cone"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "b38022d59c01.mp3"
         },
         {
          "t": "choice",
@@ -2060,7 +2250,8 @@
           "cubo",
           "esfera"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "115ba5d1fa3e.mp3"
         },
         {
          "t": "choice",
@@ -2069,7 +2260,8 @@
           "a esfera",
           "o cubo"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "59f833667ed0.mp3"
         },
         {
          "t": "drag",
@@ -2079,7 +2271,8 @@
           "Cubo",
           "Esfera"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "b8b67c7b06e1.mp3"
         }
        ]
       }
@@ -2109,7 +2302,8 @@
           "2",
           "4"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "6dea8411b42e.mp3"
         },
         {
          "t": "choice",
@@ -2119,17 +2313,20 @@
           "men-ino",
           "meni-no"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "e1fe252af851.mp3"
         },
         {
          "t": "input",
          "q": "Junta as sílabas e escreve a palavra: MA + NA",
-         "a": "mana"
+         "a": "mana",
+         "audio": "23307d658123.mp3"
         },
         {
          "t": "input",
          "q": "Junta as sílabas e escreve a palavra: PA + PÁ + IA",
-         "a": "papaia"
+         "a": "papaia",
+         "audio": "ee46b4b62be1.mp3"
         },
         {
          "t": "choice",
@@ -2139,7 +2336,8 @@
           "2",
           "3"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "9d389f615c90.mp3"
         }
        ]
       },
@@ -2155,7 +2353,8 @@
           "Casa o Tito na está.",
           "Está o na Tito casa."
          ],
-         "a": 0
+         "a": 0,
+         "audio": "6d395552e9bc.mp3"
         },
         {
          "t": "choice",
@@ -2165,7 +2364,8 @@
           "a lila come papaia",
           "A Lila come papaia"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "cabac3fcd1ad.mp3"
         },
         {
          "t": "choice",
@@ -2175,7 +2375,8 @@
           ".",
           "!"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "46d5372b2f48.mp3"
         },
         {
          "t": "choice",
@@ -2184,12 +2385,14 @@
           "maiúscula",
           "minúscula"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "36c33e77e6b3.mp3"
         },
         {
          "t": "input",
          "q": "Completa: A minha mãe e o meu pai são os meus ___.",
-         "a": "pais"
+         "a": "pais",
+         "audio": "68dd77d79996.mp3"
         }
        ]
       }
@@ -2211,7 +2414,8 @@
           "O livro é azul.",
           "O livro está na mesa."
          ],
-         "a": 0
+         "a": 0,
+         "audio": "86e76170fb40.mp3"
         },
         {
          "t": "choice",
@@ -2221,7 +2425,8 @@
           "A porta é grande.",
           "Abre a janela."
          ],
-         "a": 0
+         "a": 0,
+         "audio": "37966d8df5a4.mp3"
         },
         {
          "t": "choice",
@@ -2230,7 +2435,8 @@
           "Levanta a mão.",
           "Eu levanto a mão."
          ],
-         "a": 0
+         "a": 0,
+         "audio": "6da2f724023d.mp3"
         },
         {
          "t": "match",
@@ -2248,7 +2454,8 @@
            "Entra",
            "Sai"
           ]
-         ]
+         ],
+         "audio": "e4b554ea5def.mp3"
         },
         {
          "t": "choice",
@@ -2258,7 +2465,8 @@
           "médico",
           "motorista"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "0191f4eaa622.mp3"
         }
        ]
       },
@@ -2274,7 +2482,8 @@
           "A",
           "As"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "b7efe6c72ee6.mp3"
         },
         {
          "t": "choice",
@@ -2284,7 +2493,8 @@
           "O",
           "Os"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "3555a463da07.mp3"
         },
         {
          "t": "choice",
@@ -2294,7 +2504,8 @@
           "o",
           "as"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "db196c312248.mp3"
         },
         {
          "t": "choice",
@@ -2304,7 +2515,8 @@
           "a livro",
           "um livro"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "064359a36ddc.mp3"
         },
         {
          "t": "choice",
@@ -2313,7 +2525,8 @@
           "indefinidos",
           "definidos"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "eff837a3f561.mp3"
         }
        ]
       }
@@ -2335,7 +2548,8 @@
           "a tua",
           "a dele"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "4da638000d35.mp3"
         },
         {
          "t": "choice",
@@ -2345,7 +2559,8 @@
           "o meu",
           "o dela"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "e2876245ed9d.mp3"
         },
         {
          "t": "choice",
@@ -2355,7 +2570,8 @@
           "o meu",
           "o teu"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "0a007d0e2106.mp3"
         },
         {
          "t": "match",
@@ -2373,7 +2589,8 @@
            "Ele",
            "dele"
           ]
-         ]
+         ],
+         "audio": "eb15940be23a.mp3"
         },
         {
          "t": "choice",
@@ -2383,7 +2600,8 @@
           "os meus",
           "a minha"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "06578293f84f.mp3"
         }
        ]
       },
@@ -2399,7 +2617,8 @@
           "bonito",
           "bonitos"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "0d460e865b37.mp3"
         },
         {
          "t": "choice",
@@ -2409,7 +2628,8 @@
           "alto",
           "alta"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "09b4888af7af.mp3"
         },
         {
          "t": "choice",
@@ -2419,7 +2639,8 @@
           "meninos",
           "meninho"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "3c686b2a54ed.mp3"
         },
         {
          "t": "choice",
@@ -2429,12 +2650,14 @@
           "mães",
           "manos"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "9379b76753a0.mp3"
         },
         {
          "t": "input",
          "q": "Qual é o plural de «pé»?",
-         "a": "pés"
+         "a": "pés",
+         "audio": "70b22767d7ec.mp3"
         }
        ]
       }
@@ -2456,7 +2679,8 @@
           "aquele",
           "esse"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "f3327d96c804.mp3"
         },
         {
          "t": "choice",
@@ -2466,7 +2690,8 @@
           "este",
           "esta"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "b861254e7504.mp3"
         },
         {
          "t": "choice",
@@ -2476,7 +2701,8 @@
           "Aquela",
           "Aqueles"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "e7cf7537e5ab.mp3"
         },
         {
          "t": "match",
@@ -2494,7 +2720,8 @@
            "Longe dos dois",
            "aquele"
           ]
-         ]
+         ],
+         "audio": "fe761d675c72.mp3"
         },
         {
          "t": "choice",
@@ -2504,7 +2731,8 @@
           "Este",
           "Estes"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "1c699d6353f7.mp3"
         }
        ]
       },
@@ -2520,7 +2748,8 @@
           "dormir a sesta",
           "correr"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "cd6323223843.mp3"
         },
         {
          "t": "choice",
@@ -2530,7 +2759,8 @@
           "1",
           "3"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "224d8396feac.mp3"
         },
         {
          "t": "choice",
@@ -2540,7 +2770,8 @@
           "do charco",
           "suja"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "ae378de7b1c0.mp3"
         },
         {
          "t": "choice",
@@ -2550,7 +2781,8 @@
           "a machamba",
           "o mercado"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "3423b438cd49.mp3"
         },
         {
          "t": "drag",
@@ -2560,7 +2792,8 @@
           "Lavar as mãos",
           "Comer"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "633a8876fbd1.mp3"
         }
        ]
       }
@@ -2582,7 +2815,8 @@
           "são",
           "estão"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "41df57fe295e.mp3"
         },
         {
          "t": "choice",
@@ -2592,7 +2826,8 @@
           "é",
           "está"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "c619c95f7f2b.mp3"
         },
         {
          "t": "choice",
@@ -2602,7 +2837,8 @@
           "é",
           "eram"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "1fed2ce89e63.mp3"
         },
         {
          "t": "choice",
@@ -2612,7 +2848,8 @@
           "estou",
           "estarei"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "4375f7e4b324.mp3"
         },
         {
          "t": "choice",
@@ -2622,7 +2859,8 @@
           "estivemos",
           "estamos"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "33a177d486f8.mp3"
         }
        ]
       },
@@ -2638,7 +2876,8 @@
           "no chão",
           "no rio"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "3ee97174cfe5.mp3"
         },
         {
          "t": "choice",
@@ -2647,7 +2886,8 @@
           "mal ao ambiente",
           "bem ao ambiente"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "36d4e25ced4d.mp3"
         },
         {
          "t": "choice",
@@ -2656,7 +2896,8 @@
           "beber e regar",
           "deitar lixo"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "1cc7d628d16d.mp3"
         },
         {
          "t": "match",
@@ -2674,12 +2915,14 @@
            "Leão",
            "animal"
           ]
-         ]
+         ],
+         "audio": "8767f902b7f4.mp3"
         },
         {
          "t": "input",
          "q": "Completa: Devemos ___ árvores para ter sombra.",
-         "a": "plantar"
+         "a": "plantar",
+         "audio": "2e63578d83e5.mp3"
         }
        ]
       }
@@ -2701,7 +2944,8 @@
           "Toda",
           "Todas"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "a7a4f35ec310.mp3"
         },
         {
          "t": "choice",
@@ -2711,7 +2955,8 @@
           "Todos",
           "Todo"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "f671d83e8d94.mp3"
         },
         {
          "t": "choice",
@@ -2720,7 +2965,8 @@
           "zero pessoas",
           "muitas pessoas"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "05caadbb7169.mp3"
         },
         {
          "t": "choice",
@@ -2730,7 +2976,8 @@
           "Alguns",
           "Todos"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "8974b91c9365.mp3"
         },
         {
          "t": "choice",
@@ -2740,7 +2987,8 @@
           "muitos",
           "alguns"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "5a6945a73400.mp3"
         }
        ]
       },
@@ -2756,7 +3004,8 @@
           "só as pessoas",
           "as pedras"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "9a7816d6bcaf.mp3"
         },
         {
          "t": "choice",
@@ -2766,7 +3015,8 @@
           "título",
           "início"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "23db1244d98a.mp3"
         },
         {
          "t": "choice",
@@ -2776,7 +3026,8 @@
           "«Fim»",
           "«Adeus»"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "0cc4e9f07fb3.mp3"
         },
         {
          "t": "choice",
@@ -2785,7 +3036,8 @@
           "a tartaruga",
           "a lebre"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "e90510350e64.mp3"
         },
         {
          "t": "choice",
@@ -2795,7 +3047,8 @@
           "preguiçosos",
           "distraídos"
          ],
-         "a": 0
+         "a": 0,
+         "audio": "ffa54bedef2e.mp3"
         }
        ]
       }

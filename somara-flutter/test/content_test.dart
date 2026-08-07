@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:somara/models/content.dart';
 
@@ -72,6 +73,34 @@ void main() {
         }
       }
     }
+  });
+
+  test('cada pergunta tem o seu áudio, e o ficheiro existe mesmo', () {
+    // Um áudio em falta não rebenta a app — ela segue em silêncio. É
+    // justamente por isso que precisa de teste: ninguém daria por ela até
+    // uma criança que não lê ficar encalhada numa pergunta muda.
+    var semAudio = <String>[];
+    var emFalta = <String>[];
+
+    for (final curso in c.cursos) {
+      for (final u in curso.units) {
+        for (final n in u.niveis) {
+          for (final q in n.questoes) {
+            final onde = '${curso.id}/${u.id}/${n.id}: ${q.q}';
+            if (q.audio == null) {
+              semAudio.add(onde);
+              continue;
+            }
+            if (!File('assets/audio/${q.audio}').existsSync()) {
+              emFalta.add('$onde -> ${q.audio}');
+            }
+          }
+        }
+      }
+    }
+
+    expect(semAudio, isEmpty, reason: 'perguntas sem áudio atribuído');
+    expect(emFalta, isEmpty, reason: 'áudio atribuído mas ficheiro inexistente');
   });
 
   test('nenhum nível fica sem enunciado ou sem questões', () {

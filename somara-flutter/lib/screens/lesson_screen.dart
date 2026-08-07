@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -33,6 +34,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
 
   late final AnimationController _entrada;
   late final AnimationController _abanao;
+  final _voz = AudioPlayer();
 
   static const _msgsCerto = [
     'Boa! Certíssimo ⚡',
@@ -67,6 +69,24 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       duration: const Duration(milliseconds: 420),
     );
     _prepararQuestao();
+    _lerEnunciado();
+  }
+
+  /// Lê o enunciado em voz alta.
+  ///
+  /// Uma criança da 1ª ou 2ª classe ainda está a aprender a ler; sem isto a
+  /// app só serve a quem já lê corrido, e passa a precisar de um adulto ao
+  /// lado. Toca sozinho ao abrir cada pergunta e repete-se no altifalante.
+  ///
+  /// Falhar aqui nunca pode parar a lição: se o ficheiro faltar, segue-se
+  /// em silêncio com o enunciado escrito, que continua no ecrã.
+  Future<void> _lerEnunciado() async {
+    final ficheiro = q.audio;
+    if (ficheiro == null) return;
+    try {
+      await _voz.stop();
+      await _voz.play(AssetSource('audio/$ficheiro'));
+    } catch (_) {}
   }
 
   @override
@@ -74,6 +94,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     _entrada.dispose();
     _abanao.dispose();
     _input.dispose();
+    _voz.dispose();
     super.dispose();
   }
 
@@ -173,6 +194,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       _prepararQuestao();
     });
     _entrada.forward(from: 0);
+    _lerEnunciado();
   }
 
   @override
@@ -303,10 +325,44 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
                 borderRadius: BorderRadius.circular(S.rLg),
                 border: Border.all(color: S.line, width: 2),
               ),
-              child: Text(
-                q.q,
-                style: const TextStyle(
-                    fontSize: 19, fontWeight: FontWeight.w600, color: S.tx, height: 1.25),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Text(
+                      q.q,
+                      style: const TextStyle(
+                          fontSize: 19,
+                          fontWeight: FontWeight.w600,
+                          color: S.tx,
+                          height: 1.25),
+                    ),
+                  ),
+                  if (q.audio != null) ...[
+                    const SizedBox(width: 8),
+                    // Alvo generoso de propósito: dedos pequenos falham
+                    // botões pequenos, e este é o que salva quem ainda não lê.
+                    Semantics(
+                      button: true,
+                      label: 'Ouvir a pergunta outra vez',
+                      child: InkWell(
+                        onTap: _lerEnunciado,
+                        borderRadius: BorderRadius.circular(24),
+                        child: Container(
+                          width: 46,
+                          height: 46,
+                          decoration: BoxDecoration(
+                            color: S.surface2,
+                            shape: BoxShape.circle,
+                            border: Border.all(color: S.chart, width: 2),
+                          ),
+                          child: const Icon(Icons.volume_up_rounded,
+                              color: S.chart, size: 24),
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
               ),
             ),
           ),
