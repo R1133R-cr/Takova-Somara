@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/content.dart';
@@ -21,10 +22,10 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
   final _scroll = ScrollController();
   bool _centrouInicial = false;
 
-  static const _rowH = 118.0;
+  static const _rowH = 124.0;
   static const _cellW = 78.0;
   static const _cellH = 74.0;
-  static const _lateral = 54.0; // desvio para os lados, alternado
+  static const _lateral = 108.0; // amplitude máxima da onda
   static const _padTopo = 96.0;
   static const _padBase = 92.0;
 
@@ -44,16 +45,45 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
     super.dispose();
   }
 
+  /// Fase da onda: radianos por nível. 2π/6 fecha uma volta completa a cada
+  /// seis níveis — cerca de um S inteiro por ecrã, que é o que faz a
+  /// amarelinha ler como cobra. Com passo menor a onda demora tanto a virar
+  /// que os primeiros níveis caem todos do mesmo lado e o ecrã fica torto;
+  /// com passo maior volta a ser um ziguezague de esquerda para direita.
+  static const _passoOnda = 1.047; // 2π/6
+
+  /// Com o rótulo por baixo do quadrado (e não ao lado), a largura toda fica
+  /// livre para a onda. Só se guarda uma margem pequena para o quadrado
+  /// inclinado não encostar à borda.
+  double _amplitude(double largura) =>
+      math.min(_lateral, largura / 2 - _cellW / 2 - 18);
+
+  /// Deslocamento lateral do nível i. É a onda que faz o tabuleiro
+  /// serpentear como uma cobra em vez de saltar de lado para lado.
+  double _desvio(int i, double largura) =>
+      math.sin(i * _passoOnda) * _amplitude(largura);
+
   /// Converte o índice do nível na posição do quadrado no tabuleiro.
   /// O índice 0 fica em baixo, por isso a altura conta ao contrário.
   Rect _rectDe(int i, int total, double largura) {
-    final centroX = largura / 2 + (i.isEven ? -_lateral : _lateral);
+    final centroX = largura / 2 + _desvio(i, largura);
     final y = _padTopo + (total - 1 - i) * _rowH;
     return Rect.fromCenter(
       center: Offset(centroX, y + _cellH / 2),
       width: _cellW,
       height: _cellH,
     );
+  }
+
+  /// Inclinação do quadrado: alinhada com a tangente da onda naquele ponto.
+  /// Sem isto os quadrados ficam direitos sobre uma linha curva, o que dá
+  /// logo o aspecto de caixas pousadas em cima de um caminho, em vez de um
+  /// tabuleiro riscado no chão a acompanhar a curva.
+  double _inclinacao(int i, double largura) {
+    final derivada = math.cos(i * _passoOnda) * _amplitude(largura) * _passoOnda;
+    // A subida é constante (_rowH por nível), logo o ângulo do percurso sai
+    // do declive lateral face a essa subida. Limitado para nunca exagerar.
+    return (math.atan2(derivada, _rowH) * 0.55).clamp(-0.34, 0.34);
   }
 
   @override
@@ -76,6 +106,7 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
                   BoardCell(
                     rect: _rectDe(i, niveis.length, largura),
                     index: i,
+                    angle: _inclinacao(i, largura),
                     state: st.nivelFeito(i)
                         ? CellState.done
                         : (i == actual ? CellState.current : CellState.locked),
@@ -149,7 +180,6 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
     final bloqueado = cell.state == CellState.locked;
     final feito = cell.state == CellState.done;
     final r = cell.rect;
-    final aEsquerda = r.center.dx < largura / 2;
 
     return [
       // Número (ou ✓) por cima do quadrado pintado.
@@ -170,37 +200,46 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
                       ),
                     ),
             child: Center(
-              child: Opacity(
-                opacity: bloqueado ? 0.45 : 1,
-                child: feito
-                    ? const Icon(Icons.check_rounded, color: Colors.white, size: 34)
-                    : Text(
-                        '${cell.index + 1}',
-                        style: TextStyle(
-                          fontSize: 26,
-                          fontWeight: FontWeight.w700,
-                          color: cell.state == CellState.current
-                              ? S.onChart
-                              : S.chart,
+              // O número acompanha a inclinação do quadrado; se ficasse a
+              // direito dentro de uma casa torta, denunciava logo que a
+              // casa é um rectângulo rodado e não um risco no chão.
+              child: Transform.rotate(
+                angle: cell.angle,
+                child: Opacity(
+                  opacity: bloqueado ? 0.45 : 1,
+                  child: feito
+                      ? const Icon(Icons.check_rounded, color: Colors.white, size: 34)
+                      : Text(
+                          '${cell.index + 1}',
+                          style: TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.w700,
+                            color: cell.state == CellState.current
+                                ? S.onChart
+                                : S.chart,
+                          ),
                         ),
-                      ),
+                ),
               ),
             ),
           ),
         ),
       ),
-      // Rótulo ao lado, do lado oposto ao desvio do quadrado.
+      // Rótulo centrado por baixo do quadrado. Ao lado obrigava a apertar a
+      // onda para caber o texto; por baixo pertence visivelmente àquela casa
+      // e deixa a largura toda para a amarelinha serpentear.
       Positioned(
-        left: aEsquerda ? r.right + 12 : null,
-        right: aEsquerda ? null : largura - r.left + 12,
-        top: r.center.dy - 18,
-        width: 122,
+        left: r.center.dx - 68,
+        top: r.bottom + 4,
+        width: 136,
         child: Opacity(
           opacity: bloqueado ? 0.45 : 1,
           child: Text(
             lv.nivel.titulo,
-            textAlign: aEsquerda ? TextAlign.left : TextAlign.right,
-            style: const TextStyle(fontSize: 12.5, color: S.txSoft, height: 1.3),
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(fontSize: 12.5, color: S.txSoft, height: 1.25),
           ),
         ),
       ),
@@ -243,7 +282,7 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
         padding: const EdgeInsets.fromLTRB(18, 14, 18, 6),
         child: Row(
           children: [
-            for (final c in st.conteudo.cursos)
+            for (final c in st.cursosVisiveis)
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 4),

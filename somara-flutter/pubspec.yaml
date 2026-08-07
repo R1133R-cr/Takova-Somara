@@ -16,7 +16,9 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-version: 1.0.0+1
+# 0.x = ainda não lançada ao público; passa a 1.0.0 no dia da Play Store.
+# O número depois do + sobe a cada APK entregue e nunca se repete.
+version: 0.4.0+4
 
 environment:
   sdk: ^3.12.2
@@ -28,12 +30,14 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  audioplayers: ^6.8.1
   flutter:
     sdk: flutter
 
   # Dependências deliberadamente mínimas: cada pacote extra é mais peso no
   # APK e mais uma coisa que pode partir numa actualização. Toda a animação
   # é feita com o que o Flutter já traz de origem.
+  path_provider: ^2.1.6
   provider: ^6.1.2            # estado partilhado (progresso, vidas, XP)
   shared_preferences: ^2.3.2  # persistência local — substitui o localStorage
 
@@ -62,6 +66,7 @@ flutter:
   assets:
     - assets/content.json
     - assets/img/
+    - assets/audio/
 
   fonts:
     - family: Melfira

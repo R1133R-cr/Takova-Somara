@@ -1,6 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Necessária para ir buscar o currículo actualizado. Vinha só no
+         manifesto de depuração, o que fazia a app de entrega ficar sem rede
+         nenhuma — e a actualização de conteúdo falhava em silêncio, que é a
+         pior maneira de falhar. A app funciona na mesma sem internet: usa o
+         conteúdo que traz dentro. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
-        android:label="somara"
+        android:label="Somara"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

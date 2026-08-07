@@ -10,14 +10,22 @@ import 'package:flutter/services.dart' show rootBundle;
 /// falta tratar, em vez de falhar silenciosamente em produção.
 sealed class Questao {
   final String q;
-  const Questao(this.q);
+
+  /// Ficheiro do enunciado lido em voz alta (assets/audio/…), gerado à parte
+  /// e gravado no content.json. Vem pronto para a app não ter de calcular
+  /// nada — e não existe para enunciados que sejam só emoji.
+  final String? audio;
+
+  const Questao(this.q, this.audio);
 
   static Questao fromJson(Map<String, dynamic> j) {
     final q = (j['q'] ?? '') as String;
+    final a = j['audio'] as String?;
     switch (j['t']) {
       case 'count':
         return QCount(
           q,
+          a,
           emoji: j['emoji'] as String,
           n: j['n'] as int,
           options: (j['options'] as List).cast<String>(),
@@ -26,14 +34,16 @@ sealed class Questao {
       case 'choice':
         return QChoice(
           q,
+          a,
           options: (j['options'] as List).cast<String>(),
           a: j['a'] as int,
         );
       case 'input':
-        return QInput(q, a: '${j['a']}');
+        return QInput(q, a, resposta: '${j['a']}');
       case 'match':
         return QMatch(
           q,
+          a,
           pairs: (j['pairs'] as List)
               .map((p) => ((p as List).cast<String>()))
               .map((p) => (p[0], p[1]))
@@ -42,6 +52,7 @@ sealed class Questao {
       case 'drag':
         return QDrag(
           q,
+          a,
           chip: j['chip'] as String,
           zones: (j['zones'] as List).cast<String>(),
           a: j['a'] as int,
@@ -58,26 +69,26 @@ class QCount extends Questao {
   final int n;
   final List<String> options;
   final int a;
-  const QCount(super.q, {required this.emoji, required this.n, required this.options, required this.a});
+  const QCount(super.q, super.audio, {required this.emoji, required this.n, required this.options, required this.a});
 }
 
 /// Escolha múltipla.
 class QChoice extends Questao {
   final List<String> options;
   final int a;
-  const QChoice(super.q, {required this.options, required this.a});
+  const QChoice(super.q, super.audio, {required this.options, required this.a});
 }
 
 /// Resposta escrita — comparada sem distinguir maiúsculas nem acentos.
 class QInput extends Questao {
   final String a;
-  const QInput(super.q, {required this.a});
+  const QInput(super.q, super.audio, {required String resposta}) : a = resposta;
 }
 
 /// Ligar pares (esquerda ↔ direita).
 class QMatch extends Questao {
   final List<(String, String)> pairs;
-  const QMatch(super.q, {required this.pairs});
+  const QMatch(super.q, super.audio, {required this.pairs});
 }
 
 /// Arrastar uma peça para a zona certa.
@@ -85,7 +96,7 @@ class QDrag extends Questao {
   final String chip;
   final List<String> zones;
   final int a;
-  const QDrag(super.q, {required this.chip, required this.zones, required this.a});
+  const QDrag(super.q, super.audio, {required this.chip, required this.zones, required this.a});
 }
 
 class Nivel {
@@ -152,15 +163,28 @@ class Curso {
 
 class Conteudo {
   final List<Curso> cursos;
-  const Conteudo(this.cursos);
 
+  /// Data da última alteração ao currículo, como número (ex.: 20260807).
+  /// É por este número que a app decide se o que está na internet é mais
+  /// recente do que aquilo que já tem.
+  final int versao;
+
+  const Conteudo(this.cursos, {this.versao = 0});
+
+  /// Lê o conteúdo que veio dentro da app.
   static Future<Conteudo> carregar() async {
-    final raw = await rootBundle.loadString('assets/content.json');
-    final j = json.decode(raw) as Map<String, dynamic>;
-    return Conteudo(
-      (j['cursos'] as List)
-          .map((c) => Curso.fromJson(c as Map<String, dynamic>))
-          .toList(),
-    );
+    return deTexto(await rootBundle.loadString('assets/content.json'));
+  }
+
+  /// Lê conteúdo a partir de texto — usado tanto para o que vem dentro da
+  /// app como para o que se descarrega. Rebenta com excepção se o texto
+  /// estiver mal formado, e é isso que se quer: quem descarrega apanha o
+  /// erro e fica com o conteúdo anterior.
+  static Conteudo deTexto(String texto) {
+    final j = json.decode(texto) as Map<String, dynamic>;
+    final cursos = (j['cursos'] as List)
+        .map((c) => Curso.fromJson(c as Map<String, dynamic>))
+        .toList();
+    return Conteudo(cursos, versao: (j['versao'] ?? 0) as int);
   }
 }
