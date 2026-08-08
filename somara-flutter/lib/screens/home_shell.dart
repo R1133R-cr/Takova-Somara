@@ -3,163 +3,140 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
+import 'guardados_screen.dart';
 import 'map_screen.dart';
+import 'perfil_screen.dart';
+import 'praticar_screen.dart';
+import 'ranking_screen.dart';
 
-/// Casca da app: barra de estado (vidas, XP, sequência) + a amarelinha.
-class HomeShell extends StatelessWidget {
+/// Casca da app: barra de estado em cima, cinco separadores em baixo.
+class HomeShell extends StatefulWidget {
   const HomeShell({super.key});
+  @override
+  State<HomeShell> createState() => _HomeShellState();
+}
+
+class _HomeShellState extends State<HomeShell> {
+  int _aba = 0;
+
+  static const _abas = [
+    (icone: Icons.map_rounded, rotulo: 'Aprender'),
+    (icone: Icons.fitness_center_rounded, rotulo: 'Praticar'),
+    (icone: Icons.emoji_events_rounded, rotulo: 'Ranking'),
+    (icone: Icons.bookmark_rounded, rotulo: 'Guardados'),
+    (icone: Icons.person_rounded, rotulo: 'Perfil'),
+  ];
 
   @override
   Widget build(BuildContext context) {
     final st = context.watch<AppState>();
+
     return PopScope(
-      // O botão de voltar fechava a app de repente. Numa demonstração — ou
-      // na mão de uma criança — isso lê-se como a app ter ido abaixo.
+      // Estando fora do primeiro separador, voltar traz de volta a Aprender
+      // em vez de fechar a app. Só no primeiro é que perguntamos se quer sair.
       canPop: false,
       onPopInvokedWithResult: (jaSaiu, _) async {
         if (jaSaiu) return;
-        final sair = await _confirmarSaida(context);
-        if (sair) await SystemNavigator.pop();
+        if (_aba != 0) {
+          setState(() => _aba = 0);
+          return;
+        }
+        if (await _confirmarSaida(context)) await SystemNavigator.pop();
       },
       child: Scaffold(
         backgroundColor: S.gm950,
         body: SafeArea(
+          bottom: false,
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 12, 14, 2),
-                child: Row(
-                  children: [
-                    _pastilha(Icons.favorite_rounded, '${st.lives}', S.life),
-                    const SizedBox(width: 18),
-                    _pastilha(Icons.bolt_rounded, '${st.xp}', S.chart),
-                    const SizedBox(width: 18),
-                    _pastilha(Icons.local_fire_department_rounded,
-                        '${st.streak}', S.gold),
-                    const Spacer(),
-                    // Toca no avatar para mudar de classe. Antes só se podia
-                    // mudar reinstalando a app — um irmão mais novo não podia
-                    // sequer experimentar.
-                    _avatar(context, st),
+              _barraEstado(st),
+              Expanded(
+                // IndexedStack e não troca de widget: assim a amarelinha
+                // guarda a posição do scroll quando se vai a outro separador
+                // e se volta. Reconstruir levaria a criança de volta ao fundo
+                // do mapa de cada vez.
+                child: IndexedStack(
+                  index: _aba,
+                  children: const [
+                    MapScreen(),
+                    PraticarScreen(),
+                    RankingScreen(),
+                    GuardadosScreen(),
+                    PerfilScreen(),
                   ],
                 ),
               ),
-              const Expanded(child: MapScreen()),
             ],
           ),
         ),
+        bottomNavigationBar: _barraInferior(st),
       ),
     );
   }
 
-  Widget _avatar(BuildContext context, AppState st) => InkWell(
-        onTap: () => _abrirPerfil(context, st),
-        borderRadius: BorderRadius.circular(28),
-        child: Padding(
-          padding: const EdgeInsets.all(6),
-          child: Row(
-            children: [
-              CircleAvatar(
-                radius: 18,
-                backgroundColor: S.green500,
-                child: Text(
-                  st.nome.isEmpty ? '?' : st.nome.characters.first.toUpperCase(),
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16),
-                ),
-              ),
-              const Icon(Icons.expand_more_rounded, color: S.txSoft, size: 20),
-            ],
-          ),
+  Widget _barraEstado(AppState st) => Padding(
+        padding: const EdgeInsets.fromLTRB(20, 10, 20, 2),
+        child: Row(
+          children: [
+            _pastilha(Icons.favorite_rounded, '${st.lives}', S.life),
+            const SizedBox(width: 18),
+            _pastilha(Icons.bolt_rounded, '${st.xp}', S.chart),
+            const SizedBox(width: 18),
+            _pastilha(
+                Icons.local_fire_department_rounded, '${st.streak}', S.gold),
+            const Spacer(),
+            Text(st.classe,
+                style: const TextStyle(color: S.txMut, fontSize: 13)),
+          ],
         ),
       );
 
-  Future<void> _abrirPerfil(BuildContext context, AppState st) async {
-    final classes =
-        st.conteudo.cursos.map((c) => c.classe).toSet().toList()..sort();
-
-    await showModalBottomSheet<void>(
-      context: context,
-      backgroundColor: S.gm800,
-      isScrollControlled: true,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(26)),
+  Widget _barraInferior(AppState st) {
+    final porRever = st.paraRever.length;
+    return Container(
+      decoration: const BoxDecoration(
+        color: S.gm900,
+        border: Border(top: BorderSide(color: S.line, width: 1.5)),
       ),
-      builder: (ctx) => SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(22, 14, 22, 22),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+      child: SafeArea(
+        top: false,
+        child: SizedBox(
+          height: 62,
+          child: Row(
             children: [
-              Center(
-                child: Container(
-                  width: 44,
-                  height: 4,
-                  decoration: BoxDecoration(
-                    color: S.line,
-                    borderRadius: BorderRadius.circular(2),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 18),
-              Text(
-                st.nome.isEmpty ? 'Olá!' : 'Olá, ${st.nome}!',
-                style: const TextStyle(
-                    fontSize: 22, fontWeight: FontWeight.w700, color: S.tx),
-              ),
-              const SizedBox(height: 4),
-              Text('${st.xp} XP · ${st.streak} dias seguidos',
-                  style: const TextStyle(color: S.txSoft, fontSize: 14)),
-              const SizedBox(height: 22),
-              const Text('Em que classe estás?',
-                  style: TextStyle(
-                      fontSize: 15, fontWeight: FontWeight.w600, color: S.txSoft)),
-              const SizedBox(height: 10),
-              Flexible(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      for (final c in classes)
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 8),
-                          child: GestureDetector(
-                            onTap: () {
-                              st.mudarClasse(c);
-                              Navigator.pop(ctx);
-                            },
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 16, vertical: 15),
-                              decoration: BoxDecoration(
-                                color: c == st.classe ? S.surface2 : S.surface,
-                                border: Border.all(
-                                    color: c == st.classe ? S.chart : S.line,
-                                    width: 2),
-                                borderRadius: BorderRadius.circular(S.rMd),
-                              ),
-                              child: Row(
-                                children: [
-                                  Text(c,
-                                      style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w600,
-                                          color: S.tx)),
-                                  const Spacer(),
-                                  if (c == st.classe)
-                                    const Icon(Icons.check_rounded,
-                                        color: S.chart, size: 22),
-                                ],
-                              ),
-                            ),
+              for (var i = 0; i < _abas.length; i++)
+                Expanded(
+                  child: InkWell(
+                    onTap: () => setState(() => _aba = i),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        // O número de perguntas por rever fica à vista: sem
+                        // isto, o separador Guardados nunca chamaria ninguém.
+                        Badge(
+                          isLabelVisible: i == 3 && porRever > 0,
+                          label: Text('$porRever'),
+                          backgroundColor: S.life,
+                          child: Icon(
+                            _abas[i].icone,
+                            size: 23,
+                            color: i == _aba ? S.chart : S.txMut,
                           ),
                         ),
-                    ],
+                        const SizedBox(height: 3),
+                        Text(
+                          _abas[i].rotulo,
+                          style: TextStyle(
+                            fontSize: 10.5,
+                            fontWeight:
+                                i == _aba ? FontWeight.w700 : FontWeight.w500,
+                            color: i == _aba ? S.chart : S.txMut,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
             ],
           ),
         ),

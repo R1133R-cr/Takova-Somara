@@ -28,6 +28,66 @@ class AppState extends ChangeNotifier {
   /// chave "cursoId:unitId:nivelId" → percentagem de acertos
   final Map<String, int> progresso = {};
 
+  /// Perguntas que a criança errou, guardadas para rever.
+  ///
+  /// É o conjunto de treino com mais valor que existe: exercitar o que já se
+  /// sabe não ensina nada. Guarda-se o enunciado porque é o que identifica a
+  /// pergunta mesmo que ela mude de nível numa actualização de conteúdo.
+  final Set<String> erradas = {};
+
+  void marcarErrada(String enunciado) {
+    if (erradas.add(enunciado)) {
+      notifyListeners();
+      _gravar();
+    }
+  }
+
+  /// Chamado quando a criança acerta a pergunta numa revisão: sai da lista.
+  void marcarAprendida(String enunciado) {
+    if (erradas.remove(enunciado)) {
+      notifyListeners();
+      _gravar();
+    }
+  }
+
+  /// Todas as perguntas da classe actual, de todas as disciplinas.
+  List<Questao> get _todasDaClasse => conteudo.cursos
+      .where((c) => c.classe == classe)
+      .expand((c) => c.units)
+      .expand((u) => u.niveis)
+      .expand((n) => n.questoes)
+      .toList();
+
+  /// As perguntas erradas que ainda existem no currículo.
+  List<Questao> get paraRever =>
+      _todasDaClasse.where((q) => erradas.contains(q.q)).toList();
+
+  /// Perguntas dos níveis já concluídos, para treinar sem avançar no mapa.
+  /// Sem níveis concluídos não há nada para treinar — e é assim que deve ser:
+  /// treina-se o que já se aprendeu.
+  List<Questao> perguntasDeTreino({int quantas = 10}) {
+    final feitas = <Questao>[];
+    for (final curso in conteudo.cursos.where((c) => c.classe == classe)) {
+      for (final u in curso.units) {
+        for (final n in u.niveis) {
+          if (progresso.containsKey('${curso.id}:${u.id}:${n.id}')) {
+            feitas.addAll(n.questoes);
+          }
+        }
+      }
+    }
+    feitas.shuffle();
+    return feitas.take(quantas).toList();
+  }
+
+  int get niveisConcluidos => progresso.length;
+
+  int get niveisDaClasse => conteudo.cursos
+      .where((c) => c.classe == classe)
+      .expand((c) => c.units)
+      .expand((u) => u.niveis)
+      .length;
+
   /// Só as disciplinas da classe do aluno. Sem isto, um aluno da 1ª classe
   /// veria também os separadores da 2ª e podia entrar em exercícios que
   /// ainda não sabe fazer. Se a classe escolhida ainda não tiver conteúdo
@@ -96,6 +156,7 @@ class AppState extends ChangeNotifier {
         }
         final p = (j['progresso'] as Map?) ?? {};
         p.forEach((k, v) => progresso['$k'] = v as int);
+        erradas.addAll(((j['erradas'] as List?) ?? []).cast<String>());
       } catch (_) {
         // Estado corrompido: recomeça limpo em vez de rebentar o arranque.
       }
@@ -129,6 +190,7 @@ class AppState extends ChangeNotifier {
         'lives': lives,
         'cursoId': cursoId,
         'progresso': progresso,
+        'erradas': erradas.toList(),
       }),
     );
   }
