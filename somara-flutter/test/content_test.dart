@@ -14,10 +14,18 @@ void main() {
     c = await Conteudo.carregar();
   });
 
-  test('cada classe traz as disciplinas que lhe pertencem', () {
-    expect(c.cursos.length, 12);
+  test('cobre o ensino primário inteiro, da 1ª à 6ª classe', () {
+    expect(c.cursos.length, 16);
 
-    // Da 1ª à 3ª são duas disciplinas: Matemática e Português.
+    final classes = c.cursos.map((x) => x.classe).toSet();
+    expect(classes, {
+      '1ª classe', '2ª classe', '3ª classe',
+      '4ª classe', '5ª classe', '6ª classe',
+    });
+  });
+
+  test('cada classe traz as disciplinas que lhe pertencem', () {
+    // Da 1ª à 3ª são duas: Matemática e Português.
     for (final classe in ['1ª classe', '2ª classe', '3ª classe']) {
       final daClasse = c.cursos.where((x) => x.classe == classe);
       expect(daClasse.length, 2, reason: classe);
@@ -32,19 +40,21 @@ void main() {
         c.cursos.where((x) => x.classe == '4ª classe').map((x) => x.disciplina),
         containsAll(['Matemática', 'Ciências Naturais']));
 
-    // A 5ª é a primeira completa, e é ela que obriga a barra de disciplinas
-    // a deslizar.
-    final quinta =
-        c.cursos.where((x) => x.classe == '5ª classe').map((x) => x.disciplina);
-    expect(quinta.length, 4);
-    expect(
-        quinta,
-        containsAll([
-          'Matemática',
-          'Português',
-          'Ciências Naturais',
-          'Ciências Sociais',
-        ]));
+    // A 5ª e a 6ª estão completas.
+    for (final classe in ['5ª classe', '6ª classe']) {
+      final daClasse =
+          c.cursos.where((x) => x.classe == classe).map((x) => x.disciplina);
+      expect(daClasse.length, 4, reason: classe);
+      expect(
+          daClasse,
+          containsAll([
+            'Matemática',
+            'Português',
+            'Ciências Naturais',
+            'Ciências Sociais',
+          ]),
+          reason: classe);
+    }
   });
 
   test('Naturais e Sociais nunca se confundem uma com a outra', () {
@@ -59,13 +69,13 @@ void main() {
     }
   });
 
-  test('todas as 688 questões sobreviveram à migração', () {
+  test('todas as 851 questões sobreviveram à migração', () {
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 688);
+    expect(total, 851);
   });
 
   test('cada classe tem conteúdo suficiente para uma amarelinha', () {

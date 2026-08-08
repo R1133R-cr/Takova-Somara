@@ -8559,6 +8559,2148 @@
      ]
     }
    ]
+  },
+  {
+   "id": "mat-6c",
+   "disciplina": "Matemática",
+   "classe": "6ª classe",
+   "tag": "MAT",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Números e operações",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ordem das operações",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quanto é 2 + 3 × 4?",
+         "options": [
+          "20",
+          "14",
+          "24"
+         ],
+         "a": 1,
+         "audio": "fc8f93c58992.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa expressão, resolvemos primeiro:",
+         "options": [
+          "O que está entre parênteses",
+          "A soma",
+          "Da esquerda para a direita sempre"
+         ],
+         "a": 0,
+         "audio": "233ce664d2e2.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é (5 + 3) × 2?",
+         "a": "16",
+         "audio": "2aa1e9bdba81.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 20 − 6 : 3?",
+         "a": "18",
+         "audio": "df0bbb69353b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A ordem certa é:",
+         "options": [
+          "Parênteses, potências, multiplicação e divisão, adição e subtracção",
+          "Adição primeiro",
+          "Da direita para a esquerda"
+         ],
+         "a": 0,
+         "audio": "0405ed4b637c.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Números inteiros",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual é maior: −5 ou −2?",
+         "options": [
+          "−5",
+          "−2",
+          "São iguais"
+         ],
+         "a": 1,
+         "audio": "72d2909c64f7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma temperatura de 3 graus negativos escreve-se:",
+         "options": [
+          "−3",
+          "3",
+          "+3"
+         ],
+         "a": 0,
+         "audio": "d5d7437a8acf.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é −4 + 10?",
+         "a": "6",
+         "audio": "dc6fc9d2d090.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O número zero é:",
+         "options": [
+          "Positivo",
+          "Negativo",
+          "Nem positivo nem negativo"
+         ],
+         "a": 2,
+         "audio": "b50bb5c1d7b6.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Divisibilidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "M.D.C. e M.M.C.",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual é o maior divisor comum de 12 e 18?",
+         "options": [
+          "2",
+          "6",
+          "9"
+         ],
+         "a": 1,
+         "audio": "785324876a25.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o menor múltiplo comum de 4 e 6?",
+         "options": [
+          "12",
+          "24",
+          "10"
+         ],
+         "a": 0,
+         "audio": "febccf7a20e6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um número é divisível por 9 quando:",
+         "options": [
+          "A soma dos algarismos é divisível por 9",
+          "Termina em 9",
+          "É par"
+         ],
+         "a": 0,
+         "audio": "ae42ea23e990.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o M.D.C. de 8 e 12?",
+         "a": "4",
+         "audio": "89582416ad4f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A decomposição de 30 em factores primos é:",
+         "options": [
+          "2 × 3 × 5",
+          "5 × 6",
+          "2 × 15"
+         ],
+         "a": 0,
+         "audio": "5bb682ae0ce9.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Potenciação",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Operar com potências",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 3⁴?",
+         "a": "81",
+         "audio": "715e42469c48.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 2² × 2³?",
+         "options": [
+          "2⁵ = 32",
+          "2⁶ = 64",
+          "4⁵"
+         ],
+         "a": 0,
+         "audio": "f1489a5e1ac2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qualquer número (diferente de zero) elevado a 0 dá:",
+         "options": [
+          "0",
+          "1",
+          "O próprio número"
+         ],
+         "a": 1,
+         "audio": "2904bb9946d9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 10⁴?",
+         "a": "10000",
+         "audio": "bc2f292edc5a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A raiz quadrada de 49 é:",
+         "options": [
+          "7",
+          "24,5",
+          "9"
+         ],
+         "a": 0,
+         "audio": "77846b18134f.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Fracções e decimais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Operar com fracções",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quanto é 1/2 + 1/3?",
+         "options": [
+          "2/5",
+          "5/6",
+          "1/6"
+         ],
+         "a": 1,
+         "audio": "85f493d42fb6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 2/3 × 3/4?",
+         "options": [
+          "1/2",
+          "6/7",
+          "5/12"
+         ],
+         "a": 0,
+         "audio": "bdade66dafd1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para somar fracções com denominadores diferentes, primeiro:",
+         "options": [
+          "Reduzimos ao mesmo denominador",
+          "Somamos tudo",
+          "Multiplicamos"
+         ],
+         "a": 0,
+         "audio": "03e744e6a39f.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve 3/4 em número decimal.",
+         "a": "0,75",
+         "audio": "2e062e74bb68.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Multiplicar e dividir decimais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quanto é 2,5 × 4?",
+         "options": [
+          "10",
+          "8,5",
+          "6,5"
+         ],
+         "a": 0,
+         "audio": "c8139561dc78.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 7,5 : 2,5?",
+         "options": [
+          "3",
+          "5",
+          "2,5"
+         ],
+         "a": 0,
+         "audio": "0f41a624dd4a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao multiplicar por 0,1, o número fica:",
+         "options": [
+          "Dez vezes menor",
+          "Dez vezes maior",
+          "Igual"
+         ],
+         "a": 0,
+         "audio": "4d59365e8453.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 0,5 × 8?",
+         "a": "4",
+         "audio": "15df4f2a9eba.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Percentagens",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Percentagem no dia-a-dia",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 20% de 350?",
+         "a": "70",
+         "audio": "ec87909e5fd7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um artigo de 500 MT com 10% de desconto passa a custar:",
+         "options": [
+          "450 MT",
+          "490 MT",
+          "400 MT"
+         ],
+         "a": 0,
+         "audio": "590c19ffbffe.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa turma de 50 alunos, 30 passaram. Que percentagem passou?",
+         "options": [
+          "30%",
+          "60%",
+          "50%"
+         ],
+         "a": 1,
+         "audio": "92907786ff97.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um gráfico circular representa:",
+         "options": [
+          "Partes de um todo",
+          "Só números grandes",
+          "O tempo"
+         ],
+         "a": 0,
+         "audio": "6f8cc499360e.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 50% de 90?",
+         "a": "45",
+         "audio": "3887c34a3beb.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Espaço e forma",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Áreas e volumes",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A área do triângulo calcula-se por:",
+         "options": [
+          "(base × altura) : 2",
+          "base × altura",
+          "base + altura"
+         ],
+         "a": 0,
+         "audio": "2c9efb88aca6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um triângulo tem base 10 cm e altura 6 cm. Qual é a área, em cm quadrados?",
+         "a": "30",
+         "audio": "12921c129e4a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O volume de um cubo de aresta 3 cm é:",
+         "options": [
+          "9 cm³",
+          "27 cm³",
+          "18 cm³"
+         ],
+         "a": 1,
+         "audio": "69e29b41b4da.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quantas faces tem um cubo?",
+         "options": [
+          "4",
+          "6",
+          "8"
+         ],
+         "a": 1,
+         "audio": "74e3ea15c350.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Grandezas e medidas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Converter e calcular",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quantos centímetros tem 2,5 metros?",
+         "a": "250",
+         "audio": "36e04c8317f0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "1 tonelada são quantos quilogramas?",
+         "options": [
+          "100",
+          "1 000",
+          "10 000"
+         ],
+         "a": 1,
+         "audio": "7e72729c5fb2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um carro percorre 120 km em 2 horas. Qual é a velocidade média?",
+         "options": [
+          "60 km/h",
+          "120 km/h",
+          "240 km/h"
+         ],
+         "a": 0,
+         "audio": "fcca437e37e9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos minutos tem 3 horas?",
+         "a": "180",
+         "audio": "ab5606828467.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Equações",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Resolver equações",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Qual é o valor de x? 3x = 27",
+         "a": "9",
+         "audio": "e62c3a9aa9e6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o valor de x? 2x + 5 = 19",
+         "a": "7",
+         "audio": "53a287b88e87.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o valor de x? x/3 = 8",
+         "a": "24",
+         "audio": "d27dd53ba310.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para resolver 5x = 40 fazemos:",
+         "options": [
+          "40 : 5",
+          "40 × 5",
+          "40 − 5"
+         ],
+         "a": 0,
+         "audio": "6bf2d120fa77.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa balança em equilíbrio, o que se faz a um lado:",
+         "options": [
+          "Faz-se ao outro",
+          "Não importa",
+          "Só ao lado esquerdo"
+         ],
+         "a": 0,
+         "audio": "f296b18b5ac6.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "por-6c",
+   "disciplina": "Português",
+   "classe": "6ª classe",
+   "tag": "POR",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "A frase",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Sujeito e predicado",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na frase \"Os alunos da 6ª classe estudam muito\", o sujeito é:",
+         "options": [
+          "Os alunos da 6ª classe",
+          "estudam muito",
+          "muito"
+         ],
+         "a": 0,
+         "audio": "89ee56208270.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma frase sem sujeito expresso chama-se de sujeito:",
+         "options": [
+          "Subentendido",
+          "Composto",
+          "Duplo"
+         ],
+         "a": 0,
+         "audio": "8563a1bf4a1d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em \"A Ana e o Paulo chegaram\", o sujeito é:",
+         "options": [
+          "Simples",
+          "Composto",
+          "Nulo"
+         ],
+         "a": 1,
+         "audio": "ce009c622062.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O núcleo do predicado é sempre:",
+         "options": [
+          "Um verbo",
+          "Um nome",
+          "Um adjectivo"
+         ],
+         "a": 0,
+         "audio": "b0d8582cc884.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Complementos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Em \"A Maria comprou um livro\", \"um livro\" é:",
+         "options": [
+          "Complemento directo",
+          "Sujeito",
+          "Advérbio"
+         ],
+         "a": 0,
+         "audio": "9d87d1e6b500.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um verbo transitivo é aquele que:",
+         "options": [
+          "Precisa de complemento",
+          "Não precisa de nada",
+          "É sempre irregular"
+         ],
+         "a": 0,
+         "audio": "47b51afa508e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em \"Ele deu um presente à irmã\", \"à irmã\" é:",
+         "options": [
+          "Complemento indirecto",
+          "Complemento directo",
+          "Sujeito"
+         ],
+         "a": 0,
+         "audio": "a04a192d119a.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada função ao seu exemplo.",
+         "pairs": [
+          [
+           "Sujeito",
+           "O menino"
+          ],
+          [
+           "Complemento directo",
+           "o livro"
+          ]
+         ],
+         "audio": "a36ded65ef0c.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Verbos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Tempos e modos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "\"Se eu estudasse\" está no modo:",
+         "options": [
+          "Indicativo",
+          "Conjuntivo",
+          "Imperativo"
+         ],
+         "a": 1,
+         "audio": "ffacbd0f89a5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Estuda!\" está no modo:",
+         "options": [
+          "Imperativo",
+          "Indicativo",
+          "Conjuntivo"
+         ],
+         "a": 0,
+         "audio": "df4c1be64710.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Eu tinha estudado\" é o pretérito:",
+         "options": [
+          "Perfeito",
+          "Imperfeito",
+          "Mais-que-perfeito"
+         ],
+         "a": 2,
+         "audio": "c59a2a1ab7e4.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o verbo \"fazer\" na 1ª pessoa do singular do presente.",
+         "a": "faço",
+         "audio": "b874aff91ac6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O modo indicativo exprime:",
+         "options": [
+          "Factos certos",
+          "Dúvida",
+          "Ordem"
+         ],
+         "a": 0,
+         "audio": "b2c8c1df49ae.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Voz activa e passiva",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "\"O caçador viu o leão\" está na voz:",
+         "options": [
+          "Activa",
+          "Passiva"
+         ],
+         "a": 0,
+         "audio": "c8e1c9449b3f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"O leão foi visto pelo caçador\" está na voz:",
+         "options": [
+          "Activa",
+          "Passiva"
+         ],
+         "a": 1,
+         "audio": "649ee9a882c8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na voz passiva, o sujeito:",
+         "options": [
+          "Sofre a acção",
+          "Pratica a acção",
+          "Desaparece"
+         ],
+         "a": 0,
+         "audio": "f8824a921231.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Passa à voz passiva: \"A Ana leu o livro.\"",
+         "options": [
+          "O livro foi lido pela Ana",
+          "A Ana lia o livro",
+          "O livro lê a Ana"
+         ],
+         "a": 0,
+         "audio": "db69ec91b92d.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Discurso",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Directo e indirecto",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O discurso directo reproduz as palavras:",
+         "options": [
+          "Tal como foram ditas",
+          "Resumidas",
+          "Traduzidas"
+         ],
+         "a": 0,
+         "audio": "2f52fe7d5016.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No discurso directo usamos:",
+         "options": [
+          "Travessão ou aspas",
+          "Só vírgulas",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "0747b5e06c17.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Passa a discurso indirecto: — Estou cansado — disse o Pedro.",
+         "options": [
+          "O Pedro disse que estava cansado",
+          "O Pedro está cansado",
+          "Disse: estou cansado"
+         ],
+         "a": 0,
+         "audio": "043c864a0ead.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No discurso indirecto, os verbos mudam de:",
+         "options": [
+          "Tempo",
+          "Género",
+          "Número apenas"
+         ],
+         "a": 0,
+         "audio": "d2d63332cf8f.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Classes de palavras",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Determinantes e pronomes",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Em \"O meu livro\", \"meu\" é:",
+         "options": [
+          "Determinante possessivo",
+          "Pronome pessoal",
+          "Advérbio"
+         ],
+         "a": 0,
+         "audio": "d6fd16adbfdb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A diferença entre determinante e pronome é que o determinante:",
+         "options": [
+          "Acompanha o nome",
+          "Substitui o nome",
+          "É sempre verbo"
+         ],
+         "a": 0,
+         "audio": "c543d434c3fa.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma preposição?",
+         "options": [
+          "de",
+          "correr",
+          "bonito"
+         ],
+         "a": 0,
+         "audio": "0fa5db026032.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma conjunção?",
+         "options": [
+          "mas",
+          "casa",
+          "depressa"
+         ],
+         "a": 0,
+         "audio": "3bc0e06ad1db.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Graus e advérbios",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "\"O mais alto de todos\" é o grau:",
+         "options": [
+          "Superlativo relativo",
+          "Comparativo",
+          "Normal"
+         ],
+         "a": 0,
+         "audio": "ad88a5bb71d5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Talvez\" é um advérbio de:",
+         "options": [
+          "Dúvida",
+          "Lugar",
+          "Tempo"
+         ],
+         "a": 0,
+         "audio": "c43a379ad3dd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada advérbio ao seu tipo.",
+         "pairs": [
+          [
+           "sempre",
+           "Tempo"
+          ],
+          [
+           "ali",
+           "Lugar"
+          ],
+          [
+           "talvez",
+           "Dúvida"
+          ]
+         ],
+         "audio": "551e83b3ec27.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Não\" é um advérbio de:",
+         "options": [
+          "Negação",
+          "Afirmação",
+          "Modo"
+         ],
+         "a": 0,
+         "audio": "c72968d9a383.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Escrita e ortografia",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Escrever sem erros",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual está bem escrito?",
+         "options": [
+          "excepção",
+          "excessão",
+          "esceção"
+         ],
+         "a": 0,
+         "audio": "f24f064ded7c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual está bem escrito?",
+         "options": [
+          "houve",
+          "ouve (do verbo haver)",
+          "ove"
+         ],
+         "a": 0,
+         "audio": "f24f064ded7c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "\"Há\" com H usa-se quando é:",
+         "options": [
+          "Do verbo haver",
+          "Uma distância",
+          "Uma direcção"
+         ],
+         "a": 0,
+         "audio": "303859caab54.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Completa: Ele ___ muito bem. (verbo escrever, presente)",
+         "a": "escreve",
+         "audio": "962204721ec4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual está bem escrito?",
+         "options": [
+          "porquê (no fim da frase)",
+          "por que (no fim da frase)",
+          "porque?"
+         ],
+         "a": 0,
+         "audio": "f24f064ded7c.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Organizar o texto",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um texto bem escrito organiza-se em:",
+         "options": [
+          "Introdução, desenvolvimento e conclusão",
+          "Só um parágrafo",
+          "Frases soltas"
+         ],
+         "a": 0,
+         "audio": "7682ee697f24.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um resumo deve:",
+         "options": [
+          "Manter as ideias principais e ser mais curto",
+          "Ser maior que o original",
+          "Mudar a história"
+         ],
+         "a": 0,
+         "audio": "664000c9fef6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa carta formal usamos:",
+         "options": [
+          "Tratamento respeitoso",
+          "Gíria",
+          "Abreviaturas de mensagem"
+         ],
+         "a": 0,
+         "audio": "0733dbee223f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Palavras como \"porém\" e \"contudo\" servem para:",
+         "options": [
+          "Ligar ideias que se opõem",
+          "Terminar o texto",
+          "Contar"
+         ],
+         "a": 0,
+         "audio": "9a71370eae69.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Ler e interpretar",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Compreensão de texto",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A ideia principal de um texto encontra-se normalmente:",
+         "options": [
+          "No início ou no fim",
+          "Escondida",
+          "No título apenas"
+         ],
+         "a": 0,
+         "audio": "6181b7fd6336.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma personagem principal é:",
+         "options": [
+          "Aquela à volta de quem gira a história",
+          "A que aparece uma vez",
+          "O narrador sempre"
+         ],
+         "a": 0,
+         "audio": "bb2d7526bc85.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num poema, a rima acontece:",
+         "options": [
+          "Quando os fins dos versos soam igual",
+          "No título",
+          "Nas vírgulas"
+         ],
+         "a": 0,
+         "audio": "dc1634c08082.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma notícia responde sobretudo a:",
+         "options": [
+          "Quem, o quê, quando, onde e porquê",
+          "Só a quem",
+          "Só ao quando"
+         ],
+         "a": 0,
+         "audio": "3c94cd333292.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Interpretar um texto é:",
+         "options": [
+          "Perceber o que quer dizer",
+          "Copiá-lo",
+          "Decorá-lo"
+         ],
+         "a": 0,
+         "audio": "7ea09acf8e70.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cn-6c",
+   "disciplina": "Ciências Naturais",
+   "abrev": "C. Naturais",
+   "classe": "6ª classe",
+   "tag": "CN",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Seres vivos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Plantas e reprodução",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A parte da flor que produz o pólen é:",
+         "options": [
+          "O estame",
+          "A raiz",
+          "O caule"
+         ],
+         "a": 0,
+         "audio": "f450a379e5cb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A polinização é feita sobretudo por:",
+         "options": [
+          "Insectos e vento",
+          "Peixes",
+          "Pedras"
+         ],
+         "a": 0,
+         "audio": "d633dd1411dc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Depois da fecundação, a flor dá origem ao:",
+         "options": [
+          "Fruto",
+          "Caule",
+          "Ramo"
+         ],
+         "a": 0,
+         "audio": "0ea0d291f9b2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A germinação é:",
+         "options": [
+          "O nascimento da nova planta a partir da semente",
+          "A queda das folhas",
+          "A morte da planta"
+         ],
+         "a": 0,
+         "audio": "ed00e28c7e21.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Animais e ecossistemas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Numa cadeia alimentar, as plantas são:",
+         "options": [
+          "Produtores",
+          "Consumidores",
+          "Decompositores"
+         ],
+         "a": 0,
+         "audio": "87ce2dbe44a2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O leão que come a zebra é um consumidor:",
+         "options": [
+          "Primário",
+          "Secundário",
+          "Produtor"
+         ],
+         "a": 1,
+         "audio": "e32719a62e24.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os fungos e as bactérias que decompõem restos são:",
+         "options": [
+          "Decompositores",
+          "Produtores",
+          "Predadores"
+         ],
+         "a": 0,
+         "audio": "3f03dee1c262.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se desaparecerem as plantas de um ecossistema:",
+         "options": [
+          "Toda a cadeia alimentar é afectada",
+          "Nada muda",
+          "Só os peixes sofrem"
+         ],
+         "a": 0,
+         "audio": "2b127127bceb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Reserva do Niassa e o Parque da Gorongosa servem para:",
+         "options": [
+          "Proteger a fauna e a flora",
+          "Caçar livremente",
+          "Construir fábricas"
+         ],
+         "a": 0,
+         "audio": "56e1d68da230.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Corpo humano e saúde",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Sistemas do corpo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O sangue é bombeado pelo:",
+         "options": [
+          "Coração",
+          "Fígado",
+          "Estômago"
+         ],
+         "a": 0,
+         "audio": "734e3b51a069.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A troca de oxigénio acontece nos:",
+         "options": [
+          "Alvéolos pulmonares",
+          "Rins",
+          "Ossos"
+         ],
+         "a": 0,
+         "audio": "a0572a2a8809.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os rins servem para:",
+         "options": [
+          "Filtrar o sangue e produzir urina",
+          "Digerir os alimentos",
+          "Bombear sangue"
+         ],
+         "a": 0,
+         "audio": "628fea66c9ad.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada órgão à sua função.",
+         "pairs": [
+          [
+           "Coração",
+           "Bombear sangue"
+          ],
+          [
+           "Pulmões",
+           "Trocar gases"
+          ],
+          [
+           "Rins",
+           "Filtrar o sangue"
+          ]
+         ],
+         "audio": "7ae1bb90b8d1.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Saúde e prevenção",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A malária é causada por:",
+         "options": [
+          "Um parasita transmitido pelo mosquito",
+          "Uma bactéria da água",
+          "Um vírus do ar"
+         ],
+         "a": 0,
+         "audio": "363d1cdaf3fd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A tuberculose afecta sobretudo:",
+         "options": [
+          "Os pulmões",
+          "Os ossos",
+          "A pele"
+         ],
+         "a": 0,
+         "audio": "26e76f40d440.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O HIV transmite-se por:",
+         "options": [
+          "Sangue e relações sexuais desprotegidas",
+          "Aperto de mão",
+          "Partilhar comida"
+         ],
+         "a": 0,
+         "audio": "f7bf1d242a6f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A vacinação serve para:",
+         "options": [
+          "Proteger contra doenças",
+          "Curar todas as doenças",
+          "Dar energia"
+         ],
+         "a": 0,
+         "audio": "e599b66054fc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma alimentação equilibrada ajuda a:",
+         "options": [
+          "Prevenir doenças",
+          "Engordar sempre",
+          "Dormir mais"
+         ],
+         "a": 0,
+         "audio": "c038371357a2.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Água, solo e recursos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ambiente e recursos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O ciclo da água inclui:",
+         "options": [
+          "Evaporação, condensação e precipitação",
+          "Só a chuva",
+          "Só os rios"
+         ],
+         "a": 0,
+         "audio": "c9f7628c38f5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A poluição da água é causada por:",
+         "options": [
+          "Lixo e produtos químicos",
+          "Chuva",
+          "Vento"
+         ],
+         "a": 0,
+         "audio": "15fd5a3d5567.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um recurso não renovável é:",
+         "options": [
+          "O petróleo",
+          "O vento",
+          "A luz solar"
+         ],
+         "a": 0,
+         "audio": "060fa6e6767b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O desmatamento provoca:",
+         "options": [
+          "Erosão e perda de solo",
+          "Mais chuva",
+          "Melhor ar"
+         ],
+         "a": 0,
+         "audio": "99569e6d4047.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Luz, som e máquinas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Luz e som",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A reflexão da luz acontece quando ela:",
+         "options": [
+          "Bate numa superfície e volta",
+          "Atravessa o vidro",
+          "Desaparece"
+         ],
+         "a": 0,
+         "audio": "df39548809cf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O eco é a reflexão:",
+         "options": [
+          "Do som",
+          "Da luz",
+          "Do calor"
+         ],
+         "a": 0,
+         "audio": "e4512ab79b39.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A luz branca do Sol é formada por:",
+         "options": [
+          "Várias cores",
+          "Uma só cor",
+          "Nenhuma cor"
+         ],
+         "a": 0,
+         "audio": "7f849b7ed464.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um espelho serve para:",
+         "options": [
+          "Reflectir a luz",
+          "Absorver a luz",
+          "Produzir luz"
+         ],
+         "a": 0,
+         "audio": "051ada506c69.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Máquinas simples",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma máquina simples serve para:",
+         "options": [
+          "Facilitar o trabalho",
+          "Produzir electricidade",
+          "Fazer barulho"
+         ],
+         "a": 0,
+         "audio": "dea7844c4f7f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A tesoura é um exemplo de:",
+         "options": [
+          "Alavanca",
+          "Roldana",
+          "Plano inclinado"
+         ],
+         "a": 0,
+         "audio": "e8e9e654217b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma rampa para subir uma carga é:",
+         "options": [
+          "Um plano inclinado",
+          "Uma alavanca",
+          "Uma roldana"
+         ],
+         "a": 0,
+         "audio": "03376b6c0e8f.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada máquina ao seu exemplo.",
+         "pairs": [
+          [
+           "Alavanca",
+           "Tesoura"
+          ],
+          [
+           "Roldana",
+           "Poço de água"
+          ],
+          [
+           "Plano inclinado",
+           "Rampa"
+          ]
+         ],
+         "audio": "acd29735a5dc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A roldana ajuda sobretudo a:",
+         "options": [
+          "Levantar cargas",
+          "Cortar",
+          "Aquecer"
+         ],
+         "a": 0,
+         "audio": "a811d3ac8b49.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Electricidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Circuitos e segurança",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para uma lâmpada acender, o circuito tem de estar:",
+         "options": [
+          "Fechado",
+          "Aberto",
+          "Molhado"
+         ],
+         "a": 0,
+         "audio": "4366b65c4942.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes materiais conduz electricidade?",
+         "options": [
+          "Cobre",
+          "Plástico",
+          "Madeira seca"
+         ],
+         "a": 0,
+         "audio": "99dd29675aee.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O plástico à volta dos fios serve para:",
+         "options": [
+          "Isolar e proteger",
+          "Conduzir melhor",
+          "Enfeitar"
+         ],
+         "a": 0,
+         "audio": "713f904338bf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nunca se deve mexer em tomadas:",
+         "options": [
+          "Com as mãos molhadas",
+          "Com luvas",
+          "Durante o dia"
+         ],
+         "a": 0,
+         "audio": "8f273ff9d403.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cs-6c",
+   "disciplina": "Ciências Sociais",
+   "abrev": "C. Sociais",
+   "classe": "6ª classe",
+   "tag": "CS",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Coordenadas geográficas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Localizar na Terra",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As linhas imaginárias horizontais chamam-se:",
+         "options": [
+          "Paralelos",
+          "Meridianos",
+          "Fronteiras"
+         ],
+         "a": 0,
+         "audio": "6545d617241d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As linhas imaginárias verticais chamam-se:",
+         "options": [
+          "Paralelos",
+          "Meridianos",
+          "Trópicos"
+         ],
+         "a": 1,
+         "audio": "603e65671132.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O paralelo que divide a Terra em dois hemisférios é:",
+         "options": [
+          "O Equador",
+          "O Meridiano de Greenwich",
+          "O Trópico de Câncer"
+         ],
+         "a": 0,
+         "audio": "27359749b150.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Moçambique fica no hemisfério:",
+         "options": [
+          "Sul",
+          "Norte",
+          "Nos dois"
+         ],
+         "a": 0,
+         "audio": "5cb693238950.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada linha à sua direcção.",
+         "pairs": [
+          [
+           "Paralelos",
+           "Horizontais"
+          ],
+          [
+           "Meridianos",
+           "Verticais"
+          ]
+         ],
+         "audio": "4055bfa5460c.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "O continente africano",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Geografia de África",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O maior deserto de África é:",
+         "options": [
+          "Saara",
+          "Kalahari",
+          "Namibe"
+         ],
+         "a": 0,
+         "audio": "813f2c8b0b2c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O rio Nilo situa-se sobretudo:",
+         "options": [
+          "No Nordeste de África",
+          "No Sul",
+          "No Oeste"
+         ],
+         "a": 0,
+         "audio": "74faf64c9419.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O deserto do Kalahari fica:",
+         "options": [
+          "Na África Austral",
+          "No Norte",
+          "Na Europa"
+         ],
+         "a": 0,
+         "audio": "5e6797934792.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "África é banhada pelos oceanos:",
+         "options": [
+          "Atlântico e Índico",
+          "Pacífico e Ártico",
+          "Só o Índico"
+         ],
+         "a": 0,
+         "audio": "07e6bf9fc58b.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Regiões e organizações",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Moçambique pertence à região da África:",
+         "options": [
+          "Austral",
+          "Ocidental",
+          "Setentrional"
+         ],
+         "a": 0,
+         "audio": "ab79cd17911d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O que significa SADC?",
+         "options": [
+          "Comunidade de Desenvolvimento da África Austral",
+          "Sociedade Africana de Comércio",
+          "Sindicato Africano"
+         ],
+         "a": 0,
+         "audio": "d60673d45149.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em que ano foi criada a SADC?",
+         "options": [
+          "1980",
+          "1992",
+          "2000"
+         ],
+         "a": 1,
+         "audio": "0b7682f44e7e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O que significa UA?",
+         "options": [
+          "União Africana",
+          "Unidade Angolana",
+          "União Austral"
+         ],
+         "a": 0,
+         "audio": "9ca93f753e91.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A CPLP junta países que têm em comum:",
+         "options": [
+          "A língua portuguesa",
+          "A mesma moeda",
+          "O mesmo clima"
+         ],
+         "a": 0,
+         "audio": "16fc3f90b140.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Colonização de África",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A ocupação europeia",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Conferência de Berlim (1884-85) serviu para:",
+         "options": [
+          "Os europeus repartirem África entre si",
+          "Dar independência a África",
+          "Criar a ONU"
+         ],
+         "a": 0,
+         "audio": "ffabdc9e754c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O tráfico de escravos levou africanos sobretudo para:",
+         "options": [
+          "As Américas",
+          "A Ásia",
+          "A Austrália"
+         ],
+         "a": 0,
+         "audio": "40bd4c7fd4c6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No sistema colonial, os africanos eram obrigados a:",
+         "options": [
+          "Trabalho forçado e pagar imposto de palhota",
+          "Estudar na universidade",
+          "Governar o território"
+         ],
+         "a": 0,
+         "audio": "946a956f4aca.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As fronteiras actuais de muitos países africanos foram traçadas:",
+         "options": [
+          "Pelos colonizadores europeus",
+          "Pelos próprios povos",
+          "Pela ONU"
+         ],
+         "a": 0,
+         "audio": "ab510b14ecf3.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Moçambique independente",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Da independência aos nossos dias",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Moçambique tornou-se independente em:",
+         "options": [
+          "25 de Junho de 1975",
+          "25 de Setembro de 1964",
+          "4 de Outubro de 1992"
+         ],
+         "a": 0,
+         "audio": "6dadeeedb212.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Acordo Geral de Paz foi assinado em:",
+         "options": [
+          "1992",
+          "1975",
+          "1964"
+         ],
+         "a": 0,
+         "audio": "8a07b7c219e4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O primeiro Presidente de Moçambique independente foi:",
+         "options": [
+          "Samora Machel",
+          "Eduardo Mondlane",
+          "Joaquim Chissano"
+         ],
+         "a": 0,
+         "audio": "2ea2a333749f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Constituição é:",
+         "options": [
+          "A lei mais importante do país",
+          "Um livro de história",
+          "Um mapa"
+         ],
+         "a": 0,
+         "audio": "5f46279fbfe1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num país democrático, os governantes são escolhidos:",
+         "options": [
+          "Por eleições",
+          "Por herança",
+          "Por sorteio"
+         ],
+         "a": 0,
+         "audio": "90566e847573.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Cidadania",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Votar é um direito de:",
+         "options": [
+          "Todos os cidadãos maiores de idade",
+          "Só dos ricos",
+          "Só dos homens"
+         ],
+         "a": 0,
+         "audio": "30eb150994a1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A diversidade cultural de Moçambique é:",
+         "options": [
+          "Um património a preservar",
+          "Um obstáculo",
+          "Uma falha"
+         ],
+         "a": 0,
+         "audio": "3f9f54621629.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Proteger o ambiente é um dever de:",
+         "options": [
+          "Todos",
+          "Só do governo",
+          "Só dos cientistas"
+         ],
+         "a": 0,
+         "audio": "dad3c991da85.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A educação é, na Constituição, um:",
+         "options": [
+          "Direito de todos",
+          "Privilégio",
+          "Favor"
+         ],
+         "a": 0,
+         "audio": "722c4ca6ed98.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "População e economia",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Onde vivem as pessoas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A maior parte da população moçambicana vive:",
+         "options": [
+          "No meio rural",
+          "Em arranha-céus",
+          "No deserto"
+         ],
+         "a": 0,
+         "audio": "1c73604f2deb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O aumento da população nas cidades chama-se:",
+         "options": [
+          "Êxodo rural",
+          "Emigração",
+          "Imigração"
+         ],
+         "a": 0,
+         "audio": "67792a3168d9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A língua oficial de Moçambique é:",
+         "options": [
+          "O português",
+          "O inglês",
+          "O suaíli"
+         ],
+         "a": 0,
+         "audio": "06cd1ec69f9e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Além do português, em Moçambique falam-se:",
+         "options": [
+          "Muitas línguas bantu",
+          "Só uma língua",
+          "Nenhuma outra"
+         ],
+         "a": 0,
+         "audio": "615f44ab28fa.mp3"
+        }
+       ]
+      },
+      {
+       "id": "n2",
+       "titulo": "Actividades económicas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A principal actividade económica do meio rural moçambicano é:",
+         "options": [
+          "A agricultura",
+          "A informática",
+          "O turismo espacial"
+         ],
+         "a": 0,
+         "audio": "0d7ca8f2f2fe.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A pesca é importante sobretudo:",
+         "options": [
+          "Na zona costeira",
+          "No interior seco",
+          "Nas montanhas"
+         ],
+         "a": 0,
+         "audio": "f60ce979200d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Moçambique exporta recursos como:",
+         "options": [
+          "Carvão, gás e alumínio",
+          "Automóveis",
+          "Aviões"
+         ],
+         "a": 0,
+         "audio": "6c5485f98fa2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O porto da Beira e o de Maputo servem para:",
+         "options": [
+          "Comércio e transporte de mercadorias",
+          "Turismo apenas",
+          "Pesca desportiva"
+         ],
+         "a": 0,
+         "audio": "409303ef00b5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cahora Bassa produz:",
+         "options": [
+          "Energia eléctrica",
+          "Carvão",
+          "Cimento"
+         ],
+         "a": 0,
+         "audio": "2a4f85a9d0c9.mp3"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Preparar o exame",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Datas que não se esquecem",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada data ao seu acontecimento.",
+         "pairs": [
+          [
+           "25 de Setembro de 1964",
+           "Início da Luta Armada"
+          ],
+          [
+           "25 de Junho de 1975",
+           "Independência"
+          ],
+          [
+           "4 de Outubro de 1992",
+           "Acordo Geral de Paz"
+          ]
+         ],
+         "audio": "c904fd32f33f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Conferência de Berlim realizou-se em:",
+         "options": [
+          "1884-85",
+          "1975",
+          "1992"
+         ],
+         "a": 0,
+         "audio": "c51f45e04b39.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em que ano foi criada a SADC?",
+         "a": "1992",
+         "audio": "0b7682f44e7e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Eduardo Mondlane foi:",
+         "options": [
+          "O primeiro presidente da FRELIMO",
+          "O primeiro Presidente do país",
+          "Um explorador europeu"
+         ],
+         "a": 0,
+         "audio": "304ea703ef87.mp3"
+        }
+       ]
+      }
+     ]
+    }
+   ]
   }
  ]
 }
