@@ -200,7 +200,14 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
   @override
   Widget build(BuildContext context) {
     final st = context.watch<AppState>();
-    return Scaffold(
+    return PopScope(
+      // Sem isto, o botão de voltar fecha a app a meio da lição em vez de
+      // fazer o que o ✕ faz. Perder a lição já é mau; perder a app é pior.
+      canPop: false,
+      onPopInvokedWithResult: (jaSaiu, _) {
+        if (!jaSaiu) _confirmarSaida();
+      },
+      child: Scaffold(
       backgroundColor: S.gm950,
       body: SafeArea(
         child: Column(
@@ -239,6 +246,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
             _doca(),
           ],
         ),
+      ),
       ),
     );
   }

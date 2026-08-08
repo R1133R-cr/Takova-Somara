@@ -133,6 +133,20 @@ class AppState extends ChangeNotifier {
     );
   }
 
+  /// Muda a classe do aluno já com a app a correr.
+  ///
+  /// Antes só se podia mudar reinstalando: um irmão mais novo não conseguia
+  /// sequer experimentar. O progresso de cada classe fica guardado à parte,
+  /// porque a chave inclui o curso — voltar atrás não apaga nada.
+  void mudarClasse(String novaClasse) {
+    if (novaClasse == classe) return;
+    classe = novaClasse;
+    final daClasse = conteudo.cursos.where((c) => c.classe == classe);
+    if (daClasse.isNotEmpty) cursoId = daClasse.first.id;
+    notifyListeners();
+    _gravar();
+  }
+
   void trocarCurso(String id) {
     cursoId = id;
     notifyListeners();
