@@ -10,8 +10,27 @@ import '../widgets/roby.dart';
 import 'complete_screen.dart';
 
 class LessonScreen extends StatefulWidget {
+  /// Índice do nível na amarelinha. Vale -1 numa sessão avulsa (treino ou
+  /// revisão), em que não há nível nenhum a concluir.
   final int indice;
-  const LessonScreen({super.key, required this.indice});
+
+  /// Perguntas escolhidas de fora, para treinar ou rever. Quando vem
+  /// preenchido, terminar não marca nenhum nível como feito nem faz o Roby
+  /// avançar — treinar não é progredir, e confundir as duas coisas daria
+  /// ao mapa um avanço que a criança não ganhou.
+  final List<Questao>? avulsas;
+
+  /// O que se mostra no fim, quando a sessão é avulsa.
+  final String? titulo;
+
+  const LessonScreen({
+    super.key,
+    required this.indice,
+    this.avulsas,
+    this.titulo,
+  });
+
+  bool get eAvulsa => avulsas != null;
   @override
   State<LessonScreen> createState() => _LessonScreenState();
 }
@@ -56,7 +75,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
   void initState() {
     super.initState();
     final st = context.read<AppState>();
-    qs = st.niveis[widget.indice].nivel.questoes;
+    qs = widget.avulsas ?? st.niveis[widget.indice].nivel.questoes;
     _faceActual = RobyPose.confiante;
     _msgActual = '';
 
@@ -166,23 +185,28 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     });
     if (ok) {
       HapticFeedback.lightImpact();
+      // Acertou: sai da lista de revisão, se lá estava.
+      st.marcarAprendida(q.q);
     } else {
       HapticFeedback.heavyImpact();
       _abanao.forward(from: 0);
       st.perderVida();
+      // Fica guardada para rever mais tarde no separador Guardados.
+      st.marcarErrada(q.q);
     }
   }
 
   void _seguinte() {
     if (idx + 1 >= qs.length) {
       final st = context.read<AppState>();
-      st.concluirNivel(widget.indice, acertos, qs.length);
+      if (!widget.eAvulsa) st.concluirNivel(widget.indice, acertos, qs.length);
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (_) => CompleteScreen(
-            indice: widget.indice,
+            indice: widget.eAvulsa ? -1 : widget.indice,
             acertos: acertos,
             total: qs.length,
+            titulo: widget.titulo,
           ),
         ),
       );
@@ -200,7 +224,14 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
   @override
   Widget build(BuildContext context) {
     final st = context.watch<AppState>();
-    return Scaffold(
+    return PopScope(
+      // Sem isto, o botão de voltar fecha a app a meio da lição em vez de
+      // fazer o que o ✕ faz. Perder a lição já é mau; perder a app é pior.
+      canPop: false,
+      onPopInvokedWithResult: (jaSaiu, _) {
+        if (!jaSaiu) _confirmarSaida();
+      },
+      child: Scaffold(
       backgroundColor: S.gm950,
       body: SafeArea(
         child: Column(
@@ -239,6 +270,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
             _doca(),
           ],
         ),
+      ),
       ),
     );
   }

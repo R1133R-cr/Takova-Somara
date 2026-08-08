@@ -8,14 +8,20 @@ import '../widgets/roby.dart';
 /// Ecrã de nível concluído. A festa é curta de propósito — o objectivo é
 /// recompensar e devolver a criança ao mapa, não prender-lhe a atenção.
 class CompleteScreen extends StatefulWidget {
+  /// Índice do nível concluído, ou -1 numa sessão de treino/revisão.
   final int indice;
   final int acertos;
   final int total;
+
+  /// Legenda a mostrar quando não há nível nenhum (sessão avulsa).
+  final String? titulo;
+
   const CompleteScreen({
     super.key,
     required this.indice,
     required this.acertos,
     required this.total,
+    this.titulo,
   });
 
   @override
@@ -56,8 +62,15 @@ class _CompleteScreenState extends State<CompleteScreen>
     final pct = widget.total == 0
         ? 0
         : (widget.acertos * 100 / widget.total).round();
-    final xpGanho = widget.acertos * AppState.xpPorAcerto + AppState.xpPorNivel;
-    final lv = st.niveis[widget.indice];
+    final avulsa = widget.indice < 0;
+    final xpGanho = widget.acertos * AppState.xpPorAcerto +
+        (avulsa ? 0 : AppState.xpPorNivel);
+    // Numa sessão avulsa não há nível nenhum para nomear — procurar um pelo
+    // índice -1 rebentaria o ecrã logo a seguir a a criança acertar tudo.
+    final legenda = avulsa
+        ? (widget.titulo ?? 'Treino')
+        : '${st.niveis[widget.indice].unit.titulo} · '
+            '${st.niveis[widget.indice].nivel.titulo}';
 
     return Scaffold(
       backgroundColor: S.gm950,
@@ -101,11 +114,11 @@ class _CompleteScreenState extends State<CompleteScreen>
                       child: Image.asset(RobyPose.graduate.path, fit: BoxFit.cover),
                     ),
                     const SizedBox(height: 26),
-                    const Text('Nível concluído!',
-                        style: TextStyle(
+                    Text(avulsa ? 'Treino terminado!' : 'Nível concluído!',
+                        style: const TextStyle(
                             fontSize: 30, fontWeight: FontWeight.w700, color: S.tx)),
                     const SizedBox(height: 8),
-                    Text('${lv.unit.titulo} · ${lv.nivel.titulo}',
+                    Text(legenda,
                         textAlign: TextAlign.center,
                         style: const TextStyle(color: S.txSoft, fontSize: 15)),
                     const SizedBox(height: 30),

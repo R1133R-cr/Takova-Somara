@@ -63,10 +63,27 @@ class _OnboardingScreenState extends State<OnboardingScreen>
 
   bool get _podeAvancar => _passo == 0 ? _nome.text.trim().isNotEmpty : true;
 
+  /// Recua um passo. No primeiro passo devolve `false`, e é o `PopScope`
+  /// que deixa sair para o ecrã de boas-vindas.
+  bool _recuar() {
+    if (_passo == 0) return false;
+    setState(() => _passo = 0);
+    _ac.forward(from: 0);
+    return true;
+  }
+
   @override
   Widget build(BuildContext context) {
     final classes = _classesDisponiveis(context.read<AppState>());
-    return Scaffold(
+    return PopScope(
+      // O botão físico de voltar recuava para fora da app em vez de voltar
+      // ao passo anterior. Para uma criança, isso é a app "fechar sozinha".
+      canPop: false,
+      onPopInvokedWithResult: (jaSaiu, _) {
+        if (jaSaiu) return;
+        if (!_recuar()) Navigator.of(context).maybePop();
+      },
+      child: Scaffold(
       backgroundColor: S.gm950,
       body: SafeArea(
         child: Padding(
@@ -74,20 +91,42 @@ class _OnboardingScreenState extends State<OnboardingScreen>
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 10),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(S.rPill),
-                child: TweenAnimationBuilder<double>(
-                  tween: Tween(begin: 0, end: (_passo + 1) / 2),
-                  duration: const Duration(milliseconds: 420),
-                  curve: SCurves.ease,
-                  builder: (_, v, _) => LinearProgressIndicator(
-                    value: v,
-                    minHeight: 10,
-                    backgroundColor: S.surface,
-                    valueColor: const AlwaysStoppedAnimation(S.chart),
+              const SizedBox(height: 6),
+              Row(
+                children: [
+                  // Seta visível: nem toda a gente sabe que o botão do
+                  // telemóvel serve para recuar, e uma criança de 7 anos
+                  // muito menos.
+                  SizedBox(
+                    width: 44,
+                    height: 44,
+                    child: IconButton(
+                      icon: const Icon(Icons.arrow_back_rounded, color: S.txSoft),
+                      tooltip: 'Voltar',
+                      padding: EdgeInsets.zero,
+                      onPressed: () {
+                        if (!_recuar()) Navigator.of(context).maybePop();
+                      },
+                    ),
                   ),
-                ),
+                  Expanded(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(S.rPill),
+                      child: TweenAnimationBuilder<double>(
+                        tween: Tween(begin: 0, end: (_passo + 1) / 2),
+                        duration: const Duration(milliseconds: 420),
+                        curve: SCurves.ease,
+                        builder: (_, v, _) => LinearProgressIndicator(
+                          value: v,
+                          minHeight: 10,
+                          backgroundColor: S.surface,
+                          valueColor: const AlwaysStoppedAnimation(S.chart),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                ],
               ),
               Expanded(
                 child: AnimatedBuilder(
@@ -204,6 +243,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
             ],
           ),
         ),
+      ),
       ),
     );
   }
