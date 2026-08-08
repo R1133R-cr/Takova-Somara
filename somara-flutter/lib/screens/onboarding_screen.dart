@@ -99,7 +99,12 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                       child: Opacity(opacity: e, child: child),
                     );
                   },
-                  child: Column(
+                  // Rola de propósito: com seis classes na lista, o ecrã
+                  // deixou de chegar e o Flutter avisava com a barra de
+                  // transbordo. Rolar aguenta as classes que vierem, e
+                  // também os telemóveis de ecrã pequeno.
+                  child: SingleChildScrollView(
+                    child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 26),
@@ -166,7 +171,9 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                               ),
                             ),
                           ),
+                      const SizedBox(height: 12),
                     ],
+                    ),
                   ),
                 ),
               ),
