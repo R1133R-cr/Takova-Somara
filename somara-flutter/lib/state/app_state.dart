@@ -157,10 +157,12 @@ class AppState extends ChangeNotifier {
         final p = (j['progresso'] as Map?) ?? {};
         p.forEach((k, v) => progresso['$k'] = v as int);
         erradas.addAll(((j['erradas'] as List?) ?? []).cast<String>());
+        _diaDasVidas = j['diaDasVidas'] as String?;
       } catch (_) {
         // Estado corrompido: recomeça limpo em vez de rebentar o arranque.
       }
     }
+    _reporVidasSeMudouODia();
     pronto = true;
     notifyListeners();
 
@@ -191,6 +193,7 @@ class AppState extends ChangeNotifier {
         'cursoId': cursoId,
         'progresso': progresso,
         'erradas': erradas.toList(),
+        'diaDasVidas': _diaDasVidas,
       }),
     );
   }
@@ -226,6 +229,23 @@ class AppState extends ChangeNotifier {
     }
     notifyListeners();
     _gravar();
+  }
+
+  /// Dia em que as vidas foram repostas pela última vez.
+  String? _diaDasVidas;
+
+  /// Repõe as vidas se o dia mudou.
+  ///
+  /// Sem isto o contador descia até zero e ficava lá para sempre, sem
+  /// consequência nenhuma — um número no ecrã que não queria dizer nada.
+  /// Repor todos os dias mantém a promessa (errar custa) sem trancar a
+  /// criança fora da app, que seria o pior dos dois mundos numa app de
+  /// escola.
+  void _reporVidasSeMudouODia() {
+    final hoje = Sequencia.iso(DateTime.now());
+    if (_diaDasVidas == hoje) return;
+    _diaDasVidas = hoje;
+    lives = maxLives;
   }
 
   void perderVida() {

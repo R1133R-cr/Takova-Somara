@@ -6,7 +6,15 @@ import '../widgets/roby.dart';
 
 /// Quem sou eu, o que já fiz, e em que classe estou.
 class PerfilScreen extends StatelessWidget {
-  const PerfilScreen({super.key});
+  /// Chamado depois de mudar de classe, para levar logo à amarelinha nova.
+  ///
+  /// Sem isto, tocar numa classe só mudava a marca de visto e a criança
+  /// ficava no mesmo ecrã sem saber se tinha acontecido alguma coisa —
+  /// parecia que faltava um botão de confirmar. A consequência visível vale
+  /// mais do que um botão.
+  final VoidCallback? aoMudarClasse;
+
+  const PerfilScreen({super.key, this.aoMudarClasse});
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +82,18 @@ class PerfilScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(bottom: 9),
             child: GestureDetector(
-              onTap: () => st.mudarClasse(c),
+              onTap: () {
+                if (c == st.classe) return;
+                st.mudarClasse(c);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Agora estás na $c'),
+                    duration: const Duration(seconds: 2),
+                    backgroundColor: S.green700,
+                  ),
+                );
+                aoMudarClasse?.call();
+              },
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 180),
                 padding:

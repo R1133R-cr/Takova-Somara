@@ -20,7 +20,14 @@ class MapScreen extends StatefulWidget {
 class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMixin {
   late final AnimationController _glow;
   final _scroll = ScrollController();
-  bool _centrouInicial = false;
+
+  /// Que amarelinha foi centrada da última vez.
+  ///
+  /// Guarda-se o curso e o número de níveis, não um simples "já centrei":
+  /// ao mudar de classe ou de disciplina o tabuleiro é outro, e sem
+  /// recentrar a criança ficava a olhar para a parte do mapa onde estava
+  /// antes — muitas vezes vazia, sem o Roby à vista.
+  String? _centradoEm;
 
   static const _rowH = 124.0;
   static const _cellW = 78.0;
@@ -113,10 +120,12 @@ class _MapScreenState extends State<MapScreen> with SingleTickerProviderStateMix
                   ),
               ];
 
-              // Ao entrar, centra no quadrado onde o Roby está — sem animação,
-              // para não parecer que a app "saltou" sozinha ao abrir.
-              if (!_centrouInicial) {
-                _centrouInicial = true;
+              // Centra no quadrado onde o Roby está — sem animação, para não
+              // parecer que a app "saltou" sozinha. Repete-se sempre que o
+              // tabuleiro muda, não só na primeira vez.
+              final assinatura = '${st.cursoId}:${niveis.length}';
+              if (_centradoEm != assinatura) {
+                _centradoEm = assinatura;
                 WidgetsBinding.instance.addPostFrameCallback((_) {
                   if (!_scroll.hasClients) return;
                   final alvo = cells[actual].rect.center.dy - box.maxHeight / 2;
