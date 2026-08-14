@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'services/sons.dart';
 import 'state/app_state.dart';
 import 'theme.dart';
+import 'widgets/carregando.dart';
 import 'screens/welcome_screen.dart';
 
 void main() {
@@ -36,25 +38,46 @@ class SomaraApp extends StatelessWidget {
   }
 }
 
-/// Segura o ecrã enquanto o conteúdo e o progresso carregam. É rápido,
-/// mas sem isto a primeira frame apanharia o estado ainda vazio.
-class _Arranque extends StatelessWidget {
+/// Segura o ecrã enquanto o conteúdo e o progresso carregam, e cala a
+/// trilha quando a app vai para segundo plano.
+///
+/// O silêncio em segundo plano não é um pormenor: o telemóvel é da família,
+/// e música a sair de uma app fechada é o tipo de coisa que faz um pai
+/// desinstalá-la.
+class _Arranque extends StatefulWidget {
   const _Arranque();
+
+  @override
+  State<_Arranque> createState() => _ArranqueState();
+}
+
+class _ArranqueState extends State<_Arranque> with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState estado) {
+    if (estado == AppLifecycleState.resumed) {
+      Sons.i.retomarDoSegundoPlano();
+    } else {
+      Sons.i.pausarPorSegundoPlano();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     final st = context.watch<AppState>();
     if (!st.pronto) {
-      return const Scaffold(
-        backgroundColor: S.gm950,
-        body: Center(
-          child: SizedBox(
-            width: 34,
-            height: 34,
-            child: CircularProgressIndicator(color: S.chart, strokeWidth: 3),
-          ),
-        ),
-      );
+      return const Carregando(mensagem: 'A preparar as tuas lições...');
     }
     return const WelcomeScreen();
   }

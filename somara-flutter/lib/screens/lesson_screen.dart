@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../models/content.dart';
+import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
@@ -185,10 +186,12 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     });
     if (ok) {
       HapticFeedback.lightImpact();
+      Sons.i.certo();
       // Acertou: sai da lista de revisão, se lá estava.
       st.marcarAprendida(q.q);
     } else {
       HapticFeedback.heavyImpact();
+      Sons.i.errado();
       _abanao.forward(from: 0);
       // Errar a praticar não custa coração: quem está a falhar precisa de
       // mais treino, e tirar-lho seria fechar a porta a quem mais precisa.
@@ -487,6 +490,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       onTap: fase == Fase.responder
           ? () {
               HapticFeedback.selectionClick();
+              Sons.i.toque();
               setState(() => escolha = i);
             }
           : null,
@@ -751,11 +755,29 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(_msgActual,
-                          style: TextStyle(
-                              fontSize: 17,
-                              fontWeight: FontWeight.w700,
-                              color: certo ? S.chart : S.life)),
+                      Row(
+                        children: [
+                          Flexible(
+                            child: Text(_msgActual,
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w700,
+                                    color: certo ? S.chart : S.life)),
+                          ),
+                          // O XP só aparecia no fim da lição, longe do acerto
+                          // que o mereceu. Na fase C as crianças acharam o
+                          // jogo pouco recompensador, e esta é a recompensa
+                          // mais barata que havia por dar: dizer, na hora,
+                          // que aquela resposta valeu alguma coisa.
+                          if (certo) ...[
+                            const SizedBox(width: 8),
+                            _MaisXp(
+                              key: ValueKey(idx),
+                              quanto: AppState.xpPorAcerto,
+                            ),
+                          ],
+                        ],
+                      ),
                       if (!certo) Text(_respostaCerta(),
                           style: const TextStyle(color: S.txSoft, fontSize: 13)),
                     ],
@@ -822,4 +844,49 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
           ),
         ),
       );
+}
+
+/// A pastilha "+10 XP" que salta ao lado do "Boa!".
+///
+/// Entra com mola e sobe um pouco: é curta de propósito, porque a seguir vem
+/// o botão de continuar e o que se quer é impulso, não um espectáculo.
+class _MaisXp extends StatelessWidget {
+  final int quanto;
+  const _MaisXp({super.key, required this.quanto});
+
+  @override
+  Widget build(BuildContext context) => TweenAnimationBuilder<double>(
+    tween: Tween(begin: 0, end: 1),
+    duration: const Duration(milliseconds: 520),
+    curve: SCurves.spring,
+    builder: (_, v, filho) => Opacity(
+      opacity: v.clamp(0.0, 1.0),
+      child: Transform.translate(
+        offset: Offset(0, (1 - v) * 14),
+        child: Transform.scale(scale: 0.6 + 0.4 * v, child: filho),
+      ),
+    ),
+    child: Container(
+      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3),
+      decoration: BoxDecoration(
+        color: S.chart.withValues(alpha: 0.16),
+        borderRadius: BorderRadius.circular(S.rPill),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Icon(Icons.bolt_rounded, color: S.chart, size: 14),
+          const SizedBox(width: 2),
+          Text(
+            '+$quanto',
+            style: const TextStyle(
+              color: S.chart,
+              fontSize: 13.5,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }
