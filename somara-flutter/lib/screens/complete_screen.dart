@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
@@ -37,6 +38,7 @@ class _CompleteScreenState extends State<CompleteScreen>
   @override
   void initState() {
     super.initState();
+    Sons.i.nivel();
     final rnd = math.Random();
     _particulas = List.generate(46, (i) => _Particula.aleatoria(rnd, i));
     _festa = AnimationController(

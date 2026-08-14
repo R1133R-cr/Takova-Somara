@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import 'guardados_screen.dart';
@@ -109,20 +110,34 @@ class _HomeShellState extends State<HomeShell> {
               for (var i = 0; i < _abas.length; i++)
                 Expanded(
                   child: InkWell(
-                    onTap: () => setState(() => _aba = i),
+                    onTap: () {
+                      Sons.i.toque();
+                      setState(() => _aba = i);
+                    },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         // O número de perguntas por rever fica à vista: sem
                         // isto, o separador Guardados nunca chamaria ninguém.
-                        Badge(
-                          isLabelVisible: i == 3 && porRever > 0,
-                          label: Text('$porRever'),
-                          backgroundColor: S.life,
-                          child: Icon(
-                            _abas[i].icone,
-                            size: 23,
-                            color: i == _aba ? S.chart : S.txMut,
+                        // O ícone escolhido dá um salto pequeno. Sem isto a
+                        // troca de separador era um corte seco, e num ecrã
+                        // que uma criança toca dezenas de vezes por sessão
+                        // é o movimento que confirma que o toque valeu.
+                        TweenAnimationBuilder<double>(
+                          tween: Tween(begin: 1, end: i == _aba ? 1.16 : 1.0),
+                          duration: const Duration(milliseconds: 260),
+                          curve: SCurves.spring,
+                          builder: (_, escala, filho) =>
+                              Transform.scale(scale: escala, child: filho),
+                          child: Badge(
+                            isLabelVisible: i == 3 && porRever > 0,
+                            label: Text('$porRever'),
+                            backgroundColor: S.life,
+                            child: Icon(
+                              _abas[i].icone,
+                              size: 23,
+                              color: i == _aba ? S.chart : S.txMut,
+                            ),
                           ),
                         ),
                         const SizedBox(height: 3),

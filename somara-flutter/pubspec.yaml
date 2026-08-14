@@ -1,5 +1,5 @@
 ﻿name: somara
-description: "Somara â€” app didÃ¡ctica gamificada da Takova. MatemÃ¡tica e PortuguÃªs do 1Âº ciclo, nÃ­vel a nÃ­vel."
+description: "Somara — app didáctica gamificada da Takova. Ensino primário completo, nível a nível."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -16,9 +16,13 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
-# 0.x = ainda nÃ£o lanÃ§ada ao pÃºblico; passa a 1.0.0 no dia da Play Store.
-# O nÃºmero depois do + sobe a cada APK entregue e nunca se repete.
-version: 0.9.6+17
+# 0.x = ainda não lançada ao público; passa a 1.0.0 no dia da Play Store.
+# O número depois do + sobe a cada APK entregue e nunca se repete.
+#
+# Editar este ficheiro com Get-Content/Set-Content do PowerShell estraga os
+# acentos (lê em ANSI e grava em UTF-8). Já aconteceu uma vez e ficou
+# commitado: alterar à mão, ou com uma ferramenta que respeite o UTF-8.
+version: 0.10.1+19
 
 environment:
   sdk: ^3.12.2
@@ -34,12 +38,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # DependÃªncias deliberadamente mÃ­nimas: cada pacote extra Ã© mais peso no
-  # APK e mais uma coisa que pode partir numa actualizaÃ§Ã£o. Toda a animaÃ§Ã£o
-  # Ã© feita com o que o Flutter jÃ¡ traz de origem.
+  # Dependências deliberadamente mínimas: cada pacote extra é mais peso no
+  # APK e mais uma coisa que pode partir numa actualização. Toda a animação
+  # é feita com o que o Flutter já traz de origem.
   path_provider: ^2.1.6
   provider: ^6.1.2            # estado partilhado (progresso, vidas, XP)
-  shared_preferences: ^2.3.2  # persistÃªncia local â€” substitui o localStorage
+  shared_preferences: ^2.3.2  # persistência local — substitui o localStorage
 
 dev_dependencies:
   flutter_test:
@@ -67,34 +71,11 @@ flutter:
     - assets/content.json
     - assets/img/
     - assets/audio/
+    # Sons sintetizados em tools/sons.py — toque, certo, errado, nível,
+    # salto e a trilha de fundo.
+    - assets/som/
 
   fonts:
     - family: Melfira
       fonts:
         - asset: assets/fonts/Melfira-Regular.ttf
-
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/to/resolution-aware-images
-
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.dev/to/asset-from-package
-
-  # To add custom fonts to your application, add a fonts section here,
-  # in this "flutter" section. Each entry in this list should have a
-  # "family" key with the font family name, and a "fonts" key with a
-  # list giving the asset and other descriptors for the font. For
-  # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/to/font-from-package

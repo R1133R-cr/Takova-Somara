@@ -72,6 +72,45 @@ class PerfilScreen extends StatelessWidget {
         ),
         const SizedBox(height: 28),
 
+        // O som desliga-se aqui e não nas definições do telemóvel: o
+        // telemóvel é da família, e há alturas — na sala de aula, com o bebé
+        // a dormir — em que a app tem de ficar calada sem se fechar.
+        Container(
+          padding: const EdgeInsets.fromLTRB(16, 6, 10, 6),
+          decoration: BoxDecoration(
+            color: S.surface,
+            border: Border.all(color: S.line, width: 2),
+            borderRadius: BorderRadius.circular(S.rLg),
+          ),
+          child: Row(
+            children: [
+              Icon(
+                st.som ? Icons.volume_up_rounded : Icons.volume_off_rounded,
+                color: st.som ? S.chart : S.txMut,
+                size: 22,
+              ),
+              const SizedBox(width: 12),
+              const Expanded(
+                child: Text(
+                  'Som e música',
+                  style: TextStyle(
+                    color: S.tx,
+                    fontSize: 15.5,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              Switch(
+                value: st.som,
+                activeThumbColor: S.onChart,
+                activeTrackColor: S.chart,
+                onChanged: st.definirSom,
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 28),
+
         const Text('Mudar de classe',
             style: TextStyle(
                 fontSize: 16, fontWeight: FontWeight.w700, color: S.tx)),

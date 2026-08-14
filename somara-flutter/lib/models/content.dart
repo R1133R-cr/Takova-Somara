@@ -99,15 +99,59 @@ class QDrag extends Questao {
   const QDrag(super.q, super.audio, {required this.chip, required this.zones, required this.a});
 }
 
+/// A matéria de um nível — o que se ensina antes de se perguntar.
+///
+/// As crianças da fase C acharam as perguntas secas: chegavam ao exercício
+/// sem ninguém lhes ter relembrado a matéria, e um enunciado da 4ª classe
+/// sem contexto é um teste, não uma aula. São três partes de propósito:
+/// explicar, mostrar um caso feito, e deixar uma frase curta que se leve
+/// para o exercício.
+class Materia {
+  final String explica;
+  final String exemplo;
+  final String lembra;
+
+  /// Enunciado lido em voz alta, para quem ainda não lê.
+  final String? audio;
+
+  const Materia({
+    required this.explica,
+    required this.exemplo,
+    required this.lembra,
+    this.audio,
+  });
+
+  factory Materia.fromJson(Map<String, dynamic> j) => Materia(
+        explica: j['explica'] as String,
+        exemplo: j['exemplo'] as String,
+        lembra: j['lembra'] as String,
+        audio: j['audio'] as String?,
+      );
+}
+
 class Nivel {
   final String id;
   final String titulo;
   final List<Questao> questoes;
-  const Nivel({required this.id, required this.titulo, required this.questoes});
+
+  /// Nula enquanto a matéria daquele nível não estiver escrita. A app trata
+  /// disso sem se queixar: sem matéria, entra-se directamente no exercício,
+  /// como era antes.
+  final Materia? materia;
+
+  const Nivel({
+    required this.id,
+    required this.titulo,
+    required this.questoes,
+    this.materia,
+  });
 
   factory Nivel.fromJson(Map<String, dynamic> j) => Nivel(
         id: j['id'] as String,
         titulo: j['titulo'] as String,
+        materia: j['materia'] == null
+            ? null
+            : Materia.fromJson(j['materia'] as Map<String, dynamic>),
         questoes: (j['questoes'] as List)
             .map((q) => Questao.fromJson(q as Map<String, dynamic>))
             .toList(),

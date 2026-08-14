@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/content.dart';
 import '../models/sequencia.dart';
 import '../services/conteudo_remoto.dart';
+import '../services/sons.dart';
 
 /// Estado do aluno — o equivalente ao localStorage `somara_state_v2` da
 /// versão web, mas tipado e persistido com shared_preferences.
@@ -20,6 +21,12 @@ class AppState extends ChangeNotifier {
   String nome = '';
   String classe = '1ª classe';
   bool onboarded = false;
+
+  /// Som ligado. Fica no estado e não só no serviço porque tem de sobreviver
+  /// a fechar a app — e porque num telemóvel partilhado com a família há
+  /// alturas em que se quer a app calada e ninguém a quer desligar duas vezes.
+  bool som = true;
+
   int xp = 0;
   int lives = maxLives;
   Sequencia _sequencia = const Sequencia();
@@ -175,6 +182,7 @@ class AppState extends ChangeNotifier {
         nome = (j['nome'] ?? '') as String;
         classe = (j['classe'] ?? '1ª classe') as String;
         onboarded = (j['onboarded'] ?? false) as bool;
+        som = (j['som'] ?? true) as bool;
         xp = (j['xp'] ?? 0) as int;
         _sequencia = Sequencia.deJson(j['sequencia'] as Map<String, dynamic>?);
         lives = (j['lives'] ?? maxLives) as int;
@@ -204,6 +212,12 @@ class AppState extends ChangeNotifier {
     pronto = true;
     notifyListeners();
 
+    // A trilha só arranca depois de o estado estar lido: quem tinha o som
+    // desligado não pode ouvir dois segundos de música antes de a app se
+    // lembrar disso.
+    await Sons.i.definirLigado(som);
+    unawaited(Sons.i.comecarFundo());
+
     // Só agora se vai à rede: a app já abriu e a criança já pode jogar.
     // Sem `await` de propósito — isto corre por trás e nunca atrasa nada.
     unawaited(_procurarConteudoNovo());
@@ -225,6 +239,7 @@ class AppState extends ChangeNotifier {
         'nome': nome,
         'classe': classe,
         'onboarded': onboarded,
+        'som': som,
         'xp': xp,
         'sequencia': _sequencia.paraJson(),
         'lives': lives,
@@ -249,6 +264,13 @@ class AppState extends ChangeNotifier {
     final daClasse = conteudo.cursos.where((c) => c.classe == classe);
     if (daClasse.isNotEmpty) cursoId = daClasse.first.id;
     notifyListeners();
+    _gravar();
+  }
+
+  Future<void> definirSom(bool ligado) async {
+    som = ligado;
+    notifyListeners();
+    await Sons.i.definirLigado(ligado);
     _gravar();
   }
 

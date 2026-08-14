@@ -1,13 +1,17 @@
-import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/content.dart';
+import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/hopscotch_board.dart';
 import '../widgets/roby.dart';
 import '../widgets/sem_vidas.dart';
 import 'lesson_screen.dart';
+import 'materia_screen.dart';
+
+/// O que se pendura ao lado da casa onde o Roby está.
+enum _Complemento { materia, treino }
 
 /// A amarelinha. Corre de baixo para cima — ENTRADA em baixo, META em cima —
 /// como o jogo de rua a que se refere, e ao contrário do scroll de cima para
@@ -40,16 +44,6 @@ class _MapScreenState extends State<MapScreen>
   /// antes — muitas vezes vazia, sem o Roby à vista.
   String? _centradoEm;
 
-  // 138 e não 124: o quadrado está rodado, e um rectângulo inclinado ocupa
-  // mais altura do que a sua caixa direita (ver [_folgaDaRotacao]). Com 124
-  // o canto da casa de cima aterrava em cima do rótulo da casa de baixo.
-  static const _rowH = 138.0;
-  static const _cellW = 78.0;
-  static const _cellH = 74.0;
-  static const _lateral = 108.0; // amplitude máxima da onda
-  static const _padTopo = 96.0;
-  static const _padBase = 92.0;
-
   @override
   void initState() {
     super.initState();
@@ -67,66 +61,11 @@ class _MapScreenState extends State<MapScreen>
     super.dispose();
   }
 
-  /// Fase da onda: radianos por nível. 2π/6 fecha uma volta completa a cada
-  /// seis níveis — cerca de um S inteiro por ecrã, que é o que faz a
-  /// amarelinha ler como cobra. Com passo menor a onda demora tanto a virar
-  /// que os primeiros níveis caem todos do mesmo lado e o ecrã fica torto;
-  /// com passo maior volta a ser um ziguezague de esquerda para direita.
-  static const _passoOnda = 1.047; // 2π/6
-
-  /// Com o rótulo por baixo do quadrado (e não ao lado), a largura toda fica
-  /// livre para a onda. Só se guarda uma margem pequena para o quadrado
-  /// inclinado não encostar à borda.
-  double _amplitude(double largura) =>
-      math.min(_lateral, largura / 2 - _cellW / 2 - 18);
-
-  /// Deslocamento lateral do nível i. É a onda que faz o tabuleiro
-  /// serpentear como uma cobra em vez de saltar de lado para lado.
-  double _desvio(int i, double largura) =>
-      math.sin(i * _passoOnda) * _amplitude(largura);
-
-  /// Converte o índice do nível na posição do quadrado no tabuleiro.
-  /// O índice 0 fica em baixo, por isso a altura conta ao contrário.
-  Rect _rectDe(int i, int total, double largura) {
-    final centroX = largura / 2 + _desvio(i, largura);
-    final y = _padTopo + (total - 1 - i) * _rowH;
-    return Rect.fromCenter(
-      center: Offset(centroX, y + _cellH / 2),
-      width: _cellW,
-      height: _cellH,
-    );
-  }
-
-  /// Inclinação do quadrado: alinhada com a tangente da onda naquele ponto.
-  /// Sem isto os quadrados ficam direitos sobre uma linha curva, o que dá
-  /// logo o aspecto de caixas pousadas em cima de um caminho, em vez de um
-  /// tabuleiro riscado no chão a acompanhar a curva.
-  double _inclinacao(int i, double largura) {
-    final derivada =
-        math.cos(i * _passoOnda) * _amplitude(largura) * _passoOnda;
-    // A subida é constante (_rowH por nível), logo o ângulo do percurso sai
-    // do declive lateral face a essa subida. Limitado para nunca exagerar.
-    return (math.atan2(derivada, _rowH) * 0.55).clamp(-0.34, 0.34);
-  }
-
-  /// Quanto é que o quadrado inclinado desce abaixo do seu próprio `rect`.
-  ///
-  /// Rodar um rectângulo aumenta a altura que ele ocupa: a 0,34 rad, os 74 px
-  /// de altura passam a ~96, ou seja quase 11 px a transbordar por baixo. O
-  /// rótulo tem de começar depois disso, senão o texto fica por baixo do
-  /// risco de giz — que foi exactamente o que se via no ecrã.
-  double _folgaDaRotacao(double angulo) {
-    final a = angulo.abs();
-    final alturaRodada = _cellW * math.sin(a) + _cellH * math.cos(a);
-    return (alturaRodada - _cellH) / 2;
-  }
-
   @override
   Widget build(BuildContext context) {
     final st = context.watch<AppState>();
     final niveis = st.niveis;
     final actual = st.nivelActual;
-    final alturaTotal = _padTopo + niveis.length * _rowH + _padBase;
 
     return Column(
       children: [
@@ -134,21 +73,56 @@ class _MapScreenState extends State<MapScreen>
         Expanded(
           child: LayoutBuilder(
             builder: (context, box) {
-              final largura = box.maxWidth;
+              final fita = Fita(casas: niveis.length, largura: box.maxWidth);
 
               final cells = [
                 for (var i = 0; i < niveis.length; i++)
                   BoardCell(
-                    rect: _rectDe(i, niveis.length, largura),
                     index: i,
-                    angle: _inclinacao(i, largura),
+                    centro: fita.centro(i + 0.5),
+                    angulo: fita.anguloDoTexto(i + 0.5),
+                    contorno: fita.contornoDaCasa(i),
                     state: st.nivelFeito(i)
                         ? CellState.done
                         : (i == actual ? CellState.current : CellState.locked),
                   ),
               ];
 
-              // Centra no quadrado onde o Roby está — sem animação, para não
+              // As duas casas de complemento acompanham o Roby: ficam sempre
+              // no nível onde a criança está, que é para onde ela olha. Postas
+              // em todos os níveis, dezoito losangos enchiam o tabuleiro de
+              // ruído e a fita deixava de se ler.
+              //
+              // As duas juntas são a resposta à queixa da fase C — as
+              // perguntas eram desafiantes e pouco recompensadoras. Agora há
+              // um caminho antes do salto: lê a matéria, ensaia sem risco, e
+              // só depois faz o nível a valer. O treino usa as perguntas
+              // deste mesmo nível de propósito: ensaiar noutra coisa não
+              // prepara para esta.
+              final lado = fita.ladoComEspaco(actual + 0.5);
+              final complementos = [
+                (t: actual + 0.82, tipo: _Complemento.materia),
+                (t: actual + 0.18, tipo: _Complemento.treino),
+              ];
+              final nivelActual = niveis[actual].nivel;
+              final laterais = [
+                for (final c in complementos)
+                  () {
+                    final g = fita.casaLateral(c.t, lado);
+                    return BoardSide(
+                      centro: g.centro,
+                      angulo: g.angulo,
+                      contorno: g.contorno,
+                      lado: lado,
+                      activa: switch (c.tipo) {
+                        _Complemento.materia => nivelActual.materia != null,
+                        _Complemento.treino => nivelActual.questoes.isNotEmpty,
+                      },
+                    );
+                  }(),
+              ];
+
+              // Centra na casa onde o Roby está — sem animação, para não
               // parecer que a app "saltou" sozinha. Repete-se sempre que o
               // tabuleiro muda, não só na primeira vez.
               final assinatura = '${st.cursoId}:${niveis.length}';
@@ -156,7 +130,7 @@ class _MapScreenState extends State<MapScreen>
                 _centradoEm = assinatura;
                 WidgetsBinding.instance.addPostFrameCallback((_) {
                   if (!_scroll.hasClients) return;
-                  final alvo = cells[actual].rect.center.dy - box.maxHeight / 2;
+                  final alvo = cells[actual].centro.dy - box.maxHeight / 2;
                   _scroll.jumpTo(
                     alvo.clamp(0.0, _scroll.position.maxScrollExtent),
                   );
@@ -166,8 +140,8 @@ class _MapScreenState extends State<MapScreen>
               return SingleChildScrollView(
                 controller: _scroll,
                 child: SizedBox(
-                  height: alturaTotal,
-                  width: largura,
+                  height: fita.alturaTotal,
+                  width: fita.largura,
                   child: Stack(
                     clipBehavior: Clip.none,
                     children: [
@@ -176,24 +150,36 @@ class _MapScreenState extends State<MapScreen>
                           animation: _glow,
                           builder: (_, _) => CustomPaint(
                             painter: HopscotchPainter(
+                              fita: fita,
                               cells: cells,
+                              laterais: laterais,
                               glow: _glow.value,
                             ),
                           ),
                         ),
                       ),
-                      _marcador(largura: largura, y: 26, child: _badgeMeta(st)),
                       _marcador(
-                        largura: largura,
-                        y: alturaTotal - _padBase + 26,
+                        largura: fita.largura,
+                        y: 24,
+                        child: _badgeMeta(st),
+                      ),
+                      _marcador(
+                        largura: fita.largura,
+                        y: fita.alturaTotal - Fita.padBase + 30,
                         child: _badgeEntrada(),
                       ),
                       for (var i = 0; i < niveis.length; i++)
-                        ..._quadrado(st, cells[i], niveis[i], largura),
+                        _casa(st, fita, cells[i], niveis[i]),
+                      for (var i = 0; i < laterais.length; i++)
+                        _casaLateral(st, laterais[i], complementos[i].tipo),
                       RobyToken(
-                        position: cells[actual].rect.center,
+                        position: cells[actual].centro,
                         pose: RobyPose.token,
                         size: 58,
+                        // O som sai quando os pés tocam a casa, não quando a
+                        // animação acaba — a mola de recuperação ainda corre
+                        // um bocado depois disso.
+                        onLand: Sons.i.salto,
                       ),
                     ],
                   ),
@@ -211,6 +197,7 @@ class _MapScreenState extends State<MapScreen>
   /// Verifica-se a hora aqui e não só ao arrancar: a espera pode ter acabado
   /// com a app aberta, e nesse caso a criança entra sem ter de fechar nada.
   void _abrirNivel(AppState st, int indice) {
+    Sons.i.toque();
     st.verificarFimDoBloqueio();
     if (st.bloqueado) {
       SemVidas.mostrar(
@@ -231,105 +218,196 @@ class _MapScreenState extends State<MapScreen>
       );
       return;
     }
+    final lv = st.niveis[indice];
+    final materia = lv.nivel.materia;
+
+    // Da primeira vez, a matéria vem antes da pergunta. Depois de o nível
+    // estar feito não se repete a aula sem se pedir — quem quiser relê-la
+    // tem a casa lateral sempre lá.
+    if (materia != null && !st.nivelFeito(indice)) {
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => MateriaScreen(
+            titulo: lv.nivel.titulo,
+            materia: materia,
+            aoComecar: () => Navigator.of(ctx).pushReplacement(
+              MaterialPageRoute(builder: (_) => LessonScreen(indice: indice)),
+            ),
+          ),
+        ),
+      );
+      return;
+    }
+
     Navigator.of(
       context,
     ).push(MaterialPageRoute(builder: (_) => LessonScreen(indice: indice)));
   }
 
-  List<Widget> _quadrado(
+  /// Abre uma casa de complemento do nível onde o Roby está.
+  void _abrirComplemento(AppState st, _Complemento tipo) {
+    Sons.i.toque();
+    final lv = st.niveis[st.nivelActual];
+    switch (tipo) {
+      case _Complemento.materia:
+        final m = lv.nivel.materia;
+        if (m == null) return;
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => MateriaScreen(titulo: lv.nivel.titulo, materia: m),
+          ),
+        );
+      case _Complemento.treino:
+        // Treinar o nível outra vez sem o refazer no mapa — e sem gastar
+        // corações, que é o que distingue treinar de avançar.
+        final qs = [...lv.nivel.questoes]..shuffle();
+        if (qs.isEmpty) return;
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => LessonScreen(
+              indice: -1,
+              avulsas: qs,
+              titulo: 'Treino · ${lv.nivel.titulo}',
+            ),
+          ),
+        );
+    }
+  }
+
+  /// Uma casa da fita: o número e o nome do nível, lá dentro.
+  ///
+  /// O texto vai dentro da fita e não ao lado dela. Ao lado era onde estava
+  /// antes, e chocava sempre com o giz — a fita ondula, o rótulo não, e mais
+  /// cedo ou mais tarde cruzavam-se. Dentro, os 140 px de largura da fita
+  /// chegam para duas linhas e as margens ficam livres para os complementos.
+  Widget _casa(
     AppState st,
+    Fita fita,
     BoardCell cell,
     ({Unidade unit, Nivel nivel}) lv,
-    double largura,
   ) {
     final bloqueado = cell.state == CellState.locked;
     final feito = cell.state == CellState.done;
-    final r = cell.rect;
+    final actual = cell.state == CellState.current;
 
-    return [
-      // Número (ou ✓) por cima do quadrado pintado.
-      Positioned(
-        left: r.left,
-        top: r.top,
-        width: r.width,
-        height: r.height,
-        // GestureDetector e não InkWell: a onda circular do Material ficava
-        // desenhada em cima do quadrado — e ficava lá, porque o toque abre
-        // logo uma rota nova e a animação não chega a fechar. Um círculo
-        // cinzento num risco de giz também nunca foi o efeito certo.
-        child: GestureDetector(
-          behavior: HitTestBehavior.opaque,
-          onTap: bloqueado ? null : () => _abrirNivel(st, cell.index),
-          child: Center(
-            // O número acompanha a inclinação do quadrado; se ficasse a
-            // direito dentro de uma casa torta, denunciava logo que a
-            // casa é um rectângulo rodado e não um risco no chão.
-            child: Transform.rotate(
-              angle: cell.angle,
-              child: Opacity(
-                opacity: bloqueado ? 0.45 : 1,
-                child: feito
+    // Sobre o verde e o chartreuse o texto tem de ser escuro; sobre o fundo
+    // quase preto de uma casa por abrir, claro.
+    final corTexto = feito
+        ? Colors.white
+        : actual
+        ? S.onChart
+        : S.txSoft.withValues(alpha: 0.5);
+
+    return Positioned(
+      left: cell.centro.dx - fita.larguraFita / 2,
+      top: cell.centro.dy - Fita.alturaCasa / 2,
+      width: fita.larguraFita,
+      height: Fita.alturaCasa,
+      // GestureDetector e não InkWell: a onda circular do Material ficava
+      // desenhada em cima da casa — e ficava lá, porque o toque abre logo
+      // uma rota nova e a animação não chega a fechar. Um círculo cinzento
+      // num risco de giz também nunca foi o efeito certo.
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: bloqueado ? null : () => _abrirNivel(st, cell.index),
+        // O conteúdo acompanha a inclinação da fita; a direito dentro de uma
+        // casa torta, denunciava logo que a fita é um desenho por baixo.
+        child: Transform.rotate(
+          angle: cell.angulo,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Na casa do Roby o número fica escondido atrás das pernas
+              // dele. O Roby já diz onde a criança está.
+              if (!actual)
+                feito
                     ? const Icon(
                         Icons.check_rounded,
                         color: Colors.white,
-                        size: 34,
+                        size: 30,
                       )
-                    // Na casa onde o Roby está, o número fica escondido
-                    // atrás das pernas dele e lê-se como um erro de
-                    // desenho. O Roby já diz onde a criança está.
-                    : cell.state == CellState.current
-                    ? const SizedBox.shrink()
                     : Text(
                         '${cell.index + 1}',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 26,
                           fontWeight: FontWeight.w700,
-                          color: S.chart,
+                          color: S.chart.withValues(alpha: 0.55),
                         ),
                       ),
+              if (!actual) const SizedBox(height: 2),
+              // Na casa actual o nome desce, para não ficar debaixo do Roby.
+              if (actual) const SizedBox(height: 46),
+              Padding(
+                // Folga generosa: o texto está rodado dentro de uma faixa
+                // inclinada, e os cantos das linhas compridas são o que
+                // primeiro passa para fora do giz.
+                padding: const EdgeInsets.symmetric(horizontal: 13),
+                child: Text(
+                  lv.nivel.titulo,
+                  textAlign: TextAlign.center,
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 11,
+                    height: 1.18,
+                    fontWeight: actual || feito
+                        ? FontWeight.w700
+                        : FontWeight.w500,
+                    color: corTexto,
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
         ),
       ),
-      // Rótulo centrado por baixo do quadrado. Ao lado obrigava a apertar a
-      // onda para caber o texto; por baixo pertence visivelmente àquela casa
-      // e deixa a largura toda para a amarelinha serpentear.
-      Positioned(
-        left: r.center.dx - 68,
-        top: r.bottom + 4 + _folgaDaRotacao(cell.angle),
-        width: 136,
-        // A placa por baixo do texto não é enfeite: o risco tracejado que
-        // liga as casas passa exactamente por aqui, e sem ela a linha
-        // atravessava as letras a meio.
-        //
-        // O nível bloqueado esbate-se pela cor do texto e não por um
-        // Opacity à volta de tudo — o Opacity apanhava também a placa,
-        // punha-a a 45% e o giz voltava a aparecer por baixo das letras.
-        child: Center(
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
-            decoration: BoxDecoration(
-              // Opaca de propósito: gm950 é a própria cor do fundo, por
-              // isso a placa não se vê — só tapa o risco.
-              color: S.gm950,
-              borderRadius: BorderRadius.circular(6),
-            ),
-            child: Text(
-              lv.nivel.titulo,
-              textAlign: TextAlign.center,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontSize: 12.5,
-                color: bloqueado ? S.txSoft.withValues(alpha: 0.45) : S.txSoft,
-                height: 1.25,
+    );
+  }
+
+  /// Uma casa de complemento, pendurada ao lado da fita.
+  ///
+  /// São os ramos do desenho: não fazem avançar o percurso, servem para
+  /// voltar à matéria ou treinar aquele nível outra vez.
+  Widget _casaLateral(AppState st, BoardSide side, _Complemento tipo) {
+    const w = 96.0, h = 62.0;
+    return Positioned(
+      left: side.centro.dx - w / 2,
+      top: side.centro.dy - h / 2,
+      width: w,
+      height: h,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: side.activa ? () => _abrirComplemento(st, tipo) : null,
+        child: Transform.rotate(
+          angle: side.angulo,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                tipo == _Complemento.materia
+                    ? Icons.menu_book_rounded
+                    : Icons.fitness_center_rounded,
+                size: 19,
+                color: side.activa
+                    ? S.chart
+                    : S.txMut.withValues(alpha: 0.55),
               ),
-            ),
+              const SizedBox(height: 3),
+              Text(
+                tipo == _Complemento.materia ? 'Matéria' : 'Treino',
+                style: TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w700,
+                  color: side.activa
+                      ? S.chart
+                      : S.txMut.withValues(alpha: 0.55),
+                ),
+              ),
+            ],
           ),
         ),
       ),
-    ];
+    );
   }
 
   Widget _marcador({
@@ -393,7 +471,10 @@ class _MapScreenState extends State<MapScreen>
 
     Widget aba(Curso c) => GestureDetector(
       key: c.id == st.cursoId ? _abaActiva : null,
-      onTap: () => st.trocarCurso(c.id),
+      onTap: () {
+        Sons.i.toque();
+        st.trocarCurso(c.id);
+      },
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 220),
         curve: SCurves.ease,
