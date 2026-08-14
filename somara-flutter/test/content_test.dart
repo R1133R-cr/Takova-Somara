@@ -78,6 +78,34 @@ void main() {
     expect(total, 851);
   });
 
+  test('dentro de uma classe, cada enunciado é único', () {
+    // As perguntas erradas são guardadas pelo texto do enunciado. Dois
+    // enunciados iguais na mesma classe estragam três coisas ao mesmo
+    // tempo: a lista de Guardados mostra a linha a dobrar, o contador
+    // conta a mais, e acertar numa marca a outra como aprendida.
+    //
+    // E há o pior: o áudio lê o enunciado às crianças que ainda não lêem.
+    // Um "Qual é o maior?" dito em voz alta, com três botões que a criança
+    // não consegue ler, não ensina nada — por isso as opções passaram a
+    // vir no próprio enunciado.
+    for (final classe in c.cursos.map((x) => x.classe).toSet()) {
+      final vistos = <String, String>{};
+      for (final curso in c.cursos.where((x) => x.classe == classe)) {
+        for (final u in curso.units) {
+          for (final n in u.niveis) {
+            for (final q in n.questoes) {
+              final onde = '${curso.disciplina} / ${n.titulo}';
+              expect(vistos.containsKey(q.q), isFalse,
+                  reason: '$classe: "${q.q}" está em $onde '
+                      'e também em ${vistos[q.q]}');
+              vistos[q.q] = onde;
+            }
+          }
+        }
+      }
+    }
+  });
+
   test('cada classe tem conteúdo suficiente para uma amarelinha', () {
     for (final curso in c.cursos) {
       expect(curso.niveisEmSequencia.length, greaterThanOrEqualTo(8),

@@ -31,7 +31,7 @@ window.SOMARA_CONTENT = {
             { t: "choice", q: "O número antes do 10 é...", options: ["8", "9", "11"], a: 1 },
             { t: "count", q: "Quantas bolas há?", emoji: "⚽", n: 9, options: ["8", "9", "10"], a: 1 },
             { t: "input", q: "Escreve o número: seis", a: "6" },
-            { t: "choice", q: "Qual é o maior?", options: ["6", "8", "10"], a: 2 },
+            { t: "choice", q: "Qual é o maior: 6, 8 ou 10?", options: ["6", "8", "10"], a: 2 },
             { t: "count", q: "Quantos patos há?", emoji: "🦆", n: 6, options: ["5", "6", "7"], a: 1 },
             { t: "match", q: "Liga cada número à sua palavra.", pairs: [["6", "seis"], ["8", "oito"], ["10", "dez"]] }
           ]}
@@ -92,7 +92,7 @@ window.SOMARA_CONTENT = {
             { t: "choice", q: "Que número vem depois do 10?", options: ["9", "11", "20"], a: 1 },
             { t: "choice", q: "12, 13, __ , 15", options: ["14", "16", "11"], a: 0 },
             { t: "input", q: "Escreve o número: quinze", a: "15" },
-            { t: "choice", q: "Qual é o maior?", options: ["11", "18", "14"], a: 1 },
+            { t: "choice", q: "Qual é o maior: 11, 18 ou 14?", options: ["11", "18", "14"], a: 1 },
             { t: "choice", q: "O número antes do 20 é...", options: ["18", "19", "21"], a: 1 },
             { t: "choice", q: "Dez mais dez é...", options: ["15", "20", "12"], a: 1 }
           ]},

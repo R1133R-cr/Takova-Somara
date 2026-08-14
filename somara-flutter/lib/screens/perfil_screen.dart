@@ -63,7 +63,11 @@ class PerfilScreen extends StatelessWidget {
             const SizedBox(width: 10),
             Expanded(child: _stat('${st.streak}', 'dias', S.gold)),
             const SizedBox(width: 10),
-            Expanded(child: _stat('${st.niveisConcluidos}', 'níveis', S.green300)),
+            // O total de todas as classes: aqui é a folha de serviço da
+            // criança, não o progresso da classe onde está agora.
+            Expanded(
+                child: _stat(
+                    '${st.niveisConcluidosTotal}', 'níveis', S.green300)),
           ],
         ),
         const SizedBox(height: 28),

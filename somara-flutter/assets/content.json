@@ -138,14 +138,14 @@
         },
         {
          "t": "choice",
-         "q": "Qual é o maior?",
+         "q": "Qual é o maior: 6, 8 ou 10?",
          "options": [
           "6",
           "8",
           "10"
          ],
          "a": 2,
-         "audio": "279641ef2936.mp3"
+         "audio": "f0b1cfb60e92.mp3"
         },
         {
          "t": "count",
@@ -576,14 +576,14 @@
         },
         {
          "t": "choice",
-         "q": "Qual é o maior?",
+         "q": "Qual é o maior: 11, 18 ou 14?",
          "options": [
           "11",
           "18",
           "14"
          ],
          "a": 1,
-         "audio": "279641ef2936.mp3"
+         "audio": "1841938b6fac.mp3"
         },
         {
          "t": "choice",
@@ -4667,14 +4667,14 @@
         },
         {
          "t": "choice",
-         "q": "Qual é o maior?",
+         "q": "Qual é o maior: 99 999, 100 000 ou 90 999?",
          "options": [
           "99 999",
           "100 000",
           "90 999"
          ],
          "a": 1,
-         "audio": "279641ef2936.mp3"
+         "audio": "80f85a17988f.mp3"
         },
         {
          "t": "input",
@@ -9497,25 +9497,25 @@
        "questoes": [
         {
          "t": "choice",
-         "q": "Qual está bem escrito?",
+         "q": "Qual está bem escrito: excepção, excessão ou esceção?",
          "options": [
           "excepção",
           "excessão",
           "esceção"
          ],
          "a": 0,
-         "audio": "f24f064ded7c.mp3"
+         "audio": "bd9480fe6eae.mp3"
         },
         {
          "t": "choice",
-         "q": "Qual está bem escrito?",
+         "q": "Do verbo haver, qual está bem escrito: houve, ouve ou ove?",
          "options": [
           "houve",
           "ouve (do verbo haver)",
           "ove"
          ],
          "a": 0,
-         "audio": "f24f064ded7c.mp3"
+         "audio": "f0afb4451af4.mp3"
         },
         {
          "t": "choice",
@@ -9536,14 +9536,14 @@
         },
         {
          "t": "choice",
-         "q": "Qual está bem escrito?",
+         "q": "No fim da frase, qual está bem escrito: porquê, por que ou porque?",
          "options": [
           "porquê (no fim da frase)",
           "por que (no fim da frase)",
           "porque?"
          ],
          "a": 0,
-         "audio": "f24f064ded7c.mp3"
+         "audio": "9fde3da17a3d.mp3"
         }
        ]
       },
@@ -10681,9 +10681,9 @@
         },
         {
          "t": "input",
-         "q": "Em que ano foi criada a SADC?",
+         "q": "Escreve o ano em que foi criada a SADC.",
          "a": "1992",
-         "audio": "0b7682f44e7e.mp3"
+         "audio": "626980a8f818.mp3"
         },
         {
          "t": "choice",

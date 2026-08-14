@@ -190,7 +190,9 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     } else {
       HapticFeedback.heavyImpact();
       _abanao.forward(from: 0);
-      st.perderVida();
+      // Errar a praticar não custa coração: quem está a falhar precisa de
+      // mais treino, e tirar-lho seria fechar a porta a quem mais precisa.
+      if (!widget.eAvulsa) st.perderVida();
       // Fica guardada para rever mais tarde no separador Guardados.
       st.marcarErrada(q.q);
     }
@@ -199,7 +201,13 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
   void _seguinte() {
     if (idx + 1 >= qs.length) {
       final st = context.read<AppState>();
-      if (!widget.eAvulsa) st.concluirNivel(widget.indice, acertos, qs.length);
+      if (widget.eAvulsa) {
+        // Treino e revisão também dão XP e contam para a sequência: o ecrã de
+        // fim mostra "+XP ganho" e esse número tem de ser verdadeiro.
+        st.concluirTreino(acertos);
+      } else {
+        st.concluirNivel(widget.indice, acertos, qs.length);
+      }
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (_) => CompleteScreen(

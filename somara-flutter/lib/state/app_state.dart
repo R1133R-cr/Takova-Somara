@@ -59,19 +59,34 @@ class AppState extends ChangeNotifier {
       .toList();
 
   /// As perguntas erradas que ainda existem no currículo.
-  List<Questao> get paraRever =>
-      _todasDaClasse.where((q) => erradas.contains(q.q)).toList();
+  ///
+  /// Uma por enunciado. O mesmo enunciado pode estar em mais do que um nível
+  /// (a SADC, por exemplo, é perguntada em dois sítios da 6ª classe), e sem
+  /// esta filtragem a lista mostrava a mesma pergunta duas vezes e o
+  /// contador dizia 7 quando só havia 6 erros.
+  List<Questao> get paraRever {
+    final vistas = <String>{};
+    return [
+      for (final q in _todasDaClasse)
+        if (erradas.contains(q.q) && vistas.add(q.q)) q,
+    ];
+  }
 
   /// Perguntas dos níveis já concluídos, para treinar sem avançar no mapa.
   /// Sem níveis concluídos não há nada para treinar — e é assim que deve ser:
   /// treina-se o que já se aprendeu.
   List<Questao> perguntasDeTreino({int quantas = 10}) {
+    // Uma por enunciado, pela mesma razão que em [paraRever]: apanhar a mesma
+    // pergunta duas vezes num treino de dez faz o treino parecer avariado.
+    final vistas = <String>{};
     final feitas = <Questao>[];
     for (final curso in conteudo.cursos.where((c) => c.classe == classe)) {
       for (final u in curso.units) {
         for (final n in u.niveis) {
           if (progresso.containsKey('${curso.id}:${u.id}:${n.id}')) {
-            feitas.addAll(n.questoes);
+            for (final q in n.questoes) {
+              if (vistas.add(q.q)) feitas.add(q);
+            }
           }
         }
       }
@@ -80,7 +95,26 @@ class AppState extends ChangeNotifier {
     return feitas.take(quantas).toList();
   }
 
-  int get niveisConcluidos => progresso.length;
+  /// Níveis concluídos **na classe actual**.
+  ///
+  /// Conta só a classe porque é sempre comparado com [niveisDaClasse]. A
+  /// contagem crua de `progresso` inclui as outras classes, e quem trocasse
+  /// da 1ª para a 6ª via "6ª classe · 100% concluída" sem lá ter feito nada.
+  int get niveisConcluidos {
+    var n = 0;
+    for (final c in conteudo.cursos.where((c) => c.classe == classe)) {
+      for (final u in c.units) {
+        for (final nv in u.niveis) {
+          if (progresso.containsKey('${c.id}:${u.id}:${nv.id}')) n++;
+        }
+      }
+    }
+    return n;
+  }
+
+  /// Tudo o que já se fez, em todas as classes. É o número do Perfil: o
+  /// trabalho de um irmão mais velho não desaparece por o mais novo entrar.
+  int get niveisConcluidosTotal => progresso.length;
 
   int get niveisDaClasse => conteudo.cursos
       .where((c) => c.classe == classe)
@@ -158,11 +192,15 @@ class AppState extends ChangeNotifier {
         p.forEach((k, v) => progresso['$k'] = v as int);
         erradas.addAll(((j['erradas'] as List?) ?? []).cast<String>());
         _diaDasVidas = j['diaDasVidas'] as String?;
+        _vezesSemVidas = (j['vezesSemVidas'] ?? 0) as int;
+        final ate = j['bloqueadoAte'] as String?;
+        _bloqueadoAte = ate == null ? null : DateTime.tryParse(ate);
       } catch (_) {
         // Estado corrompido: recomeça limpo em vez de rebentar o arranque.
       }
     }
     _reporVidasSeMudouODia();
+    verificarFimDoBloqueio();
     pronto = true;
     notifyListeners();
 
@@ -194,6 +232,8 @@ class AppState extends ChangeNotifier {
         'progresso': progresso,
         'erradas': erradas.toList(),
         'diaDasVidas': _diaDasVidas,
+        'vezesSemVidas': _vezesSemVidas,
+        'bloqueadoAte': _bloqueadoAte?.toIso8601String(),
       }),
     );
   }
@@ -234,6 +274,68 @@ class AppState extends ChangeNotifier {
   /// Dia em que as vidas foram repostas pela última vez.
   String? _diaDasVidas;
 
+  /* ---- Bloqueio por vidas esgotadas ----
+     Cada vez que as vidas acabam no mesmo dia, a espera cresce. Sem isto o
+     contador de corações não queria dizer nada: descia a zero e a criança
+     continuava a jogar como se nada fosse.
+
+     A escada reinicia todos os dias. Sem esse reinício, uma criança que
+     tivesse um mau dia começaria o dia seguinte com três horas de castigo
+     por erros da véspera — que é o contrário do que uma app de escola deve
+     fazer. */
+  static const esperas = [
+    Duration(minutes: 5),
+    Duration(minutes: 15),
+    Duration(minutes: 30),
+    Duration(hours: 1),
+    Duration(hours: 3),
+  ];
+
+  int _vezesSemVidas = 0;
+  DateTime? _bloqueadoAte;
+
+  /// Quanto falta até poder recomeçar. Zero quando não há bloqueio.
+  Duration get esperaRestante {
+    final ate = _bloqueadoAte;
+    if (ate == null) return Duration.zero;
+    final falta = ate.difference(DateTime.now());
+    return falta.isNegative ? Duration.zero : falta;
+  }
+
+  bool get bloqueado => esperaRestante > Duration.zero;
+
+  /// Devolve as vidas quando a espera acaba. Chamado ao olhar para o relógio,
+  /// e não por um temporizador — a app pode estar fechada durante a espera,
+  /// e o que conta é a hora, não o tempo que esteve aberta.
+  void verificarFimDoBloqueio() {
+    if (_bloqueadoAte == null) return;
+    if (esperaRestante > Duration.zero) return;
+    _bloqueadoAte = null;
+    lives = maxLives;
+    notifyListeners();
+    _gravar();
+  }
+
+  /// A espera que vem a seguir, para se poder avisar antes de acontecer.
+  Duration get proximaEspera =>
+      esperas[_vezesSemVidas.clamp(0, esperas.length - 1)];
+
+  /// Fecha uma sessão de treino ou revisão.
+  ///
+  /// Dá XP e conta para a sequência do dia — praticar é estudar. O que não
+  /// faz é marcar níveis como concluídos: o Roby não avança na amarelinha
+  /// por treinar o que já sabia.
+  ///
+  /// Existe porque o ecrã de fim mostrava "+XP ganho" em sessões avulsas sem
+  /// que esse XP entrasse em lado nenhum — um número inventado à frente da
+  /// criança.
+  void concluirTreino(int acertos) {
+    xp += acertos * xpPorAcerto;
+    _sequencia = _sequencia.comActividadeEm(DateTime.now());
+    notifyListeners();
+    _gravar();
+  }
+
   /// Repõe as vidas se o dia mudou.
   ///
   /// Sem isto o contador descia até zero e ficava lá para sempre, sem
@@ -246,10 +348,20 @@ class AppState extends ChangeNotifier {
     if (_diaDasVidas == hoje) return;
     _diaDasVidas = hoje;
     lives = maxLives;
+    _vezesSemVidas = 0;
+    _bloqueadoAte = null;
   }
 
+  /// Perde uma vida. Nas sessões de revisão isto não é chamado — errar a
+  /// praticar não pode custar, senão a criança que mais precisa de treinar
+  /// é a que fica mais depressa sem poder treinar.
   void perderVida() {
-    if (lives > 0) lives--;
+    if (lives <= 0) return;
+    lives--;
+    if (lives == 0) {
+      _bloqueadoAte = DateTime.now().add(proximaEspera);
+      _vezesSemVidas++;
+    }
     notifyListeners();
     _gravar();
   }
