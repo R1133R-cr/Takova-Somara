@@ -17,7 +17,7 @@ class RankingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final st = context.watch<AppState>();
     final total = st.niveisDaClasse;
-    final feitos = st.niveisConcluidos.clamp(0, total);
+    final feitos = st.niveisConcluidos;
     final pct = total == 0 ? 0.0 : feitos / total;
 
     return ListView(

@@ -57,12 +57,14 @@ class _HomeShellState extends State<HomeShell> {
                 // do mapa de cada vez.
                 child: IndexedStack(
                   index: _aba,
-                  children: const [
-                    MapScreen(),
-                    PraticarScreen(),
-                    RankingScreen(),
-                    GuardadosScreen(),
-                    PerfilScreen(),
+                  children: [
+                    const MapScreen(),
+                    const PraticarScreen(),
+                    const RankingScreen(),
+                    const GuardadosScreen(),
+                    // Mudar de classe leva logo à amarelinha nova: é a
+                    // consequência visível que faltava.
+                    PerfilScreen(aoMudarClasse: () => setState(() => _aba = 0)),
                   ],
                 ),
               ),

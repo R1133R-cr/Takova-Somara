@@ -204,13 +204,26 @@ class _RobyTokenState extends State<RobyToken> with TickerProviderStateMixin {
                     bottom: 0,
                     child: Opacity(
                       opacity: (1 - arc / _arcHeight * 0.75).clamp(0.25, 1.0),
-                      child: Container(
-                        width: widget.size * (0.55 - arc / _arcHeight * 0.2),
-                        height: 8,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color(0x66000000),
-                        ),
+                      // Elipse por borderRadius e não BoxShape.circle:
+                      // `circle` ignora a largura e desenha uma bola do
+                      // tamanho do lado mais curto, ou seja 8 px. Dava um
+                      // ponto escuro solto ao lado dos pés dele, em vez da
+                      // sombra achatada que aqui se pretende.
+                      child: Builder(
+                        builder: (_) {
+                          final larguraSombra =
+                              widget.size * (0.55 - arc / _arcHeight * 0.2);
+                          return Container(
+                            width: larguraSombra,
+                            height: 8,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.elliptical(larguraSombra / 2, 4),
+                              ),
+                              color: const Color(0x66000000),
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ),
