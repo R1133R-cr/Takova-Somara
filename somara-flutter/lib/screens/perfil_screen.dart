@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../services/nuvem.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
+import 'conta_screen.dart';
 
 /// Quem sou eu, o que já fiz, e em que classe estou.
 class PerfilScreen extends StatelessWidget {
@@ -71,6 +73,14 @@ class PerfilScreen extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 28),
+
+        // Só aparece quando a nuvem está configurada. Enquanto não estiver,
+        // prometer "o teu progresso fica guardado" seria mentir — e é
+        // precisamente a promessa que não se pode falhar.
+        if (Nuvem.i.disponivel) ...[
+          _cartaoDaConta(context, st),
+          const SizedBox(height: 28),
+        ],
 
         // O som desliga-se aqui e não nas definições do telemóvel: o
         // telemóvel é da família, e há alturas — na sala de aula, com o bebé
@@ -180,6 +190,69 @@ class PerfilScreen extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+  /// Com sessão, mostra de quem é e deixa sair. Sem ela, convida a guardar.
+  Widget _cartaoDaConta(BuildContext context, AppState st) {
+    final comSessao = Nuvem.i.temSessao;
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: S.surface,
+        border: Border.all(
+          color: comSessao ? S.green500.withValues(alpha: 0.6) : S.line,
+          width: 2,
+        ),
+        borderRadius: BorderRadius.circular(S.rLg),
+      ),
+      child: Row(
+        children: [
+          Icon(
+            comSessao ? Icons.cloud_done_rounded : Icons.cloud_off_rounded,
+            color: comSessao ? S.green300 : S.txMut,
+            size: 24,
+          ),
+          const SizedBox(width: 13),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  comSessao ? 'Progresso guardado' : 'Guardar o progresso',
+                  style: const TextStyle(
+                    color: S.tx,
+                    fontSize: 15.5,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  comSessao
+                      ? (Nuvem.i.email ?? 'conta ligada')
+                      : 'Para não se perder se mudares de telemóvel.',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(color: S.txSoft, fontSize: 13),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+          if (comSessao)
+            TextButton(
+              onPressed: () => st.sairDaConta(),
+              child: const Text('Sair', style: TextStyle(color: S.life)),
+            )
+          else
+            TextButton(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const ContaScreen()),
+              ),
+              child: const Text('Guardar', style: TextStyle(color: S.chart)),
+            ),
+        ],
+      ),
     );
   }
 

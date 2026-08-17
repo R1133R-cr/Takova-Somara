@@ -54,6 +54,23 @@ class Sequencia {
     );
   }
 
+  /// Junta duas sequências da mesma criança, vindas de aparelhos
+  /// diferentes.
+  ///
+  /// Fica a que chegou mais longe no tempo; empatando no dia, a que tem
+  /// mais dias. Não se somam: a criança não estudou o dobro dos dias por
+  /// ter dois telemóveis, e inventar-lhe uma sequência maior do que a que
+  /// cumpriu seria mentir-lhe — que é o mesmo que [visivelEm] já recusa
+  /// fazer quando a sequência se parte.
+  Sequencia fundirCom(Sequencia outra) {
+    if (ultimoDia == null) return outra;
+    if (outra.ultimoDia == null) return this;
+    final c = ultimoDia!.compareTo(outra.ultimoDia!);
+    if (c > 0) return this;
+    if (c < 0) return outra;
+    return dias >= outra.dias ? this : outra;
+  }
+
   Map<String, dynamic> paraJson() => {'ultimoDia': ultimoDia, 'dias': dias};
 
   factory Sequencia.deJson(Map<String, dynamic>? j) {

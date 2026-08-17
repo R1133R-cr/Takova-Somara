@@ -22,7 +22,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # Editar este ficheiro com Get-Content/Set-Content do PowerShell estraga os
 # acentos (lê em ANSI e grava em UTF-8). Já aconteceu uma vez e ficou
 # commitado: alterar à mão, ou com uma ferramenta que respeite o UTF-8.
-version: 0.10.1+19
+version: 0.11.0+20
 
 environment:
   sdk: ^3.12.2
@@ -35,6 +35,14 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   audioplayers: ^6.8.1
+
+  # Contas e progresso na nuvem. Ficam inertes enquanto o
+  # lib/services/firebase_config.dart não tiver uma configuração real —
+  # a app trabalha inteira sem eles, que é como tem de ser em Lichinga.
+  cloud_firestore: ^5.6.0
+  firebase_auth: ^5.4.0
+  firebase_core: ^3.10.0
+
   flutter:
     sdk: flutter
 
