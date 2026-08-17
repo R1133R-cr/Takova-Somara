@@ -7,14 +7,26 @@
 # a versão antiga — o que mais tarde faz a Play Store recusar a entrega,
 # porque exige um versionCode maior que o anterior.
 #
-#   ./compilar.sh           APK de depuração (rápido, pesado, para testar)
-#   ./compilar.sh release   APK de entrega (mais lento, ~4x mais leve)
+#   ./compilar.sh              APK de depuração (rápido, pesado, para testar)
+#   ./compilar.sh release      APK de entrega, um ficheiro para todos os
+#                              telemóveis — é o que se manda por WhatsApp
+#   ./compilar.sh release abi  um APK por arquitectura, cada um ~1/3 do
+#                              tamanho
+#
+# O corte por arquitectura conta: um APK único leva o código do motor do
+# Flutter compilado para ARM de 32 bits, ARM de 64 e x86_64, e cada
+# telemóvel só usa um deles. Quem paga os dados ao megabyte descarrega
+# três vezes o que precisa. Para a Play Store isto nem se põe — envia-se
+# um AAB e a loja trata do assunto; isto é para a entrega à mão, que é
+# como a app chega às escolas.
 
 set -euo pipefail
 cd "$(dirname "$0")"
 
 MODO="${1:-debug}"
+SPLIT="${2:-}"
 [[ "$MODO" == "debug" || "$MODO" == "release" ]] || { echo "modo inválido: $MODO"; exit 1; }
+[[ -z "$SPLIT" || "$SPLIT" == "abi" ]] || { echo "segundo argumento: 'abi' ou nada"; exit 1; }
 
 export JAVA_HOME="/c/Users/R1133R/AppData/Local/Android/jdk"
 export ANDROID_SDK_ROOT="/c/Users/R1133R/AppData/Local/Android/Sdk"
@@ -45,16 +57,30 @@ flutter test >/dev/null
 echo "   sem problemas"
 
 echo "── a compilar"
-flutter build apk --"$MODO" >/dev/null
-
-ORIGEM="build/app/outputs/flutter-apk/app-${MODO}.apk"
 mkdir -p "$ARQUIVO"
-cp "$ORIGEM" "$ALVO"
 
-TAM=$(du -m "$ALVO" | cut -f1)
-echo
-echo "  APK:     $(cd "$ARQUIVO" && pwd)/$(basename "$ALVO")"
-echo "  tamanho: ${TAM} MB"
+if [[ "$SPLIT" == "abi" ]]; then
+  flutter build apk --"$MODO" --split-per-abi >/dev/null
+  echo
+  for ABI in armeabi-v7a arm64-v8a x86_64; do
+    ORIGEM="build/app/outputs/flutter-apk/app-${ABI}-${MODO}.apk"
+    [[ -e "$ORIGEM" ]] || continue
+    DESTINO="$ARQUIVO/somara-${NOME}+${CODIGO}-${ABI}-${MODO}.apk"
+    cp "$ORIGEM" "$DESTINO"
+    echo "  $(du -m "$DESTINO" | cut -f1) MB   $(basename "$DESTINO")"
+  done
+  echo
+  echo "  arm64-v8a serve a esmagadora maioria dos telemóveis desde 2016."
+  echo "  armeabi-v7a é para os mais antigos; x86_64 só para emuladores."
+else
+  flutter build apk --"$MODO" >/dev/null
+  ORIGEM="build/app/outputs/flutter-apk/app-${MODO}.apk"
+  cp "$ORIGEM" "$ALVO"
+  TAM=$(du -m "$ALVO" | cut -f1)
+  echo
+  echo "  APK:     $(cd "$ARQUIVO" && pwd)/$(basename "$ALVO")"
+  echo "  tamanho: ${TAM} MB"
+fi
 echo
 echo "  cópias guardadas:"
 ls -1t "$ARQUIVO"/*.apk 2>/dev/null | head -6 | sed 's|.*/|    |'

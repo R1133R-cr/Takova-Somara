@@ -1,10 +1,12 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/content.dart';
 import '../models/sequencia.dart';
 import '../services/conteudo_remoto.dart';
+import '../services/nuvem.dart';
 import '../services/sons.dart';
 
 /// Estado do aluno — o equivalente ao localStorage `somara_state_v2` da
@@ -221,6 +223,20 @@ class AppState extends ChangeNotifier {
     // Só agora se vai à rede: a app já abriu e a criança já pode jogar.
     // Sem `await` de propósito — isto corre por trás e nunca atrasa nada.
     unawaited(_procurarConteudoNovo());
+    unawaited(_retomarSessaoDaNuvem());
+  }
+
+  /// Se a sessão da conta ainda estiver aberta, traz o que houver de novo.
+  ///
+  /// Corre por trás, depois de a app já estar a jogar. A criança não pode
+  /// ficar à espera de uma rede fraca para abrir a amarelinha — e se a rede
+  /// não responder, fica com o que tem no telemóvel, que é tudo o que
+  /// precisa.
+  Future<void> _retomarSessaoDaNuvem() async {
+    if (!Nuvem.i.temSessao) return;
+    final daNuvem = await Nuvem.i.puxar();
+    if (daNuvem != null) fundirDaNuvem(daNuvem);
+    await Nuvem.i.contarAbertura(Sequencia.iso(DateTime.now()));
   }
 
   Future<void> _procurarConteudoNovo() async {
@@ -232,6 +248,11 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> _gravar() async {
+    // O telemóvel primeiro, sempre. A nuvem é uma cópia de segurança do
+    // que já está gravado aqui, nunca o contrário — se a rede falhar, não
+    // se perde nada.
+    Nuvem.i.empurrar(paraNuvem());
+
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(
       _key,
@@ -265,6 +286,101 @@ class AppState extends ChangeNotifier {
     if (daClasse.isNotEmpty) cursoId = daClasse.first.id;
     notifyListeners();
     _gravar();
+  }
+
+  /* ---------------- Progresso na nuvem ----------------
+     Só o que é da criança viaja: o que aprendeu, quanto XP tem, que dias
+     estudou. As vidas, o bloqueio e o som ficam de fora de propósito —
+     são do aparelho e do momento, não dela. Sincronizar um castigo de
+     três horas para o telemóvel da escola seria absurdo. */
+
+  Map<String, dynamic> paraNuvem() => {
+    'nome': nome,
+    'classe': classe,
+    'xp': xp,
+    'sequencia': _sequencia.paraJson(),
+    'cursoId': cursoId,
+    'progresso': progresso,
+    'erradas': erradas.toList(),
+  };
+
+  /// Junta o que veio da nuvem com o que está no telemóvel.
+  ///
+  /// Fica sempre com o melhor dos dois, nunca com o mais recente. É a
+  /// diferença entre sincronizar e apagar: uma criança que passou a tarde
+  /// a jogar sem rede e depois entra na conta não pode ver esse trabalho
+  /// desaparecer porque o servidor tinha uma cópia mais antiga.
+  ///
+  /// O nome e a classe são a excepção, e por uma razão: entrar numa conta
+  /// é dizer "sou eu, este telemóvel é novo". Aí o que vale é o que a
+  /// conta diz, não o que ficou escrito no aparelho.
+  void fundirDaNuvem(Map<String, dynamic> n) {
+    final nomeN = (n['nome'] ?? '') as String;
+    if (nomeN.trim().isNotEmpty) nome = nomeN;
+
+    final classeN = (n['classe'] ?? '') as String;
+    if (classeN.trim().isNotEmpty && conteudo.cursos.any((c) => c.classe == classeN)) {
+      classe = classeN;
+    }
+
+    xp = math.max(xp, (n['xp'] ?? 0) as int);
+    _sequencia = _sequencia.fundirCom(
+      Sequencia.deJson(n['sequencia'] as Map<String, dynamic>?),
+    );
+
+    // Por nível fica a melhor percentagem. Repetir um nível e sair-se pior
+    // não pode apagar o resultado bom que já lá estava.
+    final pN = (n['progresso'] as Map?) ?? {};
+    pN.forEach((k, v) {
+      final chave = '$k';
+      final valor = (v as num).toInt();
+      progresso[chave] = math.max(progresso[chave] ?? 0, valor);
+    });
+
+    // As erradas juntam-se as duas: uma pergunta falhada noutro telemóvel
+    // continua por rever neste. Sai da lista quando for acertada.
+    erradas.addAll(((n['erradas'] as List?) ?? []).cast<String>());
+
+    final cursoN = n['cursoId'] as String?;
+    if (cursoN != null && cursosVisiveis.any((c) => c.id == cursoN)) {
+      cursoId = cursoN;
+    } else if (!cursosVisiveis.any((c) => c.id == cursoId)) {
+      cursoId = cursosVisiveis.first.id;
+    }
+
+    notifyListeners();
+    _gravar();
+  }
+
+  /// Entra na conta e funde os dois lados. Devolve nulo se correu bem, ou
+  /// a mensagem a mostrar ao adulto que está a tratar disto.
+  Future<String?> entrarNaConta(
+    String email,
+    String palavra, {
+    required bool contaNova,
+  }) async {
+    try {
+      if (contaNova) {
+        await Nuvem.i.criarConta(email, palavra);
+      } else {
+        await Nuvem.i.entrar(email, palavra);
+      }
+      final daNuvem = await Nuvem.i.puxar();
+      if (daNuvem != null) fundirDaNuvem(daNuvem);
+      // Sobe já o resultado da fusão: se a app fechasse agora, o que a
+      // criança fez offline ficaria só neste telemóvel.
+      await Nuvem.i.empurrarJa(paraNuvem());
+      await Nuvem.i.contarAbertura(Sequencia.iso(DateTime.now()));
+      notifyListeners();
+      return null;
+    } catch (e) {
+      return Nuvem.explicar(e);
+    }
+  }
+
+  Future<void> sairDaConta() async {
+    await Nuvem.i.sair();
+    notifyListeners();
   }
 
   Future<void> definirSom(bool ligado) async {
@@ -391,9 +507,13 @@ class AppState extends ChangeNotifier {
   void concluirNivel(int i, int acertos, int total) {
     final lv = niveis[i];
     final pct = total == 0 ? 0 : (acertos * 100 / total).round();
-    progresso[chaveDe(lv.unit, lv.nivel)] = pct;
+    // A melhor nota fica. Refazer um nível para treinar não pode baixar o
+    // que já se tinha conseguido.
+    final chave = chaveDe(lv.unit, lv.nivel);
+    progresso[chave] = math.max(progresso[chave] ?? 0, pct);
     xp += acertos * xpPorAcerto + xpPorNivel;
     _sequencia = _sequencia.comActividadeEm(DateTime.now());
+    unawaited(Nuvem.i.contarLicao());
     notifyListeners();
     _gravar();
   }

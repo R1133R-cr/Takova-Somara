@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'services/nuvem.dart';
 import 'services/sons.dart';
 import 'state/app_state.dart';
 import 'theme.dart';
 import 'widgets/carregando.dart';
 import 'screens/welcome_screen.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Antes do runApp para a app já saber, na primeira frame, se há sessão
+  // aberta. Não vai à rede: só arranca o SDK, e devolve logo se a consola
+  // ainda não estiver configurada.
+  await Nuvem.i.arrancar();
   // App para crianças: só retrato, para o tabuleiro nunca ficar deitado.
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

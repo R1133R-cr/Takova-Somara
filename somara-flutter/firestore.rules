@@ -1,0 +1,25 @@
+rules_version = '2';
+
+// Regras do Firestore da Somara.
+//
+// Colar no separador "Rules" da consola do Firebase e publicar. Sem isto,
+// uma base criada em "modo de teste" fica aberta a qualquer pessoa da
+// internet durante 30 dias — e depois fecha-se sozinha e a app pára.
+//
+// A regra é uma só: cada aluno lê e escreve o seu próprio documento, mais
+// nada. Ninguém pode ler o progresso de outra criança, nem listar quem
+// existe. São dados de menores; o mínimo é este.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /learners/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // Tudo o resto fica fechado. Sem esta linha, uma colecção nova criada
+    // por engano nascia sem regra nenhuma.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
