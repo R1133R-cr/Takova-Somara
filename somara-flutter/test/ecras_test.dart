@@ -4,12 +4,14 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:somara/models/content.dart';
 import 'package:somara/models/crossmath.dart';
+import 'package:somara/models/sopa.dart';
 import 'package:somara/screens/crossmath_screen.dart';
 import 'package:somara/screens/guardados_screen.dart';
 import 'package:somara/screens/joguinhos_screen.dart';
 import 'package:somara/screens/materia_screen.dart';
 import 'package:somara/screens/perfil_screen.dart';
 import 'package:somara/screens/pomar_screen.dart';
+import 'package:somara/screens/sopa_screen.dart';
 import 'package:somara/screens/praticar_screen.dart';
 import 'package:somara/screens/ranking_screen.dart';
 import 'package:somara/state/app_state.dart';
@@ -92,6 +94,12 @@ void main() {
 
   for (final d in Dificuldade.values) {
     verificar('Crossmath ${d.rotulo}', () => CrossmathScreen(dificuldade: d));
+  }
+
+  // A sopa é a que mais arrisca transbordar: a grelha do difícil tem doze
+  // letras de lado e a lista de palavras é comprida.
+  for (final n in NivelSopa.values) {
+    verificar('Sopa ${n.rotulo}', () => SopaScreen(nivel: n));
   }
 
   group('a aula, com a matéria mais comprida que existe', () {

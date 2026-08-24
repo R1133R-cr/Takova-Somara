@@ -3,8 +3,10 @@ import '../models/crossmath.dart';
 import '../services/sons.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
+import '../models/sopa.dart';
 import 'crossmath_screen.dart';
 import 'pomar_screen.dart';
+import 'sopa_screen.dart';
 
 /// A sala dos joguinhos.
 ///
@@ -68,6 +70,24 @@ class JoguinhosScreen extends StatelessWidget {
               detalhe: '20 jogadas',
               abrir: (BuildContext ctx) => const PomarScreen(),
             ),
+          ],
+        ),
+
+        const SizedBox(height: 14),
+
+        _CartaoDoJogo(
+          titulo: 'Sopa de letras',
+          descricao:
+              'Arrasta por cima das letras para descobrir as palavras '
+              'escondidas. Animais, frutas, a escola, o corpo e Moçambique.',
+          pose: RobyPose.graduate,
+          botoes: [
+            for (final n in NivelSopa.values)
+              (
+                rotulo: n.rotulo,
+                detalhe: '${n.quantasPalavras} palavras',
+                abrir: (BuildContext ctx) => SopaScreen(nivel: n),
+              ),
           ],
         ),
 
