@@ -3,27 +3,37 @@ import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
 
+/// Qual das trilhas deve estar a tocar.
+enum Trilha {
+  /// A app em geral: mapa, separadores, perfil, ranking.
+  principal('som/principal.mp3'),
+
+  /// A sala dos joguinhos. Outro ambiente de propósito — entrar ali é sair
+  /// da escola, e a música é a primeira coisa que diz isso.
+  relaxar('som/relaxar.mp3');
+
+  final String ficheiro;
+  const Trilha(this.ficheiro);
+}
+
 /// O som da app.
 ///
 /// Não é enfeite: para uma criança de seis anos o som é metade da razão
 /// para voltar. Uma app muda parece avariada.
 ///
-/// Os ficheiros são sintetizados em `tools/sons.py` — licença nossa, uns
-/// kilobytes cada. O de erro é grave e macio de propósito: uma criança que
-/// erra já se sente mal, e um som estridente ensina-lhe a ter medo de
-/// tentar.
+/// ## As duas trilhas e o silêncio
 ///
-/// ## Porque é que isto é escrito assim
+/// A música de fundo acompanha a interface, mas **cala-se durante os
+/// exercícios**. Uma pergunta de Matemática exige concentração, e música
+/// por cima de quem está a contar nos dedos atrapalha em vez de animar. Os
+/// joguinhos são o contrário: aí a música é parte do descanso.
 ///
-/// A primeira versão tinha três sinalizadores — ligado, pedido, pausado
-/// pelo ciclo de vida — e a música tocava só quando os três estavam de
-/// acordo. Bastava um ficar presa para o resultado ser silêncio absoluto,
-/// sem erro nenhum no log e sem nada no ecrã a dizê-lo. Foi o que
-/// aconteceu.
+/// ## Porque é que o silêncio é um contador e não um sim/não
 ///
-/// Agora há um só estado desejado ([_deveTocar]) e uma operação idempotente
-/// que o vai impor ([garantirFundo]). Chamar duas vezes não faz mal, e
-/// qualquer sítio da app pode chamá-la sem saber o que aconteceu antes.
+/// A Matéria abre a Lição com `pushReplacement`: a Lição entra em cena
+/// **antes** de a Matéria sair. Com um sinalizador simples, o `dispose` da
+/// Matéria devolvia a música a meio da Lição. Com um contador, o +1 da
+/// Lição e o -1 da Matéria deixam o saldo em 1 e o silêncio aguenta-se.
 class Sons {
   Sons._();
   static final Sons i = Sons._();
@@ -35,11 +45,25 @@ class Sons {
 
   bool _ligado = true;
 
-  /// A app quer música (está aberta, em primeiro plano, com som ligado).
-  bool _deveTocar = false;
+  /// A app está à vista.
+  bool _emCena = false;
 
-  /// O que já se mandou tocar, para não mandar duas vezes.
-  bool _aTocar = false;
+  /// A trilha que a parte da app onde se está pede.
+  Trilha _ambiente = Trilha.principal;
+
+  /// Quantos ecrãs abertos pedem silêncio. Ver a nota da classe.
+  int _pedidosDeSilencio = 0;
+
+  /// O que está mesmo a tocar, para não voltar a mandar o mesmo.
+  Trilha? _aTocar;
+
+  /// As mudanças de trilha em fila, uma de cada vez.
+  ///
+  /// Trocar de separador depressa disparava dois [_garantir] ao mesmo
+  /// tempo, e os dois mexiam no mesmo leitor: um mandava parar enquanto o
+  /// outro mandava tocar, e o resultado era silêncio permanente. Encadeadas,
+  /// a segunda só começa quando a primeira acabar.
+  Future<void> _fila = Future.value();
 
   bool get ligado => _ligado;
 
@@ -48,6 +72,45 @@ class Sons {
   static const _volumeFundo = 0.34;
   static const _volumeEfeito = 1.0;
 
+  /// A trilha que devia estar a tocar agora, ou nula para silêncio.
+  Trilha? get _desejada {
+    if (!_ligado || !_emCena || _pedidosDeSilencio > 0) return null;
+    return _ambiente;
+  }
+
+  /// Põe a tocar o que se deve estar a ouvir.
+  ///
+  /// Idempotente e sem excepções para fora: chama-se do arranque, da troca
+  /// de separador, ao entrar e sair de cada lição, e sempre que a app volta
+  /// ao primeiro plano. Chamar duas vezes não faz mal.
+  Future<void> _garantir() {
+    _fila = _fila.then((_) => _aplicar());
+    return _fila;
+  }
+
+  Future<void> _aplicar() async {
+    final querida = _desejada;
+    if (querida == _aTocar) return;
+    try {
+      // Parar sempre antes de tocar, mesmo para trocar de trilha. Mandar
+      // tocar outra fonte num leitor que ainda está a tocar deixava-o num
+      // estado em que não tocava mais nada — foi o que calou a app inteira
+      // a partir da primeira troca de separador.
+      await _fundo.stop();
+      _aTocar = null;
+
+      if (querida != null) {
+        await _fundo.setReleaseMode(ReleaseMode.loop);
+        await _fundo.setVolume(_volumeFundo);
+        await _fundo.play(AssetSource(querida.ficheiro));
+      }
+      _aTocar = querida;
+    } catch (e) {
+      // Fica por tocar e tenta na próxima. Nunca rebenta uma lição por isto.
+      debugPrint('trilha: $e');
+    }
+  }
+
   Future<void> definirLigado(bool valor) async {
     _ligado = valor;
     if (!valor) {
@@ -55,35 +118,13 @@ class Sons {
         await p.stop();
       }
     }
-    await garantirFundo();
-  }
-
-  /// Liga ou desliga a música consoante o estado desejado.
-  ///
-  /// Idempotente e sem excepções para fora: é chamada do arranque, da troca
-  /// do interruptor, e de cada vez que a app volta ao primeiro plano.
-  Future<void> garantirFundo() async {
-    final devia = _deveTocar && _ligado;
-    if (devia == _aTocar) return;
-    try {
-      if (devia) {
-        await _fundo.setReleaseMode(ReleaseMode.loop);
-        await _fundo.setVolume(_volumeFundo);
-        await _fundo.play(AssetSource('som/fundo.wav'));
-      } else {
-        await _fundo.stop();
-      }
-      _aTocar = devia;
-    } catch (e) {
-      // Fica por tocar e tenta na próxima. Nunca rebenta uma lição por isto.
-      debugPrint('trilha de fundo: $e');
-    }
+    await _garantir();
   }
 
   /// A app está à vista e a música deve andar.
   Future<void> emPrimeiroPlano() async {
-    _deveTocar = true;
-    await garantirFundo();
+    _emCena = true;
+    await _garantir();
   }
 
   /// A app saiu de vista.
@@ -91,8 +132,26 @@ class Sons {
   /// Cala tudo — num telemóvel partilhado com a família, música a sair de
   /// uma app fechada é o tipo de coisa que faz um pai desinstalá-la.
   Future<void> emSegundoPlano() async {
-    _deveTocar = false;
-    await garantirFundo();
+    _emCena = false;
+    await _garantir();
+  }
+
+  /// Qual das trilhas a parte da app onde se está quer ouvir.
+  Future<void> definirAmbiente(Trilha t) async {
+    if (_ambiente == t) return;
+    _ambiente = t;
+    await _garantir();
+  }
+
+  /// Um ecrã de exercício abriu: música fora até ele fechar.
+  Future<void> pedirSilencio() async {
+    _pedidosDeSilencio++;
+    await _garantir();
+  }
+
+  Future<void> largarSilencio() async {
+    if (_pedidosDeSilencio > 0) _pedidosDeSilencio--;
+    await _garantir();
   }
 
   Future<void> _tocar(String ficheiro) async {

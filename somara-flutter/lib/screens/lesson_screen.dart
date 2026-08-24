@@ -89,6 +89,11 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       duration: const Duration(milliseconds: 420),
     );
     _prepararQuestao();
+    // Musica fora enquanto se resolve. Uma pergunta de Matematica exige
+    // concentracao, e som por cima de quem esta a contar nos dedos
+    // atrapalha em vez de animar. E o enunciado lido em voz alta tem de se
+    // ouvir por cima de nada.
+    Sons.i.pedirSilencio();
     _lerEnunciado();
   }
 
@@ -111,6 +116,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
 
   @override
   void dispose() {
+    Sons.i.largarSilencio();
     _entrada.dispose();
     _abanao.dispose();
     _input.dispose();

@@ -43,6 +43,14 @@ echo "── Somara ${NOME} (código ${CODIGO}) · ${MODO}"
 
 # Recusar sobrepor uma versão já arquivada: a cópia antiga é justamente o
 # que permite voltar atrás quando uma versão nova sai com defeito.
+#
+# Em modo ABI os ficheiros têm outro nome, e o guarda tem de olhar para
+# esses — senão recusava-se a gerar a divisão de uma versão cujo APK
+# único já existisse, que é precisamente o caso normal.
+if [[ "$SPLIT" == "abi" ]]; then
+  ALVO="$ARQUIVO/somara-${NOME}+${CODIGO}-arm64-v8a-${MODO}.apk"
+fi
+
 if [[ -e "$ALVO" ]]; then
   echo
   echo "ERRO: já existe $ALVO"

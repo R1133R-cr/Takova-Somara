@@ -4,6 +4,7 @@ import '../services/sons.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
 import 'crossmath_screen.dart';
+import 'pomar_screen.dart';
 
 /// A sala dos joguinhos.
 ///
@@ -44,7 +45,30 @@ class JoguinhosScreen extends StatelessWidget {
               'As contas têm de fechar nas linhas e nas colunas ao mesmo '
               'tempo. Descobre os números que faltam.',
           pose: RobyPose.curioso,
-          niveis: Dificuldade.values,
+          botoes: [
+            for (final d in Dificuldade.values)
+              (
+                rotulo: d.rotulo,
+                detalhe: 'até ${d.tecto}',
+                abrir: (BuildContext ctx) => CrossmathScreen(dificuldade: d),
+              ),
+          ],
+        ),
+        const SizedBox(height: 14),
+
+        _CartaoDoJogo(
+          titulo: 'Pomar',
+          descricao:
+              'Junta três ou mais do mesmo produto. Manga, banana, coco, '
+              'milho, tomate e amendoim.',
+          pose: RobyPose.empolgado,
+          botoes: [
+            (
+              rotulo: 'Jogar',
+              detalhe: '20 jogadas',
+              abrir: (BuildContext ctx) => const PomarScreen(),
+            ),
+          ],
         ),
 
         const SizedBox(height: 26),
@@ -68,17 +92,27 @@ class JoguinhosScreen extends StatelessWidget {
   }
 }
 
+/// Um botão de entrada num jogo: o que diz e o ecrã que abre.
+typedef BotaoDeJogo = ({
+  String rotulo,
+  String detalhe,
+  Widget Function(BuildContext) abrir,
+});
+
 class _CartaoDoJogo extends StatelessWidget {
   final String titulo;
   final String descricao;
   final RobyPose pose;
-  final List<Dificuldade> niveis;
+
+  /// Um ou vários — o Crossmath tem três dificuldades, o Pomar tem um só
+  /// modo. O cartão serve os dois sem saber a diferença.
+  final List<BotaoDeJogo> botoes;
 
   const _CartaoDoJogo({
     required this.titulo,
     required this.descricao,
     required this.pose,
-    required this.niveis,
+    required this.botoes,
   });
 
   @override
@@ -139,9 +173,9 @@ class _CartaoDoJogo extends StatelessWidget {
           const SizedBox(height: 16),
           Row(
             children: [
-              for (final d in niveis) ...[
-                Expanded(child: _botaoDeNivel(context, d)),
-                if (d != niveis.last) const SizedBox(width: 8),
+              for (final b in botoes) ...[
+                Expanded(child: _botao(context, b)),
+                if (b != botoes.last) const SizedBox(width: 8),
               ],
             ],
           ),
@@ -150,12 +184,10 @@ class _CartaoDoJogo extends StatelessWidget {
     );
   }
 
-  Widget _botaoDeNivel(BuildContext context, Dificuldade d) => GestureDetector(
+  Widget _botao(BuildContext context, BotaoDeJogo b) => GestureDetector(
     onTap: () {
       Sons.i.toque();
-      Navigator.of(context).push(
-        MaterialPageRoute(builder: (_) => CrossmathScreen(dificuldade: d)),
-      );
+      Navigator.of(context).push(MaterialPageRoute(builder: b.abrir));
     },
     child: Container(
       padding: const EdgeInsets.symmetric(vertical: 11),
@@ -167,7 +199,7 @@ class _CartaoDoJogo extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            d.rotulo,
+            b.rotulo,
             style: const TextStyle(
               color: S.chart,
               fontSize: 14,
@@ -175,10 +207,10 @@ class _CartaoDoJogo extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 1),
-          // O tecto dito por extenso: é a informação que diz a um pai se
+          // O detalhe dito por extenso: é a informação que diz a um pai se
           // aquilo serve para o filho, sem ter de o pôr a experimentar.
           Text(
-            'até ${d.tecto}',
+            b.detalhe,
             style: const TextStyle(color: S.txMut, fontSize: 11),
           ),
         ],
