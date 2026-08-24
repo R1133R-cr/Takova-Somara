@@ -39,6 +39,10 @@ class _CrossmathScreenState extends State<CrossmathScreen>
   @override
   void initState() {
     super.initState();
+    // A trilha muda ao COMECAR o jogo, nao ao espreitar a sala. Percorrer
+    // os separadores e navegar; abrir um jogo e outra coisa, e e so ai que
+    // o ambiente tem de mudar.
+    Sons.i.definirAmbiente(Trilha.relaxar);
     _abanao = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 420),
@@ -48,6 +52,7 @@ class _CrossmathScreenState extends State<CrossmathScreen>
 
   @override
   void dispose() {
+    Sons.i.definirAmbiente(Trilha.principal);
     _abanao.dispose();
     super.dispose();
   }

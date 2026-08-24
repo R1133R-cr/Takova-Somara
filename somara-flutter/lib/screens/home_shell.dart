@@ -134,7 +134,6 @@ class _HomeShellState extends State<HomeShell> {
                     onTap: () {
                       Sons.i.toque();
                       setState(() => _aba = i);
-                      _trilhaDoSeparador(i);
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -177,15 +176,6 @@ class _HomeShellState extends State<HomeShell> {
           ),
         ),
       ),
-    );
-  }
-
-  /// A música muda com o separador. Entrar nos joguinhos é sair da escola,
-  /// e a trilha e a primeira coisa que o diz -- antes de a crianca ler o
-  /// titulo.
-  void _trilhaDoSeparador(int i) {
-    Sons.i.definirAmbiente(
-      _abas[i].rotulo == 'Joguinhos' ? Trilha.relaxar : Trilha.principal,
     );
   }
 

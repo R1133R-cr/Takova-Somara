@@ -14,6 +14,9 @@ void main() async {
   // aberta. Não vai à rede: só arranca o SDK, e devolve logo se a consola
   // ainda não estiver configurada.
   await Nuvem.i.arrancar();
+  // Antes de qualquer som: define o foco de áudio para os nossos efeitos
+  // não calarem a nossa própria música.
+  await Sons.i.arrancar();
   // App para crianças: só retrato, para o tabuleiro nunca ficar deitado.
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,

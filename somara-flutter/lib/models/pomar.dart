@@ -226,8 +226,43 @@ class Pomar {
     return Pomar.novo(linhas: linhas, colunas: colunas, rnd: r);
   }
 
-  /// Pontos de uma colheita. Trios valem pouco; grupos maiores valem
-  /// desproporcionadamente mais, que é o que faz valer a pena procurar.
-  static int pontosDe(int quantas) =>
-      quantas * 10 + (quantas > 3 ? (quantas - 3) * 15 : 0);
+  /// Pontos de uma colheita, por número de peças.
+  ///
+  /// Os saltos são grandes de propósito. Num match-3, o que separa quem
+  /// arrasta peças à toa de quem procura é ver que quatro vale o dobro de
+  /// três e cinco vale quase o quádruplo — se a diferença for pequena, não
+  /// compensa procurar e o jogo vira sorte.
+  static int pontosDe(int quantas) {
+    if (quantas <= 3) return 60;
+    if (quantas == 4) return 120;
+    if (quantas == 5) return 220;
+    return 220 + (quantas - 5) * 90;
+  }
+
+  /// Prémio por cada cascata seguida, a partir da segunda.
+  ///
+  /// É a mecânica que os jogos do género usam para premiar quem viu longe:
+  /// a peça que cai e forma outro trio sozinha vale mais do que a que foi
+  /// trocada à mão. Cresce em degraus fixos e não por multiplicação —
+  /// multiplicar dava mil pontos numa jogada feliz e tornava as outras
+  /// dezanove irrelevantes.
+  static int premioDeCascata(int nivel) => nivel <= 1 ? 0 : (nivel - 1) * 50;
+
+  /// O que a criança ouve, conforme o tamanho do feito.
+  ///
+  /// A escada existe porque é ela que faz querer jogar outra vez: chegar ao
+  /// topo tem de ser raro e tem de se ouvir. Silêncio abaixo de cinco peças
+  /// — uma voz a cada trio seria ruído em vez de prémio.
+  static String? vozPara(int quantas, int nivelDeCascata) {
+    if (nivelDeCascata >= 4) return 'voz-sequencia.mp3';
+    if (quantas >= 8) return 'voz-fantastico.mp3';
+    if (quantas >= 6) return 'voz-excelente.mp3';
+    if (quantas >= 5) return 'voz-muito-bem.mp3';
+    if (nivelDeCascata >= 2) return 'voz-boa.mp3';
+    return null;
+  }
+
+  /// Quantas estrelinhas saltam de uma colheita.
+  static int estrelasPara(int quantas) =>
+      quantas <= 3 ? 0 : (quantas - 2) * 3;
 }

@@ -111,6 +111,39 @@ class Sons {
     }
   }
 
+  /// Prepara o áudio antes de qualquer som tocar.
+  ///
+  /// Sem isto, cada efeito calava a música: por omissão o audioplayers pede
+  /// **foco exclusivo** de áudio a cada `play`, e o sistema pára tudo o
+  /// resto para lho dar — incluindo a nossa própria trilha, que assim
+  /// morria ao primeiro toque num separador e só voltava quando algo a
+  /// reiniciava. Foi isto que deixou a app praticamente muda.
+  ///
+  /// Com `AndroidAudioFocus.none`, os nossos sons convivem uns com os
+  /// outros. O efeito lateral é não interrompermos a música de outra app —
+  /// e num telemóvel de família isso é melhor educação, não pior.
+  Future<void> arrancar() async {
+    try {
+      await AudioPlayer.global.setAudioContext(
+        AudioContext(
+          android: AudioContextAndroid(
+            isSpeakerphoneOn: false,
+            stayAwake: false,
+            contentType: AndroidContentType.music,
+            usageType: AndroidUsageType.media,
+            audioFocus: AndroidAudioFocus.none,
+          ),
+          iOS: AudioContextIOS(
+            category: AVAudioSessionCategory.ambient,
+            options: {AVAudioSessionOptions.mixWithOthers},
+          ),
+        ),
+      );
+    } catch (e) {
+      debugPrint('contexto de áudio: $e');
+    }
+  }
+
   Future<void> definirLigado(bool valor) async {
     _ligado = valor;
     if (!valor) {
@@ -165,6 +198,12 @@ class Sons {
       debugPrint('som $ficheiro: $e');
     }
   }
+
+  /// Uma voz de festejo dos joguinhos, pelo nome do ficheiro.
+  ///
+  /// Vem do modelo do jogo e não daqui: é lá que se decide o que o feito
+  /// merece, e esta classe só sabe tocar.
+  Future<void> voz(String ficheiro) => _tocar(ficheiro);
 
   Future<void> toque() => _tocar('toque.wav');
   Future<void> certo() => _tocar('certo.wav');

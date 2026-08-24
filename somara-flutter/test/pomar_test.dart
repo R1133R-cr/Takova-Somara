@@ -176,10 +176,54 @@ void main() {
     expect(p.grupos(), isEmpty);
   });
 
-  test('grupos maiores valem mais do que vários trios', () {
-    // É o que faz valer a pena procurar em vez de trocar à toa.
-    expect(Pomar.pontosDe(5), greaterThan(Pomar.pontosDe(3) + Pomar.pontosDe(3) ~/ 2));
-    expect(Pomar.pontosDe(4), greaterThan(Pomar.pontosDe(3)));
+  group('o prémio', () {
+    test('cada peça a mais vale bastante mais', () {
+      // Se a diferença fosse pequena, não compensava procurar e o jogo
+      // virava sorte.
+      expect(Pomar.pontosDe(4), Pomar.pontosDe(3) * 2);
+      expect(Pomar.pontosDe(5), greaterThan(Pomar.pontosDe(4) * 1.5));
+      for (var n = 4; n <= 12; n++) {
+        expect(Pomar.pontosDe(n), greaterThan(Pomar.pontosDe(n - 1)),
+            reason: '$n peças devia valer mais do que ${n - 1}');
+      }
+    });
+
+    test('as cascatas premeiam em degraus, não por multiplicação', () {
+      expect(Pomar.premioDeCascata(1), 0, reason: 'a primeira não é cascata');
+      expect(Pomar.premioDeCascata(2), greaterThan(0));
+      // Em degraus fixos: a diferença entre níveis é sempre a mesma, e é
+      // isso que impede uma jogada feliz de valer mais do que a partida.
+      final d1 = Pomar.premioDeCascata(3) - Pomar.premioDeCascata(2);
+      final d2 = Pomar.premioDeCascata(4) - Pomar.premioDeCascata(3);
+      expect(d1, d2);
+    });
+  });
+
+  group('a voz de festejo', () {
+    test('cala-se num trio simples', () {
+      // Uma voz a cada trio seria ruído em vez de prémio.
+      expect(Pomar.vozPara(3, 1), isNull);
+    });
+
+    test('escala com o tamanho do feito', () {
+      final ordem = [
+        Pomar.vozPara(5, 1),
+        Pomar.vozPara(6, 1),
+        Pomar.vozPara(8, 1),
+      ];
+      expect(ordem, everyElement(isNotNull));
+      expect(ordem.toSet().length, 3, reason: 'cada patamar tem a sua voz');
+    });
+
+    test('uma cascata longa ganha a tudo o resto', () {
+      expect(Pomar.vozPara(3, 4), 'voz-sequencia.mp3');
+      expect(Pomar.vozPara(9, 5), 'voz-sequencia.mp3');
+    });
+
+    test('as estrelinhas crescem com o grupo e não saem num trio', () {
+      expect(Pomar.estrelasPara(3), 0);
+      expect(Pomar.estrelasPara(5), greaterThan(Pomar.estrelasPara(4)));
+    });
   });
 
   test('seis produtos, todos do dia-a-dia', () {
