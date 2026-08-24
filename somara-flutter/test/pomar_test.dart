@@ -25,7 +25,8 @@ void main() {
       colunas: filas.first.length,
       casas: [
         for (final f in filas)
-          for (final ch in f.split('')) ch == '.' ? null : letras[ch]!,
+          for (final ch in f.split(''))
+            ch == '.' ? null : Peca(letras[ch]!),
       ],
     );
   }
@@ -34,7 +35,7 @@ void main() {
     for (var l = 0; l < p.linhas; l++)
       [
         for (var c = 0; c < p.colunas; c++)
-          p.em(l, c)?.nome.substring(0, 1) ?? '.',
+          p.em(l, c)?.produto.nome.substring(0, 1) ?? '.',
       ].join(),
   ].join('/');
 
@@ -113,8 +114,8 @@ void main() {
     test('não inventa nem perde peças', () {
       final antes = desenhar(['mbc', '.b.', 'tbc']);
       final depois = antes.assentar();
-      expect(depois.casas.whereType<Produto>().length,
-          antes.casas.whereType<Produto>().length);
+      expect(depois.casas.whereType<Peca>().length,
+          antes.casas.whereType<Peca>().length);
     });
 
     test('assentar duas vezes não muda nada', () {
@@ -169,7 +170,7 @@ void main() {
     expect(voltas, 1, reason: 'devia existir pelo menos uma troca válida');
 
     while (p.grupos().isNotEmpty) {
-      p = p.colher(p.grupos()).assentar().encher(r);
+      p = p.colher(p.analisar()).assentar().encher(r);
       voltas++;
       expect(voltas, lessThan(200), reason: 'a cascata não convergiu');
     }
@@ -226,12 +227,183 @@ void main() {
     });
   });
 
+  testesDasEspeciais();
+
   test('seis produtos, todos do dia-a-dia', () {
     expect(Produto.values.length, 6);
     expect(Produto.values.map((p) => p.nome),
         containsAll(['manga', 'banana', 'milho', 'amendoim']));
     for (final p in Produto.values) {
       expect(p.emoji.isNotEmpty, isTrue);
+    }
+  });
+}
+
+/// As peças especiais.
+///
+/// É a camada que transforma o jogo: sem ela, juntar quatro ou cinco dá mais
+/// pontos mas joga-se da mesma maneira. Com ela, a criança começa a planear
+/// — a trocar de propósito para fabricar a peça e a guardá-la para o momento
+/// certo. Também é a parte com mais maneiras de estar subtilmente errada,
+/// daí a densidade daqui para baixo.
+void testesDasEspeciais() {
+  Pomar montar(List<String> filas, [Map<int, Especial> especiais = const {}]) {
+    const letras = {
+      'm': Produto.manga, 'b': Produto.banana, 'c': Produto.coco,
+      'i': Produto.milho, 't': Produto.tomate, 'a': Produto.amendoim,
+    };
+    final casas = <Peca?>[];
+    for (final f in filas) {
+      for (final ch in f.split('')) {
+        casas.add(ch == '.' ? null : Peca(letras[ch]!));
+      }
+    }
+    especiais.forEach((i, e) {
+      casas[i] = casas[i]!.comEspecial(e);
+    });
+    return Pomar(
+      linhas: filas.length,
+      colunas: filas.first.length,
+      casas: casas,
+    );
+  }
+
+  group('que peça nasce', () {
+    test('um trio simples não deixa nada', () {
+      expect(montar(['mmmbc', 'tctct', 'batcb']).analisar().criar, isEmpty);
+    });
+
+    test('quatro em linha dá um riscado que limpa a coluna', () {
+      // Perpendicular de propósito: assim a peça abre terreno novo em vez
+      // de repetir a fila que acabou de ser limpa.
+      final c = montar(['mmmmc', 'tctct', 'batcb']).analisar();
+      expect(c.criar.single.tipo, Especial.riscadoV);
+    });
+
+    test('quatro em coluna dá um riscado que limpa a linha', () {
+      final c = montar(['mbc', 'mtc', 'mct', 'mtb', 'btc']).analisar();
+      expect(c.criar.single.tipo, Especial.riscadoH);
+    });
+
+    test('cinco em linha dá um sol', () {
+      final c = montar(['mmmmm', 'tctct', 'batcb']).analisar();
+      expect(c.criar.single.tipo, Especial.sol);
+    });
+
+    test('um L ou um T dá um embrulho', () {
+      // Uma fila horizontal e uma vertical que se cruzam são o mesmo
+      // encaixe — é isso que as distingue de duas filas soltas.
+      final p = montar(['mmm', 'mtc', 'mct']);
+      final c = p.analisar();
+      expect(c.criar.single.tipo, Especial.embrulho);
+      expect(c.limpar, containsAll([0, 1, 2, 3, 6]));
+    });
+
+    test('duas filas separadas dão duas peças, não uma', () {
+      final c = montar(['mmmm.', '.....', 'bbbb.']).analisar();
+      expect(c.criar.length, 2);
+    });
+
+    test('a peça nasce onde a criança mexeu', () {
+      // Se nascesse no meio da fila, aparecia longe de onde ela está a
+      // olhar e parecia que o jogo tinha feito outra coisa.
+      final c = montar(['mmmmc', 'tctct', 'batcb']).analisar(origem: 3);
+      expect(c.criar.single.onde, 3);
+    });
+  });
+
+  group('o que cada peça rebenta', () {
+    test('o riscado horizontal limpa a linha inteira', () {
+      final p = montar(['mbcit', 'bcitm', 'citmb'],
+          {6: Especial.riscadoH});
+      expect(p.detonar({6}), {5, 6, 7, 8, 9});
+    });
+
+    test('o riscado vertical limpa a coluna inteira', () {
+      final p = montar(['mbcit', 'bcitm', 'citmb'],
+          {6: Especial.riscadoV});
+      expect(p.detonar({6}), {1, 6, 11});
+    });
+
+    test('o embrulho rebenta o quadrado de três por três', () {
+      final p = montar(['mbcit', 'bcitm', 'citmb'],
+          {6: Especial.embrulho});
+      expect(p.detonar({6}), {0, 1, 2, 5, 6, 7, 10, 11, 12});
+    });
+
+    test('o embrulho no canto não sai do tabuleiro', () {
+      final p = montar(['mbc', 'bci', 'cit'], {0: Especial.embrulho});
+      expect(p.detonar({0}), {0, 1, 3, 4});
+    });
+
+    test('rebentar uma apanha as outras, em cadeia', () {
+      // É daqui que vêm as jogadas grandes, e é o que faz valer a pena
+      // guardar uma peça especial em vez de a gastar logo.
+      final p = montar(['mbcit', 'bcitm', 'citmb'],
+          {6: Especial.riscadoH, 8: Especial.riscadoV});
+      final apanhadas = p.detonar({6});
+      expect(apanhadas, containsAll([5, 6, 7, 8, 9]),
+          reason: 'a linha do primeiro riscado');
+      expect(apanhadas, containsAll([3, 13]),
+          reason: 'a coluna do riscado que ele apanhou');
+    });
+
+    test('a cadeia não entra em ciclo', () {
+      // Dois riscados que se apanham um ao outro parariam a app para sempre
+      // se cada um voltasse a disparar o outro.
+      final p = montar(['mbcit', 'bcitm', 'citmb'],
+          {5: Especial.riscadoH, 9: Especial.riscadoH});
+      expect(p.detonar({5}).length, lessThanOrEqualTo(15));
+    });
+  });
+
+  group('o sol', () {
+    test('trocado com uma peça, limpa todos os produtos iguais', () {
+      final p = montar(['mbmbm', 'bmbmb', 'mbmbm'], {0: Especial.sol});
+      final apanhadas = p.colheitaDoSol(0, 1);
+      expect(apanhadas, isNotNull);
+      // Todas as bananas, mais o próprio sol.
+      expect(apanhadas!.contains(0), isTrue);
+      for (var i = 0; i < 15; i++) {
+        if (p.casas[i]!.produto == Produto.banana) {
+          expect(apanhadas.contains(i), isTrue, reason: 'banana em $i');
+        }
+      }
+    });
+
+    test('vale como jogada mesmo sem formar fila nenhuma', () {
+      // É a razão de ser da peça: guarda-se e usa-se quando se quiser.
+      final p = montar(['mbcit', 'bcitm', 'citmb'], {0: Especial.sol});
+      expect(p.trocaCrua(0, 1).grupos(), isEmpty);
+      expect(p.podeTrocar(0, 1), isTrue);
+    });
+
+    test('sol com sol limpa o tabuleiro', () {
+      final p = montar(['mbcit', 'bcitm', 'citmb'],
+          {0: Especial.sol, 1: Especial.sol});
+      expect(p.colheitaDoSol(0, 1)!.length, 15);
+    });
+
+    test('sozinho não rebenta nada', () {
+      // Só age quando é trocado — senão bastava apanhá-lo por acaso numa
+      // fila para limpar meio tabuleiro sem querer.
+      final p = montar(['mbcit', 'bcitm', 'citmb'], {6: Especial.sol});
+      expect(p.detonar({6}), {6});
+    });
+
+    test('não se activa entre casas distantes', () {
+      final p = montar(['mbcit', 'bcitm', 'citmb'], {0: Especial.sol});
+      expect(p.colheitaDoSol(0, 4), isNull);
+    });
+  });
+
+  test('colher põe a peça nova no sítio e tira as colhidas', () {
+    final p = montar(['mmmmc', 'tctct', 'batcb']);
+    final c = p.analisar(origem: 1);
+    final depois = p.colher(c);
+    expect(depois.casas[1]!.especial, Especial.riscadoV);
+    for (final i in [0, 2, 3]) {
+      expect(depois.casas[i], isNull, reason: 'casa $i devia estar vazia');
     }
   });
 }

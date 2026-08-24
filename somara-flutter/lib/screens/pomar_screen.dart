@@ -120,22 +120,46 @@ class _PomarScreenState extends State<PomarScreen>
       return;
     }
 
+    // O sol não forma fila: limpa tudo o que for do produto da peça com
+    // que foi trocado. É a razão de ser da peça — guarda-se e gasta-se
+    // quando se quer, não quando o tabuleiro deixa.
+    final doSol = _tabuleiro.colheitaDoSol(anterior, i);
+
     setState(() {
       _escolhida = null;
       _ocupado = true;
       _restam--;
-      _tabuleiro = _tabuleiro.trocaCrua(anterior, i);
+      if (doSol == null) _tabuleiro = _tabuleiro.trocaCrua(anterior, i);
     });
-    await _resolverCascata();
+    await _resolverCascata(inicial: doSol, origem: i);
   }
 
   /// Colhe, deixa cair, enche — e repete enquanto for formando trios.
-  Future<void> _resolverCascata() async {
+  Future<void> _resolverCascata({Set<int>? inicial, int? origem}) async {
     var nivel = 1;
+    var forcado = inicial;
     while (mounted) {
-      final grupos = _tabuleiro.grupos();
-      if (grupos.isEmpty) break;
+      // A colheita normal vem do tabuleiro; a do sol vem de fora. Em ambos
+      // os casos passa por `detonar`, que apanha em cadeia as peças
+      // especiais que estiverem no caminho.
+      final Colheita colheita;
+      if (forcado != null) {
+        colheita = Colheita(
+          limpar: _tabuleiro.detonar(forcado),
+          criar: const [],
+        );
+        forcado = null;
+      } else {
+        final base = _tabuleiro.analisar(origem: nivel == 1 ? origem : null);
+        if (base.vazia) break;
+        colheita = Colheita(
+          limpar: _tabuleiro.detonar(base.limpar),
+          criar: base.criar,
+        );
+      }
+      if (colheita.vazia) break;
 
+      final grupos = colheita.limpar;
       final ganho =
           Pomar.pontosDe(grupos.length) + Pomar.premioDeCascata(nivel);
 
@@ -157,7 +181,7 @@ class _PomarScreenState extends State<PomarScreen>
       setState(() {
         _pontos += ganho;
         _aColher = const {};
-        _tabuleiro = _tabuleiro.colher(grupos).assentar();
+        _tabuleiro = _tabuleiro.colher(colheita).assentar();
       });
       await Future.delayed(const Duration(milliseconds: 170));
       if (!mounted) return;
@@ -356,7 +380,7 @@ class _PomarScreenState extends State<PomarScreen>
   );
 
   Widget _casa(int i, double lado) {
-    final produto = _tabuleiro.casas[i];
+    final peca = _tabuleiro.casas[i];
     final escolhida = _escolhida == i;
     final aColher = _aColher.contains(i);
 
@@ -386,14 +410,80 @@ class _PomarScreenState extends State<PomarScreen>
             scale: aColher ? 0.1 : 1,
             duration: const Duration(milliseconds: 210),
             curve: Curves.easeInBack,
-            child: Text(
-              produto?.emoji ?? '',
-              style: TextStyle(fontSize: lado * 0.52),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                if (peca != null && peca.eEspecial) _marcaDeEspecial(peca, lado),
+                Text(
+                  peca?.produto.emoji ?? '',
+                  style: TextStyle(fontSize: lado * 0.52),
+                ),
+              ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  /// O que distingue uma peça especial de uma peça comum, à vista.
+  ///
+  /// Marcas por baixo do produto e não outro desenho: a criança tem de
+  /// continuar a ver que aquilo é uma manga, senão deixa de poder planear
+  /// com ela. A marca diz o que a peça faz — as riscas apontam para onde
+  /// vai limpar.
+  Widget _marcaDeEspecial(Peca peca, double lado) {
+    switch (peca.especial) {
+      case Especial.riscadoH:
+      case Especial.riscadoV:
+        return Transform.rotate(
+          angle: peca.especial == Especial.riscadoH ? 0 : pi / 2,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              for (var k = 0; k < 3; k++) ...[
+                Container(
+                  width: lado * 0.78,
+                  height: 3,
+                  color: S.chart.withValues(alpha: 0.85),
+                ),
+                if (k < 2) SizedBox(height: lado * 0.13),
+              ],
+            ],
+          ),
+        );
+
+      case Especial.embrulho:
+        return Container(
+          width: lado * 0.82,
+          height: lado * 0.82,
+          decoration: BoxDecoration(
+            border: Border.all(color: S.gold, width: 3),
+            borderRadius: BorderRadius.circular(6),
+            boxShadow: [
+              BoxShadow(color: S.gold.withValues(alpha: 0.45), blurRadius: 9),
+            ],
+          ),
+        );
+
+      case Especial.sol:
+        return Container(
+          width: lado * 0.86,
+          height: lado * 0.86,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: const SweepGradient(
+              colors: [S.gold, S.chart, S.life, S.green300, S.gold],
+            ),
+            boxShadow: [
+              BoxShadow(color: S.gold.withValues(alpha: 0.6), blurRadius: 12),
+            ],
+          ),
+        );
+
+      case Especial.nenhuma:
+        return const SizedBox.shrink();
+    }
   }
 
   Widget _rodape() => const Padding(
