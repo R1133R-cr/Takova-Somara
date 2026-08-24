@@ -35,7 +35,19 @@ class _PomarScreenState extends State<PomarScreen>
   late Pomar _tabuleiro;
   int _pontos = 0;
   int _restam = _jogadas;
-  int? _escolhida;
+
+  /// A peça debaixo do dedo, e a vizinha para onde ela vai.
+  int? _arrastada;
+  int? _alvo;
+
+  /// Onde o dedo pousou e quanto já andou, em píxeis dentro da grelha.
+  Offset _inicioDoDedo = Offset.zero;
+  Offset _puxao = Offset.zero;
+
+  /// A animação de largar: leva as peças até ao fim da troca, e traz de
+  /// volta as que não formaram nada.
+  late final AnimationController _solta;
+  Offset _puxaoAoLargar = Offset.zero;
 
   /// As casas a desaparecer neste instante, para se ver a colheita.
   Set<int> _aColher = const {};
@@ -65,6 +77,10 @@ class _PomarScreenState extends State<PomarScreen>
       vsync: this,
       duration: const Duration(milliseconds: 380),
     );
+    _solta = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 220),
+    );
     _brilho = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 850),
@@ -82,56 +98,132 @@ class _PomarScreenState extends State<PomarScreen>
   void dispose() {
     Sons.i.definirAmbiente(Trilha.principal);
     _abanao.dispose();
+    _solta.dispose();
     _brilho.dispose();
     super.dispose();
   }
 
   bool get _acabou => _restam <= 0;
 
-  Future<void> _tocarEm(int i) async {
+  /// Que casa está debaixo deste ponto da grelha.
+  int? _casaEm(Offset p) {
+    final c = (p.dx / _lado).floor();
+    final l = (p.dy / _lado).floor();
+    if (!_tabuleiro.dentro(l, c)) return null;
+    return _tabuleiro.indice(l, c);
+  }
+
+  void _comecarArrasto(Offset p) {
     if (_ocupado || _acabou) return;
+    final i = _casaEm(p);
+    if (i == null) return;
+    Sons.i.toque();
+    setState(() {
+      _arrastada = i;
+      _alvo = null;
+      _inicioDoDedo = p;
+      _puxao = Offset.zero;
+    });
+  }
 
-    final anterior = _escolhida;
-    if (anterior == null) {
-      Sons.i.toque();
-      setState(() => _escolhida = i);
+  /// Segue o dedo, mas só até à casa do lado.
+  ///
+  /// Trava-se no eixo dominante de propósito: numa grelha, um dedo que
+  /// desliza na diagonal não sabe o que quer, e deixar a peça flutuar em
+  /// duas direcções ao mesmo tempo faz o jogo parecer que não percebe o
+  /// gesto. Escolhe-se o eixo com mais movimento e ignora-se o outro.
+  void _actualizarArrasto(Offset p) {
+    final origem = _arrastada;
+    if (origem == null || _ocupado || _acabou) return;
+
+    final delta = p - _inicioDoDedo;
+    final horizontal = delta.dx.abs() >= delta.dy.abs();
+    final avanco = (horizontal ? delta.dx : delta.dy).clamp(-_lado, _lado);
+
+    final l = _tabuleiro.linhaDe(origem);
+    final c = _tabuleiro.colunaDe(origem);
+    final dl = horizontal ? 0 : avanco.sign.toInt();
+    final dc = horizontal ? avanco.sign.toInt() : 0;
+
+    // Um tremor no dedo não é um gesto: só a partir de um quinto da casa é
+    // que se considera que ela quis mesmo mexer.
+    final querMexer = avanco.abs() > _lado * 0.2;
+    final podeIr = querMexer && _tabuleiro.dentro(l + dl, c + dc);
+
+    setState(() {
+      _alvo = podeIr ? _tabuleiro.indice(l + dl, c + dc) : null;
+      _puxao = podeIr
+          ? Offset(horizontal ? avanco : 0, horizontal ? 0 : avanco)
+          : Offset.zero;
+    });
+  }
+
+  Future<void> _largar() async {
+    final origem = _arrastada;
+    final destino = _alvo;
+    if (origem == null || _ocupado || _acabou) {
+      setState(() {
+        _arrastada = null;
+        _alvo = null;
+        _puxao = Offset.zero;
+      });
       return;
     }
-    if (anterior == i) {
-      setState(() => _escolhida = null);
+
+    if (destino == null) {
+      setState(() {
+        _arrastada = null;
+        _puxao = Offset.zero;
+      });
       return;
     }
 
-    // Tocar numa casa distante muda a escolha em vez de recusar. Uma criança
-    // que muda de ideias não devia ter de desmarcar primeiro.
-    if (!_tabuleiro.saoVizinhas(anterior, i)) {
-      Sons.i.toque();
-      setState(() => _escolhida = i);
-      return;
-    }
+    final valida = _tabuleiro.podeTrocar(origem, destino);
 
-    if (!_tabuleiro.podeTrocar(anterior, i)) {
-      // Troca que não forma nada: abana e não gasta jogada. Gastar uma
-      // jogada por uma tentativa que o jogo recusa seria injusto.
+    // A troca desenha-se sempre até ao fim, mesmo quando não vale. É o que
+    // o Candy Crush faz e é o que responde à criança: ela vê as peças
+    // trocarem e voltarem, em vez de o gesto simplesmente não acontecer.
+    _puxaoAoLargar = Offset(
+      _puxao.dx.sign * (_puxao.dx == 0 ? 0 : _lado),
+      _puxao.dy.sign * (_puxao.dy == 0 ? 0 : _lado),
+    );
+    setState(() => _ocupado = true);
+
+    await _solta.forward(from: 0);
+    if (!mounted) return;
+
+    if (!valida) {
       Sons.i.errado();
       HapticFeedback.heavyImpact();
       _abanao.forward(from: 0);
-      setState(() => _escolhida = null);
+      await _solta.reverse();
+      if (!mounted) return;
+      setState(() {
+        _arrastada = null;
+        _alvo = null;
+        _puxao = Offset.zero;
+        _puxaoAoLargar = Offset.zero;
+        _ocupado = false;
+      });
       return;
     }
 
     // O sol não forma fila: limpa tudo o que for do produto da peça com
     // que foi trocado. É a razão de ser da peça — guarda-se e gasta-se
     // quando se quer, não quando o tabuleiro deixa.
-    final doSol = _tabuleiro.colheitaDoSol(anterior, i);
+    final doSol = _tabuleiro.colheitaDoSol(origem, destino);
 
     setState(() {
-      _escolhida = null;
-      _ocupado = true;
+      _arrastada = null;
+      _alvo = null;
+      _puxao = Offset.zero;
+      _puxaoAoLargar = Offset.zero;
       _restam--;
-      if (doSol == null) _tabuleiro = _tabuleiro.trocaCrua(anterior, i);
+      if (doSol == null) _tabuleiro = _tabuleiro.trocaCrua(origem, destino);
     });
-    await _resolverCascata(inicial: doSol, origem: i);
+    _solta.value = 0;
+
+    await _resolverCascata(inicial: doSol, origem: destino);
   }
 
   /// Colhe, deixa cair, enche — e repete enquanto for formando trios.
@@ -252,7 +344,9 @@ class _PomarScreenState extends State<PomarScreen>
       _tabuleiro = Pomar.novo(rnd: _rnd);
       _pontos = 0;
       _restam = _jogadas;
-      _escolhida = null;
+      _arrastada = null;
+      _alvo = null;
+      _puxao = Offset.zero;
       _aColher = const {};
       _ocupado = false;
       _aviso = null;
@@ -340,7 +434,16 @@ class _PomarScreenState extends State<PomarScreen>
         box.maxHeight / _tabuleiro.linhas,
       );
       _lado = lado;
-      return SizedBox(
+      // O gesto é da grelha inteira e não de cada casa: um arrasto começa
+      // numa peça e acaba noutra, e com um detector por casa a primeira
+      // ficava com o gesto todo e o dedo deixava de ser seguido ao sair
+      // dela.
+      return GestureDetector(
+        onPanStart: (d) => _comecarArrasto(d.localPosition),
+        onPanUpdate: (d) => _actualizarArrasto(d.localPosition),
+        onPanEnd: (_) => _largar(),
+        onPanCancel: _largar,
+        child: SizedBox(
         width: lado * _tabuleiro.colunas,
         height: lado * _tabuleiro.linhas,
         child: Stack(
@@ -375,17 +478,31 @@ class _PomarScreenState extends State<PomarScreen>
             ),
           ],
         ),
+        ),
       );
     },
   );
 
+  /// Quanto é que esta casa anda por causa do arrasto.
+  ///
+  /// A peça puxada segue o dedo e a vizinha desliza ao contrário: são as
+  /// duas a trocar de lugar, não uma a passar por cima da outra.
+  Offset _desvioDe(int i) {
+    final base = _solta.isAnimating || _solta.value > 0
+        ? _puxaoAoLargar * _solta.value
+        : _puxao;
+    if (i == _arrastada) return base;
+    if (i == _alvo) return -base;
+    return Offset.zero;
+  }
+
   Widget _casa(int i, double lado) {
     final peca = _tabuleiro.casas[i];
-    final escolhida = _escolhida == i;
+    final puxada = _arrastada == i;
     final aColher = _aColher.contains(i);
 
-    return GestureDetector(
-      onTap: () => _tocarEm(i),
+    return Transform.translate(
+      offset: _desvioDe(i),
       child: Container(
         width: lado,
         height: lado,
@@ -393,12 +510,14 @@ class _PomarScreenState extends State<PomarScreen>
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 160),
           decoration: BoxDecoration(
-            color: escolhida
+            // A peça puxada acende-se: é a confirmação de que o dedo a
+            // apanhou, e sem ela não se sabe qual das duas se está a mover.
+            color: puxada
                 ? S.chart.withValues(alpha: 0.24)
                 : S.surface.withValues(alpha: 0.55),
             border: Border.all(
-              color: escolhida ? S.chart : S.line,
-              width: escolhida ? 2.5 : 1.2,
+              color: puxada ? S.chart : S.line,
+              width: puxada ? 2.5 : 1.2,
             ),
             borderRadius: BorderRadius.circular(S.rMd),
           ),
@@ -489,8 +608,8 @@ class _PomarScreenState extends State<PomarScreen>
   Widget _rodape() => const Padding(
     padding: EdgeInsets.fromLTRB(20, 4, 20, 16),
     child: Text(
-      'Toca em duas peças vizinhas para as trocar. Três iguais em linha '
-      'colhem-se.',
+      'Arrasta uma peça para a do lado. Três iguais em linha colhem-se — '
+      'quatro ou cinco deixam uma peça especial.',
       textAlign: TextAlign.center,
       style: TextStyle(color: S.txSoft, fontSize: 13, height: 1.35),
     ),
