@@ -71,10 +71,21 @@ class _ArranqueState extends State<_Arranque> with WidgetsBindingObserver {
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState estado) {
-    if (estado == AppLifecycleState.resumed) {
-      Sons.i.retomarDoSegundoPlano();
-    } else {
-      Sons.i.pausarPorSegundoPlano();
+    switch (estado) {
+      case AppLifecycleState.resumed:
+        Sons.i.emPrimeiroPlano();
+
+      // `inactive` é transitório e a app continua à vista: a sombra do
+      // multitarefas, a barra de notificações a descer meio dedo, um
+      // aviso de chamada. Calar a música aqui foi o que a matou — ficava
+      // em pausa e o `resumed` que a devolvia nem sempre chegava.
+      case AppLifecycleState.inactive:
+        break;
+
+      case AppLifecycleState.paused:
+      case AppLifecycleState.hidden:
+      case AppLifecycleState.detached:
+        Sons.i.emSegundoPlano();
     }
   }
 

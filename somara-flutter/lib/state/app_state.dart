@@ -218,7 +218,7 @@ class AppState extends ChangeNotifier {
     // desligado não pode ouvir dois segundos de música antes de a app se
     // lembrar disso.
     await Sons.i.definirLigado(som);
-    unawaited(Sons.i.comecarFundo());
+    unawaited(Sons.i.emPrimeiroPlano());
 
     // Só agora se vai à rede: a app já abriu e a criança já pode jogar.
     // Sem `await` de propósito — isto corre por trás e nunca atrasa nada.

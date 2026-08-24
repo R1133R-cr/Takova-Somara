@@ -224,12 +224,12 @@ def fundo():
 
 def main():
     print("-- a sintetizar")
-    gravar("toque.wav", toque(), normalizar_para=0.32)
+    gravar("toque.wav", toque(), normalizar_para=0.55)
     gravar("certo.wav", certo(), normalizar_para=0.72)
     gravar("errado.wav", errado(), normalizar_para=0.62)
     gravar("nivel.wav", nivel(), normalizar_para=0.80)
-    gravar("salto.wav", salto(), normalizar_para=0.55)
-    gravar("fundo.wav", fundo(), normalizar_para=0.42)
+    gravar("salto.wav", salto(), normalizar_para=0.7)
+    gravar("fundo.wav", fundo(), normalizar_para=0.62)
     print("-- feito")
 
 

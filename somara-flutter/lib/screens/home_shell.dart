@@ -96,6 +96,19 @@ class _HomeShellState extends State<HomeShell> {
             _pastilha(
                 Icons.local_fire_department_rounded, '${st.streak}', S.gold),
             const Spacer(),
+            // O altifalante cortado só aparece quando o som está desligado,
+            // e é o que faltava: a app calada não dava sinal nenhum de que
+            // estava calada de propósito. Toca-se aqui para o devolver, sem
+            // ter de ir ao Perfil procurá-lo.
+            if (!st.som)
+              GestureDetector(
+                onTap: () => st.definirSom(true),
+                child: const Padding(
+                  padding: EdgeInsets.only(right: 12),
+                  child: Icon(Icons.volume_off_rounded,
+                      color: S.gold, size: 19),
+                ),
+              ),
             Text(st.classe,
                 style: const TextStyle(color: S.txMut, fontSize: 13)),
           ],
