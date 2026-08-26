@@ -8,6 +8,7 @@ import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
+import '../widgets/teclado_numerico.dart';
 import 'complete_screen.dart';
 
 class LessonScreen extends StatefulWidget {
@@ -518,7 +519,49 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     );
   }
 
-  Widget _vistaInput() => Padding(
+  /// A resposta desta pergunta e um numero?
+  ///
+  /// Olha-se para a resposta certa e nao para o enunciado: e ela que diz o
+  /// que se espera. Cento e dezassete das cento e cinquenta e uma respostas
+  /// escritas do curriculo sao numeros.
+  bool get _respostaENumero {
+    final cur = q;
+    return cur is QInput && RegExp(r'^\d+$').hasMatch(cur.a.trim());
+  }
+
+  Widget _vistaInput() =>
+      _respostaENumero ? _vistaNumero() : _vistaTexto();
+
+  /// Resposta numerica: mostrador e teclado proprio, sem o teclado do
+  /// sistema a tapar a pergunta.
+  Widget _vistaNumero() => Padding(
+    padding: const EdgeInsets.only(top: 8),
+    child: Column(
+      children: [
+        MostradorDoNumero(
+          valor: _input.text,
+          erro: fase == Fase.errado,
+        ),
+        const SizedBox(height: 14),
+        TecladoNumerico(
+          activo: fase == Fase.responder,
+          aoDigito: (d) {
+            // Cinco algarismos chegam: a maior resposta do curriculo tem
+            // quatro, e sem travao a crianca podia encher a caixa a brincar.
+            if (_input.text.length >= 5) return;
+            setState(() => _input.text = '${_input.text}$d');
+          },
+          aoApagar: () {
+            if (_input.text.isEmpty) return;
+            setState(() => _input.text =
+                _input.text.substring(0, _input.text.length - 1));
+          },
+        ),
+      ],
+    ),
+  );
+
+  Widget _vistaTexto() => Padding(
         padding: const EdgeInsets.only(top: 8),
         child: TextField(
           controller: _input,

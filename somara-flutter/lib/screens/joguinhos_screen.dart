@@ -3,8 +3,10 @@ import '../models/crossmath.dart';
 import '../services/sons.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
+import '../models/memoria.dart';
 import '../models/sopa.dart';
 import 'crossmath_screen.dart';
+import 'memoria_screen.dart';
 import 'pomar_screen.dart';
 import 'sopa_screen.dart';
 
@@ -87,6 +89,24 @@ class JoguinhosScreen extends StatelessWidget {
                 rotulo: n.rotulo,
                 detalhe: '${n.quantasPalavras} palavras',
                 abrir: (BuildContext ctx) => SopaScreen(nivel: n),
+              ),
+          ],
+        ),
+
+        const SizedBox(height: 14),
+
+        _CartaoDoJogo(
+          titulo: 'Memória',
+          descricao:
+              'Vira as cartas e junta os pares. O par nunca é igual a si '
+              'mesmo: o 7 casa com sete maçãs, o 3 + 4 casa com o 7.',
+          pose: RobyPose.dica,
+          botoes: [
+            for (final b in Baralho.values)
+              (
+                rotulo: b.rotulo,
+                detalhe: b.classes,
+                abrir: (BuildContext ctx) => MemoriaScreen(baralho: b),
               ),
           ],
         ),

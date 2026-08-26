@@ -4,12 +4,14 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:somara/models/content.dart';
 import 'package:somara/models/crossmath.dart';
+import 'package:somara/models/memoria.dart';
 import 'package:somara/models/sopa.dart';
 import 'package:somara/screens/crossmath_screen.dart';
 import 'package:somara/screens/guardados_screen.dart';
 import 'package:somara/screens/joguinhos_screen.dart';
 import 'package:somara/screens/materia_screen.dart';
 import 'package:somara/screens/perfil_screen.dart';
+import 'package:somara/screens/memoria_screen.dart';
 import 'package:somara/screens/pomar_screen.dart';
 import 'package:somara/screens/sopa_screen.dart';
 import 'package:somara/screens/praticar_screen.dart';
@@ -100,6 +102,11 @@ void main() {
   // letras de lado e a lista de palavras é comprida.
   for (final n in NivelSopa.values) {
     verificar('Sopa ${n.rotulo}', () => SopaScreen(nivel: n));
+  }
+
+  // Quatro baralhos, e o de "Contar" chega a ter nove desenhos numa carta.
+  for (final b in Baralho.values) {
+    verificar('Memória ${b.rotulo}', () => MemoriaScreen(baralho: b));
   }
 
   group('a aula, com a matéria mais comprida que existe', () {
