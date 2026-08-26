@@ -69,6 +69,9 @@ class _SopaScreenState extends State<SopaScreen>
 
   bool get _acabou => _encontradas.length == _sopa.escondidas.length;
 
+  String get _quantasFaltam =>
+      quantasFaltam(_sopa.escondidas.length - _encontradas.length);
+
   double _lado = 34;
 
   int? _casaEm(Offset p) {
@@ -153,8 +156,7 @@ class _SopaScreenState extends State<SopaScreen>
             Text(
               _acabou
                   ? 'Encontraste todas!'
-                  : '${_sopa.tema.rotulo} · faltam '
-                        '${_sopa.escondidas.length - _encontradas.length}',
+                  : '${_sopa.tema.rotulo} · $_quantasFaltam',
               style: TextStyle(
                 color: _acabou ? S.chart : S.txSoft,
                 fontSize: 15,

@@ -166,4 +166,11 @@ void main() {
           reason: '${tema.rotulo}: não há palavras curtas que cheguem');
     }
   });
+  test('o que falta respeita o singular, verbo incluido', () {
+    // Nao chega mudar o nome: "faltam 1" esta tao errado como "falta 3".
+    expect(quantasFaltam(3), 'faltam 3');
+    expect(quantasFaltam(2), 'faltam 2');
+    expect(quantasFaltam(1), 'falta 1');
+    expect(quantasFaltam(0), 'faltam 0');
+  });
 }

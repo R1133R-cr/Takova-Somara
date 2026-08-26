@@ -163,4 +163,72 @@ void main() {
       });
     }
   });
+
+  group('os botões dos joguinhos', () {
+    // O cartão da Memória tem quatro baralhos. Os quatro numa só linha
+    // davam a cada botão pouco mais de sessenta pixels: o rótulo partia-se
+    // ao meio, a pílula fechava-se num oval e o texto saía pela borda fora.
+    //
+    // Nada disto lança excepção — não havia RenderFlex a transbordar — e por
+    // isso passou por todos os outros testes deste ficheiro. Só se via a
+    // olhar para o ecrã, e foi assim que apareceu.
+    Size medir(WidgetTester tester, String rotulo) => tester.getSize(
+      find
+          .ancestor(
+            of: find.text(rotulo),
+            matching: find.byType(GestureDetector),
+          )
+          .first,
+    );
+
+    Future<void> abrir(WidgetTester tester, Size tamanho) async {
+      final erro = await montar(tester, const JoguinhosScreen(), tamanho);
+      expect(erro, isNull);
+      // A Memória é o último cartão da lista e num telemóvel pequeno nem
+      // chega a ser construída sem se descer até lá.
+      await tester.scrollUntilVisible(
+        find.text(Baralho.palavras.rotulo),
+        180,
+        scrollable: find.byType(Scrollable).first,
+      );
+      await tester.pumpAndSettle();
+    }
+
+    for (final entrada in tamanhos.entries) {
+      testWidgets('têm largura para o rótulo num ${entrada.key}', (
+        tester,
+      ) async {
+        await abrir(tester, entrada.value);
+
+        for (final b in Baralho.values) {
+          final tamanho = medir(tester, b.rotulo);
+          expect(
+            tamanho.width,
+            greaterThanOrEqualTo(110),
+            reason:
+                '"${b.rotulo}" ficou com ${tamanho.width.round()} px de '
+                'largura — não cabe lá o rótulo',
+          );
+        }
+      });
+
+      testWidgets('ficam do mesmo tamanho lado a lado num ${entrada.key}', (
+        tester,
+      ) async {
+        await abrir(tester, entrada.value);
+
+        // Contar e Somas partilham uma linha; Dobros e Palavras a outra.
+        // Um rótulo que se parte em duas linhas não pode deixar o botão do
+        // lado mais baixo do que o seu.
+        expect(
+          medir(tester, Baralho.quantidade.rotulo).height,
+          medir(tester, Baralho.somas.rotulo).height,
+        );
+        expect(
+          medir(tester, Baralho.dobros.rotulo).height,
+          medir(tester, Baralho.palavras.rotulo).height,
+        );
+      });
+    }
+  });
 }

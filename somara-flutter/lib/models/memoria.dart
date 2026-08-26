@@ -27,6 +27,14 @@ enum Baralho {
   const Baralho(this.rotulo, this.explica, this.classes);
 }
 
+/// "1 tentativa", "2 tentativas".
+///
+/// Esteve "1 tentativas" no rodapé do jogo desde o primeiro dia. Numa app
+/// que ensina a ler e a escrever, um plural mal feito é uma lição ao
+/// contrário — e é para ali que a criança está a olhar.
+String contagemDeTentativas(int n) =>
+    n == 1 ? '1 tentativa' : '$n tentativas';
+
 /// Uma carta: o que se vê, e a que par pertence.
 class Carta {
   /// O texto ou os emoji na face.

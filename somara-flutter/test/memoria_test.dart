@@ -114,4 +114,13 @@ void main() {
       expect(b.classes, contains('classe'));
     }
   });
+  test('a contagem de tentativas respeita o singular', () {
+    // "1 tentativas" esteve no rodape do jogo desde o primeiro dia. Nao da
+    // erro, nao rebenta nada, e uma crianca que esta a aprender a escrever
+    // le aquilo dezenas de vezes por sessao.
+    expect(contagemDeTentativas(0), '0 tentativas');
+    expect(contagemDeTentativas(1), '1 tentativa');
+    expect(contagemDeTentativas(2), '2 tentativas');
+    expect(contagemDeTentativas(11), '11 tentativas');
+  });
 }

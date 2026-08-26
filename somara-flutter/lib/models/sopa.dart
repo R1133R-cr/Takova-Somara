@@ -85,6 +85,9 @@ class PalavraColocada {
   }
 }
 
+/// "faltam 3", mas "falta 1" — o verbo também muda, não só o nome.
+String quantasFaltam(int n) => n == 1 ? 'falta 1' : 'faltam $n';
+
 /// Uma sopa de letras.
 class Sopa {
   final int lado;

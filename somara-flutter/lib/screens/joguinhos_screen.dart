@@ -211,17 +211,50 @@ class _CartaoDoJogo extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16),
-          Row(
-            children: [
-              for (final b in botoes) ...[
-                Expanded(child: _botao(context, b)),
-                if (b != botoes.last) const SizedBox(width: 8),
-              ],
-            ],
-          ),
+          ..._linhasDeBotoes(context),
         ],
       ),
     );
+  }
+
+  /// Os botões, em linhas de três no máximo.
+  ///
+  /// A Memória tem quatro baralhos, e os quatro numa só linha davam a cada
+  /// botão pouco mais de sessenta pixels num telemóvel comum: o rótulo
+  /// partia-se ao meio, a pílula fechava-se num oval e o texto saía pela
+  /// borda fora. A partir de quatro, passam a linhas de dois.
+  List<Widget> _linhasDeBotoes(BuildContext context) {
+    final porLinha = botoes.length <= 3 ? botoes.length : 2;
+    final linhas = <Widget>[];
+
+    for (var i = 0; i < botoes.length; i += porLinha) {
+      final fim = (i + porLinha).clamp(0, botoes.length);
+      final fatia = botoes.sublist(i, fim);
+      if (i > 0) linhas.add(const SizedBox(height: 8));
+      linhas.add(
+        // IntrinsicHeight para que um rótulo que se parta em duas linhas não
+        // deixe o botão do lado mais baixo do que o seu.
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              for (var j = 0; j < fatia.length; j++) ...[
+                if (j > 0) const SizedBox(width: 8),
+                Expanded(child: _botao(context, fatia[j])),
+              ],
+              // A última linha pode vir incompleta — cinco botões, por
+              // exemplo. Os lugares que sobram ficam reservados, para os
+              // botões de baixo não engordarem em relação aos de cima.
+              for (var j = fatia.length; j < porLinha; j++) ...[
+                const SizedBox(width: 8),
+                const Expanded(child: SizedBox()),
+              ],
+            ],
+          ),
+        ),
+      );
+    }
+    return linhas;
   }
 
   Widget _botao(BuildContext context, BotaoDeJogo b) => GestureDetector(
@@ -230,16 +263,20 @@ class _CartaoDoJogo extends StatelessWidget {
       Navigator.of(context).push(MaterialPageRoute(builder: b.abrir));
     },
     child: Container(
-      padding: const EdgeInsets.symmetric(vertical: 11),
+      // A folga dos lados não é enfeite: sem ela o texto encosta à borda
+      // curva da pílula e fica a sair por fora dela.
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 11),
       decoration: BoxDecoration(
         color: S.gm900,
         border: Border.all(color: S.line, width: 2),
         borderRadius: BorderRadius.circular(S.rPill),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             b.rotulo,
+            textAlign: TextAlign.center,
             style: const TextStyle(
               color: S.chart,
               fontSize: 14,
@@ -251,6 +288,7 @@ class _CartaoDoJogo extends StatelessWidget {
           // aquilo serve para o filho, sem ter de o pôr a experimentar.
           Text(
             b.detalhe,
+            textAlign: TextAlign.center,
             style: const TextStyle(color: S.txMut, fontSize: 11),
           ),
         ],

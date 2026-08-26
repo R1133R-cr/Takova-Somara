@@ -35,6 +35,8 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
   final _ganhas = <int>{};
 
   int _tentativas = 0;
+
+  String get _contagem => contagemDeTentativas(_tentativas);
   bool _ocupado = false;
 
   @override
@@ -119,7 +121,7 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
           children: [
             Text(
               _acabou
-                  ? 'Todos os pares! $_tentativas tentativas.'
+                  ? 'Todos os pares! $_contagem.'
                   : widget.baralho.explica,
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -257,7 +259,7 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
     padding: const EdgeInsets.fromLTRB(20, 6, 20, 14),
     child: Text(
       'Pares certos: ${_ganhas.length ~/ 2} de ${_jogo.pares}'
-      '${_tentativas > 0 ? "  ·  $_tentativas tentativas" : ""}',
+      '${_tentativas > 0 ? "  ·  $_contagem" : ""}',
       textAlign: TextAlign.center,
       style: const TextStyle(color: S.txSoft, fontSize: 13.5),
     ),
