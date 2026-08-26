@@ -7,6 +7,7 @@ import '../models/content.dart';
 import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
+import '../widgets/desenho_geometrico.dart';
 import '../widgets/roby.dart';
 import '../widgets/teclado_numerico.dart';
 import 'complete_screen.dart';
@@ -421,13 +422,27 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
 
   Widget _corpoQuestao() {
     final cur = q;
-    return switch (cur) {
+    final resposta = switch (cur) {
       QCount() => _vistaCount(cur),
       QChoice() => _opcoes(cur.options),
       QInput() => _vistaInput(),
       QMatch() => _vistaMatch(cur),
       QDrag() => _vistaDrag(cur),
     };
+
+    final fig = cur.figura;
+    if (fig == null) return resposta;
+
+    // A figura entra entre o enunciado e a resposta, que e onde a crianca
+    // olha a seguir a ler a pergunta. "Um quadrado tem 5 cm de lado" sem
+    // quadrado nenhum obriga-a a imagina-lo antes de poder pensar nele.
+    return Column(
+      children: [
+        DesenhoGeometrico(figura: fig),
+        const SizedBox(height: 8),
+        resposta,
+      ],
+    );
   }
 
   Widget _vistaCount(QCount cur) => Column(

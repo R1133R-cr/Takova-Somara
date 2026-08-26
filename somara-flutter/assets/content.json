@@ -3579,17 +3579,20 @@
          "audio": "0e4f8cdf9cc3.mp3"
         },
         {
-         "t": "count",
+         "t": "choice",
          "q": "Quantos lados tem esta figura?",
-         "emoji": "📏",
-         "n": 4,
          "options": [
           "3",
           "4",
           "5"
          ],
          "a": 1,
-         "audio": "72d8ba0baf9b.mp3"
+         "audio": "72d8ba0baf9b.mp3",
+         "figura": {
+          "forma": "quadrado",
+          "a": 4,
+          "unidade": ""
+         }
         },
         {
          "t": "choice",
@@ -5177,13 +5180,22 @@
          "t": "input",
          "q": "Um quadrado tem 5 cm de lado. Qual é o perímetro, em cm?",
          "a": "20",
-         "audio": "8bf7c46fe30a.mp3"
+         "audio": "8bf7c46fe30a.mp3",
+         "figura": {
+          "forma": "quadrado",
+          "a": 5
+         }
         },
         {
          "t": "input",
          "q": "Um rectângulo tem 8 cm de comprimento e 3 cm de largura. Qual é o perímetro, em cm?",
          "a": "22",
-         "audio": "63e8766ddd19.mp3"
+         "audio": "63e8766ddd19.mp3",
+         "figura": {
+          "forma": "rectangulo",
+          "a": 8,
+          "b": 3
+         }
         },
         {
          "t": "choice",
@@ -5223,13 +5235,22 @@
          "t": "input",
          "q": "Um rectângulo tem 6 cm por 4 cm. Qual é a área, em centímetros quadrados?",
          "a": "24",
-         "audio": "fbb6baef663a.mp3"
+         "audio": "fbb6baef663a.mp3",
+         "figura": {
+          "forma": "rectangulo",
+          "a": 6,
+          "b": 4
+         }
         },
         {
          "t": "input",
          "q": "Um quadrado tem 7 cm de lado. Qual é a área, em centímetros quadrados?",
          "a": "49",
-         "audio": "727fd33c6b3a.mp3"
+         "audio": "727fd33c6b3a.mp3",
+         "figura": {
+          "forma": "quadrado",
+          "a": 7
+         }
         },
         {
          "t": "choice",
@@ -7290,7 +7311,11 @@
          "t": "input",
          "q": "Uma circunferência tem raio de 5 cm. Qual é o diâmetro, em cm?",
          "a": "10",
-         "audio": "613402b6dd2b.mp3"
+         "audio": "613402b6dd2b.mp3",
+         "figura": {
+          "forma": "circulo",
+          "a": 5
+         }
         },
         {
          "t": "choice",
@@ -9857,7 +9882,12 @@
          "t": "input",
          "q": "Um triângulo tem base 10 cm e altura 6 cm. Qual é a área, em cm quadrados?",
          "a": "30",
-         "audio": "12921c129e4a.mp3"
+         "audio": "12921c129e4a.mp3",
+         "figura": {
+          "forma": "triangulo",
+          "a": 10,
+          "b": 6
+         }
         },
         {
          "t": "choice",
@@ -9868,7 +9898,11 @@
           "18 cm³"
          ],
          "a": 1,
-         "audio": "69e29b41b4da.mp3"
+         "audio": "69e29b41b4da.mp3",
+         "figura": {
+          "forma": "cubo",
+          "a": 3
+         }
         },
         {
          "t": "choice",

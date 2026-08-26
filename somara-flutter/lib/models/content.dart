@@ -11,21 +11,28 @@ import 'package:flutter/services.dart' show rootBundle;
 sealed class Questao {
   final String q;
 
+  /// O desenho que acompanha a pergunta, quando ela fala de uma figura.
+  final Figura? figura;
+
   /// Ficheiro do enunciado lido em voz alta (assets/audio/…), gerado à parte
   /// e gravado no content.json. Vem pronto para a app não ter de calcular
   /// nada — e não existe para enunciados que sejam só emoji.
   final String? audio;
 
-  const Questao(this.q, this.audio);
+  const Questao(this.q, this.audio, {this.figura});
 
   static Questao fromJson(Map<String, dynamic> j) {
     final q = (j['q'] ?? '') as String;
     final a = j['audio'] as String?;
+    final fig = j['figura'] == null
+        ? null
+        : Figura.fromJson(j['figura'] as Map<String, dynamic>);
     switch (j['t']) {
       case 'count':
         return QCount(
           q,
           a,
+          figura: fig,
           emoji: j['emoji'] as String,
           n: j['n'] as int,
           options: (j['options'] as List).cast<String>(),
@@ -35,15 +42,17 @@ sealed class Questao {
         return QChoice(
           q,
           a,
+          figura: fig,
           options: (j['options'] as List).cast<String>(),
           a: j['a'] as int,
         );
       case 'input':
-        return QInput(q, a, resposta: '${j['a']}');
+        return QInput(q, a, figura: fig, resposta: '${j['a']}');
       case 'match':
         return QMatch(
           q,
           a,
+          figura: fig,
           pairs: (j['pairs'] as List)
               .map((p) => ((p as List).cast<String>()))
               .map((p) => (p[0], p[1]))
@@ -53,6 +62,7 @@ sealed class Questao {
         return QDrag(
           q,
           a,
+          figura: fig,
           chip: j['chip'] as String,
           zones: (j['zones'] as List).cast<String>(),
           a: j['a'] as int,
@@ -69,26 +79,26 @@ class QCount extends Questao {
   final int n;
   final List<String> options;
   final int a;
-  const QCount(super.q, super.audio, {required this.emoji, required this.n, required this.options, required this.a});
+  const QCount(super.q, super.audio, {super.figura, required this.emoji, required this.n, required this.options, required this.a});
 }
 
 /// Escolha múltipla.
 class QChoice extends Questao {
   final List<String> options;
   final int a;
-  const QChoice(super.q, super.audio, {required this.options, required this.a});
+  const QChoice(super.q, super.audio, {super.figura, required this.options, required this.a});
 }
 
 /// Resposta escrita — comparada sem distinguir maiúsculas nem acentos.
 class QInput extends Questao {
   final String a;
-  const QInput(super.q, super.audio, {required String resposta}) : a = resposta;
+  const QInput(super.q, super.audio, {super.figura, required String resposta}) : a = resposta;
 }
 
 /// Ligar pares (esquerda ↔ direita).
 class QMatch extends Questao {
   final List<(String, String)> pairs;
-  const QMatch(super.q, super.audio, {required this.pairs});
+  const QMatch(super.q, super.audio, {super.figura, required this.pairs});
 }
 
 /// Arrastar uma peça para a zona certa.
@@ -96,7 +106,71 @@ class QDrag extends Questao {
   final String chip;
   final List<String> zones;
   final int a;
-  const QDrag(super.q, super.audio, {required this.chip, required this.zones, required this.a});
+  const QDrag(super.q, super.audio, {super.figura, required this.chip, required this.zones, required this.a});
+}
+
+/// As formas que a app sabe desenhar.
+enum FormaGeo { quadrado, rectangulo, triangulo, circulo, cubo }
+
+/// A figura que acompanha uma pergunta de geometria.
+///
+/// Guardada como números e não como imagem: a figura desenha-se a partir
+/// destes valores, com a proporcao certa e a medida escrita no sitio certo.
+/// Um rectangulo de 8 por 3 tem de SER mais comprido do que alto, senao
+/// ensina-se a crianca que as medidas escritas nao querem dizer nada.
+class Figura {
+  final FormaGeo forma;
+
+  /// Lado, comprimento, base ou raio, conforme a forma.
+  final double a;
+
+  /// Largura ou altura, quando a forma precisa de duas medidas.
+  final double? b;
+
+  /// "cm" — ou vazio, quando a figura serve so para se ver a forma e as
+  /// medidas nao interessam ("Quantos lados tem esta figura?").
+  final String unidade;
+
+  const Figura({
+    required this.forma,
+    required this.a,
+    this.b,
+    this.unidade = 'cm',
+  });
+
+  /// A medida escrita ao lado do desenho. Vazia quando nao ha unidade.
+  String medidaDe(double valor) {
+    if (unidade.isEmpty) return '';
+    final inteiro = valor == valor.roundToDouble();
+    return '${inteiro ? valor.round() : valor} $unidade';
+  }
+
+  static FormaGeo _formaDe(String nome) => switch (nome) {
+        'quadrado' => FormaGeo.quadrado,
+        'rectangulo' => FormaGeo.rectangulo,
+        'triangulo' => FormaGeo.triangulo,
+        'circulo' => FormaGeo.circulo,
+        'cubo' => FormaGeo.cubo,
+        _ => throw FormatException('Forma desconhecida: $nome'),
+      };
+
+  factory Figura.fromJson(Map<String, dynamic> j) => Figura(
+        forma: _formaDe(j['forma'] as String),
+        a: (j['a'] as num).toDouble(),
+        b: j['b'] == null ? null : (j['b'] as num).toDouble(),
+        unidade: (j['unidade'] ?? 'cm') as String,
+      );
+
+  @override
+  bool operator ==(Object other) =>
+      other is Figura &&
+      other.forma == forma &&
+      other.a == a &&
+      other.b == b &&
+      other.unidade == unidade;
+
+  @override
+  int get hashCode => Object.hash(forma, a, b, unidade);
 }
 
 /// A matéria de um nível — o que se ensina antes de se perguntar.

@@ -62,6 +62,57 @@ DIZER = {
 DEIXAR_COMO_ESTA = ['ONU', 'FRELIMO', 'PIN']
 
 
+# Os sinais de contas, ditos como um professor os diria.
+#
+# O que se escreve nao e o que se le: "2 + 1 = 3" no ecra e "dois mais um
+# e igual a tres" na voz. Sem isto a Raquel lia "dois um tres" -- os
+# sinais eram saltados, e a conta que a crianca ouvia nao era conta
+# nenhuma.
+#
+# Cada um destes foi escolhido depois de contar o que existe mesmo no
+# curriculo, e ha dois que NAO se tocam:
+#
+#   'x' (U+0078)  aparece 176 vezes, e e a letra de "peixes"
+#   '-' (U+002D)  aparece 220 vezes, e e o hifen de "contam-se"
+#
+# O sinal de multiplicar e o '×' (U+00D7) e o de menos e o '−' (U+2212).
+# Trocar um pelo outro poria a voz a dizer "peivezes".
+SINAIS = {
+    '+': ' mais ',
+    '−': ' menos ',    # sinal de menos, nao o hifen
+    '×': ' vezes ',    # sinal de multiplicar, nao a letra x
+    '=': ' é igual a ',
+    '%': ' por cento',
+    '<': ' é menor que ',
+    '>': ' é maior que ',
+}
+
+# A divisao neste curriculo escreve-se com dois pontos, como nas escolas
+# portuguesas: "48 : 6 = 8". Mas os dois pontos sao tambem pontuacao
+# vulgar -- 533 ocorrencias, quase todas a abrir uma frase.
+#
+# Estar entre numeros nao chega para distinguir: em "10% de 500: 500 : 100"
+# os dois estao, e so o segundo e divisao. O que os separa e o espaco. A
+# convencao tipografica -- espaco dos dois lados na divisao, nenhum antes
+# na pontuacao -- verificou-se em todo o curriculo: 16 divisoes com
+# espacos, 9 pontuacoes sem, e nenhuma excepcao.
+_DIVISAO = re.compile(r'(?<=\d) : (?=\d)')
+
+# A barra separa palavras numa lista para ordenar ("bola / a / é"). Nao e
+# divisao: le-se como uma pausa, para as palavras nao virem coladas.
+_BARRA = re.compile(r'\s*/\s*')
+
+
+def dizer_sinais(texto: str) -> str:
+    """Troca os sinais de contas pelo que se diz."""
+    fora = _DIVISAO.sub(' a dividir por ', texto)
+    fora = _BARRA.sub(', ', fora)
+    for sinal, palavra in SINAIS.items():
+        fora = fora.replace(sinal, palavra)
+    # Sobrou espaco a dobrar de tantas trocas.
+    return re.sub(r'\s+', ' ', fora).strip()
+
+
 def soletrar(sigla: str) -> str:
     """"SADC" -> "ésse, á, dê, cê" — com virgulas para a voz respirar
     entre as letras em vez de as atropelar."""
@@ -92,7 +143,9 @@ def para_dizer(texto: str) -> str:
         fora = re.sub(rf'\b{sigla}\b', soletrar(sigla), fora)
     for sigla, palavra in sorted(DIZER.items(), key=lambda x: -len(x[0])):
         fora = re.sub(rf'\b{sigla}\b', palavra, fora)
-    return fora
+    # Os sinais de contas ficam para o fim: as trocas de cima podem deixar
+    # numeros encostados a sinais que antes estavam separados por uma sigla.
+    return dizer_sinais(fora)
 
 
 def mexe_em(texto: str) -> bool:
