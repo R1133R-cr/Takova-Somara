@@ -9,6 +9,7 @@ import '../models/pomar.dart';
 import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
+import '../widgets/marca_especial.dart';
 import '../widgets/roby.dart';
 
 /// O Pomar: juntar três ou mais do mesmo produto.
@@ -532,7 +533,8 @@ class _PomarScreenState extends State<PomarScreen>
             child: Stack(
               alignment: Alignment.center,
               children: [
-                if (peca != null && peca.eEspecial) _marcaDeEspecial(peca, lado),
+                if (peca != null && peca.eEspecial)
+                  MarcaDeEspecial(especial: peca.especial, lado: lado),
                 Text(
                   peca?.produto.emoji ?? '',
                   style: TextStyle(fontSize: lado * 0.52),
@@ -543,66 +545,6 @@ class _PomarScreenState extends State<PomarScreen>
         ),
       ),
     );
-  }
-
-  /// O que distingue uma peça especial de uma peça comum, à vista.
-  ///
-  /// Marcas por baixo do produto e não outro desenho: a criança tem de
-  /// continuar a ver que aquilo é uma manga, senão deixa de poder planear
-  /// com ela. A marca diz o que a peça faz — as riscas apontam para onde
-  /// vai limpar.
-  Widget _marcaDeEspecial(Peca peca, double lado) {
-    switch (peca.especial) {
-      case Especial.riscadoH:
-      case Especial.riscadoV:
-        return Transform.rotate(
-          angle: peca.especial == Especial.riscadoH ? 0 : pi / 2,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              for (var k = 0; k < 3; k++) ...[
-                Container(
-                  width: lado * 0.78,
-                  height: 3,
-                  color: S.chart.withValues(alpha: 0.85),
-                ),
-                if (k < 2) SizedBox(height: lado * 0.13),
-              ],
-            ],
-          ),
-        );
-
-      case Especial.embrulho:
-        return Container(
-          width: lado * 0.82,
-          height: lado * 0.82,
-          decoration: BoxDecoration(
-            border: Border.all(color: S.gold, width: 3),
-            borderRadius: BorderRadius.circular(6),
-            boxShadow: [
-              BoxShadow(color: S.gold.withValues(alpha: 0.45), blurRadius: 9),
-            ],
-          ),
-        );
-
-      case Especial.sol:
-        return Container(
-          width: lado * 0.86,
-          height: lado * 0.86,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            gradient: const SweepGradient(
-              colors: [S.gold, S.chart, S.life, S.green300, S.gold],
-            ),
-            boxShadow: [
-              BoxShadow(color: S.gold.withValues(alpha: 0.6), blurRadius: 12),
-            ],
-          ),
-        );
-
-      case Especial.nenhuma:
-        return const SizedBox.shrink();
-    }
   }
 
   Widget _rodape() => const Padding(
