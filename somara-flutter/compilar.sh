@@ -59,6 +59,27 @@ if [[ -e "$ALVO" ]]; then
   exit 1
 fi
 
+# O áudio diz o que as regras de pronúncia mandam dizer?
+#
+# O nome de cada mp3 é o SHA-1 do texto do ECRÃ, e não muda quando uma
+# regra de pronúncia muda. O ficheiro fica com o nome certo e o som
+# errado, e não há maneira de dar por isso a olhar para o disco.
+#
+# Já aconteceu duas vezes. Da segunda ficaram sessenta ficheiros de
+# Matemática da 3ª à 6ª classe a ler "dois dois três" onde está escrito
+# "2² × 2³", e a versão saiu na mesma. Agora não sai.
+if command -v python >/dev/null 2>&1; then
+  echo "── a conferir o áudio"
+  if ! python tools/regravar_siglas.py --conferir; then
+    echo
+    echo "ERRO: há áudio que não diz o que devia dizer (ver acima)."
+    echo "Regrava-o antes de compilar."
+    exit 1
+  fi
+else
+  echo "AVISO: sem python — o áudio não foi conferido" >&2
+fi
+
 echo "── análise e testes"
 flutter analyze >/dev/null
 flutter test >/dev/null
