@@ -46,9 +46,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Dependências deliberadamente mínimas: cada pacote extra é mais peso no
-  # APK e mais uma coisa que pode partir numa actualização. Toda a animação
-  # é feita com o que o Flutter já traz de origem.
+  # Dependências poucas, mas não por causa do tamanho: o peso do APK deixou
+  # de ser critério (ver o CLAUDE.md na raiz). A razão que fica é a outra —
+  # cada pacote a mais é mais uma coisa que pode partir numa actualização.
+  # Se um pacote servir mesmo, entra, engorde o que engordar.
   path_provider: ^2.1.6
   provider: ^6.1.2            # estado partilhado (progresso, vidas, XP)
   shared_preferences: ^2.3.2  # persistência local — substitui o localStorage
