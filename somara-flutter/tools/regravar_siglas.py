@@ -18,101 +18,20 @@ quais os ficheiros que ela desactualizou, dao-se os nomes:
 Assim regravam-se 16 e nao 240.
 """
 
-import hashlib
-import json
-import re
-import subprocess
 import sys
 from pathlib import Path
 
-# A consola do Windows e cp1252 e nao sabe escrever o sinal de menos (−,
-# U+2212) nem o de multiplicar (×). Sem isto o programa rebenta a MOSTRAR
-# o que ia fazer -- e rebenta a meio, depois de ja ter gravado uns
-# quantos, deixando o resto por gravar sem que se de por isso.
-#
-# Foi exactamente o que aconteceu: sessenta ficheiros de Matematica da 3a
-# a 6a classe ficaram por tratar numa passagem que pareceu correr bem.
-for _fluxo in (sys.stdout, sys.stderr):
-    try:
-        _fluxo.reconfigure(encoding="utf-8", errors="replace")
-    except AttributeError:  # pragma: no cover -- fluxo redirigido
-        pass
-
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from pronuncia import para_dizer, mexe_em  # noqa: E402
 
-RAIZ = Path(__file__).resolve().parent.parent
-CONTENT = RAIZ / "assets" / "content.json"
-AUDIO = RAIZ / "assets" / "audio"
+import audio  # noqa: E402
+from audio import AUDIO, escrever_manifesto, ler_manifesto, limpar  # noqa: E402
+from pronuncia import mexe_em, para_dizer  # noqa: E402
 
-# Que texto e que esta gravado dentro de cada mp3.
-#
-# O nome do ficheiro e o SHA-1 do texto do ECRA, e por isso nao muda quando
-# uma regra de pronuncia muda: o ficheiro fica com o nome certo e o som
-# errado, e nao ha maneira de dar por isso a olhar para o disco.
-#
-# Aconteceu duas vezes. Uma delas ficaram sessenta ficheiros de Matematica
-# da 3a a 6a classe a ler "dois dois tres" onde esta "2² × 2³", e so se
-# descobriu por acaso, meses depois, ao gravar o mesmo texto outra vez e
-# repapar no tamanho.
-#
-# Este ficheiro guarda o SHA-1 do texto DITO. Com ele, `--conferir` diz num
-# instante se algum audio ficou para tras, sem ter de regravar nada.
-#
-# Fica em tools/ e nao em assets/: e uma ferramenta de quem constroi a app,
-# nao faz falta nenhuma dentro do telemovel.
-MANIFESTO = Path(__file__).resolve().parent / "audio_dito.json"
-
-VOZ = "pt-PT-RaquelNeural"
-TOM = "+25Hz"
-RITMO = "-5%"
-
-_LIXO = re.compile("[\U0001F000-\U0001FAFF☀-➿️‍]|_{2,}", flags=re.UNICODE)
-
-
-def nome_do_audio(texto: str) -> str:
-    return hashlib.sha1(texto.encode("utf-8")).hexdigest()[:12]
-
-
-def limpar(texto: str) -> str:
-    return re.sub(r"\s+", " ", _LIXO.sub(" ", texto)).strip()
-
-
-def gravar(texto: str, destino: Path) -> bool:
-    r = subprocess.run(
-        ["edge-tts", "--voice", VOZ, f"--pitch={TOM}", f"--rate={RITMO}",
-         "--text", texto, "--write-media", str(destino)],
-        capture_output=True,
-    )
-    return r.returncode == 0 and destino.exists() and destino.stat().st_size > 0
-
-
-def ler_manifesto() -> dict[str, str]:
-    if not MANIFESTO.exists():
-        return {}
-    return json.loads(MANIFESTO.read_text(encoding="utf-8"))
-
-
-def escrever_manifesto(m: dict[str, str]) -> None:
-    MANIFESTO.write_text(
-        json.dumps(dict(sorted(m.items())), ensure_ascii=False, indent=1) + "\n",
-        encoding="utf-8",
-    )
-
-
-def todas_as_falas(dados) -> dict[str, str]:
-    """ficheiro -> texto do ecra, para tudo o que tem audio."""
-    falas: dict[str, str] = {}
-    for curso in dados["cursos"]:
-        for u in curso["units"]:
-            for n in u["niveis"]:
-                m = n.get("materia")
-                if m and m.get("audio"):
-                    falas[m["audio"]] = f"{m['explica']} {m['exemplo']}"
-                for q in n["questoes"]:
-                    if q.get("audio"):
-                        falas[q["audio"]] = q["q"]
-    return falas
+# A voz, o `limpar`, o calculo do nome e o manifesto vivem todos no
+# tools/audio.py. Tinham copias aqui, e foi ter copias -- uma delas sem as
+# regras de pronuncia -- que poe audio errado no telemovel.
+nome_do_audio = audio.sha
+todas_as_falas = audio.falas_do_curriculo
 
 
 def conferir(dados) -> int:
@@ -156,7 +75,7 @@ def main() -> int:
     gravar_mesmo = "--gravar" in sys.argv
     # Nomes de ficheiro dados a mao: regrava-se so esses.
     escolhidos = {a for a in sys.argv[1:] if a.endswith(".mp3")}
-    dados = json.loads(CONTENT.read_text(encoding="utf-8"))
+    dados = audio.carregar_content()
 
     if "--conferir" in sys.argv:
         return conferir(dados)
@@ -209,32 +128,30 @@ def main() -> int:
     # Confirma que o nome bate certo com o texto do ecra: se nao bater, o
     # audio ia parar ao ficheiro errado e a pergunta ficava com a voz de
     # outra.
+    #
+    # Ha duas contas validas porque ha duas convencoes: as perguntas foram
+    # nomeadas sobre o texto cru, as aulas sobre o texto ja limpo.
     for ficheiro, (ecra, _) in tarefas.items():
-        esperado = nome_do_audio(limpar(ecra) if False else ecra) + ".mp3"
-        if esperado != ficheiro:
-            # A materia usa explica+exemplo, cujo nome foi calculado sobre o
-            # texto ja limpo. Aceita-se essa variante.
-            alternativo = nome_do_audio(limpar(ecra)) + ".mp3"
-            if alternativo != ficheiro:
-                print(f"AVISO: {ficheiro} nao corresponde ao texto; saltado",
-                      file=sys.stderr)
+        if ficheiro not in (nome_do_audio(ecra) + ".mp3",
+                            nome_do_audio(limpar(ecra)) + ".mp3"):
+            print(f"AVISO: {ficheiro} nao corresponde ao texto do ecra",
+                  file=sys.stderr)
 
     manifesto = ler_manifesto()
     feitos = 0
-    for ficheiro, (_, dizer) in tarefas.items():
-        destino = AUDIO / ficheiro
-        dito = limpar(dizer)
-        destino.unlink(missing_ok=True)
-        if not gravar(dito, destino):
+    for ficheiro, (ecra, _) in tarefas.items():
+        # Passa-se o texto do ECRA: e o audio.py que aplica as regras e
+        # escreve o registo. Aqui nao se decide o que se diz -- foi isso
+        # que correu mal quando cada ferramenta decidia por si.
+        if not audio.gravar(ecra, ficheiro, manifesto):
             print(f"FALHOU {ficheiro}", file=sys.stderr)
             # O manifesto vai gravado com o que ja se fez: se a passagem
             # morrer a meio, o --conferir aponta exactamente o que ficou
             # por fazer, em vez de o esconder.
             escrever_manifesto(manifesto)
             return 1
-        manifesto[ficheiro] = nome_do_audio(dito)
         feitos += 1
-        print(f"   {destino.stat().st_size:>6} bytes  {ficheiro}")
+        print(f"   {(AUDIO / ficheiro).stat().st_size:>6} bytes  {ficheiro}")
 
     escrever_manifesto(manifesto)
     print(f"\n-- {feitos} ficheiros regravados")
