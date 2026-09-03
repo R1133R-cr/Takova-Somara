@@ -7697,6 +7697,738 @@
    "abrev": "C. Naturais"
   },
   {
+   "id": "cs-4c",
+   "disciplina": "Ciências Sociais",
+   "abrev": "C. Sociais",
+   "classe": "4ª classe",
+   "tag": "CS",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Família",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A família e os parentescos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A família é um conjunto de pessoas unidas por:",
+         "options": [
+          "Laço de sangue, matrimónio ou adopção",
+          "Viverem na mesma rua",
+          "Trabalharem no mesmo sítio"
+         ],
+         "a": 0,
+         "audio": "65e1e5ce0784.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A família formada por pai, mãe e filhos chama-se:",
+         "options": [
+          "Nuclear",
+          "Monoparental",
+          "Alargada"
+         ],
+         "a": 0,
+         "audio": "53589a17676a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A família em que só um dos pais cria os filhos chama-se:",
+         "options": [
+          "Monoparental",
+          "Nuclear",
+          "Alargada"
+         ],
+         "a": 0,
+         "audio": "4a1eef3bb016.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os pais do meu pai e os pais da minha mãe são os meus:",
+         "options": [
+          "Avós",
+          "Tios",
+          "Primos"
+         ],
+         "a": 0,
+         "audio": "056272d4db39.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada parente à sua definição.",
+         "pairs": [
+          [
+           "Tios",
+           "Os irmãos do meu pai e da minha mãe"
+          ],
+          [
+           "Avós",
+           "Os pais do meu pai e da minha mãe"
+          ]
+         ],
+         "audio": "d45233b85885.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A família é um conjunto de pessoas unidas por laço de sangue, pelo matrimónio ou pela adopção. Há a família nuclear, a monoparental e a alargada.",
+        "exemplo": "Pai, mãe e filhos são uma família nuclear. Se só um dos pais cria os filhos, é monoparental.",
+        "lembra": "Avós são os pais dos meus pais; tios são os irmãos deles.",
+        "audio": "136c6fdd3205.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Viver em família",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quando há um desentendimento em casa, o melhor é:",
+         "options": [
+          "Conversar e resolver sem violência",
+          "Bater primeiro",
+          "Não falar mais com ninguém"
+         ],
+         "a": 0,
+         "audio": "b2b33237497d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A árvore genealógica serve para:",
+         "options": [
+          "Mostrar os parentes de uma família",
+          "Medir a altura das árvores",
+          "Contar o dinheiro da casa"
+         ],
+         "a": 0,
+         "audio": "f9606f419ed3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cada membro da família tem:",
+         "options": [
+          "Deveres e obrigações",
+          "Só direitos",
+          "Nada a fazer"
+         ],
+         "a": 0,
+         "audio": "460b7fa82813.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os ritos e as cerimónias da família passam:",
+         "options": [
+          "De geração para geração",
+          "De um país para outro",
+          "De uma escola para outra"
+         ],
+         "a": 0,
+         "audio": "60c70b04f0b2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Viver em família é repartir tarefas e resolver as zangas a conversar. Cada membro tem os seus deveres.",
+        "exemplo": "A árvore genealógica mostra, num desenho, quem são os parentes de uma família.",
+        "lembra": "Conflito resolve-se a falar, nunca à força.",
+        "audio": "f669ba893f34.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Direitos e deveres da criança",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um direito da criança?",
+         "options": [
+          "Ter um nome",
+          "Faltar à escola",
+          "Trabalhar o dia todo"
+         ],
+         "a": 0,
+         "audio": "8b2c962d3126.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um dever da criança?",
+         "options": [
+          "Respeitar os mais velhos",
+          "Ter uma habitação",
+          "Ter uma nacionalidade"
+         ],
+         "a": 0,
+         "audio": "4afdd254b359.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Brincar é, para a criança:",
+         "options": [
+          "Um direito",
+          "Um dever",
+          "Um castigo"
+         ],
+         "a": 0,
+         "audio": "a8d28fbeae83.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cidadania é o conjunto de:",
+         "options": [
+          "Direitos e deveres para participar na sociedade",
+          "Ruas de uma cidade",
+          "Pessoas que vivem numa casa"
+         ],
+         "a": 0,
+         "audio": "a9d4e19e4bd3.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada um ao seu lugar.",
+         "pairs": [
+          [
+           "À saúde",
+           "Direito"
+          ],
+          [
+           "Proteger o ambiente",
+           "Dever"
+          ]
+         ],
+         "audio": "97dcffeb65d8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A criança tem direitos — à vida, a um nome, à saúde, a uma família, à educação e a brincar — e tem deveres, como respeitar os outros e estudar.",
+        "exemplo": "Ter um nome é um direito; cuidar do material escolar é um dever.",
+        "lembra": "Direito é o que recebo; dever é o que faço.",
+        "audio": "9ae8579764f9.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Comunidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Tipos de comunidade",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A comunidade formada por quem vive no campo é:",
+         "options": [
+          "Rural",
+          "Urbana",
+          "Religiosa"
+         ],
+         "a": 0,
+         "audio": "c8d4ee47d9d2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A comunidade formada por quem vive na cidade é:",
+         "options": [
+          "Urbana",
+          "Rural",
+          "Educativa"
+         ],
+         "a": 0,
+         "audio": "59b0ce16cbea.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Usos e costumes são práticas transmitidas:",
+         "options": [
+          "De geração para geração",
+          "Pela rádio",
+          "Pelos livros da escola"
+         ],
+         "a": 0,
+         "audio": "cbe60a3010d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A comunidade de quem faz parte do ambiente escolar é:",
+         "options": [
+          "Educativa",
+          "Religiosa",
+          "Rural"
+         ],
+         "a": 0,
+         "audio": "ffc2aed31077.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Comunidade é o conjunto de pessoas que vivem juntas. Há a rural, a urbana, a religiosa e a educativa.",
+        "exemplo": "Quem vive no campo forma uma comunidade rural; quem vive na cidade, uma urbana.",
+        "lembra": "Usos e costumes passam de geração para geração.",
+        "audio": "d5f7a7c4c34f.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Lendas e contos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A lenda serve para explicar:",
+         "options": [
+          "Acontecimentos misteriosos",
+          "Contas de somar",
+          "Regras da escola"
+         ],
+         "a": 0,
+         "audio": "3eafbcfe6f31.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na lenda misturam-se:",
+         "options": [
+          "Factos reais e fantasias",
+          "Só factos reais",
+          "Só números"
+         ],
+         "a": 0,
+         "audio": "d7ec76d5b375.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O conto é uma história transmitida:",
+         "options": [
+          "Dos mais velhos para os mais novos",
+          "Só por escrito",
+          "Só na escola"
+         ],
+         "a": 0,
+         "audio": "148549ca0950.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O conto que quer transmitir uma lição moral é o:",
+         "options": [
+          "Infantil",
+          "De humor",
+          "Realista"
+         ],
+         "a": 0,
+         "audio": "3d7b3c20c4e5.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada conto ao que ele faz.",
+         "pairs": [
+          [
+           "Conto realista",
+           "Narra situações reais"
+          ],
+          [
+           "Conto de humor",
+           "Diverte quem ouve"
+          ]
+         ],
+         "audio": "37efaa5e55eb.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A lenda explica acontecimentos misteriosos e mistura factos reais com fantasia. O conto passa dos mais velhos para os mais novos.",
+        "exemplo": "Há contos realistas, populares, de humor e infantis. Os infantis deixam uma lição.",
+        "lembra": "Lenda explica; conto conta.",
+        "audio": "224134dfcd32.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Línguas e respeito",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Numa comunidade moçambicana fala-se:",
+         "options": [
+          "Português e línguas moçambicanas",
+          "Só português",
+          "Só uma língua"
+         ],
+         "a": 0,
+         "audio": "e2394eb9b9a5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Perante alguém diferente de nós, devemos:",
+         "options": [
+          "Respeitar a diferença",
+          "Afastar-nos",
+          "Rir dela"
+         ],
+         "a": 0,
+         "audio": "f26d688638de.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A agricultura, a pesca e o comércio são:",
+         "options": [
+          "Actividades económicas da comunidade",
+          "Jogos tradicionais",
+          "Tipos de família"
+         ],
+         "a": 0,
+         "audio": "844b2fca4a57.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A dança e a música tradicional fazem parte:",
+         "options": [
+          "Da cultura da comunidade",
+          "Do regulamento da escola",
+          "Da divisão administrativa"
+         ],
+         "a": 0,
+         "audio": "332b273ce13f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na comunidade fala-se português e línguas moçambicanas, e as pessoas vivem de actividades como a agricultura, a pesca e o comércio.",
+        "exemplo": "A dança e a música tradicional são cultura da comunidade.",
+        "lembra": "Quem é diferente de mim merece o mesmo respeito.",
+        "audio": "9643f185e1f8.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Escola",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A minha escola",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O livro diz que a escola é a nossa:",
+         "options": [
+          "Segunda casa",
+          "Primeira casa",
+          "Última casa"
+         ],
+         "a": 0,
+         "audio": "c1060d1c8029.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O regulamento interno da escola serve para:",
+         "options": [
+          "Dizer as regras que se cumprem na escola",
+          "Contar a história da escola",
+          "Marcar as férias"
+         ],
+         "a": 0,
+         "audio": "8a2f3d8fd6e9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para a escola estar limpa e organizada é preciso que:",
+         "options": [
+          "Os alunos ajudem na limpeza e conservação",
+          "Só o director trate disso",
+          "Ninguém entre nas salas"
+         ],
+         "a": 0,
+         "audio": "a9e189acd8b9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um conflito na escola resolve-se:",
+         "options": [
+          "Conversando, sem violência",
+          "À força",
+          "Fugindo da escola"
+         ],
+         "a": 0,
+         "audio": "adad3e82d722.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A escola é a nossa segunda casa. Tem um regulamento interno com as regras, e conservá-la é tarefa de todos.",
+        "exemplo": "Limpar o pátio e as salas é ajudar a conservar a escola.",
+        "lembra": "Na escola, como em casa, a zanga resolve-se a falar.",
+        "audio": "17f349bb7e85.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Província",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A província e o poder",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Moçambique está dividido em:",
+         "options": [
+          "Províncias, distritos, postos administrativos e localidades",
+          "Só províncias",
+          "Só cidades e aldeias"
+         ],
+         "a": 0,
+         "audio": "e493b2b80f13.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quem dirige todos os assuntos de um distrito é o:",
+         "options": [
+          "Administrador do Distrito",
+          "Governador da Província",
+          "Presidente do Município"
+         ],
+         "a": 0,
+         "audio": "739d1cea830c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Conselho Autárquico é o órgão executivo do:",
+         "options": [
+          "Município",
+          "Distrito",
+          "País"
+         ],
+         "a": 0,
+         "audio": "75bdf08a04d3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Representante de Estado numa província é nomeado:",
+         "options": [
+          "Pelo Presidente",
+          "Pelo povo",
+          "Pela escola"
+         ],
+         "a": 0,
+         "audio": "d812fed1d630.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Moçambique divide-se em províncias, distritos, postos administrativos, localidades e povoações.",
+        "exemplo": "O Administrador dirige o distrito; o Conselho Autárquico é o órgão executivo do município.",
+        "lembra": "Do maior para o menor: província, distrito, posto, localidade.",
+        "audio": "c8e14b8bfb68.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Relevo, clima e rios",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Relevo são as diferentes formas como:",
+         "options": [
+          "A Terra se apresenta",
+          "A chuva cai",
+          "As pessoas falam"
+         ],
+         "a": 0,
+         "audio": "4bd6c5e22af5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As principais formas de relevo são:",
+         "options": [
+          "Planícies, planaltos e montanhas",
+          "Rios, lagos e mares",
+          "Cidades, vilas e aldeias"
+         ],
+         "a": 0,
+         "audio": "dd07a3026c89.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Abaixo de quantos metros de altitude é uma planície?",
+         "a": "200",
+         "audio": "27844d7b54a3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O clima é o estado do tempo que se repete durante:",
+         "options": [
+          "30 anos ou mais",
+          "Uma semana",
+          "Um ano"
+         ],
+         "a": 0,
+         "audio": "8be66fcdb9c2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um rio pequeno que termina num rio maior chama-se:",
+         "options": [
+          "Afluente",
+          "Foz",
+          "Nascente"
+         ],
+         "a": 0,
+         "audio": "0a99e9fc9eb5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um rio de Moçambique?",
+         "options": [
+          "Zambeze",
+          "Nilo",
+          "Congo"
+         ],
+         "a": 0,
+         "audio": "c6a808e0f1b6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Relevo são as formas como a Terra se apresenta: planícies, planaltos e montanhas. Clima é o tempo que se repete durante trinta anos ou mais.",
+        "exemplo": "A planície fica abaixo dos 200 metros; o planalto, acima. Um rio pequeno que desagua num maior é um afluente.",
+        "lembra": "Tempo é hoje; clima são trinta anos.",
+        "audio": "f70a1d018d96.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Transportes e segurança",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Antes de atravessar a estrada devemos:",
+         "options": [
+          "Olhar para os dois lados",
+          "Correr depressa",
+          "Fechar os olhos"
+         ],
+         "a": 0,
+         "audio": "4e759a4c574a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os sinais de trânsito servem para:",
+         "options": [
+          "Dar segurança a quem anda na estrada",
+          "Enfeitar a estrada",
+          "Marcar as províncias"
+         ],
+         "a": 0,
+         "audio": "298a7599c004.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um meio de transporte?",
+         "options": [
+          "O comboio",
+          "O telefone",
+          "A carta"
+         ],
+         "a": 0,
+         "audio": "109a3ef3161a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas acções degrada o ambiente?",
+         "options": [
+          "Queimar a floresta",
+          "Plantar árvores",
+          "Apanhar o lixo"
+         ],
+         "a": 0,
+         "audio": "f083fc049a0c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os meios de transporte levam pessoas e coisas. Na estrada há sinais de trânsito, e cumpri-los é o que nos mantém vivos.",
+        "exemplo": "Antes de atravessar, olha para os dois lados.",
+        "lembra": "Queimar a floresta degrada o ambiente; plantar repõe-o.",
+        "audio": "cbf698d8dec0.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Educação Social e Financeira",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Necessidades, desejos e poupança",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Necessidade é tudo o que:",
+         "options": [
+          "É indispensável para a nossa vida",
+          "Nos apetece ter",
+          "Custa mais dinheiro"
+         ],
+         "a": 0,
+         "audio": "f40afc303bb0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Comprar comida para casa é:",
+         "options": [
+          "Uma necessidade",
+          "Um desejo",
+          "Uma poupança"
+         ],
+         "a": 0,
+         "audio": "47b15c4242f8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando temos pouco dinheiro, primeiro pagamos:",
+         "options": [
+          "As necessidades",
+          "Os desejos",
+          "O que for mais caro"
+         ],
+         "a": 0,
+         "audio": "a2f9ede60f3f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Poupar é:",
+         "options": [
+          "Guardar dinheiro para depois",
+          "Gastar tudo hoje",
+          "Pedir emprestado"
+         ],
+         "a": 0,
+         "audio": "785b20659fbd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada gasto ao que ele é.",
+         "pairs": [
+          [
+           "Remédio para a febre",
+           "Necessidade"
+          ],
+          [
+           "Brinquedo novo",
+           "Desejo"
+          ]
+         ],
+         "audio": "4ab6276400f0.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Necessidade é o que é indispensável para viver. Desejo é o que apetece ter. Não se deve tratar um desejo como se fosse uma necessidade.",
+        "exemplo": "Comida e remédios são necessidades; um brinquedo novo é um desejo.",
+        "lembra": "Primeiro o que é preciso, depois o que apetece.",
+        "audio": "1571928f5387.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "mat-5c",
    "disciplina": "Matemática",
    "classe": "5ª classe",

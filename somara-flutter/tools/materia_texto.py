@@ -1365,4 +1365,97 @@ MATERIA = {
         "exemplo": "«Eu fui à escola» fica «Eu não fui à escola».",
         "lembra": "Basta um «não» antes do verbo para negar a frase toda.",
     },
+
+    # ---------------------------------------------------------------
+    # Ciencias Sociais -- 4a classe
+    #
+    # Do Caderno de Actividades de Ciencias Sociais da 4a Classe,
+    # MINEDH/MEC 2025. As definicoes com numeros -- os 200 metros da
+    # planicie, os 30 anos do clima -- foram lidas no livro e nao
+    # escritas de cor.
+    # ---------------------------------------------------------------
+    "cs-4c:u1:n1": {
+        "explica": "A família é um conjunto de pessoas unidas por laço de "
+                   "sangue, pelo matrimónio ou pela adopção. Há a família "
+                   "nuclear, a monoparental e a alargada.",
+        "exemplo": "Pai, mãe e filhos são uma família nuclear. Se só um dos "
+                   "pais cria os filhos, é monoparental.",
+        "lembra": "Avós são os pais dos meus pais; tios são os irmãos deles.",
+    },
+    "cs-4c:u1:n2": {
+        "explica": "Viver em família é repartir tarefas e resolver as "
+                   "zangas a conversar. Cada membro tem os seus deveres.",
+        "exemplo": "A árvore genealógica mostra, num desenho, quem são os "
+                   "parentes de uma família.",
+        "lembra": "Conflito resolve-se a falar, nunca à força.",
+    },
+    "cs-4c:u1:n3": {
+        "explica": "A criança tem direitos — à vida, a um nome, à saúde, a "
+                   "uma família, à educação e a brincar — e tem deveres, "
+                   "como respeitar os outros e estudar.",
+        "exemplo": "Ter um nome é um direito; cuidar do material escolar é "
+                   "um dever.",
+        "lembra": "Direito é o que recebo; dever é o que faço.",
+    },
+    "cs-4c:u2:n1": {
+        "explica": "Comunidade é o conjunto de pessoas que vivem juntas. Há "
+                   "a rural, a urbana, a religiosa e a educativa.",
+        "exemplo": "Quem vive no campo forma uma comunidade rural; quem "
+                   "vive na cidade, uma urbana.",
+        "lembra": "Usos e costumes passam de geração para geração.",
+    },
+    "cs-4c:u2:n2": {
+        "explica": "A lenda explica acontecimentos misteriosos e mistura "
+                   "factos reais com fantasia. O conto passa dos mais "
+                   "velhos para os mais novos.",
+        "exemplo": "Há contos realistas, populares, de humor e infantis. Os "
+                   "infantis deixam uma lição.",
+        "lembra": "Lenda explica; conto conta.",
+    },
+    "cs-4c:u2:n3": {
+        "explica": "Na comunidade fala-se português e línguas moçambicanas, "
+                   "e as pessoas vivem de actividades como a agricultura, a "
+                   "pesca e o comércio.",
+        "exemplo": "A dança e a música tradicional são cultura da "
+                   "comunidade.",
+        "lembra": "Quem é diferente de mim merece o mesmo respeito.",
+    },
+    "cs-4c:u3:n1": {
+        "explica": "A escola é a nossa segunda casa. Tem um regulamento "
+                   "interno com as regras, e conservá-la é tarefa de todos.",
+        "exemplo": "Limpar o pátio e as salas é ajudar a conservar a escola.",
+        "lembra": "Na escola, como em casa, a zanga resolve-se a falar.",
+    },
+    "cs-4c:u4:n1": {
+        "explica": "Moçambique divide-se em províncias, distritos, postos "
+                   "administrativos, localidades e povoações.",
+        "exemplo": "O Administrador dirige o distrito; o Conselho "
+                   "Autárquico é o órgão executivo do município.",
+        "lembra": "Do maior para o menor: província, distrito, posto, "
+                  "localidade.",
+    },
+    "cs-4c:u4:n2": {
+        "explica": "Relevo são as formas como a Terra se apresenta: "
+                   "planícies, planaltos e montanhas. Clima é o tempo que "
+                   "se repete durante trinta anos ou mais.",
+        "exemplo": "A planície fica abaixo dos 200 metros; o planalto, "
+                   "acima. Um rio pequeno que desagua num maior é um "
+                   "afluente.",
+        "lembra": "Tempo é hoje; clima são trinta anos.",
+    },
+    "cs-4c:u4:n3": {
+        "explica": "Os meios de transporte levam pessoas e coisas. Na "
+                   "estrada há sinais de trânsito, e cumpri-los é o que "
+                   "nos mantém vivos.",
+        "exemplo": "Antes de atravessar, olha para os dois lados.",
+        "lembra": "Queimar a floresta degrada o ambiente; plantar repõe-o.",
+    },
+    "cs-4c:u5:n1": {
+        "explica": "Necessidade é o que é indispensável para viver. Desejo "
+                   "é o que apetece ter. Não se deve tratar um desejo como "
+                   "se fosse uma necessidade.",
+        "exemplo": "Comida e remédios são necessidades; um brinquedo novo "
+                   "é um desejo.",
+        "lembra": "Primeiro o que é preciso, depois o que apetece.",
+    },
 }

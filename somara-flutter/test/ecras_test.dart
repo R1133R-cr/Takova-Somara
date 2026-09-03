@@ -193,9 +193,18 @@ void main() {
         ..cursoId = 'mat-4c';
       await montar(tester, const MapScreen(), const Size(320, 640), st: st);
 
-      // As três da 4ª classe. Se uma disciplina nova nao aparecer aqui, e
-      // porque a barra a deixou de fora — e a criança nunca lhe chega.
-      for (final nome in ['Matemática', 'Português', 'C. Naturais']) {
+      // As quatro da 4ª classe. Se uma disciplina nova não aparecer aqui,
+      // é porque a barra a deixou de fora — e a criança nunca lhe chega.
+      //
+      // As Ciências vêm abreviadas, senão o nome não cabe na pastilha. Foi
+      // a esquecer-me da abreviatura que quase entreguei as Ciências
+      // Sociais da 4ª com o nome inteiro.
+      for (final nome in [
+        'Matemática',
+        'Português',
+        'C. Naturais',
+        'C. Sociais',
+      ]) {
         expect(find.text(nome), findsWidgets, reason: 'sem pastilha: $nome');
       }
     });
