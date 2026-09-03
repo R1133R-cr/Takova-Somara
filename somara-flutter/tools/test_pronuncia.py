@@ -222,5 +222,40 @@ class OCurriculoInteiro(unittest.TestCase):
                     msg=f'mexeu numa lição de letras: {t!r}')
 
 
+class OsEspacosParaPreencher(unittest.TestCase):
+    """A linha de preencher diz-se como pausa, e nao como nada.
+
+    "Completa: A menina e ___." lido sem o espaco sai "completa, a menina e"
+    e acaba ali. A crianca que nao le -- que e justamente quem depende do
+    audio -- nao fica a saber que ha um buraco para encher, nem onde.
+
+    Isto nao foi inventado agora: e o que ja estava gravado nos 43
+    ficheiros com espacos, desde sempre. Conferi-os um a um contra
+    gravacoes novas, e o tamanho bate ao byte com as reticencias e com mais
+    nenhuma forma -- nem com a resposta la dentro, que era a hipotese que
+    era preciso excluir.
+    """
+
+    def test_o_espaco_vira_pausa(self):
+        self.assertEqual(para_dizer('Completa: A menina é ___.'),
+                         'Completa: A menina é ....')
+        self.assertEqual(para_dizer('Um quadrado tem __ lados iguais.'),
+                         'Um quadrado tem ... lados iguais.')
+
+    def test_entre_numeros_tambem(self):
+        self.assertEqual(para_dizer('Qual símbolo completa? 45 __ 54'),
+                         'Qual símbolo completa? 45 ... 54')
+
+    def test_nunca_diz_a_resposta(self):
+        # Dizer a resposta em voz alta era pior do que o silencio: dava a
+        # solucao a quem estivesse a ouvir em vez de a ler.
+        dito = para_dizer('Completa: A menina é ___.')
+        for palavra in ('bonita', 'alta', 'boa'):
+            self.assertNotIn(palavra, dito)
+
+    def test_um_underscore_solto_nao_e_espaco(self):
+        self.assertEqual(para_dizer('o ficheiro a_b'), 'o ficheiro a_b')
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

@@ -109,6 +109,19 @@ _DIVISAO = re.compile(r'(?<=\d) : (?=\d)')
 # divisao: le-se como uma pausa, para as palavras nao virem coladas.
 _BARRA = re.compile(r'\s*/\s*')
 
+# A linha de preencher diz-se como uma PAUSA, e nao como nada.
+#
+# "Completa: A menina é ___." lido sem o espaco sai "completa, a menina e" e
+# acaba. A crianca que nao le -- que e justamente quem depende do audio --
+# nao fica a saber que ha ali um buraco para encher, nem onde ele esta.
+#
+# As reticencias sao o que o motor de voz entende como pausa, e sao o que
+# esta gravado nos 43 ficheiros que ja existem: conferi um a um, e o
+# tamanho bate ao byte com esta forma e nao com nenhuma outra. Nem com a
+# resposta la dentro -- que seria pior do que o silencio, porque dava a
+# solucao a quem estivesse a ouvir.
+_BRANCO = re.compile(r'_{2,}')
+
 
 # As unidades de medida, ditas por extenso.
 #
@@ -227,6 +240,9 @@ def dizer_sinais(texto: str) -> str:
     """Troca os sinais de contas pelo que se diz."""
     fora = _DIVISAO.sub(' a dividir por ', texto)
     fora = _BARRA.sub(', ', fora)
+    # Antes de o `limpar` os apagar: e ele que varre os underscores, e sem
+    # esta linha a pausa desaparecia com eles.
+    fora = _BRANCO.sub('...', fora)
     for sinal, palavra in SINAIS.items():
         fora = fora.replace(sinal, palavra)
     # Sobrou espaco a dobrar de tantas trocas.
