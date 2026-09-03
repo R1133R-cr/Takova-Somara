@@ -176,6 +176,40 @@ void main() {
     expect(emFalta, isEmpty, reason: 'áudio atribuído mas ficheiro inexistente');
   });
 
+  test('nenhum ficheiro de áudio está vazio', () {
+    // Existir não chega. A matéria do metical da 3ª classe passou uma
+    // versão inteira com um mp3 de zero bytes: o ficheiro estava lá, o
+    // teste de existência passava, e a aula era muda. Uma gravação que
+    // falha a meio deixa exactamente isto para trás.
+    //
+    // Este teste cobre também o áudio da MATÉRIA, que o de cima não via —
+    // e era ali que estava o defeito.
+    var vazios = <String>[];
+
+    void conferir(String? ficheiro, String onde) {
+      if (ficheiro == null) return;
+      final f = File('assets/audio/$ficheiro');
+      if (!f.existsSync()) return; // já é apanhado pelo teste de cima
+      final bytes = f.lengthSync();
+      // Uma frase curta da Raquel não desce dos 10 kB. Abaixo de 1 kB não
+      // há fala nenhuma lá dentro.
+      if (bytes < 1024) vazios.add('$onde -> $ficheiro ($bytes bytes)');
+    }
+
+    for (final curso in c.cursos) {
+      for (final u in curso.units) {
+        for (final n in u.niveis) {
+          conferir(n.materia?.audio, '${curso.id}/${n.id} (matéria)');
+          for (final q in n.questoes) {
+            conferir(q.audio, '${curso.id}/${n.id}: ${q.q}');
+          }
+        }
+      }
+    }
+
+    expect(vazios, isEmpty, reason: 'áudio sem som lá dentro');
+  });
+
   test('nenhum nível fica sem enunciado ou sem questões', () {
     for (final curso in c.cursos) {
       for (final lv in curso.niveisEmSequencia) {

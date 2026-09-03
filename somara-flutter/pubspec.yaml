@@ -22,7 +22,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # Editar este ficheiro com Get-Content/Set-Content do PowerShell estraga os
 # acentos (lê em ANSI e grava em UTF-8). Já aconteceu uma vez e ficou
 # commitado: alterar à mão, ou com uma ferramenta que respeite o UTF-8.
-version: 0.19.1+35
+version: 0.19.2+36
 
 environment:
   sdk: ^3.12.2

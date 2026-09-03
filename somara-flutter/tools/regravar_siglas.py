@@ -7,6 +7,15 @@ ficheiro antigo e gravar por cima.
 Correr a partir de somara-flutter/:
     python tools/regravar_siglas.py          # so mostra o que ia mudar
     python tools/regravar_siglas.py --gravar
+
+Sem mais nada, apanha TODOS os textos cuja voz difere do ecra -- inclusive
+os que ja foram gravados bem numa passagem anterior, porque o ficheiro nao
+diz o que tem la dentro. Quando se acrescenta uma regra nova e se sabe
+quais os ficheiros que ela desactualizou, dao-se os nomes:
+
+    python tools/regravar_siglas.py --gravar 8bf7c46fe30a.mp3 ...
+
+Assim regravam-se 16 e nao 240.
 """
 
 import hashlib
@@ -49,6 +58,8 @@ def gravar(texto: str, destino: Path) -> bool:
 
 def main() -> int:
     gravar_mesmo = "--gravar" in sys.argv
+    # Nomes de ficheiro dados a mao: regrava-se so esses.
+    escolhidos = {a for a in sys.argv[1:] if a.endswith(".mp3")}
     dados = json.loads(CONTENT.read_text(encoding="utf-8"))
 
     # ficheiro -> (texto no ecra, texto a dizer)
@@ -65,6 +76,13 @@ def main() -> int:
                 for q in n["questoes"]:
                     if q.get("audio") and mexe_em(q["q"]):
                         tarefas[q["audio"]] = (q["q"], para_dizer(q["q"]))
+
+    if escolhidos:
+        emfalta = escolhidos - set(tarefas)
+        if emfalta:
+            print(f"AVISO: nao encontrados no content.json: "
+                  f"{', '.join(sorted(emfalta))}", file=sys.stderr)
+        tarefas = {f: v for f, v in tarefas.items() if f in escolhidos}
 
     print(f"ficheiros a regravar: {len(tarefas)}\n")
     for ficheiro, (antes, depois) in list(tarefas.items())[:6]:

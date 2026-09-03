@@ -4,9 +4,10 @@ O problema
 ----------
 O texto no ecra e o texto que a Raquel le nao sao a mesma coisa. "SADC"
 escreve-se assim e diz-se "esse-a-de-ce"; "5 MT" escreve-se assim e diz-se
-"cinco meticais"; "seculo XV" diz-se "seculo quinze". Sem isto, a app lia
-"sadec", "eme-te" e "seculo xis-ve" -- e uma crianca que depende do audio
-para seguir a licao ficava com a palavra errada na cabeca.
+"cinco meticais"; "seculo XV" diz-se "seculo quinze"; "5 cm" diz-se "cinco
+centimetros". Sem isto, a app lia "sadec", "eme-te", "seculo xis-ve" e
+"cinco ce-eme" -- e uma crianca que depende do audio para seguir a licao
+ficava com a palavra errada na cabeca.
 
 Porque e uma lista e nao uma regra
 ----------------------------------
@@ -22,8 +23,14 @@ Tres tratamentos, escolhidos um a um:
   DEIXAR    tudo o resto -- incluindo as siglas que ja se dizem como
             palavra (ONU, FRELIMO) e todo o Portugues da 1a classe
 
+As UNIDADES de medida (cm, kg, L) sao o mesmo problema com outra saida: ai
+a regra pode ser geral, mas so porque esta ancorada num numero. A razao
+esta escrita por extenso onde a regra vive, mais abaixo.
+
 Alterar isto obriga a regravar o audio afectado: correr
 `python tools/regravar_siglas.py`.
+
+Ha testes: `python tools/test_pronuncia.py`.
 """
 
 import re
@@ -103,6 +110,119 @@ _DIVISAO = re.compile(r'(?<=\d) : (?=\d)')
 _BARRA = re.compile(r'\s*/\s*')
 
 
+# As unidades de medida, ditas por extenso.
+#
+# "5 cm" no ecra e "cinco centimetros" na voz. Sem isto a Raquel lia as
+# letras -- "cinco ce-eme" -- e a crianca da 4a classe que esta a aprender
+# o perimetro ouvia duas consoantes onde devia ouvir uma unidade.
+#
+# A lista tem as que aparecem hoje no curriculo (cm 20, km 9, kg 4, ml 3,
+# m 3, g 3, L 3) e as restantes da mesma familia, para uma pergunta nova
+# escrita amanha nao trazer o defeito de volta.
+UNIDADES = {
+    # comprimento
+    'mm': ('milímetro', 'milímetros'),
+    'cm': ('centímetro', 'centímetros'),
+    'dm': ('decímetro', 'decímetros'),
+    'km': ('quilómetro', 'quilómetros'),
+    'm': ('metro', 'metros'),
+    # massa
+    'mg': ('miligrama', 'miligramas'),
+    'kg': ('quilograma', 'quilogramas'),
+    'g': ('grama', 'gramas'),
+    't': ('tonelada', 'toneladas'),
+    # capacidade
+    'ml': ('mililitro', 'mililitros'),
+    'dl': ('decilitro', 'decilitros'),
+    'l': ('litro', 'litros'),
+    'L': ('litro', 'litros'),
+    # tempo
+    'min': ('minuto', 'minutos'),
+    'h': ('hora', 'horas'),
+}
+
+# Os simbolos mais compridos primeiro: sem isso o 'm' comia o inicio do
+# 'mm' e o 'l' o do 'ml'.
+_SIMBOLOS = sorted(UNIDADES, key=len, reverse=True)
+_ALT = '|'.join(re.escape(s) for s in _SIMBOLOS)
+
+# PORQUE E QUE A REGRA TEM DE ESTAR ANCORADA NUM NUMERO
+#
+# Um simbolo de unidade e quase sempre uma letra, e as letras soltas do
+# Portugues da 1a classe sao lidas pela mesma voz. No curriculo estao:
+#
+#   M   13 vezes, e nenhuma e uma unidade -- "M + A = ?", "Sílabas com M"
+#   L    7 vezes fora de numeros, todas a letra -- "L + A = ?"
+#   T    6 vezes, a letra
+#   l    2 vezes, a letra -- "as palavras terminadas em l trocam-no por is"
+#   m    7 vezes fora de numeros, das quais "m.d.c." e "m.m.c."
+#
+# Uma regra que apanhasse letras soltas poria a voz a dizer "litro mais á
+# igual a" onde esta escrito "L + A = ?", e "o metro ponto de ponto ce"
+# onde esta "o m.d.c.". Por isso: so depois de um numero.
+#
+# O numero leva espacos de milhar ("1 000 m") e virgula decimal ("2,5 km").
+_APOS_NUMERO = re.compile(
+    rf'(?P<num>\d[\d  ]*(?:[.,]\d+)?)\s*(?P<sim>{_ALT})(?![\wº²³])'
+)
+
+# A unica excepcao ao numero: "Qual é o perímetro, em cm?" -- ali nao ha
+# numero nenhum e e mesmo uma unidade. Sao 4 casos no curriculo, todos
+# com cm.
+#
+# So vale para simbolos de duas letras ou mais, e a razao esta a dois
+# centimetros daqui: "Termina em l?" e sobre a letra l.
+_ALT_LONGOS = '|'.join(
+    re.escape(s) for s in _SIMBOLOS if len(s) > 1
+)
+_APOS_EM = re.compile(rf'\bem (?P<sim>{_ALT_LONGOS})(?![\wº²³])')
+
+# "60 km/h". Tem de sair antes do _BARRA, senao a barra vira virgula e a
+# voz diz "sessenta quilómetros, agá".
+_POR_HORA = re.compile(
+    r'(?P<num>\d[\d  ]*(?:[.,]\d+)?)\s*km/h\b'
+)
+
+# Um so quando e mesmo um: "1 000" nao e "1".
+_E_UM = re.compile(r'^0*1(?:[.,]0+)?$')
+
+
+def nome_da_unidade(simbolo: str, plural: bool = False) -> str:
+    """"cm" -> "centímetro". O nome por extenso de um simbolo de unidade."""
+    return UNIDADES[simbolo][1 if plural else 0]
+
+
+def _e_singular(numero: str) -> bool:
+    return bool(_E_UM.match(numero.replace(' ', '').replace(' ', '')))
+
+
+def dizer_unidades(texto: str) -> str:
+    """Troca os simbolos de unidade pelo nome por extenso.
+
+    So onde sao mesmo unidades: depois de um numero, ou depois de "em"
+    quando o simbolo tem duas letras ou mais.
+    """
+    if not texto:
+        return texto
+
+    def por_hora(m):
+        num = m.group('num').rstrip()
+        unidade = 'quilómetro' if _e_singular(num) else 'quilómetros'
+        return f'{num} {unidade} por hora'
+
+    def depois_de_numero(m):
+        num = m.group('num').rstrip()
+        return f'{num} {nome_da_unidade(m.group("sim"), not _e_singular(num))}'
+
+    fora = _POR_HORA.sub(por_hora, texto)
+    fora = _APOS_NUMERO.sub(depois_de_numero, fora)
+    # No "em cm" nao ha numero que diga o que fazer, e o plural e o que um
+    # professor diz: "o perimetro, em centimetros".
+    return _APOS_EM.sub(
+        lambda m: f'em {nome_da_unidade(m.group("sim"), True)}', fora
+    )
+
+
 def dizer_sinais(texto: str) -> str:
     """Troca os sinais de contas pelo que se diz."""
     fora = _DIVISAO.sub(' a dividir por ', texto)
@@ -143,6 +263,11 @@ def para_dizer(texto: str) -> str:
         fora = re.sub(rf'\b{sigla}\b', soletrar(sigla), fora)
     for sigla, palavra in sorted(DIZER.items(), key=lambda x: -len(x[0])):
         fora = re.sub(rf'\b{sigla}\b', palavra, fora)
+    # As unidades depois das siglas e antes dos sinais: depois das siglas
+    # porque o "5 MT" ja virou "5 meticais" e nao ha 'm' solto para
+    # apanhar; antes dos sinais porque o "km/h" tem de sair inteiro antes
+    # de a barra virar virgula.
+    fora = dizer_unidades(fora)
     # Os sinais de contas ficam para o fim: as trocas de cima podem deixar
     # numeros encostados a sinais que antes estavam separados por uma sigla.
     return dizer_sinais(fora)
