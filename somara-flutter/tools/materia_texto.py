@@ -1256,4 +1256,113 @@ MATERIA = {
                    "1992 Paz.",
         "lembra": "Põe as datas por ordem: cada uma explica a seguinte.",
     },
+
+    # ---------------------------------------------------------------
+    # Portugues -- 4a classe
+    #
+    # Do Caderno de Actividades de Lingua Portuguesa da 4a Classe,
+    # MINEDH/MEC 2025. As unidades sao as tematicas do livro -- Familia,
+    # Escola, Comunidade... -- e a gramatica entra dentro do tema, como
+    # ali esta.
+    # ---------------------------------------------------------------
+    "por-4c:u1:n1": {
+        "explica": "Os princípios de cortesia servem para falarmos uns com "
+                   "os outros com delicadeza e respeito. Ouve-se quem fala, "
+                   "espera-se pela nossa vez e respeita-se o assunto da "
+                   "conversa.",
+        "exemplo": "Com pessoas de respeito diz-se «Bom dia, senhora "
+                   "professora!»; entre amigos diz-se «Olá, amiga!».",
+        "lembra": "Por favor, com licença, obrigado, desculpe — são as "
+                  "palavras da cortesia.",
+    },
+    "por-4c:u1:n2": {
+        "explica": "Os nomes comuns designam seres de uma mesma espécie: "
+                   "irmã, amigo, prato. Os nomes próprios designam um em "
+                   "especial e escrevem-se sempre com letra maiúscula.",
+        "exemplo": "cidade é nome comum; Tete é nome próprio.",
+        "lembra": "Nome próprio começa por maiúscula. Se não começa, é comum.",
+    },
+    "por-4c:u1:n3": {
+        "explica": "Os nomes terminados em ão não fazem todos o plural da "
+                   "mesma maneira. Uns ficam em ãos, outros em ães e outros "
+                   "em ões.",
+        "exemplo": "mão fica mãos; pão fica pães; coração fica corações.",
+        "lembra": "Diz a palavra no plural em voz alta: o ouvido acerta "
+                  "antes da regra.",
+    },
+    "por-4c:u2:n1": {
+        "explica": "Há quatro tipos de frase. A declarativa conta, a "
+                   "imperativa manda, a exclamativa mostra o que se sente e "
+                   "a interrogativa pergunta.",
+        "exemplo": "A Lurdes gosta de aprender. Fecha a porta, Tânia! Ah! "
+                   "Que presente bonito! Onde está o teu material?",
+        "lembra": "Olha o sinal no fim: ponto conta, exclamação sente, "
+                  "interrogação pergunta.",
+    },
+    "por-4c:u2:n2": {
+        "explica": "O sujeito é quem faz a acção e o predicado é o que ele "
+                   "faz. O texto narrativo conta uma história, com "
+                   "personagens, tempo e lugar.",
+        "exemplo": "Em «O Gabriel vive numa casa bonita», o sujeito é O "
+                   "Gabriel e o predicado é vive numa casa bonita.",
+        "lembra": "Pergunta «quem?» para achar o sujeito e «faz o quê?» "
+                  "para o predicado.",
+    },
+    "por-4c:u3:n1": {
+        "explica": "As preposições são palavras invariáveis que ligam "
+                   "elementos da frase: a, com, de, em, para, por, sobre, "
+                   "sem, até.",
+        "exemplo": "A Célia vai à machamba com a avó. A preposição é com.",
+        "lembra": "A preposição nunca muda: não tem masculino, feminino nem "
+                  "plural.",
+    },
+    "por-4c:u4:n1": {
+        "explica": "O verbo diz quando a acção acontece. O presente é "
+                   "agora, o pretérito perfeito é o que já passou e o "
+                   "futuro é o que ainda vem.",
+        "exemplo": "Hoje estudo; ontem estudei; amanhã estudarei.",
+        "lembra": "Ontem, hoje, amanhã — o verbo muda com cada um.",
+    },
+    "por-4c:u4:n2": {
+        "explica": "Os sinais de pontuação arrumam a frase. Um nome "
+                   "colectivo é um só nome para um conjunto de seres da "
+                   "mesma espécie.",
+        "exemplo": "Muitas árvores juntas são uma floresta; muitos bois são "
+                   "uma manada.",
+        "lembra": "Pergunta acaba em ponto de interrogação. O conjunto tem "
+                  "nome só dele.",
+    },
+    "por-4c:u5:n1": {
+        "explica": "A frase simples tem um só verbo principal. Começa por "
+                   "letra maiúscula e acaba com um sinal de pontuação.",
+        "exemplo": "A Maria lavou as mãos. É simples: só tem o verbo lavou.",
+        "lembra": "Conta os verbos. Um só verbo, frase simples.",
+    },
+    "por-4c:u6:n1": {
+        "explica": "Os pronomes possessivos dizem de quem é a coisa, e "
+                   "mudam com o género e com o número.",
+        "exemplo": "Esta é a minha mão; estas são as minhas mãos; esse é o "
+                   "teu livro.",
+        "lembra": "De mim é meu ou minha; de ti é teu ou tua.",
+    },
+    "por-4c:u7:n1": {
+        "explica": "Os advérbios de tempo dizem quando a acção acontece: "
+                   "ontem, hoje, amanhã, cedo, tarde, nunca, sempre.",
+        "exemplo": "O comboio chegou cedo. Cedo diz quando ele chegou.",
+        "lembra": "Pergunta «quando?» — a resposta é o advérbio de tempo.",
+    },
+    "por-4c:u8:n1": {
+        "explica": "Os meios de comunicação levam a mensagem de uns aos "
+                   "outros: a rádio, a televisão, o jornal, o telefone, a "
+                   "carta e o postal. Os advérbios de modo dizem como a "
+                   "acção acontece.",
+        "exemplo": "A Ana escreveu depressa. Depressa diz como ela escreveu.",
+        "lembra": "«Quando?» é tempo; «como?» é modo.",
+    },
+    "por-4c:u9:n1": {
+        "explica": "Os advérbios de negação dizem que a acção não acontece: "
+                   "não, nunca, jamais, nada.",
+        "exemplo": "«Eu fui à escola» fica «Eu não fui à escola».",
+        "lembra": "Basta um «não» antes do verbo para negar a frase toda.",
+    },
 }

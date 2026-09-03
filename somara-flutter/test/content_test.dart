@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o ensino primário inteiro, da 1ª à 6ª classe', () {
-    expect(c.cursos.length, 16);
+    expect(c.cursos.length, 17);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -33,12 +33,19 @@ void main() {
           containsAll(['Matemática', 'Português']), reason: classe);
     }
 
-    // A 4ª devia ter quatro e tem duas: faltam os manuais de Português e
-    // de Ciências Sociais dessa classe. Fica registado aqui — este teste
-    // falha no dia em que os livros chegarem, que é quando queremos saber.
-    expect(
-        c.cursos.where((x) => x.classe == '4ª classe').map((x) => x.disciplina),
-        containsAll(['Matemática', 'Ciências Naturais']));
+    // A 4ª devia ter quatro e tem três. O Português chegou com o Caderno
+    // de Actividades do MINEDH; falta ainda Ciências Sociais, cujo livro
+    // já está descarregado mas por converter.
+    //
+    // Esta linha é a lista de espera do currículo: quando a 4ª tiver as
+    // quatro, muda-se para o mesmo `expect` da 5ª e da 6ª.
+    final quarta =
+        c.cursos.where((x) => x.classe == '4ª classe').map((x) => x.disciplina);
+    expect(quarta.length, 3);
+    expect(quarta,
+        containsAll(['Matemática', 'Português', 'Ciências Naturais']));
+    expect(quarta, isNot(contains('Ciências Sociais')),
+        reason: 'se já lá está, actualiza este teste e a tabela da auditoria');
 
     // A 5ª e a 6ª estão completas.
     for (final classe in ['5ª classe', '6ª classe']) {
@@ -69,13 +76,19 @@ void main() {
     }
   });
 
-  test('todas as 851 questões sobreviveram à migração', () {
+  test('o corpus de perguntas não encolhe sem se dar por isso', () {
+    // O número sobe quando se acrescenta conteúdo, e isso tem de ser um
+    // acto deliberado: se descer, ou subir sem ninguém ter escrito nada,
+    // perdeu-se ou duplicou-se conteúdo numa migração.
+    //
+    //   851  até à 0.19.3
+    //   908  com o Português da 4ª classe (57 perguntas)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 851);
+    expect(total, 908);
   });
 
   test('dentro de uma classe, cada enunciado é único', () {

@@ -9,6 +9,7 @@ import 'package:somara/models/sopa.dart';
 import 'package:somara/screens/crossmath_screen.dart';
 import 'package:somara/screens/guardados_screen.dart';
 import 'package:somara/screens/joguinhos_screen.dart';
+import 'package:somara/screens/map_screen.dart';
 import 'package:somara/screens/materia_screen.dart';
 import 'package:somara/screens/perfil_screen.dart';
 import 'package:somara/screens/memoria_screen.dart';
@@ -162,6 +163,42 @@ void main() {
         expect(erro, isNull);
       });
     }
+  });
+
+  group('a barra de disciplinas do mapa', () {
+    // O mapa nunca esteve nestes testes, e é o ecrã que a criança vê
+    // primeiro. A barra de disciplinas cresce com o currículo: a 1ª classe
+    // tem duas, a 4ª passou a ter três com a chegada do Português, e a 5ª
+    // e a 6ª têm quatro. Num telemóvel de 320 é onde isso parte.
+    for (final entrada in tamanhos.entries) {
+      for (final classe in ['1ª classe', '4ª classe', '6ª classe']) {
+        testWidgets('$classe cabe num ${entrada.key}', (tester) async {
+          final st = estado()
+            ..classe = classe
+            ..cursoId = conteudo.cursos.firstWhere((c) => c.classe == classe).id;
+          final erro = await montar(
+            tester,
+            const MapScreen(),
+            entrada.value,
+            st: st,
+          );
+          expect(erro, isNull, reason: '$classe em ${entrada.value}');
+        });
+      }
+    }
+
+    testWidgets('cada disciplina da classe tem a sua pastilha', (tester) async {
+      final st = estado()
+        ..classe = '4ª classe'
+        ..cursoId = 'mat-4c';
+      await montar(tester, const MapScreen(), const Size(320, 640), st: st);
+
+      // As três da 4ª classe. Se uma disciplina nova nao aparecer aqui, e
+      // porque a barra a deixou de fora — e a criança nunca lhe chega.
+      for (final nome in ['Matemática', 'Português', 'C. Naturais']) {
+        expect(find.text(nome), findsWidgets, reason: 'sem pastilha: $nome');
+      }
+    });
   });
 
   group('os botões dos joguinhos', () {

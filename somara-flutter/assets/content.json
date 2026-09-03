@@ -5897,6 +5897,827 @@
    ]
   },
   {
+   "id": "por-4c",
+   "disciplina": "Português",
+   "classe": "4ª classe",
+   "tag": "POR",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Família",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Falar com cortesia",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os princípios de cortesia servem para:",
+         "options": [
+          "Falarmos com delicadeza e respeito",
+          "Falarmos mais depressa",
+          "Falarmos mais alto"
+         ],
+         "a": 0,
+         "audio": "c085561f4454.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa conversa, devemos:",
+         "options": [
+          "Esperar pela nossa vez de falar",
+          "Falar por cima dos outros",
+          "Mudar de assunto a toda a hora"
+         ],
+         "a": 0,
+         "audio": "296ae0dd4766.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como falas com a tua professora?",
+         "options": [
+          "Bom dia, senhora professora!",
+          "Olá, tu!",
+          "Anda cá!"
+         ],
+         "a": 0,
+         "audio": "5a46c4656138.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Olá, amiga! Estás bem?» é linguagem:",
+         "options": [
+          "Informal, entre amigos",
+          "Formal, de respeito",
+          "Escrita, de livro"
+         ],
+         "a": 0,
+         "audio": "bd397205b8c1.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada pessoa à forma de tratamento certa.",
+         "pairs": [
+          [
+           "A professora",
+           "Senhora professora"
+          ],
+          [
+           "A tua amiga",
+           "Tu"
+          ]
+         ],
+         "audio": "a28dacc4875a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os princípios de cortesia servem para falarmos uns com os outros com delicadeza e respeito. Ouve-se quem fala, espera-se pela nossa vez e respeita-se o assunto da conversa.",
+        "exemplo": "Com pessoas de respeito diz-se «Bom dia, senhora professora!»; entre amigos diz-se «Olá, amiga!».",
+        "lembra": "Por favor, com licença, obrigado, desculpe — são as palavras da cortesia.",
+        "audio": "5be9c3344d8a.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Nomes comuns e próprios",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os nomes comuns designam:",
+         "options": [
+          "Seres de uma mesma espécie",
+          "Uma só pessoa, com nome dela",
+          "Acções que se fazem"
+         ],
+         "a": 0,
+         "audio": "995aad2a8b0b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas palavras é um nome próprio?",
+         "options": [
+          "Manica",
+          "cidade",
+          "província"
+         ],
+         "a": 0,
+         "audio": "02dd59d6fa3f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os nomes próprios escrevem-se sempre:",
+         "options": [
+          "Com letra inicial maiúscula",
+          "Com letra inicial minúscula",
+          "Todos em maiúsculas"
+         ],
+         "a": 0,
+         "audio": "e221276a101d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o feminino de \"irmão\".",
+         "a": "irmã",
+         "audio": "63e323797f3e.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada nome comum ao seu plural.",
+         "pairs": [
+          [
+           "irmã",
+           "irmãs"
+          ],
+          [
+           "homem",
+           "homens"
+          ]
+         ],
+         "audio": "b05e3b480302.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os nomes comuns designam seres de uma mesma espécie: irmã, amigo, prato. Os nomes próprios designam um em especial e escrevem-se sempre com letra maiúscula.",
+        "exemplo": "cidade é nome comum; Tete é nome próprio.",
+        "lembra": "Nome próprio começa por maiúscula. Se não começa, é comum.",
+        "audio": "0f6c57e590f4.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Nomes terminados em ão",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Escreve o plural de \"pão\".",
+         "a": "pães",
+         "audio": "902094b384d1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o plural de \"mão\".",
+         "a": "mãos",
+         "audio": "c57233669a41.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o plural de \"coração\"?",
+         "options": [
+          "Corações",
+          "Coraçãos",
+          "Coração"
+         ],
+         "a": 0,
+         "audio": "e0fb8c1dca53.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os nomes terminados em ão fazem o plural:",
+         "options": [
+          "De várias maneiras",
+          "Sempre com ãos",
+          "Sempre com ães"
+         ],
+         "a": 0,
+         "audio": "bd7720a966f3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os nomes terminados em ão não fazem todos o plural da mesma maneira. Uns ficam em ãos, outros em ães e outros em ões.",
+        "exemplo": "mão fica mãos; pão fica pães; coração fica corações.",
+        "lembra": "Diz a palavra no plural em voz alta: o ouvido acerta antes da regra.",
+        "audio": "7e34caa3a03c.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Escola",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Tipos de frase",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«A Lurdes gosta de aprender.» é uma frase:",
+         "options": [
+          "Declarativa",
+          "Interrogativa",
+          "Exclamativa"
+         ],
+         "a": 0,
+         "audio": "929f3607958b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Fecha a porta, Tânia!» é uma frase:",
+         "options": [
+          "Imperativa",
+          "Declarativa",
+          "Interrogativa"
+         ],
+         "a": 0,
+         "audio": "8f9fc6391c7b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ah! Que presente bonito!» é uma frase:",
+         "options": [
+          "Exclamativa",
+          "Imperativa",
+          "Declarativa"
+         ],
+         "a": 0,
+         "audio": "cba01746294b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A frase interrogativa serve para:",
+         "options": [
+          "Fazer perguntas",
+          "Dar uma ordem",
+          "Contar uma história"
+         ],
+         "a": 0,
+         "audio": "1e226f7410dc.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada frase à sua intenção.",
+         "pairs": [
+          [
+           "Declarativa",
+           "Informar ou contar"
+          ],
+          [
+           "Imperativa",
+           "Dar uma ordem"
+          ]
+         ],
+         "audio": "7e97afacb0b9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Há quatro tipos de frase. A declarativa conta, a imperativa manda, a exclamativa mostra o que se sente e a interrogativa pergunta.",
+        "exemplo": "A Lurdes gosta de aprender. Fecha a porta, Tânia! Ah! Que presente bonito! Onde está o teu material?",
+        "lembra": "Olha o sinal no fim: ponto conta, exclamação sente, interrogação pergunta.",
+        "audio": "ea46c17678c9.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Sujeito e predicado",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na frase «O Gabriel vive numa casa bonita.», o sujeito é:",
+         "options": [
+          "O Gabriel",
+          "vive",
+          "numa casa bonita"
+         ],
+         "a": 0,
+         "audio": "f68220be4639.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O predicado da frase diz:",
+         "options": [
+          "O que o sujeito faz",
+          "Quem pratica a acção",
+          "Onde a acção acontece"
+         ],
+         "a": 0,
+         "audio": "faf5f33808f3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um texto narrativo conta:",
+         "options": [
+          "Uma história, real ou imaginária",
+          "Como se faz uma coisa",
+          "Uma lista de palavras"
+         ],
+         "a": 0,
+         "audio": "ea8efa008616.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A introdução de uma narrativa responde a:",
+         "options": [
+          "Quando? Onde? Quem?",
+          "Quanto custa?",
+          "Porquê não?"
+         ],
+         "a": 0,
+         "audio": "20508b2fed62.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O sujeito é quem faz a acção e o predicado é o que ele faz. O texto narrativo conta uma história, com personagens, tempo e lugar.",
+        "exemplo": "Em «O Gabriel vive numa casa bonita», o sujeito é O Gabriel e o predicado é vive numa casa bonita.",
+        "lembra": "Pergunta «quem?» para achar o sujeito e «faz o quê?» para o predicado.",
+        "audio": "f27aeb627223.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Comunidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Preposições",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As preposições servem para:",
+         "options": [
+          "Ligar elementos da frase",
+          "Contar quantos há",
+          "Dar nome às pessoas"
+         ],
+         "a": 0,
+         "audio": "8d7822fe8499.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na frase «A Célia vai à machamba com a avó.», a preposição é:",
+         "options": [
+          "com",
+          "Célia",
+          "machamba"
+         ],
+         "a": 0,
+         "audio": "b1bd9b25a690.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas palavras é uma preposição?",
+         "options": [
+          "sobre",
+          "casa",
+          "correr"
+         ],
+         "a": 0,
+         "audio": "b472ad8a8bdf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As preposições são palavras:",
+         "options": [
+          "Invariáveis",
+          "Que mudam de género",
+          "Que mudam de número"
+         ],
+         "a": 0,
+         "audio": "bad2fc1f35bb.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Completa com a contracção de \"de\" e \"o\": O livro ___ Armando.",
+         "a": "do",
+         "audio": "33d8e8cdea72.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As preposições são palavras invariáveis que ligam elementos da frase: a, com, de, em, para, por, sobre, sem, até.",
+        "exemplo": "A Célia vai à machamba com a avó. A preposição é com.",
+        "lembra": "A preposição nunca muda: não tem masculino, feminino nem plural.",
+        "audio": "88c5d6da08c2.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Ambiente",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Tempos dos verbos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Ontem eu estudei.» O verbo está no:",
+         "options": [
+          "Pretérito perfeito",
+          "Presente",
+          "Futuro"
+         ],
+         "a": 0,
+         "audio": "9d5158cedf40.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Amanhã nós plantaremos árvores.» O verbo está no:",
+         "options": [
+          "Futuro",
+          "Presente",
+          "Pretérito"
+         ],
+         "a": 0,
+         "audio": "837d9ee1e7cd.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o verbo \"ir\" na 1ª pessoa do singular do presente: eu ___.",
+         "a": "vou",
+         "audio": "1dbccbec8259.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O verbo \"ser\" é um verbo:",
+         "options": [
+          "Irregular",
+          "Regular",
+          "Invariável"
+         ],
+         "a": 0,
+         "audio": "20e293e00a7f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O verbo diz quando a acção acontece. O presente é agora, o pretérito perfeito é o que já passou e o futuro é o que ainda vem.",
+        "exemplo": "Hoje estudo; ontem estudei; amanhã estudarei.",
+        "lembra": "Ontem, hoje, amanhã — o verbo muda com cada um.",
+        "audio": "db9fcc49480e.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Pontuação e nomes colectivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Que sinal se põe no fim de uma pergunta?",
+         "options": [
+          "Ponto de interrogação",
+          "Ponto final",
+          "Vírgula"
+         ],
+         "a": 0,
+         "audio": "dd41f38b9c1c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um conjunto de árvores chama-se:",
+         "options": [
+          "Floresta",
+          "Árvores",
+          "Madeira"
+         ],
+         "a": 0,
+         "audio": "1d10e549de3f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um nome colectivo designa:",
+         "options": [
+          "Um conjunto de seres da mesma espécie",
+          "Um só ser",
+          "Uma acção"
+         ],
+         "a": 0,
+         "audio": "9fb9b97277fc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pertencem à mesma família de palavras:",
+         "options": [
+          "Terra, terreno, enterrar",
+          "Terra, casa, chuva",
+          "Terra, correr, bonito"
+         ],
+         "a": 0,
+         "audio": "5f75daa7cf3e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os sinais de pontuação arrumam a frase. Um nome colectivo é um só nome para um conjunto de seres da mesma espécie.",
+        "exemplo": "Muitas árvores juntas são uma floresta; muitos bois são uma manada.",
+        "lembra": "Pergunta acaba em ponto de interrogação. O conjunto tem nome só dele.",
+        "audio": "c9b9636f3f52.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Corpo Humano",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A frase simples",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma frase simples tem:",
+         "options": [
+          "Um só verbo principal",
+          "Sempre dois verbos",
+          "Nenhum verbo"
+         ],
+         "a": 0,
+         "audio": "56963ebd30c1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma frase simples?",
+         "options": [
+          "A Maria lavou as mãos.",
+          "A Maria lavou as mãos e comeu o pão.",
+          "As mãos limpas."
+         ],
+         "a": 0,
+         "audio": "a09078a3e937.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Toda a frase começa com:",
+         "options": [
+          "Letra maiúscula",
+          "Letra minúscula",
+          "Um número"
+         ],
+         "a": 0,
+         "audio": "f44cf965c9b0.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos verbos principais tem uma frase simples?",
+         "a": "1",
+         "audio": "6134bea4a3f7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A frase simples tem um só verbo principal. Começa por letra maiúscula e acaba com um sinal de pontuação.",
+        "exemplo": "A Maria lavou as mãos. É simples: só tem o verbo lavou.",
+        "lembra": "Conta os verbos. Um só verbo, frase simples.",
+        "audio": "14f2c5807b45.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Saúde e Higiene",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Pronomes possessivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Completa: Esta é ___ mão. (de mim)",
+         "options": [
+          "a minha",
+          "a tua",
+          "a sua"
+         ],
+         "a": 0,
+         "audio": "991f79522ec7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Completa: Esse é ___ livro. (de ti)",
+         "options": [
+          "o teu",
+          "o meu",
+          "o nosso"
+         ],
+         "a": 0,
+         "audio": "d887a655bc6b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os pronomes possessivos dizem:",
+         "options": [
+          "De quem é a coisa",
+          "Onde está a coisa",
+          "Quantas coisas há"
+         ],
+         "a": 0,
+         "audio": "c487f8e8071d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve no plural: a minha mão fica as ___ mãos.",
+         "a": "minhas",
+         "audio": "5aabdfcaac2e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os pronomes possessivos dizem de quem é a coisa, e mudam com o género e com o número.",
+        "exemplo": "Esta é a minha mão; estas são as minhas mãos; esse é o teu livro.",
+        "lembra": "De mim é meu ou minha; de ti é teu ou tua.",
+        "audio": "f1130f1d6b7b.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Meios de Transporte",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Advérbios de tempo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destas palavras é um advérbio de tempo?",
+         "options": [
+          "ontem",
+          "devagar",
+          "aqui"
+         ],
+         "a": 0,
+         "audio": "3542b747128e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na frase «O comboio chegou cedo.», o advérbio é:",
+         "options": [
+          "cedo",
+          "comboio",
+          "chegou"
+         ],
+         "a": 0,
+         "audio": "6b3723715fa2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os advérbios de tempo dizem:",
+         "options": [
+          "Quando a acção acontece",
+          "Onde a acção acontece",
+          "Como a acção acontece"
+         ],
+         "a": 0,
+         "audio": "94e75e025daf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«De manhã» é uma:",
+         "options": [
+          "Locução adverbial de tempo",
+          "Preposição",
+          "Nome próprio"
+         ],
+         "a": 0,
+         "audio": "2c560b4eb120.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os advérbios de tempo dizem quando a acção acontece: ontem, hoje, amanhã, cedo, tarde, nunca, sempre.",
+        "exemplo": "O comboio chegou cedo. Cedo diz quando ele chegou.",
+        "lembra": "Pergunta «quando?» — a resposta é o advérbio de tempo.",
+        "audio": "eeda27afe335.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Comunicação",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Meios de comunicação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um meio de comunicação?",
+         "options": [
+          "A rádio",
+          "A enxada",
+          "A panela"
+         ],
+         "a": 0,
+         "audio": "3d86f0ec0717.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um postal serve para:",
+         "options": [
+          "Mandar uma mensagem curta a alguém",
+          "Guardar dinheiro",
+          "Medir o tempo"
+         ],
+         "a": 0,
+         "audio": "af9e0900b665.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na frase «A Ana escreveu depressa.», o advérbio de modo é:",
+         "options": [
+          "depressa",
+          "escreveu",
+          "Ana"
+         ],
+         "a": 0,
+         "audio": "3736df5bc30b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os advérbios de modo dizem:",
+         "options": [
+          "Como a acção acontece",
+          "Quando acontece",
+          "Onde acontece"
+         ],
+         "a": 0,
+         "audio": "c0e801cd3df1.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada advérbio ao que ele diz.",
+         "pairs": [
+          [
+           "ontem",
+           "Quando"
+          ],
+          [
+           "devagar",
+           "Como"
+          ]
+         ],
+         "audio": "39d4b98c994b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os meios de comunicação levam a mensagem de uns aos outros: a rádio, a televisão, o jornal, o telefone, a carta e o postal. Os advérbios de modo dizem como a acção acontece.",
+        "exemplo": "A Ana escreveu depressa. Depressa diz como ela escreveu.",
+        "lembra": "«Quando?» é tempo; «como?» é modo.",
+        "audio": "90c3996d6cfd.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u9",
+     "titulo": "A nossa província",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Advérbios de negação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destas palavras é um advérbio de negação?",
+         "options": [
+          "não",
+          "sim",
+          "talvez"
+         ],
+         "a": 0,
+         "audio": "17e52fc3f50a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se nega a frase «Eu fui à escola.»?",
+         "options": [
+          "Eu não fui à escola.",
+          "Eu fui à escola sim.",
+          "Fui eu à escola?"
+         ],
+         "a": 0,
+         "audio": "2e9bcb8d4790.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Nunca» é um advérbio de:",
+         "options": [
+          "Negação",
+          "Lugar",
+          "Modo"
+         ],
+         "a": 0,
+         "audio": "1366ab71b1b4.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Nega esta frase com uma só palavra: Ela ___ chegou.",
+         "a": "não",
+         "audio": "ea17334937b8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os advérbios de negação dizem que a acção não acontece: não, nunca, jamais, nada.",
+        "exemplo": "«Eu fui à escola» fica «Eu não fui à escola».",
+        "lembra": "Basta um «não» antes do verbo para negar a frase toda.",
+        "audio": "0982ccea8730.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "cn-4c",
    "disciplina": "Ciências Naturais",
    "classe": "4ª classe",
