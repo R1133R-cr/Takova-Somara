@@ -180,7 +180,20 @@ enum Conquista {
   memoria500(FamiliaDeConquista.jogos, 'Memória 500', '',
       jogo: Jogo.memoria, degrau: 500, cristais: 1),
   memoria1000(FamiliaDeConquista.jogos, 'Memória 1000', '',
-      jogo: Jogo.memoria, degrau: 1000, cristais: 2);
+      jogo: Jogo.memoria, degrau: 1000, cristais: 2),
+
+  frascos10(FamiliaDeConquista.jogos, 'Water R Sort 10', '',
+      jogo: Jogo.frascos, degrau: 10),
+  frascos50(FamiliaDeConquista.jogos, 'Water R Sort 50', '',
+      jogo: Jogo.frascos, degrau: 50),
+  frascos100(FamiliaDeConquista.jogos, 'Water R Sort 100', '',
+      jogo: Jogo.frascos, degrau: 100),
+  frascos250(FamiliaDeConquista.jogos, 'Water R Sort 250', '',
+      jogo: Jogo.frascos, degrau: 250),
+  frascos500(FamiliaDeConquista.jogos, 'Water R Sort 500', '',
+      jogo: Jogo.frascos, degrau: 500, cristais: 1),
+  frascos1000(FamiliaDeConquista.jogos, 'Water R Sort 1000', '',
+      jogo: Jogo.frascos, degrau: 1000, cristais: 2);
 
   final FamiliaDeConquista familia;
   final String titulo;
@@ -214,6 +227,7 @@ enum Conquista {
     Jogo.memoria => 'a Memória',
     Jogo.pomar => 'o Pomar',
     Jogo.crossmath => 'o Crossmath',
+    Jogo.frascos => 'o Water R Sort',
     null => 'o jogo',
   };
 }

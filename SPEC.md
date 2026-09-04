@@ -33,6 +33,11 @@ uma nesta fase.
 e a amarelinha do currículo ficam como estão. Quatro escadarias independentes:
 Crossmath, Pomar, Sopa, Memória.
 
+> **Cinco, desde a 0.36.0.** O Water R Sort entrou depois desta entrevista e
+> não estava aqui previsto — está descrito no §13. Entrou pela mesma porta que
+> os outros: escadaria própria de 1 a 1000, mecânicas nos mesmos marcos, seis
+> conquistas, e o relógio de tempo de jogo por cima.
+
 ### Como cresce a dificuldade
 
 **[decidido] Parâmetros que apertam, mais mecânicas novas em marcos.**
@@ -62,6 +67,10 @@ não bate num muro; uma que jogue pouco sente progresso desde cedo.
 | | operações na grelha | + − | + − × : |
 | Memória | pares | 4 | 12 |
 | | tempo até virar de volta | 1,2 s | 0,5 s |
+| Water R Sort | cores a arrumar | 3 | 9 |
+| | frascos vazios de folga | 2 | 1 |
+| | blocos por frasco | 4 | 5 |
+| | jogadas ao contrário a baralhar | 6 | 60 |
 
 ### Mecânicas por marco [proposto]
 
@@ -72,6 +81,10 @@ não bate num muro; uma que jogue pouco sente progresso desde cedo.
 | 75 | peças que caem e tapam | palavra escondida por pista, não por lista | uma equação errada de propósito | cartas que trocam de sítio |
 | 100 | tempo limitado, opcional | duas categorias misturadas | grelha 4×4 | duas cartas iguais que não são par |
 | … | repete o ciclo com combinações | | | |
+
+As do **Water R Sort**, fora da tabela para ela não ficar larga de mais: 25 —
+um frasco vazio em vez de dois; 50 — nenhum frasco começa arrumado; 75 —
+frascos de cinco; 100 — uma cor a mais do que a curva dá.
 
 Do nível 100 em diante o gerador **combina** mecânicas já introduzidas em vez de
 inventar novas — é o que dá variedade sem trabalho infinito.
@@ -1042,6 +1055,86 @@ ilustração e voz) e deve ser a **última** a construir-se.
 amarelinha pelo país, de Maputo ao Rovuma. Boa ideia, mas é a mudança visual mais
 pesada da lista e mexe no ecrã que já funciona. Fica registada para uma fase
 futura.
+
+---
+
+## 13. Water R Sort — o quinto joguinho
+
+**[construído, 0.36.0]** Não saiu desta entrevista: foi pedido depois, já com a
+escadaria e a bolsa de tempo a funcionar. Fica registado aqui porque as decisões
+que se tomaram a construí-lo não são óbvias e ninguém as adivinha do código.
+
+### O pedido veio em Three.js, e não foi feito assim
+
+O pedido era uma página com `index.html`, `style.css` e `game.js`, em 3D com a
+biblioteca Three.js carregada por CDN. Foi feito nativo em Flutter. Duas razões,
+nenhuma delas estética:
+
+1. **Uma biblioteca por CDN descarrega-se cada vez que a criança abre o jogo.**
+   A regra do `CLAUDE.md` que continua de pé é exactamente essa — em Lichinga
+   paga-se ao megabyte o que a app transfere *em uso*. O peso do APK deixou de
+   ser critério; o consumo diário de dados não.
+2. **Para o meter «nos joguinhos» era preciso um WebView.** Uma dependência
+   nova e pesada, e um jogo que não conhecia o Roby, nem o áudio, nem a
+   escadaria, nem a bolsa de tempo, nem as moedas, nem as conquistas.
+
+O 3D é simulado em `CustomPaint`: cilindro com boca elíptica, brilho ao alto e
+superfície de líquido em elipse. Não é 3D a sério e não precisa de ser.
+
+### O tabuleiro nasce ao contrário, e é a decisão que interessa
+
+A maneira óbvia de montar um destes é atirar as cores para os frascos ao acaso.
+É também a maneira de produzir níveis **impossíveis** — e um nível impossível
+não se distingue de um nível difícil: a criança tenta, falha, e culpa-se. Já
+aconteceu nesta app (ver §7: o Pomar pedia 140 peças em doze jogadas).
+
+Por isso parte-se do tabuleiro **arrumado** e dão-se jogadas ao contrário. Cada
+uma é o inverso exacto de uma jogada legal, e por isso jogar a lista do fim para
+o princípio resolve o nível. A solução não é procurada, é construída — e não há
+procura nenhuma a correr no telemóvel da criança.
+
+As três condições que fazem isso ser verdade estão comentadas em
+`Frascos._aoContrario`. A prova está em `frascos_test.dart`, com um solucionador
+em `test/apoio/` que não sabe nada de como o tabuleiro foi montado — e com um
+tabuleiro sabidamente impossível que ele tem de recusar, senão estaria a dizer
+que sim a tudo.
+
+### O que este género costuma trazer e aqui não entrou
+
+**Cores tapadas** — só se vê o bloco de cima, o resto descobre-se ao levantar.
+É a mecânica mais comum do género e foi recusada: transforma um jogo de planear
+num jogo de adivinhar. É o mesmo motivo por que a Memória deixa as cartas à
+vista um instante antes de as virar.
+
+**Frascos de alturas diferentes** — um mais curto, outro mais fundo. Recusada
+por ser incorrecta, e não por gosto: uma cor tem tantos blocos quanta a altura,
+e num frasco mais curto do que ela não cabe. O nível ficava por fechar sem a
+criança perceber porquê. Todos os frascos têm a mesma altura, e a altura sobe
+para todos ao mesmo tempo no nível 75.
+
+**Limite de jogadas** — recusado pela lição do Pomar. Um limite que não seja
+provadamente generoso é um nível impossível com outro nome.
+
+### Ficheiros
+
+- **novo** `lib/models/frascos.dart` — as cores, o frasco, a mesa, o gerador
+- **novo** `lib/widgets/mesa_de_frascos.dart` — `disporFrascos` (pura, e por isso
+  medível) e o desenho de cada frasco
+- **novo** `lib/screens/frascos_screen.dart` — o ecrã, com Desfazer e Recomeçar
+- **novo** `test/apoio/solucionador_frascos.dart` — o solucionador dos testes.
+  Não vai em `lib/` de propósito: o jogo não precisa dele
+- alterar `escadaria.dart` (`Jogo.frascos`, quatro mecânicas, `frascosNo`),
+  `conquista.dart` (seis degraus), `joguinhos_screen.dart` (o cartão, com ícone
+  em vez do Roby)
+
+### O que ficou por verificar
+
+**Não foi visto a correr num ecrã de verdade.** A disposição está presa por
+testes — nenhum frasco sai da caixa, nenhum se sobrepõe a outro, nenhum fica
+com menos de 28 px de largura, e o ecrã monta sem transbordar em 320×640,
+411×914 e 600×1024, no primeiro nível e no último. Um nível inteiro joga-se aos
+toques num teste, do princípio ao fim, e a escadaria sobe. Nada disso é o mesmo
+que olhar para o desenho.
 
 ---
 

@@ -121,12 +121,13 @@ void main() {
     }
 
     await montar(tester, const JoguinhosScreen(), st);
-    // Quatro "Continuar": os quatro joguinhos estão todos na escadaria. O
-    // que os distingue é o degrau por baixo.
-    expect(find.text('Continuar'), findsNWidgets(4));
+    // Um "Continuar" por joguinho: estão todos na escadaria. O que os
+    // distingue é o degrau por baixo.
+    expect(find.text('Continuar'), findsNWidgets(Jogo.values.length));
     expect(find.text('nível 7 de $nivelMaximo'), findsOneWidget);
-    expect(find.text('nível 1 de $nivelMaximo'), findsNWidgets(3),
-        reason: 'os outros três deviam estar no primeiro degrau');
+    expect(find.text('nível 1 de $nivelMaximo'),
+        findsNWidgets(Jogo.values.length - 1),
+        reason: 'os outros deviam estar todos no primeiro degrau');
     // As três dificuldades antigas desapareceram. Vinham rotuladas com o
     // número de palavras — se alguma dessas sobrar, voltou-se a perguntar à
     // criança uma coisa que ela não tem de escolher.

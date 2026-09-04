@@ -19,7 +19,8 @@ enum Jogo {
   crossmath('Crossmath'),
   pomar('Pomar'),
   sopa('Sopa de letras'),
-  memoria('Memória');
+  memoria('Memória'),
+  frascos('Water R Sort');
 
   final String rotulo;
   const Jogo(this.rotulo);
@@ -81,7 +82,18 @@ enum Mecanica {
   umaVista(Jogo.memoria, 25, 'Cartas que só viram uma vez'),
   trio(Jogo.memoria, 50, 'Um par a três'),
   baralhar(Jogo.memoria, 75, 'Cartas que trocam de sítio'),
-  falsoPar(Jogo.memoria, 100, 'Duas iguais que não são par');
+  falsoPar(Jogo.memoria, 100, 'Duas iguais que não são par'),
+
+  // Water R Sort
+  //
+  // Nenhuma destas esconde informação à criança, e é de propósito. Tapar
+  // as cores de baixo é a mecânica que este género costuma trazer, e
+  // transformava um jogo de planear num jogo de adivinhar — o mesmo erro
+  // que a Memória evita ao deixar as cartas à vista antes de as virar.
+  semFolga(Jogo.frascos, 25, 'Um frasco vazio em vez de dois'),
+  nadaArrumado(Jogo.frascos, 50, 'Nenhum frasco começa arrumado'),
+  maisFundo(Jogo.frascos, 75, 'Frascos de cinco'),
+  maisCores(Jogo.frascos, 100, 'Uma cor a mais do que a conta');
 
   final Jogo jogo;
   final int desde;
@@ -224,6 +236,58 @@ ParamsCrossmath crossmathNo(int nivel) {
     pistas: _entre(6, ParamsCrossmath.minimoDePistas, t)
         .clamp(ParamsCrossmath.minimoDePistas, 9),
     mecanicas: mecanicasDe(Jogo.crossmath, nivel),
+  );
+}
+
+/// O que muda no Water R Sort.
+class ParamsFrascos {
+  /// Cores distintas a arrumar. Cada cor tem exactamente [altura] blocos —
+  /// é essa igualdade que faz o puzzle poder fechar.
+  final int cores;
+
+  /// Frascos vazios a mais das cores, para haver por onde mexer. Sem pelo
+  /// menos um, não há jogada nenhuma possível de início.
+  final int vazios;
+
+  /// Blocos que cada frasco leva.
+  ///
+  /// TODOS têm a mesma altura, e isso não é falta de imaginação. Uma cor
+  /// tem [altura] blocos e tem de caber inteira num frasco: um frasco mais
+  /// curto do que os outros tornaria impossível arrumar a cor que lá fosse
+  /// parar, e o nível ficava por fechar sem a criança perceber porquê.
+  final int altura;
+
+  /// Quantas jogadas ao contrário se dão a partir do tabuleiro arrumado.
+  /// Quanto mais, mais longe do fim começa.
+  final int baralhadelas;
+
+  final Set<Mecanica> mecanicas;
+
+  /// Frascos em cima da mesa.
+  int get quantos => cores + vazios;
+
+  const ParamsFrascos({
+    required this.cores,
+    required this.vazios,
+    required this.altura,
+    required this.baralhadelas,
+    required this.mecanicas,
+  });
+}
+
+/// Os parâmetros do Water R Sort no nível dado.
+ParamsFrascos frascosNo(int nivel) {
+  final t = curva(nivel);
+  final m = mecanicasDe(Jogo.frascos, nivel);
+  return ParamsFrascos(
+    // De 3 a 8 pela curva, e a nona no nível 100 pela mecânica. São nove
+    // ao todo porque nove são as cores que se distinguem mesmo umas das
+    // outras no ecrã escuro — ver CorDoLiquido.
+    cores: _entre(3, 8, t) + (m.contains(Mecanica.maisCores) ? 1 : 0),
+    vazios: m.contains(Mecanica.semFolga) ? 1 : 2,
+    altura: m.contains(Mecanica.maisFundo) ? 5 : 4,
+    baralhadelas: _entre(6, 60, t),
+    mecanicas: m,
   );
 }
 

@@ -276,7 +276,7 @@ void main() {
     /// A pílula do botão, e não o texto lá dentro: é a pílula que fecha
     /// num oval quando não tem largura, e é isso que se está a medir.
     ///
-    /// Leva índice porque os quatro botões dizem agora todos "Continuar".
+    /// Leva índice porque os botões dizem agora todos "Continuar".
     Size medirBotao(WidgetTester tester, String rotulo, int qual) =>
         tester.getSize(
           find
@@ -306,12 +306,12 @@ void main() {
       ) async {
         await abrir(tester, entrada.value);
 
-        // Os quatro jogos têm agora um botão cada — "Continuar", com o
+        // Cada jogo tem agora um botão só — "Continuar", com o
         // degrau por baixo. O que este teste guarda é o mesmo de antes: uma
         // pílula estreita de mais parte o rótulo ao meio e deita-o fora
         // pela borda curva.
-        expect(find.text('Continuar'), findsNWidgets(4));
-        for (var i = 0; i < 4; i++) {
+        expect(find.text('Continuar'), findsNWidgets(Jogo.values.length));
+        for (var i = 0; i < Jogo.values.length; i++) {
           final tamanho = medirBotao(tester, 'Continuar', i);
           expect(
             tamanho.width,
@@ -329,11 +329,12 @@ void main() {
 
         // "nível 1 de 1000" é a linha mais comprida de um botão, e é a que
         // transborda primeiro num ecrã de 320.
-        expect(find.text('nível 1 de $nivelMaximo'), findsNWidgets(4));
-        // Os quatro botões ficam do mesmo tamanho: um rótulo que se parta
+        expect(find.text('nível 1 de $nivelMaximo'),
+            findsNWidgets(Jogo.values.length));
+        // Os botões ficam todos do mesmo tamanho: um rótulo que se parta
         // em duas linhas não pode deixar o botão do lado mais baixo.
         final primeiro = medirBotao(tester, 'Continuar', 0);
-        for (var i = 1; i < 4; i++) {
+        for (var i = 1; i < Jogo.values.length; i++) {
           expect(medirBotao(tester, 'Continuar', i).height, primeiro.height,
               reason: 'o botão $i tem outra altura');
         }

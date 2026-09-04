@@ -8,6 +8,7 @@ import '../widgets/relogio_de_jogo.dart';
 import '../widgets/roby.dart';
 import '../state/app_state.dart';
 import 'crossmath_screen.dart';
+import 'frascos_screen.dart';
 import 'memoria_screen.dart';
 import 'pomar_screen.dart';
 import 'sopa_screen.dart';
@@ -38,6 +39,7 @@ class JoguinhosScreen extends StatelessWidget {
     final nivelDoPomar = st.nivelDe(Jogo.pomar);
     final nivelDoCrossmath = st.nivelDe(Jogo.crossmath);
     final nivelDaMemoria = st.nivelDe(Jogo.memoria);
+    final nivelDosFrascos = st.nivelDe(Jogo.frascos);
     final tempo = st.tempoDeJogo;
     final semTempo = tempo <= Duration.zero;
 
@@ -139,6 +141,25 @@ class JoguinhosScreen extends StatelessWidget {
               rotulo: 'Continuar',
               detalhe: 'nível $nivelDaMemoria de $nivelMaximo',
               abrir: (BuildContext ctx) => const MemoriaScreen(),
+            ),
+          ],
+        ),
+
+        const SizedBox(height: 14),
+
+        _CartaoDoJogo(
+          titulo: 'Water R Sort',
+          descricao:
+              'Despeja os líquidos até cada frasco ficar com uma cor só. '
+              'Pensa duas jogadas à frente.',
+          // Este não leva o Roby: leva o frasco, que é o que se vê lá
+          // dentro e o que o distingue dos outros à primeira vista.
+          icone: Icons.science_rounded,
+          botoes: [
+            (
+              rotulo: 'Continuar',
+              detalhe: 'nível $nivelDosFrascos de $nivelMaximo',
+              abrir: (BuildContext ctx) => const FrascosScreen(),
             ),
           ],
         ),
@@ -274,7 +295,12 @@ typedef BotaoDeJogo = ({
 class _CartaoDoJogo extends StatelessWidget {
   final String titulo;
   final String descricao;
-  final RobyPose pose;
+
+  /// A cara do cartão. Quase todos levam o Roby numa pose; o Water R Sort
+  /// leva um frasco, porque é isso que se vê lá dentro. Um dos dois, nunca
+  /// os dois nem nenhum.
+  final RobyPose? pose;
+  final IconData? icone;
 
   /// Um ou vários — o Crossmath tem três dificuldades, o Pomar tem um só
   /// modo. O cartão serve os dois sem saber a diferença.
@@ -283,9 +309,13 @@ class _CartaoDoJogo extends StatelessWidget {
   const _CartaoDoJogo({
     required this.titulo,
     required this.descricao,
-    required this.pose,
+    this.pose,
+    this.icone,
     required this.botoes,
-  });
+  }) : assert(
+         (pose == null) != (icone == null),
+         'o cartão leva uma pose ou um ícone, não os dois nem nenhum',
+       );
 
   @override
   Widget build(BuildContext context) {
@@ -306,12 +336,17 @@ class _CartaoDoJogo extends StatelessWidget {
                 height: 54,
                 child: ClipOval(
                   child: Container(
-                    color: const Color(0xFFF3EFE3),
-                    child: Image.asset(
-                      pose.path,
-                      fit: BoxFit.cover,
-                      alignment: Alignment.topCenter,
-                    ),
+                    color: icone != null
+                        ? S.chart.withValues(alpha: 0.16)
+                        : const Color(0xFFF3EFE3),
+                    alignment: Alignment.center,
+                    child: icone != null
+                        ? Icon(icone, color: S.chart, size: 30)
+                        : Image.asset(
+                            pose!.path,
+                            fit: BoxFit.cover,
+                            alignment: Alignment.topCenter,
+                          ),
                   ),
                 ),
               ),
