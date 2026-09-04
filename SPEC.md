@@ -386,6 +386,10 @@ ecrã.
 
 ## 8. Sopa de letras — progressão automática e banco moçambicano
 
+> **Feito na 0.25.0.** A tabela e a lista de categorias abaixo foram
+> actualizadas para os números que o código dá mesmo — ver a nota no fim
+> da secção.
+
 **[decidido] Sai o botão «jogar outra vez».** Ao encontrar a última palavra:
 celebração curta (~1,5 s) e o **nível seguinte carrega sozinho**. Sai-se pela
 seta de voltar, como em todo o lado.
@@ -395,9 +399,10 @@ seta de voltar, como em todo o lado.
 | nível | palavras | grelha |
 |---|---|---|
 | 1 | 4 | 7×7 |
-| 100 | 5 | 8×8 |
-| 300 | 7 | 10×10 |
-| 600 | 8 | 12×12 |
+| 25 | 5 | 8×8 |
+| 100 | 6 | 9×9 |
+| 300 | 8 | 12×12 |
+| 600 | 10 | 13×13 |
 | 1000 | 10 | 14×14 |
 
 **Categorias, que rodam** — objectos concretos do quotidiano moçambicano:
@@ -412,6 +417,7 @@ seta de voltar, como em todo o lado.
 | Animais | cabrito, galinha, vaca, cão, peixe, formiga |
 | Corpo | mão, perna, cabeça, olho, dente, joelho |
 | Campo | machamba, enxada, milho, mandioca, chuva, sol |
+| Moçambique | Maputo, Beira, Nampula, Niassa, Tete, Lichinga, Pemba |
 
 Regras do banco: **sem acentos** (a grelha é de maiúsculas simples), 3 a 10
 letras, e nenhuma palavra repetida dentro do mesmo nível. A categoria de cada
@@ -429,6 +435,17 @@ categoria, para dois telemóveis mostrarem o mesmo.
    são encontráveis; nenhuma repetida; nenhuma com acentos.
 2. O nível N dá sempre a mesma categoria (determinismo).
 3. Emulador: acabar um nível e ver o seguinte entrar sem se tocar em nada.
+
+### O que mudou entre o plano e o código
+
+- **Nove categorias, não oito.** Entrou «Moçambique» — as províncias e as
+  cidades. É a única em que a palavra ensina alguma coisa além de si mesma.
+- **A grelha cresce mais depressa do que esta tabela dizia.** A tabela acima
+  foi escrita à mão antes da curva existir; agora sai da [curva] do §1 e é
+  esta. Nada se decidiu de novo — corrigiu-se a aritmética.
+- **O ponto 3 também está coberto por teste.** O `sopa_ecra_test.dart`
+  arrasta o dedo por cima de todas as palavras de um nível e confirma que o
+  degrau sobe sozinho; o emulador passa a ser confirmação, não a única prova.
 
 ---
 

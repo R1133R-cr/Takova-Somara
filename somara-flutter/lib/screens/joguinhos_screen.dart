@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../models/crossmath.dart';
+import '../models/escadaria.dart';
 import '../services/sons.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
 import '../models/memoria.dart';
-import '../models/sopa.dart';
+import '../state/app_state.dart';
 import 'crossmath_screen.dart';
 import 'memoria_screen.dart';
 import 'pomar_screen.dart';
@@ -25,6 +27,11 @@ class JoguinhosScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // O degrau da Sopa vem do estado para o cartão o mostrar. É `watch` e não
+    // `read` de propósito: quem sobe de nível lá dentro volta a este ecrã e
+    // tem de ver o número novo.
+    final nivelDaSopa = context.watch<AppState>().nivelDe(Jogo.sopa);
+
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
       children: [
@@ -81,15 +88,16 @@ class JoguinhosScreen extends StatelessWidget {
           titulo: 'Sopa de letras',
           descricao:
               'Arrasta por cima das letras para descobrir as palavras '
-              'escondidas. Animais, frutas, a escola, o corpo e Moçambique.',
+              'escondidas. A casa, o mercado, a machamba, Moçambique.',
           pose: RobyPose.graduate,
+          // Um botão só. Não se escolhe dificuldade: continua-se de onde se
+          // ficou, e a dificuldade é o degrau em que se está.
           botoes: [
-            for (final n in NivelSopa.values)
-              (
-                rotulo: n.rotulo,
-                detalhe: '${n.quantasPalavras} palavras',
-                abrir: (BuildContext ctx) => SopaScreen(nivel: n),
-              ),
+            (
+              rotulo: 'Continuar',
+              detalhe: 'nível $nivelDaSopa de $nivelMaximo',
+              abrir: (BuildContext ctx) => const SopaScreen(),
+            ),
           ],
         ),
 
