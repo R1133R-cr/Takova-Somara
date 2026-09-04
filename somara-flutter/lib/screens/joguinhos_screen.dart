@@ -37,6 +37,7 @@ class JoguinhosScreen extends StatelessWidget {
     // tempo lá dentro volta a este ecrã e tem de ver os números novos.
     final st = context.watch<AppState>();
     final nivelDaSopa = st.nivelDe(Jogo.sopa);
+    final nivelDoPomar = st.nivelDe(Jogo.pomar);
     final tempo = st.tempoDeJogo;
     final semTempo = tempo <= Duration.zero;
 
@@ -98,8 +99,8 @@ class JoguinhosScreen extends StatelessWidget {
           pose: RobyPose.empolgado,
           botoes: [
             (
-              rotulo: 'Jogar',
-              detalhe: '20 jogadas',
+              rotulo: 'Continuar',
+              detalhe: 'nível $nivelDoPomar de $nivelMaximo',
               abrir: (BuildContext ctx) => const PomarScreen(),
             ),
           ],

@@ -2,6 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:somara/models/content.dart';
 import 'package:somara/models/escadaria.dart';
+import 'package:somara/models/pomar.dart';
 import 'package:somara/state/app_state.dart';
 
 /// A escadaria tem mil degraus e ninguém os vai percorrer a olho.
@@ -79,7 +80,9 @@ void main() {
     test('Pomar', () {
       final p1 = pomarNo(1), pM = pomarNo(nivelMaximo);
       expect(p1.produtos, 4);
-      expect(pM.produtos, 7);
+      // Seis, que é quantos produtos existem. Ver [ParamsPomar.produtos].
+      expect(pM.produtos, 6);
+      expect(pM.produtos, lessThanOrEqualTo(quantosProdutos));
       expect(p1.jogadas, 25);
       expect(pM.jogadas, 12);
       // O tabuleiro não cresce: num telemóvel de 320 já está no limite.

@@ -101,12 +101,21 @@ class ParamsPomar {
 
   /// Quantos produtos distintos entram no tabuleiro. Menos produtos, mais
   /// fácil é encontrar três iguais.
+  ///
+  /// Vai de 4 a **6**, que é quantos há. Chegou a dizer 7 aqui, e nenhum
+  /// teste dava por isso porque nada lia este número — no dia em que o
+  /// tabuleiro passasse a lê-lo, ia buscar um produto que não existe.
   final int produtos;
 
   /// Jogadas dadas. Este APERTA: começa em 25 e acaba em 12.
   final int jogadas;
 
   /// Peças a colher para fechar o nível.
+  ///
+  /// De 20 a 42, e o tecto não é arbitrário: é o que o solucionador do §7
+  /// consegue mesmo colher. Uma jogada boa apanha cinco a sete peças, e no
+  /// último degrau há doze jogadas — pedir 140, como este número já pediu,
+  /// era pedir doze peças por jogada a uma criança de nove anos.
   final int objectivo;
 
   final Set<Mecanica> mecanicas;
@@ -186,9 +195,9 @@ ParamsPomar pomarNo(int nivel) {
     // se vê. O que cresce é o que lá está dentro.
     linhas: 8,
     colunas: 7,
-    produtos: _entre(4, 7, t),
+    produtos: _entre(4, 6, t),
     jogadas: _entre(25, 12, t),
-    objectivo: _entre(20, 140, t),
+    objectivo: _entre(20, 42, t),
     mecanicas: mecanicasDe(Jogo.pomar, nivel),
   );
 }

@@ -530,6 +530,9 @@ funcionalidade e partem-se juntos.)*
 
 ## 7. Pomar — aleatoriedade honesta
 
+> **Feito na 0.32.0.** O solucionador encontrou o defeito para que existia:
+> **do nível 250 para cima o Pomar era impossível.** Ver o fim da secção.
+
 **[decidido] Sorteio limpo, com solução garantida.** Nada de afinar a favor nem
 contra. Duas garantias, verificadas **antes** de o tabuleiro ser mostrado:
 
@@ -557,6 +560,56 @@ ecrã.
    jogada possível e todos resolvidos pelo solucionador.
 2. Medir o tempo de geração: **< 300 ms** no pior nível, num telemóvel barato.
 3. Emulador: jogar dez níveis seguidos sem encontrar um impossível.
+
+### O que o solucionador encontrou
+
+**Do nível 250 para cima, o Pomar era impossível.** O objectivo ia de 20 a
+**140** peças e as jogadas de 25 a 12 — ou seja, quase doze peças por jogada
+no último degrau. Uma jogada boa apanha cinco a sete. Medido com o jogador
+guloso, que escolhe sempre a melhor troca visível:
+
+| nível | objectivo | jogadas | ganhou |
+|---|---|---|---|
+| 100 | 59 | 21 | 10/10 |
+| 250 | 96 | 17 | 6/10 |
+| 500 | 125 | 14 | 2/10 |
+| 750 | 136 | 12 | **0/10** |
+| 1000 | 140 | 12 | **0/10** |
+
+O tecto passou a **42**, que é o que um jogador guloso fecha em pouco mais de
+metade das jogadas — deixando à criança a folga que ela precisa por não ser
+uma máquina. Com isso, 10/10 em todos os degraus.
+
+### Outros dois defeitos que apareceram pelo caminho
+
+- **A escadaria pedia sete produtos e há seis.** Nada lia esse número, e por
+  isso nada dava por ele; no dia em que o tabuleiro passasse a lê-lo, ia
+  buscar um produto que não existe. Passou a 4→6, com um teste que o prende
+  a quantos há.
+- **O número de produtos só valia para o primeiro enchimento.** As peças que
+  caíam a seguir vinham sempre das seis, e a baralhação também: um nível de
+  quatro produtos passava a seis à primeira cascata, e a dificuldade do
+  degrau desfazia-se sozinha na primeira jogada. O `produtos` passou a ser
+  do **tabuleiro** e não de quem o cria.
+
+### O que mais se decidiu
+
+- **Não corre num isolate.** O §7 pedia-o «para não travar o ecrã»; mediu-se
+  antes de o construir: gerar um tabuleiro provado dá ~1 ms, e o teste
+  mantém-no abaixo dos 300 ms. Um isolate custava serializar o tabuleiro nos
+  dois sentidos por uma latência que não existe.
+- **O objectivo é o que fecha o nível, desde o degrau 1.** «Fazer muitos
+  pontos» não é um objectivo que se possa provar ganhável, e sem isso não há
+  solucionador nenhum a valer. Os pontos continuam à vista, mas o número que
+  fecha o nível são as peças. A mecânica `objectivo` do §1 («objectivo em vez
+  de pontos», marco 50) fica sem sentido próprio — o objectivo existe desde
+  o princípio.
+- **Ganhar sobe de degrau sozinho**, como na Sopa. **Perder não desce**: uma
+  criança que falha o nível 40 tenta o 40 outra vez, e o painel do fim só
+  aparece quando há mesmo uma decisão a tomar.
+- **O placar passou a três números** — peças, pontos, jogadas — com as peças
+  primeiro. Uma criança que olha para o número errado joga para o objectivo
+  errado.
 
 ---
 

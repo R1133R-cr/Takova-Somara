@@ -5,7 +5,9 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import '../models/escadaria.dart';
 import '../models/pomar.dart';
+import '../models/pomar_solucionador.dart';
 import '../models/rastreio.dart';
 import '../services/sons.dart';
 import '../state/app_state.dart';
@@ -22,7 +24,11 @@ import '../widgets/roby.dart';
 ///
 /// Não gasta corações e não faz avançar a amarelinha. É para brincar.
 class PomarScreen extends StatefulWidget {
-  const PomarScreen({super.key});
+  /// Por onde começar. Nulo entra pelo degrau guardado no estado — que é o
+  /// caso normal; o número serve para os testes e para reabrir um nível.
+  final int? nivel;
+
+  const PomarScreen({super.key, this.nivel});
 
   @override
   State<PomarScreen> createState() => _PomarScreenState();
@@ -30,14 +36,24 @@ class PomarScreen extends StatefulWidget {
 
 class _PomarScreenState extends State<PomarScreen>
     with TickerProviderStateMixin {
-  static const _jogadas = 20;
-
   final _rnd = Random();
+
+  /// O degrau que se está a jogar, e o que ele manda.
+  late int _nivel;
+  late ParamsPomar _params;
+
+  /// Peças colhidas neste nível. É o que fecha o nível, e não os pontos:
+  /// "faz muitos pontos" não é um objectivo que se possa garantir ganhável,
+  /// e sem objectivo garantido não há solucionador nenhum a valer.
+  int _colhidas = 0;
+
+  /// Verdadeiro entre ganhar e o nível seguinte entrar.
+  bool _aPassar = false;
   late final AnimationController _abanao;
 
   late Pomar _tabuleiro;
   int _pontos = 0;
-  int _restam = _jogadas;
+  int _restam = 0;
 
   /// A peça debaixo do dedo, e a vizinha para onde ela vai.
   int? _arrastada;
@@ -115,7 +131,26 @@ class _PomarScreenState extends State<PomarScreen>
         setState(() => _aVibrar = const {});
       }
     });
-    _tabuleiro = Pomar.novo(rnd: _rnd);
+    _nivel = widget.nivel ?? context.read<AppState>().nivelDe(Jogo.pomar);
+    _montarNivel();
+  }
+
+  /// Sorteia um tabuleiro do degrau, já provado ganhável.
+  ///
+  /// Ver [pomarDoNivel]: sorteia e simula, e deita fora o que um jogador
+  /// guloso não fecha dentro de oitenta por cento das jogadas. A criança
+  /// nunca perde por azar — e nunca ganha por pena.
+  void _montarNivel() {
+    _params = pomarNo(_nivel);
+    _tabuleiro = pomarDoNivel(_nivel, rnd: _rnd).tabuleiro;
+    _restam = _params.jogadas;
+    _colhidas = 0;
+    _pontos = 0;
+    _aColher = const {};
+    _aVibrar = const {};
+    _rastreio.limpar();
+    _aPassar = false;
+    _aviso = null;
   }
 
   @override
@@ -128,7 +163,8 @@ class _PomarScreenState extends State<PomarScreen>
     super.dispose();
   }
 
-  bool get _acabou => _restam <= 0;
+  bool get _ganhou => _colhidas >= _params.objectivo;
+  bool get _acabou => _ganhou || _restam <= 0;
 
   /// Que casa está debaixo deste ponto da grelha.
   int? _casaEm(Offset p) {
@@ -139,7 +175,7 @@ class _PomarScreenState extends State<PomarScreen>
   }
 
   void _comecarArrasto(Offset p) {
-    if (_ocupado || _acabou) return;
+    if (_ocupado || _acabou || _aPassar) return;
     final i = _casaEm(p);
     if (i == null) return;
     Sons.i.toque();
@@ -159,7 +195,7 @@ class _PomarScreenState extends State<PomarScreen>
   /// gesto. Escolhe-se o eixo com mais movimento e ignora-se o outro.
   void _actualizarArrasto(Offset p) {
     final origem = _arrastada;
-    if (origem == null || _ocupado || _acabou) return;
+    if (origem == null || _ocupado || _acabou || _aPassar) return;
 
     final delta = p - _inicioDoDedo;
     final horizontal = delta.dx.abs() >= delta.dy.abs();
@@ -308,6 +344,7 @@ class _PomarScreenState extends State<PomarScreen>
 
       setState(() {
         _pontos += ganho;
+        _colhidas += grupos.length;
         _aColher = const {};
         _tabuleiro = _tabuleiro.colher(colheita).assentar();
       });
@@ -346,7 +383,21 @@ class _PomarScreenState extends State<PomarScreen>
       if (ganho > 0 && mounted) {
         context.read<AppState>().concluirTreino(ganho);
       }
+      if (_ganhou) unawaited(_passarAoSeguinte());
     }
+  }
+
+  /// Objectivo cumprido: festeja um instante e o degrau seguinte entra.
+  ///
+  /// O mesmo que a Sopa faz, e pela mesma razão: quem acabou de fechar o
+  /// nível já respondeu que quer o seguinte. Perder é que traz o painel,
+  /// porque aí há uma decisão a tomar.
+  Future<void> _passarAoSeguinte() async {
+    setState(() => _aPassar = true);
+    await Future<void>.delayed(const Duration(milliseconds: 1600));
+    if (!mounted) return;
+    _nivel = context.read<AppState>().subirNivelDe(Jogo.pomar);
+    setState(_montarNivel);
   }
 
   /// Marca o sítio da colheita para as estrelinhas e o número saltarem
@@ -374,20 +425,19 @@ class _PomarScreenState extends State<PomarScreen>
     _brilho.forward(from: 0);
   }
 
+  /// Outra vez o MESMO degrau, com um tabuleiro novo.
+  ///
+  /// Perder não faz descer a escadaria. Uma criança que falha o nível 40
+  /// tenta o 40 outra vez; mandá-la de volta ao 39 seria tirar-lhe o que
+  /// ela já tinha conquistado por causa de uma partida má.
   void _recomecar() {
     Sons.i.toque();
     setState(() {
-      _tabuleiro = Pomar.novo(rnd: _rnd);
-      _pontos = 0;
-      _restam = _jogadas;
-      _rastreio.limpar();
-      _aVibrar = const {};
+      _montarNivel();
       _arrastada = null;
       _alvo = null;
       _puxao = Offset.zero;
-      _aColher = const {};
       _ocupado = false;
-      _aviso = null;
       _festejos.clear();
     });
   }
@@ -401,7 +451,7 @@ class _PomarScreenState extends State<PomarScreen>
   /// **peça especial**: com duas jogadas no bolso, uma dica não salva
   /// ninguém, e uma ajuda que chega tarde de mais não é ajuda.
   Future<void> _pedirSorte() async {
-    if (_ocupado || _acabou) return;
+    if (_ocupado || _acabou || _aPassar) return;
 
     final jogada = _tabuleiro.jogadaPorTocar(_rastreio);
     final st = context.read<AppState>();
@@ -453,10 +503,11 @@ class _PomarScreenState extends State<PomarScreen>
         backgroundColor: S.gm950,
         foregroundColor: S.tx,
         elevation: 0,
-        title: const Text('Pomar', style: TextStyle(fontSize: 17)),
+        title: Text('Pomar · Nível $_nivel',
+            style: const TextStyle(fontSize: 16)),
         actions: [
           BotaoDeSorte(
-            aoPedir: (_ocupado || _acabou) ? null : _pedirSorte,
+            aoPedir: (_ocupado || _acabou || _aPassar) ? null : _pedirSorte,
           ),
         ],
       ),
@@ -506,6 +557,10 @@ class _PomarScreenState extends State<PomarScreen>
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
+        // O que fecha o nível vem primeiro, e os pontos a seguir. Uma
+        // criança que olha para o número errado joga para o objectivo
+        // errado.
+        _numero('$_colhidas/${_params.objectivo}', 'peças', S.green300),
         _numero('$_pontos', 'pontos', S.chart),
         _numero('$_restam', _restam == 1 ? 'jogada' : 'jogadas',
             _restam <= 3 ? S.life : S.gold),
@@ -682,31 +737,51 @@ class _PomarScreenState extends State<PomarScreen>
     padding: const EdgeInsets.fromLTRB(20, 0, 20, 18),
     child: Column(
       children: [
-        Image.asset(RobyPose.orgulhoso.path, width: 84),
+        Image.asset(
+          (_ganhou ? RobyPose.orgulhoso : RobyPose.confiante).path,
+          width: 84,
+        ),
         const SizedBox(height: 8),
         Text(
-          'Fizeste $_pontos pontos!',
-          style: const TextStyle(
-            color: S.chart,
-            fontSize: 18,
+          _ganhou
+              ? 'Nível $_nivel feito, com $_pontos pontos!'
+              : 'Faltaram ${_params.objectivo - _colhidas} peças. Quase!',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: _ganhou ? S.chart : S.gold,
+            fontSize: 17,
             fontWeight: FontWeight.w700,
           ),
         ),
-        const SizedBox(height: 12),
-        Row(
-          children: [
-            Expanded(
-              child: _botao('Sair', () => Navigator.of(context).pop(),
-                  cor: S.surface, corTexto: S.txSoft),
-            ),
-            const SizedBox(width: 10),
-            Expanded(
-              flex: 2,
-              child: _botao('Jogar outra vez', _recomecar,
-                  cor: S.chart, corTexto: S.onChart),
-            ),
-          ],
-        ),
+        if (_ganhou) ...[
+          const SizedBox(height: 4),
+          Text(
+            _nivel >= nivelMaximo
+                ? 'Chegaste ao fim da escadaria.'
+                : 'Vem aí o ${_nivel + 1}…',
+            style: const TextStyle(color: S.txSoft, fontSize: 14),
+          ),
+        ],
+        // Ganhar não mostra botões: o degrau seguinte entra sozinho. Perder
+        // mostra, porque aí há mesmo uma decisão a tomar — e "outra vez" é
+        // o MESMO nível: perder não faz descer a escadaria.
+        if (!_ganhou) ...[
+          const SizedBox(height: 12),
+          Row(
+            children: [
+              Expanded(
+                child: _botao('Sair', () => Navigator.of(context).pop(),
+                    cor: S.surface, corTexto: S.txSoft),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                flex: 2,
+                child: _botao('Tentar outra vez', _recomecar,
+                    cor: S.chart, corTexto: S.onChart),
+              ),
+            ],
+          ),
+        ],
       ],
     ),
   );

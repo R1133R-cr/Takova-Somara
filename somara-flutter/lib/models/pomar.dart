@@ -12,6 +12,10 @@ import 'rastreio.dart';
 /// Seis e não oito: quantos mais tipos houver, menos coincidências saem por
 /// acaso, e um tabuleiro onde raramente se forma um trio deixa de ser um
 /// jogo e passa a ser uma busca.
+/// Quantos produtos existem ao todo. Constante para poder ser o valor por
+/// omissão de um construtor `const`.
+const quantosProdutos = 6;
+
 enum Produto {
   manga('🥭', 'manga'),
   banana('🍌', 'banana'),
@@ -133,11 +137,24 @@ class Pomar {
   /// Nulo é um buraco à espera de ser preenchido.
   final List<Peca?> casas;
 
+  /// Quantos produtos distintos entram neste tabuleiro.
+  ///
+  /// É do TABULEIRO e não de quem o cria: as peças que caem para encher os
+  /// buracos, e as que saem de uma baralhação, têm de vir da mesma lista.
+  /// Enquanto isto foi um argumento do construtor, um nível de quatro
+  /// produtos passava a seis à primeira cascata — e a dificuldade do degrau
+  /// desfazia-se sozinha na primeira jogada.
+  final int produtos;
+
   const Pomar({
     required this.linhas,
     required this.colunas,
     required this.casas,
+    this.produtos = quantosProdutos,
   });
+
+  /// Um produto ao acaso, de entre os deste tabuleiro.
+  Peca _qualquer(Random r) => Peca(Produto.values[r.nextInt(produtos)]);
 
   int indice(int l, int c) => l * colunas + c;
   int linhaDe(int i) => i ~/ colunas;
@@ -149,8 +166,12 @@ class Pomar {
   Peca? em(int l, int c) => dentro(l, c) ? casas[indice(l, c)] : null;
   Produto? produtoEm(int l, int c) => em(l, c)?.produto;
 
-  Pomar comCasas(List<Peca?> novas) =>
-      Pomar(linhas: linhas, colunas: colunas, casas: novas);
+  Pomar comCasas(List<Peca?> novas) => Pomar(
+    linhas: linhas,
+    colunas: colunas,
+    casas: novas,
+    produtos: produtos,
+  );
 
   /// Um tabuleiro pronto a jogar: sem trios já feitos e com pelo menos uma
   /// jogada possível.
@@ -159,15 +180,22 @@ class Pomar {
   /// criança não ganhou; começar sem jogada possível dava um tabuleiro
   /// bloqueado logo à entrada, e ela não teria como saber que a culpa não
   /// era dela.
-  factory Pomar.novo({int linhas = 8, int colunas = 7, Random? rnd}) {
+  factory Pomar.novo({
+    int linhas = 8,
+    int colunas = 7,
+    int? produtos,
+    Random? rnd,
+  }) {
     final r = rnd ?? Random();
+    final quantos = (produtos ?? quantosProdutos).clamp(3, quantosProdutos);
     for (var tentativa = 0; tentativa < 200; tentativa++) {
       var p = Pomar(
         linhas: linhas,
         colunas: colunas,
+        produtos: quantos,
         casas: List.generate(
           linhas * colunas,
-          (_) => Peca(Produto.values[r.nextInt(Produto.values.length)]),
+          (_) => Peca(Produto.values[r.nextInt(quantos)]),
         ),
       );
       p = p._desfazerTriosIniciais(r);
@@ -176,9 +204,10 @@ class Pomar {
     return Pomar(
       linhas: linhas,
       colunas: colunas,
+      produtos: quantos,
       casas: List.generate(
         linhas * colunas,
-        (i) => Peca(Produto.values[(i + i ~/ colunas) % Produto.values.length]),
+        (i) => Peca(Produto.values[(i + i ~/ colunas) % quantos]),
       ),
     );
   }
@@ -189,7 +218,7 @@ class Pomar {
       final grupos = comCasas(casas).grupos();
       if (grupos.isEmpty) break;
       for (final i in grupos) {
-        casas[i] = Peca(Produto.values[r.nextInt(Produto.values.length)]);
+        casas[i] = _qualquer(r);
       }
     }
     return comCasas(casas);
@@ -510,7 +539,7 @@ class Pomar {
   Pomar encher(Random r) {
     final novas = List<Peca?>.from(casas);
     for (var i = 0; i < novas.length; i++) {
-      novas[i] ??= Peca(Produto.values[r.nextInt(Produto.values.length)]);
+      novas[i] ??= _qualquer(r);
     }
     return comCasas(novas);
   }
@@ -527,7 +556,12 @@ class Pomar {
           comCasas(List<Peca?>.from(pecas))._desfazerTriosIniciais(r);
       if (p.haJogada()) return p;
     }
-    return Pomar.novo(linhas: linhas, colunas: colunas, rnd: r);
+    return Pomar.novo(
+      linhas: linhas,
+      colunas: colunas,
+      produtos: produtos,
+      rnd: r,
+    );
   }
 
   /// Pontos de uma colheita, por número de peças.

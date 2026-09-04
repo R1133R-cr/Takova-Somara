@@ -121,8 +121,12 @@ void main() {
     }
 
     await montar(tester, const JoguinhosScreen(), st);
-    expect(find.text('Continuar'), findsOneWidget);
+    // Dois "Continuar": o da Sopa e o do Pomar, que também entrou na
+    // escadaria. O que os distingue é o degrau por baixo.
+    expect(find.text('Continuar'), findsNWidgets(2));
     expect(find.text('nível 7 de $nivelMaximo'), findsOneWidget);
+    expect(find.text('nível 1 de $nivelMaximo'), findsOneWidget,
+        reason: 'o Pomar devia estar no primeiro degrau');
     // As três dificuldades antigas desapareceram. Vinham rotuladas com o
     // número de palavras — se alguma dessas sobrar, voltou-se a perguntar à
     // criança uma coisa que ela não tem de escolher.
