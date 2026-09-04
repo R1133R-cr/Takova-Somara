@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'escadaria.dart';
+
 /// Que tipo de par se está a treinar.
 ///
 /// O par nunca é igual a si mesmo, e é aí que está o valor. Virar duas
@@ -25,6 +27,13 @@ enum Baralho {
   final String classes;
 
   const Baralho(this.rotulo, this.explica, this.classes);
+
+  /// O baralho de um degrau da escadaria.
+  ///
+  /// Determinado pelo número e não sorteado, como a categoria da sopa: o
+  /// mesmo degrau tem de dar sempre o mesmo baralho, senão dois telemóveis
+  /// com a mesma criança mostravam jogos diferentes.
+  static Baralho doNivel(int nivel) => values[(nivel - 1) % values.length];
 }
 
 /// "1 tentativa", "2 tentativas".
@@ -73,6 +82,17 @@ class JogoDaMemoria {
   /// uma jogada certa, sem ela ter como perceber porquê.
   ///
   /// Por isso o que se guarda são as faces, não as contas.
+  /// O jogo de um degrau da escadaria.
+  ///
+  /// O degrau manda em tudo: o baralho (fixo, para o mesmo degrau dar sempre
+  /// o mesmo) e quantos pares se põem na mesa.
+  factory JogoDaMemoria.doNivel(int nivel, {Baralho? baralho, Random? rnd}) =>
+      JogoDaMemoria.novo(
+        baralho: baralho ?? Baralho.doNivel(nivel),
+        pares: memoriaNo(nivel).pares,
+        rnd: rnd,
+      );
+
   factory JogoDaMemoria.novo({
     required Baralho baralho,
     int pares = 6,
@@ -106,7 +126,10 @@ class JogoDaMemoria {
   ) {
     switch (b) {
       case Baralho.quantidade:
-        final n = 1 + r.nextInt(9);
+        // Doze e não nove: o último degrau da escadaria pede doze pares, e
+        // com nove o jogo entregava menos cartas do que prometia sem o
+        // dizer a ninguém.
+        final n = 1 + r.nextInt(12);
         final fruta = _frutas[r.nextInt(_frutas.length)];
         return (('$n', false), (fruta * n, true), 'q$n');
 
@@ -116,7 +139,7 @@ class JogoDaMemoria {
         return (('$a + $c', false), ('${a + c}', false), 's$a+$c');
 
       case Baralho.dobros:
-        final n = 1 + r.nextInt(10);
+        final n = 1 + r.nextInt(14);
         // Metade só de números pares, senão a resposta não é inteira e a
         // criança desta idade ainda não viu fracções.
         final metade = r.nextBool() && n.isEven;
@@ -129,6 +152,10 @@ class JogoDaMemoria {
           'MANGA': '🥭', 'BANANA': '🍌', 'COCO': '🥥', 'MILHO': '🌽',
           'TOMATE': '🍅', 'PEIXE': '🐟', 'GATO': '🐈', 'CASA': '🏠',
           'SOL': '☀️', 'LIVRO': '📕', 'BOLA': '⚽', 'GALINHA': '🐔',
+          // Doze chegavam para seis pares e não para doze: com o baralho
+          // no tecto da escadaria, metade das cartas não tinha par.
+          'CHAVE': '🔑', 'PORTA': '🚪', 'LUA': '🌙', 'ESTRELA': '⭐',
+          'CHUVA': '🌧️', 'FLOR': '🌻', 'PATO': '🦆', 'CABRA': '🐐',
         };
         final chaves = mapa.keys.toList();
         final k = chaves[r.nextInt(chaves.length)];

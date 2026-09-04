@@ -87,6 +87,9 @@ inventar novas — é o que dá variedade sem trabalho infinito.
 - alterar `lib/screens/joguinhos_screen.dart` — mostrar o nível em vez das
   dificuldades fixas («Fácil/Médio/Difícil» desaparece)
 
+> **Os quatro jogos ligados.** Sopa na 0.25.0, Pomar na 0.32.0, **Crossmath e
+> Memória na 0.35.0**. Já nenhum pergunta à criança que dificuldade quer.
+
 ### Verificação ponta-a-ponta
 
 1. `escadaria_test.dart`: para os 1000 níveis de cada jogo, os parâmetros ficam
@@ -95,6 +98,29 @@ inventar novas — é o que dá variedade sem trabalho infinito.
    **resolvível** (ver §7 para o Pomar; a Sopa já tem `sopa_test.dart`).
 3. No emulador: abrir cada jogo, ver o número do nível, jogar, ver o número subir.
 4. Golden do ecrã dos joguinhos com os quatro níveis diferentes.
+
+### O que a ligação dos dois últimos encontrou
+
+- **O baralho de «Contar» não chegava aos doze pares.** Ia de 1 a 9, e a
+  escadaria pede doze no último degrau: o jogo entregava nove cartas e nada
+  dizia nada, porque uma mesa com menos cartas do que devia continua a
+  jogar-se. O mesmo com «Palavras», que tinha doze entradas para doze pares.
+  Os quatro baralhos foram alargados e há um teste que os prende ao tecto.
+- **O Crossmath deixava de crescer no nível 400.** O valor livre estava
+  travado em 99, e por isso o canto nunca passava de 396 — do 400 para cima
+  os puzzles eram todos iguais uns aos outros, por muito que a escadaria
+  dissesse outra coisa. O travão subiu para 250 e há um teste que exige que
+  o último degrau chegue perto do seu tecto.
+- **A `Dificuldade` do Crossmath desapareceu**, como o §1 previa. A `Baralho`
+  da Memória **ficou**: não é uma dificuldade, é um assunto — contar, somas,
+  dobros, palavras — e agora roda pelo degrau, como a categoria da Sopa. Os
+  quatro primeiros degraus dão os quatro baralhos, para a criança os
+  conhecer todos antes de a escadaria começar a apertar.
+- **O teste dos botões dos Joguinhos foi reescrito.** Guardava a disposição
+  de quatro botões numa linha — uma disposição que já não existe, porque
+  cada cartão tem agora um botão só. Continua a medir a pílula, que é o que
+  se partia: uma pílula estreita de mais parte o rótulo ao meio e deita-o
+  pela borda curva fora.
 
 ---
 

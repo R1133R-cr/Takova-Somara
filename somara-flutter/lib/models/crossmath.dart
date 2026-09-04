@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'escadaria.dart';
+
 /// Um puzzle de Crossmath: uma grelha 3×3 em que as contas têm de fechar
 /// nas linhas **e** nas colunas ao mesmo tempo.
 ///
@@ -28,12 +30,15 @@ class Crossmath {
   /// Quais é que já vêm preenchidos. Os outros são para a criança descobrir.
   final List<bool> dadas;
 
-  final Dificuldade dificuldade;
+  /// O degrau que gerou este puzzle, e o que ele mandou.
+  final int nivel;
+  final ParamsCrossmath params;
 
   const Crossmath({
     required this.valores,
     required this.dadas,
-    required this.dificuldade,
+    required this.nivel,
+    required this.params,
   });
 
   /// As seis contas da grelha, como trios de índices (esquerda, direita,
@@ -58,29 +63,6 @@ class Crossmath {
   ];
 }
 
-enum Dificuldade {
-  facil('Fácil', 20, 6),
-  medio('Médio', 60, 5),
-  dificil('Difícil', 150, 4);
-
-  /// Nome a mostrar.
-  final String rotulo;
-
-  /// Valor máximo que a casa do canto (a maior de todas) pode ter. É o que
-  /// separa a 1ª classe da 6ª: somar até 20 é outra coisa que somar até 150.
-  final int tecto;
-
-  /// Quantas casas ficam à vista. Menos pistas, mais dedução.
-  ///
-  /// Nunca menos de quatro, e não por gosto: cada casa é uma combinação
-  /// linear dos quatro valores livres, portanto três pistas nunca chegam
-  /// para os fixar. Um puzzle de três pistas tem sempre uma família de
-  /// soluções — parece mais difícil e é apenas impossível.
-  final int pistas;
-
-  const Dificuldade(this.rotulo, this.tecto, this.pistas);
-}
-
 /// Gera puzzles com solução única.
 ///
 /// A unicidade não é um pormenor: um puzzle com duas respostas certas dá
@@ -100,10 +82,21 @@ class GeradorCrossmath {
     return [a, b, c, d, e, f, g, h, c + f];
   }
 
-  Crossmath gerar(Dificuldade dif) {
+  /// O puzzle de um degrau da escadaria.
+  ///
+  /// Já não há "Fácil, Médio, Difícil": a dificuldade é o degrau em que se
+  /// está, e sobe sozinha. O tecto vai de 20 a 999 e as pistas de 6 a 4 —
+  /// nunca menos, que abaixo disso o puzzle deixa de ter solução única.
+  Crossmath doNivel(int nivel) => gerar(crossmathNo(nivel), nivel);
+
+  Crossmath gerar(ParamsCrossmath dif, [int nivel = 1]) {
     // O canto de baixo à direita é a soma dos quatro livres, e é sempre o
     // maior número da grelha. Limitá-lo limita a grelha toda.
-    final maxLivre = (dif.tecto / 4).floor().clamp(2, 99);
+    //
+    // O tecto do quarto livre subiu de 99 para 250: com o antigo, o canto
+    // nunca passava de 396 e os degraus de cima da escadaria eram todos
+    // iguais uns aos outros.
+    final maxLivre = (dif.tecto / 4).floor().clamp(2, 250);
 
     for (var tentativa = 0; tentativa < 400; tentativa++) {
       final a = 1 + _rnd.nextInt(maxLivre);
@@ -119,7 +112,12 @@ class GeradorCrossmath {
       final dadas = _escolherPistas(valores, dif);
       if (dadas == null) continue;
 
-      return Crossmath(valores: valores, dadas: dadas, dificuldade: dif);
+      return Crossmath(
+        valores: valores,
+        dadas: dadas,
+        nivel: nivel,
+        params: dif,
+      );
     }
 
     // Rede de segurança: uma grelha conhecida, com os quatro cantos à vista.
@@ -128,12 +126,13 @@ class GeradorCrossmath {
     return Crossmath(
       valores: grelhaDe(8, 7, 1, 8),
       dadas: const [true, false, true, false, false, false, true, false, true],
-      dificuldade: dif,
+      nivel: nivel,
+      params: dif,
     );
   }
 
   /// Escolhe que casas ficam à vista, exigindo solução única.
-  List<bool>? _escolherPistas(List<int> valores, Dificuldade dif) {
+  List<bool>? _escolherPistas(List<int> valores, ParamsCrossmath dif) {
     for (var tentativa = 0; tentativa < 40; tentativa++) {
       final indices = List.generate(9, (i) => i)..shuffle(_rnd);
       final dadas = List.filled(9, false);

@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../models/crossmath.dart';
+import '../models/escadaria.dart';
 import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
@@ -15,8 +18,9 @@ import '../widgets/roby.dart';
 /// tempo de uma espera. Em nenhum dos casos faz sentido castigá-la por
 /// tentar.
 class CrossmathScreen extends StatefulWidget {
-  final Dificuldade dificuldade;
-  const CrossmathScreen({super.key, required this.dificuldade});
+  /// Por onde começar. Nulo entra pelo degrau guardado no estado.
+  final int? nivel;
+  const CrossmathScreen({super.key, this.nivel});
 
   @override
   State<CrossmathScreen> createState() => _CrossmathScreenState();
@@ -29,6 +33,10 @@ class _CrossmathScreenState extends State<CrossmathScreen>
 
   late final AnimationController _abanao;
   late Crossmath _puzzle;
+  late int _nivel;
+
+  /// Verdadeiro entre resolver e o degrau seguinte entrar.
+  bool _aPassar = false;
   late List<int?> _tentativa;
 
   int? _seleccionada;
@@ -47,6 +55,7 @@ class _CrossmathScreenState extends State<CrossmathScreen>
       vsync: this,
       duration: const Duration(milliseconds: 420),
     );
+    _nivel = widget.nivel ?? context.read<AppState>().nivelDe(Jogo.crossmath);
     _novo();
   }
 
@@ -58,7 +67,8 @@ class _CrossmathScreenState extends State<CrossmathScreen>
   }
 
   void _novo() {
-    _puzzle = GeradorCrossmath().gerar(widget.dificuldade);
+    _puzzle = GeradorCrossmath().doNivel(_nivel);
+    _aPassar = false;
     _tentativa = [
       for (var i = 0; i < 9; i++)
         _puzzle.dadas[i] ? _puzzle.valores[i] : null,
@@ -83,14 +93,27 @@ class _CrossmathScreenState extends State<CrossmathScreen>
     });
   }
 
+  /// Resolvido: festeja um instante e o degrau seguinte entra sozinho.
+  ///
+  /// O mesmo que a Sopa e o Pomar fazem. Quem acabou de resolver um puzzle
+  /// já respondeu que quer o seguinte.
+  Future<void> _passarAoSeguinte() async {
+    setState(() => _aPassar = true);
+    await Future<void>.delayed(const Duration(milliseconds: 1600));
+    if (!mounted) return;
+    _nivel = context.read<AppState>().subirNivelDe(Jogo.crossmath);
+    setState(_novo);
+  }
+
   void _apagar() {
     final i = _seleccionada;
-    if (i == null || _resolvido) return;
+    if (i == null || _resolvido || _aPassar) return;
     Sons.i.toque();
     setState(() => _tentativa[i] = null);
   }
 
   void _verificar() {
+    if (_aPassar) return;
     final erradas = _puzzle.conferir(_tentativa);
     if (erradas.isEmpty) {
       Sons.i.nivel();
@@ -103,6 +126,7 @@ class _CrossmathScreenState extends State<CrossmathScreen>
         _resolvidos++;
         _erradas = const [];
       });
+      unawaited(_passarAoSeguinte());
       return;
     }
     Sons.i.errado();
@@ -122,7 +146,7 @@ class _CrossmathScreenState extends State<CrossmathScreen>
         foregroundColor: S.tx,
         elevation: 0,
         title: Text(
-          'Crossmath · ${widget.dificuldade.rotulo}',
+          'Crossmath · Nível $_nivel',
           style: const TextStyle(fontSize: 16.5),
         ),
         actions: [
@@ -371,6 +395,22 @@ class _CrossmathScreenState extends State<CrossmathScreen>
     child: Column(
       children: [
         Image.asset(RobyPose.orgulhoso.path, width: 92),
+        const SizedBox(height: 8),
+        Text(
+          'Nível $_nivel feito!',
+          style: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w700,
+            color: S.chart,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          _nivel >= nivelMaximo
+              ? 'Chegaste ao fim da escadaria.'
+              : 'Vem aí o ${_nivel + 1}…',
+          style: const TextStyle(color: S.txSoft, fontSize: 13.5),
+        ),
         const SizedBox(height: 12),
         Row(
           children: [

@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:somara/models/crossmath.dart';
+import 'package:somara/models/escadaria.dart';
 
 /// O gerador de Crossmath.
 ///
@@ -9,16 +10,20 @@ import 'package:somara/models/crossmath.dart';
 /// e numa app que ensina não há defeito pior. Como os puzzles são gerados ao
 /// acaso, não chega verificar um.
 void main() {
+  /// Degraus espalhados pela escadaria. Substituíram as três dificuldades
+  /// fixas: já não se escolhe Fácil, Médio ou Difícil — sobe-se.
+  const degraus = [1, 25, 100, 250, 500, 750, nivelMaximo];
+
   test('as seis contas fecham em qualquer grelha gerada', () {
     final g = GeradorCrossmath(Random(7));
-    for (final dif in Dificuldade.values) {
+    for (final n in degraus) {
       for (var i = 0; i < 200; i++) {
-        final p = g.gerar(dif);
+        final p = g.doNivel(n);
         for (final (esq, dir, res) in Crossmath.equacoes) {
           expect(
             p.valores[esq] + p.valores[dir],
             p.valores[res],
-            reason: '${dif.rotulo}: $esq + $dir != $res em ${p.valores}',
+            reason: 'nível $n: $esq + $dir != $res em ${p.valores}',
           );
         }
       }
@@ -27,13 +32,13 @@ void main() {
 
   test('cada puzzle gerado tem uma só solução', () {
     final g = GeradorCrossmath(Random(11));
-    for (final dif in Dificuldade.values) {
+    for (final n in degraus) {
       for (var i = 0; i < 200; i++) {
-        final p = g.gerar(dif);
+        final p = g.doNivel(n);
         expect(
           GeradorCrossmath.determinaSolucaoUnica(p.dadas),
           isTrue,
-          reason: '${dif.rotulo}: pistas ${p.dadas} não fixam a solução',
+          reason: 'nível $n: pistas ${p.dadas} não fixam a solução',
         );
       }
     }
@@ -78,8 +83,11 @@ void main() {
         if (dadas.where((d) => d).length != 3) continue;
         expect(GeradorCrossmath.determinaSolucaoUnica(dadas), isFalse);
       }
-      expect(Dificuldade.values.map((d) => d.pistas).reduce(min),
-          greaterThanOrEqualTo(4));
+      // E a escadaria nunca desce abaixo das quatro, em nenhum dos mil
+      // degraus.
+      for (var n = 1; n <= nivelMaximo; n++) {
+        expect(crossmathNo(n).pistas, greaterThanOrEqualTo(4), reason: '$n');
+      }
     });
   });
 
@@ -87,27 +95,48 @@ void main() {
     // É isto que separa a 1ª classe da 6ª. Uma soma até 150 posta à frente
     // de quem está a aprender a contar até 20 não é um desafio, é um muro.
     final g = GeradorCrossmath(Random(3));
-    for (final dif in Dificuldade.values) {
+    for (final n in degraus) {
       for (var i = 0; i < 100; i++) {
-        final p = g.gerar(dif);
-        expect(p.valores.reduce(max), lessThanOrEqualTo(dif.tecto),
-            reason: dif.rotulo);
+        final p = g.doNivel(n);
+        expect(p.valores.reduce(max), lessThanOrEqualTo(crossmathNo(n).tecto),
+            reason: 'nível $n');
         expect(p.valores.reduce(min), greaterThan(0),
-            reason: '${dif.rotulo}: sem casas a zero nem negativas');
+            reason: 'nível $n: sem casas a zero nem negativas');
       }
     }
   });
 
-  test('a dificuldade nota-se no número de casas por descobrir', () {
+  test('o degrau nota-se no número de casas por descobrir', () {
     final g = GeradorCrossmath(Random(5));
-    for (final dif in Dificuldade.values) {
-      expect(g.gerar(dif).porDescobrir, 9 - dif.pistas, reason: dif.rotulo);
+    for (final n in degraus) {
+      expect(g.doNivel(n).porDescobrir, 9 - crossmathNo(n).pistas,
+          reason: 'nível $n');
     }
-    expect(Dificuldade.facil.pistas, greaterThan(Dificuldade.dificil.pistas));
+    expect(crossmathNo(1).pistas,
+        greaterThan(crossmathNo(nivelMaximo).pistas));
+  });
+
+  test('os degraus de cima são mesmo maiores do que os de baixo', () {
+    // O tecto do valor livre estava travado em 99, e por isso o canto nunca
+    // passava de 396: do nível 400 para cima os puzzles eram todos iguais
+    // uns aos outros, por muito que a escadaria dissesse outra coisa.
+    final g = GeradorCrossmath(Random(9));
+    var maiorEmBaixo = 0, maiorEmCima = 0;
+    for (var i = 0; i < 200; i++) {
+      final a = g.doNivel(1).valores.reduce(max);
+      final b = g.doNivel(nivelMaximo).valores.reduce(max);
+      if (a > maiorEmBaixo) maiorEmBaixo = a;
+      if (b > maiorEmCima) maiorEmCima = b;
+    }
+    expect(maiorEmBaixo, lessThanOrEqualTo(crossmathNo(1).tecto));
+    expect(crossmathNo(1).tecto, lessThan(30),
+        reason: 'o primeiro degrau tem de caber em quem conta até 20');
+    expect(maiorEmCima, greaterThan(500),
+        reason: 'o último degrau nunca chegou perto do seu tecto');
   });
 
   test('conferir aceita a solução e aponta o que está errado', () {
-    final p = GeradorCrossmath(Random(2)).gerar(Dificuldade.medio);
+    final p = GeradorCrossmath(Random(2)).doNivel(100);
     expect(p.conferir(p.valores), isEmpty);
 
     final vazia = p.dadas.indexOf(false);

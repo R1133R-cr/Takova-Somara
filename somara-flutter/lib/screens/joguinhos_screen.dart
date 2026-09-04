@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../models/crossmath.dart';
 import '../models/bolsa_de_tempo.dart';
 import '../models/escadaria.dart';
 import '../services/sons.dart';
 import '../theme.dart';
 import '../widgets/relogio_de_jogo.dart';
 import '../widgets/roby.dart';
-import '../models/memoria.dart';
 import '../state/app_state.dart';
 import 'crossmath_screen.dart';
 import 'memoria_screen.dart';
@@ -38,6 +36,8 @@ class JoguinhosScreen extends StatelessWidget {
     final st = context.watch<AppState>();
     final nivelDaSopa = st.nivelDe(Jogo.sopa);
     final nivelDoPomar = st.nivelDe(Jogo.pomar);
+    final nivelDoCrossmath = st.nivelDe(Jogo.crossmath);
+    final nivelDaMemoria = st.nivelDe(Jogo.memoria);
     final tempo = st.tempoDeJogo;
     final semTempo = tempo <= Duration.zero;
 
@@ -80,13 +80,14 @@ class JoguinhosScreen extends StatelessWidget {
               'As contas têm de fechar nas linhas e nas colunas ao mesmo '
               'tempo. Descobre os números que faltam.',
           pose: RobyPose.curioso,
+          // Um botão só, como a Sopa e o Pomar. Já não se escolhe uma
+          // dificuldade: continua-se de onde se ficou.
           botoes: [
-            for (final d in Dificuldade.values)
-              (
-                rotulo: d.rotulo,
-                detalhe: 'até ${d.tecto}',
-                abrir: (BuildContext ctx) => CrossmathScreen(dificuldade: d),
-              ),
+            (
+              rotulo: 'Continuar',
+              detalhe: 'nível $nivelDoCrossmath de $nivelMaximo',
+              abrir: (BuildContext ctx) => const CrossmathScreen(),
+            ),
           ],
         ),
         const SizedBox(height: 14),
@@ -134,12 +135,11 @@ class JoguinhosScreen extends StatelessWidget {
               'mesmo: o 7 casa com sete maçãs, o 3 + 4 casa com o 7.',
           pose: RobyPose.dica,
           botoes: [
-            for (final b in Baralho.values)
-              (
-                rotulo: b.rotulo,
-                detalhe: b.classes,
-                abrir: (BuildContext ctx) => MemoriaScreen(baralho: b),
-              ),
+            (
+              rotulo: 'Continuar',
+              detalhe: 'nível $nivelDaMemoria de $nivelMaximo',
+              abrir: (BuildContext ctx) => const MemoriaScreen(),
+            ),
           ],
         ),
               ],

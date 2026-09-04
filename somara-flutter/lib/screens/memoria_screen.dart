@@ -1,8 +1,11 @@
 import 'dart:math';
 
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import '../models/escadaria.dart';
 import '../models/memoria.dart';
 import '../services/sons.dart';
 import '../state/app_state.dart';
@@ -16,8 +19,9 @@ import '../widgets/roby.dart';
 /// casa com 🥭. É associação, não decoração — e é o que a amarelinha treina
 /// mal.
 class MemoriaScreen extends StatefulWidget {
-  final Baralho baralho;
-  const MemoriaScreen({super.key, required this.baralho});
+  /// Por onde começar. Nulo entra pelo degrau guardado no estado.
+  final int? nivel;
+  const MemoriaScreen({super.key, this.nivel});
 
   @override
   State<MemoriaScreen> createState() => _MemoriaScreenState();
@@ -27,6 +31,14 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
   final _rnd = Random();
 
   late JogoDaMemoria _jogo;
+  late int _nivel;
+
+  /// Quanto tempo as cartas ficam à vista antes de voltarem. Aperta com o
+  /// degrau: no primeiro são 1,2 s, no último meio segundo.
+  late Duration _espera;
+
+  /// Verdadeiro entre acabar e o degrau seguinte entrar.
+  bool _aPassar = false;
 
   /// Índices virados neste momento (no máximo dois).
   final _viradas = <int>[];
@@ -53,7 +65,8 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
   }
 
   void _novo() {
-    _jogo = JogoDaMemoria.novo(baralho: widget.baralho, pares: 6, rnd: _rnd);
+    _nivel = widget.nivel ?? context.read<AppState>().nivelDe(Jogo.memoria);
+    _montarNivel();
     _viradas.clear();
     _ganhas.clear();
     _tentativas = 0;
@@ -61,10 +74,28 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
     setState(() {});
   }
 
+  void _montarNivel() {
+    _jogo = JogoDaMemoria.doNivel(_nivel, rnd: _rnd);
+    _espera = memoriaNo(_nivel).espera;
+    _ganhas.clear();
+    _viradas.clear();
+    _tentativas = 0;
+    _aPassar = false;
+  }
+
   bool get _acabou => _ganhas.length == _jogo.cartas.length;
 
+  /// Mesa limpa: festeja um instante e o degrau seguinte entra sozinho.
+  Future<void> _passarAoSeguinte() async {
+    setState(() => _aPassar = true);
+    await Future<void>.delayed(const Duration(milliseconds: 1600));
+    if (!mounted) return;
+    _nivel = context.read<AppState>().subirNivelDe(Jogo.memoria);
+    setState(_montarNivel);
+  }
+
   Future<void> _virar(int i) async {
-    if (_ocupado || _acabou) return;
+    if (_ocupado || _acabou || _aPassar) return;
     if (_ganhas.contains(i) || _viradas.contains(i)) return;
 
     Sons.i.toque();
@@ -85,6 +116,7 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
       });
       if (_acabou) {
         Sons.i.nivel();
+        unawaited(_passarAoSeguinte());
         // Um par vale como uma resposta certa de lição.
         context.read<AppState>().concluirTreino(_jogo.pares);
       }
@@ -95,7 +127,7 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
     // pausa a criança não chega a ver o que virou, e o jogo passa a ser
     // sorte em vez de memória.
     Sons.i.errado();
-    await Future.delayed(const Duration(milliseconds: 850));
+    await Future.delayed(_espera);
     if (!mounted) return;
     setState(() {
       _viradas.clear();
@@ -112,7 +144,7 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
         foregroundColor: S.tx,
         elevation: 0,
         title: Text(
-          'Memória · ${widget.baralho.rotulo}',
+          'Memória · Nível $_nivel',
           style: const TextStyle(fontSize: 16),
         ),
       ),
@@ -122,7 +154,7 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
             Text(
               _acabou
                   ? 'Todos os pares! $_contagem.'
-                  : widget.baralho.explica,
+                  : _jogo.baralho.explica,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: _acabou ? S.chart : S.txSoft,
@@ -270,6 +302,22 @@ class _MemoriaScreenState extends State<MemoriaScreen> {
     child: Column(
       children: [
         Image.asset(RobyPose.orgulhoso.path, width: 76),
+        const SizedBox(height: 8),
+        Text(
+          'Nível $_nivel feito!',
+          style: const TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w700,
+            color: S.chart,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          _nivel >= nivelMaximo
+              ? 'Chegaste ao fim da escadaria.'
+              : 'Vem aí o ${_nivel + 1}…',
+          style: const TextStyle(color: S.txSoft, fontSize: 13.5),
+        ),
         const SizedBox(height: 10),
         Row(
           children: [

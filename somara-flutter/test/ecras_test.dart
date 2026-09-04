@@ -3,9 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:somara/models/content.dart';
-import 'package:somara/models/crossmath.dart';
 import 'package:somara/models/escadaria.dart';
-import 'package:somara/models/memoria.dart';
 import 'package:somara/screens/crossmath_screen.dart';
 import 'package:somara/screens/guardados_screen.dart';
 import 'package:somara/screens/joguinhos_screen.dart';
@@ -96,8 +94,10 @@ void main() {
   verificar('Perfil', () => const PerfilScreen());
   verificar('Pomar', () => const PomarScreen());
 
-  for (final d in Dificuldade.values) {
-    verificar('Crossmath ${d.rotulo}', () => CrossmathScreen(dificuldade: d));
+  // O Crossmath no primeiro degrau e no último: a grelha passa de números
+  // de duas casas para números de três, e é aí que ela transborda.
+  for (final n in [1, 300, nivelMaximo]) {
+    verificar('Crossmath nível $n', () => CrossmathScreen(nivel: n));
   }
 
   // A sopa é a que mais arrisca transbordar: no último degrau a grelha tem
@@ -107,9 +107,11 @@ void main() {
     verificar('Sopa nível $n', () => SopaScreen(nivel: n));
   }
 
-  // Quatro baralhos, e o de "Contar" chega a ter nove desenhos numa carta.
-  for (final b in Baralho.values) {
-    verificar('Memória ${b.rotulo}', () => MemoriaScreen(baralho: b));
+  // A Memória passa de quatro pares para doze — vinte e quatro cartas — e o
+  // baralho de "Contar" chega a ter doze desenhos numa carta. Os quatro
+  // primeiros degraus dão os quatro baralhos; o último dá a mesa cheia.
+  for (final n in [1, 2, 3, 4, nivelMaximo]) {
+    verificar('Memória nível $n', () => MemoriaScreen(nivel: n));
   }
 
   group('a aula, com a matéria mais comprida que existe', () {
@@ -271,14 +273,19 @@ void main() {
     // Nada disto lança excepção — não havia RenderFlex a transbordar — e por
     // isso passou por todos os outros testes deste ficheiro. Só se via a
     // olhar para o ecrã, e foi assim que apareceu.
-    Size medir(WidgetTester tester, String rotulo) => tester.getSize(
-      find
-          .ancestor(
-            of: find.text(rotulo),
-            matching: find.byType(GestureDetector),
-          )
-          .first,
-    );
+    /// A pílula do botão, e não o texto lá dentro: é a pílula que fecha
+    /// num oval quando não tem largura, e é isso que se está a medir.
+    ///
+    /// Leva índice porque os quatro botões dizem agora todos "Continuar".
+    Size medirBotao(WidgetTester tester, String rotulo, int qual) =>
+        tester.getSize(
+          find
+              .ancestor(
+                of: find.text(rotulo).at(qual),
+                matching: find.byType(GestureDetector),
+              )
+              .first,
+        );
 
     Future<void> abrir(WidgetTester tester, Size tamanho) async {
       final erro = await montar(tester, const JoguinhosScreen(), tamanho);
@@ -286,7 +293,7 @@ void main() {
       // A Memória é o último cartão da lista e num telemóvel pequeno nem
       // chega a ser construída sem se descer até lá.
       await tester.scrollUntilVisible(
-        find.text(Baralho.palavras.rotulo),
+        find.text('Memória'),
         180,
         scrollable: find.byType(Scrollable).first,
       );
@@ -299,34 +306,37 @@ void main() {
       ) async {
         await abrir(tester, entrada.value);
 
-        for (final b in Baralho.values) {
-          final tamanho = medir(tester, b.rotulo);
+        // Os quatro jogos têm agora um botão cada — "Continuar", com o
+        // degrau por baixo. O que este teste guarda é o mesmo de antes: uma
+        // pílula estreita de mais parte o rótulo ao meio e deita-o fora
+        // pela borda curva.
+        expect(find.text('Continuar'), findsNWidgets(4));
+        for (var i = 0; i < 4; i++) {
+          final tamanho = medirBotao(tester, 'Continuar', i);
           expect(
             tamanho.width,
             greaterThanOrEqualTo(110),
-            reason:
-                '"${b.rotulo}" ficou com ${tamanho.width.round()} px de '
+            reason: 'o botão $i ficou com ${tamanho.width.round()} px de '
                 'largura — não cabe lá o rótulo',
           );
         }
       });
 
-      testWidgets('ficam do mesmo tamanho lado a lado num ${entrada.key}', (
+      testWidgets('o degrau cabe debaixo do rótulo num ${entrada.key}', (
         tester,
       ) async {
         await abrir(tester, entrada.value);
 
-        // Contar e Somas partilham uma linha; Dobros e Palavras a outra.
-        // Um rótulo que se parte em duas linhas não pode deixar o botão do
-        // lado mais baixo do que o seu.
-        expect(
-          medir(tester, Baralho.quantidade.rotulo).height,
-          medir(tester, Baralho.somas.rotulo).height,
-        );
-        expect(
-          medir(tester, Baralho.dobros.rotulo).height,
-          medir(tester, Baralho.palavras.rotulo).height,
-        );
+        // "nível 1 de 1000" é a linha mais comprida de um botão, e é a que
+        // transborda primeiro num ecrã de 320.
+        expect(find.text('nível 1 de $nivelMaximo'), findsNWidgets(4));
+        // Os quatro botões ficam do mesmo tamanho: um rótulo que se parta
+        // em duas linhas não pode deixar o botão do lado mais baixo.
+        final primeiro = medirBotao(tester, 'Continuar', 0);
+        for (var i = 1; i < 4; i++) {
+          expect(medirBotao(tester, 'Continuar', i).height, primeiro.height,
+              reason: 'o botão $i tem outra altura');
+        }
       });
     }
   });
