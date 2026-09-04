@@ -1458,4 +1458,73 @@ MATERIA = {
                    "é um desejo.",
         "lembra": "Primeiro o que é preciso, depois o que apetece.",
     },
+    # ---------------------------------------------------------------
+    # Educacao Visual e Oficios -- 6a classe
+    #
+    # Do livro de Educacao Visual da 6a classe, MEC 2024. E a disciplina
+    # de FAZER, e por isso a materia fala do que se decide antes de por
+    # as maos na obra. A cor mostra-se no ecra; aqui a materia so lhe
+    # da os nomes.
+    # ---------------------------------------------------------------
+    "ev-6c:u1:n1": {
+        "explica": "Antes de comecar um trabalho junta-se tudo o que se "
+                   "vai precisar, e no fim deixa-se o espaco limpo para "
+                   "quem vem a seguir.",
+        "exemplo": "Para desenhar: o lapis bem afiado, a borracha e a "
+                   "folha, tudo a mao antes de a primeira linha ser feita.",
+        "lembra": "Primeiro juntar, depois fazer, e sempre limpar.",
+    },
+    "ev-6c:u1:n2": {
+        "explica": "Ha muitos materiais riscadores: lapis de carvao, giz, "
+                   "carvao vegetal, lapis de cor, lapis de cera. Escolhe-se "
+                   "conforme o desenho que se quer.",
+        "exemplo": "A mina dura risca fino e serve o desenho rigoroso; a "
+                   "macia risca grosso e serve o desenho a mao livre.",
+        "lembra": "O material escolhe-se depois de saber o que se vai "
+                  "desenhar, nunca antes.",
+    },
+    "ev-6c:u2:n1": {
+        "explica": "As cores primarias nao saem de mistura nenhuma: sao "
+                   "puras. Sao tres -- o azul, o amarelo e o vermelho.",
+        "exemplo": "O verde nao e primaria, porque se faz juntando duas.",
+        "lembra": "Azul, amarelo e vermelho: destas tres saem as outras.",
+    },
+    "ev-6c:u2:n2": {
+        "explica": "Juntando duas cores primarias nasce uma cor "
+                   "secundaria. Sao tres: o laranja, o verde e o violeta.",
+        "exemplo": "Amarelo com vermelho da laranja; amarelo com azul da "
+                   "verde; vermelho com azul da violeta.",
+        "lembra": "Duas primarias juntas fazem sempre uma secundaria.",
+    },
+    "ev-6c:u2:n3": {
+        "explica": "Tons sao as tonalidades dentro da mesma cor. Junta-se "
+                   "branco para clarear e preto para escurecer.",
+        "exemplo": "Ao preto com um pouco de branco chama-se cinzento.",
+        "lembra": "O preto e o branco nao sao cores do arco-iris: sao "
+                  "cores neutras.",
+    },
+    "ev-6c:u3:n1": {
+        "explica": "Cada tinta pede a sua tecnica. A aguarela mistura-se "
+                   "com agua, o guache e mais espesso, e as tintas "
+                   "artesanais fazem-se com o que ha na comunidade.",
+        "exemplo": "Depois de pintar, o pincel lava-se e poe-se a secar "
+                   "com os pelos para cima.",
+        "lembra": "Pincel sujo que seca fica perdido.",
+    },
+    "ev-6c:u4:n1": {
+        "explica": "Imprimir e estampar e passar um desenho de uma "
+                   "superficie para outra, e repeti-lo quantas vezes se "
+                   "quiser.",
+        "exemplo": "Com o dedo pintado faz-se impressao digital; com um "
+                   "carimbo repete-se o mesmo desenho ao longo do papel.",
+        "lembra": "Poe sempre uma proteccao por baixo antes de comecar.",
+    },
+    "ev-6c:u5:n1": {
+        "explica": "O papel corta-se, dobra-se, pica-se e cola-se. Cada "
+                   "uma destas e uma tecnica com a sua regra.",
+        "exemplo": "Na dobragem o papel nao se corta; no recorte corta-se "
+                   "pela linha marcada.",
+        "lembra": "A tesoura passa-se com as pontas viradas para quem a "
+                  "da, nunca para quem a recebe.",
+    },
 }

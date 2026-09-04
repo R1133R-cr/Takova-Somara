@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o ensino primário inteiro, da 1ª à 6ª classe', () {
-    expect(c.cursos.length, 18);
+    expect(c.cursos.length, 19);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -40,7 +40,6 @@ void main() {
     for (final classe in ['4ª classe', '5ª classe', '6ª classe']) {
       final daClasse =
           c.cursos.where((x) => x.classe == classe).map((x) => x.disciplina);
-      expect(daClasse.length, 4, reason: classe);
       expect(
           daClasse,
           containsAll([
@@ -51,6 +50,14 @@ void main() {
           ]),
           reason: classe);
     }
+
+    // Educação Visual e Ofícios é a quinta disciplina do II ciclo. Entrou
+    // pela 6ª; a 5ª e a 4ª ainda não a têm.
+    expect(
+        c.cursos
+            .where((x) => x.classe == '6ª classe')
+            .map((x) => x.disciplina),
+        contains('Educação Visual e Ofícios'));
   });
 
   test('Naturais e Sociais nunca se confundem uma com a outra', () {
@@ -73,12 +80,50 @@ void main() {
     //   851  até à 0.19.3
     //   908  com o Português da 4ª classe (57 perguntas)
     //   958  com as Ciências Sociais da 4ª classe (50 perguntas)
+    //   992  com a Educação Visual da 6ª classe (34 perguntas)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 958);
+    expect(total, 992);
+  });
+
+  test('as cores da Educação Visual estão bem formadas', () {
+    // A Educação Visual mostra a cor em vez de a nomear: a pergunta traz
+    // as tintas a misturar e cada resposta traz a sua mancha. Duas coisas
+    // podem correr mal em silêncio, e nenhuma daria erro na app.
+    var comCor = 0;
+    for (final curso in c.cursos) {
+      for (final u in curso.units) {
+        for (final n in u.niveis) {
+          for (final q in n.questoes) {
+            final cor = q.cores;
+            if (cor == null) continue;
+            comCor++;
+            final onde = '${curso.id}/${u.id}/${n.id}: ${q.q}';
+
+            // Uma mistura de uma cor só não é mistura nenhuma.
+            if (cor.mistura.isNotEmpty) {
+              expect(cor.mistura.length, greaterThanOrEqualTo(2), reason: onde);
+            }
+
+            // Se há manchas nas opções, tem de haver uma por opção. Com
+            // menos, as últimas respostas ficavam sem cor e a criança não
+            // percebia porquê.
+            if (cor.opcoes.isNotEmpty && q is QChoice) {
+              expect(cor.opcoes.length, q.options.length, reason: onde);
+            }
+
+            // Opacas. Uma cor sem alfa sai invisível no fundo escuro.
+            for (final v in [...cor.mistura, ...cor.opcoes]) {
+              expect(v >> 24 & 0xFF, 0xFF, reason: '$onde: cor transparente');
+            }
+          }
+        }
+      }
+    }
+    expect(comCor, greaterThan(0), reason: 'nenhuma pergunta mostra cor');
   });
 
   test('dentro de uma classe, cada enunciado é único', () {

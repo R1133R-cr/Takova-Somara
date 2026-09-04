@@ -8,6 +8,7 @@ import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/desenho_geometrico.dart';
+import '../widgets/mostra_cores.dart';
 import '../widgets/roby.dart';
 import '../widgets/teclado_numerico.dart';
 import 'complete_screen.dart';
@@ -431,14 +432,18 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     };
 
     final fig = cur.figura;
-    if (fig == null) return resposta;
+    final cor = cur.cores;
+    if (fig == null && (cor == null || !cor.temMistura)) return resposta;
 
-    // A figura entra entre o enunciado e a resposta, que e onde a crianca
-    // olha a seguir a ler a pergunta. "Um quadrado tem 5 cm de lado" sem
-    // quadrado nenhum obriga-a a imagina-lo antes de poder pensar nele.
+    // A figura e as tintas entram entre o enunciado e a resposta, que e onde
+    // a crianca olha a seguir a ler a pergunta. "Um quadrado tem 5 cm de
+    // lado" sem quadrado nenhum obriga-a a imagina-lo antes de poder pensar
+    // nele; "amarelo mais azul" sem as tintas a vista ensina tres palavras
+    // e nao uma cor.
     return Column(
       children: [
-        DesenhoGeometrico(figura: fig),
+        if (fig != null) DesenhoGeometrico(figura: fig),
+        if (cor != null && cor.temMistura) MostraCores(cores: cor),
         const SizedBox(height: 8),
         resposta,
       ],
@@ -499,6 +504,9 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     final cur = q;
     final certa = cur is QChoice ? cur.a : (cur is QCount ? cur.a : -1);
 
+    final paleta = cur.cores?.opcoes ?? const <int>[];
+    final gota = i < paleta.length ? Color(paleta[i]) : null;
+
     Color borda = S.line, fundo = S.surface, txt = S.tx;
     if (revelar && i == certa) {
       borda = S.chart; fundo = S.green700.withValues(alpha: 0.35); txt = S.chart;
@@ -527,9 +535,22 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
           border: Border.all(color: borda, width: 2),
           borderRadius: BorderRadius.circular(S.rMd),
         ),
-        child: Text(texto,
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: txt)),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // A cor da resposta, quando a pergunta e de Educacao Visual. Vai
+            // AO LADO do nome e nao em vez dele: assim a crianca escolhe
+            // pela cor e fica a saber como ela se chama.
+            if (gota != null) GotaDaOpcao(cor: gota),
+            Flexible(
+              child: Text(texto,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.w600, color: txt)),
+            ),
+          ],
+        ),
       ),
     );
   }

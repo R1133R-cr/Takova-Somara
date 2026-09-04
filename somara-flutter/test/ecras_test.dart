@@ -9,6 +9,7 @@ import 'package:somara/models/sopa.dart';
 import 'package:somara/screens/crossmath_screen.dart';
 import 'package:somara/screens/guardados_screen.dart';
 import 'package:somara/screens/joguinhos_screen.dart';
+import 'package:somara/screens/lesson_screen.dart';
 import 'package:somara/screens/map_screen.dart';
 import 'package:somara/screens/materia_screen.dart';
 import 'package:somara/screens/perfil_screen.dart';
@@ -163,6 +164,57 @@ void main() {
         expect(erro, isNull);
       });
     }
+  });
+
+  group('a cor da Educação Visual aparece mesmo no ecrã', () {
+    // O modelo estar certo não garante que se veja. Esta é a peça nova da
+    // app — a pergunta que mostra tinta em vez de a nomear — e sem isto
+    // um erro no ecrã da lição deixava-a invisível sem nada falhar.
+    late Questao mistura;
+    late Questao semCor;
+
+    setUpAll(() {
+      mistura = conteudo.cursos
+          .expand((c) => c.units)
+          .expand((u) => u.niveis)
+          .expand((n) => n.questoes)
+          .firstWhere((q) => q.cores?.temMistura ?? false);
+      semCor = conteudo.cursos
+          .expand((c) => c.units)
+          .expand((u) => u.niveis)
+          .expand((n) => n.questoes)
+          .firstWhere((q) => q.cores == null && q is QChoice);
+    });
+
+    for (final entrada in tamanhos.entries) {
+      testWidgets('a mistura desenha-se num ${entrada.key}', (tester) async {
+        final erro = await montar(
+          tester,
+          LessonScreen(indice: -1, avulsas: [mistura], titulo: 'cor'),
+          entrada.value,
+        );
+        expect(erro, isNull);
+
+        // As manchas: uma por tinta, mais a incógnita do resultado.
+        final gotas = tester.widgetList<Container>(find.byType(Container)).where(
+            (x) => (x.decoration as BoxDecoration?)?.shape == BoxShape.circle);
+        expect(gotas.length, greaterThanOrEqualTo(3),
+            reason: 'as tintas não apareceram no ecrã');
+      });
+    }
+
+    testWidgets('e uma pergunta sem cor não desenha tintas', (tester) async {
+      // Sem este contra-exemplo, o teste de cima passaria a contar
+      // quaisquer círculos que houvesse no ecrã.
+      await montar(
+        tester,
+        LessonScreen(indice: -1, avulsas: [semCor], titulo: 'sem cor'),
+        const Size(411, 914),
+      );
+      final gotas = tester.widgetList<Container>(find.byType(Container)).where(
+          (x) => (x.decoration as BoxDecoration?)?.shape == BoxShape.circle);
+      expect(gotas.length, lessThan(3));
+    });
   });
 
   group('a barra de disciplinas do mapa', () {

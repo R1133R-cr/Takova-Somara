@@ -13362,6 +13362,590 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ev-6c",
+   "disciplina": "Educação Visual e Ofícios",
+   "abrev": "Ed. Visual",
+   "classe": "6ª classe",
+   "tag": "EV",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Desenho",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Antes de começar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Antes de começar um trabalho, o que se faz primeiro?",
+         "options": [
+          "Juntar todos os materiais que vou precisar",
+          "Começar e ir buscando o que falta",
+          "Pedir ao colega do lado"
+         ],
+         "a": 0,
+         "audio": "1147f85c1cc7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No fim da aula, o espaço de trabalho deve ficar:",
+         "options": [
+          "Limpo, para a aula seguinte",
+          "Como está, alguém limpa",
+          "Só arrumado no fim da semana"
+         ],
+         "a": 0,
+         "audio": "09f3da083ad1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para desenhar e escrever, o lápis deve estar:",
+         "options": [
+          "Bem afiado",
+          "Rombo",
+          "Partido"
+         ],
+         "a": 0,
+         "audio": "8555a7c00b15.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um material riscador?",
+         "options": [
+          "O carvão vegetal",
+          "A cola",
+          "A tesoura"
+         ],
+         "a": 0,
+         "audio": "42e0e071ff30.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Antes de comecar um trabalho junta-se tudo o que se vai precisar, e no fim deixa-se o espaco limpo para quem vem a seguir.",
+        "exemplo": "Para desenhar: o lapis bem afiado, a borracha e a folha, tudo a mao antes de a primeira linha ser feita.",
+        "lembra": "Primeiro juntar, depois fazer, e sempre limpar.",
+        "audio": "091d2ee82d6c.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Escolher o material",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para um desenho rigoroso escolhe-se um lápis:",
+         "options": [
+          "De mina mais dura",
+          "De mina mais macia",
+          "De cera"
+         ],
+         "a": 0,
+         "audio": "402a38484e36.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O desenho feito sem régua nem compasso chama-se:",
+         "options": [
+          "À mão livre",
+          "Rigoroso",
+          "De observação"
+         ],
+         "a": 0,
+         "audio": "f3efd6dad2e9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Desenhar aquilo que se tem à frente é desenho:",
+         "options": [
+          "De observação",
+          "Livre",
+          "De tema dado"
+         ],
+         "a": 0,
+         "audio": "0d3649672f21.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando o professor diz o assunto, o desenho é:",
+         "options": [
+          "Com tema dado",
+          "Livre",
+          "De observação"
+         ],
+         "a": 0,
+         "audio": "c83ca84dac12.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Ha muitos materiais riscadores: lapis de carvao, giz, carvao vegetal, lapis de cor, lapis de cera. Escolhe-se conforme o desenho que se quer.",
+        "exemplo": "A mina dura risca fino e serve o desenho rigoroso; a macia risca grosso e serve o desenho a mao livre.",
+        "lembra": "O material escolhe-se depois de saber o que se vai desenhar, nunca antes.",
+        "audio": "6a522a6e09bf.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "A cor",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As cores primárias",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As cores primárias são aquelas que:",
+         "options": [
+          "Não resultam de nenhuma mistura",
+          "Se fazem com branco",
+          "São as mais bonitas"
+         ],
+         "a": 0,
+         "audio": "c32037ee44ca.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma cor primária?",
+         "options": [
+          "Azul",
+          "Verde",
+          "Laranja"
+         ],
+         "cores": {
+          "opcoes": [
+           "#1E5AA8",
+           "#2E8B57",
+           "#E8791C"
+          ]
+         },
+         "a": 0,
+         "audio": "302ef7e23f06.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas NÃO é uma cor primária?",
+         "options": [
+          "Violeta",
+          "Amarelo",
+          "Vermelho"
+         ],
+         "cores": {
+          "opcoes": [
+           "#7B3F9D",
+           "#F2C200",
+           "#D8352A"
+          ]
+         },
+         "a": 0,
+         "audio": "9917aec25941.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantas são as cores primárias?",
+         "a": "3",
+         "audio": "a9db29e0ea0a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As cores primarias nao saem de mistura nenhuma: sao puras. Sao tres -- o azul, o amarelo e o vermelho.",
+        "exemplo": "O verde nao e primaria, porque se faz juntando duas.",
+        "lembra": "Azul, amarelo e vermelho: destas tres saem as outras.",
+        "audio": "a82d1793880c.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Misturar tintas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Que cor sai de misturar amarelo com azul?",
+         "cores": {
+          "mistura": [
+           "#F2C200",
+           "#1E5AA8"
+          ],
+          "opcoes": [
+           "#2E8B57",
+           "#E8791C",
+           "#7B3F9D"
+          ]
+         },
+         "options": [
+          "Verde",
+          "Laranja",
+          "Violeta"
+         ],
+         "a": 0,
+         "audio": "eb2362f7e085.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Que cor sai de misturar amarelo com vermelho?",
+         "cores": {
+          "mistura": [
+           "#F2C200",
+           "#D8352A"
+          ],
+          "opcoes": [
+           "#E8791C",
+           "#2E8B57",
+           "#7B3F9D"
+          ]
+         },
+         "options": [
+          "Laranja",
+          "Verde",
+          "Violeta"
+         ],
+         "a": 0,
+         "audio": "090c0700fde8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Que cor sai de misturar vermelho com azul?",
+         "cores": {
+          "mistura": [
+           "#D8352A",
+           "#1E5AA8"
+          ],
+          "opcoes": [
+           "#7B3F9D",
+           "#2E8B57",
+           "#E8791C"
+          ]
+         },
+         "options": [
+          "Violeta",
+          "Verde",
+          "Laranja"
+         ],
+         "a": 0,
+         "audio": "d442187cdd42.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As cores que saem da mistura de duas primárias chamam-se:",
+         "options": [
+          "Secundárias",
+          "Primárias",
+          "Neutras"
+         ],
+         "a": 0,
+         "audio": "2743c5164924.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada mistura à cor que dela sai.",
+         "pairs": [
+          [
+           "Amarelo e azul",
+           "Verde"
+          ],
+          [
+           "Vermelho e azul",
+           "Violeta"
+          ]
+         ],
+         "audio": "94c2b2111a15.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Juntando duas cores primarias nasce uma cor secundaria. Sao tres: o laranja, o verde e o violeta.",
+        "exemplo": "Amarelo com vermelho da laranja; amarelo com azul da verde; vermelho com azul da violeta.",
+        "lembra": "Duas primarias juntas fazem sempre uma secundaria.",
+        "audio": "600dc833a092.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Tons e cores neutras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para clarear o tom de uma cor juntamos:",
+         "options": [
+          "Branco",
+          "Preto",
+          "Água"
+         ],
+         "cores": {
+          "opcoes": [
+           "#F5F5F0",
+           "#1A1A1A",
+           "#1E5AA8"
+          ]
+         },
+         "a": 0,
+         "audio": "60e42c468cff.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para escurecer uma cor juntamos:",
+         "options": [
+          "Preto",
+          "Branco",
+          "Amarelo"
+         ],
+         "cores": {
+          "opcoes": [
+           "#1A1A1A",
+           "#F5F5F0",
+           "#F2C200"
+          ]
+         },
+         "a": 0,
+         "audio": "948dc3931a67.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Que cor sai de misturar preto com branco?",
+         "cores": {
+          "mistura": [
+           "#1A1A1A",
+           "#F5F5F0"
+          ],
+          "opcoes": [
+           "#8A8A8A",
+           "#2E8B57",
+           "#E8791C"
+          ]
+         },
+         "options": [
+          "Cinzento",
+          "Verde",
+          "Laranja"
+         ],
+         "a": 0,
+         "audio": "d6f6c3303914.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O preto e o branco chamam-se cores:",
+         "options": [
+          "Neutras",
+          "Primárias",
+          "Secundárias"
+         ],
+         "a": 0,
+         "audio": "169275e09ce5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Tons sao as tonalidades dentro da mesma cor. Junta-se branco para clarear e preto para escurecer.",
+        "exemplo": "Ao preto com um pouco de branco chama-se cinzento.",
+        "lembra": "O preto e o branco nao sao cores do arco-iris: sao cores neutras.",
+        "audio": "a943ea5e7750.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Pintura",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Técnicas de pintar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A aguarela pinta-se com tinta misturada com:",
+         "options": [
+          "Água",
+          "Cera",
+          "Cola"
+         ],
+         "a": 0,
+         "audio": "75ff31a3fefb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas técnicas usa lápis?",
+         "options": [
+          "Lápis de cera",
+          "Guache",
+          "Aguarela"
+         ],
+         "a": 0,
+         "audio": "946f8260cce6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Depois de pintar com pincel, o pincel deve ser:",
+         "options": [
+          "Lavado e guardado a secar",
+          "Guardado com tinta",
+          "Deitado fora"
+         ],
+         "a": 0,
+         "audio": "fcd8f454a6ae.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As tintas artesanais fazem-se:",
+         "options": [
+          "Com materiais que há na comunidade",
+          "Só na fábrica",
+          "Só com água"
+         ],
+         "a": 0,
+         "audio": "4ff12840b141.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Cada tinta pede a sua tecnica. A aguarela mistura-se com agua, o guache e mais espesso, e as tintas artesanais fazem-se com o que ha na comunidade.",
+        "exemplo": "Depois de pintar, o pincel lava-se e poe-se a secar com os pelos para cima.",
+        "lembra": "Pincel sujo que seca fica perdido.",
+        "audio": "cb10c717eaa8.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Impressão e estampagem",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Imprimir e estampar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na impressão digital, a marca é feita com:",
+         "options": [
+          "O dedo",
+          "A tesoura",
+          "A régua"
+         ],
+         "a": 0,
+         "audio": "1132ac075b22.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um carimbo serve para:",
+         "options": [
+          "Repetir o mesmo desenho muitas vezes",
+          "Cortar o papel",
+          "Colar duas folhas"
+         ],
+         "a": 0,
+         "audio": "1778df844b96.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Estampar é passar um desenho:",
+         "options": [
+          "De uma superfície para outra",
+          "Do papel para a cabeça",
+          "De uma cor para outra"
+         ],
+         "a": 0,
+         "audio": "7182044571d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de estampar, o que se põe por baixo do papel?",
+         "options": [
+          "Uma protecção, para não sujar a mesa",
+          "Mais papel branco",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "0694af2b9b54.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Imprimir e estampar e passar um desenho de uma superficie para outra, e repeti-lo quantas vezes se quiser.",
+        "exemplo": "Com o dedo pintado faz-se impressao digital; com um carimbo repete-se o mesmo desenho ao longo do papel.",
+        "lembra": "Poe sempre uma proteccao por baixo antes de comecar.",
+        "audio": "a16012f3cf38.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Recorte, colagem e dobragem",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Trabalhar o papel",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Ao passar a tesoura a um colega, entrega-se:",
+         "options": [
+          "Com as pontas viradas para mim",
+          "Com as pontas viradas para ele",
+          "Atirando-a"
+         ],
+         "a": 0,
+         "audio": "f0e284839b96.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na dobragem, o papel é:",
+         "options": [
+          "Dobrado, sem se cortar",
+          "Cortado em tiras",
+          "Molhado primeiro"
+         ],
+         "a": 0,
+         "audio": "26f35d04c37d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Picotar é fazer no papel:",
+         "options": [
+          "Muitos furos pequenos seguidos",
+          "Um corte só",
+          "Uma dobra"
+         ],
+         "a": 0,
+         "audio": "b4ecb464ec21.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa colagem, a cola põe-se:",
+         "options": [
+          "Pouca e bem espalhada",
+          "Muita, no meio",
+          "Só nos cantos, aos montes"
+         ],
+         "a": 0,
+         "audio": "d3c3f1c9d1d3.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada técnica ao que se faz com o papel.",
+         "pairs": [
+          [
+           "Recorte",
+           "Cortar"
+          ],
+          [
+           "Dobragem",
+           "Dobrar"
+          ]
+         ],
+         "audio": "49ca7d8e5605.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O papel corta-se, dobra-se, pica-se e cola-se. Cada uma destas e uma tecnica com a sua regra.",
+        "exemplo": "Na dobragem o papel nao se corta; no recorte corta-se pela linha marcada.",
+        "lembra": "A tesoura passa-se com as pontas viradas para quem a da, nunca para quem a recebe.",
+        "audio": "561a2b0ac550.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

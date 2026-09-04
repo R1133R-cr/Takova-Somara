@@ -14,12 +14,15 @@ sealed class Questao {
   /// O desenho que acompanha a pergunta, quando ela fala de uma figura.
   final Figura? figura;
 
+  /// As cores que a pergunta mostra, quando é de Educação Visual.
+  final Cores? cores;
+
   /// Ficheiro do enunciado lido em voz alta (assets/audio/…), gerado à parte
   /// e gravado no content.json. Vem pronto para a app não ter de calcular
   /// nada — e não existe para enunciados que sejam só emoji.
   final String? audio;
 
-  const Questao(this.q, this.audio, {this.figura});
+  const Questao(this.q, this.audio, {this.figura, this.cores});
 
   static Questao fromJson(Map<String, dynamic> j) {
     final q = (j['q'] ?? '') as String;
@@ -27,12 +30,16 @@ sealed class Questao {
     final fig = j['figura'] == null
         ? null
         : Figura.fromJson(j['figura'] as Map<String, dynamic>);
+    final cor = j['cores'] == null
+        ? null
+        : Cores.fromJson(j['cores'] as Map<String, dynamic>);
     switch (j['t']) {
       case 'count':
         return QCount(
           q,
           a,
           figura: fig,
+          cores: cor,
           emoji: j['emoji'] as String,
           n: j['n'] as int,
           options: (j['options'] as List).cast<String>(),
@@ -43,16 +50,18 @@ sealed class Questao {
           q,
           a,
           figura: fig,
+          cores: cor,
           options: (j['options'] as List).cast<String>(),
           a: j['a'] as int,
         );
       case 'input':
-        return QInput(q, a, figura: fig, resposta: '${j['a']}');
+        return QInput(q, a, figura: fig, cores: cor, resposta: '${j['a']}');
       case 'match':
         return QMatch(
           q,
           a,
           figura: fig,
+          cores: cor,
           pairs: (j['pairs'] as List)
               .map((p) => ((p as List).cast<String>()))
               .map((p) => (p[0], p[1]))
@@ -63,6 +72,7 @@ sealed class Questao {
           q,
           a,
           figura: fig,
+          cores: cor,
           chip: j['chip'] as String,
           zones: (j['zones'] as List).cast<String>(),
           a: j['a'] as int,
@@ -79,26 +89,26 @@ class QCount extends Questao {
   final int n;
   final List<String> options;
   final int a;
-  const QCount(super.q, super.audio, {super.figura, required this.emoji, required this.n, required this.options, required this.a});
+  const QCount(super.q, super.audio, {super.figura, super.cores, required this.emoji, required this.n, required this.options, required this.a});
 }
 
 /// Escolha múltipla.
 class QChoice extends Questao {
   final List<String> options;
   final int a;
-  const QChoice(super.q, super.audio, {super.figura, required this.options, required this.a});
+  const QChoice(super.q, super.audio, {super.figura, super.cores, required this.options, required this.a});
 }
 
 /// Resposta escrita — comparada sem distinguir maiúsculas nem acentos.
 class QInput extends Questao {
   final String a;
-  const QInput(super.q, super.audio, {super.figura, required String resposta}) : a = resposta;
+  const QInput(super.q, super.audio, {super.figura, super.cores, required String resposta}) : a = resposta;
 }
 
 /// Ligar pares (esquerda ↔ direita).
 class QMatch extends Questao {
   final List<(String, String)> pairs;
-  const QMatch(super.q, super.audio, {super.figura, required this.pairs});
+  const QMatch(super.q, super.audio, {super.figura, super.cores, required this.pairs});
 }
 
 /// Arrastar uma peça para a zona certa.
@@ -106,7 +116,7 @@ class QDrag extends Questao {
   final String chip;
   final List<String> zones;
   final int a;
-  const QDrag(super.q, super.audio, {super.figura, required this.chip, required this.zones, required this.a});
+  const QDrag(super.q, super.audio, {super.figura, super.cores, required this.chip, required this.zones, required this.a});
 }
 
 /// As formas que a app sabe desenhar.
@@ -171,6 +181,59 @@ class Figura {
 
   @override
   int get hashCode => Object.hash(forma, a, b, unidade);
+}
+
+/// As cores que uma pergunta de Educação Visual mostra.
+///
+/// Porque é que isto existe
+/// ------------------------
+/// A Educação Visual ensina-se a fazer: desenhar, pintar, misturar tintas.
+/// Perguntar «que cor dá o amarelo com o azul?» com três palavras por baixo
+/// não ensina cor nenhuma — ensina vocabulário. A criança que nunca viu as
+/// duas tintas juntar-se acerta de cor e continua sem saber.
+///
+/// Por isso a pergunta mostra as cores. As duas tintas aparecem lado a lado
+/// com um sinal de mais entre elas, e cada resposta traz a sua mancha de cor
+/// ao lado do nome. A criança escolhe a COR e aprende o nome dela ao mesmo
+/// tempo — que é a ordem certa.
+///
+/// Guardadas como números e não como imagens, pela mesma razão da [Figura]:
+/// nascem do conteúdo, não de um ficheiro que alguém tem de desenhar.
+class Cores {
+  /// As tintas que se juntam, mostradas com um "+" entre elas e um "=" no
+  /// fim. Vazia quando a pergunta não é de mistura.
+  final List<int> mistura;
+
+  /// Uma cor por opção de resposta, na mesma ordem das opções. Vazia
+  /// quando as respostas são palavras e não cores.
+  final List<int> opcoes;
+
+  const Cores({this.mistura = const [], this.opcoes = const []});
+
+  bool get temMistura => mistura.length >= 2;
+
+  /// "#F2C200" → 0xFFF2C200. Escrito em hexadecimal no content.json porque
+  /// é assim que uma cor se lê e se corrige à mão.
+  static int _daHex(String s) =>
+      int.parse('FF${s.replaceFirst('#', '')}', radix: 16);
+
+  static List<int> _lista(Object? v) => v == null
+      ? const []
+      : (v as List).map((x) => _daHex(x as String)).toList();
+
+  factory Cores.fromJson(Map<String, dynamic> j) => Cores(
+        mistura: _lista(j['mistura']),
+        opcoes: _lista(j['opcoes']),
+      );
+
+  @override
+  bool operator ==(Object other) =>
+      other is Cores &&
+      other.mistura.join() == mistura.join() &&
+      other.opcoes.join() == opcoes.join();
+
+  @override
+  int get hashCode => Object.hash(mistura.join(), opcoes.join());
 }
 
 /// A matéria de um nível — o que se ensina antes de se perguntar.
