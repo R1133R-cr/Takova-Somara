@@ -4,6 +4,7 @@ import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/content.dart';
+import '../models/escadaria.dart';
 import '../models/sequencia.dart';
 import '../services/conteudo_remoto.dart';
 import '../services/nuvem.dart';
@@ -36,6 +37,44 @@ class AppState extends ChangeNotifier {
 
   /// chave "cursoId:unitId:nivelId" → percentagem de acertos
   final Map<String, int> progresso = {};
+
+  /// Em que degrau da escadaria vai cada joguinho.
+  ///
+  /// Cada jogo tem a sua — não há nível global do aluno. Começa no 1 e sobe
+  /// um por nível concluído, até [nivelMaximo].
+  final Map<Jogo, int> _niveisDosJogos = {};
+
+  int nivelDe(Jogo jogo) => _niveisDosJogos[jogo] ?? 1;
+
+  /// Sobe um degrau. Devolve o nível novo.
+  ///
+  /// Nunca desce e nunca passa do tecto: a escadaria é uma promessa, e uma
+  /// promessa que anda para trás não é promessa nenhuma.
+  int subirNivelDe(Jogo jogo) {
+    final novo = math.min(nivelDe(jogo) + 1, nivelMaximo);
+    if (novo != nivelDe(jogo)) {
+      _niveisDosJogos[jogo] = novo;
+      notifyListeners();
+      _gravar();
+    }
+    return novo;
+  }
+
+  /// Guardados pelo NOME do jogo e não pelo índice do enum: acrescentar um
+  /// joguinho no meio da lista não pode fazer a criança perder o nível do
+  /// Pomar por ele ter passado a ser o terceiro em vez do segundo.
+  Map<String, int> _niveisParaJson() =>
+      {for (final e in _niveisDosJogos.entries) e.key.name: e.value};
+
+  void _lerNiveisDosJogos(Map? j) {
+    if (j == null) return;
+    for (final jogo in Jogo.values) {
+      final v = j[jogo.name];
+      if (v is int && v >= 1) {
+        _niveisDosJogos[jogo] = math.min(v, nivelMaximo);
+      }
+    }
+  }
 
   /// Perguntas que a criança errou, guardadas para rever.
   ///
@@ -200,6 +239,7 @@ class AppState extends ChangeNotifier {
         }
         final p = (j['progresso'] as Map?) ?? {};
         p.forEach((k, v) => progresso['$k'] = v as int);
+        _lerNiveisDosJogos(j['jogos'] as Map?);
         erradas.addAll(((j['erradas'] as List?) ?? []).cast<String>());
         _diaDasVidas = j['diaDasVidas'] as String?;
         _vezesSemVidas = (j['vezesSemVidas'] ?? 0) as int;
@@ -266,6 +306,7 @@ class AppState extends ChangeNotifier {
         'lives': lives,
         'cursoId': cursoId,
         'progresso': progresso,
+        'jogos': _niveisParaJson(),
         'erradas': erradas.toList(),
         'diaDasVidas': _diaDasVidas,
         'vezesSemVidas': _vezesSemVidas,
@@ -301,6 +342,7 @@ class AppState extends ChangeNotifier {
     'sequencia': _sequencia.paraJson(),
     'cursoId': cursoId,
     'progresso': progresso,
+    'jogos': _niveisParaJson(),
     'erradas': erradas.toList(),
   };
 
@@ -336,6 +378,18 @@ class AppState extends ChangeNotifier {
       final valor = (v as num).toInt();
       progresso[chave] = math.max(progresso[chave] ?? 0, valor);
     });
+
+    // O degrau de cada joguinho fica pelo mais alto dos dois. Jogar sem rede
+    // num telemóvel e depois entrar na conta não pode fazer descer a
+    // escadaria — é a mesma regra do XP e do progresso.
+    final jN = (n['jogos'] as Map?) ?? {};
+    for (final jogo in Jogo.values) {
+      final v = jN[jogo.name];
+      if (v is int) {
+        _niveisDosJogos[jogo] =
+            math.min(math.max(nivelDe(jogo), v), nivelMaximo);
+      }
+    }
 
     // As erradas juntam-se as duas: uma pergunta falhada noutro telemóvel
     // continua por rever neste. Sai da lista quando for acertada.
