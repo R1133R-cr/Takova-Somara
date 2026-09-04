@@ -474,7 +474,23 @@ class Unidade {
   final String id;
   final String titulo;
   final List<Nivel> niveis;
-  const Unidade({required this.id, required this.titulo, required this.niveis});
+
+  /// O vocabulário desta unidade, para a sopa de letras da matéria.
+  ///
+  /// Vazio na maior parte das unidades, e é assim que deve ser: só entram
+  /// palavras que **dispensam acento e cedilha**, porque a grelha da sopa é
+  /// de maiúsculas simples. Mostrar "SAUDE" na lista para se procurar
+  /// "SAUDE" nas letras ensinaria a escrever mal, e numa app de escola isso
+  /// não se faz — por isso a palavra fica de fora em vez de se lhe tirar o
+  /// acento.
+  final List<String> palavras;
+
+  const Unidade({
+    required this.id,
+    required this.titulo,
+    required this.niveis,
+    this.palavras = const [],
+  });
 
   factory Unidade.fromJson(Map<String, dynamic> j) => Unidade(
         id: j['id'] as String,
@@ -482,6 +498,7 @@ class Unidade {
         niveis: (j['niveis'] as List)
             .map((n) => Nivel.fromJson(n as Map<String, dynamic>))
             .toList(),
+        palavras: ((j['palavras'] as List?) ?? const []).cast<String>(),
       );
 }
 

@@ -828,10 +828,8 @@ perguntas de conceito («o perímetro de uma figura é:») ficam em escolha múl
 
 ## 10. Exercícios interactivos — Ciências Naturais e Sociais
 
-> **Três das quatro famílias feitas na 0.33.0**: cenário, sequência e
-> classificar, com 16 perguntas a sério e áudio. Os **jogos de palavras (c)**
-> ficam para o passo seguinte — são outra mecânica (a Sopa) com a sua própria
-> ligação. Ver o fim da secção.
+> **As quatro famílias feitas.** (a), (b) e (d) na 0.33.0; **(c) os jogos de
+> palavras na 0.34.0**, com 19 unidades de vocabulário. Ver o fim da secção.
 
 **[decidido] As quatro famílias entram**, por esta ordem de construção:
 
@@ -890,10 +888,15 @@ muda é o que há dentro de cada casa.
 | sequência | 6 | ciclo da água, tratar a água, semente→planta, flor→fruto, divisão administrativa, cronologia 1962–1975 |
 | classificar | 6 | vertebrados, natural/artificial, estados da matéria, direito/dever, necessidade/desejo, campo/cidade |
 
-**Por fazer:** (c) os jogos de palavras. Reaproveitam a Sopa com um banco
-vindo do `content.json` — é uma ligação a um jogo que já existe, não um tipo
-de pergunta, e misturá-la aqui dava um passo com duas coisas diferentes lá
-dentro.
+**(c) feito na 0.34.0**: 19 unidades de Ciências ganharam um campo
+`palavras` no `content.json`, e a Sopa aprendeu a jogar-se com um banco
+qualquer. Entra pelo cartão **«Sopa da matéria»** no Praticar, com as
+unidades que a criança já começou a estudar.
+
+**As palavras cruzadas ficam de fora.** Precisam de uma pista por palavra —
+outra forma de conteúdo, escrita à mão, e não é a mesma coisa que uma lista
+de vocabulário. A Sopa era o que o §10 dizia reaproveitar, e é o que se
+reaproveitou.
 
 ### O que se decidiu ao escrever
 
@@ -917,6 +920,30 @@ dentro.
   **todas** as perguntas interactivas do currículo, uma a uma. Um golden fixa
   píxeis; o que aqui parte é a de nove coisas para arrumar em três caixas
   num ecrã de 320, e essa a varredura apanha.
+
+### O que os jogos de palavras obrigaram a corrigir
+
+Uma regra da Sopa estava **invertida**, e a sopa da matéria tornou isso
+impossível de contornar.
+
+A regra era «só entram palavras que dispensam acento», e falhava dos dois
+lados ao mesmo tempo:
+
+1. **Doze palavras do banco estavam escritas sem o acento que têm** — óleo,
+   chávena, fogão, caldeirão, régua, carvão, camião, avião, carroça, língua,
+   árvore, poço. A app mostrava-as assim à criança, ou seja fazia
+   exactamente o que a regra dizia querer evitar. O teste que devia
+   protegê-las só verificava que a *string guardada* não tinha acentos — o
+   que passava sempre, porque o acento tinha sido tirado à mão.
+2. **O vocabulário das Ciências é quase todo acentuado** — coração, pulmão,
+   estômago, província, África, bússola, líquido, sólido, pólen. Com a regra
+   antiga, metade das unidades ficava sem sopa possível.
+
+A ordem certa das duas coisas é a de qualquer sopa impressa: **a lista mostra
+a palavra bem escrita, a grelha leva as letras simples.** «lâmpada» na lista,
+LAMPADA nas letras. Agora é assim, as doze foram corrigidas, e há dois testes
+— um que prende as palavras acentuadas ao banco, outro que garante que
+nenhuma letra acentuada chega à grelha.
 
 ---
 

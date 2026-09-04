@@ -28,7 +28,9 @@ void main() {
           expect(s.escondidas.length, sopaNo(nivel).palavras,
               reason: '${tema.rotulo}/nível $nivel: faltam palavras');
           for (final p in s.escondidas) {
-            expect(lerEm(s, p.casas), p.palavra,
+            // Na grelha estão as letras simples; na lista, a palavra como
+            // se escreve. É a ordem certa das duas coisas.
+            expect(lerEm(s, p.casas), semAcento(p.palavra),
                 reason: '${tema.rotulo}/nível $nivel: ${p.palavra} '
                     'não está onde diz estar');
           }
@@ -64,7 +66,7 @@ void main() {
     for (final p in s.escondidas) {
       for (var k = 0; k < p.palavra.length; k++) {
         final i = p.casas[k];
-        final letra = p.palavra[k];
+        final letra = semAcento(p.palavra)[k];
         if (ocupadas.containsKey(i)) {
           expect(ocupadas[i], letra, reason: 'cruzamento errado em $i');
         }
@@ -89,10 +91,10 @@ void main() {
       // voltar a um nível já feito não pode dar outra coisa. Por isso a
       // categoria vem do número e não do sorteio.
       for (final nivel in degraus) {
-        final a = Sopa.doNivel(nivel, rnd: Random(1)).tema;
-        final b = Sopa.doNivel(nivel, rnd: Random(999)).tema;
-        expect(a, b, reason: 'nível $nivel mudou de categoria');
-        expect(a, Tema.doNivel(nivel));
+        final a = Sopa.doNivel(nivel, rnd: Random(1)).banco;
+        final b = Sopa.doNivel(nivel, rnd: Random(999)).banco;
+        expect(a.rotulo, b.rotulo, reason: 'nível $nivel mudou de categoria');
+        expect(a.rotulo, Tema.doNivel(nivel).rotulo);
       }
     });
 
@@ -193,19 +195,45 @@ void main() {
   });
 
   group('as categorias', () {
-    test('trazem palavras que cabem e sem acentos', () {
-      // Numa grelha não há acentos. Mostrar "LEÃO" na lista para se procurar
-      // "LEAO" nas letras ensinaria a escrever mal.
-      final acentos = RegExp('[ÁÀÂÃÉÊÍÓÔÕÚÇáàâãéêíóôõúç]');
+    test('as palavras estão escritas como se escrevem', () {
+      // A regra esteve invertida durante versões: o banco guardava "OLEO",
+      // "FOGAO", "REGUA", "POCO" — doze palavras escritas SEM o acento que
+      // têm, à vista da criança, na app que lhe devia ensinar a escrever.
+      //
+      // Agora a lista mostra a palavra certa e a grelha leva as letras
+      // simples, que é como se faz em qualquer sopa impressa. Este teste
+      // prende as que sabemos que levam acento.
+      const acentuadas = {
+        'ÓLEO', 'CHÁVENA', 'FOGÃO', 'CALDEIRÃO', 'RÉGUA', 'CARVÃO',
+        'CAMIÃO', 'AVIÃO', 'CARROÇA', 'LÍNGUA', 'ÁRVORE', 'POÇO',
+      };
+      final todas = {for (final t in Tema.values) ...t.palavras};
+      for (final certa in acentuadas) {
+        expect(todas.contains(semAcento(certa)), isFalse,
+            reason: '$certa está no banco sem o acento');
+      }
+
       final maiorGrelha = sopaNo(nivelMaximo).lado;
       for (final tema in Tema.values) {
         expect(tema.palavras.length, greaterThanOrEqualTo(10),
             reason: '${tema.rotulo}: poucas palavras para variar');
         for (final p in tema.palavras) {
-          expect(acentos.hasMatch(p), isFalse, reason: '$p tem acento');
           expect(p, p.toUpperCase(), reason: '$p devia estar em maiúsculas');
           expect(p.length, lessThanOrEqualTo(maiorGrelha),
               reason: '$p não cabe nem na maior grelha');
+        }
+      }
+    });
+
+    test('a grelha nunca leva acentos', () {
+      // O outro lado da mesma regra: por muito acentuada que a palavra
+      // esteja na lista, nas letras entra a forma simples.
+      final acentos = RegExp('[ÁÀÂÃÉÊÍÓÔÕÚÇ]');
+      for (final nivel in degraus) {
+        final s = Sopa.doNivel(nivel, rnd: Random(21));
+        for (final letra in s.letras) {
+          expect(acentos.hasMatch(letra), isFalse,
+              reason: 'nível $nivel tem "$letra" na grelha');
         }
       }
     });

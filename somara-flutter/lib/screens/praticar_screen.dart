@@ -5,7 +5,9 @@ import '../models/content.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
+import '../models/sopa.dart';
 import 'lesson_screen.dart';
+import 'sopa_screen.dart';
 
 /// Treinar o que já se aprendeu, sem avançar no mapa.
 ///
@@ -20,6 +22,7 @@ class PraticarScreen extends StatelessWidget {
     final st = context.watch<AppState>();
     final rever = st.paraRever;
     final temFeitos = st.niveisConcluidos > 0;
+    final comPalavras = st.unidadesComPalavras;
 
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
@@ -62,6 +65,23 @@ class PraticarScreen extends StatelessWidget {
           activo: temFeitos,
           onTap: () => _abrir(context, st.perguntasDeTreino(), 'Treino baralhado'),
         ),
+        // A sopa da matéria só aparece depois de haver matéria: um cartão
+        // que promete o vocabulário de unidades que ela ainda não abriu era
+        // uma porta para um sítio vazio.
+        if (comPalavras.isNotEmpty) ...[
+          const SizedBox(height: 14),
+          _Cartao(
+            icone: Icons.grid_on_rounded,
+            cor: S.gold,
+            titulo: 'Sopa da matéria',
+            detalhe: comPalavras.length == 1
+                ? 'As palavras de uma unidade que já estudaste.'
+                : 'As palavras das ${comPalavras.length} unidades que já '
+                      'estudaste.',
+            activo: true,
+            onTap: () => _escolherUnidade(context, comPalavras),
+          ),
+        ],
         const SizedBox(height: 28),
 
         if (rever.isNotEmpty) ...[
@@ -110,6 +130,109 @@ class PraticarScreen extends StatelessWidget {
             ),
           ),
       ],
+    );
+  }
+
+  /// Qual das unidades. Uma lista e não a última estudada: rever o que se
+  /// deu há três semanas é justamente o que vale mais.
+  void _escolherUnidade(
+    BuildContext context,
+    List<({Curso curso, Unidade unidade})> unidades,
+  ) {
+    showModalBottomSheet<void>(
+      context: context,
+      backgroundColor: S.gm900,
+      showDragHandle: true,
+      builder: (folha) => SafeArea(
+        child: ListView(
+          shrinkWrap: true,
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 20),
+          children: [
+            const Padding(
+              padding: EdgeInsets.only(bottom: 12),
+              child: Text(
+                'Palavras de que unidade?',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: S.tx,
+                ),
+              ),
+            ),
+            for (final u in unidades)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(folha).pop();
+                    Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (_) => SopaScreen(
+                          banco: Banco(
+                            u.unidade.titulo,
+                            u.unidade.palavras,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 14,
+                      vertical: 12,
+                    ),
+                    decoration: BoxDecoration(
+                      color: S.surface,
+                      border: Border.all(color: S.line, width: 1.5),
+                      borderRadius: BorderRadius.circular(S.rMd),
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                u.unidade.titulo,
+                                style: const TextStyle(
+                                  color: S.tx,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              const SizedBox(height: 2),
+                              Text(
+                                '${u.curso.disciplina} · ${u.curso.classe}',
+                                style: const TextStyle(
+                                  color: S.txMut,
+                                  fontSize: 12.5,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Text(
+                          '${u.unidade.palavras.length}',
+                          style: const TextStyle(
+                            color: S.gold,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        const Icon(
+                          Icons.chevron_right_rounded,
+                          color: S.txMut,
+                          size: 22,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+          ],
+        ),
+      ),
     );
   }
 

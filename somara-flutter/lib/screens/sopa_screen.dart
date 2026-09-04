@@ -25,12 +25,19 @@ class SopaScreen extends StatefulWidget {
   /// caso normal; o número serve para os testes e para reabrir um nível.
   final int? nivel;
 
+  /// O vocabulário de uma unidade, para a sopa da matéria.
+  ///
+  /// Quando vem preenchido, a sopa sai da escadaria: é sobre o que a criança
+  /// acabou de estudar, joga-se uma vez e acaba. Não sobe degrau nenhum —
+  /// saber os rios de Moçambique não é ser melhor a sopas de letras.
+  final Banco? banco;
+
   /// Só para os testes: fixa o sorteio, para o teste poder saber onde as
   /// palavras ficaram e arrastar por cima delas. Em uso é sempre nulo.
   @visibleForTesting
   final Random? aleatorio;
 
-  const SopaScreen({super.key, this.nivel, this.aleatorio});
+  const SopaScreen({super.key, this.nivel, this.banco, this.aleatorio});
 
   @override
   State<SopaScreen> createState() => _SopaScreenState();
@@ -79,7 +86,9 @@ class _SopaScreenState extends State<SopaScreen>
       vsync: this,
       duration: const Duration(milliseconds: 380),
     );
-    _nivel = widget.nivel ?? context.read<AppState>().nivelDe(Jogo.sopa);
+    _nivel = widget.banco != null
+        ? 0
+        : (widget.nivel ?? context.read<AppState>().nivelDe(Jogo.sopa));
     _novaSopa();
   }
 
@@ -90,8 +99,14 @@ class _SopaScreenState extends State<SopaScreen>
     super.dispose();
   }
 
+  /// Esta sopa é do vocabulário de uma unidade, e não da escadaria.
+  bool get _daMateria => widget.banco != null;
+
   void _novaSopa() {
-    _sopa = Sopa.doNivel(_nivel, rnd: _rnd);
+    final banco = widget.banco;
+    _sopa = banco == null
+        ? Sopa.doNivel(_nivel, rnd: _rnd)
+        : Sopa.daMateria(banco, rnd: _rnd);
     _encontradas.clear();
     _pintadas.clear();
     _de = null;
@@ -223,7 +238,8 @@ class _SopaScreenState extends State<SopaScreen>
         // Uma palavra encontrada vale como uma resposta certa de lição.
         context.read<AppState>().concluirTreino(_sopa.escondidas.length);
         if (_falhadas == 0) context.read<AppState>().registarSopaPerfeita();
-        _passarAoSeguinte();
+        // A da matéria acaba aqui: não há degrau seguinte a carregar.
+        if (!_daMateria) _passarAoSeguinte();
       } else if (_encontradas.length >= 3) {
         Sons.i.voz('voz-boa.mp3');
       }
@@ -248,7 +264,9 @@ class _SopaScreenState extends State<SopaScreen>
         foregroundColor: S.tx,
         elevation: 0,
         title: Text(
-          'Sopa de letras · Nível $_nivel',
+          _daMateria
+              ? 'Sopa da matéria'
+              : 'Sopa de letras · Nível $_nivel',
           style: const TextStyle(fontSize: 16),
         ),
         actions: [
@@ -265,7 +283,7 @@ class _SopaScreenState extends State<SopaScreen>
             Text(
               _acabou
                   ? 'Encontraste todas!'
-                  : '${_sopa.tema.rotulo} · $_quantasFaltam',
+                  : '${_sopa.banco.rotulo} · $_quantasFaltam',
               style: TextStyle(
                 color: _acabou ? S.chart : S.txSoft,
                 fontSize: 15,
@@ -433,7 +451,7 @@ class _SopaScreenState extends State<SopaScreen>
         Image.asset(RobyPose.orgulhoso.path, width: 76),
         const SizedBox(height: 8),
         Text(
-          'Nível $_nivel feito!',
+          _daMateria ? 'Encontraste tudo!' : 'Nível $_nivel feito!',
           style: const TextStyle(
             fontSize: 19,
             fontWeight: FontWeight.w700,
@@ -441,12 +459,46 @@ class _SopaScreenState extends State<SopaScreen>
           ),
         ),
         const SizedBox(height: 4),
-        Text(
-          _nivel >= nivelMaximo
-              ? 'Chegaste ao fim da escadaria.'
-              : 'Vem aí o ${_nivel + 1}…',
-          style: const TextStyle(color: S.txSoft, fontSize: 14),
-        ),
+        if (_daMateria)
+          const Text(
+            'Já conheces as palavras desta unidade.',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: S.txSoft, fontSize: 14),
+          )
+        else
+          Text(
+            _nivel >= nivelMaximo
+                ? 'Chegaste ao fim da escadaria.'
+                : 'Vem aí o ${_nivel + 1}…',
+            style: const TextStyle(color: S.txSoft, fontSize: 14),
+          ),
+        if (_daMateria) ...[
+          const SizedBox(height: 12),
+          GestureDetector(
+            onTap: () {
+              Sons.i.toque();
+              Navigator.of(context).pop();
+            },
+            child: Container(
+              height: 46,
+              width: double.infinity,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: S.chart,
+                border: Border.all(color: S.line, width: 1.5),
+                borderRadius: BorderRadius.circular(S.rMd),
+              ),
+              child: const Text(
+                'Voltar',
+                style: TextStyle(
+                  color: S.onChart,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+          ),
+        ],
       ],
     ),
   );

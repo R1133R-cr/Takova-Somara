@@ -667,6 +667,22 @@ class AppState extends ChangeNotifier {
   /// parte com meses inteiros de calendário.
   int get streak => _sequencia.visivelEm(relogio());
 
+  /// As unidades com vocabulário que a criança já começou a estudar.
+  ///
+  /// Basta **um** nível feito para a sopa da matéria abrir. Exigir a unidade
+  /// inteira deixava o jogo escondido justamente de quem mais precisava de
+  /// rever — e as palavras da unidade são as mesmas do primeiro ao último
+  /// nível.
+  List<({Curso curso, Unidade unidade})> get unidadesComPalavras => [
+    for (final c in conteudo.cursos)
+      for (final u in c.units)
+        if (u.palavras.length >= 4 &&
+            u.niveis.any(
+              (n) => progresso.containsKey('${c.id}:${u.id}:${n.id}'),
+            ))
+          (curso: c, unidade: u),
+  ];
+
   bool nivelFeito(int i) {
     final lv = niveis[i];
     return progresso.containsKey(chaveDe(lv.unit, lv.nivel));
