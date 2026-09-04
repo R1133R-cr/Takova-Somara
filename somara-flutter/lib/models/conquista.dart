@@ -113,6 +113,21 @@ enum Conquista {
   ),
 
   // ---- Joguinhos ----
+  // Estas duas não são degraus: são coisas que se fazem DENTRO de um nível,
+  // e precisaram de instrumentar os jogos. Ficaram de fora quando as
+  // medalhas nasceram, por isso mesmo.
+  primeiraEspecial(
+    FamiliaDeConquista.jogos,
+    'A tua primeira peça especial',
+    'Junta quatro ou mais frutas iguais no Pomar.',
+  ),
+  sopaSemFalhar(
+    FamiliaDeConquista.jogos,
+    'Sopa sem falhar uma letra',
+    'Acaba uma sopa sem arrastar por cima de uma palavra errada.',
+    cristais: 1,
+  ),
+
   // Seis degraus por jogo. Os primeiros chegam na mesma tarde; o 250 e o 500
   // são de meses. É esse espaçamento que os faz valer alguma coisa.
   crossmath10(FamiliaDeConquista.jogos, 'Crossmath 10', '',
@@ -233,6 +248,12 @@ class RetratoDoAluno {
   /// Dias a fio em que o primeiro acto do dia foi estudar, e não jogar.
   final int diasAEstudarPrimeiro;
 
+  /// Peças especiais nascidas no Pomar, ao todo.
+  final int especiaisNoPomar;
+
+  /// Sopas fechadas sem uma única selecção errada.
+  final int sopasPerfeitas;
+
   /// O degrau de cada joguinho.
   final Map<Jogo, int> degraus;
 
@@ -245,6 +266,8 @@ class RetratoDoAluno {
     this.recuperadas = 0,
     this.diasSeguidos = 0,
     this.diasAEstudarPrimeiro = 0,
+    this.especiaisNoPomar = 0,
+    this.sopasPerfeitas = 0,
     this.degraus = const {},
   });
 }
@@ -273,6 +296,8 @@ bool alcancada(Conquista c, RetratoDoAluno r) {
     Conquista.umaSemana => r.diasSeguidos >= 7,
     Conquista.umMes => r.diasSeguidos >= 30,
     Conquista.estudarPrimeiro => r.diasAEstudarPrimeiro >= 5,
+    Conquista.primeiraEspecial => r.especiaisNoPomar >= 1,
+    Conquista.sopaSemFalhar => r.sopasPerfeitas >= 1,
     // As dos jogos saíram acima, pelo [c.jogo].
     _ => false,
   };

@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../models/escadaria.dart';
+import '../models/rastreio.dart';
 import '../models/sopa.dart';
 import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
+import '../widgets/botao_de_sorte.dart';
 import '../widgets/roby.dart';
 
 /// Sopa de letras.
@@ -50,6 +52,22 @@ class _SopaScreenState extends State<SopaScreen>
   /// As casas já ganhas, para ficarem marcadas.
   final _pintadas = <int>{};
 
+  /// Por onde o dedo já passou neste nível. É o que a Sorte lê para saber
+  /// qual das palavras é que ela ainda não procurou.
+  final _rastreio = Rastreio();
+
+  /// As letras a piscar por causa de uma sorte, e as primeiras letras que
+  /// ficam marcadas depois de a revelação passar.
+  Set<int> _aRevelar = const {};
+  final _pistas = <int>{};
+
+  /// Enquanto a revelação corre, o dedo não conta como procura.
+  bool _aRevelarPalavra = false;
+
+  /// Selecções que não deram palavra nenhuma, neste nível. Zero ao fechar
+  /// vale a medalha de "sopa sem falhar uma letra".
+  int _falhadas = 0;
+
   int? _de;
   List<int> _seleccao = const [];
 
@@ -79,7 +97,56 @@ class _SopaScreenState extends State<SopaScreen>
     _de = null;
     _seleccao = const [];
     _aPassar = false;
+    _rastreio.limpar();
+    _aRevelar = const {};
+    _pistas.clear();
+    _aRevelarPalavra = false;
+    _falhadas = 0;
     setState(() {});
+  }
+
+  /// A Sorte: acende a palavra em que o dedo menos passou.
+  ///
+  /// A palavra pisca um instante e apaga-se, ficando só a **primeira letra**
+  /// marcada. Deixá-la acesa era dá-la de bandeja; deixá-la apagar sem deixar
+  /// rasto era gastar uma sorte por dois segundos de memória.
+  Future<void> _pedirSorte() async {
+    if (_aRevelarPalavra || _aPassar || _acabou) return;
+    final alvo = _sopa.menosTocada(_rastreio, _encontradas);
+    final st = context.read<AppState>();
+
+    if (alvo == null) {
+      _dizer(semNadaParaMostrar);
+      return;
+    }
+    if (!st.gastarSorte()) return;
+
+    Sons.i.voz('voz-boa.mp3');
+    setState(() {
+      _aRevelarPalavra = true;
+      _aRevelar = alvo.casas.toSet();
+    });
+    _dizer(sobramSortes(st.sortes));
+
+    await Future<void>.delayed(const Duration(milliseconds: 1400));
+    if (!mounted) return;
+    setState(() {
+      _aRevelar = const {};
+      _pistas.add(alvo.casas.first);
+      _aRevelarPalavra = false;
+    });
+  }
+
+  void _dizer(String texto) {
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Text(texto),
+          backgroundColor: S.gm800,
+          duration: const Duration(milliseconds: 2200),
+        ),
+      );
   }
 
   /// Acabou o nível: festeja um instante e o seguinte entra sozinho.
@@ -110,7 +177,7 @@ class _SopaScreenState extends State<SopaScreen>
   }
 
   void _comecar(Offset p) {
-    if (_acabou || _aPassar) return;
+    if (_acabou || _aPassar || _aRevelarPalavra) return;
     final i = _casaEm(p);
     if (i == null) return;
     setState(() {
@@ -121,7 +188,7 @@ class _SopaScreenState extends State<SopaScreen>
 
   void _arrastar(Offset p) {
     final de = _de;
-    if (de == null || _acabou || _aPassar) return;
+    if (de == null || _acabou || _aPassar || _aRevelarPalavra) return;
     final ate = _casaEm(p);
     if (ate == null) return;
     // Só linhas rectas: um dedo aos saltos não selecciona nada, senão
@@ -132,6 +199,10 @@ class _SopaScreenState extends State<SopaScreen>
   }
 
   void _largar() {
+    // Tudo por onde o dedo passou conta como procurado, acerte ou não. É
+    // isso que diz à Sorte onde ela JÁ olhou.
+    if (!_aRevelarPalavra) _rastreio.tocar(_seleccao);
+
     if (_seleccao.length < 2) {
       setState(() {
         _de = null;
@@ -151,11 +222,13 @@ class _SopaScreenState extends State<SopaScreen>
         Sons.i.nivel();
         // Uma palavra encontrada vale como uma resposta certa de lição.
         context.read<AppState>().concluirTreino(_sopa.escondidas.length);
+        if (_falhadas == 0) context.read<AppState>().registarSopaPerfeita();
         _passarAoSeguinte();
       } else if (_encontradas.length >= 3) {
         Sons.i.voz('voz-boa.mp3');
       }
     } else if (achada == null) {
+      _falhadas++;
       Sons.i.errado();
       _abanao.forward(from: 0);
     }
@@ -178,6 +251,13 @@ class _SopaScreenState extends State<SopaScreen>
           'Sopa de letras · Nível $_nivel',
           style: const TextStyle(fontSize: 16),
         ),
+        actions: [
+          BotaoDeSorte(
+            aoPedir: (_acabou || _aPassar || _aRevelarPalavra)
+                ? null
+                : _pedirSorte,
+          ),
+        ],
       ),
       body: SafeArea(
         child: Column(
@@ -259,6 +339,10 @@ class _SopaScreenState extends State<SopaScreen>
   Widget _letra(int i, double lado) {
     final ganha = _pintadas.contains(i);
     final aSeleccionar = _seleccao.contains(i);
+    final revelada = _aRevelar.contains(i);
+    // A pista fica quando a revelação passa: a primeira letra da palavra
+    // marcada a dourado. Sai quando a palavra for mesmo encontrada.
+    final pista = !ganha && _pistas.contains(i);
 
     return Container(
       width: lado,
@@ -271,9 +355,14 @@ class _SopaScreenState extends State<SopaScreen>
           // marca é o troféu, e apagá-la tirava à criança o que ela fez.
           color: ganha
               ? S.green500.withValues(alpha: 0.55)
+              : revelada
+              ? S.gold.withValues(alpha: 0.55)
               : aSeleccionar
               ? S.chart.withValues(alpha: 0.30)
               : Colors.transparent,
+          border: pista
+              ? Border.all(color: S.gold, width: 1.6)
+              : null,
           borderRadius: BorderRadius.circular(lado * 0.28),
         ),
         alignment: Alignment.center,
@@ -281,11 +370,15 @@ class _SopaScreenState extends State<SopaScreen>
           _sopa.letras[i],
           style: TextStyle(
             fontSize: lado * 0.5,
-            fontWeight: ganha || aSeleccionar
+            fontWeight: ganha || aSeleccionar || revelada || pista
                 ? FontWeight.w800
                 : FontWeight.w600,
             color: ganha
                 ? Colors.white
+                : revelada
+                ? Colors.white
+                : pista
+                ? S.gold
                 : aSeleccionar
                 ? S.chart
                 : S.txSoft,

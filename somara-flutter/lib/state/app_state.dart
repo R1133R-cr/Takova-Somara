@@ -9,6 +9,7 @@ import '../models/coleccao.dart';
 import '../models/conquista.dart';
 import '../models/content.dart';
 import '../models/escadaria.dart';
+import '../models/sorte.dart';
 import '../models/sequencia.dart';
 import '../services/conteudo_remoto.dart';
 import '../services/nuvem.dart';
@@ -246,6 +247,23 @@ class AppState extends ChangeNotifier {
     _gravar();
   }
 
+  /* ---------------- Sortes ----------------
+     A ajuda que se ganha a estudar e se gasta a jogar. Ver [Sortes]. */
+
+  Sortes _sortes = const Sortes();
+
+  Sortes get sortes => _sortes;
+
+  /// Gasta uma sorte. Devolve falso quando não há nenhuma.
+  bool gastarSorte() {
+    final resto = _sortes.aGastar();
+    if (resto == null) return false;
+    _sortes = resto;
+    notifyListeners();
+    _gravar();
+    return true;
+  }
+
   /* ---------------- Conquistas ----------------
      Medalhas por marcos. Ver [Conquista]; a faixa que as mostra é o
      `widgets/faixa_conquista.dart`. */
@@ -279,6 +297,29 @@ class AppState extends ChangeNotifier {
 
   /// Perguntas que estavam nos Guardados e passaram a certas.
   int _recuperadas = 0;
+
+  /* ---- O que só se vê de dentro de um jogo ----
+     Duas medalhas do §2 dependem de coisas que acontecem a meio de um
+     nível, e não de um degrau da escadaria. Os jogos avisam por aqui. */
+
+  int _especiaisNoPomar = 0;
+  int _sopasPerfeitas = 0;
+
+  /// O Pomar acabou de criar uma peça especial.
+  void registarPecaEspecial() {
+    _especiaisNoPomar++;
+    _verificarConquistas();
+    notifyListeners();
+    _gravar();
+  }
+
+  /// Uma sopa fechada sem uma única selecção errada.
+  void registarSopaPerfeita() {
+    _sopasPerfeitas++;
+    _verificarConquistas();
+    notifyListeners();
+    _gravar();
+  }
 
   /* ---- Estudar antes de jogar ----
      Guarda-se o primeiro acto de cada dia, e não a ordem toda: o que
@@ -348,6 +389,8 @@ class AppState extends ChangeNotifier {
       recuperadas: _recuperadas,
       diasSeguidos: streak,
       diasAEstudarPrimeiro: _diasAEstudarPrimeiro,
+      especiaisNoPomar: _especiaisNoPomar,
+      sopasPerfeitas: _sopasPerfeitas,
       degraus: {for (final j in Jogo.values) j: nivelDe(j)},
     );
   }
@@ -552,8 +595,11 @@ class AppState extends ChangeNotifier {
         _carteira = Carteira.deJson(j['carteira'] as Map<String, dynamic>?);
         _coleccao = Coleccao.deJson(j['coleccao'] as Map<String, dynamic>?);
         _marcosPagos.addAll(((j['marcos'] as List?) ?? []).cast<String>());
+        _sortes = Sortes.deJson(j['sortes'] as Map<String, dynamic>?);
         _lerConquistas(j['conquistas'] as List?);
         _recuperadas = (j['recuperadas'] ?? 0) as int;
+        _especiaisNoPomar = (j['especiais'] ?? 0) as int;
+        _sopasPerfeitas = (j['sopasPerfeitas'] ?? 0) as int;
         _diasAEstudarPrimeiro = (j['estudouPrimeiro'] ?? 0) as int;
         _ultimoDiaAEstudarPrimeiro = j['diaEstudouPrimeiro'] as String?;
         erradas.addAll(((j['erradas'] as List?) ?? []).cast<String>());
@@ -631,8 +677,11 @@ class AppState extends ChangeNotifier {
         'carteira': _carteira.paraJson(),
         'coleccao': _coleccao.paraJson(),
         'marcos': _marcosPagos.toList()..sort(),
+        'sortes': _sortes.paraJson(),
         'conquistas': _conquistas.map((c) => c.name).toList()..sort(),
         'recuperadas': _recuperadas,
+        'especiais': _especiaisNoPomar,
+        'sopasPerfeitas': _sopasPerfeitas,
         'estudouPrimeiro': _diasAEstudarPrimeiro,
         'diaEstudouPrimeiro': _ultimoDiaAEstudarPrimeiro,
         'erradas': erradas.toList(),
@@ -675,8 +724,11 @@ class AppState extends ChangeNotifier {
     'carteira': _carteira.paraJson(),
     'coleccao': _coleccao.paraJson(),
     'marcos': _marcosPagos.toList()..sort(),
+    'sortes': _sortes.paraJson(),
     'conquistas': _conquistas.map((c) => c.name).toList()..sort(),
     'recuperadas': _recuperadas,
+    'especiais': _especiaisNoPomar,
+    'sopasPerfeitas': _sopasPerfeitas,
     'erradas': erradas.toList(),
   };
 
@@ -747,8 +799,15 @@ class AppState extends ChangeNotifier {
     // outro com B e C ficam os dois com A, B e C. Uma medalha que some numa
     // sincronização é a coisa que faz uma criança deixar de acreditar no
     // ecrã. O mesmo vale para o que já se recuperou dos Guardados.
+    _sortes = _sortes.fundirCom(
+      Sortes.deJson(n['sortes'] as Map<String, dynamic>?),
+    );
     _lerConquistas(n['conquistas'] as List?);
     _recuperadas = math.max(_recuperadas, (n['recuperadas'] ?? 0) as int);
+    _especiaisNoPomar =
+        math.max(_especiaisNoPomar, (n['especiais'] ?? 0) as int);
+    _sopasPerfeitas =
+        math.max(_sopasPerfeitas, (n['sopasPerfeitas'] ?? 0) as int);
 
     // As erradas juntam-se as duas: uma pergunta falhada noutro telemóvel
     // continua por rever neste. Sai da lista quando for acertada.
@@ -934,6 +993,9 @@ class AppState extends ChangeNotifier {
     // Ouro sempre, e nunca zero: quem tropeçou num nível difícil já teve o
     // castigo de o ter tropeçado.
     _carteira = _carteira.comGanho(Moeda.gc, Carteira.ouroPorNivel(pct));
+    // Sem um único erro: mais uma sorte para gastar nos jogos. É a única
+    // porta que existe entre a escola e a ajuda lá dentro.
+    if (pct == 100) _sortes = _sortes.comGanho();
     _sequencia = _sequencia.comActividadeEm(relogio());
     _registarActo(estudo: true);
     _pagarMarcosDeCristal(lv.unit);

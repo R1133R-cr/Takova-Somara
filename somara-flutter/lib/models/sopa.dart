@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'escadaria.dart';
+import 'rastreio.dart';
 
 /// Os conjuntos de palavras.
 ///
@@ -262,6 +263,24 @@ class Sopa {
       }
     }
     return null;
+  }
+
+  /// A palavra por encontrar em que o dedo menos passou.
+  ///
+  /// É o que a Sorte revela. Entre duas igualmente intocadas fica a mais
+  /// comprida: se a criança não olhou para nenhuma das duas, a comprida é a
+  /// que lhe custa mais a achar sozinha.
+  PalavraColocada? menosTocada(Rastreio rastreio, Set<String> jaEncontradas) {
+    final porAchar = [
+      for (final p in escondidas)
+        if (!jaEncontradas.contains(p.palavra)) p,
+    ];
+    if (porAchar.isEmpty) return null;
+    return rastreio.menosTocado(
+      porAchar,
+      (p) => p.casas,
+      desempate: (p) => p.palavra.length,
+    );
   }
 
   /// A linha recta entre duas casas, ou nulo se não estiverem alinhadas.

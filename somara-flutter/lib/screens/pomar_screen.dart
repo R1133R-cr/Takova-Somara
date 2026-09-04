@@ -6,9 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import '../models/pomar.dart';
+import '../models/rastreio.dart';
 import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
+import '../widgets/botao_de_sorte.dart';
 import '../widgets/marca_especial.dart';
 import '../widgets/roby.dart';
 
@@ -63,6 +65,19 @@ class _PomarScreenState extends State<PomarScreen>
   /// onde nascer.
   double _lado = 48;
 
+  /// Onde o dedo já mexeu neste tabuleiro. É o que a Sorte lê para achar a
+  /// composição que a criança ainda não viu.
+  final _rastreio = Rastreio();
+
+  /// As casas que a Sorte está a apontar, a vibrar.
+  Set<int> _aVibrar = const {};
+  late final AnimationController _vibracao;
+
+  /// A quantas jogadas do fim é que a Sorte deixa de ensinar e passa a
+  /// salvar. Com folga vibra — a criança vê a composição e faz a jogada; à
+  /// justa dá a peça, porque uma dica não chega para quem tem duas jogadas.
+  static const _poucasJogadas = 5;
+
   /// Os festejos a decorrer. Vários ao mesmo tempo numa cascata longa.
   final _festejos = <_Festejo>[];
   late final AnimationController _brilho;
@@ -92,6 +107,14 @@ class _PomarScreenState extends State<PomarScreen>
         setState(_festejos.clear);
       }
     });
+    _vibracao = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1600),
+    )..addStatusListener((e) {
+      if (e == AnimationStatus.completed && mounted) {
+        setState(() => _aVibrar = const {});
+      }
+    });
     _tabuleiro = Pomar.novo(rnd: _rnd);
   }
 
@@ -101,6 +124,7 @@ class _PomarScreenState extends State<PomarScreen>
     _abanao.dispose();
     _solta.dispose();
     _brilho.dispose();
+    _vibracao.dispose();
     super.dispose();
   }
 
@@ -178,6 +202,12 @@ class _PomarScreenState extends State<PomarScreen>
       });
       return;
     }
+
+    // Mexer nestas duas casas conta como tê-las olhado, acerte ou não —
+    // é isso que tira esta zona do tabuleiro da lista de candidatas da
+    // Sorte. Regista-se antes de saber se a troca vale: uma tentativa
+    // falhada também é uma zona onde ela já procurou.
+    _rastreio.tocar([origem, destino]);
 
     final valida = _tabuleiro.podeTrocar(origem, destino);
 
@@ -265,6 +295,11 @@ class _PomarScreenState extends State<PomarScreen>
       if (voz != null) Sons.i.voz(voz);
 
       HapticFeedback.lightImpact();
+      // A primeira peça especial vale uma medalha, e só se sabe daqui: é
+      // uma coisa que acontece a meio de um nível, não um degrau.
+      if (colheita.criar.isNotEmpty) {
+        context.read<AppState>().registarPecaEspecial();
+      }
       _festejar(grupos, ganho, nivel);
 
       setState(() => _aColher = grupos);
@@ -345,6 +380,8 @@ class _PomarScreenState extends State<PomarScreen>
       _tabuleiro = Pomar.novo(rnd: _rnd);
       _pontos = 0;
       _restam = _jogadas;
+      _rastreio.limpar();
+      _aVibrar = const {};
       _arrastada = null;
       _alvo = null;
       _puxao = Offset.zero;
@@ -353,6 +390,59 @@ class _PomarScreenState extends State<PomarScreen>
       _aviso = null;
       _festejos.clear();
     });
+  }
+
+
+  /// A Sorte no Pomar: aponta uma composição que a criança ainda não viu.
+  ///
+  /// Faz uma de duas coisas, e o que decide é quantas jogadas restam. Com
+  /// folga, a composição **vibra** — ela vê onde está e faz a jogada, que é
+  /// o que a ensina a olhar para o tabuleiro. Já à justa, nasce ali uma
+  /// **peça especial**: com duas jogadas no bolso, uma dica não salva
+  /// ninguém, e uma ajuda que chega tarde de mais não é ajuda.
+  Future<void> _pedirSorte() async {
+    if (_ocupado || _acabou) return;
+
+    final jogada = _tabuleiro.jogadaPorTocar(_rastreio);
+    final st = context.read<AppState>();
+
+    if (jogada == null) {
+      _dizer(semNadaParaMostrar);
+      return;
+    }
+    if (!st.gastarSorte()) return;
+
+    if (_restam > _poucasJogadas) {
+      Sons.i.voz('voz-boa.mp3');
+      setState(() => _aVibrar = jogada.envolvidas);
+      _vibracao.forward(from: 0);
+      _dizer('Olha bem para aqui. ${sobramSortes(st.sortes)}');
+      return;
+    }
+
+    // Poucas jogadas: nasce um embrulho na peça que ela teria de mover. Ao
+    // fazer a jogada, o embrulho rebenta o quadrado à volta — chega para
+    // fechar a composição de uma vez.
+    Sons.i.nivel();
+    HapticFeedback.mediumImpact();
+    setState(() {
+      _tabuleiro = _tabuleiro.comEspecialEm(jogada.de, Especial.embrulho);
+      _aVibrar = {jogada.de};
+    });
+    _vibracao.forward(from: 0);
+    _dizer('Uma peça especial para ti. ${sobramSortes(st.sortes)}');
+  }
+
+  void _dizer(String texto) {
+    ScaffoldMessenger.of(context)
+      ..hideCurrentSnackBar()
+      ..showSnackBar(
+        SnackBar(
+          content: Text(texto),
+          backgroundColor: S.gm800,
+          duration: const Duration(milliseconds: 2400),
+        ),
+      );
   }
 
   @override
@@ -364,6 +454,11 @@ class _PomarScreenState extends State<PomarScreen>
         foregroundColor: S.tx,
         elevation: 0,
         title: const Text('Pomar', style: TextStyle(fontSize: 17)),
+        actions: [
+          BotaoDeSorte(
+            aoPedir: (_ocupado || _acabou) ? null : _pedirSorte,
+          ),
+        ],
       ),
       body: SafeArea(
         child: Column(
@@ -501,10 +596,12 @@ class _PomarScreenState extends State<PomarScreen>
     final peca = _tabuleiro.casas[i];
     final puxada = _arrastada == i;
     final aColher = _aColher.contains(i);
+    final aVibrar = _aVibrar.contains(i);
 
-    return Transform.translate(
-      offset: _desvioDe(i),
-      child: Container(
+    // A vibração da Sorte: um tremor pequeno e repetido, só nas casas
+    // apontadas. Um destaque parado perdia-se no meio de quarenta e duas
+    // peças coloridas; o que o olho apanha num tabuleiro cheio é movimento.
+    final corpo = Container(
         width: lado,
         height: lado,
         padding: const EdgeInsets.all(2.5),
@@ -515,10 +612,16 @@ class _PomarScreenState extends State<PomarScreen>
             // apanhou, e sem ela não se sabe qual das duas se está a mover.
             color: puxada
                 ? S.chart.withValues(alpha: 0.24)
+                : aVibrar
+                ? S.gold.withValues(alpha: 0.22)
                 : S.surface.withValues(alpha: 0.55),
             border: Border.all(
-              color: puxada ? S.chart : S.line,
-              width: puxada ? 2.5 : 1.2,
+              color: puxada
+                  ? S.chart
+                  : aVibrar
+                  ? S.gold
+                  : S.line,
+              width: puxada || aVibrar ? 2.5 : 1.2,
             ),
             borderRadius: BorderRadius.circular(S.rMd),
           ),
@@ -543,7 +646,25 @@ class _PomarScreenState extends State<PomarScreen>
             ),
           ),
         ),
-      ),
+      );
+
+    return Transform.translate(
+      offset: _desvioDe(i),
+      child: aVibrar
+          ? AnimatedBuilder(
+              animation: _vibracao,
+              builder: (_, filho) {
+                final t = _vibracao.value;
+                final forca = (1 - t) * lado * 0.10;
+                final dx = sin(t * pi * 18) * forca;
+                return Transform.translate(
+                  offset: Offset(dx, 0),
+                  child: filho,
+                );
+              },
+              child: corpo,
+            )
+          : corpo,
     );
   }
 

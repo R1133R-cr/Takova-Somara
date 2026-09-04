@@ -260,6 +260,9 @@ separadas: os corações limitam os exercícios, o tempo limita os jogos.
 
 ## 4. Sorte — a ajuda que se ganha a estudar
 
+> **Feito na 0.29.0**, na Sopa e no Pomar. O que se decidiu ao escrever está
+> no fim da secção.
+
 **[decidido, ideia do utilizador]** Um botão **«Sorte»** dentro dos jogos, que
 mostra quantas estão disponíveis.
 
@@ -311,6 +314,40 @@ ajuda deixar de valer nada.
    outra tocada, a Sorte escolhe a intocada.
 3. Emulador: acabar uma lição a 100%, ver o contador subir, entrar no Pomar,
    carregar em Sorte, ver a composição vibrar.
+
+### O que se decidiu ao escrever
+
+- **A campanha semanal ainda não paga sortes**, porque não existe (§5). A
+  única porta viva é a lição sem um único erro. A tabela fica como está e a
+  segunda linha liga-se quando o §5 chegar.
+- **A composição é uma jogada possível por tocar.** «Sete mangas em T» tem de
+  virar algo que o código saiba encontrar: são as duas casas a trocar mais as
+  casas que se juntariam. O `jogadasPossiveis()` é o `haJogada()` a dizer
+  *quais* em vez de *se há*, e um teste exige que os dois nunca discordem —
+  senão a Sorte diria «não há nada» num tabuleiro jogável.
+- **Empates resolvem-se sempre da mesma maneira**: na Sopa fica a palavra
+  mais comprida, no Pomar a composição maior. Sem um desempate fixo, dois
+  telemóveis com o mesmo tabuleiro davam ajudas diferentes, e uma ajuda
+  arbitrária não se percebe.
+- **A fronteira das duas reacções do Pomar são cinco jogadas** [era proposto].
+  Acima disso vibra, que é o que ensina; daí para baixo nasce um **embrulho**
+  na peça que ela teria de mover — com duas jogadas no bolso, uma dica não
+  salva ninguém. Um teste garante que a peça especial não estraga a jogada
+  que estava a apontar.
+- **Uma sorte que não encontra nada não se cobra.** Acontece pouco — uma sopa
+  em que só falta a palavra por onde o dedo já passou — e cobrar por uma
+  ajuda que não ajudou seria roubo.
+- **O botão nunca desaparece**, mesmo com zero, e tocá-lo aí diz como se
+  ganham. Escondê-lo tirava a existência da ajuda a quem nunca a teve, que é
+  justamente quem precisa de saber que ela existe.
+- **Na Sopa a palavra pisca e apaga-se, deixando a primeira letra marcada.**
+  Deixá-la acesa era dá-la de bandeja; apagá-la sem rasto era gastar uma
+  sorte por dois segundos de memória.
+- **Duas medalhas do §2 entraram aqui**: «a tua primeira peça especial» e
+  «sopa sem falhar uma letra». Da previsão anterior — de que as três
+  entrariam com este passo — só estas duas se cumprem, e não pelo rastreio:
+  precisaram de contadores próprios nos dois jogos. A do Crossmath continua
+  por fazer, porque o Crossmath não foi tocado nesta fase.
 
 ---
 

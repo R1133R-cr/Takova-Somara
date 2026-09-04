@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'rastreio.dart';
+
 /// O que se apanha no tabuleiro.
 ///
 /// Seis produtos do dia-a-dia moçambicano, não os rebuçados coloridos do
@@ -87,6 +89,35 @@ class Colheita {
 
   bool get vazia => limpar.isEmpty;
 }
+
+/// Uma jogada que existe no tabuleiro e ainda ninguém fez.
+///
+/// É a unidade da Sorte no Pomar: as duas casas a trocar e as casas que se
+/// juntariam se a troca acontecesse — os "sete mangas em T" de que fala o
+/// plano. A [composicao] é o que se ilumina, vibra, ou onde nasce a peça
+/// especial.
+class JogadaPossivel {
+  final int de;
+  final int para;
+
+  /// As casas que se juntariam. Nunca vazia.
+  final Set<int> composicao;
+
+  const JogadaPossivel({
+    required this.de,
+    required this.para,
+    required this.composicao,
+  });
+
+  /// Todas as casas que a criança teria de ter tocado para dar por ela.
+  Set<int> get envolvidas => {de, para, ...composicao};
+
+  int get tamanho => composicao.length;
+
+  @override
+  String toString() => 'JogadaPossivel($de↔$para, ${composicao.length} casas)';
+}
+
 
 /// O tabuleiro do Pomar: um match-3 com peças especiais.
 ///
@@ -382,6 +413,52 @@ class Pomar {
     if (!saoVizinhas(a, b)) return false;
     if (colheitaDoSol(a, b) != null) return true;
     return trocaCrua(a, b).grupos().isNotEmpty;
+  }
+
+
+  /// Todas as trocas que formam alguma coisa.
+  ///
+  /// É o `haJogada` a dizer *quais* em vez de *se há*. Percorre só vizinhas
+  /// à direita e para baixo — a troca A-B é a mesma que B-A, e contar as
+  /// duas dava a mesma jogada duas vezes na lista.
+  List<JogadaPossivel> jogadasPossiveis() {
+    final achadas = <JogadaPossivel>[];
+    for (var l = 0; l < linhas; l++) {
+      for (var c = 0; c < colunas; c++) {
+        final i = indice(l, c);
+        if (c + 1 < colunas) _juntar(achadas, i, indice(l, c + 1));
+        if (l + 1 < linhas) _juntar(achadas, i, indice(l + 1, c));
+      }
+    }
+    return achadas;
+  }
+
+  void _juntar(List<JogadaPossivel> lista, int a, int b) {
+    final doSol = colheitaDoSol(a, b);
+    final casas = doSol ?? trocaCrua(a, b).grupos();
+    if (casas.isEmpty) return;
+    lista.add(JogadaPossivel(de: a, para: b, composicao: casas));
+  }
+
+  /// A jogada que a criança menos mexeu — a que a Sorte deve mostrar.
+  ///
+  /// Entre duas igualmente intocadas fica a maior: se ela não viu nenhuma
+  /// das duas, mostrar-lhe a que colhe mais peças é a que mais a aproxima
+  /// de fechar o nível.
+  JogadaPossivel? jogadaPorTocar(Rastreio rastreio) => rastreio.menosTocado(
+    jogadasPossiveis(),
+    (j) => j.envolvidas,
+    desempate: (j) => j.tamanho,
+  );
+
+  /// Põe uma peça especial numa casa. É o que a Sorte faz quando as jogadas
+  /// já são poucas de mais para se ensinar seja o que for.
+  Pomar comEspecialEm(int casa, Especial tipo) {
+    final peca = casas[casa];
+    if (peca == null) return this;
+    final novas = List<Peca?>.from(casas);
+    novas[casa] = peca.comEspecial(tipo);
+    return comCasas(novas);
   }
 
   /// Há alguma troca que forme alguma coisa?

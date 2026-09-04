@@ -81,6 +81,8 @@ void main() {
         recuperadas: 50,
         diasSeguidos: 365,
         diasAEstudarPrimeiro: 60,
+        especiaisNoPomar: 40,
+        sopasPerfeitas: 9,
         degraus: {for (final j in Jogo.values) j: nivelMaximo},
       );
       expect(conquistasDe(tudo), hasLength(Conquista.values.length));
@@ -201,6 +203,20 @@ void main() {
       expect(st.ganhou(Conquista.sopa10), isTrue);
       expect(st.ganhou(Conquista.pomar10), isFalse,
           reason: 'a Sopa deu medalha ao Pomar');
+    });
+
+    test('as medalhas que só se vêem de dentro de um jogo', () {
+      // Não são degraus da escadaria: acontecem a meio de um nível, e por
+      // isso foi preciso o jogo avisar. Ficaram de fora quando as medalhas
+      // nasceram, e entram agora que a Sorte instrumentou os dois jogos.
+      final (st, _) = comRelogio();
+      expect(st.ganhou(Conquista.primeiraEspecial), isFalse);
+      st.registarPecaEspecial();
+      expect(st.ganhou(Conquista.primeiraEspecial), isTrue);
+
+      expect(st.ganhou(Conquista.sopaSemFalhar), isFalse);
+      st.registarSopaPerfeita();
+      expect(st.ganhou(Conquista.sopaSemFalhar), isTrue);
     });
 
     test('acertar o que se tinha errado conta', () {
