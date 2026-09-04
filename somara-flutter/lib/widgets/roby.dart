@@ -26,6 +26,11 @@ enum RobyPose {
   curioso('roby-curioso', 'Curioso'),
   graduate('roby-graduate', 'Formado'),
 
+  /// O Roby com a medalha. Só a faixa das conquistas o usa, e por isso não
+  /// está à venda: é a moldura do prémio, não o prémio.
+  conquista('roby-conquista', 'Com a medalha'),
+  primeiro('roby-primeiro', 'Em primeiro lugar'),
+
   // ---- caras, à venda ----
   pensativo('roby-pensativo', 'Pensativo'),
   surpreso('roby-surpreso', 'Surpreso'),

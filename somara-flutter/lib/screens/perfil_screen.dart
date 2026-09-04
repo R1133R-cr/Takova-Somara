@@ -5,6 +5,8 @@ import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
 import '../models/carteira.dart';
+import '../models/conquista.dart';
+import 'conquistas_screen.dart';
 import 'conta_screen.dart';
 import 'loja_screen.dart';
 
@@ -75,6 +77,8 @@ class PerfilScreen extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 18),
+        _cartaoDasMedalhas(context, st),
+        const SizedBox(height: 12),
         _cartaoDaLoja(context, st),
         const SizedBox(height: 28),
 
@@ -256,6 +260,53 @@ class PerfilScreen extends StatelessWidget {
               child: const Text('Guardar', style: TextStyle(color: S.chart)),
             ),
         ],
+      ),
+    );
+  }
+
+  /// Quantas medalhas já são dela, e a porta da parede.
+  Widget _cartaoDasMedalhas(BuildContext context, AppState st) {
+    final quantas = st.conquistas.length;
+    return GestureDetector(
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute<void>(builder: (_) => const ConquistasScreen()),
+      ),
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(16, 14, 14, 14),
+        decoration: BoxDecoration(
+          color: S.surface,
+          border: Border.all(color: S.line, width: 2),
+          borderRadius: BorderRadius.circular(S.rLg),
+        ),
+        child: Row(
+          children: [
+            const Icon(Icons.military_tech_rounded, color: S.gold, size: 26),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Medalhas',
+                    style: TextStyle(
+                      fontSize: 16.5,
+                      fontWeight: FontWeight.w700,
+                      color: S.tx,
+                    ),
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    quantas == 1
+                        ? '1 ganha'
+                        : '$quantas ganhas de ${Conquista.values.length}',
+                    style: const TextStyle(color: S.txSoft, fontSize: 13.5),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded, color: S.txMut, size: 24),
+          ],
+        ),
       ),
     );
   }

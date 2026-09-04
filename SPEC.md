@@ -100,6 +100,9 @@ inventar novas — é o que dá variedade sem trabalho infinito.
 
 ## 2. Conquistas
 
+> **Feito na 0.28.0.** 36 medalhas: 10 de escola, 4 de consistência e 24
+> dos jogos. O que se decidiu ao escrever está no fim da secção.
+
 **[decidido] Três famílias**, e a de «descoberta» fica de fora:
 
 | família | exemplos |
@@ -149,6 +152,38 @@ falta. É o mesmo sítio onde a colecção do Roby vai viver (§6).
 2. Fusão na nuvem: um telemóvel com A e B, outro com B e C → ficam A, B e C.
 3. Golden da faixa.
 4. Emulador: terminar um nível sem erro, ver a faixa entrar e sair sem tocar.
+
+### O que se decidiu ao escrever
+
+- **Três das nove ideias do quadro ficaram de fora**, e é a limitação a
+  registar: «primeira peça especial no Pomar», «Sopa sem uma letra errada» e
+  «Crossmath difícil à primeira» precisam de contadores que os jogos ainda
+  não guardam. As restantes seis famílias de condição saem de dados que já
+  existiam. Entram quando o §4 (a Sorte) instrumentar os jogos — é o mesmo
+  rastreio.
+- **Em vez do golden, a faixa é varrida nos três tamanhos com o título mais
+  comprido que existe.** Um golden fixa píxeis e parte-se a cada afinação de
+  cor; o que aqui interessa é que o texto de «Uma disciplina do princípio ao
+  fim» não saia do ecrã de 320. Há também um teste que prova a promessa do
+  §2 — que um toque atrás da faixa continua a chegar ao botão que lá está.
+- **Ao arrancar, avaliam-se as condições sem mostrar nada.** Quem já tinha
+  meia classe feita quando esta versão chegou recebe as medalhas e os
+  cristais que merecia, mas não leva com vinte faixas seguidas na cara.
+- **A primeira unidade paga por dois caminhos**, e são dois de propósito: o
+  marco do §6 paga a unidade *sem erros*, a medalha paga a *primeira*
+  unidade. Uma primeira unidade perfeita vale 2 CC, no momento em que a
+  criança mais precisa de sentir que aquilo dá alguma coisa.
+- **Vinte e três das trinta e seis não pagam nada.** Uma medalha que paga
+  sempre deixa de ser medalha e passa a salário.
+- **A pista fica à vista mesmo depois de ganha.** Antes diz o que falta
+  fazer; depois explica o que se fez.
+- **Som novo, sintetizado** (`tools/sons.py`, `conquista()`). Distingue-se do
+  som de nível pela forma e não pelo volume — sobe duas vezes e assenta num
+  acorde maior. É a mesma criança na mesma sala, e uma fanfarra que
+  sobressalte não festeja nada.
+- **A faixa vive no `builder` do `MaterialApp`**, por cima do Navigator.
+  Metida dentro de um ecrã não apareceria nas lições nem nos joguinhos, que
+  é justamente onde as conquistas se ganham.
 
 ---
 

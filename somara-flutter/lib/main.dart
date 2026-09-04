@@ -7,6 +7,7 @@ import 'services/sons.dart';
 import 'state/app_state.dart';
 import 'theme.dart';
 import 'widgets/carregando.dart';
+import 'widgets/faixa_conquista.dart';
 import 'screens/welcome_screen.dart';
 
 void main() async {
@@ -41,6 +42,10 @@ class SomaraApp extends StatelessWidget {
         title: 'Somara',
         debugShowCheckedModeBanner: false,
         theme: somaraTheme(),
+        // A faixa das conquistas vive AQUI, por cima do Navigator, e não
+        // dentro de um ecrã: metida num ecrã não aparecia nas lições nem nos
+        // joguinhos, que é justamente onde as conquistas se ganham.
+        builder: (_, filho) => FaixaDeConquistas(child: filho!),
         home: const _Arranque(),
       ),
     );

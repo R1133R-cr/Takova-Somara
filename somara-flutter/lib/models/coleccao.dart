@@ -110,6 +110,8 @@ const posesDeFabrica = {
   RobyPose.confiante,
   RobyPose.curioso,
   RobyPose.graduate,
+  RobyPose.conquista,
+  RobyPose.primeiro,
 };
 
 /// As restantes — as que a loja vende.

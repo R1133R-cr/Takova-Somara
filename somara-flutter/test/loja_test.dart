@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:somara/models/carteira.dart';
 import 'package:somara/models/coleccao.dart';
+import 'package:somara/models/conquista.dart';
 import 'package:somara/models/content.dart';
 import 'package:somara/screens/loja_screen.dart';
 import 'package:somara/state/app_state.dart';
@@ -225,14 +226,28 @@ void main() {
       expect(st.carteira.gc, 15 + 11);
     });
 
-    test('uma unidade inteira sem erros vale um cristal', () {
+    test('só a unidade SEM erros paga o marco de cristal', () {
+      // As conquistas (§2) também pagam, e por isso este teste isola o
+      // marco: a primeira unidade com um erro paga a medalha de "uma
+      // unidade inteira" e mais nada; é a segunda, essa sem erro nenhum,
+      // que traz o cristal do marco.
       final (st, _) = comRelogio();
-      final indices = daUnidade(st, 0);
-      expect(indices, isNotEmpty);
-      for (final i in indices) {
+      final u0 = daUnidade(st, 0);
+      expect(u0, isNotEmpty);
+      for (final i in u0) {
+        st.concluirNivel(i, i == u0.first ? 4 : 5, 5);
+      }
+      expect(st.carteira.cc, Conquista.primeiraUnidade.cristais,
+          reason: 'o marco pagou uma unidade com um erro');
+
+      for (final i in daUnidade(st, 1)) {
         st.concluirNivel(i, 5, 5);
       }
-      expect(st.carteira.cc, Carteira.cristalPorUnidadePerfeita);
+      expect(
+        st.carteira.cc,
+        Conquista.primeiraUnidade.cristais +
+            Carteira.cristalPorUnidadePerfeita,
+      );
     });
 
     test('a mesma unidade não paga duas vezes', () {
@@ -250,14 +265,15 @@ void main() {
       expect(st.carteira.cc, antes);
     });
 
-    test('uma unidade com um erro não paga cristal', () {
+    test('o ouro entra sempre, mesmo com erros', () {
       final (st, _) = comRelogio();
       final indices = daUnidade(st, 0);
       for (final i in indices) {
         st.concluirNivel(i, i == indices.first ? 4 : 5, 5);
       }
-      expect(st.carteira.cc, 0);
-      expect(st.carteira.gc, greaterThan(0), reason: 'o ouro entra na mesma');
+      expect(st.carteira.gc, greaterThan(0));
+      expect(st.carteira.gc, indices.length * 15 - (15 - 13),
+          reason: 'o nível com um erro em cinco rende 13 e não 15');
     });
 
     test('sete dias seguidos de estudo valem um cristal', () {

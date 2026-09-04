@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/bolsa_de_tempo.dart';
 import '../models/carteira.dart';
 import '../models/coleccao.dart';
+import '../models/conquista.dart';
 import '../models/content.dart';
 import '../models/escadaria.dart';
 import '../models/sequencia.dart';
@@ -58,6 +59,7 @@ class AppState extends ChangeNotifier {
     final novo = math.min(nivelDe(jogo) + 1, nivelMaximo);
     if (novo != nivelDe(jogo)) {
       _niveisDosJogos[jogo] = novo;
+      _verificarConquistas();
       notifyListeners();
       _gravar();
     }
@@ -134,6 +136,9 @@ class AppState extends ChangeNotifier {
 
   /// Um jogo abriu: o relógio arranca.
   void entrarNoJogo() {
+    // Se este for o primeiro acto do dia, a corrente do "primeiro a escola"
+    // parte-se aqui — e é por isso que se regista o jogo e não só o estudo.
+    _registarActo(estudo: false);
     _bolsa = bolsa;
     _aJogar = true;
     _correDesde = relogio();
@@ -241,6 +246,141 @@ class AppState extends ChangeNotifier {
     _gravar();
   }
 
+  /* ---------------- Conquistas ----------------
+     Medalhas por marcos. Ver [Conquista]; a faixa que as mostra é o
+     `widgets/faixa_conquista.dart`. */
+
+  final Set<Conquista> _conquistas = {};
+
+  /// As que ainda não foram mostradas à criança. Uma fila e não uma só: um
+  /// nível pode fechar a unidade, a disciplina e a classe ao mesmo tempo.
+  final List<Conquista> _porMostrar = [];
+
+  Set<Conquista> get conquistas => Set.unmodifiable(_conquistas);
+  bool ganhou(Conquista c) => _conquistas.contains(c);
+
+  Conquista? get proximaConquista =>
+      _porMostrar.isEmpty ? null : _porMostrar.first;
+
+  /// Tira a primeira da fila. Chamado pela faixa quando começa a mostrá-la.
+  Conquista? tirarConquista() =>
+      _porMostrar.isEmpty ? null : _porMostrar.removeAt(0);
+
+  /// Só para os testes: põe uma medalha na fila sem a ganhar.
+  ///
+  /// Serve para pôr a faixa a mostrar a de título mais comprido em todos os
+  /// tamanhos de ecrã. Sem isto, só se conseguia ver a faixa das medalhas
+  /// fáceis — e é justamente a comprida que transborda.
+  @visibleForTesting
+  void encomendarFaixa(Conquista c) {
+    _porMostrar.add(c);
+    notifyListeners();
+  }
+
+  /// Perguntas que estavam nos Guardados e passaram a certas.
+  int _recuperadas = 0;
+
+  /* ---- Estudar antes de jogar ----
+     Guarda-se o primeiro acto de cada dia, e não a ordem toda: o que
+     interessa é se a criança abriu a escola antes da sala de jogos, e o
+     terceiro ou quarto acto do dia já não diz nada sobre isso. */
+
+  /// O dia a que o registo abaixo pertence.
+  String? _diaDoActo;
+
+  /// Dias a fio em que o primeiro acto foi estudar.
+  int _diasAEstudarPrimeiro = 0;
+
+  /// O último dia contado, para saber se a corrente se partiu.
+  String? _ultimoDiaAEstudarPrimeiro;
+
+  void _registarActo({required bool estudo}) {
+    final hoje = _hoje;
+    if (_diaDoActo == hoje) return; // já se sabe como o dia começou
+    _diaDoActo = hoje;
+
+    if (!estudo) {
+      // Jogou primeiro: a corrente parte-se hoje.
+      _diasAEstudarPrimeiro = 0;
+      _ultimoDiaAEstudarPrimeiro = null;
+      return;
+    }
+
+    final ontem = Sequencia.iso(relogio().subtract(const Duration(days: 1)));
+    _diasAEstudarPrimeiro =
+        _ultimoDiaAEstudarPrimeiro == ontem ? _diasAEstudarPrimeiro + 1 : 1;
+    _ultimoDiaAEstudarPrimeiro = hoje;
+  }
+
+  /// Os números de que as condições precisam.
+  RetratoDoAluno get retrato {
+    var unidades = 0, disciplinas = 0, classes = 0;
+    final feitasPorClasse = <String, int>{};
+    final cursosPorClasse = <String, int>{};
+
+    for (final c in conteudo.cursos) {
+      cursosPorClasse[c.classe] = (cursosPorClasse[c.classe] ?? 0) + 1;
+      var todasAsUnidades = c.units.isNotEmpty;
+      for (final u in c.units) {
+        final feita = u.niveis.isNotEmpty &&
+            u.niveis.every((n) => progresso.containsKey('${c.id}:${u.id}:${n.id}'));
+        if (feita) {
+          unidades++;
+        } else {
+          todasAsUnidades = false;
+        }
+      }
+      if (todasAsUnidades) {
+        disciplinas++;
+        feitasPorClasse[c.classe] = (feitasPorClasse[c.classe] ?? 0) + 1;
+      }
+    }
+    for (final entrada in cursosPorClasse.entries) {
+      if (feitasPorClasse[entrada.key] == entrada.value) classes++;
+    }
+
+    return RetratoDoAluno(
+      niveis: progresso.length,
+      unidades: unidades,
+      disciplinas: disciplinas,
+      classes: classes,
+      perfeitos: progresso.values.where((v) => v == 100).length,
+      recuperadas: _recuperadas,
+      diasSeguidos: streak,
+      diasAEstudarPrimeiro: _diasAEstudarPrimeiro,
+      degraus: {for (final j in Jogo.values) j: nivelDe(j)},
+    );
+  }
+
+  /// Lê medalhas de uma lista de nomes, ignorando as que já não existem.
+  ///
+  /// Uma conquista apagada numa versão futura não pode rebentar o arranque
+  /// de quem a tinha ganho.
+  void _lerConquistas(List? nomes) {
+    for (final n in (nomes ?? const []).cast<String>()) {
+      for (final c in Conquista.values) {
+        if (c.name == n) _conquistas.add(c);
+      }
+    }
+  }
+
+  /// Vê o que se ganhou de novo, paga os cristais e põe na fila da faixa.
+  ///
+  /// Com [mostrar] falso não entra nada na fila. É assim que se chama uma
+  /// vez ao arrancar: quem já tinha meia classe feita quando esta versão
+  /// chegou recebe as medalhas e os cristais que merecia, mas não leva com
+  /// vinte faixas seguidas na cara.
+  void _verificarConquistas({bool mostrar = true}) {
+    final ganhas = conquistasDe(retrato);
+    for (final c in Conquista.values) {
+      if (!ganhas.contains(c) || !_conquistas.add(c)) continue;
+      if (c.cristais > 0) {
+        _pagarMarco('conquista:${c.name}', Moeda.cc, c.cristais);
+      }
+      if (mostrar) _porMostrar.add(c);
+    }
+  }
+
   /// Perguntas que a criança errou, guardadas para rever.
   ///
   /// É o conjunto de treino com mais valor que existe: exercitar o que já se
@@ -258,6 +398,8 @@ class AppState extends ChangeNotifier {
   /// Chamado quando a criança acerta a pergunta numa revisão: sai da lista.
   void marcarAprendida(String enunciado) {
     if (erradas.remove(enunciado)) {
+      _recuperadas++;
+      _verificarConquistas();
       notifyListeners();
       _gravar();
     }
@@ -410,6 +552,10 @@ class AppState extends ChangeNotifier {
         _carteira = Carteira.deJson(j['carteira'] as Map<String, dynamic>?);
         _coleccao = Coleccao.deJson(j['coleccao'] as Map<String, dynamic>?);
         _marcosPagos.addAll(((j['marcos'] as List?) ?? []).cast<String>());
+        _lerConquistas(j['conquistas'] as List?);
+        _recuperadas = (j['recuperadas'] ?? 0) as int;
+        _diasAEstudarPrimeiro = (j['estudouPrimeiro'] ?? 0) as int;
+        _ultimoDiaAEstudarPrimeiro = j['diaEstudouPrimeiro'] as String?;
         erradas.addAll(((j['erradas'] as List?) ?? []).cast<String>());
         _diaDasVidas = j['diaDasVidas'] as String?;
         _vezesSemVidas = (j['vezesSemVidas'] ?? 0) as int;
@@ -420,6 +566,10 @@ class AppState extends ChangeNotifier {
       }
     }
     _reporVidasSeMudouODia();
+    // Sem mostrar: quem já tinha meia classe feita quando esta versão
+    // chegou recebe as medalhas e os cristais que merecia, mas não leva com
+    // vinte faixas seguidas na cara ao abrir a app.
+    _verificarConquistas(mostrar: false);
     verificarFimDoBloqueio();
     pronto = true;
     notifyListeners();
@@ -481,6 +631,10 @@ class AppState extends ChangeNotifier {
         'carteira': _carteira.paraJson(),
         'coleccao': _coleccao.paraJson(),
         'marcos': _marcosPagos.toList()..sort(),
+        'conquistas': _conquistas.map((c) => c.name).toList()..sort(),
+        'recuperadas': _recuperadas,
+        'estudouPrimeiro': _diasAEstudarPrimeiro,
+        'diaEstudouPrimeiro': _ultimoDiaAEstudarPrimeiro,
         'erradas': erradas.toList(),
         'diaDasVidas': _diaDasVidas,
         'vezesSemVidas': _vezesSemVidas,
@@ -521,6 +675,8 @@ class AppState extends ChangeNotifier {
     'carteira': _carteira.paraJson(),
     'coleccao': _coleccao.paraJson(),
     'marcos': _marcosPagos.toList()..sort(),
+    'conquistas': _conquistas.map((c) => c.name).toList()..sort(),
+    'recuperadas': _recuperadas,
     'erradas': erradas.toList(),
   };
 
@@ -586,6 +742,13 @@ class AppState extends ChangeNotifier {
       Coleccao.deJson(n['coleccao'] as Map<String, dynamic>?),
     );
     _marcosPagos.addAll(((n['marcos'] as List?) ?? []).cast<String>());
+
+    // As medalhas juntam-se e NUNCA desaparecem: um telemóvel com A e B e
+    // outro com B e C ficam os dois com A, B e C. Uma medalha que some numa
+    // sincronização é a coisa que faz uma criança deixar de acreditar no
+    // ecrã. O mesmo vale para o que já se recuperou dos Guardados.
+    _lerConquistas(n['conquistas'] as List?);
+    _recuperadas = math.max(_recuperadas, (n['recuperadas'] ?? 0) as int);
 
     // As erradas juntam-se as duas: uma pergunta falhada noutro telemóvel
     // continua por rever neste. Sai da lista quando for acertada.
@@ -720,6 +883,7 @@ class AppState extends ChangeNotifier {
   void concluirTreino(int acertos) {
     xp += acertos * xpPorAcerto;
     _sequencia = _sequencia.comActividadeEm(relogio());
+    _verificarConquistas();
     notifyListeners();
     _gravar();
   }
@@ -771,7 +935,9 @@ class AppState extends ChangeNotifier {
     // castigo de o ter tropeçado.
     _carteira = _carteira.comGanho(Moeda.gc, Carteira.ouroPorNivel(pct));
     _sequencia = _sequencia.comActividadeEm(relogio());
+    _registarActo(estudo: true);
     _pagarMarcosDeCristal(lv.unit);
+    _verificarConquistas();
     unawaited(Nuvem.i.contarLicao());
     notifyListeners();
     _gravar();

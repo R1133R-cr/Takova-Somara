@@ -209,5 +209,10 @@ class Sons {
   Future<void> certo() => _tocar('certo.wav');
   Future<void> errado() => _tocar('errado.wav');
   Future<void> nivel() => _tocar('nivel.wav');
+
+  /// Uma medalha ganha. Distingue-se do [nivel] pela forma e não pelo
+  /// volume: é a mesma criança na mesma sala, e uma fanfarra que
+  /// sobressalte não festeja nada.
+  Future<void> conquista() => _tocar('conquista.wav');
   Future<void> salto() => _tocar('salto.wav');
 }
