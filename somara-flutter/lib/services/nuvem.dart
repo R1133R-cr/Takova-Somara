@@ -40,8 +40,18 @@ class Nuvem {
   /// O último conteúdo que subiu, para não voltar a subir igual.
   String? _ultimoEnviado;
 
+  /// Faz de conta que o Firebase arrancou.
+  ///
+  /// Existe por um motivo concreto: o cartão da conta, no perfil, só se
+  /// monta quando [disponivel] é verdadeiro, e num teste nunca era — o
+  /// [arrancar] só é chamado do `main.dart`. Resultado: o cartão que abre
+  /// toda a parte da nuvem nunca tinha sido desenhado por ninguém antes de
+  /// aparecer no telemóvel de alguém.
+  @visibleForTesting
+  bool fingirDisponivel = false;
+
   /// Verdadeiro quando o Firebase arrancou e há com quem falar.
-  bool get disponivel => _auth != null;
+  bool get disponivel => fingirDisponivel || _auth != null;
 
   User? get utilizador => _auth?.currentUser;
   bool get temSessao => utilizador != null;
