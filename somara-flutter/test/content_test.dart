@@ -84,12 +84,13 @@ void main() {
     //   992  com a Educação Visual da 6ª classe (34 perguntas)
     //  1027  com a Educação Visual da 5ª classe (35 perguntas)
     //  1060  com a Educação Visual da 4ª classe (33 perguntas)
+    //  1076  com os exercícios interactivos de Ciências (16)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 1060);
+    expect(total, 1076);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {
@@ -210,6 +211,33 @@ void main() {
                 expect(q.a, inInclusiveRange(0, q.zones.length - 1), reason: onde);
               case QMatch():
                 expect(q.pairs.length, greaterThanOrEqualTo(2), reason: onde);
+              case QSequencia():
+                expect(q.passos.length, greaterThanOrEqualTo(2), reason: onde);
+                // A ordem baralhada tem de mostrar mesmo tudo, e nunca a
+                // ordem já feita — senão aparece resolvida.
+                final baralho = q.baralhados();
+                expect(baralho.toSet(), hasLength(q.passos.length),
+                    reason: onde);
+                expect(q.certa(baralho), isFalse, reason: '$onde já vem feita');
+              case QGrupos():
+                expect(q.grupos.length, greaterThanOrEqualTo(2), reason: onde);
+                for (final i in q.itens) {
+                  expect(i.grupo, inInclusiveRange(0, q.grupos.length - 1),
+                      reason: onde);
+                }
+                // Um grupo vazio é uma caixa que nunca recebe nada.
+                for (var g = 0; g < q.grupos.length; g++) {
+                  expect(q.itens.any((i) => i.grupo == g), isTrue,
+                      reason: '$onde: grupo "${q.grupos[g]}" fica vazio');
+                }
+              case QCenario():
+                expect(q.alvos, isNotEmpty, reason: onde);
+                expect(q.pecas.toSet(), hasLength(q.pecas.length),
+                    reason: onde);
+                for (final a in q.alvos) {
+                  expect(a.x, inInclusiveRange(0.0, 1.0), reason: onde);
+                  expect(a.y, inInclusiveRange(0.0, 1.0), reason: onde);
+                }
               case QGrelha():
                 // Uma conta que não se arma rebentaria dentro da lição, com
                 // a criança lá.

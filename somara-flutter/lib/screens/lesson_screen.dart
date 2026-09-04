@@ -11,6 +11,7 @@ import '../widgets/desenho_geometrico.dart';
 import '../widgets/mostra_cores.dart';
 import '../widgets/roby.dart';
 import '../widgets/grelha_operacao.dart';
+import '../widgets/interactivos.dart';
 import '../widgets/teclado_numerico.dart';
 import 'complete_screen.dart';
 
@@ -142,9 +143,19 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     matchSelEsq = null;
     _input.clear();
     _casinhas = const [];
+    _ordem = const [];
+    _porGrupo = const [];
+    _noCenario = const [];
     final cur = q;
     if (cur is QMatch) {
       ordemDireita = List.generate(cur.pairs.length, (i) => i)..shuffle(_rnd);
+    }
+    if (cur is QSequencia) _ordem = cur.baralhados();
+    if (cur is QGrupos) {
+      _porGrupo = List<int?>.filled(cur.itens.length, null);
+    }
+    if (cur is QCenario) {
+      _noCenario = List<String?>.filled(cur.alvos.length, null);
     }
   }
 
@@ -154,12 +165,27 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
   /// O que a criança escreveu nas casinhas da conta armada.
   List<String> _casinhas = const [];
 
+  /// A ordem em que os passos estão, numa pergunta de sequência.
+  List<int> _ordem = const [];
+
+  /// Em que grupo está cada coisa, numa de classificar.
+  List<int?> _porGrupo = const [];
+
+  /// A peça largada em cada sítio do cenário.
+  List<String?> _noCenario = const [];
+
   bool get _podeVerificar {
     final cur = q;
     if (cur is QChoice || cur is QCount) return escolha != null;
     if (cur is QInput) return _input.text.trim().isNotEmpty;
     if (cur is QDrag) return zonaLargada != null;
     if (cur is QMatch) return ligacoes.length == cur.pairs.length;
+    // A sequência está sempre respondida: os passos já estão numa ordem,
+    // mesmo antes de ela mexer em algum. Obrigá-la a mexer para poder
+    // verificar era inventar uma regra que ninguém lhe explicou.
+    if (cur is QSequencia) return _ordem.length == cur.passos.length;
+    if (cur is QGrupos) return !_porGrupo.contains(null);
+    if (cur is QCenario) return !_noCenario.contains(null);
     if (cur is QGrelha) {
       // Só se verifica com tudo o que conta preenchido. Os transportes
       // podem ficar em branco: quem soma o "vai um" de cabeça não está a
@@ -201,6 +227,9 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       }
       return true;
     }
+    if (cur is QSequencia) return cur.certa(_ordem);
+    if (cur is QGrupos) return cur.certa(_porGrupo);
+    if (cur is QCenario) return cur.certa(_noCenario);
     if (cur is QGrelha) return cur.conta.certa(_casinhas);
     return false;
   }
@@ -458,6 +487,33 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       QMatch() => _vistaMatch(cur),
       QDrag() => _vistaDrag(cur),
       QGrelha() => _vistaGrelha(cur),
+      QSequencia() => Padding(
+        padding: const EdgeInsets.only(top: 4),
+        child: OrdenarPassos(
+          questao: cur,
+          ordem: _ordem,
+          corrigida: fase == Fase.responder ? null : fase == Fase.certo,
+          aoMudar: (o) => setState(() => _ordem = o),
+        ),
+      ),
+      QGrupos() => Padding(
+        padding: const EdgeInsets.only(top: 4),
+        child: ClassificarGrupos(
+          questao: cur,
+          posto: _porGrupo,
+          corrigida: fase == Fase.responder ? null : fase == Fase.certo,
+          aoMudar: (p) => setState(() => _porGrupo = p),
+        ),
+      ),
+      QCenario() => Padding(
+        padding: const EdgeInsets.only(top: 4),
+        child: CenarioInteractivo(
+          questao: cur,
+          posto: _noCenario,
+          corrigida: fase == Fase.responder ? null : fase == Fase.certo,
+          aoMudar: (p) => setState(() => _noCenario = p),
+        ),
+      ),
     };
 
     final fig = cur.figura;
@@ -951,6 +1007,9 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       QDrag() => cur.zones[cur.a],
       QMatch() => '',
       QGrelha() => '${cur.conta.resultado}',
+      QSequencia() => cur.passos.first,
+      QGrupos() => '',
+      QCenario() => '',
     };
     return r.isEmpty ? 'Vê as ligações certas.' : 'Resposta certa: $r';
   }

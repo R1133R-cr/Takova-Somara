@@ -6906,6 +6906,45 @@
          ],
          "a": 0,
          "audio": "ac11aa45b9a1.mp3"
+        },
+        {
+         "t": "cenario",
+         "q": "Arrasta cada nome para a parte certa da planta.",
+         "cena": "planta",
+         "alvos": [
+          {
+           "x": 0.26,
+           "y": 0.9,
+           "peca": "raiz"
+          },
+          {
+           "x": 0.74,
+           "y": 0.72,
+           "peca": "caule"
+          },
+          {
+           "x": 0.22,
+           "y": 0.5,
+           "peca": "folha"
+          },
+          {
+           "x": 0.56,
+           "y": 0.14,
+           "peca": "flor"
+          }
+         ],
+         "audio": "165d51c230a1.mp3"
+        },
+        {
+         "t": "sequencia",
+         "q": "Põe por ordem o que acontece da semente até a planta dar flor.",
+         "passos": [
+          "A semente é posta na terra húmida.",
+          "A semente germina e sai a raiz.",
+          "O caule sobe e abrem-se as primeiras folhas.",
+          "A planta cresce e dá flor."
+         ],
+         "audio": "7007982520ff.mp3"
         }
        ],
        "materia": {
@@ -6973,6 +7012,49 @@
          ],
          "a": 1,
          "audio": "f9a82343292a.mp3"
+        },
+        {
+         "t": "grupos",
+         "q": "Arruma cada animal no seu grupo.",
+         "grupos": [
+          "Vertebrado",
+          "Invertebrado"
+         ],
+         "itens": [
+          {
+           "nome": "cabrito",
+           "g": 0
+          },
+          {
+           "nome": "peixe",
+           "g": 0
+          },
+          {
+           "nome": "galinha",
+           "g": 0
+          },
+          {
+           "nome": "cobra",
+           "g": 0
+          },
+          {
+           "nome": "formiga",
+           "g": 1
+          },
+          {
+           "nome": "minhoca",
+           "g": 1
+          },
+          {
+           "nome": "caracol",
+           "g": 1
+          },
+          {
+           "nome": "aranha",
+           "g": 1
+          }
+         ],
+         "audio": "f09bcc106ee6.mp3"
         }
        ],
        "materia": {
@@ -7041,6 +7123,17 @@
          "q": "Como se chama a água dos rios e dos lagos? (doce ou salgada)",
          "a": "doce",
          "audio": "bb9c7ca10633.mp3"
+        },
+        {
+         "t": "sequencia",
+         "q": "Põe por ordem os passos para tornar a água boa para beber.",
+         "passos": [
+          "Tirar a água do poço ou do rio.",
+          "Deixar assentar e coar num pano limpo.",
+          "Ferver a água durante alguns minutos.",
+          "Deixar arrefecer e guardar num recipiente tapado."
+         ],
+         "audio": "a02b722dda46.mp3"
         }
        ],
        "materia": {
@@ -7526,6 +7619,49 @@
          ],
          "a": 0,
          "audio": "4833b92ae315.mp3"
+        },
+        {
+         "t": "grupos",
+         "q": "Arruma cada coisa: veio da natureza ou foi feita pelo homem?",
+         "grupos": [
+          "Natural",
+          "Feito pelo homem"
+         ],
+         "itens": [
+          {
+           "nome": "árvore",
+           "g": 0
+          },
+          {
+           "nome": "pedra",
+           "g": 0
+          },
+          {
+           "nome": "água do rio",
+           "g": 0
+          },
+          {
+           "nome": "areia",
+           "g": 0
+          },
+          {
+           "nome": "tijolo",
+           "g": 1
+          },
+          {
+           "nome": "cadeira",
+           "g": 1
+          },
+          {
+           "nome": "garrafa",
+           "g": 1
+          },
+          {
+           "nome": "capulana",
+           "g": 1
+          }
+         ],
+         "audio": "33e4ac76f5f6.mp3"
         }
        ],
        "materia": {
@@ -7932,6 +8068,49 @@
           ]
          ],
          "audio": "97dcffeb65d8.mp3"
+        },
+        {
+         "t": "grupos",
+         "q": "Arruma cada frase: é um direito teu ou um dever teu?",
+         "grupos": [
+          "Direito",
+          "Dever"
+         ],
+         "itens": [
+          {
+           "nome": "ter um nome",
+           "g": 0
+          },
+          {
+           "nome": "ter saúde",
+           "g": 0
+          },
+          {
+           "nome": "brincar",
+           "g": 0
+          },
+          {
+           "nome": "ser tratado com respeito",
+           "g": 0
+          },
+          {
+           "nome": "respeitar os mais velhos",
+           "g": 1
+          },
+          {
+           "nome": "ajudar em casa",
+           "g": 1
+          },
+          {
+           "nome": "cuidar da escola",
+           "g": 1
+          },
+          {
+           "nome": "dizer a verdade",
+           "g": 1
+          }
+         ],
+         "audio": "6f269954f3ea.mp3"
         }
        ],
        "materia": {
@@ -8245,6 +8424,18 @@
          ],
          "a": 0,
          "audio": "d812fed1d630.mp3"
+        },
+        {
+         "t": "sequencia",
+         "q": "Põe por ordem, do mais pequeno ao maior.",
+         "passos": [
+          "Povoação",
+          "Localidade",
+          "Posto administrativo",
+          "Distrito",
+          "Província"
+         ],
+         "audio": "c53a2d9176cd.mp3"
         }
        ],
        "materia": {
@@ -8451,6 +8642,49 @@
           ]
          ],
          "audio": "4ab6276400f0.mp3"
+        },
+        {
+         "t": "grupos",
+         "q": "Arruma cada coisa: precisas mesmo dela ou só gostavas de a ter?",
+         "grupos": [
+          "Necessidade",
+          "Desejo"
+         ],
+         "itens": [
+          {
+           "nome": "comida",
+           "g": 0
+          },
+          {
+           "nome": "água limpa",
+           "g": 0
+          },
+          {
+           "nome": "casa",
+           "g": 0
+          },
+          {
+           "nome": "roupa",
+           "g": 0
+          },
+          {
+           "nome": "telemóvel",
+           "g": 1
+          },
+          {
+           "nome": "doces",
+           "g": 1
+          },
+          {
+           "nome": "brinquedo novo",
+           "g": 1
+          },
+          {
+           "nome": "bicicleta",
+           "g": 1
+          }
+         ],
+         "audio": "0f72a45d3b82.mp3"
         }
        ],
        "materia": {
@@ -10448,6 +10682,34 @@
          ],
          "a": 1,
          "audio": "cc97a4be7c3d.mp3"
+        },
+        {
+         "t": "cenario",
+         "q": "Monta a cadeia alimentar, de cima para baixo.",
+         "cena": "cadeia",
+         "alvos": [
+          {
+           "x": 0.5,
+           "y": 0.14,
+           "peca": "o sol"
+          },
+          {
+           "x": 0.5,
+           "y": 0.38,
+           "peca": "o capim"
+          },
+          {
+           "x": 0.5,
+           "y": 0.62,
+           "peca": "o cabrito"
+          },
+          {
+           "x": 0.5,
+           "y": 0.86,
+           "peca": "o leopardo"
+          }
+         ],
+         "audio": "64cc45ad5b2c.mp3"
         }
        ],
        "materia": {
@@ -10510,6 +10772,17 @@
          ],
          "a": 0,
          "audio": "738f4a1c5d5d.mp3"
+        },
+        {
+         "t": "sequencia",
+         "q": "Põe por ordem o que acontece no ciclo da água.",
+         "passos": [
+          "O sol aquece a água dos rios e do mar.",
+          "A água evapora e sobe em vapor.",
+          "Lá em cima o vapor arrefece e forma nuvens.",
+          "As nuvens deixam cair a chuva sobre a terra."
+         ],
+         "audio": "92aac6704c5f.mp3"
         }
        ],
        "materia": {
@@ -10628,6 +10901,54 @@
          ],
          "a": 0,
          "audio": "87677956478e.mp3"
+        },
+        {
+         "t": "grupos",
+         "q": "Arruma cada coisa pelo estado em que se encontra.",
+         "grupos": [
+          "Sólido",
+          "Líquido",
+          "Gasoso"
+         ],
+         "itens": [
+          {
+           "nome": "pedra",
+           "g": 0
+          },
+          {
+           "nome": "gelo",
+           "g": 0
+          },
+          {
+           "nome": "madeira",
+           "g": 0
+          },
+          {
+           "nome": "água",
+           "g": 1
+          },
+          {
+           "nome": "óleo",
+           "g": 1
+          },
+          {
+           "nome": "leite",
+           "g": 1
+          },
+          {
+           "nome": "ar",
+           "g": 2
+          },
+          {
+           "nome": "vapor de água",
+           "g": 2
+          },
+          {
+           "nome": "fumo",
+           "g": 2
+          }
+         ],
+         "audio": "b2aff7bbd8a3.mp3"
         }
        ],
        "materia": {
@@ -11323,6 +11644,17 @@
           ]
          ],
          "audio": "c904fd32f33f.mp3"
+        },
+        {
+         "t": "sequencia",
+         "q": "Põe estes acontecimentos por ordem, do mais antigo ao mais recente.",
+         "passos": [
+          "Fundação da FRELIMO, em 1962.",
+          "Início da luta armada, a 25 de Setembro de 1964.",
+          "Acordos de Lusaka, em Setembro de 1974.",
+          "Independência de Moçambique, a 25 de Junho de 1975."
+         ],
+         "audio": "bafeb23f7c88.mp3"
         }
        ],
        "materia": {
@@ -13344,6 +13676,17 @@
          ],
          "a": 0,
          "audio": "ed00e28c7e21.mp3"
+        },
+        {
+         "t": "sequencia",
+         "q": "Põe por ordem o que acontece desde a flor até ao fruto.",
+         "passos": [
+          "A flor abre-se e mostra as suas partes.",
+          "O pólen chega ao pistilo da flor.",
+          "As pétalas murcham e caem.",
+          "O fruto cresce com a semente lá dentro."
+         ],
+         "audio": "a44cb0cadcdd.mp3"
         }
        ],
        "materia": {
@@ -13481,6 +13824,29 @@
           ]
          ],
          "audio": "7ae1bb90b8d1.mp3"
+        },
+        {
+         "t": "cenario",
+         "q": "Põe cada órgão no seu lugar dentro do corpo.",
+         "cena": "corpo",
+         "alvos": [
+          {
+           "x": 0.3,
+           "y": 0.44,
+           "peca": "coração"
+          },
+          {
+           "x": 0.72,
+           "y": 0.4,
+           "peca": "pulmões"
+          },
+          {
+           "x": 0.44,
+           "y": 0.7,
+           "peca": "estômago"
+          }
+         ],
+         "audio": "a585ce0befb8.mp3"
         }
        ],
        "materia": {
@@ -13809,6 +14175,29 @@
          ],
          "a": 0,
          "audio": "8f273ff9d403.mp3"
+        },
+        {
+         "t": "cenario",
+         "q": "Fecha o circuito para a lâmpada acender.",
+         "cena": "circuito",
+         "alvos": [
+          {
+           "x": 0.5,
+           "y": 0.2,
+           "peca": "lâmpada"
+          },
+          {
+           "x": 0.14,
+           "y": 0.49,
+           "peca": "pilha"
+          },
+          {
+           "x": 0.86,
+           "y": 0.49,
+           "peca": "fio"
+          }
+         ],
+         "audio": "2df3478266c6.mp3"
         }
        ],
        "materia": {
@@ -14277,6 +14666,49 @@
          ],
          "a": 0,
          "audio": "615f44ab28fa.mp3"
+        },
+        {
+         "t": "grupos",
+         "q": "Arruma cada coisa no sítio onde é mais comum encontrá-la.",
+         "grupos": [
+          "No campo",
+          "Na cidade"
+         ],
+         "itens": [
+          {
+           "nome": "machamba",
+           "g": 0
+          },
+          {
+           "nome": "gado",
+           "g": 0
+          },
+          {
+           "nome": "poço",
+           "g": 0
+          },
+          {
+           "nome": "palhota",
+           "g": 0
+          },
+          {
+           "nome": "prédio",
+           "g": 1
+          },
+          {
+           "nome": "semáforo",
+           "g": 1
+          },
+          {
+           "nome": "autocarro",
+           "g": 1
+          },
+          {
+           "nome": "hospital central",
+           "g": 1
+          }
+         ],
+         "audio": "91cdda124715.mp3"
         }
        ],
        "materia": {

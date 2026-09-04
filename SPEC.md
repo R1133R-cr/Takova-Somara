@@ -828,6 +828,11 @@ perguntas de conceito («o perímetro de uma figura é:») ficam em escolha múl
 
 ## 10. Exercícios interactivos — Ciências Naturais e Sociais
 
+> **Três das quatro famílias feitas na 0.33.0**: cenário, sequência e
+> classificar, com 16 perguntas a sério e áudio. Os **jogos de palavras (c)**
+> ficam para o passo seguinte — são outra mecânica (a Sopa) com a sua própria
+> ligação. Ver o fim da secção.
+
 **[decidido] As quatro famílias entram**, por esta ordem de construção:
 
 ### a) Arrastar para um cenário
@@ -871,6 +876,47 @@ ou dever; rural ou urbano; necessidade ou desejo.
 2. `ecras_test.dart` nos três tamanhos para cada tipo.
 3. Goldens do circuito e do mapa.
 4. Emulador: montar o circuito eléctrico e ver a lâmpada acender.
+
+### O que ficou feito, e o que não
+
+**Feito:** (a) cenário, (b) sequência, (d) classificar — os três tipos, os
+widgets, o encaminhamento na lição, e **16 perguntas com áudio gravado**,
+metidas nos níveis que já existem. A amarelinha não muda de forma: o que
+muda é o que há dentro de cada casa.
+
+| tipo | quantas | onde |
+|---|---|---|
+| cenário | 4 | partes da planta, cadeia alimentar, órgãos do corpo, circuito |
+| sequência | 6 | ciclo da água, tratar a água, semente→planta, flor→fruto, divisão administrativa, cronologia 1962–1975 |
+| classificar | 6 | vertebrados, natural/artificial, estados da matéria, direito/dever, necessidade/desejo, campo/cidade |
+
+**Por fazer:** (c) os jogos de palavras. Reaproveitam a Sopa com um banco
+vindo do `content.json` — é uma ligação a um jogo que já existe, não um tipo
+de pergunta, e misturá-la aqui dava um passo com duas coisas diferentes lá
+dentro.
+
+### O que se decidiu ao escrever
+
+- **O mapa de Moçambique não entrou, e não foi por falta de tempo.**
+  Desenhar de cabeça o contorno das províncias dava um mapa **errado** do
+  país da criança, num livro de escola. Um mapa errado é pior do que nenhum:
+  entra pelos olhos e fica. Entra quando houver contornos a sério de onde os
+  tirar — e é a única coisa deste §10 que precisa de material de fora.
+- **A cadeia alimentar ficou vertical.** Em fila, como o §10 sugeria, quatro
+  caixas de 96 px não entram nos 280 de um telemóvel de 320.
+- **Os três tipos vivem num ficheiro só.** Partilham a pastilha, a caixa que
+  a recebe e o sinal de certo/errado; em três ficheiros dava três cópias do
+  mesmo chip com três feitios ligeiramente diferentes, que é como uma
+  interface deixa de se parecer consigo própria.
+- **Uma peça largada na caixa errada tira-se com um toque.** Sem isso ficava
+  lá para sempre e a única saída era errar de propósito.
+- **A sequência baralha-se pelo enunciado**, e não por sorteio: dois
+  telemóveis com a mesma pergunta mostram-na igual, e nunca sai já resolvida
+  — há um teste para cada uma das duas coisas.
+- **Em vez dos goldens do §10, a varredura dos três tamanhos** passa por
+  **todas** as perguntas interactivas do currículo, uma a uma. Um golden fixa
+  píxeis; o que aqui parte é a de nove coisas para arrumar em três caixas
+  num ecrã de 320, e essa a varredura apanha.
 
 ---
 

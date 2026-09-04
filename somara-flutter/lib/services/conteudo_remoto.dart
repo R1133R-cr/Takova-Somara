@@ -163,6 +163,23 @@ class ConteudoRemoto {
         if (q.a < 0 || q.a >= q.options.length) return 'resposta fora das opções';
       case QInput():
         if (q.a.trim().isEmpty) return 'pergunta escrita sem resposta';
+      case QSequencia():
+        // Menos de dois passos não é uma sequência, e uma sequência sem
+        // baralhação aparece resolvida.
+        if (q.passos.length < 2) return 'sequência com menos de dois passos';
+      case QGrupos():
+        if (q.grupos.length < 2) return 'classificação com menos de dois grupos';
+        if (q.itens.length < 2) return 'classificação sem coisas para arrumar';
+        for (final i in q.itens) {
+          if (i.grupo < 0 || i.grupo >= q.grupos.length) {
+            return 'a coisa "${i.nome}" aponta para um grupo que não existe';
+          }
+        }
+      case QCenario():
+        if (q.alvos.isEmpty) return 'cenário sem sítios onde largar';
+        if (q.pecas.toSet().length != q.pecas.length) {
+          return 'cenário com a mesma peça em dois sítios';
+        }
       case QGrelha():
         // Uma conta impossível — subtracção negativa, divisão por zero —
         // rebentava ao desenhar a grelha, já com a criança dentro da lição.

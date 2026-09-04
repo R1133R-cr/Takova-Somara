@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
 import 'algoritmo_escrito.dart';
+import '../painters/cenas.dart';
 
 /// Modelos do currículo. Espelham a estrutura do content.json
 /// (gerado a partir do content.js da versão web, conteúdo extraído dos
@@ -79,6 +80,42 @@ sealed class Questao {
           x: j['x'] as int,
           y: j['y'] as int,
         );
+      case 'sequencia':
+        return QSequencia(
+          q,
+          a,
+          figura: fig,
+          cores: cor,
+          passos: (j['passos'] as List).cast<String>(),
+        );
+      case 'grupos':
+        return QGrupos(
+          q,
+          a,
+          figura: fig,
+          cores: cor,
+          grupos: (j['grupos'] as List).cast<String>(),
+          itens: [
+            for (final i in (j['itens'] as List))
+              (nome: (i as Map)['nome'] as String, grupo: i['g'] as int),
+          ],
+        );
+      case 'cenario':
+        return QCenario(
+          q,
+          a,
+          figura: fig,
+          cores: cor,
+          cena: Cena.values.byName(j['cena'] as String),
+          alvos: [
+            for (final z in (j['alvos'] as List))
+              (
+                x: ((z as Map)['x'] as num).toDouble(),
+                y: (z['y'] as num).toDouble(),
+                peca: z['peca'] as String,
+              ),
+          ],
+        );
       case 'drag':
         return QDrag(
           q,
@@ -129,6 +166,109 @@ class QDrag extends Questao {
   final List<String> zones;
   final int a;
   const QDrag(super.q, super.audio, {super.figura, super.cores, required this.chip, required this.zones, required this.a});
+}
+
+/// Pôr passos pela ordem certa.
+///
+/// Os [passos] vêm no content.json **já pela ordem certa** — é a ordem que
+/// se guarda, porque é a única que interessa saber. Quem mostra é que
+/// baralha, e baralha de maneira fixa: dois telemóveis com a mesma pergunta
+/// têm de a mostrar igual.
+class QSequencia extends Questao {
+  final List<String> passos;
+
+  const QSequencia(
+    super.q,
+    super.audio, {
+    super.figura,
+    super.cores,
+    required this.passos,
+  });
+
+  /// A ordem baralhada em que se mostram, pelos índices da ordem certa.
+  ///
+  /// Nunca devolve a ordem já feita: uma sequência que aparece resolvida não
+  /// é um exercício, é um texto.
+  List<int> baralhados() {
+    final n = passos.length;
+    if (n < 2) return [0];
+    // Um deslocamento fixo, dependente do enunciado: sempre o mesmo, nunca
+    // a identidade, e sem precisar de guardar mais nada no ficheiro.
+    var salto = 0;
+    for (final u in q.codeUnits) {
+      salto = (salto + u) % n;
+    }
+    if (salto == 0) salto = 1;
+    final ordem = [for (var i = 0; i < n; i++) (i * salto + salto) % n];
+    return ordem.toSet().length == n
+        ? ordem
+        : [for (var i = 0; i < n; i++) (i + 1) % n];
+  }
+
+  bool certa(List<int> ordemDada) {
+    if (ordemDada.length != passos.length) return false;
+    for (var i = 0; i < passos.length; i++) {
+      if (ordemDada[i] != i) return false;
+    }
+    return true;
+  }
+}
+
+/// Arrastar cada coisa para o grupo a que pertence.
+class QGrupos extends Questao {
+  final List<String> grupos;
+  final List<({String nome, int grupo})> itens;
+
+  const QGrupos(
+    super.q,
+    super.audio, {
+    super.figura,
+    super.cores,
+    required this.grupos,
+    required this.itens,
+  });
+
+  /// [posto] é o grupo onde cada item foi largado, ou nulo se ainda não foi.
+  bool certa(List<int?> posto) {
+    if (posto.length != itens.length) return false;
+    for (var i = 0; i < itens.length; i++) {
+      if (posto[i] != itens[i].grupo) return false;
+    }
+    return true;
+  }
+}
+
+/// Largar peças nos sítios certos de um cenário desenhado.
+///
+/// O cenário nasce dos dados e não de um ficheiro de imagem, como as figuras
+/// de geometria e as manchas de cor: um desenho em código muda com o tema,
+/// não pesa nada, e não fica desfocado num ecrã grande.
+class QCenario extends Questao {
+  final Cena cena;
+
+  /// Onde cada peça tem de ir parar, em coordenadas de 0 a 1 sobre o
+  /// desenho — para o alvo acompanhar o cenário em qualquer tamanho de ecrã.
+  final List<({double x, double y, String peca})> alvos;
+
+  const QCenario(
+    super.q,
+    super.audio, {
+    super.figura,
+    super.cores,
+    required this.cena,
+    required this.alvos,
+  });
+
+  List<String> get pecas => [for (final a in alvos) a.peca];
+
+  /// [posto] é a peça largada em cada alvo, ou nulo.
+  bool certa(List<String?> posto) {
+    if (posto.length != alvos.length) return false;
+    for (var i = 0; i < alvos.length; i++) {
+      if (posto[i] != alvos[i].peca) return false;
+    }
+    return true;
+  }
 }
 
 /// Uma conta armada, para preencher casinha a casinha.
