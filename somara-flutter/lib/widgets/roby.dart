@@ -3,24 +3,107 @@ import 'package:flutter/material.dart';
 import '../theme.dart';
 
 /// As poses disponíveis do Roby (ficheiros em assets/img/).
+///
+/// Umas são **de fábrica** — a interface usa-as e estão sempre lá. As outras
+/// compram-se na loja com Cristais, e ficam guardadas na [Coleccao].
+///
+/// O [retrato] separa duas famílias que não se podem trocar às cegas: as
+/// **caras** são quadradas (1254×1254, um busto) e cabem num círculo; as
+/// **poses de corpo inteiro** são verticais e, metidas num recorte redondo,
+/// dão uma cabeça minúscula no meio de um círculo vazio.
 enum RobyPose {
-  token('roby-token'),
-  salto('roby-salto'),
-  hero('roby-hero'),
-  dica('roby-dica'),
-  feliz('roby-feliz'),
-  rindo('roby-rindo'),
-  empolgado('roby-empolgado'),
-  orgulhoso('roby-orgulhoso'),
-  triste('roby-triste'),
-  confuso('roby-confuso'),
-  confiante('roby-confiante'),
-  curioso('roby-curioso'),
-  graduate('roby-graduate');
+  token('roby-token', 'Roby'),
+  salto('roby-salto', 'A saltar'),
+  hero('roby-hero', 'Herói'),
+  dica('roby-dica', 'Dica'),
+  feliz('roby-feliz', 'Feliz'),
+  rindo('roby-rindo', 'A rir'),
+  empolgado('roby-empolgado', 'Empolgado'),
+  orgulhoso('roby-orgulhoso', 'Orgulhoso'),
+  triste('roby-triste', 'Triste'),
+  confuso('roby-confuso', 'Confuso'),
+  confiante('roby-confiante', 'Confiante'),
+  curioso('roby-curioso', 'Curioso'),
+  graduate('roby-graduate', 'Formado'),
+
+  /// O Roby com a medalha. Só a faixa das conquistas o usa, e por isso não
+  /// está à venda: é a moldura do prémio, não o prémio.
+  conquista('roby-conquista', 'Com a medalha'),
+  primeiro('roby-primeiro', 'Em primeiro lugar'),
+
+  // ---- caras, à venda ----
+  pensativo('roby-pensativo', 'Pensativo'),
+  surpreso('roby-surpreso', 'Surpreso'),
+  zangado('roby-zangado', 'Zangado'),
+  assustado('roby-assustado', 'Assustado'),
+  determinado('roby-determinado', 'Determinado'),
+  timido('roby-timido', 'Tímido'),
+  cansado('roby-cansado', 'Cansado'),
+  nervoso('roby-nervoso', 'Nervoso'),
+  agradecido('roby-agradecido', 'Agradecido'),
+  empatico('roby-empatico', 'Compreensivo'),
+  inspirado('roby-inspirado', 'Inspirado'),
+  entediado('roby-entediado', 'Aborrecido'),
+  piscar('roby-piscar', 'A piscar o olho'),
+  sereno('roby-sereno', 'Sereno'),
+
+  // ---- corpo inteiro, à venda ----
+  aEstudar('roby-a-estudar', 'A estudar', retrato: true),
+  aApresentar('roby-a-apresentar', 'A apresentar', retrato: true),
+  aCorrer('roby-a-correr', 'A correr', retrato: true),
+  aVotar('roby-a-votar', 'A votar', retrato: true),
+  comTelemovel('roby-com-telemovel', 'Com o telemóvel', retrato: true),
+  ideia('roby-ideia', 'Ideia brilhante', retrato: true),
+  aAjudar('roby-a-ajudar', 'A ajudar um colega', retrato: true),
+  boasVindas('roby-boas-vindas', 'Boas-vindas', retrato: true),
+  aLiderar('roby-a-liderar', 'A dirigir a reunião', retrato: true);
 
   final String file;
-  const RobyPose(this.file);
+
+  /// Como se chama à criança, na loja e no perfil.
+  final String rotulo;
+
+  /// Corpo inteiro, em vez do busto quadrado. Ver a nota da classe.
+  final bool retrato;
+
+  const RobyPose(this.file, this.rotulo, {this.retrato = false});
   String get path => 'assets/img/$file.png';
+}
+
+/// O retrato do Roby, descodificado ao tamanho em que vai aparecer.
+///
+/// As poses compráveis são ficheiros de 1254 px de lado. Descodificadas em
+/// tamanho real, uma grelha da loja com vinte delas mandava mais de cem
+/// megabytes de bitmap para a memória de um telemóvel de mil meticais. O
+/// `cacheWidth` resolve isso sem tocar nos ficheiros: descodifica ao tamanho
+/// do ecrã e não ao do original.
+class RobyImagem extends StatelessWidget {
+  final RobyPose pose;
+  final double largura;
+  final BoxFit fit;
+  final Alignment alinhamento;
+
+  const RobyImagem(
+    this.pose, {
+    super.key,
+    required this.largura,
+    this.fit = BoxFit.contain,
+    this.alinhamento = Alignment.center,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    // Duas vezes a largura lógica cobre os ecrãs de densidade 2 e 3 sem
+    // guardar o original inteiro.
+    final px = (largura * MediaQuery.devicePixelRatioOf(context)).round();
+    return Image.asset(
+      pose.path,
+      width: largura,
+      fit: fit,
+      alignment: alinhamento,
+      cacheWidth: px.clamp(64, 1254),
+    );
+  }
 }
 
 /// O Roby como peça viva do tabuleiro.
@@ -229,6 +312,9 @@ class _RobyTokenState extends State<RobyToken> with TickerProviderStateMixin {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 4),
+                    // `cacheWidth` porque a pose vestida pode ser um dos
+                    // ficheiros de 1254 px da loja, e o boneco do mapa tem
+                    // cinquenta e oito.
                     child: Image.asset(
                       // Troca de pose no ar. Um boneco que mantém a mesma
                       // silhueta durante o salto lê-se como uma imagem a
@@ -240,6 +326,7 @@ class _RobyTokenState extends State<RobyToken> with TickerProviderStateMixin {
                           ? RobyPose.salto.path
                           : widget.pose.path,
                       fit: BoxFit.contain,
+                      cacheWidth: (widget.size * 3).round(),
                     ),
                   ),
                 ],

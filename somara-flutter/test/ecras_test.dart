@@ -4,8 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:somara/models/content.dart';
 import 'package:somara/models/crossmath.dart';
+import 'package:somara/models/escadaria.dart';
 import 'package:somara/models/memoria.dart';
-import 'package:somara/models/sopa.dart';
 import 'package:somara/screens/crossmath_screen.dart';
 import 'package:somara/screens/guardados_screen.dart';
 import 'package:somara/screens/joguinhos_screen.dart';
@@ -100,10 +100,11 @@ void main() {
     verificar('Crossmath ${d.rotulo}', () => CrossmathScreen(dificuldade: d));
   }
 
-  // A sopa é a que mais arrisca transbordar: a grelha do difícil tem doze
-  // letras de lado e a lista de palavras é comprida.
-  for (final n in NivelSopa.values) {
-    verificar('Sopa ${n.rotulo}', () => SopaScreen(nivel: n));
+  // A sopa é a que mais arrisca transbordar: no último degrau a grelha tem
+  // catorze letras de lado e a lista de palavras é comprida. Vão o primeiro,
+  // um do meio e o último — os extremos do tamanho da grelha.
+  for (final n in [1, 300, nivelMaximo]) {
+    verificar('Sopa nível $n', () => SopaScreen(nivel: n));
   }
 
   // Quatro baralhos, e o de "Contar" chega a ter nove desenhos numa carta.
@@ -326,6 +327,32 @@ void main() {
           medir(tester, Baralho.dobros.rotulo).height,
           medir(tester, Baralho.palavras.rotulo).height,
         );
+      });
+    }
+  });
+
+  // O painel de bolsa vazia só existe quando não há tempo de jogo, e por isso
+  // a varredura de cima nunca lhe toca: ela monta sempre um estado novo, de
+  // bolsa cheia. Foi por aí que uma frase a transbordar 151 px chegou a
+  // existir sem que 265 testes dessem por ela.
+  group('os joguinhos com a bolsa vazia', () {
+    for (final entrada in tamanhos.entries) {
+      testWidgets('cabem num ${entrada.key}', (tester) async {
+        var agora = DateTime(2026, 9, 4, 15, 0);
+        final st = estado()..relogio = () => agora;
+        st.entrarNoJogo();
+        agora = agora.add(const Duration(hours: 2));
+        st.sairDoJogo();
+        expect(st.podeJogar, isFalse);
+
+        final erro = await montar(
+          tester,
+          JoguinhosScreen(aoIrEstudar: () {}),
+          entrada.value,
+          st: st,
+        );
+        expect(erro, isNull, reason: 'bolsa vazia em ${entrada.value}');
+        expect(find.text('Ir estudar'), findsOneWidget);
       });
     }
   });

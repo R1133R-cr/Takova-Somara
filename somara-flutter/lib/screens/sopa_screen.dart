@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import '../models/escadaria.dart';
 import '../models/sopa.dart';
 import '../services/sons.dart';
 import '../state/app_state.dart';
@@ -18,8 +19,16 @@ import '../widgets/roby.dart';
 /// que a amarelinha treina pouco: reconhecer a palavra inteira de relance,
 /// em vez de a soletrar. É disso que se faz a leitura fluente.
 class SopaScreen extends StatefulWidget {
-  final NivelSopa nivel;
-  const SopaScreen({super.key, required this.nivel});
+  /// Por onde começar. Nulo entra pelo degrau guardado no estado — que é o
+  /// caso normal; o número serve para os testes e para reabrir um nível.
+  final int? nivel;
+
+  /// Só para os testes: fixa o sorteio, para o teste poder saber onde as
+  /// palavras ficaram e arrastar por cima delas. Em uso é sempre nulo.
+  @visibleForTesting
+  final Random? aleatorio;
+
+  const SopaScreen({super.key, this.nivel, this.aleatorio});
 
   @override
   State<SopaScreen> createState() => _SopaScreenState();
@@ -27,11 +36,16 @@ class SopaScreen extends StatefulWidget {
 
 class _SopaScreenState extends State<SopaScreen>
     with SingleTickerProviderStateMixin {
-  final _rnd = Random();
+  late final Random _rnd = widget.aleatorio ?? Random();
   late final AnimationController _abanao;
 
   late Sopa _sopa;
+  late int _nivel;
   final _encontradas = <String>{};
+
+  /// Verdadeiro entre acabar um nível e o seguinte entrar. Trava o arrasto
+  /// para a criança não seleccionar letras de uma sopa que já saiu.
+  bool _aPassar = false;
 
   /// As casas já ganhas, para ficarem marcadas.
   final _pintadas = <int>{};
@@ -47,6 +61,7 @@ class _SopaScreenState extends State<SopaScreen>
       vsync: this,
       duration: const Duration(milliseconds: 380),
     );
+    _nivel = widget.nivel ?? context.read<AppState>().nivelDe(Jogo.sopa);
     _novaSopa();
   }
 
@@ -58,13 +73,26 @@ class _SopaScreenState extends State<SopaScreen>
   }
 
   void _novaSopa() {
-    final tema = Tema.values[_rnd.nextInt(Tema.values.length)];
-    _sopa = Sopa.nova(tema: tema, nivel: widget.nivel, rnd: _rnd);
+    _sopa = Sopa.doNivel(_nivel, rnd: _rnd);
     _encontradas.clear();
     _pintadas.clear();
     _de = null;
     _seleccao = const [];
+    _aPassar = false;
     setState(() {});
+  }
+
+  /// Acabou o nível: festeja um instante e o seguinte entra sozinho.
+  ///
+  /// Não há botão de "outra sopa". Uma escadaria de mil degraus com um botão
+  /// a perguntar se se quer continuar seria mil perguntas — e a criança que
+  /// acabou de encontrar a última palavra já respondeu que sim.
+  Future<void> _passarAoSeguinte() async {
+    setState(() => _aPassar = true);
+    await Future<void>.delayed(const Duration(milliseconds: 1500));
+    if (!mounted) return;
+    _nivel = context.read<AppState>().subirNivelDe(Jogo.sopa);
+    _novaSopa();
   }
 
   bool get _acabou => _encontradas.length == _sopa.escondidas.length;
@@ -82,7 +110,7 @@ class _SopaScreenState extends State<SopaScreen>
   }
 
   void _comecar(Offset p) {
-    if (_acabou) return;
+    if (_acabou || _aPassar) return;
     final i = _casaEm(p);
     if (i == null) return;
     setState(() {
@@ -93,7 +121,7 @@ class _SopaScreenState extends State<SopaScreen>
 
   void _arrastar(Offset p) {
     final de = _de;
-    if (de == null || _acabou) return;
+    if (de == null || _acabou || _aPassar) return;
     final ate = _casaEm(p);
     if (ate == null) return;
     // Só linhas rectas: um dedo aos saltos não selecciona nada, senão
@@ -123,6 +151,7 @@ class _SopaScreenState extends State<SopaScreen>
         Sons.i.nivel();
         // Uma palavra encontrada vale como uma resposta certa de lição.
         context.read<AppState>().concluirTreino(_sopa.escondidas.length);
+        _passarAoSeguinte();
       } else if (_encontradas.length >= 3) {
         Sons.i.voz('voz-boa.mp3');
       }
@@ -146,7 +175,7 @@ class _SopaScreenState extends State<SopaScreen>
         foregroundColor: S.tx,
         elevation: 0,
         title: Text(
-          'Sopa de letras · ${widget.nivel.rotulo}',
+          'Sopa de letras · Nível $_nivel',
           style: const TextStyle(fontSize: 16),
         ),
       ),
@@ -206,6 +235,7 @@ class _SopaScreenState extends State<SopaScreen>
         onPanEnd: (_) => _largar(),
         onPanCancel: _largar,
         child: SizedBox(
+          key: const ValueKey('sopa-grelha'),
           width: lado * _sopa.lado,
           height: lado * _sopa.lado,
           child: Column(
@@ -308,50 +338,23 @@ class _SopaScreenState extends State<SopaScreen>
     child: Column(
       children: [
         Image.asset(RobyPose.orgulhoso.path, width: 76),
-        const SizedBox(height: 10),
-        Row(
-          children: [
-            Expanded(
-              child: _botao('Sair', () => Navigator.of(context).pop(),
-                  cor: S.surface, corTexto: S.txSoft),
-            ),
-            const SizedBox(width: 10),
-            Expanded(
-              flex: 2,
-              child: _botao('Outra sopa', () {
-                Sons.i.toque();
-                _novaSopa();
-              }, cor: S.chart, corTexto: S.onChart),
-            ),
-          ],
+        const SizedBox(height: 8),
+        Text(
+          'Nível $_nivel feito!',
+          style: const TextStyle(
+            fontSize: 19,
+            fontWeight: FontWeight.w700,
+            color: S.chart,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          _nivel >= nivelMaximo
+              ? 'Chegaste ao fim da escadaria.'
+              : 'Vem aí o ${_nivel + 1}…',
+          style: const TextStyle(color: S.txSoft, fontSize: 14),
         ),
       ],
-    ),
-  );
-
-  Widget _botao(
-    String texto,
-    VoidCallback aoTocar, {
-    required Color cor,
-    required Color corTexto,
-  }) => GestureDetector(
-    onTap: aoTocar,
-    child: Container(
-      height: 48,
-      decoration: BoxDecoration(
-        color: cor,
-        border: Border.all(color: S.line, width: 1.5),
-        borderRadius: BorderRadius.circular(S.rMd),
-      ),
-      alignment: Alignment.center,
-      child: Text(
-        texto,
-        style: TextStyle(
-          fontSize: 16.5,
-          fontWeight: FontWeight.w700,
-          color: corTexto,
-        ),
-      ),
     ),
   );
 }

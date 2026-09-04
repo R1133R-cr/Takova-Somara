@@ -4,7 +4,11 @@ import '../services/nuvem.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
+import '../models/carteira.dart';
+import '../models/conquista.dart';
+import 'conquistas_screen.dart';
 import 'conta_screen.dart';
+import 'loja_screen.dart';
 
 /// Quem sou eu, o que já fiz, e em que classe estou.
 class PerfilScreen extends StatelessWidget {
@@ -72,6 +76,10 @@ class PerfilScreen extends StatelessWidget {
                     '${st.niveisConcluidosTotal}', 'níveis', S.green300)),
           ],
         ),
+        const SizedBox(height: 18),
+        _cartaoDasMedalhas(context, st),
+        const SizedBox(height: 12),
+        _cartaoDaLoja(context, st),
         const SizedBox(height: 28),
 
         // Só aparece quando a nuvem está configurada. Enquanto não estiver,
@@ -255,6 +263,119 @@ class PerfilScreen extends StatelessWidget {
       ),
     );
   }
+
+  /// Quantas medalhas já são dela, e a porta da parede.
+  Widget _cartaoDasMedalhas(BuildContext context, AppState st) {
+    final quantas = st.conquistas.length;
+    return GestureDetector(
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute<void>(builder: (_) => const ConquistasScreen()),
+      ),
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(16, 14, 14, 14),
+        decoration: BoxDecoration(
+          color: S.surface,
+          border: Border.all(color: S.line, width: 2),
+          borderRadius: BorderRadius.circular(S.rLg),
+        ),
+        child: Row(
+          children: [
+            const Icon(Icons.military_tech_rounded, color: S.gold, size: 26),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Medalhas',
+                    style: TextStyle(
+                      fontSize: 16.5,
+                      fontWeight: FontWeight.w700,
+                      color: S.tx,
+                    ),
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    quantas == 1
+                        ? '1 ganha'
+                        : '$quantas ganhas de ${Conquista.values.length}',
+                    style: const TextStyle(color: S.txSoft, fontSize: 13.5),
+                  ),
+                ],
+              ),
+            ),
+            const Icon(Icons.chevron_right_rounded, color: S.txMut, size: 24),
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// A carteira e a porta da loja.
+  ///
+  /// Fica no Perfil e não numa aba própria: é aqui que a criança já vem ver
+  /// o que fez, e as moedas são exactamente isso — o que ela fez, contado
+  /// de outra maneira.
+  Widget _cartaoDaLoja(BuildContext context, AppState st) => GestureDetector(
+    onTap: () => Navigator.of(context).push(
+      MaterialPageRoute<void>(builder: (_) => const LojaScreen()),
+    ),
+    child: Container(
+      padding: const EdgeInsets.fromLTRB(16, 14, 14, 14),
+      decoration: BoxDecoration(
+        color: S.surface,
+        border: Border.all(color: S.gold.withValues(alpha: 0.55), width: 2),
+        borderRadius: BorderRadius.circular(S.rLg),
+      ),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 46,
+            height: 46,
+            child: RobyImagem(st.robyEscolhido, largura: 46),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Loja do Roby',
+                  style: TextStyle(
+                    fontSize: 16.5,
+                    fontWeight: FontWeight.w700,
+                    color: S.tx,
+                  ),
+                ),
+                const SizedBox(height: 3),
+                Row(
+                  children: [
+                    const Icon(Icons.monetization_on_rounded,
+                        color: S.gold, size: 16),
+                    const SizedBox(width: 4),
+                    Text('${st.carteira.gc} ${Moeda.gc.sigla}',
+                        style: const TextStyle(
+                            color: S.gold,
+                            fontSize: 13.5,
+                            fontWeight: FontWeight.w700)),
+                    const SizedBox(width: 12),
+                    const Icon(Icons.diamond_rounded, color: S.chart, size: 16),
+                    const SizedBox(width: 4),
+                    Text('${st.carteira.cc} ${Moeda.cc.sigla}',
+                        style: const TextStyle(
+                            color: S.chart,
+                            fontSize: 13.5,
+                            fontWeight: FontWeight.w700)),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          const Icon(Icons.chevron_right_rounded, color: S.txMut, size: 24),
+        ],
+      ),
+    ),
+  );
 
   Widget _stat(String v, String rotulo, Color cor) => Container(
         padding: const EdgeInsets.symmetric(vertical: 16),

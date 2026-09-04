@@ -100,6 +100,9 @@ inventar novas — é o que dá variedade sem trabalho infinito.
 
 ## 2. Conquistas
 
+> **Feito na 0.28.0.** 36 medalhas: 10 de escola, 4 de consistência e 24
+> dos jogos. O que se decidiu ao escrever está no fim da secção.
+
 **[decidido] Três famílias**, e a de «descoberta» fica de fora:
 
 | família | exemplos |
@@ -150,9 +153,44 @@ falta. É o mesmo sítio onde a colecção do Roby vai viver (§6).
 3. Golden da faixa.
 4. Emulador: terminar um nível sem erro, ver a faixa entrar e sair sem tocar.
 
+### O que se decidiu ao escrever
+
+- **Três das nove ideias do quadro ficaram de fora**, e é a limitação a
+  registar: «primeira peça especial no Pomar», «Sopa sem uma letra errada» e
+  «Crossmath difícil à primeira» precisam de contadores que os jogos ainda
+  não guardam. As restantes seis famílias de condição saem de dados que já
+  existiam. Entram quando o §4 (a Sorte) instrumentar os jogos — é o mesmo
+  rastreio.
+- **Em vez do golden, a faixa é varrida nos três tamanhos com o título mais
+  comprido que existe.** Um golden fixa píxeis e parte-se a cada afinação de
+  cor; o que aqui interessa é que o texto de «Uma disciplina do princípio ao
+  fim» não saia do ecrã de 320. Há também um teste que prova a promessa do
+  §2 — que um toque atrás da faixa continua a chegar ao botão que lá está.
+- **Ao arrancar, avaliam-se as condições sem mostrar nada.** Quem já tinha
+  meia classe feita quando esta versão chegou recebe as medalhas e os
+  cristais que merecia, mas não leva com vinte faixas seguidas na cara.
+- **A primeira unidade paga por dois caminhos**, e são dois de propósito: o
+  marco do §6 paga a unidade *sem erros*, a medalha paga a *primeira*
+  unidade. Uma primeira unidade perfeita vale 2 CC, no momento em que a
+  criança mais precisa de sentir que aquilo dá alguma coisa.
+- **Vinte e três das trinta e seis não pagam nada.** Uma medalha que paga
+  sempre deixa de ser medalha e passa a salário.
+- **A pista fica à vista mesmo depois de ganha.** Antes diz o que falta
+  fazer; depois explica o que se fez.
+- **Som novo, sintetizado** (`tools/sons.py`, `conquista()`). Distingue-se do
+  som de nível pela forma e não pelo volume — sobe duas vezes e assenta num
+  acorde maior. É a mesma criança na mesma sala, e uma fanfarra que
+  sobressalte não festeja nada.
+- **A faixa vive no `builder` do `MaterialApp`**, por cima do Navigator.
+  Metida dentro de um ecrã não apareceria nas lições nem nos joguinhos, que
+  é justamente onde as conquistas se ganham.
+
 ---
 
 ## 3. Tempo de jogo
+
+> **Feito na 0.26.0.** Os valores propostos ficaram todos como estavam.
+> Três pormenores foram decididos na escrita — ver o fim da secção.
 
 **[decidido] Bolsa diária pequena que o estudo enche.**
 
@@ -190,6 +228,33 @@ separadas: os corações limitam os exercícios, o tempo limita os jogos.
 2. O relógio **não corre** com a app minimizada (teste com `AppLifecycleState`).
 3. Emulador: gastar a bolsa até zero, ver os cartões apagados e a mensagem,
    estudar um nível, ver os joguinhos reabrirem.
+
+### O que se decidiu ao escrever
+
+- **A nuvem funde os dois números, não o saldo.** O plano dizia «o saldo
+  sincroniza pelo maior». Ficar pelo maior *saldo* dava um buraco: jogar dez
+  minutos, entrar na conta noutro aparelho, e os dez voltavam — o tecto
+  diário passava a ser uma sugestão. Fica pelo maior o que se **ganhou** e
+  pelo maior o que se **gastou**. O objectivo declarado («nunca se perde
+  tempo ao trocar de telemóvel») cumpre-se para o tempo ganho a estudar, que
+  é o que a criança trabalhou para ter.
+- **O nível perfeito rende oito, não treze.** Os +8 substituem os +5; não se
+  somam. A tabela podia ler-se das duas maneiras.
+- **`inactive` não pára o relógio.** Só `paused`, `hidden` e `detached`. É a
+  mesma linha que a música já usava, e pela mesma razão: a sombra do
+  multitarefas e a barra de notificações meio aberta são transitórias, e o
+  `resumed` que devolveria o relógio nem sempre chega.
+- **Dentro do jogo o aviso só aparece no último minuto**, e ao acabar fica
+  1,5 s a dizer porquê antes de fechar. Um relógio sempre à vista põe a
+  criança a olhar para o tempo em vez de jogar; um jogo que desaparece sem
+  explicação lê-se como avaria.
+- **Um sítio só liga os jogos ao relógio.** O `RelogioDeJogo` envolve o que o
+  botão dos Joguinhos abrir, e não os quatro ecrãs um a um: assim um quinto
+  joguinho não pode nascer sem contar tempo.
+- **O ciclo de vida saiu do `main.dart` para `services/ciclo_de_vida.dart`.**
+  Enterrada num `State` privado, a ligação não tinha teste nenhum —
+  apagavam-se-lhe duas linhas e a suite continuava verde com o relógio a
+  correr de app fechada.
 
 ---
 
@@ -282,6 +347,9 @@ se não houver nada, não aparece.
 
 ## 6. Moedas e loja do Roby
 
+> **Feito na 0.27.0.** Os preços e as regras de ganho ficaram como estavam
+> propostos. O que se decidiu ao escrever está no fim da secção.
+
 **[decidido, ideia do utilizador] Duas moedas:**
 
 | | nome | vale | compra |
@@ -350,6 +418,43 @@ fim das lições.
 3. Fusão na nuvem: colecções diferentes nos dois telemóveis → união, nunca perda.
 4. Emulador: comprar uma pose, vê-la aparecer no fim da lição seguinte.
 
+*(1 a 3 ficaram todos em `test/loja_test.dart`, um ficheiro só — são a mesma
+funcionalidade e partem-se juntos.)*
+
+### O que se decidiu ao escrever
+
+- **23 poses à venda, não 24.** Copiaram-se 14 caras e 9 poses de corpo
+  inteiro. Ficaram de fora as variantes `_b` e `_c` de expressões que a app
+  já tem (orgulhoso, confuso, agradecido) — vender à criança uma segunda
+  versão de uma cara que ela já tem não é colecção, é ruído. **+28,7 MB de
+  assets**, ao abrigo da regra do `CLAUDE.md`.
+- **Descodificação, não redimensionamento.** Os ficheiros são de 1254 px e
+  ficam como estão. O que se acrescentou foi o `RobyImagem`, que descodifica
+  ao tamanho do ecrã: uma grelha da loja com vinte poses em tamanho real
+  mandava mais de cem megabytes de bitmap para a memória de um telemóvel de
+  mil meticais. É um problema de memória em uso, não de peso do APK.
+- **O ganho e o gasto guardam-se separados**, como na bolsa de tempo, e a
+  nuvem funde os quatro totais pelo maior. Ficar pelo maior saldo dava a
+  quem tivesse dois telemóveis uma máquina de cristais.
+- **Os marcos já pagos ficam num conjunto.** `unidade:mat-1c:u1`,
+  `semana:3`. Sem isso, refazer a última lição de uma unidade perfeita era
+  um cristal de cada vez, e a criança que descobrisse isso nunca mais
+  estudava. O conjunto serve também as conquistas do §2.
+- **Um relógio só no `AppState`.** A sequência lia `DateTime.now()` e o marco
+  da semana lia o relógio injectável: com um relógio falso as duas datas
+  estavam em anos diferentes e o cristal da semana nunca chegava.
+- **Não se vendem minutos com a bolsa no tecto do dia** — a compra é recusada
+  com a razão escrita, e o dinheiro fica onde estava. Vender tempo que o
+  tecto ia deitar fora seria vender nada; deixar a compra furar o tecto
+  seria desfazer o §3.
+- **Comprar uma cara veste-a logo**, e um segundo toque despe-a. Comprar e
+  não ver nada mudar era o pior momento possível para pedir mais um toque.
+- **A porta da loja está no Perfil**, com a carteira à vista. Não se
+  acrescentou nada à barra de estado: com corações, XP, sequência e classe,
+  a 320 dp já não cabe mais nada.
+- **Ainda não há conquistas a pagar cristais** (§2 não existe). As duas
+  fontes vivas são a unidade perfeita e cada sete dias seguidos.
+
 ---
 
 ## 7. Pomar — aleatoriedade honesta
@@ -386,6 +491,10 @@ ecrã.
 
 ## 8. Sopa de letras — progressão automática e banco moçambicano
 
+> **Feito na 0.25.0.** A tabela e a lista de categorias abaixo foram
+> actualizadas para os números que o código dá mesmo — ver a nota no fim
+> da secção.
+
 **[decidido] Sai o botão «jogar outra vez».** Ao encontrar a última palavra:
 celebração curta (~1,5 s) e o **nível seguinte carrega sozinho**. Sai-se pela
 seta de voltar, como em todo o lado.
@@ -395,9 +504,10 @@ seta de voltar, como em todo o lado.
 | nível | palavras | grelha |
 |---|---|---|
 | 1 | 4 | 7×7 |
-| 100 | 5 | 8×8 |
-| 300 | 7 | 10×10 |
-| 600 | 8 | 12×12 |
+| 25 | 5 | 8×8 |
+| 100 | 6 | 9×9 |
+| 300 | 8 | 12×12 |
+| 600 | 10 | 13×13 |
 | 1000 | 10 | 14×14 |
 
 **Categorias, que rodam** — objectos concretos do quotidiano moçambicano:
@@ -412,6 +522,7 @@ seta de voltar, como em todo o lado.
 | Animais | cabrito, galinha, vaca, cão, peixe, formiga |
 | Corpo | mão, perna, cabeça, olho, dente, joelho |
 | Campo | machamba, enxada, milho, mandioca, chuva, sol |
+| Moçambique | Maputo, Beira, Nampula, Niassa, Tete, Lichinga, Pemba |
 
 Regras do banco: **sem acentos** (a grelha é de maiúsculas simples), 3 a 10
 letras, e nenhuma palavra repetida dentro do mesmo nível. A categoria de cada
@@ -429,6 +540,17 @@ categoria, para dois telemóveis mostrarem o mesmo.
    são encontráveis; nenhuma repetida; nenhuma com acentos.
 2. O nível N dá sempre a mesma categoria (determinismo).
 3. Emulador: acabar um nível e ver o seguinte entrar sem se tocar em nada.
+
+### O que mudou entre o plano e o código
+
+- **Nove categorias, não oito.** Entrou «Moçambique» — as províncias e as
+  cidades. É a única em que a palavra ensina alguma coisa além de si mesma.
+- **A grelha cresce mais depressa do que esta tabela dizia.** A tabela acima
+  foi escrita à mão antes da curva existir; agora sai da [curva] do §1 e é
+  esta. Nada se decidiu de novo — corrigiu-se a aritmética.
+- **O ponto 3 também está coberto por teste.** O `sopa_ecra_test.dart`
+  arrasta o dedo por cima de todas as palavras de um nível e confirma que o
+  degrau sobe sozinho; o emulador passa a ser confirmação, não a única prova.
 
 ---
 

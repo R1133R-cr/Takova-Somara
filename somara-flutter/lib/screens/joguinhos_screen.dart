@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import '../models/crossmath.dart';
+import '../models/bolsa_de_tempo.dart';
+import '../models/escadaria.dart';
 import '../services/sons.dart';
 import '../theme.dart';
+import '../widgets/relogio_de_jogo.dart';
 import '../widgets/roby.dart';
 import '../models/memoria.dart';
-import '../models/sopa.dart';
+import '../state/app_state.dart';
 import 'crossmath_screen.dart';
 import 'memoria_screen.dart';
 import 'pomar_screen.dart';
@@ -21,10 +25,21 @@ import 'sopa_screen.dart';
 /// Está feita para crescer: cada jogo é um cartão nesta lista, e acrescentar
 /// outro é acrescentar uma entrada em [_jogos].
 class JoguinhosScreen extends StatelessWidget {
-  const JoguinhosScreen({super.key});
+  /// Leva à amarelinha. É o botão da mensagem de bolsa vazia — dizer à
+  /// criança que estude e não lhe dar por onde ir seria uma porta fechada.
+  final VoidCallback? aoIrEstudar;
+
+  const JoguinhosScreen({super.key, this.aoIrEstudar});
 
   @override
   Widget build(BuildContext context) {
+    // É `watch` e não `read` de propósito: quem sobe de nível ou gasta
+    // tempo lá dentro volta a este ecrã e tem de ver os números novos.
+    final st = context.watch<AppState>();
+    final nivelDaSopa = st.nivelDe(Jogo.sopa);
+    final tempo = st.tempoDeJogo;
+    final semTempo = tempo <= Duration.zero;
+
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 28),
       children: [
@@ -41,8 +56,23 @@ class JoguinhosScreen extends StatelessWidget {
           'Para brincar. Não gastam corações.',
           style: TextStyle(color: S.txSoft, fontSize: 15),
         ),
-        const SizedBox(height: 22),
+        const SizedBox(height: 14),
+        _bolsaDoDia(tempo, semTempo),
+        const SizedBox(height: 18),
 
+        // Sem tempo os cartões ficam à vista mas apagados e sem resposta ao
+        // toque. Escondê-los seria pior: a criança não perceberia que os
+        // jogos existem e ficariam a faltar sem explicação.
+        IgnorePointer(
+          ignoring: semTempo,
+          child: Opacity(
+            opacity: semTempo ? 0.32 : 1,
+            // `stretch` porque em lista os cartões vinham esticados pela
+            // ListView; metidos numa Column passavam a tomar a largura que
+            // o texto pedisse e saíam 58 px pela borda fora num ecrã de 320.
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
         _CartaoDoJogo(
           titulo: 'Crossmath',
           descricao:
@@ -81,15 +111,16 @@ class JoguinhosScreen extends StatelessWidget {
           titulo: 'Sopa de letras',
           descricao:
               'Arrasta por cima das letras para descobrir as palavras '
-              'escondidas. Animais, frutas, a escola, o corpo e Moçambique.',
+              'escondidas. A casa, o mercado, a machamba, Moçambique.',
           pose: RobyPose.graduate,
+          // Um botão só. Não se escolhe dificuldade: continua-se de onde se
+          // ficou, e a dificuldade é o degrau em que se está.
           botoes: [
-            for (final n in NivelSopa.values)
-              (
-                rotulo: n.rotulo,
-                detalhe: '${n.quantasPalavras} palavras',
-                abrir: (BuildContext ctx) => SopaScreen(nivel: n),
-              ),
+            (
+              rotulo: 'Continuar',
+              detalhe: 'nível $nivelDaSopa de $nivelMaximo',
+              abrir: (BuildContext ctx) => const SopaScreen(),
+            ),
           ],
         ),
 
@@ -110,6 +141,10 @@ class JoguinhosScreen extends StatelessWidget {
               ),
           ],
         ),
+              ],
+            ),
+          ),
+        ),
 
         const SizedBox(height: 26),
         Center(
@@ -128,6 +163,102 @@ class JoguinhosScreen extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+  /// Quanto tempo de jogo há hoje — ou o que fazer quando não há.
+  Widget _bolsaDoDia(Duration tempo, bool semTempo) {
+    if (!semTempo) {
+      return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+        decoration: BoxDecoration(
+          color: S.gm900,
+          border: Border.all(color: S.line, width: 1.5),
+          borderRadius: BorderRadius.circular(S.rPill),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.timer_rounded, color: S.gold, size: 19),
+            const SizedBox(width: 8),
+            // Flexível porque um telemóvel com o texto do sistema aumentado
+            // faz esta frase crescer, e uma pílula que não deixa o texto
+            // partir-se deita-o pela borda fora em vez de o dobrar.
+            Flexible(
+              child: Text(
+                '${tempoEmPalavras(tempo)} de jogo',
+                style: const TextStyle(
+                  color: S.gold,
+                  fontSize: 14.5,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: S.surface,
+        border: Border.all(color: S.gold, width: 2),
+        borderRadius: BorderRadius.circular(S.rLg),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Icon(Icons.hourglass_bottom_rounded, color: S.gold, size: 20),
+              SizedBox(width: 8),
+              // Expanded porque a frase não cabe numa linha num telemóvel de
+              // 320, e sem ele saía pela borda fora em vez de se partir.
+              Expanded(
+                child: Text(
+                  'Acabou o tempo de jogo de hoje',
+                  style: TextStyle(
+                    color: S.gold,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 6),
+          const Text(
+            'Estuda um nível e ganhas mais cinco minutos.',
+            style: TextStyle(color: S.txSoft, fontSize: 14, height: 1.35),
+          ),
+          const SizedBox(height: 12),
+          GestureDetector(
+            onTap: () {
+              Sons.i.toque();
+              aoIrEstudar?.call();
+            },
+            child: Container(
+              height: 44,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: S.chart,
+                border: Border.all(color: S.line, width: 1.5),
+                borderRadius: BorderRadius.circular(S.rMd),
+              ),
+              child: const Text(
+                'Ir estudar',
+                style: TextStyle(
+                  color: S.onChart,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -260,7 +391,13 @@ class _CartaoDoJogo extends StatelessWidget {
   Widget _botao(BuildContext context, BotaoDeJogo b) => GestureDetector(
     onTap: () {
       Sons.i.toque();
-      Navigator.of(context).push(MaterialPageRoute(builder: b.abrir));
+      // Todo o jogo entra por aqui, e por isso todo o jogo conta tempo.
+      // Um quinto joguinho não pode nascer sem relógio por engano.
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => RelogioDeJogo(child: b.abrir(ctx)),
+        ),
+      );
     },
     child: Container(
       // A folga dos lados não é enfeite: sem ela o texto encosta à borda

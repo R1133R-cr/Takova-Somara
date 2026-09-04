@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'escadaria.dart';
+
 /// Os conjuntos de palavras.
 ///
 /// Todas sem acento nem cedilha, de propósito. Numa sopa de letras a grelha
@@ -7,21 +9,37 @@ import 'dart:math';
 /// letras ensinaria a escrever mal — numa app de escola isso não se faz.
 /// Escolheram-se palavras que dispensam o problema.
 enum Tema {
-  animais('Animais', [
-    'GATO', 'VACA', 'CABRA', 'GALINHA', 'PATO', 'PEIXE', 'ELEFANTE',
-    'ZEBRA', 'MACACO', 'RATO', 'BURRO', 'COBRA', 'PORCO', 'CAVALO',
+  casa('Em casa', [
+    'LATA', 'MESA', 'CAMA', 'PORTA', 'BALDE', 'ESTEIRA', 'CADEIRA',
+    'JANELA', 'TELHADO', 'CHAVE', 'PANO', 'VASSOURA', 'CANDEEIRO',
   ]),
-  frutas('Frutas e legumes', [
-    'MANGA', 'BANANA', 'COCO', 'MILHO', 'TOMATE', 'LARANJA', 'PAPAIA',
-    'CAJU', 'AMENDOIM', 'ABACATE', 'MELANCIA', 'CEBOLA', 'BATATA', 'ARROZ',
+  cozinha('Na cozinha', [
+    'PANELA', 'PRATO', 'COLHER', 'SAL', 'ARROZ', 'OLEO', 'FARINHA',
+    'COPO', 'FACA', 'GARFO', 'CHAVENA', 'FOGAO', 'PEIXE', 'CALDEIRAO',
   ]),
   escola('A escola', [
     'LIVRO', 'CADERNO', 'MESA', 'QUADRO', 'MOCHILA', 'ALUNO', 'ESCOLA',
     'LETRA', 'PALAVRA', 'PROFESSOR', 'TURMA', 'CANETA', 'BORRACHA', 'REGUA',
   ]),
+  mercado('No mercado', [
+    'BANANA', 'TOMATE', 'CARVAO', 'CAPULANA', 'METICAL', 'MANGA', 'COCO',
+    'CEBOLA', 'BATATA', 'LARANJA', 'AMENDOIM', 'PAPAIA', 'CAJU', 'SACO',
+  ]),
+  transporte('Como se anda', [
+    'CHAPA', 'BICICLETA', 'CAMIAO', 'BARCO', 'COMBOIO', 'ESTRADA',
+    'CARRO', 'AVIAO', 'PONTE', 'RODA', 'MOTA', 'CARROCA',
+  ]),
+  animais('Animais', [
+    'GATO', 'VACA', 'CABRA', 'GALINHA', 'PATO', 'PEIXE', 'ELEFANTE',
+    'ZEBRA', 'MACACO', 'RATO', 'BURRO', 'COBRA', 'PORCO', 'CAVALO',
+  ]),
   corpo('O corpo', [
     'PERNA', 'OLHO', 'NARIZ', 'BOCA', 'DEDO', 'COSTAS', 'OMBRO', 'JOELHO',
     'CABELO', 'DENTE', 'ORELHA', 'BARRIGA', 'TESTA', 'LINGUA',
+  ]),
+  campo('No campo', [
+    'MACHAMBA', 'ENXADA', 'MILHO', 'MANDIOCA', 'CHUVA', 'SOL', 'ARVORE',
+    'CAPIM', 'SEMENTE', 'HORTA', 'GADO', 'POCO', 'PALHA', 'BAMBU',
   ]),
   mocambique('Moçambique', [
     'MAPUTO', 'BEIRA', 'NAMPULA', 'NIASSA', 'TETE', 'LICHINGA', 'PEMBA',
@@ -32,33 +50,13 @@ enum Tema {
   final String rotulo;
   final List<String> palavras;
   const Tema(this.rotulo, this.palavras);
-}
 
-/// A dificuldade muda três coisas ao mesmo tempo: o tamanho da grelha,
-/// quantas palavras se escondem, e em que direcções.
-///
-/// As diagonais e as palavras ao contrário ficam para os níveis de cima por
-/// uma razão concreta: uma criança da 1ª classe que ainda lê letra a letra
-/// da esquerda para a direita não procura ao contrário — vê-se-lhe o dedo a
-/// seguir a linha. Pôr isso no primeiro nível não é desafio, é um muro.
-enum NivelSopa {
-  facil('Fácil', 8, 5, false, false),
-  medio('Médio', 10, 7, true, false),
-  dificil('Difícil', 12, 8, true, true);
-
-  final String rotulo;
-  final int lado;
-  final int quantasPalavras;
-  final bool comDiagonais;
-  final bool comInvertidas;
-
-  const NivelSopa(
-    this.rotulo,
-    this.lado,
-    this.quantasPalavras,
-    this.comDiagonais,
-    this.comInvertidas,
-  );
+  /// A categoria de um nível da escadaria.
+  ///
+  /// Determinada pelo número e não sorteada: o nível 47 tem de dar sempre a
+  /// mesma categoria, senão dois telemóveis com a mesma criança mostravam
+  /// sopas diferentes, e voltar a um nível já feito dava outra coisa.
+  static Tema doNivel(int nivel) => values[(nivel - 1) % values.length];
 }
 
 /// Uma palavra escondida na grelha, e onde ficou.
@@ -97,7 +95,9 @@ class Sopa {
 
   final List<PalavraColocada> escondidas;
   final Tema tema;
-  final NivelSopa nivel;
+
+  /// O degrau da escadaria — de 1 a 1000.
+  final int nivel;
 
   const Sopa({
     required this.lado,
@@ -126,16 +126,22 @@ class Sopa {
     (0, -1), (-1, 0), (-1, -1), (-1, 1),
   ];
 
-  static List<(int, int)> direccoesDe(NivelSopa n) => [
+  /// As direcções permitidas num nível.
+  ///
+  /// As diagonais e as palavras ao contrário ficam para mais tarde por uma
+  /// razão concreta: uma criança que ainda lê letra a letra da esquerda
+  /// para a direita não procura ao contrário — vê-se-lhe o dedo a seguir a
+  /// linha. Pôr isso no nível 1 não é desafio, é um muro.
+  static List<(int, int)> direccoesDe(ParamsSopa p) => [
     for (var i = 0; i < _direccoes.length; i++)
-      if (_permitida(i, n)) _direccoes[i],
+      if (_permitida(i, p)) _direccoes[i],
   ];
 
-  static bool _permitida(int i, NivelSopa n) {
+  static bool _permitida(int i, ParamsSopa p) {
     final diagonal = i == 2 || i == 3 || i == 6 || i == 7;
     final invertida = i >= 4;
-    if (diagonal && !n.comDiagonais) return false;
-    if (invertida && !n.comInvertidas) return false;
+    if (diagonal && !p.diagonais) return false;
+    if (invertida && !p.invertidas) return false;
     return true;
   }
 
@@ -146,29 +152,32 @@ class Sopa {
   /// Nunca devolve uma grelha com uma palavra por colocar: uma criança que
   /// procura uma palavra que não existe procura para sempre, e conclui que
   /// o erro é dela. Se não couberem todas, tenta outra vez do princípio.
-  factory Sopa.nova({
-    required Tema tema,
-    required NivelSopa nivel,
-    Random? rnd,
-  }) {
+  /// A sopa de um degrau da escadaria.
+  ///
+  /// O nível manda em tudo: a categoria (fixa, para o mesmo nível dar sempre
+  /// a mesma), o tamanho da grelha, quantas palavras se escondem e em que
+  /// direcções.
+  factory Sopa.doNivel(int nivel, {Random? rnd, Tema? tema}) {
+    final p = sopaNo(nivel);
+    final categoria = tema ?? Tema.doNivel(nivel);
     final r = rnd ?? Random();
-    final direccoes = direccoesDe(nivel);
+    final direccoes = direccoesDe(p);
 
     for (var tentativa = 0; tentativa < 60; tentativa++) {
-      final escolhidas = [...tema.palavras]
+      final escolhidas = [...categoria.palavras]
         ..shuffle(r)
-        ..removeWhere((p) => p.length > nivel.lado);
-      final alvo = escolhidas.take(nivel.quantasPalavras).toList()
+        ..removeWhere((w) => w.length > p.lado);
+      final alvo = escolhidas.take(p.palavras).toList()
         // As compridas primeiro: são as difíceis de encaixar, e deixá-las
         // para o fim é a maneira certa de não caberem.
         ..sort((a, b) => b.length.compareTo(a.length));
 
-      final letras = List.filled(nivel.lado * nivel.lado, '');
+      final letras = List.filled(p.lado * p.lado, '');
       final colocadas = <PalavraColocada>[];
       var falhou = false;
 
       for (final palavra in alvo) {
-        final onde = _tentarColocar(palavra, letras, nivel.lado, direccoes, r);
+        final onde = _tentarColocar(palavra, letras, p.lado, direccoes, r);
         if (onde == null) {
           falhou = true;
           break;
@@ -187,28 +196,29 @@ class Sopa {
       }
 
       return Sopa(
-        lado: nivel.lado,
+        lado: p.lado,
         letras: letras,
         escondidas: colocadas,
-        tema: tema,
+        tema: categoria,
         nivel: nivel,
       );
     }
 
     // Rede de segurança: uma grelha só com a palavra mais curta. Nunca deve
     // chegar aqui, mas um ecrã vazio seria pior.
-    final curta = tema.palavras.reduce((a, b) => a.length <= b.length ? a : b);
+    final curta =
+        categoria.palavras.reduce((a, b) => a.length <= b.length ? a : b);
     final letras = List.generate(
-      nivel.lado * nivel.lado,
+      p.lado * p.lado,
       (i) => i < curta.length ? curta[i] : _alfabeto[i % _alfabeto.length],
     );
     return Sopa(
-      lado: nivel.lado,
+      lado: p.lado,
       letras: letras,
       escondidas: [
         PalavraColocada(curta, List.generate(curta.length, (i) => i)),
       ],
-      tema: tema,
+      tema: categoria,
       nivel: nivel,
     );
   }

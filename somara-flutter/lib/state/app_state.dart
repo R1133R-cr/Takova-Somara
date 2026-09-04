@@ -3,11 +3,17 @@ import 'dart:convert';
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../models/bolsa_de_tempo.dart';
+import '../models/carteira.dart';
+import '../models/coleccao.dart';
+import '../models/conquista.dart';
 import '../models/content.dart';
+import '../models/escadaria.dart';
 import '../models/sequencia.dart';
 import '../services/conteudo_remoto.dart';
 import '../services/nuvem.dart';
 import '../services/sons.dart';
+import '../widgets/roby.dart';
 
 /// Estado do aluno — o equivalente ao localStorage `somara_state_v2` da
 /// versão web, mas tipado e persistido com shared_preferences.
@@ -37,6 +43,344 @@ class AppState extends ChangeNotifier {
   /// chave "cursoId:unitId:nivelId" → percentagem de acertos
   final Map<String, int> progresso = {};
 
+  /// Em que degrau da escadaria vai cada joguinho.
+  ///
+  /// Cada jogo tem a sua — não há nível global do aluno. Começa no 1 e sobe
+  /// um por nível concluído, até [nivelMaximo].
+  final Map<Jogo, int> _niveisDosJogos = {};
+
+  int nivelDe(Jogo jogo) => _niveisDosJogos[jogo] ?? 1;
+
+  /// Sobe um degrau. Devolve o nível novo.
+  ///
+  /// Nunca desce e nunca passa do tecto: a escadaria é uma promessa, e uma
+  /// promessa que anda para trás não é promessa nenhuma.
+  int subirNivelDe(Jogo jogo) {
+    final novo = math.min(nivelDe(jogo) + 1, nivelMaximo);
+    if (novo != nivelDe(jogo)) {
+      _niveisDosJogos[jogo] = novo;
+      _verificarConquistas();
+      notifyListeners();
+      _gravar();
+    }
+    return novo;
+  }
+
+  /// Guardados pelo NOME do jogo e não pelo índice do enum: acrescentar um
+  /// joguinho no meio da lista não pode fazer a criança perder o nível do
+  /// Pomar por ele ter passado a ser o terceiro em vez do segundo.
+  Map<String, int> _niveisParaJson() =>
+      {for (final e in _niveisDosJogos.entries) e.key.name: e.value};
+
+  void _lerNiveisDosJogos(Map? j) {
+    if (j == null) return;
+    for (final jogo in Jogo.values) {
+      final v = j[jogo.name];
+      if (v is int && v >= 1) {
+        _niveisDosJogos[jogo] = math.min(v, nivelMaximo);
+      }
+    }
+  }
+
+  /* ---------------- Tempo de jogo ----------------
+     Os corações limitam os exercícios; a bolsa limita os jogos. São coisas
+     separadas de propósito, e o estudo NUNCA é travado por esta. Ver
+     [BolsaDeTempo] para o porquê do tecto diário. */
+
+  BolsaDeTempo _bolsa = const BolsaDeTempo(dia: '');
+
+  /// O relógio da app. Só os testes lhe mexem — sem isto não há maneira de
+  /// provar que a bolsa se repõe à meia-noite, nem que sete dias seguidos
+  /// de estudo dão um cristal, sem esperar sete dias.
+  ///
+  /// É um só de propósito. Enquanto a sequência lia `DateTime.now()` e o
+  /// marco da semana lia este, as duas datas podiam estar em anos
+  /// diferentes e o cristal da semana nunca chegava.
+  @visibleForTesting
+  DateTime Function() relogio = DateTime.now;
+
+  /// Há um jogo aberto (mesmo que a app esteja minimizada).
+  bool _aJogar = false;
+
+  /// Desde quando é que o relógio corre. Nulo com a app em segundo plano:
+  /// é assim que o tempo pára quando o ecrã se apaga.
+  DateTime? _correDesde;
+
+  String get _hoje => Sequencia.iso(relogio());
+
+  Duration get _decorrido {
+    final desde = _correDesde;
+    if (desde == null) return Duration.zero;
+    final d = relogio().difference(desde);
+    return d.isNegative ? Duration.zero : d;
+  }
+
+  /// A bolsa de hoje, já reposta se o dia virou.
+  BolsaDeTempo get bolsa => _bolsa.noDia(_hoje);
+
+  /// Quanto tempo de jogo ainda há, contando o jogo que está a decorrer.
+  Duration get tempoDeJogo {
+    final falta = bolsa.restante - _decorrido;
+    return falta.isNegative ? Duration.zero : falta;
+  }
+
+  bool get podeJogar => tempoDeJogo > Duration.zero;
+
+  /// Fecha a conta do que se jogou até agora.
+  void _assentarTempo() {
+    final d = _decorrido;
+    _correDesde = null;
+    if (d <= Duration.zero) return;
+    _bolsa = bolsa.comGasto(d);
+  }
+
+  /// Um jogo abriu: o relógio arranca.
+  void entrarNoJogo() {
+    // Se este for o primeiro acto do dia, a corrente do "primeiro a escola"
+    // parte-se aqui — e é por isso que se regista o jogo e não só o estudo.
+    _registarActo(estudo: false);
+    _bolsa = bolsa;
+    _aJogar = true;
+    _correDesde = relogio();
+  }
+
+  /// O jogo fechou: assenta o gasto e guarda.
+  void sairDoJogo() {
+    if (!_aJogar) return;
+    _assentarTempo();
+    _aJogar = false;
+    notifyListeners();
+    _gravar();
+  }
+
+  /// A app foi para segundo plano. O tempo de jogo pára aqui — a criança
+  /// que atende uma chamada a meio do Pomar não paga por essa chamada.
+  void pausarTempoDeJogo() {
+    if (!_aJogar || _correDesde == null) return;
+    _assentarTempo();
+    _gravar();
+  }
+
+  /// A app voltou à frente. Só reata se ainda houver um jogo aberto.
+  void retomarTempoDeJogo() {
+    if (!_aJogar || _correDesde != null) return;
+    _correDesde = relogio();
+  }
+
+  /// Estudar enche a bolsa.
+  ///
+  /// Chamada de [concluirNivel]. Não é chamada pelo treino nem pelos
+  /// joguinhos: jogar para ganhar tempo de jogo seria um círculo, e a
+  /// bolsa deixava de querer dizer nada.
+  void _ganharTempoDeJogo(Duration d) {
+    _bolsa = bolsa.comGanho(d);
+  }
+
+  /* ---------------- Moedas, loja e colecção ----------------
+     O Ouro entra todos os dias e sai depressa; o Cristal é raro e guarda-se.
+     Ver [Carteira] para o porquê de serem duas. */
+
+  Carteira _carteira = const Carteira();
+  Coleccao _coleccao = const Coleccao();
+
+  /// Os marcos que já foram pagos, para não pagarem duas vezes.
+  ///
+  /// Um só conjunto para todos os tipos (`unidade:...`, `semana:3`), com uma
+  /// só regra de fusão — união. Com um contador por tipo, refazer uma
+  /// unidade ou sincronizar dois telemóveis dava cristais do ar.
+  final Set<String> _marcosPagos = {};
+
+  Carteira get carteira => _carteira;
+  Coleccao get coleccao => _coleccao;
+
+  /// A cara do Roby que a criança escolheu. Cai na de fábrica se a escolhida
+  /// não for dela.
+  RobyPose get robyEscolhido => _coleccao.roby;
+
+  /// Paga um marco uma vez só. Devolve verdadeiro se pagou agora.
+  bool _pagarMarco(String chave, Moeda moeda, int quanto) {
+    if (!_marcosPagos.add(chave)) return false;
+    _carteira = _carteira.comGanho(moeda, quanto);
+    return true;
+  }
+
+  /// O que aconteceu a uma tentativa de compra.
+  ///
+  /// Um enum e não um booleano porque as três recusas pedem frases
+  /// diferentes, e "não deu" à frente de uma criança que juntou cristais
+  /// durante duas semanas não é resposta.
+  ResultadoDaCompra comprar(ItemDaLoja item) {
+    if (!item.consumivel && _coleccao.compradas.contains(item.id)) {
+      return ResultadoDaCompra.jaTem;
+    }
+    // Minutos comprados entram na mesma bolsa e respeitam o mesmo tecto.
+    // Vender tempo que o tecto ia deitar fora seria vender nada.
+    if (item.tempo != null && bolsa.noTecto) return ResultadoDaCompra.noTecto;
+
+    final paga = _carteira.comGasto(item.moeda, item.preco);
+    if (paga == null) return ResultadoDaCompra.semSaldo;
+    _carteira = paga;
+
+    if (item.tempo != null) {
+      _ganharTempoDeJogo(item.tempo!);
+    } else {
+      _coleccao = _coleccao.com(item.id);
+      // Uma cara acabada de comprar veste-se sozinha. Comprá-la e não a ver
+      // em lado nenhum seria o pior momento possível para pedir mais um
+      // toque à criança.
+      final p = item.pose;
+      if (p != null) _coleccao = _coleccao.aUsar(p);
+    }
+
+    notifyListeners();
+    _gravar();
+    return ResultadoDaCompra.feito;
+  }
+
+  /// Veste uma pose já comprada, ou volta à de fábrica com nulo.
+  void escolherRoby(RobyPose? pose) {
+    final nova = _coleccao.aUsar(pose);
+    if (nova.escolhida == _coleccao.escolhida) return;
+    _coleccao = nova;
+    notifyListeners();
+    _gravar();
+  }
+
+  /* ---------------- Conquistas ----------------
+     Medalhas por marcos. Ver [Conquista]; a faixa que as mostra é o
+     `widgets/faixa_conquista.dart`. */
+
+  final Set<Conquista> _conquistas = {};
+
+  /// As que ainda não foram mostradas à criança. Uma fila e não uma só: um
+  /// nível pode fechar a unidade, a disciplina e a classe ao mesmo tempo.
+  final List<Conquista> _porMostrar = [];
+
+  Set<Conquista> get conquistas => Set.unmodifiable(_conquistas);
+  bool ganhou(Conquista c) => _conquistas.contains(c);
+
+  Conquista? get proximaConquista =>
+      _porMostrar.isEmpty ? null : _porMostrar.first;
+
+  /// Tira a primeira da fila. Chamado pela faixa quando começa a mostrá-la.
+  Conquista? tirarConquista() =>
+      _porMostrar.isEmpty ? null : _porMostrar.removeAt(0);
+
+  /// Só para os testes: põe uma medalha na fila sem a ganhar.
+  ///
+  /// Serve para pôr a faixa a mostrar a de título mais comprido em todos os
+  /// tamanhos de ecrã. Sem isto, só se conseguia ver a faixa das medalhas
+  /// fáceis — e é justamente a comprida que transborda.
+  @visibleForTesting
+  void encomendarFaixa(Conquista c) {
+    _porMostrar.add(c);
+    notifyListeners();
+  }
+
+  /// Perguntas que estavam nos Guardados e passaram a certas.
+  int _recuperadas = 0;
+
+  /* ---- Estudar antes de jogar ----
+     Guarda-se o primeiro acto de cada dia, e não a ordem toda: o que
+     interessa é se a criança abriu a escola antes da sala de jogos, e o
+     terceiro ou quarto acto do dia já não diz nada sobre isso. */
+
+  /// O dia a que o registo abaixo pertence.
+  String? _diaDoActo;
+
+  /// Dias a fio em que o primeiro acto foi estudar.
+  int _diasAEstudarPrimeiro = 0;
+
+  /// O último dia contado, para saber se a corrente se partiu.
+  String? _ultimoDiaAEstudarPrimeiro;
+
+  void _registarActo({required bool estudo}) {
+    final hoje = _hoje;
+    if (_diaDoActo == hoje) return; // já se sabe como o dia começou
+    _diaDoActo = hoje;
+
+    if (!estudo) {
+      // Jogou primeiro: a corrente parte-se hoje.
+      _diasAEstudarPrimeiro = 0;
+      _ultimoDiaAEstudarPrimeiro = null;
+      return;
+    }
+
+    final ontem = Sequencia.iso(relogio().subtract(const Duration(days: 1)));
+    _diasAEstudarPrimeiro =
+        _ultimoDiaAEstudarPrimeiro == ontem ? _diasAEstudarPrimeiro + 1 : 1;
+    _ultimoDiaAEstudarPrimeiro = hoje;
+  }
+
+  /// Os números de que as condições precisam.
+  RetratoDoAluno get retrato {
+    var unidades = 0, disciplinas = 0, classes = 0;
+    final feitasPorClasse = <String, int>{};
+    final cursosPorClasse = <String, int>{};
+
+    for (final c in conteudo.cursos) {
+      cursosPorClasse[c.classe] = (cursosPorClasse[c.classe] ?? 0) + 1;
+      var todasAsUnidades = c.units.isNotEmpty;
+      for (final u in c.units) {
+        final feita = u.niveis.isNotEmpty &&
+            u.niveis.every((n) => progresso.containsKey('${c.id}:${u.id}:${n.id}'));
+        if (feita) {
+          unidades++;
+        } else {
+          todasAsUnidades = false;
+        }
+      }
+      if (todasAsUnidades) {
+        disciplinas++;
+        feitasPorClasse[c.classe] = (feitasPorClasse[c.classe] ?? 0) + 1;
+      }
+    }
+    for (final entrada in cursosPorClasse.entries) {
+      if (feitasPorClasse[entrada.key] == entrada.value) classes++;
+    }
+
+    return RetratoDoAluno(
+      niveis: progresso.length,
+      unidades: unidades,
+      disciplinas: disciplinas,
+      classes: classes,
+      perfeitos: progresso.values.where((v) => v == 100).length,
+      recuperadas: _recuperadas,
+      diasSeguidos: streak,
+      diasAEstudarPrimeiro: _diasAEstudarPrimeiro,
+      degraus: {for (final j in Jogo.values) j: nivelDe(j)},
+    );
+  }
+
+  /// Lê medalhas de uma lista de nomes, ignorando as que já não existem.
+  ///
+  /// Uma conquista apagada numa versão futura não pode rebentar o arranque
+  /// de quem a tinha ganho.
+  void _lerConquistas(List? nomes) {
+    for (final n in (nomes ?? const []).cast<String>()) {
+      for (final c in Conquista.values) {
+        if (c.name == n) _conquistas.add(c);
+      }
+    }
+  }
+
+  /// Vê o que se ganhou de novo, paga os cristais e põe na fila da faixa.
+  ///
+  /// Com [mostrar] falso não entra nada na fila. É assim que se chama uma
+  /// vez ao arrancar: quem já tinha meia classe feita quando esta versão
+  /// chegou recebe as medalhas e os cristais que merecia, mas não leva com
+  /// vinte faixas seguidas na cara.
+  void _verificarConquistas({bool mostrar = true}) {
+    final ganhas = conquistasDe(retrato);
+    for (final c in Conquista.values) {
+      if (!ganhas.contains(c) || !_conquistas.add(c)) continue;
+      if (c.cristais > 0) {
+        _pagarMarco('conquista:${c.name}', Moeda.cc, c.cristais);
+      }
+      if (mostrar) _porMostrar.add(c);
+    }
+  }
+
   /// Perguntas que a criança errou, guardadas para rever.
   ///
   /// É o conjunto de treino com mais valor que existe: exercitar o que já se
@@ -54,6 +398,8 @@ class AppState extends ChangeNotifier {
   /// Chamado quando a criança acerta a pergunta numa revisão: sai da lista.
   void marcarAprendida(String enunciado) {
     if (erradas.remove(enunciado)) {
+      _recuperadas++;
+      _verificarConquistas();
       notifyListeners();
       _gravar();
     }
@@ -152,7 +498,7 @@ class AppState extends ChangeNotifier {
   /// Dias seguidos de estudo. Conta níveis concluídos, não aberturas da app,
   /// como o roadmap pede. A contagem vive em [Sequencia], que é testada à
   /// parte com meses inteiros de calendário.
-  int get streak => _sequencia.visivelEm(DateTime.now());
+  int get streak => _sequencia.visivelEm(relogio());
 
   bool nivelFeito(int i) {
     final lv = niveis[i];
@@ -200,6 +546,16 @@ class AppState extends ChangeNotifier {
         }
         final p = (j['progresso'] as Map?) ?? {};
         p.forEach((k, v) => progresso['$k'] = v as int);
+        _lerNiveisDosJogos(j['jogos'] as Map?);
+        _bolsa = BolsaDeTempo.deJson(j['bolsa'] as Map<String, dynamic>?) ??
+            _bolsa;
+        _carteira = Carteira.deJson(j['carteira'] as Map<String, dynamic>?);
+        _coleccao = Coleccao.deJson(j['coleccao'] as Map<String, dynamic>?);
+        _marcosPagos.addAll(((j['marcos'] as List?) ?? []).cast<String>());
+        _lerConquistas(j['conquistas'] as List?);
+        _recuperadas = (j['recuperadas'] ?? 0) as int;
+        _diasAEstudarPrimeiro = (j['estudouPrimeiro'] ?? 0) as int;
+        _ultimoDiaAEstudarPrimeiro = j['diaEstudouPrimeiro'] as String?;
         erradas.addAll(((j['erradas'] as List?) ?? []).cast<String>());
         _diaDasVidas = j['diaDasVidas'] as String?;
         _vezesSemVidas = (j['vezesSemVidas'] ?? 0) as int;
@@ -210,6 +566,10 @@ class AppState extends ChangeNotifier {
       }
     }
     _reporVidasSeMudouODia();
+    // Sem mostrar: quem já tinha meia classe feita quando esta versão
+    // chegou recebe as medalhas e os cristais que merecia, mas não leva com
+    // vinte faixas seguidas na cara ao abrir a app.
+    _verificarConquistas(mostrar: false);
     verificarFimDoBloqueio();
     pronto = true;
     notifyListeners();
@@ -266,6 +626,15 @@ class AppState extends ChangeNotifier {
         'lives': lives,
         'cursoId': cursoId,
         'progresso': progresso,
+        'jogos': _niveisParaJson(),
+        'bolsa': bolsa.paraJson(),
+        'carteira': _carteira.paraJson(),
+        'coleccao': _coleccao.paraJson(),
+        'marcos': _marcosPagos.toList()..sort(),
+        'conquistas': _conquistas.map((c) => c.name).toList()..sort(),
+        'recuperadas': _recuperadas,
+        'estudouPrimeiro': _diasAEstudarPrimeiro,
+        'diaEstudouPrimeiro': _ultimoDiaAEstudarPrimeiro,
         'erradas': erradas.toList(),
         'diaDasVidas': _diaDasVidas,
         'vezesSemVidas': _vezesSemVidas,
@@ -301,6 +670,13 @@ class AppState extends ChangeNotifier {
     'sequencia': _sequencia.paraJson(),
     'cursoId': cursoId,
     'progresso': progresso,
+    'jogos': _niveisParaJson(),
+    'bolsa': bolsa.paraJson(),
+    'carteira': _carteira.paraJson(),
+    'coleccao': _coleccao.paraJson(),
+    'marcos': _marcosPagos.toList()..sort(),
+    'conquistas': _conquistas.map((c) => c.name).toList()..sort(),
+    'recuperadas': _recuperadas,
     'erradas': erradas.toList(),
   };
 
@@ -336,6 +712,43 @@ class AppState extends ChangeNotifier {
       final valor = (v as num).toInt();
       progresso[chave] = math.max(progresso[chave] ?? 0, valor);
     });
+
+    // O degrau de cada joguinho fica pelo mais alto dos dois. Jogar sem rede
+    // num telemóvel e depois entrar na conta não pode fazer descer a
+    // escadaria — é a mesma regra do XP e do progresso.
+    final jN = (n['jogos'] as Map?) ?? {};
+    for (final jogo in Jogo.values) {
+      final v = jN[jogo.name];
+      if (v is int) {
+        _niveisDosJogos[jogo] =
+            math.min(math.max(nivelDe(jogo), v), nivelMaximo);
+      }
+    }
+
+    // A bolsa junta-se pelo maior dos dois em cada número — o que se
+    // estudou noutro telemóvel conta, e o que lá se jogou também. Ver
+    // [BolsaDeTempo.fundirCom].
+    final bN = BolsaDeTempo.deJson(n['bolsa'] as Map<String, dynamic>?);
+    if (bN != null) _bolsa = bolsa.fundirCom(bN.noDia(_hoje));
+
+    // A carteira fica pelo maior de cada total (ganho e gasto de cada
+    // moeda), a colecção junta-se por união e os marcos também: comprar uma
+    // cara noutro telemóvel não a pode fazer desaparecer, e um marco já pago
+    // não pode voltar a pagar.
+    _carteira = _carteira.fundirCom(
+      Carteira.deJson(n['carteira'] as Map<String, dynamic>?),
+    );
+    _coleccao = _coleccao.fundirCom(
+      Coleccao.deJson(n['coleccao'] as Map<String, dynamic>?),
+    );
+    _marcosPagos.addAll(((n['marcos'] as List?) ?? []).cast<String>());
+
+    // As medalhas juntam-se e NUNCA desaparecem: um telemóvel com A e B e
+    // outro com B e C ficam os dois com A, B e C. Uma medalha que some numa
+    // sincronização é a coisa que faz uma criança deixar de acreditar no
+    // ecrã. O mesmo vale para o que já se recuperou dos Guardados.
+    _lerConquistas(n['conquistas'] as List?);
+    _recuperadas = math.max(_recuperadas, (n['recuperadas'] ?? 0) as int);
 
     // As erradas juntam-se as duas: uma pergunta falhada noutro telemóvel
     // continua por rever neste. Sai da lista quando for acertada.
@@ -469,7 +882,8 @@ class AppState extends ChangeNotifier {
   /// criança.
   void concluirTreino(int acertos) {
     xp += acertos * xpPorAcerto;
-    _sequencia = _sequencia.comActividadeEm(DateTime.now());
+    _sequencia = _sequencia.comActividadeEm(relogio());
+    _verificarConquistas();
     notifyListeners();
     _gravar();
   }
@@ -482,7 +896,7 @@ class AppState extends ChangeNotifier {
   /// criança fora da app, que seria o pior dos dois mundos numa app de
   /// escola.
   void _reporVidasSeMudouODia() {
-    final hoje = Sequencia.iso(DateTime.now());
+    final hoje = Sequencia.iso(relogio());
     if (_diaDasVidas == hoje) return;
     _diaDasVidas = hoje;
     lives = maxLives;
@@ -512,10 +926,49 @@ class AppState extends ChangeNotifier {
     final chave = chaveDe(lv.unit, lv.nivel);
     progresso[chave] = math.max(progresso[chave] ?? 0, pct);
     xp += acertos * xpPorAcerto + xpPorNivel;
-    _sequencia = _sequencia.comActividadeEm(DateTime.now());
+    // Sem um único erro rende mais. É o que faz a criança voltar a um nível
+    // que já passou para o fazer melhor, em vez de o passar à tangente.
+    _ganharTempoDeJogo(
+      pct == 100 ? BolsaDeTempo.porNivelPerfeito : BolsaDeTempo.porNivel,
+    );
+    // Ouro sempre, e nunca zero: quem tropeçou num nível difícil já teve o
+    // castigo de o ter tropeçado.
+    _carteira = _carteira.comGanho(Moeda.gc, Carteira.ouroPorNivel(pct));
+    _sequencia = _sequencia.comActividadeEm(relogio());
+    _registarActo(estudo: true);
+    _pagarMarcosDeCristal(lv.unit);
+    _verificarConquistas();
     unawaited(Nuvem.i.contarLicao());
     notifyListeners();
     _gravar();
+  }
+
+  /// Os cristais, que só saem em marcos.
+  ///
+  /// Dois, por agora: fechar uma unidade inteira sem um único erro, e cada
+  /// sete dias seguidos de estudo. Os das conquistas entram quando elas
+  /// existirem (§2 do SPEC).
+  void _pagarMarcosDeCristal(Unidade unidade) {
+    final perfeita = unidade.niveis.every(
+      (n) => (progresso[chaveDe(unidade, n)] ?? 0) == 100,
+    );
+    if (perfeita) {
+      _pagarMarco(
+        'unidade:${curso.id}:${unidade.id}',
+        Moeda.cc,
+        Carteira.cristalPorUnidadePerfeita,
+      );
+    }
+
+    // Uma semana seguida vale um cristal, e a segunda semana vale outro. Os
+    // marcos ficam guardados pelo NÚMERO da semana, e não por um contador:
+    // assim quem já tinha vinte e um dias antes desta versão não recebe três
+    // cristais de uma vez, e quem perde a sequência e recomeça não volta a
+    // ser pago pela primeira.
+    final semanas = _sequencia.visivelEm(relogio()) ~/ 7;
+    for (var w = 1; w <= semanas; w++) {
+      _pagarMarco('semana:$w', Moeda.cc, Carteira.cristalPorSemanaSeguida);
+    }
   }
 
   void reporVidas() {

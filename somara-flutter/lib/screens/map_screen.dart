@@ -174,7 +174,9 @@ class _MapScreenState extends State<MapScreen>
                         _casaLateral(st, laterais[i], complementos[i].tipo),
                       RobyToken(
                         position: cells[actual].centro,
-                        pose: RobyPose.token,
+                        // A cara que a criança comprou e vestiu. É aqui que
+                        // ela a vê — é para isto que se juntam cristais.
+                        pose: st.robyEscolhido,
                         size: 58,
                         // O som sai quando os pés tocam a casa, não quando a
                         // animação acaba — a mola de recuperação ainda corre
