@@ -312,6 +312,9 @@ se não houver nada, não aparece.
 
 ## 6. Moedas e loja do Roby
 
+> **Feito na 0.27.0.** Os preços e as regras de ganho ficaram como estavam
+> propostos. O que se decidiu ao escrever está no fim da secção.
+
 **[decidido, ideia do utilizador] Duas moedas:**
 
 | | nome | vale | compra |
@@ -379,6 +382,43 @@ fim das lições.
    alguém puser à venda uma pose que não existe).
 3. Fusão na nuvem: colecções diferentes nos dois telemóveis → união, nunca perda.
 4. Emulador: comprar uma pose, vê-la aparecer no fim da lição seguinte.
+
+*(1 a 3 ficaram todos em `test/loja_test.dart`, um ficheiro só — são a mesma
+funcionalidade e partem-se juntos.)*
+
+### O que se decidiu ao escrever
+
+- **23 poses à venda, não 24.** Copiaram-se 14 caras e 9 poses de corpo
+  inteiro. Ficaram de fora as variantes `_b` e `_c` de expressões que a app
+  já tem (orgulhoso, confuso, agradecido) — vender à criança uma segunda
+  versão de uma cara que ela já tem não é colecção, é ruído. **+28,7 MB de
+  assets**, ao abrigo da regra do `CLAUDE.md`.
+- **Descodificação, não redimensionamento.** Os ficheiros são de 1254 px e
+  ficam como estão. O que se acrescentou foi o `RobyImagem`, que descodifica
+  ao tamanho do ecrã: uma grelha da loja com vinte poses em tamanho real
+  mandava mais de cem megabytes de bitmap para a memória de um telemóvel de
+  mil meticais. É um problema de memória em uso, não de peso do APK.
+- **O ganho e o gasto guardam-se separados**, como na bolsa de tempo, e a
+  nuvem funde os quatro totais pelo maior. Ficar pelo maior saldo dava a
+  quem tivesse dois telemóveis uma máquina de cristais.
+- **Os marcos já pagos ficam num conjunto.** `unidade:mat-1c:u1`,
+  `semana:3`. Sem isso, refazer a última lição de uma unidade perfeita era
+  um cristal de cada vez, e a criança que descobrisse isso nunca mais
+  estudava. O conjunto serve também as conquistas do §2.
+- **Um relógio só no `AppState`.** A sequência lia `DateTime.now()` e o marco
+  da semana lia o relógio injectável: com um relógio falso as duas datas
+  estavam em anos diferentes e o cristal da semana nunca chegava.
+- **Não se vendem minutos com a bolsa no tecto do dia** — a compra é recusada
+  com a razão escrita, e o dinheiro fica onde estava. Vender tempo que o
+  tecto ia deitar fora seria vender nada; deixar a compra furar o tecto
+  seria desfazer o §3.
+- **Comprar uma cara veste-a logo**, e um segundo toque despe-a. Comprar e
+  não ver nada mudar era o pior momento possível para pedir mais um toque.
+- **A porta da loja está no Perfil**, com a carteira à vista. Não se
+  acrescentou nada à barra de estado: com corações, XP, sequência e classe,
+  a 320 dp já não cabe mais nada.
+- **Ainda não há conquistas a pagar cristais** (§2 não existe). As duas
+  fontes vivas são a unidade perfeita e cada sete dias seguidos.
 
 ---
 

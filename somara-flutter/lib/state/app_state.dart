@@ -4,12 +4,15 @@ import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/bolsa_de_tempo.dart';
+import '../models/carteira.dart';
+import '../models/coleccao.dart';
 import '../models/content.dart';
 import '../models/escadaria.dart';
 import '../models/sequencia.dart';
 import '../services/conteudo_remoto.dart';
 import '../services/nuvem.dart';
 import '../services/sons.dart';
+import '../widgets/roby.dart';
 
 /// Estado do aluno — o equivalente ao localStorage `somara_state_v2` da
 /// versão web, mas tipado e persistido com shared_preferences.
@@ -84,8 +87,13 @@ class AppState extends ChangeNotifier {
 
   BolsaDeTempo _bolsa = const BolsaDeTempo(dia: '');
 
-  /// O relógio da bolsa. Só os testes lhe mexem — sem isto não há maneira
-  /// de provar que ela se repõe à meia-noite sem esperar pela meia-noite.
+  /// O relógio da app. Só os testes lhe mexem — sem isto não há maneira de
+  /// provar que a bolsa se repõe à meia-noite, nem que sete dias seguidos
+  /// de estudo dão um cristal, sem esperar sete dias.
+  ///
+  /// É um só de propósito. Enquanto a sequência lia `DateTime.now()` e o
+  /// marco da semana lia este, as duas datas podiam estar em anos
+  /// diferentes e o cristal da semana nunca chegava.
   @visibleForTesting
   DateTime Function() relogio = DateTime.now;
 
@@ -161,6 +169,76 @@ class AppState extends ChangeNotifier {
   /// bolsa deixava de querer dizer nada.
   void _ganharTempoDeJogo(Duration d) {
     _bolsa = bolsa.comGanho(d);
+  }
+
+  /* ---------------- Moedas, loja e colecção ----------------
+     O Ouro entra todos os dias e sai depressa; o Cristal é raro e guarda-se.
+     Ver [Carteira] para o porquê de serem duas. */
+
+  Carteira _carteira = const Carteira();
+  Coleccao _coleccao = const Coleccao();
+
+  /// Os marcos que já foram pagos, para não pagarem duas vezes.
+  ///
+  /// Um só conjunto para todos os tipos (`unidade:...`, `semana:3`), com uma
+  /// só regra de fusão — união. Com um contador por tipo, refazer uma
+  /// unidade ou sincronizar dois telemóveis dava cristais do ar.
+  final Set<String> _marcosPagos = {};
+
+  Carteira get carteira => _carteira;
+  Coleccao get coleccao => _coleccao;
+
+  /// A cara do Roby que a criança escolheu. Cai na de fábrica se a escolhida
+  /// não for dela.
+  RobyPose get robyEscolhido => _coleccao.roby;
+
+  /// Paga um marco uma vez só. Devolve verdadeiro se pagou agora.
+  bool _pagarMarco(String chave, Moeda moeda, int quanto) {
+    if (!_marcosPagos.add(chave)) return false;
+    _carteira = _carteira.comGanho(moeda, quanto);
+    return true;
+  }
+
+  /// O que aconteceu a uma tentativa de compra.
+  ///
+  /// Um enum e não um booleano porque as três recusas pedem frases
+  /// diferentes, e "não deu" à frente de uma criança que juntou cristais
+  /// durante duas semanas não é resposta.
+  ResultadoDaCompra comprar(ItemDaLoja item) {
+    if (!item.consumivel && _coleccao.compradas.contains(item.id)) {
+      return ResultadoDaCompra.jaTem;
+    }
+    // Minutos comprados entram na mesma bolsa e respeitam o mesmo tecto.
+    // Vender tempo que o tecto ia deitar fora seria vender nada.
+    if (item.tempo != null && bolsa.noTecto) return ResultadoDaCompra.noTecto;
+
+    final paga = _carteira.comGasto(item.moeda, item.preco);
+    if (paga == null) return ResultadoDaCompra.semSaldo;
+    _carteira = paga;
+
+    if (item.tempo != null) {
+      _ganharTempoDeJogo(item.tempo!);
+    } else {
+      _coleccao = _coleccao.com(item.id);
+      // Uma cara acabada de comprar veste-se sozinha. Comprá-la e não a ver
+      // em lado nenhum seria o pior momento possível para pedir mais um
+      // toque à criança.
+      final p = item.pose;
+      if (p != null) _coleccao = _coleccao.aUsar(p);
+    }
+
+    notifyListeners();
+    _gravar();
+    return ResultadoDaCompra.feito;
+  }
+
+  /// Veste uma pose já comprada, ou volta à de fábrica com nulo.
+  void escolherRoby(RobyPose? pose) {
+    final nova = _coleccao.aUsar(pose);
+    if (nova.escolhida == _coleccao.escolhida) return;
+    _coleccao = nova;
+    notifyListeners();
+    _gravar();
   }
 
   /// Perguntas que a criança errou, guardadas para rever.
@@ -278,7 +356,7 @@ class AppState extends ChangeNotifier {
   /// Dias seguidos de estudo. Conta níveis concluídos, não aberturas da app,
   /// como o roadmap pede. A contagem vive em [Sequencia], que é testada à
   /// parte com meses inteiros de calendário.
-  int get streak => _sequencia.visivelEm(DateTime.now());
+  int get streak => _sequencia.visivelEm(relogio());
 
   bool nivelFeito(int i) {
     final lv = niveis[i];
@@ -329,6 +407,9 @@ class AppState extends ChangeNotifier {
         _lerNiveisDosJogos(j['jogos'] as Map?);
         _bolsa = BolsaDeTempo.deJson(j['bolsa'] as Map<String, dynamic>?) ??
             _bolsa;
+        _carteira = Carteira.deJson(j['carteira'] as Map<String, dynamic>?);
+        _coleccao = Coleccao.deJson(j['coleccao'] as Map<String, dynamic>?);
+        _marcosPagos.addAll(((j['marcos'] as List?) ?? []).cast<String>());
         erradas.addAll(((j['erradas'] as List?) ?? []).cast<String>());
         _diaDasVidas = j['diaDasVidas'] as String?;
         _vezesSemVidas = (j['vezesSemVidas'] ?? 0) as int;
@@ -397,6 +478,9 @@ class AppState extends ChangeNotifier {
         'progresso': progresso,
         'jogos': _niveisParaJson(),
         'bolsa': bolsa.paraJson(),
+        'carteira': _carteira.paraJson(),
+        'coleccao': _coleccao.paraJson(),
+        'marcos': _marcosPagos.toList()..sort(),
         'erradas': erradas.toList(),
         'diaDasVidas': _diaDasVidas,
         'vezesSemVidas': _vezesSemVidas,
@@ -434,6 +518,9 @@ class AppState extends ChangeNotifier {
     'progresso': progresso,
     'jogos': _niveisParaJson(),
     'bolsa': bolsa.paraJson(),
+    'carteira': _carteira.paraJson(),
+    'coleccao': _coleccao.paraJson(),
+    'marcos': _marcosPagos.toList()..sort(),
     'erradas': erradas.toList(),
   };
 
@@ -487,6 +574,18 @@ class AppState extends ChangeNotifier {
     // [BolsaDeTempo.fundirCom].
     final bN = BolsaDeTempo.deJson(n['bolsa'] as Map<String, dynamic>?);
     if (bN != null) _bolsa = bolsa.fundirCom(bN.noDia(_hoje));
+
+    // A carteira fica pelo maior de cada total (ganho e gasto de cada
+    // moeda), a colecção junta-se por união e os marcos também: comprar uma
+    // cara noutro telemóvel não a pode fazer desaparecer, e um marco já pago
+    // não pode voltar a pagar.
+    _carteira = _carteira.fundirCom(
+      Carteira.deJson(n['carteira'] as Map<String, dynamic>?),
+    );
+    _coleccao = _coleccao.fundirCom(
+      Coleccao.deJson(n['coleccao'] as Map<String, dynamic>?),
+    );
+    _marcosPagos.addAll(((n['marcos'] as List?) ?? []).cast<String>());
 
     // As erradas juntam-se as duas: uma pergunta falhada noutro telemóvel
     // continua por rever neste. Sai da lista quando for acertada.
@@ -620,7 +719,7 @@ class AppState extends ChangeNotifier {
   /// criança.
   void concluirTreino(int acertos) {
     xp += acertos * xpPorAcerto;
-    _sequencia = _sequencia.comActividadeEm(DateTime.now());
+    _sequencia = _sequencia.comActividadeEm(relogio());
     notifyListeners();
     _gravar();
   }
@@ -633,7 +732,7 @@ class AppState extends ChangeNotifier {
   /// criança fora da app, que seria o pior dos dois mundos numa app de
   /// escola.
   void _reporVidasSeMudouODia() {
-    final hoje = Sequencia.iso(DateTime.now());
+    final hoje = Sequencia.iso(relogio());
     if (_diaDasVidas == hoje) return;
     _diaDasVidas = hoje;
     lives = maxLives;
@@ -668,10 +767,42 @@ class AppState extends ChangeNotifier {
     _ganharTempoDeJogo(
       pct == 100 ? BolsaDeTempo.porNivelPerfeito : BolsaDeTempo.porNivel,
     );
-    _sequencia = _sequencia.comActividadeEm(DateTime.now());
+    // Ouro sempre, e nunca zero: quem tropeçou num nível difícil já teve o
+    // castigo de o ter tropeçado.
+    _carteira = _carteira.comGanho(Moeda.gc, Carteira.ouroPorNivel(pct));
+    _sequencia = _sequencia.comActividadeEm(relogio());
+    _pagarMarcosDeCristal(lv.unit);
     unawaited(Nuvem.i.contarLicao());
     notifyListeners();
     _gravar();
+  }
+
+  /// Os cristais, que só saem em marcos.
+  ///
+  /// Dois, por agora: fechar uma unidade inteira sem um único erro, e cada
+  /// sete dias seguidos de estudo. Os das conquistas entram quando elas
+  /// existirem (§2 do SPEC).
+  void _pagarMarcosDeCristal(Unidade unidade) {
+    final perfeita = unidade.niveis.every(
+      (n) => (progresso[chaveDe(unidade, n)] ?? 0) == 100,
+    );
+    if (perfeita) {
+      _pagarMarco(
+        'unidade:${curso.id}:${unidade.id}',
+        Moeda.cc,
+        Carteira.cristalPorUnidadePerfeita,
+      );
+    }
+
+    // Uma semana seguida vale um cristal, e a segunda semana vale outro. Os
+    // marcos ficam guardados pelo NÚMERO da semana, e não por um contador:
+    // assim quem já tinha vinte e um dias antes desta versão não recebe três
+    // cristais de uma vez, e quem perde a sequência e recomeça não volta a
+    // ser pago pela primeira.
+    final semanas = _sequencia.visivelEm(relogio()) ~/ 7;
+    for (var w = 1; w <= semanas; w++) {
+      _pagarMarco('semana:$w', Moeda.cc, Carteira.cristalPorSemanaSeguida);
+    }
   }
 
   void reporVidas() {

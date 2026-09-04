@@ -113,7 +113,20 @@ class _CompleteScreenState extends State<CompleteScreen>
                         ],
                       ),
                       clipBehavior: Clip.antiAlias,
-                      child: Image.asset(RobyPose.graduate.path, fit: BoxFit.cover),
+                      // A cara que a criança comprou aparece aqui, no melhor
+                      // momento que a app tem para lha mostrar. As poses de
+                      // corpo inteiro entram inteiras (`contain`); os bustos
+                      // quadrados enchem a caixa como sempre encheram.
+                      child: RobyImagem(
+                        st.robyEscolhido == RobyPose.token
+                            ? RobyPose.graduate
+                            : st.robyEscolhido,
+                        largura: 168,
+                        fit: st.robyEscolhido.retrato
+                            ? BoxFit.contain
+                            : BoxFit.cover,
+                        alinhamento: Alignment.topCenter,
+                      ),
                     ),
                     const SizedBox(height: 26),
                     Text(avulsa ? 'Treino terminado!' : 'Nível concluído!',
