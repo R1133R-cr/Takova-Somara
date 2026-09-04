@@ -10991,6 +10991,528 @@
    ]
   },
   {
+   "id": "ev-5c",
+   "disciplina": "Educação Visual e Ofícios",
+   "abrev": "Ed. Visual",
+   "classe": "5ª classe",
+   "tag": "EV",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Desenho e Pintura",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Higiene e segurança",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Antes da aula de desenho, deves verificar se:",
+         "options": [
+          "Tens os lápis afiados",
+          "O quadro está limpo",
+          "Há luz na sala"
+         ],
+         "a": 0,
+         "audio": "cebf201e7b02.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de pintar, a mesa deve ser:",
+         "options": [
+          "Forrada, para não se sujar",
+          "Molhada",
+          "Encostada à parede"
+         ],
+         "a": 0,
+         "audio": "f5b75eb76377.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O espaço de trabalho limpa-se:",
+         "options": [
+          "Constantemente, e fica pronto para a aula seguinte",
+          "Uma vez por mês",
+          "Só quando o professor manda"
+         ],
+         "a": 0,
+         "audio": "0792d11ab5e2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os materiais de uma actividade juntam-se:",
+         "options": [
+          "Antes de a começar",
+          "A meio, quando faltarem",
+          "No fim"
+         ],
+         "a": 0,
+         "audio": "7745229203a5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Antes de comecar junta-se tudo o que se vai precisar, e no fim deixa-se o espaco limpo para quem vem a seguir.",
+        "exemplo": "Antes da aula: os lapis afiados. Antes de pintar: a mesa forrada.",
+        "lembra": "Preparar antes custa um minuto; limpar depois custa a aula toda.",
+        "audio": "447ff5ad660d.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Tipos de desenho",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Desenhar aquilo que se tem à frente chama-se desenho:",
+         "options": [
+          "De observação",
+          "Com tema dado",
+          "Livre"
+         ],
+         "a": 0,
+         "audio": "d1ff5f0c5b77.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando o professor diz o assunto, o desenho é:",
+         "options": [
+          "Com tema dado",
+          "De observação",
+          "Livre"
+         ],
+         "a": 0,
+         "audio": "c83ca84dac12.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma ilustração serve para:",
+         "options": [
+          "Acompanhar e explicar um texto",
+          "Substituir o texto",
+          "Decorar a capa apenas"
+         ],
+         "a": 0,
+         "audio": "94e0179edc70.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um painel colectivo é feito:",
+         "options": [
+          "Por vários alunos, em conjunto",
+          "Por um aluno só",
+          "Pelo professor"
+         ],
+         "a": 0,
+         "audio": "a38d5a4f330f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Ha varias maneiras de desenhar. De observacao e desenhar o que se tem a frente; com tema dado e desenhar o assunto que o professor disse.",
+        "exemplo": "A ilustracao acompanha um texto e ajuda a explica-lo. Um painel colectivo faz-se com os colegas todos.",
+        "lembra": "Olha primeiro, desenha depois.",
+        "audio": "16c251456a03.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Impressão, recorte e dobragem",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Imprimir e estampar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um carimbo serve para:",
+         "options": [
+          "Repetir o mesmo desenho muitas vezes",
+          "Cortar o papel em tiras",
+          "Colar duas folhas"
+         ],
+         "a": 0,
+         "audio": "1778df844b96.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Estampar é passar um desenho:",
+         "options": [
+          "De uma superfície para outra",
+          "De uma cor para outra",
+          "De um livro para a cabeça"
+         ],
+         "a": 0,
+         "audio": "7182044571d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um carimbo pode fazer-se com:",
+         "options": [
+          "Uma batata cortada ao meio",
+          "Uma folha de papel",
+          "Um copo de água"
+         ],
+         "a": 0,
+         "audio": "df4b1cde73f1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de estampar põe-se por baixo:",
+         "options": [
+          "Uma protecção, para não sujar a mesa",
+          "Mais tinta",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "18c1c505ac67.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Imprimir e estampar e passar um desenho de uma superficie para outra, e repeti-lo quantas vezes se quiser.",
+        "exemplo": "Uma batata cortada ao meio e mergulhada em tinta faz um carimbo.",
+        "lembra": "Poe sempre uma proteccao por baixo antes de comecar.",
+        "audio": "ba13b9399de0.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Recortar, colar e dobrar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Ao passar a tesoura a um colega, seguras:",
+         "options": [
+          "Pelas pontas, dando-lhe o cabo",
+          "Pelo cabo, dando-lhe as pontas",
+          "Atiras devagar"
+         ],
+         "a": 0,
+         "audio": "8be60f39be77.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na dobragem, o papel é:",
+         "options": [
+          "Dobrado, sem se cortar",
+          "Cortado ao meio",
+          "Molhado primeiro"
+         ],
+         "a": 0,
+         "audio": "26f35d04c37d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Picotar é fazer no papel:",
+         "options": [
+          "Muitos furos pequenos seguidos",
+          "Um corte só",
+          "Uma dobra ao meio"
+         ],
+         "a": 0,
+         "audio": "b4ecb464ec21.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa colagem, a cola põe-se:",
+         "options": [
+          "Pouca e bem espalhada",
+          "Muita, aos montes",
+          "Só num canto"
+         ],
+         "a": 0,
+         "audio": "d3c3f1c9d1d3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O papel corta-se, dobra-se, pica-se e cola-se. Cada uma destas e uma tecnica com a sua regra.",
+        "exemplo": "Na dobragem o papel nao se corta; no picotado fazem-se muitos furos pequenos seguidos.",
+        "lembra": "A tesoura passa-se pelo cabo, com as pontas seguras na nossa mao.",
+        "audio": "e6e30b9e0a55.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Modelagem",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Modelar e moldar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Modelagem é a técnica que permite:",
+         "options": [
+          "Dar forma a uma matéria-prima modelável",
+          "Cortar madeira",
+          "Tecer fios"
+         ],
+         "a": 0,
+         "audio": "91dd74b9b53a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Moldagem é reproduzir um objecto através de:",
+         "options": [
+          "Um molde",
+          "Um desenho",
+          "Uma fotografia"
+         ],
+         "a": 0,
+         "audio": "a4d8b048ec65.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é a vantagem da modelagem?",
+         "options": [
+          "Vê-se o objecto de todos os lados",
+          "É mais rápida que o desenho",
+          "Não suja as mãos"
+         ],
+         "a": 0,
+         "audio": "b468c21dea7e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antigamente, a modelagem fazia-se sobretudo com:",
+         "options": [
+          "Barro",
+          "Plástico",
+          "Vidro"
+         ],
+         "a": 0,
+         "audio": "52f69b16dc19.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada técnica ao que ela faz.",
+         "pairs": [
+          [
+           "Modelagem",
+           "Dar forma"
+          ],
+          [
+           "Moldagem",
+           "Reproduzir com molde"
+          ]
+         ],
+         "audio": "4b281245d6f7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Modelagem e dar forma a uma materia-prima modelavel. Moldagem e reproduzir um objecto atraves de um molde.",
+        "exemplo": "Um vaso feito a mao com barro e modelagem; dez vasos iguais tirados do mesmo molde sao moldagem.",
+        "lembra": "A vantagem da modelagem: ve-se a peca de todos os lados.",
+        "audio": "20224dd47770.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Preparar o barro",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para tirar as pedras do barro, usa-se:",
+         "options": [
+          "Uma rede, para peneirar",
+          "Água a ferver",
+          "Cola"
+         ],
+         "a": 0,
+         "audio": "cc7ec42f2913.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Depois de misturar o barro com água, é preciso:",
+         "options": [
+          "Amassar, até a massa ficar homogénea",
+          "Deixar secar ao sol",
+          "Pintar logo"
+         ],
+         "a": 0,
+         "audio": "4a22abb9d0ab.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Amassa-se o barro até ele:",
+         "options": [
+          "Não se colar às mãos",
+          "Ficar muito mole",
+          "Ficar duro"
+         ],
+         "a": 0,
+         "audio": "9536591dfbfe.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para o barro não secar até ao próximo trabalho, guarda-se:",
+         "options": [
+          "Num plástico",
+          "Ao sol",
+          "Num prato aberto"
+         ],
+         "a": 0,
+         "audio": "914e1d0d2c8f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O barro prepara-se por passos: limpa-se, peneira-se para tirar as pedras, mistura-se com agua e amassa-se.",
+        "exemplo": "Amassa-se ate a massa ficar homogenea e deixar de se colar as maos.",
+        "lembra": "Guarda o barro num plastico, senao seca e perde-se.",
+        "audio": "64e9b3ba909e.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Tecelagem e cestaria",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As fibras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As fibras naturais são as que:",
+         "options": [
+          "Se extraem da natureza",
+          "Se fazem na fábrica",
+          "Se compram na loja"
+         ],
+         "a": 0,
+         "audio": "8b1305bc9d48.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma fibra natural?",
+         "options": [
+          "Sisal",
+          "Nylon",
+          "Acrílico"
+         ],
+         "a": 0,
+         "audio": "4c3f99e0f801.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O nylon é uma fibra:",
+         "options": [
+          "Artificial",
+          "Natural",
+          "Reciclável"
+         ],
+         "a": 0,
+         "audio": "e2e04e847f80.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os fios dos sacos de comida, reaproveitados, são fibras:",
+         "options": [
+          "Recicláveis",
+          "Naturais",
+          "Artificiais"
+         ],
+         "a": 0,
+         "audio": "357d78c8170e.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada fibra ao seu tipo.",
+         "pairs": [
+          [
+           "Algodão",
+           "Natural"
+          ],
+          [
+           "Nylon",
+           "Artificial"
+          ]
+         ],
+         "audio": "943476f8fa1e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As fibras naturais saem da natureza -- algodao, sisal, la, linho. As artificiais fazem-se na industria, como o nylon. As reciclaveis sao reaproveitadas.",
+        "exemplo": "Os fios dos sacos de comida, guardados e reaproveitados, sao fibras reciclaveis.",
+        "lembra": "Vem da planta ou do animal? E natural. Vem da fabrica? E artificial.",
+        "audio": "b59b621159c1.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Tecer e entrelaçar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Tecer é:",
+         "options": [
+          "Entrelaçar fios",
+          "Colar fios",
+          "Cortar fios"
+         ],
+         "a": 0,
+         "audio": "0028106d06d8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A cestaria usa o mesmo processo da tecelagem:",
+         "options": [
+          "Entrelaçar",
+          "Modelar",
+          "Estampar"
+         ],
+         "a": 0,
+         "audio": "72e2e0ae0bcc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes materiais se usa na cestaria?",
+         "options": [
+          "A palha",
+          "O barro",
+          "O gesso"
+         ],
+         "a": 0,
+         "audio": "ca0203a7921d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um produto de cestaria?",
+         "options": [
+          "Uma peneira",
+          "Um vaso de barro",
+          "Um postal"
+         ],
+         "a": 0,
+         "audio": "79df9c5fd413.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A tecelagem é muito usada, sobretudo:",
+         "options": [
+          "Nas zonas rurais",
+          "Nas fábricas da cidade",
+          "Nas escolas"
+         ],
+         "a": 0,
+         "audio": "dc53569aab76.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Tecer e entrelacar fios. A cestaria usa o mesmo processo, com palha, bambu ou fitas de plastico.",
+        "exemplo": "Da cestaria saem cestos, chapeus, peneiras e esteiras.",
+        "lembra": "Tecelagem e cestaria sao a mesma ideia: entrelacar.",
+        "audio": "404717d1de54.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "mat-6c",
    "disciplina": "Matemática",
    "classe": "6ª classe",

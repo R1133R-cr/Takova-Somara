@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o ensino primário inteiro, da 1ª à 6ª classe', () {
-    expect(c.cursos.length, 19);
+    expect(c.cursos.length, 20);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -52,12 +52,13 @@ void main() {
     }
 
     // Educação Visual e Ofícios é a quinta disciplina do II ciclo. Entrou
-    // pela 6ª; a 5ª e a 4ª ainda não a têm.
-    expect(
-        c.cursos
-            .where((x) => x.classe == '6ª classe')
-            .map((x) => x.disciplina),
-        contains('Educação Visual e Ofícios'));
+    // pela 6ª e pela 5ª; falta a 4ª, que não tem livro.
+    for (final classe in ['5ª classe', '6ª classe']) {
+      expect(
+          c.cursos.where((x) => x.classe == classe).map((x) => x.disciplina),
+          contains('Educação Visual e Ofícios'),
+          reason: classe);
+    }
   });
 
   test('Naturais e Sociais nunca se confundem uma com a outra', () {
@@ -81,12 +82,13 @@ void main() {
     //   908  com o Português da 4ª classe (57 perguntas)
     //   958  com as Ciências Sociais da 4ª classe (50 perguntas)
     //   992  com a Educação Visual da 6ª classe (34 perguntas)
+    //  1027  com a Educação Visual da 5ª classe (35 perguntas)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 992);
+    expect(total, 1027);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {

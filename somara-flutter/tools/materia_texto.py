@@ -1527,4 +1527,72 @@ MATERIA = {
         "lembra": "A tesoura passa-se com as pontas viradas para quem a "
                   "da, nunca para quem a recebe.",
     },
+    # ---------------------------------------------------------------
+    # Educacao Visual e Oficios -- 5a classe
+    #
+    # Do livro EVO da 5a classe, 2023. Ao contrario da 6a, esta e sobretudo
+    # OFICIO: barro, fibras, cestaria. Nao tem cor porque o livro nao a
+    # ensina nesta classe.
+    # ---------------------------------------------------------------
+    "ev-5c:u1:n1": {
+        "explica": "Antes de comecar junta-se tudo o que se vai precisar, e "
+                   "no fim deixa-se o espaco limpo para quem vem a seguir.",
+        "exemplo": "Antes da aula: os lapis afiados. Antes de pintar: a "
+                   "mesa forrada.",
+        "lembra": "Preparar antes custa um minuto; limpar depois custa a "
+                  "aula toda.",
+    },
+    "ev-5c:u1:n2": {
+        "explica": "Ha varias maneiras de desenhar. De observacao e "
+                   "desenhar o que se tem a frente; com tema dado e "
+                   "desenhar o assunto que o professor disse.",
+        "exemplo": "A ilustracao acompanha um texto e ajuda a explica-lo. "
+                   "Um painel colectivo faz-se com os colegas todos.",
+        "lembra": "Olha primeiro, desenha depois.",
+    },
+    "ev-5c:u2:n1": {
+        "explica": "Imprimir e estampar e passar um desenho de uma "
+                   "superficie para outra, e repeti-lo quantas vezes se "
+                   "quiser.",
+        "exemplo": "Uma batata cortada ao meio e mergulhada em tinta faz um "
+                   "carimbo.",
+        "lembra": "Poe sempre uma proteccao por baixo antes de comecar.",
+    },
+    "ev-5c:u2:n2": {
+        "explica": "O papel corta-se, dobra-se, pica-se e cola-se. Cada uma "
+                   "destas e uma tecnica com a sua regra.",
+        "exemplo": "Na dobragem o papel nao se corta; no picotado fazem-se "
+                   "muitos furos pequenos seguidos.",
+        "lembra": "A tesoura passa-se pelo cabo, com as pontas seguras na "
+                  "nossa mao.",
+    },
+    "ev-5c:u3:n1": {
+        "explica": "Modelagem e dar forma a uma materia-prima modelavel. "
+                   "Moldagem e reproduzir um objecto atraves de um molde.",
+        "exemplo": "Um vaso feito a mao com barro e modelagem; dez vasos "
+                   "iguais tirados do mesmo molde sao moldagem.",
+        "lembra": "A vantagem da modelagem: ve-se a peca de todos os lados.",
+    },
+    "ev-5c:u3:n2": {
+        "explica": "O barro prepara-se por passos: limpa-se, peneira-se "
+                   "para tirar as pedras, mistura-se com agua e amassa-se.",
+        "exemplo": "Amassa-se ate a massa ficar homogenea e deixar de se "
+                   "colar as maos.",
+        "lembra": "Guarda o barro num plastico, senao seca e perde-se.",
+    },
+    "ev-5c:u4:n1": {
+        "explica": "As fibras naturais saem da natureza -- algodao, sisal, "
+                   "la, linho. As artificiais fazem-se na industria, como o "
+                   "nylon. As reciclaveis sao reaproveitadas.",
+        "exemplo": "Os fios dos sacos de comida, guardados e reaproveitados, "
+                   "sao fibras reciclaveis.",
+        "lembra": "Vem da planta ou do animal? E natural. Vem da fabrica? E "
+                  "artificial.",
+    },
+    "ev-5c:u4:n2": {
+        "explica": "Tecer e entrelacar fios. A cestaria usa o mesmo "
+                   "processo, com palha, bambu ou fitas de plastico.",
+        "exemplo": "Da cestaria saem cestos, chapeus, peneiras e esteiras.",
+        "lembra": "Tecelagem e cestaria sao a mesma ideia: entrelacar.",
+    },
 }
