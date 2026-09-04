@@ -48,11 +48,11 @@ import 'package:firebase_core/firebase_core.dart';
 class FirebaseConfig {
   static const _porPreencher = 'COLA_AQUI';
 
-  static const apiKey = _porPreencher;
-  static const appId = _porPreencher;
-  static const messagingSenderId = _porPreencher;
-  static const projectId = _porPreencher;
-  static const storageBucket = _porPreencher;
+  static const apiKey = 'AIzaSyBTNIWHZ-zB986JZ_7YFKPSvcgymytKItk';
+  static const appId = '1:508333957634:android:1e737996ef2ffdd0cbbd1b';
+  static const messagingSenderId = '508333957634';
+  static const projectId = 'somara-1133';
+  static const storageBucket = 'somara-1133.firebasestorage.app';
 
   /// Verdadeiro quando os campos essenciais já lá estão.
   ///
