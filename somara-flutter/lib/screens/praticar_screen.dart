@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../models/campanha.dart';
 import '../models/content.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
@@ -30,6 +31,13 @@ class PraticarScreen extends StatelessWidget {
         const Text('Treina sem perder o teu lugar na amarelinha.',
             style: TextStyle(color: S.txSoft, fontSize: 15)),
         const SizedBox(height: 24),
+
+        // A campanha vem primeiro porque é a única coisa da app com prazo.
+        // Enterrada debaixo do treino, passava a semana sem se ver.
+        if (st.campanha != null) ...[
+          _CartaoDaCampanha(campanha: st.campanha!),
+          const SizedBox(height: 14),
+        ],
 
         _Cartao(
           icone: Icons.refresh_rounded,
@@ -110,6 +118,120 @@ class PraticarScreen extends StatelessWidget {
     Navigator.of(context).push(MaterialPageRoute(
       builder: (_) => LessonScreen(indice: -1, avulsas: qs, titulo: titulo),
     ));
+  }
+}
+
+/// A campanha da semana: o desafio que expira ao domingo.
+class _CartaoDaCampanha extends StatelessWidget {
+  final Campanha campanha;
+  const _CartaoDaCampanha({required this.campanha});
+
+  @override
+  Widget build(BuildContext context) {
+    final st = context.watch<AppState>();
+    final feita = campanha.feita;
+
+    return GestureDetector(
+      onTap: feita
+          ? null
+          : () {
+              final qs = st.perguntasDaCampanha;
+              if (qs.isEmpty) return;
+              Navigator.of(context).push(
+                MaterialPageRoute<void>(
+                  builder: (_) => LessonScreen(
+                    indice: -1,
+                    avulsas: qs,
+                    titulo: 'Campanha da semana',
+                    campanha: true,
+                  ),
+                ),
+              );
+            },
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: S.surface,
+          border: Border.all(
+            color: feita ? S.green300 : S.gold,
+            width: 2,
+          ),
+          borderRadius: BorderRadius.circular(S.rLg),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(
+                  feita
+                      ? Icons.verified_rounded
+                      : Icons.local_fire_department_rounded,
+                  color: feita ? S.green300 : S.gold,
+                  size: 24,
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Campanha da semana',
+                        style: TextStyle(
+                          fontSize: 17,
+                          fontWeight: FontWeight.w700,
+                          color: S.tx,
+                        ),
+                      ),
+                      const SizedBox(height: 3),
+                      Text(
+                        feita
+                            ? _comoCorreu(campanha)
+                            : '${campanha.quantas} perguntas do que estudaste e '
+                                'do que erraste. Acaba antes de domingo.',
+                        style: const TextStyle(
+                          color: S.txSoft,
+                          fontSize: 13.5,
+                          height: 1.35,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            if (!feita) ...[
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  const Icon(Icons.auto_awesome_rounded,
+                      color: S.gold, size: 16),
+                  const SizedBox(width: 5),
+                  Expanded(
+                    child: Text(
+                      'Menos de ${(Campanha.margemDeErro * 100).round()}% de '
+                      'erro dá uma sorte. Quase tudo certo dá duas.',
+                      style: const TextStyle(color: S.txMut, fontSize: 12.5),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  String _comoCorreu(Campanha c) {
+    final ganhas = c.sortesGanhas;
+    final certas = '${c.acertos} de ${c.total}';
+    if (ganhas == 0) {
+      return 'Feita: $certas. Para a semana há outra.';
+    }
+    return 'Feita: $certas. '
+        'Ganhaste ${ganhas == 1 ? "uma sorte" : "duas sortes"}.';
   }
 }
 

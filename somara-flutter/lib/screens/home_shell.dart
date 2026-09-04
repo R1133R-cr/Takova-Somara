@@ -153,10 +153,22 @@ class _HomeShellState extends State<HomeShell> {
                           builder: (_, escala, filho) =>
                               Transform.scale(scale: escala, child: filho),
                           child: Badge(
+                            // Dois avisos, um por separador: as perguntas
+                            // por rever nos Guardados, e a campanha por
+                            // fazer no Praticar. A campanha é a única coisa
+                            // da app com prazo, e sem marca passava a semana
+                            // sem ninguém dar por ela.
                             isLabelVisible:
-                                _abas[i].rotulo == 'Guardados' && porRever > 0,
-                            label: Text('$porRever'),
-                            backgroundColor: S.life,
+                                (_abas[i].rotulo == 'Guardados' &&
+                                        porRever > 0) ||
+                                    (_abas[i].rotulo == 'Praticar' &&
+                                        st.temCampanhaPorFazer),
+                            label: _abas[i].rotulo == 'Praticar'
+                                ? const Text('!')
+                                : Text('$porRever'),
+                            backgroundColor: _abas[i].rotulo == 'Praticar'
+                                ? S.gold
+                                : S.life,
                             child: _simbolo(i),
                           ),
                         ),

@@ -353,6 +353,9 @@ ajuda deixar de valer nada.
 
 ## 5. Campanha semanal
 
+> **Feito na 0.30.0.** Reutilizou-se o `lesson_screen` com `avulsas`, como o
+> plano previa em alternativa. O que se decidiu ao escrever está no fim.
+
 **[decidido]** Um conjunto de **15 a 20 perguntas** [proposto] gerado à
 **segunda-feira**, disponível até domingo. Puxa de duas fontes:
 
@@ -379,6 +382,37 @@ se não houver nada, não aparece.
    31% não dá.
 2. Emulador: estudar três níveis, avançar o relógio para segunda, abrir a
    campanha e ver as perguntas certas lá.
+
+### O que se decidiu ao escrever
+
+- **10 a 20 perguntas, não 15 a 20.** O mínimo desceu porque uma criança que
+  fez dois níveis na semana passada tem quinze perguntas ao todo, e exigir
+  quinze *depois* de tirar as repetidas deixava-a sem campanha nenhuma
+  justamente na semana em que ela começou. Abaixo de dez não há campanha:
+  prometer um desafio semanal e dar dois minutos de trabalho gasta a palavra
+  por nada.
+- **Os erros ficam por metade do máximo.** Uma criança com trinta erros por
+  rever teria uma campanha só de erros e nunca reveria a matéria nova. O
+  limite não morde quando não há matéria nova — aí os erros enchem o resto.
+- **Faltava a data de cada nível.** O `progresso` guardava a nota e não o
+  dia, e sem dia não há maneira de saber o que se estudou *na semana
+  passada*. Entrou o `_estudadoEm`, que sincroniza ficando com a data mais
+  recente de cada nível.
+- **Recua no máximo duas semanas.** Se a semana passada não deu nada, tenta a
+  anterior e pára. Puxar de um mês atrás já não é rever, é começar outra vez.
+- **Gera-se uma vez por semana e não a cada toque.** Uma campanha que se
+  refizesse à quarta-feira deixava de ter prazo, que é a única coisa que a
+  define. O `_semanaVerificada` guarda que já se procurou material nesta
+  semana, mesmo quando não se encontrou nenhum.
+- **Uma ou duas sortes, e o degrau do meio é a 10% de erro.** «1 ou 2» ficava
+  por decidir; duas para quem acertou quase tudo faz o esforço de acertar
+  tudo valer mais do que o de passar à tangente.
+- **Paga uma vez por semana.** Refazer a campanha não volta a pagar, e tê-la
+  feito noutro telemóvel conta aqui — senão bastava repeti-la cinco vezes
+  para encher as sortes.
+- **O aviso é uma marca dourada no separador Praticar**, ao lado da vermelha
+  dos Guardados. É onde o cartão vive, e é o primeiro da lista: enterrado
+  debaixo do treino, passava a semana sem se ver.
 
 ---
 

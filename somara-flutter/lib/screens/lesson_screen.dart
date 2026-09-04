@@ -27,11 +27,16 @@ class LessonScreen extends StatefulWidget {
   /// O que se mostra no fim, quando a sessão é avulsa.
   final String? titulo;
 
+  /// Esta sessão é a campanha da semana. Ao acabar, fecha-a e paga as
+  /// sortes que o resultado valer.
+  final bool campanha;
+
   const LessonScreen({
     super.key,
     required this.indice,
     this.avulsas,
     this.titulo,
+    this.campanha = false,
   });
 
   bool get eAvulsa => avulsas != null;
@@ -217,6 +222,9 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
         // Treino e revisão também dão XP e contam para a sequência: o ecrã de
         // fim mostra "+XP ganho" e esse número tem de ser verdadeiro.
         st.concluirTreino(acertos);
+        // A campanha fecha-se à parte: é ela que paga as sortes, e paga-as
+        // uma vez só por semana.
+        if (widget.campanha) st.concluirCampanha(acertos, qs.length);
       } else {
         st.concluirNivel(widget.indice, acertos, qs.length);
       }

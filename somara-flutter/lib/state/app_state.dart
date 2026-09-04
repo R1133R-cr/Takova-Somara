@@ -4,6 +4,7 @@ import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/bolsa_de_tempo.dart';
+import '../models/campanha.dart';
 import '../models/carteira.dart';
 import '../models/coleccao.dart';
 import '../models/conquista.dart';
@@ -243,6 +244,129 @@ class AppState extends ChangeNotifier {
     final nova = _coleccao.aUsar(pose);
     if (nova.escolhida == _coleccao.escolhida) return;
     _coleccao = nova;
+    notifyListeners();
+    _gravar();
+  }
+
+  /* ---------------- Campanha semanal ----------------
+     O único sítio da app com prazo. Ver [Campanha]. */
+
+  /// Em que dia é que cada nível foi concluído (chave → ISO).
+  ///
+  /// O `progresso` guarda a nota, mas não a data — e sem data não há maneira
+  /// de saber o que é que a criança estudou *na semana passada*, que é
+  /// exactamente o que a campanha precisa de saber.
+  final Map<String, String> _estudadoEm = {};
+
+  Campanha? _campanha;
+
+  /// A última segunda-feira em que se procurou material. Sem isto, uma
+  /// semana sem campanha era reavaliada a cada toque.
+  String? _semanaVerificada;
+
+  Campanha? get campanha => _campanha;
+
+  /// Há campanha por fazer esta semana?
+  bool get temCampanhaPorFazer => _campanha != null && !_campanha!.feita;
+
+  /// As perguntas da campanha, resolvidas no currículo de agora.
+  ///
+  /// Uma pergunta que tenha desaparecido numa actualização de conteúdo cai
+  /// aqui em silêncio — é melhor uma campanha com dezassete perguntas do que
+  /// um ecrã que rebenta.
+  List<Questao> get perguntasDaCampanha {
+    final c = _campanha;
+    if (c == null) return const [];
+    final querem = c.enunciados.toSet();
+    final achadas = <String, Questao>{};
+    for (final curso in conteudo.cursos) {
+      for (final u in curso.units) {
+        for (final n in u.niveis) {
+          for (final q in n.questoes) {
+            if (querem.contains(q.q)) achadas.putIfAbsent(q.q, () => q);
+          }
+        }
+      }
+    }
+    return [
+      for (final e in c.enunciados)
+        if (achadas[e] != null) achadas[e]!,
+    ];
+  }
+
+  /// Os enunciados dos níveis concluídos numa janela de dias.
+  List<String> _enunciadosEstudadosEntre(String de, String ate) {
+    final chaves = {
+      for (final e in _estudadoEm.entries)
+        if (e.value.compareTo(de) >= 0 && e.value.compareTo(ate) < 0) e.key,
+    };
+    if (chaves.isEmpty) return const [];
+
+    final fora = <String>[];
+    for (final curso in conteudo.cursos) {
+      for (final u in curso.units) {
+        for (final n in u.niveis) {
+          if (chaves.contains('${curso.id}:${u.id}:${n.id}')) {
+            fora.addAll(n.questoes.map((q) => q.q));
+          }
+        }
+      }
+    }
+    return fora;
+  }
+
+  /// Monta a campanha da semana, se ainda não houver uma.
+  ///
+  /// Corre uma vez por semana e não a cada toque: a campanha é da segunda e
+  /// não muda até domingo. Uma que aparecesse a meio da semana quebrava a
+  /// única coisa que a define, que é ter prazo.
+  void verificarCampanha() {
+    final semana = segundaDe(relogio());
+    if (_campanha?.semana == semana || _semanaVerificada == semana) return;
+    _semanaVerificada = semana;
+
+    final segunda = DateTime.parse(semana);
+    String recuar(int dias) =>
+        Sequencia.iso(segunda.subtract(Duration(days: dias)));
+
+    final erros = paraRever.map((q) => q.q).toList();
+    final semente = sementeDaSemana(semana);
+
+    // A semana passada primeiro. Se não deu nada — férias, doença, um
+    // telemóvel emprestado — recua-se mais uma. Duas e pára: puxar de um
+    // mês atrás já não é rever, é começar outra vez.
+    var enunciados = escolherPerguntas(
+      dosErros: erros,
+      doEstudo: _enunciadosEstudadosEntre(recuar(7), semana),
+      semente: semente,
+    );
+    if (enunciados.isEmpty) {
+      enunciados = escolherPerguntas(
+        dosErros: erros,
+        doEstudo: _enunciadosEstudadosEntre(recuar(14), recuar(7)),
+        semente: semente,
+      );
+    }
+
+    _campanha = enunciados.isEmpty
+        ? null
+        : Campanha(semana: semana, enunciados: enunciados);
+    notifyListeners();
+    _gravar();
+  }
+
+  /// Fecha a campanha e paga o que ela valer.
+  ///
+  /// Só uma vez: refazê-la não paga outra vez. O prazo é semanal e o prémio
+  /// também — senão bastava repeti-la cinco vezes para encher as sortes.
+  void concluirCampanha(int acertos, int total) {
+    final c = _campanha;
+    if (c == null || c.feita) return;
+    final fechada = c.comResultado(acertos, total);
+    _campanha = fechada;
+    for (var i = 0; i < fechada.sortesGanhas; i++) {
+      _sortes = _sortes.comGanho();
+    }
     notifyListeners();
     _gravar();
   }
@@ -596,6 +720,10 @@ class AppState extends ChangeNotifier {
         _coleccao = Coleccao.deJson(j['coleccao'] as Map<String, dynamic>?);
         _marcosPagos.addAll(((j['marcos'] as List?) ?? []).cast<String>());
         _sortes = Sortes.deJson(j['sortes'] as Map<String, dynamic>?);
+        ((j['estudadoEm'] as Map?) ?? {})
+            .forEach((k, v) => _estudadoEm['$k'] = '$v');
+        _campanha = Campanha.deJson(j['campanha'] as Map<String, dynamic>?);
+        _semanaVerificada = j['semanaVerificada'] as String?;
         _lerConquistas(j['conquistas'] as List?);
         _recuperadas = (j['recuperadas'] ?? 0) as int;
         _especiaisNoPomar = (j['especiais'] ?? 0) as int;
@@ -616,6 +744,7 @@ class AppState extends ChangeNotifier {
     // chegou recebe as medalhas e os cristais que merecia, mas não leva com
     // vinte faixas seguidas na cara ao abrir a app.
     _verificarConquistas(mostrar: false);
+    verificarCampanha();
     verificarFimDoBloqueio();
     pronto = true;
     notifyListeners();
@@ -678,6 +807,9 @@ class AppState extends ChangeNotifier {
         'coleccao': _coleccao.paraJson(),
         'marcos': _marcosPagos.toList()..sort(),
         'sortes': _sortes.paraJson(),
+        'estudadoEm': _estudadoEm,
+        'campanha': _campanha?.paraJson(),
+        'semanaVerificada': _semanaVerificada,
         'conquistas': _conquistas.map((c) => c.name).toList()..sort(),
         'recuperadas': _recuperadas,
         'especiais': _especiaisNoPomar,
@@ -725,6 +857,8 @@ class AppState extends ChangeNotifier {
     'coleccao': _coleccao.paraJson(),
     'marcos': _marcosPagos.toList()..sort(),
     'sortes': _sortes.paraJson(),
+    'estudadoEm': _estudadoEm,
+    'campanha': _campanha?.paraJson(),
     'conquistas': _conquistas.map((c) => c.name).toList()..sort(),
     'recuperadas': _recuperadas,
     'especiais': _especiaisNoPomar,
@@ -799,6 +933,17 @@ class AppState extends ChangeNotifier {
     // outro com B e C ficam os dois com A, B e C. Uma medalha que some numa
     // sincronização é a coisa que faz uma criança deixar de acreditar no
     // ecrã. O mesmo vale para o que já se recuperou dos Guardados.
+    // As datas de estudo juntam-se, ficando a mais recente de cada nível:
+    // um nível refeito noutro telemóvel entra na campanha desta semana.
+    ((n['estudadoEm'] as Map?) ?? {}).forEach((k, v) {
+      final chave = '$k', dia = '$v';
+      final aqui = _estudadoEm[chave];
+      if (aqui == null || dia.compareTo(aqui) > 0) _estudadoEm[chave] = dia;
+    });
+
+    final cN = Campanha.deJson(n['campanha'] as Map<String, dynamic>?);
+    _campanha = _campanha?.fundirCom(cN) ?? cN;
+
     _sortes = _sortes.fundirCom(
       Sortes.deJson(n['sortes'] as Map<String, dynamic>?),
     );
@@ -984,6 +1129,7 @@ class AppState extends ChangeNotifier {
     // que já se tinha conseguido.
     final chave = chaveDe(lv.unit, lv.nivel);
     progresso[chave] = math.max(progresso[chave] ?? 0, pct);
+    _estudadoEm[chave] = _hoje;
     xp += acertos * xpPorAcerto + xpPorNivel;
     // Sem um único erro rende mais. É o que faz a criança voltar a um nível
     // que já passou para o fazer melhor, em vez de o passar à tangente.
