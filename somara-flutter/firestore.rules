@@ -16,8 +16,20 @@ service cloud.firestore {
       allow read, write: if request.auth != null && request.auth.uid == uid;
     }
 
-    // Tudo o resto fica fechado. Sem esta linha, uma colecção nova criada
-    // por engano nascia sem regra nenhuma.
+    // As regras não descem sozinhas: a linha de cima cobre o documento do
+    // aluno e mais nada do que estiver por baixo dele. Hoje a app só
+    // escreve nesse documento, em campos — nunca em subcolecções. Isto
+    // está aqui para o dia em que passar a guardar, por exemplo, o
+    // histórico de cada lição: nesse dia funciona, e continua fechado ao
+    // dono. Sem esta linha pareceria bug na app, e era regra a faltar.
+    match /learners/{uid}/{subcoleccao=**} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+
+    // Isto documenta a intenção; não é isto que fecha a porta. O Firestore
+    // recusa por omissão tudo o que nenhuma regra permita, e as regras só
+    // sabem permitir: um "if false" nunca concede nada, e também nunca
+    // revoga o que outra regra concedeu.
     match /{document=**} {
       allow read, write: if false;
     }
