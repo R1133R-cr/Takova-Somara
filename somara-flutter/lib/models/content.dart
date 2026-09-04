@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
+import 'algoritmo_escrito.dart';
+
 /// Modelos do currículo. Espelham a estrutura do content.json
 /// (gerado a partir do content.js da versão web, conteúdo extraído dos
 /// manuais reais da 1ª classe).
@@ -67,6 +69,16 @@ sealed class Questao {
               .map((p) => (p[0], p[1]))
               .toList(),
         );
+      case 'grelha':
+        return QGrelha(
+          q,
+          a,
+          figura: fig,
+          cores: cor,
+          operacao: Operacao.values.byName(j['op'] as String),
+          x: j['x'] as int,
+          y: j['y'] as int,
+        );
       case 'drag':
         return QDrag(
           q,
@@ -117,6 +129,29 @@ class QDrag extends Questao {
   final List<String> zones;
   final int a;
   const QDrag(super.q, super.audio, {super.figura, super.cores, required this.chip, required this.zones, required this.a});
+}
+
+/// Uma conta armada, para preencher casinha a casinha.
+///
+/// Não guarda a grelha: guarda a operação e os dois números, e a grelha
+/// calcula-se. Guardá-la desenhada seria guardar uma resposta — e bastava
+/// alguém abrir o `content.json` para a ver.
+class QGrelha extends Questao {
+  final Operacao operacao;
+  final int x;
+  final int y;
+
+  const QGrelha(
+    super.q,
+    super.audio, {
+    super.figura,
+    super.cores,
+    required this.operacao,
+    required this.x,
+    required this.y,
+  });
+
+  GrelhaDaConta get conta => GrelhaDaConta.de(operacao, x, y);
 }
 
 /// As formas que a app sabe desenhar.

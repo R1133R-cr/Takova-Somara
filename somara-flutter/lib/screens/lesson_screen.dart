@@ -10,6 +10,7 @@ import '../theme.dart';
 import '../widgets/desenho_geometrico.dart';
 import '../widgets/mostra_cores.dart';
 import '../widgets/roby.dart';
+import '../widgets/grelha_operacao.dart';
 import '../widgets/teclado_numerico.dart';
 import 'complete_screen.dart';
 
@@ -140,11 +141,18 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     ligacoes.clear();
     matchSelEsq = null;
     _input.clear();
+    _casinhas = const [];
     final cur = q;
     if (cur is QMatch) {
       ordemDireita = List.generate(cur.pairs.length, (i) => i)..shuffle(_rnd);
     }
   }
+
+  /// A chave da grelha aberta, para o widget se refazer entre perguntas.
+  final _grelha = GlobalKey<GrelhaOperacaoState>();
+
+  /// O que a criança escreveu nas casinhas da conta armada.
+  List<String> _casinhas = const [];
 
   bool get _podeVerificar {
     final cur = q;
@@ -152,6 +160,17 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     if (cur is QInput) return _input.text.trim().isNotEmpty;
     if (cur is QDrag) return zonaLargada != null;
     if (cur is QMatch) return ligacoes.length == cur.pairs.length;
+    if (cur is QGrelha) {
+      // Só se verifica com tudo o que conta preenchido. Os transportes
+      // podem ficar em branco: quem soma o "vai um" de cabeça não está a
+      // fazer nada de errado.
+      final alvo = cur.conta.aPreencher;
+      for (var i = 0; i < alvo.length; i++) {
+        if (!alvo[i].conta) continue;
+        if (i >= _casinhas.length || _casinhas[i].trim().isEmpty) return false;
+      }
+      return true;
+    }
     return false;
   }
 
@@ -182,6 +201,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       }
       return true;
     }
+    if (cur is QGrelha) return cur.conta.certa(_casinhas);
     return false;
   }
 
@@ -437,6 +457,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       QInput() => _vistaInput(),
       QMatch() => _vistaMatch(cur),
       QDrag() => _vistaDrag(cur),
+      QGrelha() => _vistaGrelha(cur),
     };
 
     final fig = cur.figura;
@@ -572,6 +593,32 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     final cur = q;
     return cur is QInput && RegExp(r'^\d+$').hasMatch(cur.a.trim());
   }
+
+  /// A conta armada, com o teclado por baixo.
+  ///
+  /// A grelha ocupa o lugar que noutras perguntas é das opções, e o teclado
+  /// é o mesmo das respostas numéricas — uma criança que já sabe escrever
+  /// um número aqui não tem nada de novo a aprender.
+  Widget _vistaGrelha(QGrelha cur) => Padding(
+    padding: const EdgeInsets.only(top: 8),
+    child: Column(
+      children: [
+        GrelhaOperacao(
+          key: _grelha,
+          conta: cur.conta,
+          respostas: _casinhas,
+          corrigida: fase == Fase.responder ? null : fase == Fase.certo,
+          aoMudar: (r) => setState(() => _casinhas = r),
+        ),
+        const SizedBox(height: 16),
+        TecladoNumerico(
+          activo: fase == Fase.responder,
+          aoDigito: (d) => _grelha.currentState?.escrever(d),
+          aoApagar: () => _grelha.currentState?.apagar(),
+        ),
+      ],
+    ),
+  );
 
   Widget _vistaInput() =>
       _respostaENumero ? _vistaNumero() : _vistaTexto();
@@ -903,6 +950,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       QInput() => cur.a,
       QDrag() => cur.zones[cur.a],
       QMatch() => '',
+      QGrelha() => '${cur.conta.resultado}',
     };
     return r.isEmpty ? 'Vê as ligações certas.' : 'Resposta certa: $r';
   }

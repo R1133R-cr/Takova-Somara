@@ -210,6 +210,11 @@ void main() {
                 expect(q.a, inInclusiveRange(0, q.zones.length - 1), reason: onde);
               case QMatch():
                 expect(q.pairs.length, greaterThanOrEqualTo(2), reason: onde);
+              case QGrelha():
+                // Uma conta que não se arma rebentaria dentro da lição, com
+                // a criança lá.
+                expect(() => q.conta, returnsNormally, reason: onde);
+                expect(q.conta.aPreencher, isNotEmpty, reason: onde);
             }
           }
         }

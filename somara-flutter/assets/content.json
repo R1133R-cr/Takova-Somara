@@ -1,5 +1,5 @@
 {
- "versao": 20260808,
+ "versao": 20260904,
  "cursos": [
   {
    "id": "mat-1c",
@@ -1919,22 +1919,28 @@
        "titulo": "Adição até 100",
        "questoes": [
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Calcula: 34 + 25 =",
-         "a": "59",
-         "audio": "507e7ac9aedf.mp3"
+         "audio": "507e7ac9aedf.mp3",
+         "op": "adicao",
+         "x": 34,
+         "y": 25
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Calcula: 46 + 30 =",
-         "a": "76",
-         "audio": "78810c4bd492.mp3"
+         "audio": "78810c4bd492.mp3",
+         "op": "adicao",
+         "x": 46,
+         "y": 30
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Calcula: 58 + 7 =",
-         "a": "65",
-         "audio": "50e80d7d70e9.mp3"
+         "audio": "50e80d7d70e9.mp3",
+         "op": "adicao",
+         "x": 58,
+         "y": 7
         },
         {
          "t": "choice",
@@ -1948,10 +1954,12 @@
          "audio": "0fdf5405c746.mp3"
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Calcula: 27 + 27 =",
-         "a": "54",
-         "audio": "f2e9cb5392bc.mp3"
+         "audio": "f2e9cb5392bc.mp3",
+         "op": "adicao",
+         "x": 27,
+         "y": 27
         }
        ],
        "materia": {
@@ -1966,22 +1974,28 @@
        "titulo": "Subtracção até 100",
        "questoes": [
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Calcula: 68 − 25 =",
-         "a": "43",
-         "audio": "d63b3665dd63.mp3"
+         "audio": "d63b3665dd63.mp3",
+         "op": "subtraccao",
+         "x": 68,
+         "y": 25
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Calcula: 90 − 40 =",
-         "a": "50",
-         "audio": "17573978ed65.mp3"
+         "audio": "17573978ed65.mp3",
+         "op": "subtraccao",
+         "x": 90,
+         "y": 40
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Calcula: 73 − 8 =",
-         "a": "65",
-         "audio": "9ab3f91f098d.mp3"
+         "audio": "9ab3f91f098d.mp3",
+         "op": "subtraccao",
+         "x": 73,
+         "y": 8
         },
         {
          "t": "choice",
@@ -1995,10 +2009,12 @@
          "audio": "027fddfea023.mp3"
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Calcula: 100 − 60 =",
-         "a": "40",
-         "audio": "273bea54e94a.mp3"
+         "audio": "273bea54e94a.mp3",
+         "op": "subtraccao",
+         "x": 100,
+         "y": 60
         }
        ],
        "materia": {
@@ -3624,10 +3640,12 @@
        "titulo": "Adição até 4 dígitos",
        "questoes": [
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Quanto é 245 + 132?",
-         "a": "377",
-         "audio": "dfd4e7c23102.mp3"
+         "audio": "dfd4e7c23102.mp3",
+         "op": "adicao",
+         "x": 245,
+         "y": 132
         },
         {
          "t": "input",
@@ -3675,10 +3693,12 @@
        "titulo": "Subtracção até 4 dígitos",
        "questoes": [
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Quanto é 587 − 243?",
-         "a": "344",
-         "audio": "ffb291f5f4f5.mp3"
+         "audio": "ffb291f5f4f5.mp3",
+         "op": "subtraccao",
+         "x": 587,
+         "y": 243
         },
         {
          "t": "input",
@@ -3756,10 +3776,12 @@
          "audio": "d5ea5fa61b7e.mp3"
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Quanto é 34 × 2?",
-         "a": "68",
-         "audio": "29847bdc5d0f.mp3"
+         "audio": "29847bdc5d0f.mp3",
+         "op": "multiplicacao",
+         "x": 34,
+         "y": 2
         },
         {
          "t": "choice",
@@ -3785,16 +3807,20 @@
        "titulo": "Dividir",
        "questoes": [
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Quanto é 48 : 6?",
-         "a": "8",
-         "audio": "2742b4ebac63.mp3"
+         "audio": "2742b4ebac63.mp3",
+         "op": "divisao",
+         "x": 48,
+         "y": 6
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Quanto é 100 : 10?",
-         "a": "10",
-         "audio": "e29467aae1d0.mp3"
+         "audio": "e29467aae1d0.mp3",
+         "op": "divisao",
+         "x": 100,
+         "y": 10
         },
         {
          "t": "choice",
@@ -3819,10 +3845,12 @@
          "audio": "ffd94e383b03.mp3"
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Quanto é 63 : 9?",
-         "a": "7",
-         "audio": "9af38c014c2f.mp3"
+         "audio": "9af38c014c2f.mp3",
+         "op": "divisao",
+         "x": 63,
+         "y": 9
         }
        ],
        "materia": {
@@ -5355,16 +5383,20 @@
        "titulo": "Multiplicar por dois dígitos",
        "questoes": [
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Quanto é 24 × 12?",
-         "a": "288",
-         "audio": "d9dd7da8004a.mp3"
+         "audio": "d9dd7da8004a.mp3",
+         "op": "multiplicacao",
+         "x": 24,
+         "y": 12
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Quanto é 150 × 4?",
-         "a": "600",
-         "audio": "51390caaedb6.mp3"
+         "audio": "51390caaedb6.mp3",
+         "op": "multiplicacao",
+         "x": 150,
+         "y": 4
         },
         {
          "t": "input",
@@ -5407,16 +5439,20 @@
        "titulo": "Dividir com resto",
        "questoes": [
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Quanto é 144 : 12?",
-         "a": "12",
-         "audio": "90f30ad9b24f.mp3"
+         "audio": "90f30ad9b24f.mp3",
+         "op": "divisao",
+         "x": 144,
+         "y": 12
         },
         {
-         "t": "input",
+         "t": "grelha",
          "q": "Quanto é 250 : 5?",
-         "a": "50",
-         "audio": "494b150c3a17.mp3"
+         "audio": "494b150c3a17.mp3",
+         "op": "divisao",
+         "x": 250,
+         "y": 5
         },
         {
          "t": "choice",

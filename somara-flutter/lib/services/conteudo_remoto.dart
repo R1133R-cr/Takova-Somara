@@ -163,6 +163,14 @@ class ConteudoRemoto {
         if (q.a < 0 || q.a >= q.options.length) return 'resposta fora das opções';
       case QInput():
         if (q.a.trim().isEmpty) return 'pergunta escrita sem resposta';
+      case QGrelha():
+        // Uma conta impossível — subtracção negativa, divisão por zero —
+        // rebentava ao desenhar a grelha, já com a criança dentro da lição.
+        try {
+          q.conta;
+        } catch (e) {
+          return 'conta que não se arma: ${q.operacao.name} ${q.x} ${q.y}';
+        }
       case QMatch():
         if (q.pairs.length < 2) return 'ligação com menos de dois pares';
       case QDrag():

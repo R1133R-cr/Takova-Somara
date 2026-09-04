@@ -627,6 +627,10 @@ categoria, para dois telemóveis mostrarem o mesmo.
 
 ## 9. Exercício em grelha — as quatro operações
 
+> **Feito na 0.31.0**, com as quatro. O desenho da subtracção aqui em baixo
+> tem um erro de aritmética — está corrigido no código e explicado no fim
+> da secção.
+
 **[decidido] As quatro operações**, e **[decidido] a criança escreve também o
 transporte**.
 
@@ -730,6 +734,42 @@ perguntas de conceito («o perímetro de uma figura é:») ficam em escolha múl
 3. `ecras_test.dart`: a grelha de 4 dígitos cabe em 320×640 sem transbordar.
 4. Golden das quatro operações.
 5. Emulador: resolver uma adição com transporte, de ponta a ponta.
+
+### O que se decidiu ao escrever
+
+- **O desenho da subtracção do §9 está errado, e o código não o copiou.**
+  Diz `5 ¹4 ¹3` para 643 − 287. As dezenas não valem 14: já tinham
+  emprestado uma unidade às unidades antes de pedirem às centenas, e por
+  isso valem 4 − 1 + 10 = **13**. Com 14 a conta não fecha. Há um teste que
+  fixa o 13 e verifica que a ordem dá mesmo 5.
+- **Não há botão de riscar.** O riscado é consequência do empréstimo, não
+  uma decisão à parte: quem escreve o valor novo por cima já disse que
+  aquela ordem mudou. Pedir as duas coisas era duas acções para uma ideia.
+- **O modelo devolve a grelha inteira e o widget não sabe aritmética.**
+  `GrelhaDaConta` diz que casinhas existem, onde ficam e o que devia estar
+  em cada uma; o widget desenha. É o que permite testar as quatro operações
+  em 4000 pares de números sem montar um ecrã.
+- **Uma casinha de empréstimo leva dois algarismos** («13», «10») e só
+  avança com os dois. Sem isso não havia maneira de a preencher.
+- **O widget guarda o que se escreveu, em vez de o ler da propriedade.**
+  Dois toques dentro do mesmo fotograma liam ambos o valor velho e o segundo
+  algarismo apagava o primeiro — precisamente nas casinhas de empréstimo.
+- **18 das 84 perguntas de aritmética viraram conta armada.** O critério é o
+  do valor pedagógico e não o do número: **nada na 1ª classe** (aí aprendem-se
+  os números até 20 e a ideia de juntar e tirar; a conta armada é matéria da
+  2ª), nada com uma ordem só, e nada de `×10` ou `×100` — essas ensinam-se
+  como regra, não como algoritmo, e armadas dariam duas linhas de zeros.
+- **A conversão não obriga a regravar áudio.** O enunciado não muda: só muda
+  a maneira de responder. O `--conferir` confirma os 1266 ficheiros.
+- **A leitura do enunciado é verificada contra a resposta guardada.** Lê-se
+  «Quanto é 48 : 6?», calcula-se, e compara-se com o que já lá estava. Se
+  não bater, não se converte — foi assim que «Conta de 5 em 5: 5, 10, 15, ?»
+  ficou de fora, apesar de ter dígitos e dois pontos.
+- **Em vez do golden, a lição inteira é varrida nos três tamanhos com as
+  quatro operações.** O risco não é a grelha sozinha: é a grelha mais o
+  enunciado, mais o Roby, mais o teclado, na mesma coluna de 320 px. Uma
+  conta que não caiba desliza na horizontal em vez de encolher abaixo dos
+  44 px do alvo de toque.
 
 ---
 
