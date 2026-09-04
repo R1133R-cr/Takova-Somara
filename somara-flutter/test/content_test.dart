@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o ensino primário inteiro, da 1ª à 6ª classe', () {
-    expect(c.cursos.length, 20);
+    expect(c.cursos.length, 21);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -51,9 +51,9 @@ void main() {
           reason: classe);
     }
 
-    // Educação Visual e Ofícios é a quinta disciplina do II ciclo. Entrou
-    // pela 6ª e pela 5ª; falta a 4ª, que não tem livro.
-    for (final classe in ['5ª classe', '6ª classe']) {
+    // Educação Visual e Ofícios é a quinta disciplina do II ciclo, e o
+    // ciclo fica coberto por inteiro.
+    for (final classe in ['4ª classe', '5ª classe', '6ª classe']) {
       expect(
           c.cursos.where((x) => x.classe == classe).map((x) => x.disciplina),
           contains('Educação Visual e Ofícios'),
@@ -83,12 +83,13 @@ void main() {
     //   958  com as Ciências Sociais da 4ª classe (50 perguntas)
     //   992  com a Educação Visual da 6ª classe (34 perguntas)
     //  1027  com a Educação Visual da 5ª classe (35 perguntas)
+    //  1060  com a Educação Visual da 4ª classe (33 perguntas)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 1027);
+    expect(total, 1060);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {
@@ -126,6 +127,24 @@ void main() {
       }
     }
     expect(comCor, greaterThan(0), reason: 'nenhuma pergunta mostra cor');
+  });
+
+  test('o conteúdo sem manual está marcado como tal', () {
+    // Dos cursos da app, um só foi montado sem livro: a Educação Visual da
+    // 4ª classe, porque não existe manual publicado. Isso não é um defeito
+    // — é uma decisão — mas tem de estar escrito onde alguém tropece nele,
+    // e não só na mensagem de um commit de há um ano.
+    //
+    // Se um dia o livro aparecer e o curso for refeito, tira-se o campo e
+    // este teste avisa que a lista mudou.
+    final provisorios =
+        c.cursos.where((x) => x.provisorio).map((x) => x.id).toList();
+    expect(provisorios, ['ev-4c'],
+        reason: 'mudou a lista de cursos sem manual');
+
+    final ev4 = c.cursos.firstWhere((x) => x.id == 'ev-4c');
+    expect(ev4.fonte, contains('provisória'));
+    expect(ev4.fonte, contains('sem fonte confirmada'));
   });
 
   test('dentro de uma classe, cada enunciado é único', () {

@@ -1595,4 +1595,66 @@ MATERIA = {
         "exemplo": "Da cestaria saem cestos, chapeus, peneiras e esteiras.",
         "lembra": "Tecelagem e cestaria sao a mesma ideia: entrelacar.",
     },
+    # ---------------------------------------------------------------
+    # Educacao Visual e Oficios -- 4a classe
+    #
+    # ESTRUTURA PROVISORIA, SEM FONTE CONFIRMADA. Nao ha manual de EV da
+    # 4a classe publicado. Ver o cabecalho do conteudo_ev4c.py.
+    # ---------------------------------------------------------------
+    "ev-4c:u1:n1": {
+        "explica": "Um trabalho manual comeca antes do trabalho: junta-se "
+                   "tudo o que se vai precisar e prepara-se a mesa.",
+        "exemplo": "Antes de pintar, poe-se papel ou jornal por baixo para "
+                   "a mesa nao ficar suja.",
+        "lembra": "Quem prepara antes nao interrompe depois.",
+    },
+    "ev-4c:u1:n2": {
+        "explica": "As ferramentas cortam e furam, e por isso pedem regras. "
+                   "Guardam-se no seu lugar depois de usadas.",
+        "exemplo": "A tesoura passa-se pelo cabo: seguras nas pontas e "
+                   "das-lhe o cabo a quem a recebe.",
+        "lembra": "Com a tesoura na mao, ninguem corre.",
+    },
+    "ev-4c:u2:n1": {
+        "explica": "Desenha-se com muitos materiais: lapis, giz, carvao "
+                   "vegetal. Cada um risca de sua maneira.",
+        "exemplo": "Um lapis bem afiado risca fino; um lapis rombo risca "
+                   "grosso.",
+        "lembra": "O lapis afia-se antes da aula, nao a meio dela.",
+    },
+    "ev-4c:u2:n2": {
+        "explica": "Desenhar o que se tem a frente e desenho de "
+                   "observacao. Desenhar o que apetece e desenho livre.",
+        "exemplo": "Antes de desenhar uma cadeira, olha-se bem para ela: "
+                   "quantas pernas tem, onde e o encosto.",
+        "lembra": "Olha primeiro, desenha depois.",
+    },
+    "ev-4c:u3:n1": {
+        "explica": "Recortar e colar sao duas tecnicas que andam juntas: "
+                   "corta-se o papel e junta-se numa folha.",
+        "exemplo": "Marca-se a linha a lapis, corta-se por cima dela, e "
+                   "cola-se com pouca cola bem espalhada.",
+        "lembra": "Muita cola enruga o papel. Pouca e melhor.",
+    },
+    "ev-4c:u3:n2": {
+        "explica": "Na dobragem o papel dobra-se sem se cortar. No "
+                   "picotado fazem-se muitos furos pequenos seguidos.",
+        "exemplo": "Passa-se a unha por cima do vinco para a dobra ficar "
+                   "direita.",
+        "lembra": "Dobrar nao e cortar: o papel fica inteiro.",
+    },
+    "ev-4c:u4:n1": {
+        "explica": "Na nossa comunidade ha muitos oficios feitos com as "
+                   "maos: cestaria, costura, carpintaria, jardinagem.",
+        "exemplo": "Quem faz cestos e esteiras com palha trabalha na "
+                   "cestaria; quem trabalha a madeira e carpinteiro.",
+        "lembra": "Cada oficio tem o seu material e a sua tecnica.",
+    },
+    "ev-4c:u4:n2": {
+        "explica": "Os materiais dos trabalhos manuais vem muitas vezes da "
+                   "natureza que temos a volta: argila, palha, bambu.",
+        "exemplo": "Com argila fazem-se vasos e panelas; com palha e bambu, "
+                   "cestos e esteiras.",
+        "lembra": "Um saco velho reaproveitado tambem e material.",
+    },
 }

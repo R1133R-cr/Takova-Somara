@@ -326,6 +326,22 @@ class Curso {
   /// ilegível no telemóvel. Quando falta, usa-se o nome inteiro.
   final String? abrev;
 
+  /// De onde saiu o conteúdo deste curso.
+  ///
+  /// Quase todos vêm de um manual escolar moçambicano, e nesses este campo
+  /// não existe — a fonte está escrita na ferramenta que os gerou.
+  ///
+  /// Está aqui para o caso contrário: um curso montado SEM livro, a partir
+  /// do que o currículo descreve e do que se sabe das classes vizinhas.
+  /// Isso tem de ficar dito onde alguém tropece nele, e não só no commit.
+  ///
+  /// Hoje é um só: a Educação Visual da 4ª classe, que não tem manual
+  /// publicado. Se aparecer um, tira-se este campo.
+  final String? fonte;
+
+  /// Este curso foi montado sem manual?
+  bool get provisorio => fonte != null;
+
   final List<Unidade> units;
 
   const Curso({
@@ -335,6 +351,7 @@ class Curso {
     required this.tag,
     required this.units,
     this.abrev,
+    this.fonte,
   });
 
   /// O que se mostra na aba.
@@ -346,6 +363,7 @@ class Curso {
         classe: j['classe'] as String,
         tag: (j['tag'] ?? '') as String,
         abrev: j['abrev'] as String?,
+        fonte: j['fonte'] as String?,
         units: (j['units'] as List)
             .map((u) => Unidade.fromJson(u as Map<String, dynamic>))
             .toList(),
