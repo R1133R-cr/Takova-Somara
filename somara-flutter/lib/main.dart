@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'services/ciclo_de_vida.dart';
 import 'services/nuvem.dart';
 import 'services/sons.dart';
 import 'state/app_state.dart';
@@ -59,37 +60,20 @@ class _Arranque extends StatefulWidget {
   State<_Arranque> createState() => _ArranqueState();
 }
 
-class _ArranqueState extends State<_Arranque> with WidgetsBindingObserver {
+class _ArranqueState extends State<_Arranque> {
+  late final CicloDeVida _ciclo;
+
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
+    _ciclo = CicloDeVida(context.read<AppState>());
+    WidgetsBinding.instance.addObserver(_ciclo);
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(_ciclo);
     super.dispose();
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState estado) {
-    switch (estado) {
-      case AppLifecycleState.resumed:
-        Sons.i.emPrimeiroPlano();
-
-      // `inactive` é transitório e a app continua à vista: a sombra do
-      // multitarefas, a barra de notificações a descer meio dedo, um
-      // aviso de chamada. Calar a música aqui foi o que a matou — ficava
-      // em pausa e o `resumed` que a devolvia nem sempre chegava.
-      case AppLifecycleState.inactive:
-        break;
-
-      case AppLifecycleState.paused:
-      case AppLifecycleState.hidden:
-      case AppLifecycleState.detached:
-        Sons.i.emSegundoPlano();
-    }
   }
 
   @override

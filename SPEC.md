@@ -154,6 +154,9 @@ falta. É o mesmo sítio onde a colecção do Roby vai viver (§6).
 
 ## 3. Tempo de jogo
 
+> **Feito na 0.26.0.** Os valores propostos ficaram todos como estavam.
+> Três pormenores foram decididos na escrita — ver o fim da secção.
+
 **[decidido] Bolsa diária pequena que o estudo enche.**
 
 | | valor | |
@@ -190,6 +193,33 @@ separadas: os corações limitam os exercícios, o tempo limita os jogos.
 2. O relógio **não corre** com a app minimizada (teste com `AppLifecycleState`).
 3. Emulador: gastar a bolsa até zero, ver os cartões apagados e a mensagem,
    estudar um nível, ver os joguinhos reabrirem.
+
+### O que se decidiu ao escrever
+
+- **A nuvem funde os dois números, não o saldo.** O plano dizia «o saldo
+  sincroniza pelo maior». Ficar pelo maior *saldo* dava um buraco: jogar dez
+  minutos, entrar na conta noutro aparelho, e os dez voltavam — o tecto
+  diário passava a ser uma sugestão. Fica pelo maior o que se **ganhou** e
+  pelo maior o que se **gastou**. O objectivo declarado («nunca se perde
+  tempo ao trocar de telemóvel») cumpre-se para o tempo ganho a estudar, que
+  é o que a criança trabalhou para ter.
+- **O nível perfeito rende oito, não treze.** Os +8 substituem os +5; não se
+  somam. A tabela podia ler-se das duas maneiras.
+- **`inactive` não pára o relógio.** Só `paused`, `hidden` e `detached`. É a
+  mesma linha que a música já usava, e pela mesma razão: a sombra do
+  multitarefas e a barra de notificações meio aberta são transitórias, e o
+  `resumed` que devolveria o relógio nem sempre chega.
+- **Dentro do jogo o aviso só aparece no último minuto**, e ao acabar fica
+  1,5 s a dizer porquê antes de fechar. Um relógio sempre à vista põe a
+  criança a olhar para o tempo em vez de jogar; um jogo que desaparece sem
+  explicação lê-se como avaria.
+- **Um sítio só liga os jogos ao relógio.** O `RelogioDeJogo` envolve o que o
+  botão dos Joguinhos abrir, e não os quatro ecrãs um a um: assim um quinto
+  joguinho não pode nascer sem contar tempo.
+- **O ciclo de vida saiu do `main.dart` para `services/ciclo_de_vida.dart`.**
+  Enterrada num `State` privado, a ligação não tinha teste nenhum —
+  apagavam-se-lhe duas linhas e a suite continuava verde com o relógio a
+  correr de app fechada.
 
 ---
 

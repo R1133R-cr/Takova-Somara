@@ -330,4 +330,30 @@ void main() {
       });
     }
   });
+
+  // O painel de bolsa vazia só existe quando não há tempo de jogo, e por isso
+  // a varredura de cima nunca lhe toca: ela monta sempre um estado novo, de
+  // bolsa cheia. Foi por aí que uma frase a transbordar 151 px chegou a
+  // existir sem que 265 testes dessem por ela.
+  group('os joguinhos com a bolsa vazia', () {
+    for (final entrada in tamanhos.entries) {
+      testWidgets('cabem num ${entrada.key}', (tester) async {
+        var agora = DateTime(2026, 9, 4, 15, 0);
+        final st = estado()..relogio = () => agora;
+        st.entrarNoJogo();
+        agora = agora.add(const Duration(hours: 2));
+        st.sairDoJogo();
+        expect(st.podeJogar, isFalse);
+
+        final erro = await montar(
+          tester,
+          JoguinhosScreen(aoIrEstudar: () {}),
+          entrada.value,
+          st: st,
+        );
+        expect(erro, isNull, reason: 'bolsa vazia em ${entrada.value}');
+        expect(find.text('Ir estudar'), findsOneWidget);
+      });
+    }
+  });
 }

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../models/bolsa_de_tempo.dart';
 import '../models/content.dart';
 import '../models/escadaria.dart';
 import '../models/sequencia.dart';
@@ -74,6 +75,92 @@ class AppState extends ChangeNotifier {
         _niveisDosJogos[jogo] = math.min(v, nivelMaximo);
       }
     }
+  }
+
+  /* ---------------- Tempo de jogo ----------------
+     Os corações limitam os exercícios; a bolsa limita os jogos. São coisas
+     separadas de propósito, e o estudo NUNCA é travado por esta. Ver
+     [BolsaDeTempo] para o porquê do tecto diário. */
+
+  BolsaDeTempo _bolsa = const BolsaDeTempo(dia: '');
+
+  /// O relógio da bolsa. Só os testes lhe mexem — sem isto não há maneira
+  /// de provar que ela se repõe à meia-noite sem esperar pela meia-noite.
+  @visibleForTesting
+  DateTime Function() relogio = DateTime.now;
+
+  /// Há um jogo aberto (mesmo que a app esteja minimizada).
+  bool _aJogar = false;
+
+  /// Desde quando é que o relógio corre. Nulo com a app em segundo plano:
+  /// é assim que o tempo pára quando o ecrã se apaga.
+  DateTime? _correDesde;
+
+  String get _hoje => Sequencia.iso(relogio());
+
+  Duration get _decorrido {
+    final desde = _correDesde;
+    if (desde == null) return Duration.zero;
+    final d = relogio().difference(desde);
+    return d.isNegative ? Duration.zero : d;
+  }
+
+  /// A bolsa de hoje, já reposta se o dia virou.
+  BolsaDeTempo get bolsa => _bolsa.noDia(_hoje);
+
+  /// Quanto tempo de jogo ainda há, contando o jogo que está a decorrer.
+  Duration get tempoDeJogo {
+    final falta = bolsa.restante - _decorrido;
+    return falta.isNegative ? Duration.zero : falta;
+  }
+
+  bool get podeJogar => tempoDeJogo > Duration.zero;
+
+  /// Fecha a conta do que se jogou até agora.
+  void _assentarTempo() {
+    final d = _decorrido;
+    _correDesde = null;
+    if (d <= Duration.zero) return;
+    _bolsa = bolsa.comGasto(d);
+  }
+
+  /// Um jogo abriu: o relógio arranca.
+  void entrarNoJogo() {
+    _bolsa = bolsa;
+    _aJogar = true;
+    _correDesde = relogio();
+  }
+
+  /// O jogo fechou: assenta o gasto e guarda.
+  void sairDoJogo() {
+    if (!_aJogar) return;
+    _assentarTempo();
+    _aJogar = false;
+    notifyListeners();
+    _gravar();
+  }
+
+  /// A app foi para segundo plano. O tempo de jogo pára aqui — a criança
+  /// que atende uma chamada a meio do Pomar não paga por essa chamada.
+  void pausarTempoDeJogo() {
+    if (!_aJogar || _correDesde == null) return;
+    _assentarTempo();
+    _gravar();
+  }
+
+  /// A app voltou à frente. Só reata se ainda houver um jogo aberto.
+  void retomarTempoDeJogo() {
+    if (!_aJogar || _correDesde != null) return;
+    _correDesde = relogio();
+  }
+
+  /// Estudar enche a bolsa.
+  ///
+  /// Chamada de [concluirNivel]. Não é chamada pelo treino nem pelos
+  /// joguinhos: jogar para ganhar tempo de jogo seria um círculo, e a
+  /// bolsa deixava de querer dizer nada.
+  void _ganharTempoDeJogo(Duration d) {
+    _bolsa = bolsa.comGanho(d);
   }
 
   /// Perguntas que a criança errou, guardadas para rever.
@@ -240,6 +327,8 @@ class AppState extends ChangeNotifier {
         final p = (j['progresso'] as Map?) ?? {};
         p.forEach((k, v) => progresso['$k'] = v as int);
         _lerNiveisDosJogos(j['jogos'] as Map?);
+        _bolsa = BolsaDeTempo.deJson(j['bolsa'] as Map<String, dynamic>?) ??
+            _bolsa;
         erradas.addAll(((j['erradas'] as List?) ?? []).cast<String>());
         _diaDasVidas = j['diaDasVidas'] as String?;
         _vezesSemVidas = (j['vezesSemVidas'] ?? 0) as int;
@@ -307,6 +396,7 @@ class AppState extends ChangeNotifier {
         'cursoId': cursoId,
         'progresso': progresso,
         'jogos': _niveisParaJson(),
+        'bolsa': bolsa.paraJson(),
         'erradas': erradas.toList(),
         'diaDasVidas': _diaDasVidas,
         'vezesSemVidas': _vezesSemVidas,
@@ -343,6 +433,7 @@ class AppState extends ChangeNotifier {
     'cursoId': cursoId,
     'progresso': progresso,
     'jogos': _niveisParaJson(),
+    'bolsa': bolsa.paraJson(),
     'erradas': erradas.toList(),
   };
 
@@ -390,6 +481,12 @@ class AppState extends ChangeNotifier {
             math.min(math.max(nivelDe(jogo), v), nivelMaximo);
       }
     }
+
+    // A bolsa junta-se pelo maior dos dois em cada número — o que se
+    // estudou noutro telemóvel conta, e o que lá se jogou também. Ver
+    // [BolsaDeTempo.fundirCom].
+    final bN = BolsaDeTempo.deJson(n['bolsa'] as Map<String, dynamic>?);
+    if (bN != null) _bolsa = bolsa.fundirCom(bN.noDia(_hoje));
 
     // As erradas juntam-se as duas: uma pergunta falhada noutro telemóvel
     // continua por rever neste. Sai da lista quando for acertada.
@@ -566,6 +663,11 @@ class AppState extends ChangeNotifier {
     final chave = chaveDe(lv.unit, lv.nivel);
     progresso[chave] = math.max(progresso[chave] ?? 0, pct);
     xp += acertos * xpPorAcerto + xpPorNivel;
+    // Sem um único erro rende mais. É o que faz a criança voltar a um nível
+    // que já passou para o fazer melhor, em vez de o passar à tangente.
+    _ganharTempoDeJogo(
+      pct == 100 ? BolsaDeTempo.porNivelPerfeito : BolsaDeTempo.porNivel,
+    );
     _sequencia = _sequencia.comActividadeEm(DateTime.now());
     unawaited(Nuvem.i.contarLicao());
     notifyListeners();

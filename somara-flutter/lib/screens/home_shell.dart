@@ -68,7 +68,9 @@ class _HomeShellState extends State<HomeShell> {
                   children: [
                     const MapScreen(),
                     const PraticarScreen(),
-                    const JoguinhosScreen(),
+                    // Sem tempo de jogo, o botão da mensagem traz de volta
+                    // à amarelinha — que é onde se ganha mais.
+                    JoguinhosScreen(aoIrEstudar: () => setState(() => _aba = 0)),
                     const RankingScreen(),
                     const GuardadosScreen(),
                     // Mudar de classe leva logo à amarelinha nova: é a
