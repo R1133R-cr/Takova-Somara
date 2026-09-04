@@ -15,54 +15,40 @@ Correr a partir de somara-flutter/:
     python tools/materia.py --gravar   # escreve o content.json e o audio
 """
 
-import hashlib
-import json
-import re
-import subprocess
 import sys
 from pathlib import Path
 
-from materia_texto import MATERIA
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-RAIZ = Path(__file__).resolve().parent.parent
-CONTENT = RAIZ / "assets" / "content.json"
-AUDIO = RAIZ / "assets" / "audio"
+import audio  # noqa: E402
+from materia_texto import MATERIA  # noqa: E402
 
-# A mesma voz do resto do corpus, confirmada byte a byte contra os ficheiros
-# ja gravados. Mudar isto faria a aula soar a outra pessoa.
-VOZ = "pt-PT-RaquelNeural"
-TOM = "+25Hz"
-RITMO = "-5%"
-
-_LIXO = re.compile("[\U0001F000-\U0001FAFF☀-➿️‍]|_{2,}", flags=re.UNICODE)
+CONTENT = audio.CONTENT
+AUDIO = audio.AUDIO
 
 
-def nome_do_audio(texto: str) -> str:
-    return hashlib.sha1(texto.encode("utf-8")).hexdigest()[:12]
-
-
-def para_ler(m: dict) -> str:
+def bruto_da_materia(m: dict) -> str:
     """O que a Raquel le: a explicacao e o exemplo, sem o "lembra".
 
     O "lembra" fica de fora de proposito -- e uma nota para os olhos, e dita
     em voz alta logo a seguir ao exemplo soa a repeticao.
     """
-    bruto = f"{m['explica']} {m['exemplo']}"
-    return re.sub(r"\s+", " ", _LIXO.sub(" ", bruto)).strip()
+    return f"{m['explica']} {m['exemplo']}"
 
 
-def gravar_audio(texto: str, destino: Path) -> bool:
-    r = subprocess.run(
-        ["edge-tts", "--voice", VOZ, f"--pitch={TOM}", f"--rate={RITMO}",
-         "--text", texto, "--write-media", str(destino)],
-        capture_output=True,
-    )
-    return r.returncode == 0 and destino.exists() and destino.stat().st_size > 0
+def nome_da_materia(m: dict) -> str:
+    """O nome do mp3 de uma aula.
+
+    E o SHA-1 do texto JA LIMPO, e nao do bruto -- foi assim que os 179
+    ficheiros existentes foram nomeados, e mudar a conta agora renomeava-os
+    a todos sem que o som mudasse.
+    """
+    return audio.sha(audio.limpar(bruto_da_materia(m))) + ".mp3"
 
 
 def main() -> int:
     gravar = "--gravar" in sys.argv
-    dados = json.loads(CONTENT.read_text(encoding="utf-8"))
+    dados = audio.carregar_content()
 
     chaves_no_curriculo = []
     for curso in dados["cursos"]:
@@ -91,6 +77,7 @@ def main() -> int:
         print("\n(so leitura -- corre com --gravar para escrever)")
         return 0
 
+    manifesto = audio.ler_manifesto()
     novos = 0
     for curso in dados["cursos"]:
         for u in curso["units"]:
@@ -98,22 +85,32 @@ def main() -> int:
                 m = MATERIA.get(f"{curso['id']}:{u['id']}:{n['id']}")
                 if not m:
                     continue
-                texto = para_ler(m)
-                ficheiro = nome_do_audio(texto) + ".mp3"
+                bruto = bruto_da_materia(m)
+                ficheiro = nome_da_materia(m)
                 destino = AUDIO / ficheiro
-                if not destino.exists():
-                    if not gravar_audio(texto, destino):
+
+                # Grava-se quando o ficheiro falta OU quando o que la esta
+                # dentro ja nao e o que as regras mandam dizer. A condicao
+                # antiga era so "nao existe", e por isso uma regra de
+                # pronuncia nova nunca chegava as aulas ja gravadas.
+                actual = manifesto.get(ficheiro)
+                devia = audio.sha(audio.dito(bruto))
+                if not destino.exists() or actual != devia:
+                    # O texto do ECRA e que vai para o gravador: e ele que
+                    # aplica as regras. Antes daqui passava o texto cru, e
+                    # foi assim que a aula do perimetro ficou a ler
+                    # "cinco mais cinco mais cinco mais cinco vinte ce eme".
+                    if not audio.gravar(bruto, ficheiro, manifesto):
                         print(f"FALHOU o audio de {n['id']}", file=sys.stderr)
+                        audio.escrever_manifesto(manifesto)
                         return 1
                     novos += 1
                     print(f"   {destino.stat().st_size:>6} bytes  {ficheiro}")
                 n["materia"] = {**m, "audio": ficheiro}
 
-    # indent=1 e a formatacao que o ficheiro ja tem.
-    CONTENT.write_text(
-        json.dumps(dados, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
-    )
-    print(f"\n-- content.json gravado, {novos} audios novos")
+    audio.gravar_content(dados)
+    audio.escrever_manifesto(manifesto)
+    print(f"\n-- content.json gravado, {novos} audios gravados")
     return 0
 
 

@@ -3579,17 +3579,20 @@
          "audio": "0e4f8cdf9cc3.mp3"
         },
         {
-         "t": "count",
+         "t": "choice",
          "q": "Quantos lados tem esta figura?",
-         "emoji": "📏",
-         "n": 4,
          "options": [
           "3",
           "4",
           "5"
          ],
          "a": 1,
-         "audio": "72d8ba0baf9b.mp3"
+         "audio": "72d8ba0baf9b.mp3",
+         "figura": {
+          "forma": "quadrado",
+          "a": 4,
+          "unidade": ""
+         }
         },
         {
          "t": "choice",
@@ -5177,13 +5180,22 @@
          "t": "input",
          "q": "Um quadrado tem 5 cm de lado. Qual é o perímetro, em cm?",
          "a": "20",
-         "audio": "8bf7c46fe30a.mp3"
+         "audio": "8bf7c46fe30a.mp3",
+         "figura": {
+          "forma": "quadrado",
+          "a": 5
+         }
         },
         {
          "t": "input",
          "q": "Um rectângulo tem 8 cm de comprimento e 3 cm de largura. Qual é o perímetro, em cm?",
          "a": "22",
-         "audio": "63e8766ddd19.mp3"
+         "audio": "63e8766ddd19.mp3",
+         "figura": {
+          "forma": "rectangulo",
+          "a": 8,
+          "b": 3
+         }
         },
         {
          "t": "choice",
@@ -5223,13 +5235,22 @@
          "t": "input",
          "q": "Um rectângulo tem 6 cm por 4 cm. Qual é a área, em centímetros quadrados?",
          "a": "24",
-         "audio": "fbb6baef663a.mp3"
+         "audio": "fbb6baef663a.mp3",
+         "figura": {
+          "forma": "rectangulo",
+          "a": 6,
+          "b": 4
+         }
         },
         {
          "t": "input",
          "q": "Um quadrado tem 7 cm de lado. Qual é a área, em centímetros quadrados?",
          "a": "49",
-         "audio": "727fd33c6b3a.mp3"
+         "audio": "727fd33c6b3a.mp3",
+         "figura": {
+          "forma": "quadrado",
+          "a": 7
+         }
         },
         {
          "t": "choice",
@@ -5869,6 +5890,827 @@
         "exemplo": "Para saber o total do mês numa tabela de despesas, somam-se todas as linhas.",
         "lembra": "Lê primeiro os títulos: dizem o que cada número significa.",
         "audio": "ecf7aa894d3e.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "por-4c",
+   "disciplina": "Português",
+   "classe": "4ª classe",
+   "tag": "POR",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Família",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Falar com cortesia",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os princípios de cortesia servem para:",
+         "options": [
+          "Falarmos com delicadeza e respeito",
+          "Falarmos mais depressa",
+          "Falarmos mais alto"
+         ],
+         "a": 0,
+         "audio": "c085561f4454.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa conversa, devemos:",
+         "options": [
+          "Esperar pela nossa vez de falar",
+          "Falar por cima dos outros",
+          "Mudar de assunto a toda a hora"
+         ],
+         "a": 0,
+         "audio": "296ae0dd4766.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como falas com a tua professora?",
+         "options": [
+          "Bom dia, senhora professora!",
+          "Olá, tu!",
+          "Anda cá!"
+         ],
+         "a": 0,
+         "audio": "5a46c4656138.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Olá, amiga! Estás bem?» é linguagem:",
+         "options": [
+          "Informal, entre amigos",
+          "Formal, de respeito",
+          "Escrita, de livro"
+         ],
+         "a": 0,
+         "audio": "bd397205b8c1.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada pessoa à forma de tratamento certa.",
+         "pairs": [
+          [
+           "A professora",
+           "Senhora professora"
+          ],
+          [
+           "A tua amiga",
+           "Tu"
+          ]
+         ],
+         "audio": "a28dacc4875a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os princípios de cortesia servem para falarmos uns com os outros com delicadeza e respeito. Ouve-se quem fala, espera-se pela nossa vez e respeita-se o assunto da conversa.",
+        "exemplo": "Com pessoas de respeito diz-se «Bom dia, senhora professora!»; entre amigos diz-se «Olá, amiga!».",
+        "lembra": "Por favor, com licença, obrigado, desculpe — são as palavras da cortesia.",
+        "audio": "5be9c3344d8a.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Nomes comuns e próprios",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os nomes comuns designam:",
+         "options": [
+          "Seres de uma mesma espécie",
+          "Uma só pessoa, com nome dela",
+          "Acções que se fazem"
+         ],
+         "a": 0,
+         "audio": "995aad2a8b0b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas palavras é um nome próprio?",
+         "options": [
+          "Manica",
+          "cidade",
+          "província"
+         ],
+         "a": 0,
+         "audio": "02dd59d6fa3f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os nomes próprios escrevem-se sempre:",
+         "options": [
+          "Com letra inicial maiúscula",
+          "Com letra inicial minúscula",
+          "Todos em maiúsculas"
+         ],
+         "a": 0,
+         "audio": "e221276a101d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o feminino de \"irmão\".",
+         "a": "irmã",
+         "audio": "63e323797f3e.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada nome comum ao seu plural.",
+         "pairs": [
+          [
+           "irmã",
+           "irmãs"
+          ],
+          [
+           "homem",
+           "homens"
+          ]
+         ],
+         "audio": "b05e3b480302.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os nomes comuns designam seres de uma mesma espécie: irmã, amigo, prato. Os nomes próprios designam um em especial e escrevem-se sempre com letra maiúscula.",
+        "exemplo": "cidade é nome comum; Tete é nome próprio.",
+        "lembra": "Nome próprio começa por maiúscula. Se não começa, é comum.",
+        "audio": "0f6c57e590f4.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Nomes terminados em ão",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Escreve o plural de \"pão\".",
+         "a": "pães",
+         "audio": "902094b384d1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o plural de \"mão\".",
+         "a": "mãos",
+         "audio": "c57233669a41.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é o plural de \"coração\"?",
+         "options": [
+          "Corações",
+          "Coraçãos",
+          "Coração"
+         ],
+         "a": 0,
+         "audio": "e0fb8c1dca53.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os nomes terminados em ão fazem o plural:",
+         "options": [
+          "De várias maneiras",
+          "Sempre com ãos",
+          "Sempre com ães"
+         ],
+         "a": 0,
+         "audio": "bd7720a966f3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os nomes terminados em ão não fazem todos o plural da mesma maneira. Uns ficam em ãos, outros em ães e outros em ões.",
+        "exemplo": "mão fica mãos; pão fica pães; coração fica corações.",
+        "lembra": "Diz a palavra no plural em voz alta: o ouvido acerta antes da regra.",
+        "audio": "7e34caa3a03c.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Escola",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Tipos de frase",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«A Lurdes gosta de aprender.» é uma frase:",
+         "options": [
+          "Declarativa",
+          "Interrogativa",
+          "Exclamativa"
+         ],
+         "a": 0,
+         "audio": "929f3607958b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Fecha a porta, Tânia!» é uma frase:",
+         "options": [
+          "Imperativa",
+          "Declarativa",
+          "Interrogativa"
+         ],
+         "a": 0,
+         "audio": "8f9fc6391c7b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ah! Que presente bonito!» é uma frase:",
+         "options": [
+          "Exclamativa",
+          "Imperativa",
+          "Declarativa"
+         ],
+         "a": 0,
+         "audio": "cba01746294b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A frase interrogativa serve para:",
+         "options": [
+          "Fazer perguntas",
+          "Dar uma ordem",
+          "Contar uma história"
+         ],
+         "a": 0,
+         "audio": "1e226f7410dc.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada frase à sua intenção.",
+         "pairs": [
+          [
+           "Declarativa",
+           "Informar ou contar"
+          ],
+          [
+           "Imperativa",
+           "Dar uma ordem"
+          ]
+         ],
+         "audio": "7e97afacb0b9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Há quatro tipos de frase. A declarativa conta, a imperativa manda, a exclamativa mostra o que se sente e a interrogativa pergunta.",
+        "exemplo": "A Lurdes gosta de aprender. Fecha a porta, Tânia! Ah! Que presente bonito! Onde está o teu material?",
+        "lembra": "Olha o sinal no fim: ponto conta, exclamação sente, interrogação pergunta.",
+        "audio": "ea46c17678c9.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Sujeito e predicado",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na frase «O Gabriel vive numa casa bonita.», o sujeito é:",
+         "options": [
+          "O Gabriel",
+          "vive",
+          "numa casa bonita"
+         ],
+         "a": 0,
+         "audio": "f68220be4639.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O predicado da frase diz:",
+         "options": [
+          "O que o sujeito faz",
+          "Quem pratica a acção",
+          "Onde a acção acontece"
+         ],
+         "a": 0,
+         "audio": "faf5f33808f3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um texto narrativo conta:",
+         "options": [
+          "Uma história, real ou imaginária",
+          "Como se faz uma coisa",
+          "Uma lista de palavras"
+         ],
+         "a": 0,
+         "audio": "ea8efa008616.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A introdução de uma narrativa responde a:",
+         "options": [
+          "Quando? Onde? Quem?",
+          "Quanto custa?",
+          "Porquê não?"
+         ],
+         "a": 0,
+         "audio": "20508b2fed62.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O sujeito é quem faz a acção e o predicado é o que ele faz. O texto narrativo conta uma história, com personagens, tempo e lugar.",
+        "exemplo": "Em «O Gabriel vive numa casa bonita», o sujeito é O Gabriel e o predicado é vive numa casa bonita.",
+        "lembra": "Pergunta «quem?» para achar o sujeito e «faz o quê?» para o predicado.",
+        "audio": "f27aeb627223.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Comunidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Preposições",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As preposições servem para:",
+         "options": [
+          "Ligar elementos da frase",
+          "Contar quantos há",
+          "Dar nome às pessoas"
+         ],
+         "a": 0,
+         "audio": "8d7822fe8499.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na frase «A Célia vai à machamba com a avó.», a preposição é:",
+         "options": [
+          "com",
+          "Célia",
+          "machamba"
+         ],
+         "a": 0,
+         "audio": "b1bd9b25a690.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas palavras é uma preposição?",
+         "options": [
+          "sobre",
+          "casa",
+          "correr"
+         ],
+         "a": 0,
+         "audio": "b472ad8a8bdf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As preposições são palavras:",
+         "options": [
+          "Invariáveis",
+          "Que mudam de género",
+          "Que mudam de número"
+         ],
+         "a": 0,
+         "audio": "bad2fc1f35bb.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Completa com a contracção de \"de\" e \"o\": O livro ___ Armando.",
+         "a": "do",
+         "audio": "33d8e8cdea72.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As preposições são palavras invariáveis que ligam elementos da frase: a, com, de, em, para, por, sobre, sem, até.",
+        "exemplo": "A Célia vai à machamba com a avó. A preposição é com.",
+        "lembra": "A preposição nunca muda: não tem masculino, feminino nem plural.",
+        "audio": "88c5d6da08c2.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Ambiente",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Tempos dos verbos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Ontem eu estudei.» O verbo está no:",
+         "options": [
+          "Pretérito perfeito",
+          "Presente",
+          "Futuro"
+         ],
+         "a": 0,
+         "audio": "9d5158cedf40.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Amanhã nós plantaremos árvores.» O verbo está no:",
+         "options": [
+          "Futuro",
+          "Presente",
+          "Pretérito"
+         ],
+         "a": 0,
+         "audio": "837d9ee1e7cd.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve o verbo \"ir\" na 1ª pessoa do singular do presente: eu ___.",
+         "a": "vou",
+         "audio": "1dbccbec8259.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O verbo \"ser\" é um verbo:",
+         "options": [
+          "Irregular",
+          "Regular",
+          "Invariável"
+         ],
+         "a": 0,
+         "audio": "20e293e00a7f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O verbo diz quando a acção acontece. O presente é agora, o pretérito perfeito é o que já passou e o futuro é o que ainda vem.",
+        "exemplo": "Hoje estudo; ontem estudei; amanhã estudarei.",
+        "lembra": "Ontem, hoje, amanhã — o verbo muda com cada um.",
+        "audio": "db9fcc49480e.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Pontuação e nomes colectivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Que sinal se põe no fim de uma pergunta?",
+         "options": [
+          "Ponto de interrogação",
+          "Ponto final",
+          "Vírgula"
+         ],
+         "a": 0,
+         "audio": "dd41f38b9c1c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um conjunto de árvores chama-se:",
+         "options": [
+          "Floresta",
+          "Árvores",
+          "Madeira"
+         ],
+         "a": 0,
+         "audio": "1d10e549de3f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um nome colectivo designa:",
+         "options": [
+          "Um conjunto de seres da mesma espécie",
+          "Um só ser",
+          "Uma acção"
+         ],
+         "a": 0,
+         "audio": "9fb9b97277fc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pertencem à mesma família de palavras:",
+         "options": [
+          "Terra, terreno, enterrar",
+          "Terra, casa, chuva",
+          "Terra, correr, bonito"
+         ],
+         "a": 0,
+         "audio": "5f75daa7cf3e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os sinais de pontuação arrumam a frase. Um nome colectivo é um só nome para um conjunto de seres da mesma espécie.",
+        "exemplo": "Muitas árvores juntas são uma floresta; muitos bois são uma manada.",
+        "lembra": "Pergunta acaba em ponto de interrogação. O conjunto tem nome só dele.",
+        "audio": "c9b9636f3f52.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Corpo Humano",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A frase simples",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma frase simples tem:",
+         "options": [
+          "Um só verbo principal",
+          "Sempre dois verbos",
+          "Nenhum verbo"
+         ],
+         "a": 0,
+         "audio": "56963ebd30c1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma frase simples?",
+         "options": [
+          "A Maria lavou as mãos.",
+          "A Maria lavou as mãos e comeu o pão.",
+          "As mãos limpas."
+         ],
+         "a": 0,
+         "audio": "a09078a3e937.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Toda a frase começa com:",
+         "options": [
+          "Letra maiúscula",
+          "Letra minúscula",
+          "Um número"
+         ],
+         "a": 0,
+         "audio": "f44cf965c9b0.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos verbos principais tem uma frase simples?",
+         "a": "1",
+         "audio": "6134bea4a3f7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A frase simples tem um só verbo principal. Começa por letra maiúscula e acaba com um sinal de pontuação.",
+        "exemplo": "A Maria lavou as mãos. É simples: só tem o verbo lavou.",
+        "lembra": "Conta os verbos. Um só verbo, frase simples.",
+        "audio": "14f2c5807b45.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Saúde e Higiene",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Pronomes possessivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Completa: Esta é ___ mão. (de mim)",
+         "options": [
+          "a minha",
+          "a tua",
+          "a sua"
+         ],
+         "a": 0,
+         "audio": "991f79522ec7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Completa: Esse é ___ livro. (de ti)",
+         "options": [
+          "o teu",
+          "o meu",
+          "o nosso"
+         ],
+         "a": 0,
+         "audio": "d887a655bc6b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os pronomes possessivos dizem:",
+         "options": [
+          "De quem é a coisa",
+          "Onde está a coisa",
+          "Quantas coisas há"
+         ],
+         "a": 0,
+         "audio": "c487f8e8071d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve no plural: a minha mão fica as ___ mãos.",
+         "a": "minhas",
+         "audio": "5aabdfcaac2e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os pronomes possessivos dizem de quem é a coisa, e mudam com o género e com o número.",
+        "exemplo": "Esta é a minha mão; estas são as minhas mãos; esse é o teu livro.",
+        "lembra": "De mim é meu ou minha; de ti é teu ou tua.",
+        "audio": "f1130f1d6b7b.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Meios de Transporte",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Advérbios de tempo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destas palavras é um advérbio de tempo?",
+         "options": [
+          "ontem",
+          "devagar",
+          "aqui"
+         ],
+         "a": 0,
+         "audio": "3542b747128e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na frase «O comboio chegou cedo.», o advérbio é:",
+         "options": [
+          "cedo",
+          "comboio",
+          "chegou"
+         ],
+         "a": 0,
+         "audio": "6b3723715fa2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os advérbios de tempo dizem:",
+         "options": [
+          "Quando a acção acontece",
+          "Onde a acção acontece",
+          "Como a acção acontece"
+         ],
+         "a": 0,
+         "audio": "94e75e025daf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«De manhã» é uma:",
+         "options": [
+          "Locução adverbial de tempo",
+          "Preposição",
+          "Nome próprio"
+         ],
+         "a": 0,
+         "audio": "2c560b4eb120.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os advérbios de tempo dizem quando a acção acontece: ontem, hoje, amanhã, cedo, tarde, nunca, sempre.",
+        "exemplo": "O comboio chegou cedo. Cedo diz quando ele chegou.",
+        "lembra": "Pergunta «quando?» — a resposta é o advérbio de tempo.",
+        "audio": "eeda27afe335.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Comunicação",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Meios de comunicação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um meio de comunicação?",
+         "options": [
+          "A rádio",
+          "A enxada",
+          "A panela"
+         ],
+         "a": 0,
+         "audio": "3d86f0ec0717.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um postal serve para:",
+         "options": [
+          "Mandar uma mensagem curta a alguém",
+          "Guardar dinheiro",
+          "Medir o tempo"
+         ],
+         "a": 0,
+         "audio": "af9e0900b665.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na frase «A Ana escreveu depressa.», o advérbio de modo é:",
+         "options": [
+          "depressa",
+          "escreveu",
+          "Ana"
+         ],
+         "a": 0,
+         "audio": "3736df5bc30b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os advérbios de modo dizem:",
+         "options": [
+          "Como a acção acontece",
+          "Quando acontece",
+          "Onde acontece"
+         ],
+         "a": 0,
+         "audio": "c0e801cd3df1.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada advérbio ao que ele diz.",
+         "pairs": [
+          [
+           "ontem",
+           "Quando"
+          ],
+          [
+           "devagar",
+           "Como"
+          ]
+         ],
+         "audio": "39d4b98c994b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os meios de comunicação levam a mensagem de uns aos outros: a rádio, a televisão, o jornal, o telefone, a carta e o postal. Os advérbios de modo dizem como a acção acontece.",
+        "exemplo": "A Ana escreveu depressa. Depressa diz como ela escreveu.",
+        "lembra": "«Quando?» é tempo; «como?» é modo.",
+        "audio": "90c3996d6cfd.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u9",
+     "titulo": "A nossa província",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Advérbios de negação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destas palavras é um advérbio de negação?",
+         "options": [
+          "não",
+          "sim",
+          "talvez"
+         ],
+         "a": 0,
+         "audio": "17e52fc3f50a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se nega a frase «Eu fui à escola.»?",
+         "options": [
+          "Eu não fui à escola.",
+          "Eu fui à escola sim.",
+          "Fui eu à escola?"
+         ],
+         "a": 0,
+         "audio": "2e9bcb8d4790.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Nunca» é um advérbio de:",
+         "options": [
+          "Negação",
+          "Lugar",
+          "Modo"
+         ],
+         "a": 0,
+         "audio": "1366ab71b1b4.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Nega esta frase com uma só palavra: Ela ___ chegou.",
+         "a": "não",
+         "audio": "ea17334937b8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os advérbios de negação dizem que a acção não acontece: não, nunca, jamais, nada.",
+        "exemplo": "«Eu fui à escola» fica «Eu não fui à escola».",
+        "lembra": "Basta um «não» antes do verbo para negar a frase toda.",
+        "audio": "0982ccea8730.mp3"
        }
       }
      ]
@@ -6855,6 +7697,1239 @@
    "abrev": "C. Naturais"
   },
   {
+   "id": "cs-4c",
+   "disciplina": "Ciências Sociais",
+   "abrev": "C. Sociais",
+   "classe": "4ª classe",
+   "tag": "CS",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Família",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A família e os parentescos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A família é um conjunto de pessoas unidas por:",
+         "options": [
+          "Laço de sangue, matrimónio ou adopção",
+          "Viverem na mesma rua",
+          "Trabalharem no mesmo sítio"
+         ],
+         "a": 0,
+         "audio": "65e1e5ce0784.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A família formada por pai, mãe e filhos chama-se:",
+         "options": [
+          "Nuclear",
+          "Monoparental",
+          "Alargada"
+         ],
+         "a": 0,
+         "audio": "53589a17676a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A família em que só um dos pais cria os filhos chama-se:",
+         "options": [
+          "Monoparental",
+          "Nuclear",
+          "Alargada"
+         ],
+         "a": 0,
+         "audio": "4a1eef3bb016.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os pais do meu pai e os pais da minha mãe são os meus:",
+         "options": [
+          "Avós",
+          "Tios",
+          "Primos"
+         ],
+         "a": 0,
+         "audio": "056272d4db39.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada parente à sua definição.",
+         "pairs": [
+          [
+           "Tios",
+           "Os irmãos do meu pai e da minha mãe"
+          ],
+          [
+           "Avós",
+           "Os pais do meu pai e da minha mãe"
+          ]
+         ],
+         "audio": "d45233b85885.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A família é um conjunto de pessoas unidas por laço de sangue, pelo matrimónio ou pela adopção. Há a família nuclear, a monoparental e a alargada.",
+        "exemplo": "Pai, mãe e filhos são uma família nuclear. Se só um dos pais cria os filhos, é monoparental.",
+        "lembra": "Avós são os pais dos meus pais; tios são os irmãos deles.",
+        "audio": "136c6fdd3205.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Viver em família",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quando há um desentendimento em casa, o melhor é:",
+         "options": [
+          "Conversar e resolver sem violência",
+          "Bater primeiro",
+          "Não falar mais com ninguém"
+         ],
+         "a": 0,
+         "audio": "b2b33237497d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A árvore genealógica serve para:",
+         "options": [
+          "Mostrar os parentes de uma família",
+          "Medir a altura das árvores",
+          "Contar o dinheiro da casa"
+         ],
+         "a": 0,
+         "audio": "f9606f419ed3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cada membro da família tem:",
+         "options": [
+          "Deveres e obrigações",
+          "Só direitos",
+          "Nada a fazer"
+         ],
+         "a": 0,
+         "audio": "460b7fa82813.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os ritos e as cerimónias da família passam:",
+         "options": [
+          "De geração para geração",
+          "De um país para outro",
+          "De uma escola para outra"
+         ],
+         "a": 0,
+         "audio": "60c70b04f0b2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Viver em família é repartir tarefas e resolver as zangas a conversar. Cada membro tem os seus deveres.",
+        "exemplo": "A árvore genealógica mostra, num desenho, quem são os parentes de uma família.",
+        "lembra": "Conflito resolve-se a falar, nunca à força.",
+        "audio": "f669ba893f34.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Direitos e deveres da criança",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um direito da criança?",
+         "options": [
+          "Ter um nome",
+          "Faltar à escola",
+          "Trabalhar o dia todo"
+         ],
+         "a": 0,
+         "audio": "8b2c962d3126.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um dever da criança?",
+         "options": [
+          "Respeitar os mais velhos",
+          "Ter uma habitação",
+          "Ter uma nacionalidade"
+         ],
+         "a": 0,
+         "audio": "4afdd254b359.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Brincar é, para a criança:",
+         "options": [
+          "Um direito",
+          "Um dever",
+          "Um castigo"
+         ],
+         "a": 0,
+         "audio": "a8d28fbeae83.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cidadania é o conjunto de:",
+         "options": [
+          "Direitos e deveres para participar na sociedade",
+          "Ruas de uma cidade",
+          "Pessoas que vivem numa casa"
+         ],
+         "a": 0,
+         "audio": "a9d4e19e4bd3.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada um ao seu lugar.",
+         "pairs": [
+          [
+           "À saúde",
+           "Direito"
+          ],
+          [
+           "Proteger o ambiente",
+           "Dever"
+          ]
+         ],
+         "audio": "97dcffeb65d8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A criança tem direitos — à vida, a um nome, à saúde, a uma família, à educação e a brincar — e tem deveres, como respeitar os outros e estudar.",
+        "exemplo": "Ter um nome é um direito; cuidar do material escolar é um dever.",
+        "lembra": "Direito é o que recebo; dever é o que faço.",
+        "audio": "9ae8579764f9.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Comunidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Tipos de comunidade",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A comunidade formada por quem vive no campo é:",
+         "options": [
+          "Rural",
+          "Urbana",
+          "Religiosa"
+         ],
+         "a": 0,
+         "audio": "c8d4ee47d9d2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A comunidade formada por quem vive na cidade é:",
+         "options": [
+          "Urbana",
+          "Rural",
+          "Educativa"
+         ],
+         "a": 0,
+         "audio": "59b0ce16cbea.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Usos e costumes são práticas transmitidas:",
+         "options": [
+          "De geração para geração",
+          "Pela rádio",
+          "Pelos livros da escola"
+         ],
+         "a": 0,
+         "audio": "cbe60a3010d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A comunidade de quem faz parte do ambiente escolar é:",
+         "options": [
+          "Educativa",
+          "Religiosa",
+          "Rural"
+         ],
+         "a": 0,
+         "audio": "ffc2aed31077.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Comunidade é o conjunto de pessoas que vivem juntas. Há a rural, a urbana, a religiosa e a educativa.",
+        "exemplo": "Quem vive no campo forma uma comunidade rural; quem vive na cidade, uma urbana.",
+        "lembra": "Usos e costumes passam de geração para geração.",
+        "audio": "d5f7a7c4c34f.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Lendas e contos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A lenda serve para explicar:",
+         "options": [
+          "Acontecimentos misteriosos",
+          "Contas de somar",
+          "Regras da escola"
+         ],
+         "a": 0,
+         "audio": "3eafbcfe6f31.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na lenda misturam-se:",
+         "options": [
+          "Factos reais e fantasias",
+          "Só factos reais",
+          "Só números"
+         ],
+         "a": 0,
+         "audio": "d7ec76d5b375.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O conto é uma história transmitida:",
+         "options": [
+          "Dos mais velhos para os mais novos",
+          "Só por escrito",
+          "Só na escola"
+         ],
+         "a": 0,
+         "audio": "148549ca0950.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O conto que quer transmitir uma lição moral é o:",
+         "options": [
+          "Infantil",
+          "De humor",
+          "Realista"
+         ],
+         "a": 0,
+         "audio": "3d7b3c20c4e5.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada conto ao que ele faz.",
+         "pairs": [
+          [
+           "Conto realista",
+           "Narra situações reais"
+          ],
+          [
+           "Conto de humor",
+           "Diverte quem ouve"
+          ]
+         ],
+         "audio": "37efaa5e55eb.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A lenda explica acontecimentos misteriosos e mistura factos reais com fantasia. O conto passa dos mais velhos para os mais novos.",
+        "exemplo": "Há contos realistas, populares, de humor e infantis. Os infantis deixam uma lição.",
+        "lembra": "Lenda explica; conto conta.",
+        "audio": "224134dfcd32.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Línguas e respeito",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Numa comunidade moçambicana fala-se:",
+         "options": [
+          "Português e línguas moçambicanas",
+          "Só português",
+          "Só uma língua"
+         ],
+         "a": 0,
+         "audio": "e2394eb9b9a5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Perante alguém diferente de nós, devemos:",
+         "options": [
+          "Respeitar a diferença",
+          "Afastar-nos",
+          "Rir dela"
+         ],
+         "a": 0,
+         "audio": "f26d688638de.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A agricultura, a pesca e o comércio são:",
+         "options": [
+          "Actividades económicas da comunidade",
+          "Jogos tradicionais",
+          "Tipos de família"
+         ],
+         "a": 0,
+         "audio": "844b2fca4a57.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A dança e a música tradicional fazem parte:",
+         "options": [
+          "Da cultura da comunidade",
+          "Do regulamento da escola",
+          "Da divisão administrativa"
+         ],
+         "a": 0,
+         "audio": "332b273ce13f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na comunidade fala-se português e línguas moçambicanas, e as pessoas vivem de actividades como a agricultura, a pesca e o comércio.",
+        "exemplo": "A dança e a música tradicional são cultura da comunidade.",
+        "lembra": "Quem é diferente de mim merece o mesmo respeito.",
+        "audio": "9643f185e1f8.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Escola",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A minha escola",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O livro diz que a escola é a nossa:",
+         "options": [
+          "Segunda casa",
+          "Primeira casa",
+          "Última casa"
+         ],
+         "a": 0,
+         "audio": "c1060d1c8029.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O regulamento interno da escola serve para:",
+         "options": [
+          "Dizer as regras que se cumprem na escola",
+          "Contar a história da escola",
+          "Marcar as férias"
+         ],
+         "a": 0,
+         "audio": "8a2f3d8fd6e9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para a escola estar limpa e organizada é preciso que:",
+         "options": [
+          "Os alunos ajudem na limpeza e conservação",
+          "Só o director trate disso",
+          "Ninguém entre nas salas"
+         ],
+         "a": 0,
+         "audio": "a9e189acd8b9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um conflito na escola resolve-se:",
+         "options": [
+          "Conversando, sem violência",
+          "À força",
+          "Fugindo da escola"
+         ],
+         "a": 0,
+         "audio": "adad3e82d722.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A escola é a nossa segunda casa. Tem um regulamento interno com as regras, e conservá-la é tarefa de todos.",
+        "exemplo": "Limpar o pátio e as salas é ajudar a conservar a escola.",
+        "lembra": "Na escola, como em casa, a zanga resolve-se a falar.",
+        "audio": "17f349bb7e85.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Província",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A província e o poder",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Moçambique está dividido em:",
+         "options": [
+          "Províncias, distritos, postos administrativos e localidades",
+          "Só províncias",
+          "Só cidades e aldeias"
+         ],
+         "a": 0,
+         "audio": "e493b2b80f13.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quem dirige todos os assuntos de um distrito é o:",
+         "options": [
+          "Administrador do Distrito",
+          "Governador da Província",
+          "Presidente do Município"
+         ],
+         "a": 0,
+         "audio": "739d1cea830c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Conselho Autárquico é o órgão executivo do:",
+         "options": [
+          "Município",
+          "Distrito",
+          "País"
+         ],
+         "a": 0,
+         "audio": "75bdf08a04d3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Representante de Estado numa província é nomeado:",
+         "options": [
+          "Pelo Presidente",
+          "Pelo povo",
+          "Pela escola"
+         ],
+         "a": 0,
+         "audio": "d812fed1d630.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Moçambique divide-se em províncias, distritos, postos administrativos, localidades e povoações.",
+        "exemplo": "O Administrador dirige o distrito; o Conselho Autárquico é o órgão executivo do município.",
+        "lembra": "Do maior para o menor: província, distrito, posto, localidade.",
+        "audio": "c8e14b8bfb68.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Relevo, clima e rios",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Relevo são as diferentes formas como:",
+         "options": [
+          "A Terra se apresenta",
+          "A chuva cai",
+          "As pessoas falam"
+         ],
+         "a": 0,
+         "audio": "4bd6c5e22af5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As principais formas de relevo são:",
+         "options": [
+          "Planícies, planaltos e montanhas",
+          "Rios, lagos e mares",
+          "Cidades, vilas e aldeias"
+         ],
+         "a": 0,
+         "audio": "dd07a3026c89.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Abaixo de quantos metros de altitude é uma planície?",
+         "a": "200",
+         "audio": "27844d7b54a3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O clima é o estado do tempo que se repete durante:",
+         "options": [
+          "30 anos ou mais",
+          "Uma semana",
+          "Um ano"
+         ],
+         "a": 0,
+         "audio": "8be66fcdb9c2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um rio pequeno que termina num rio maior chama-se:",
+         "options": [
+          "Afluente",
+          "Foz",
+          "Nascente"
+         ],
+         "a": 0,
+         "audio": "0a99e9fc9eb5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um rio de Moçambique?",
+         "options": [
+          "Zambeze",
+          "Nilo",
+          "Congo"
+         ],
+         "a": 0,
+         "audio": "c6a808e0f1b6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Relevo são as formas como a Terra se apresenta: planícies, planaltos e montanhas. Clima é o tempo que se repete durante trinta anos ou mais.",
+        "exemplo": "A planície fica abaixo dos 200 metros; o planalto, acima. Um rio pequeno que desagua num maior é um afluente.",
+        "lembra": "Tempo é hoje; clima são trinta anos.",
+        "audio": "f70a1d018d96.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Transportes e segurança",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Antes de atravessar a estrada devemos:",
+         "options": [
+          "Olhar para os dois lados",
+          "Correr depressa",
+          "Fechar os olhos"
+         ],
+         "a": 0,
+         "audio": "4e759a4c574a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os sinais de trânsito servem para:",
+         "options": [
+          "Dar segurança a quem anda na estrada",
+          "Enfeitar a estrada",
+          "Marcar as províncias"
+         ],
+         "a": 0,
+         "audio": "298a7599c004.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um meio de transporte?",
+         "options": [
+          "O comboio",
+          "O telefone",
+          "A carta"
+         ],
+         "a": 0,
+         "audio": "109a3ef3161a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas acções degrada o ambiente?",
+         "options": [
+          "Queimar a floresta",
+          "Plantar árvores",
+          "Apanhar o lixo"
+         ],
+         "a": 0,
+         "audio": "f083fc049a0c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os meios de transporte levam pessoas e coisas. Na estrada há sinais de trânsito, e cumpri-los é o que nos mantém vivos.",
+        "exemplo": "Antes de atravessar, olha para os dois lados.",
+        "lembra": "Queimar a floresta degrada o ambiente; plantar repõe-o.",
+        "audio": "cbf698d8dec0.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Educação Social e Financeira",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Necessidades, desejos e poupança",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Necessidade é tudo o que:",
+         "options": [
+          "É indispensável para a nossa vida",
+          "Nos apetece ter",
+          "Custa mais dinheiro"
+         ],
+         "a": 0,
+         "audio": "f40afc303bb0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Comprar comida para casa é:",
+         "options": [
+          "Uma necessidade",
+          "Um desejo",
+          "Uma poupança"
+         ],
+         "a": 0,
+         "audio": "47b15c4242f8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando temos pouco dinheiro, primeiro pagamos:",
+         "options": [
+          "As necessidades",
+          "Os desejos",
+          "O que for mais caro"
+         ],
+         "a": 0,
+         "audio": "a2f9ede60f3f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Poupar é:",
+         "options": [
+          "Guardar dinheiro para depois",
+          "Gastar tudo hoje",
+          "Pedir emprestado"
+         ],
+         "a": 0,
+         "audio": "785b20659fbd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada gasto ao que ele é.",
+         "pairs": [
+          [
+           "Remédio para a febre",
+           "Necessidade"
+          ],
+          [
+           "Brinquedo novo",
+           "Desejo"
+          ]
+         ],
+         "audio": "4ab6276400f0.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Necessidade é o que é indispensável para viver. Desejo é o que apetece ter. Não se deve tratar um desejo como se fosse uma necessidade.",
+        "exemplo": "Comida e remédios são necessidades; um brinquedo novo é um desejo.",
+        "lembra": "Primeiro o que é preciso, depois o que apetece.",
+        "audio": "1571928f5387.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ev-4c",
+   "disciplina": "Educação Visual e Ofícios",
+   "abrev": "Ed. Visual",
+   "classe": "4ª classe",
+   "tag": "EV",
+   "fonte": "Estrutura provisória, sem fonte confirmada. Não existe manual de Educação Visual da 4ª classe publicado. Montada a partir do Plano Curricular do Ensino Primário (MINEDH, 2020) e dos manuais da 5ª e da 6ª classes. Substituir quando o livro aparecer.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Higiene e segurança",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O espaço de trabalho",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Antes de começar um trabalho manual, deves:",
+         "options": [
+          "Juntar os materiais que vais precisar",
+          "Começar e ver o que falta depois",
+          "Esperar pelo professor"
+         ],
+         "a": 0,
+         "audio": "ee0f3b33474e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No fim do trabalho, a mesa fica:",
+         "options": [
+          "Limpa e arrumada",
+          "Como está",
+          "Só varrida no fim da semana"
+         ],
+         "a": 0,
+         "audio": "3a388e30300d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para não sujar a mesa quando se pinta, põe-se:",
+         "options": [
+          "Papel ou jornal por baixo",
+          "Mais tinta",
+          "Um copo de água"
+         ],
+         "a": 0,
+         "audio": "c2c13508d844.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Depois de trabalhar com cola ou tinta, as mãos:",
+         "options": [
+          "Lavam-se",
+          "Limpam-se na roupa",
+          "Ficam assim"
+         ],
+         "a": 0,
+         "audio": "bd7e7cf2cfe7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um trabalho manual comeca antes do trabalho: junta-se tudo o que se vai precisar e prepara-se a mesa.",
+        "exemplo": "Antes de pintar, poe-se papel ou jornal por baixo para a mesa nao ficar suja.",
+        "lembra": "Quem prepara antes nao interrompe depois.",
+        "audio": "2e7db0d9b4c9.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Usar as ferramentas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Ao passar a tesoura a um colega, seguras:",
+         "options": [
+          "Pelas pontas, dando-lhe o cabo",
+          "Pelo cabo, dando-lhe as pontas",
+          "Atiras devagar"
+         ],
+         "a": 0,
+         "audio": "8be60f39be77.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A tesoura corta melhor quando está:",
+         "options": [
+          "Afiada e limpa",
+          "Enferrujada",
+          "Molhada"
+         ],
+         "a": 0,
+         "audio": "e17283405426.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Não se deve correr na sala com:",
+         "options": [
+          "A tesoura na mão",
+          "O caderno na mão",
+          "O lápis no bolso"
+         ],
+         "a": 0,
+         "audio": "6ac6d4907d7f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Depois de usar, as ferramentas devem ser:",
+         "options": [
+          "Guardadas no seu lugar",
+          "Deixadas na mesa",
+          "Levadas para casa"
+         ],
+         "a": 0,
+         "audio": "16ee998c30f5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As ferramentas cortam e furam, e por isso pedem regras. Guardam-se no seu lugar depois de usadas.",
+        "exemplo": "A tesoura passa-se pelo cabo: seguras nas pontas e das-lhe o cabo a quem a recebe.",
+        "lembra": "Com a tesoura na mao, ninguem corre.",
+        "audio": "2b6725a781a8.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Desenho",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Com que se desenha",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes serve para desenhar?",
+         "options": [
+          "O lápis de carvão",
+          "A cola",
+          "A tesoura"
+         ],
+         "a": 0,
+         "audio": "34a43c093668.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um lápis que risca fino está:",
+         "options": [
+          "Bem afiado",
+          "Rombo",
+          "Partido"
+         ],
+         "a": 0,
+         "audio": "fced59b46088.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para apagar um traço a lápis usa-se:",
+         "options": [
+          "A borracha",
+          "O dedo molhado",
+          "A tesoura"
+         ],
+         "a": 0,
+         "audio": "b8784b6ae2b7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O giz e o carvão vegetal servem para:",
+         "options": [
+          "Riscar e desenhar",
+          "Colar",
+          "Medir"
+         ],
+         "a": 0,
+         "audio": "7641edbba2d1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Desenha-se com muitos materiais: lapis, giz, carvao vegetal. Cada um risca de sua maneira.",
+        "exemplo": "Um lapis bem afiado risca fino; um lapis rombo risca grosso.",
+        "lembra": "O lapis afia-se antes da aula, nao a meio dela.",
+        "audio": "c722c9b5cc46.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Desenhar o que se vê",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Desenhar aquilo que se tem à frente chama-se desenho:",
+         "options": [
+          "De observação",
+          "Livre",
+          "Com tema dado"
+         ],
+         "a": 0,
+         "audio": "d1ff5f0c5b77.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando desenhas o que te apetece, o desenho é:",
+         "options": [
+          "Livre",
+          "De observação",
+          "Rigoroso"
+         ],
+         "a": 0,
+         "audio": "3cedb20f185f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de desenhar o que vês, primeiro deves:",
+         "options": [
+          "Olhar com atenção",
+          "Começar logo pelo meio",
+          "Copiar do colega"
+         ],
+         "a": 0,
+         "audio": "09348befecc2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma ilustração serve para:",
+         "options": [
+          "Acompanhar e explicar um texto",
+          "Substituir o texto",
+          "Encher a folha"
+         ],
+         "a": 0,
+         "audio": "94e0179edc70.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Desenhar o que se tem a frente e desenho de observacao. Desenhar o que apetece e desenho livre.",
+        "exemplo": "Antes de desenhar uma cadeira, olha-se bem para ela: quantas pernas tem, onde e o encosto.",
+        "lembra": "Olha primeiro, desenha depois.",
+        "audio": "542515c94766.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Trabalhos com papel",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Recortar e colar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Antes de recortar, é bom:",
+         "options": [
+          "Marcar a linha com o lápis",
+          "Molhar o papel",
+          "Dobrar tudo primeiro"
+         ],
+         "a": 0,
+         "audio": "86ae45af5e96.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa colagem, a cola põe-se:",
+         "options": [
+          "Pouca e bem espalhada",
+          "Muita, num monte",
+          "Nos dedos"
+         ],
+         "a": 0,
+         "audio": "d3c3f1c9d1d3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma colagem faz-se juntando:",
+         "options": [
+          "Pedaços de papel numa folha",
+          "Duas tintas",
+          "Dois lápis"
+         ],
+         "a": 0,
+         "audio": "a33ccf8b0d54.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os restos de papel do recorte devem ir:",
+         "options": [
+          "Para o lixo",
+          "Para o chão",
+          "Para a gaveta"
+         ],
+         "a": 0,
+         "audio": "e135f036a686.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Recortar e colar sao duas tecnicas que andam juntas: corta-se o papel e junta-se numa folha.",
+        "exemplo": "Marca-se a linha a lapis, corta-se por cima dela, e cola-se com pouca cola bem espalhada.",
+        "lembra": "Muita cola enruga o papel. Pouca e melhor.",
+        "audio": "0048da6c51a3.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Dobrar e picotar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na dobragem, o papel é:",
+         "options": [
+          "Dobrado, sem se cortar",
+          "Cortado ao meio",
+          "Colado"
+         ],
+         "a": 0,
+         "audio": "26f35d04c37d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para a dobra ficar direita, passa-se:",
+         "options": [
+          "A unha por cima do vinco",
+          "Cola por cima",
+          "Água por cima"
+         ],
+         "a": 0,
+         "audio": "38e7457cd80d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Picotar é fazer no papel:",
+         "options": [
+          "Muitos furos pequenos seguidos",
+          "Uma dobra",
+          "Um risco a lápis"
+         ],
+         "a": 0,
+         "audio": "b4ecb464ec21.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada técnica ao que se faz ao papel.",
+         "pairs": [
+          [
+           "Recorte",
+           "Cortar"
+          ],
+          [
+           "Dobragem",
+           "Dobrar"
+          ]
+         ],
+         "audio": "7f0bed396809.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na dobragem o papel dobra-se sem se cortar. No picotado fazem-se muitos furos pequenos seguidos.",
+        "exemplo": "Passa-se a unha por cima do vinco para a dobra ficar direita.",
+        "lembra": "Dobrar nao e cortar: o papel fica inteiro.",
+        "audio": "0e07dbd89822.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Ofícios da comunidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O que se faz com as mãos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Fazer cestos e esteiras com palha é:",
+         "options": [
+          "Cestaria",
+          "Costura",
+          "Jardinagem"
+         ],
+         "a": 0,
+         "audio": "e8fccd9436ad.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Coser roupa com agulha e linha é:",
+         "options": [
+          "Costura",
+          "Cestaria",
+          "Carpintaria"
+         ],
+         "a": 0,
+         "audio": "e843979bd1cf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Trabalhar a madeira é ofício de:",
+         "options": [
+          "Carpinteiro",
+          "Oleiro",
+          "Pescador"
+         ],
+         "a": 0,
+         "audio": "48fa325bb710.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Tratar de uma horta é:",
+         "options": [
+          "Jardinagem",
+          "Olaria",
+          "Tecelagem"
+         ],
+         "a": 0,
+         "audio": "8704066e9c49.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada ofício ao que ele faz.",
+         "pairs": [
+          [
+           "Cestaria",
+           "Cestos e esteiras"
+          ],
+          [
+           "Costura",
+           "Roupa"
+          ]
+         ],
+         "audio": "6f7ddfcb6f4b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na nossa comunidade ha muitos oficios feitos com as maos: cestaria, costura, carpintaria, jardinagem.",
+        "exemplo": "Quem faz cestos e esteiras com palha trabalha na cestaria; quem trabalha a madeira e carpinteiro.",
+        "lembra": "Cada oficio tem o seu material e a sua tecnica.",
+        "audio": "7dcf0b382550.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Materiais da nossa terra",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Com que material se fazem vasos e panelas de barro?",
+         "options": [
+          "Argila",
+          "Palha",
+          "Linha"
+         ],
+         "a": 0,
+         "audio": "3adf1cc131f1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A palha e o bambu servem para:",
+         "options": [
+          "Fazer cestos e esteiras",
+          "Fazer tinta",
+          "Fazer papel"
+         ],
+         "a": 0,
+         "audio": "0ac83a7833cc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Reaproveitar um saco velho para fazer um trabalho é:",
+         "options": [
+          "Reciclar",
+          "Estragar",
+          "Desperdiçar"
+         ],
+         "a": 0,
+         "audio": "335f69edbb6a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os materiais para os trabalhos manuais podem vir:",
+         "options": [
+          "Da natureza que temos à volta",
+          "Só da loja",
+          "Só da cidade"
+         ],
+         "a": 0,
+         "audio": "1815ed3e2ebd.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os materiais dos trabalhos manuais vem muitas vezes da natureza que temos a volta: argila, palha, bambu.",
+        "exemplo": "Com argila fazem-se vasos e panelas; com palha e bambu, cestos e esteiras.",
+        "lembra": "Um saco velho reaproveitado tambem e material.",
+        "audio": "82f73dde7da4.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "mat-5c",
    "disciplina": "Matemática",
    "classe": "5ª classe",
@@ -7290,7 +9365,11 @@
          "t": "input",
          "q": "Uma circunferência tem raio de 5 cm. Qual é o diâmetro, em cm?",
          "a": "10",
-         "audio": "613402b6dd2b.mp3"
+         "audio": "613402b6dd2b.mp3",
+         "figura": {
+          "forma": "circulo",
+          "a": 5
+         }
         },
         {
          "t": "choice",
@@ -9413,6 +11492,528 @@
    ]
   },
   {
+   "id": "ev-5c",
+   "disciplina": "Educação Visual e Ofícios",
+   "abrev": "Ed. Visual",
+   "classe": "5ª classe",
+   "tag": "EV",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Desenho e Pintura",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Higiene e segurança",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Antes da aula de desenho, deves verificar se:",
+         "options": [
+          "Tens os lápis afiados",
+          "O quadro está limpo",
+          "Há luz na sala"
+         ],
+         "a": 0,
+         "audio": "cebf201e7b02.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de pintar, a mesa deve ser:",
+         "options": [
+          "Forrada, para não se sujar",
+          "Molhada",
+          "Encostada à parede"
+         ],
+         "a": 0,
+         "audio": "f5b75eb76377.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O espaço de trabalho limpa-se:",
+         "options": [
+          "Constantemente, e fica pronto para a aula seguinte",
+          "Uma vez por mês",
+          "Só quando o professor manda"
+         ],
+         "a": 0,
+         "audio": "0792d11ab5e2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os materiais de uma actividade juntam-se:",
+         "options": [
+          "Antes de a começar",
+          "A meio, quando faltarem",
+          "No fim"
+         ],
+         "a": 0,
+         "audio": "7745229203a5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Antes de comecar junta-se tudo o que se vai precisar, e no fim deixa-se o espaco limpo para quem vem a seguir.",
+        "exemplo": "Antes da aula: os lapis afiados. Antes de pintar: a mesa forrada.",
+        "lembra": "Preparar antes custa um minuto; limpar depois custa a aula toda.",
+        "audio": "447ff5ad660d.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Tipos de desenho",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Desenhar aquilo que se tem à frente chama-se desenho:",
+         "options": [
+          "De observação",
+          "Com tema dado",
+          "Livre"
+         ],
+         "a": 0,
+         "audio": "d1ff5f0c5b77.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando o professor diz o assunto, o desenho é:",
+         "options": [
+          "Com tema dado",
+          "De observação",
+          "Livre"
+         ],
+         "a": 0,
+         "audio": "c83ca84dac12.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma ilustração serve para:",
+         "options": [
+          "Acompanhar e explicar um texto",
+          "Substituir o texto",
+          "Decorar a capa apenas"
+         ],
+         "a": 0,
+         "audio": "94e0179edc70.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um painel colectivo é feito:",
+         "options": [
+          "Por vários alunos, em conjunto",
+          "Por um aluno só",
+          "Pelo professor"
+         ],
+         "a": 0,
+         "audio": "a38d5a4f330f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Ha varias maneiras de desenhar. De observacao e desenhar o que se tem a frente; com tema dado e desenhar o assunto que o professor disse.",
+        "exemplo": "A ilustracao acompanha um texto e ajuda a explica-lo. Um painel colectivo faz-se com os colegas todos.",
+        "lembra": "Olha primeiro, desenha depois.",
+        "audio": "16c251456a03.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Impressão, recorte e dobragem",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Imprimir e estampar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um carimbo serve para:",
+         "options": [
+          "Repetir o mesmo desenho muitas vezes",
+          "Cortar o papel em tiras",
+          "Colar duas folhas"
+         ],
+         "a": 0,
+         "audio": "1778df844b96.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Estampar é passar um desenho:",
+         "options": [
+          "De uma superfície para outra",
+          "De uma cor para outra",
+          "De um livro para a cabeça"
+         ],
+         "a": 0,
+         "audio": "7182044571d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um carimbo pode fazer-se com:",
+         "options": [
+          "Uma batata cortada ao meio",
+          "Uma folha de papel",
+          "Um copo de água"
+         ],
+         "a": 0,
+         "audio": "df4b1cde73f1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de estampar põe-se por baixo:",
+         "options": [
+          "Uma protecção, para não sujar a mesa",
+          "Mais tinta",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "18c1c505ac67.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Imprimir e estampar e passar um desenho de uma superficie para outra, e repeti-lo quantas vezes se quiser.",
+        "exemplo": "Uma batata cortada ao meio e mergulhada em tinta faz um carimbo.",
+        "lembra": "Poe sempre uma proteccao por baixo antes de comecar.",
+        "audio": "ba13b9399de0.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Recortar, colar e dobrar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Ao passar a tesoura a um colega, seguras:",
+         "options": [
+          "Pelas pontas, dando-lhe o cabo",
+          "Pelo cabo, dando-lhe as pontas",
+          "Atiras devagar"
+         ],
+         "a": 0,
+         "audio": "8be60f39be77.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na dobragem, o papel é:",
+         "options": [
+          "Dobrado, sem se cortar",
+          "Cortado ao meio",
+          "Molhado primeiro"
+         ],
+         "a": 0,
+         "audio": "26f35d04c37d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Picotar é fazer no papel:",
+         "options": [
+          "Muitos furos pequenos seguidos",
+          "Um corte só",
+          "Uma dobra ao meio"
+         ],
+         "a": 0,
+         "audio": "b4ecb464ec21.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa colagem, a cola põe-se:",
+         "options": [
+          "Pouca e bem espalhada",
+          "Muita, aos montes",
+          "Só num canto"
+         ],
+         "a": 0,
+         "audio": "d3c3f1c9d1d3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O papel corta-se, dobra-se, pica-se e cola-se. Cada uma destas e uma tecnica com a sua regra.",
+        "exemplo": "Na dobragem o papel nao se corta; no picotado fazem-se muitos furos pequenos seguidos.",
+        "lembra": "A tesoura passa-se pelo cabo, com as pontas seguras na nossa mao.",
+        "audio": "e6e30b9e0a55.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Modelagem",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Modelar e moldar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Modelagem é a técnica que permite:",
+         "options": [
+          "Dar forma a uma matéria-prima modelável",
+          "Cortar madeira",
+          "Tecer fios"
+         ],
+         "a": 0,
+         "audio": "91dd74b9b53a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Moldagem é reproduzir um objecto através de:",
+         "options": [
+          "Um molde",
+          "Um desenho",
+          "Uma fotografia"
+         ],
+         "a": 0,
+         "audio": "a4d8b048ec65.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é a vantagem da modelagem?",
+         "options": [
+          "Vê-se o objecto de todos os lados",
+          "É mais rápida que o desenho",
+          "Não suja as mãos"
+         ],
+         "a": 0,
+         "audio": "b468c21dea7e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antigamente, a modelagem fazia-se sobretudo com:",
+         "options": [
+          "Barro",
+          "Plástico",
+          "Vidro"
+         ],
+         "a": 0,
+         "audio": "52f69b16dc19.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada técnica ao que ela faz.",
+         "pairs": [
+          [
+           "Modelagem",
+           "Dar forma"
+          ],
+          [
+           "Moldagem",
+           "Reproduzir com molde"
+          ]
+         ],
+         "audio": "4b281245d6f7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Modelagem e dar forma a uma materia-prima modelavel. Moldagem e reproduzir um objecto atraves de um molde.",
+        "exemplo": "Um vaso feito a mao com barro e modelagem; dez vasos iguais tirados do mesmo molde sao moldagem.",
+        "lembra": "A vantagem da modelagem: ve-se a peca de todos os lados.",
+        "audio": "20224dd47770.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Preparar o barro",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para tirar as pedras do barro, usa-se:",
+         "options": [
+          "Uma rede, para peneirar",
+          "Água a ferver",
+          "Cola"
+         ],
+         "a": 0,
+         "audio": "cc7ec42f2913.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Depois de misturar o barro com água, é preciso:",
+         "options": [
+          "Amassar, até a massa ficar homogénea",
+          "Deixar secar ao sol",
+          "Pintar logo"
+         ],
+         "a": 0,
+         "audio": "4a22abb9d0ab.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Amassa-se o barro até ele:",
+         "options": [
+          "Não se colar às mãos",
+          "Ficar muito mole",
+          "Ficar duro"
+         ],
+         "a": 0,
+         "audio": "9536591dfbfe.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para o barro não secar até ao próximo trabalho, guarda-se:",
+         "options": [
+          "Num plástico",
+          "Ao sol",
+          "Num prato aberto"
+         ],
+         "a": 0,
+         "audio": "914e1d0d2c8f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O barro prepara-se por passos: limpa-se, peneira-se para tirar as pedras, mistura-se com agua e amassa-se.",
+        "exemplo": "Amassa-se ate a massa ficar homogenea e deixar de se colar as maos.",
+        "lembra": "Guarda o barro num plastico, senao seca e perde-se.",
+        "audio": "64e9b3ba909e.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Tecelagem e cestaria",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As fibras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As fibras naturais são as que:",
+         "options": [
+          "Se extraem da natureza",
+          "Se fazem na fábrica",
+          "Se compram na loja"
+         ],
+         "a": 0,
+         "audio": "8b1305bc9d48.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma fibra natural?",
+         "options": [
+          "Sisal",
+          "Nylon",
+          "Acrílico"
+         ],
+         "a": 0,
+         "audio": "4c3f99e0f801.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O nylon é uma fibra:",
+         "options": [
+          "Artificial",
+          "Natural",
+          "Reciclável"
+         ],
+         "a": 0,
+         "audio": "e2e04e847f80.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os fios dos sacos de comida, reaproveitados, são fibras:",
+         "options": [
+          "Recicláveis",
+          "Naturais",
+          "Artificiais"
+         ],
+         "a": 0,
+         "audio": "357d78c8170e.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada fibra ao seu tipo.",
+         "pairs": [
+          [
+           "Algodão",
+           "Natural"
+          ],
+          [
+           "Nylon",
+           "Artificial"
+          ]
+         ],
+         "audio": "943476f8fa1e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As fibras naturais saem da natureza -- algodao, sisal, la, linho. As artificiais fazem-se na industria, como o nylon. As reciclaveis sao reaproveitadas.",
+        "exemplo": "Os fios dos sacos de comida, guardados e reaproveitados, sao fibras reciclaveis.",
+        "lembra": "Vem da planta ou do animal? E natural. Vem da fabrica? E artificial.",
+        "audio": "b59b621159c1.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Tecer e entrelaçar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Tecer é:",
+         "options": [
+          "Entrelaçar fios",
+          "Colar fios",
+          "Cortar fios"
+         ],
+         "a": 0,
+         "audio": "0028106d06d8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A cestaria usa o mesmo processo da tecelagem:",
+         "options": [
+          "Entrelaçar",
+          "Modelar",
+          "Estampar"
+         ],
+         "a": 0,
+         "audio": "72e2e0ae0bcc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes materiais se usa na cestaria?",
+         "options": [
+          "A palha",
+          "O barro",
+          "O gesso"
+         ],
+         "a": 0,
+         "audio": "ca0203a7921d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um produto de cestaria?",
+         "options": [
+          "Uma peneira",
+          "Um vaso de barro",
+          "Um postal"
+         ],
+         "a": 0,
+         "audio": "79df9c5fd413.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A tecelagem é muito usada, sobretudo:",
+         "options": [
+          "Nas zonas rurais",
+          "Nas fábricas da cidade",
+          "Nas escolas"
+         ],
+         "a": 0,
+         "audio": "dc53569aab76.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Tecer e entrelacar fios. A cestaria usa o mesmo processo, com palha, bambu ou fitas de plastico.",
+        "exemplo": "Da cestaria saem cestos, chapeus, peneiras e esteiras.",
+        "lembra": "Tecelagem e cestaria sao a mesma ideia: entrelacar.",
+        "audio": "404717d1de54.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "mat-6c",
    "disciplina": "Matemática",
    "classe": "6ª classe",
@@ -9857,7 +12458,12 @@
          "t": "input",
          "q": "Um triângulo tem base 10 cm e altura 6 cm. Qual é a área, em cm quadrados?",
          "a": "30",
-         "audio": "12921c129e4a.mp3"
+         "audio": "12921c129e4a.mp3",
+         "figura": {
+          "forma": "triangulo",
+          "a": 10,
+          "b": 6
+         }
         },
         {
          "t": "choice",
@@ -9868,7 +12474,11 @@
           "18 cm³"
          ],
          "a": 1,
-         "audio": "69e29b41b4da.mp3"
+         "audio": "69e29b41b4da.mp3",
+         "figura": {
+          "forma": "cubo",
+          "a": 3
+         }
         },
         {
          "t": "choice",
@@ -11770,6 +14380,590 @@
         "exemplo": "1884-85 Berlim; 1964 início da Luta; 1975 Independência; 1992 Paz.",
         "lembra": "Põe as datas por ordem: cada uma explica a seguinte.",
         "audio": "cddf1ec5368c.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ev-6c",
+   "disciplina": "Educação Visual e Ofícios",
+   "abrev": "Ed. Visual",
+   "classe": "6ª classe",
+   "tag": "EV",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Desenho",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Antes de começar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Antes de começar um trabalho, o que se faz primeiro?",
+         "options": [
+          "Juntar todos os materiais que vou precisar",
+          "Começar e ir buscando o que falta",
+          "Pedir ao colega do lado"
+         ],
+         "a": 0,
+         "audio": "1147f85c1cc7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No fim da aula, o espaço de trabalho deve ficar:",
+         "options": [
+          "Limpo, para a aula seguinte",
+          "Como está, alguém limpa",
+          "Só arrumado no fim da semana"
+         ],
+         "a": 0,
+         "audio": "09f3da083ad1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para desenhar e escrever, o lápis deve estar:",
+         "options": [
+          "Bem afiado",
+          "Rombo",
+          "Partido"
+         ],
+         "a": 0,
+         "audio": "8555a7c00b15.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um material riscador?",
+         "options": [
+          "O carvão vegetal",
+          "A cola",
+          "A tesoura"
+         ],
+         "a": 0,
+         "audio": "42e0e071ff30.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Antes de comecar um trabalho junta-se tudo o que se vai precisar, e no fim deixa-se o espaco limpo para quem vem a seguir.",
+        "exemplo": "Para desenhar: o lapis bem afiado, a borracha e a folha, tudo a mao antes de a primeira linha ser feita.",
+        "lembra": "Primeiro juntar, depois fazer, e sempre limpar.",
+        "audio": "091d2ee82d6c.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Escolher o material",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para um desenho rigoroso escolhe-se um lápis:",
+         "options": [
+          "De mina mais dura",
+          "De mina mais macia",
+          "De cera"
+         ],
+         "a": 0,
+         "audio": "402a38484e36.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O desenho feito sem régua nem compasso chama-se:",
+         "options": [
+          "À mão livre",
+          "Rigoroso",
+          "De observação"
+         ],
+         "a": 0,
+         "audio": "f3efd6dad2e9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Desenhar aquilo que se tem à frente é desenho:",
+         "options": [
+          "De observação",
+          "Livre",
+          "De tema dado"
+         ],
+         "a": 0,
+         "audio": "0d3649672f21.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando o professor diz o assunto, o desenho é:",
+         "options": [
+          "Com tema dado",
+          "Livre",
+          "De observação"
+         ],
+         "a": 0,
+         "audio": "c83ca84dac12.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Ha muitos materiais riscadores: lapis de carvao, giz, carvao vegetal, lapis de cor, lapis de cera. Escolhe-se conforme o desenho que se quer.",
+        "exemplo": "A mina dura risca fino e serve o desenho rigoroso; a macia risca grosso e serve o desenho a mao livre.",
+        "lembra": "O material escolhe-se depois de saber o que se vai desenhar, nunca antes.",
+        "audio": "6a522a6e09bf.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "A cor",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As cores primárias",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As cores primárias são aquelas que:",
+         "options": [
+          "Não resultam de nenhuma mistura",
+          "Se fazem com branco",
+          "São as mais bonitas"
+         ],
+         "a": 0,
+         "audio": "c32037ee44ca.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma cor primária?",
+         "options": [
+          "Azul",
+          "Verde",
+          "Laranja"
+         ],
+         "cores": {
+          "opcoes": [
+           "#1E5AA8",
+           "#2E8B57",
+           "#E8791C"
+          ]
+         },
+         "a": 0,
+         "audio": "302ef7e23f06.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas NÃO é uma cor primária?",
+         "options": [
+          "Violeta",
+          "Amarelo",
+          "Vermelho"
+         ],
+         "cores": {
+          "opcoes": [
+           "#7B3F9D",
+           "#F2C200",
+           "#D8352A"
+          ]
+         },
+         "a": 0,
+         "audio": "9917aec25941.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantas são as cores primárias?",
+         "a": "3",
+         "audio": "a9db29e0ea0a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As cores primarias nao saem de mistura nenhuma: sao puras. Sao tres -- o azul, o amarelo e o vermelho.",
+        "exemplo": "O verde nao e primaria, porque se faz juntando duas.",
+        "lembra": "Azul, amarelo e vermelho: destas tres saem as outras.",
+        "audio": "a82d1793880c.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Misturar tintas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Que cor sai de misturar amarelo com azul?",
+         "cores": {
+          "mistura": [
+           "#F2C200",
+           "#1E5AA8"
+          ],
+          "opcoes": [
+           "#2E8B57",
+           "#E8791C",
+           "#7B3F9D"
+          ]
+         },
+         "options": [
+          "Verde",
+          "Laranja",
+          "Violeta"
+         ],
+         "a": 0,
+         "audio": "eb2362f7e085.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Que cor sai de misturar amarelo com vermelho?",
+         "cores": {
+          "mistura": [
+           "#F2C200",
+           "#D8352A"
+          ],
+          "opcoes": [
+           "#E8791C",
+           "#2E8B57",
+           "#7B3F9D"
+          ]
+         },
+         "options": [
+          "Laranja",
+          "Verde",
+          "Violeta"
+         ],
+         "a": 0,
+         "audio": "090c0700fde8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Que cor sai de misturar vermelho com azul?",
+         "cores": {
+          "mistura": [
+           "#D8352A",
+           "#1E5AA8"
+          ],
+          "opcoes": [
+           "#7B3F9D",
+           "#2E8B57",
+           "#E8791C"
+          ]
+         },
+         "options": [
+          "Violeta",
+          "Verde",
+          "Laranja"
+         ],
+         "a": 0,
+         "audio": "d442187cdd42.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As cores que saem da mistura de duas primárias chamam-se:",
+         "options": [
+          "Secundárias",
+          "Primárias",
+          "Neutras"
+         ],
+         "a": 0,
+         "audio": "2743c5164924.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada mistura à cor que dela sai.",
+         "pairs": [
+          [
+           "Amarelo e azul",
+           "Verde"
+          ],
+          [
+           "Vermelho e azul",
+           "Violeta"
+          ]
+         ],
+         "audio": "94c2b2111a15.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Juntando duas cores primarias nasce uma cor secundaria. Sao tres: o laranja, o verde e o violeta.",
+        "exemplo": "Amarelo com vermelho da laranja; amarelo com azul da verde; vermelho com azul da violeta.",
+        "lembra": "Duas primarias juntas fazem sempre uma secundaria.",
+        "audio": "600dc833a092.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Tons e cores neutras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para clarear o tom de uma cor juntamos:",
+         "options": [
+          "Branco",
+          "Preto",
+          "Água"
+         ],
+         "cores": {
+          "opcoes": [
+           "#F5F5F0",
+           "#1A1A1A",
+           "#1E5AA8"
+          ]
+         },
+         "a": 0,
+         "audio": "60e42c468cff.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para escurecer uma cor juntamos:",
+         "options": [
+          "Preto",
+          "Branco",
+          "Amarelo"
+         ],
+         "cores": {
+          "opcoes": [
+           "#1A1A1A",
+           "#F5F5F0",
+           "#F2C200"
+          ]
+         },
+         "a": 0,
+         "audio": "948dc3931a67.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Que cor sai de misturar preto com branco?",
+         "cores": {
+          "mistura": [
+           "#1A1A1A",
+           "#F5F5F0"
+          ],
+          "opcoes": [
+           "#8A8A8A",
+           "#2E8B57",
+           "#E8791C"
+          ]
+         },
+         "options": [
+          "Cinzento",
+          "Verde",
+          "Laranja"
+         ],
+         "a": 0,
+         "audio": "d6f6c3303914.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O preto e o branco chamam-se cores:",
+         "options": [
+          "Neutras",
+          "Primárias",
+          "Secundárias"
+         ],
+         "a": 0,
+         "audio": "169275e09ce5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Tons sao as tonalidades dentro da mesma cor. Junta-se branco para clarear e preto para escurecer.",
+        "exemplo": "Ao preto com um pouco de branco chama-se cinzento.",
+        "lembra": "O preto e o branco nao sao cores do arco-iris: sao cores neutras.",
+        "audio": "a943ea5e7750.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Pintura",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Técnicas de pintar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A aguarela pinta-se com tinta misturada com:",
+         "options": [
+          "Água",
+          "Cera",
+          "Cola"
+         ],
+         "a": 0,
+         "audio": "75ff31a3fefb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas técnicas usa lápis?",
+         "options": [
+          "Lápis de cera",
+          "Guache",
+          "Aguarela"
+         ],
+         "a": 0,
+         "audio": "946f8260cce6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Depois de pintar com pincel, o pincel deve ser:",
+         "options": [
+          "Lavado e guardado a secar",
+          "Guardado com tinta",
+          "Deitado fora"
+         ],
+         "a": 0,
+         "audio": "fcd8f454a6ae.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As tintas artesanais fazem-se:",
+         "options": [
+          "Com materiais que há na comunidade",
+          "Só na fábrica",
+          "Só com água"
+         ],
+         "a": 0,
+         "audio": "4ff12840b141.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Cada tinta pede a sua tecnica. A aguarela mistura-se com agua, o guache e mais espesso, e as tintas artesanais fazem-se com o que ha na comunidade.",
+        "exemplo": "Depois de pintar, o pincel lava-se e poe-se a secar com os pelos para cima.",
+        "lembra": "Pincel sujo que seca fica perdido.",
+        "audio": "cb10c717eaa8.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Impressão e estampagem",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Imprimir e estampar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na impressão digital, a marca é feita com:",
+         "options": [
+          "O dedo",
+          "A tesoura",
+          "A régua"
+         ],
+         "a": 0,
+         "audio": "1132ac075b22.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um carimbo serve para:",
+         "options": [
+          "Repetir o mesmo desenho muitas vezes",
+          "Cortar o papel",
+          "Colar duas folhas"
+         ],
+         "a": 0,
+         "audio": "1778df844b96.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Estampar é passar um desenho:",
+         "options": [
+          "De uma superfície para outra",
+          "Do papel para a cabeça",
+          "De uma cor para outra"
+         ],
+         "a": 0,
+         "audio": "7182044571d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de estampar, o que se põe por baixo do papel?",
+         "options": [
+          "Uma protecção, para não sujar a mesa",
+          "Mais papel branco",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "0694af2b9b54.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Imprimir e estampar e passar um desenho de uma superficie para outra, e repeti-lo quantas vezes se quiser.",
+        "exemplo": "Com o dedo pintado faz-se impressao digital; com um carimbo repete-se o mesmo desenho ao longo do papel.",
+        "lembra": "Poe sempre uma proteccao por baixo antes de comecar.",
+        "audio": "a16012f3cf38.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Recorte, colagem e dobragem",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Trabalhar o papel",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Ao passar a tesoura a um colega, entrega-se:",
+         "options": [
+          "Com as pontas viradas para mim",
+          "Com as pontas viradas para ele",
+          "Atirando-a"
+         ],
+         "a": 0,
+         "audio": "f0e284839b96.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na dobragem, o papel é:",
+         "options": [
+          "Dobrado, sem se cortar",
+          "Cortado em tiras",
+          "Molhado primeiro"
+         ],
+         "a": 0,
+         "audio": "26f35d04c37d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Picotar é fazer no papel:",
+         "options": [
+          "Muitos furos pequenos seguidos",
+          "Um corte só",
+          "Uma dobra"
+         ],
+         "a": 0,
+         "audio": "b4ecb464ec21.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa colagem, a cola põe-se:",
+         "options": [
+          "Pouca e bem espalhada",
+          "Muita, no meio",
+          "Só nos cantos, aos montes"
+         ],
+         "a": 0,
+         "audio": "d3c3f1c9d1d3.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada técnica ao que se faz com o papel.",
+         "pairs": [
+          [
+           "Recorte",
+           "Cortar"
+          ],
+          [
+           "Dobragem",
+           "Dobrar"
+          ]
+         ],
+         "audio": "49ca7d8e5605.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O papel corta-se, dobra-se, pica-se e cola-se. Cada uma destas e uma tecnica com a sua regra.",
+        "exemplo": "Na dobragem o papel nao se corta; no recorte corta-se pela linha marcada.",
+        "lembra": "A tesoura passa-se com as pontas viradas para quem a da, nunca para quem a recebe.",
+        "audio": "561a2b0ac550.mp3"
        }
       }
      ]

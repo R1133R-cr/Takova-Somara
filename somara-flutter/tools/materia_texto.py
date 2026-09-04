@@ -1256,4 +1256,405 @@ MATERIA = {
                    "1992 Paz.",
         "lembra": "Põe as datas por ordem: cada uma explica a seguinte.",
     },
+
+    # ---------------------------------------------------------------
+    # Portugues -- 4a classe
+    #
+    # Do Caderno de Actividades de Lingua Portuguesa da 4a Classe,
+    # MINEDH/MEC 2025. As unidades sao as tematicas do livro -- Familia,
+    # Escola, Comunidade... -- e a gramatica entra dentro do tema, como
+    # ali esta.
+    # ---------------------------------------------------------------
+    "por-4c:u1:n1": {
+        "explica": "Os princípios de cortesia servem para falarmos uns com "
+                   "os outros com delicadeza e respeito. Ouve-se quem fala, "
+                   "espera-se pela nossa vez e respeita-se o assunto da "
+                   "conversa.",
+        "exemplo": "Com pessoas de respeito diz-se «Bom dia, senhora "
+                   "professora!»; entre amigos diz-se «Olá, amiga!».",
+        "lembra": "Por favor, com licença, obrigado, desculpe — são as "
+                  "palavras da cortesia.",
+    },
+    "por-4c:u1:n2": {
+        "explica": "Os nomes comuns designam seres de uma mesma espécie: "
+                   "irmã, amigo, prato. Os nomes próprios designam um em "
+                   "especial e escrevem-se sempre com letra maiúscula.",
+        "exemplo": "cidade é nome comum; Tete é nome próprio.",
+        "lembra": "Nome próprio começa por maiúscula. Se não começa, é comum.",
+    },
+    "por-4c:u1:n3": {
+        "explica": "Os nomes terminados em ão não fazem todos o plural da "
+                   "mesma maneira. Uns ficam em ãos, outros em ães e outros "
+                   "em ões.",
+        "exemplo": "mão fica mãos; pão fica pães; coração fica corações.",
+        "lembra": "Diz a palavra no plural em voz alta: o ouvido acerta "
+                  "antes da regra.",
+    },
+    "por-4c:u2:n1": {
+        "explica": "Há quatro tipos de frase. A declarativa conta, a "
+                   "imperativa manda, a exclamativa mostra o que se sente e "
+                   "a interrogativa pergunta.",
+        "exemplo": "A Lurdes gosta de aprender. Fecha a porta, Tânia! Ah! "
+                   "Que presente bonito! Onde está o teu material?",
+        "lembra": "Olha o sinal no fim: ponto conta, exclamação sente, "
+                  "interrogação pergunta.",
+    },
+    "por-4c:u2:n2": {
+        "explica": "O sujeito é quem faz a acção e o predicado é o que ele "
+                   "faz. O texto narrativo conta uma história, com "
+                   "personagens, tempo e lugar.",
+        "exemplo": "Em «O Gabriel vive numa casa bonita», o sujeito é O "
+                   "Gabriel e o predicado é vive numa casa bonita.",
+        "lembra": "Pergunta «quem?» para achar o sujeito e «faz o quê?» "
+                  "para o predicado.",
+    },
+    "por-4c:u3:n1": {
+        "explica": "As preposições são palavras invariáveis que ligam "
+                   "elementos da frase: a, com, de, em, para, por, sobre, "
+                   "sem, até.",
+        "exemplo": "A Célia vai à machamba com a avó. A preposição é com.",
+        "lembra": "A preposição nunca muda: não tem masculino, feminino nem "
+                  "plural.",
+    },
+    "por-4c:u4:n1": {
+        "explica": "O verbo diz quando a acção acontece. O presente é "
+                   "agora, o pretérito perfeito é o que já passou e o "
+                   "futuro é o que ainda vem.",
+        "exemplo": "Hoje estudo; ontem estudei; amanhã estudarei.",
+        "lembra": "Ontem, hoje, amanhã — o verbo muda com cada um.",
+    },
+    "por-4c:u4:n2": {
+        "explica": "Os sinais de pontuação arrumam a frase. Um nome "
+                   "colectivo é um só nome para um conjunto de seres da "
+                   "mesma espécie.",
+        "exemplo": "Muitas árvores juntas são uma floresta; muitos bois são "
+                   "uma manada.",
+        "lembra": "Pergunta acaba em ponto de interrogação. O conjunto tem "
+                  "nome só dele.",
+    },
+    "por-4c:u5:n1": {
+        "explica": "A frase simples tem um só verbo principal. Começa por "
+                   "letra maiúscula e acaba com um sinal de pontuação.",
+        "exemplo": "A Maria lavou as mãos. É simples: só tem o verbo lavou.",
+        "lembra": "Conta os verbos. Um só verbo, frase simples.",
+    },
+    "por-4c:u6:n1": {
+        "explica": "Os pronomes possessivos dizem de quem é a coisa, e "
+                   "mudam com o género e com o número.",
+        "exemplo": "Esta é a minha mão; estas são as minhas mãos; esse é o "
+                   "teu livro.",
+        "lembra": "De mim é meu ou minha; de ti é teu ou tua.",
+    },
+    "por-4c:u7:n1": {
+        "explica": "Os advérbios de tempo dizem quando a acção acontece: "
+                   "ontem, hoje, amanhã, cedo, tarde, nunca, sempre.",
+        "exemplo": "O comboio chegou cedo. Cedo diz quando ele chegou.",
+        "lembra": "Pergunta «quando?» — a resposta é o advérbio de tempo.",
+    },
+    "por-4c:u8:n1": {
+        "explica": "Os meios de comunicação levam a mensagem de uns aos "
+                   "outros: a rádio, a televisão, o jornal, o telefone, a "
+                   "carta e o postal. Os advérbios de modo dizem como a "
+                   "acção acontece.",
+        "exemplo": "A Ana escreveu depressa. Depressa diz como ela escreveu.",
+        "lembra": "«Quando?» é tempo; «como?» é modo.",
+    },
+    "por-4c:u9:n1": {
+        "explica": "Os advérbios de negação dizem que a acção não acontece: "
+                   "não, nunca, jamais, nada.",
+        "exemplo": "«Eu fui à escola» fica «Eu não fui à escola».",
+        "lembra": "Basta um «não» antes do verbo para negar a frase toda.",
+    },
+
+    # ---------------------------------------------------------------
+    # Ciencias Sociais -- 4a classe
+    #
+    # Do Caderno de Actividades de Ciencias Sociais da 4a Classe,
+    # MINEDH/MEC 2025. As definicoes com numeros -- os 200 metros da
+    # planicie, os 30 anos do clima -- foram lidas no livro e nao
+    # escritas de cor.
+    # ---------------------------------------------------------------
+    "cs-4c:u1:n1": {
+        "explica": "A família é um conjunto de pessoas unidas por laço de "
+                   "sangue, pelo matrimónio ou pela adopção. Há a família "
+                   "nuclear, a monoparental e a alargada.",
+        "exemplo": "Pai, mãe e filhos são uma família nuclear. Se só um dos "
+                   "pais cria os filhos, é monoparental.",
+        "lembra": "Avós são os pais dos meus pais; tios são os irmãos deles.",
+    },
+    "cs-4c:u1:n2": {
+        "explica": "Viver em família é repartir tarefas e resolver as "
+                   "zangas a conversar. Cada membro tem os seus deveres.",
+        "exemplo": "A árvore genealógica mostra, num desenho, quem são os "
+                   "parentes de uma família.",
+        "lembra": "Conflito resolve-se a falar, nunca à força.",
+    },
+    "cs-4c:u1:n3": {
+        "explica": "A criança tem direitos — à vida, a um nome, à saúde, a "
+                   "uma família, à educação e a brincar — e tem deveres, "
+                   "como respeitar os outros e estudar.",
+        "exemplo": "Ter um nome é um direito; cuidar do material escolar é "
+                   "um dever.",
+        "lembra": "Direito é o que recebo; dever é o que faço.",
+    },
+    "cs-4c:u2:n1": {
+        "explica": "Comunidade é o conjunto de pessoas que vivem juntas. Há "
+                   "a rural, a urbana, a religiosa e a educativa.",
+        "exemplo": "Quem vive no campo forma uma comunidade rural; quem "
+                   "vive na cidade, uma urbana.",
+        "lembra": "Usos e costumes passam de geração para geração.",
+    },
+    "cs-4c:u2:n2": {
+        "explica": "A lenda explica acontecimentos misteriosos e mistura "
+                   "factos reais com fantasia. O conto passa dos mais "
+                   "velhos para os mais novos.",
+        "exemplo": "Há contos realistas, populares, de humor e infantis. Os "
+                   "infantis deixam uma lição.",
+        "lembra": "Lenda explica; conto conta.",
+    },
+    "cs-4c:u2:n3": {
+        "explica": "Na comunidade fala-se português e línguas moçambicanas, "
+                   "e as pessoas vivem de actividades como a agricultura, a "
+                   "pesca e o comércio.",
+        "exemplo": "A dança e a música tradicional são cultura da "
+                   "comunidade.",
+        "lembra": "Quem é diferente de mim merece o mesmo respeito.",
+    },
+    "cs-4c:u3:n1": {
+        "explica": "A escola é a nossa segunda casa. Tem um regulamento "
+                   "interno com as regras, e conservá-la é tarefa de todos.",
+        "exemplo": "Limpar o pátio e as salas é ajudar a conservar a escola.",
+        "lembra": "Na escola, como em casa, a zanga resolve-se a falar.",
+    },
+    "cs-4c:u4:n1": {
+        "explica": "Moçambique divide-se em províncias, distritos, postos "
+                   "administrativos, localidades e povoações.",
+        "exemplo": "O Administrador dirige o distrito; o Conselho "
+                   "Autárquico é o órgão executivo do município.",
+        "lembra": "Do maior para o menor: província, distrito, posto, "
+                  "localidade.",
+    },
+    "cs-4c:u4:n2": {
+        "explica": "Relevo são as formas como a Terra se apresenta: "
+                   "planícies, planaltos e montanhas. Clima é o tempo que "
+                   "se repete durante trinta anos ou mais.",
+        "exemplo": "A planície fica abaixo dos 200 metros; o planalto, "
+                   "acima. Um rio pequeno que desagua num maior é um "
+                   "afluente.",
+        "lembra": "Tempo é hoje; clima são trinta anos.",
+    },
+    "cs-4c:u4:n3": {
+        "explica": "Os meios de transporte levam pessoas e coisas. Na "
+                   "estrada há sinais de trânsito, e cumpri-los é o que "
+                   "nos mantém vivos.",
+        "exemplo": "Antes de atravessar, olha para os dois lados.",
+        "lembra": "Queimar a floresta degrada o ambiente; plantar repõe-o.",
+    },
+    "cs-4c:u5:n1": {
+        "explica": "Necessidade é o que é indispensável para viver. Desejo "
+                   "é o que apetece ter. Não se deve tratar um desejo como "
+                   "se fosse uma necessidade.",
+        "exemplo": "Comida e remédios são necessidades; um brinquedo novo "
+                   "é um desejo.",
+        "lembra": "Primeiro o que é preciso, depois o que apetece.",
+    },
+    # ---------------------------------------------------------------
+    # Educacao Visual e Oficios -- 6a classe
+    #
+    # Do livro de Educacao Visual da 6a classe, MEC 2024. E a disciplina
+    # de FAZER, e por isso a materia fala do que se decide antes de por
+    # as maos na obra. A cor mostra-se no ecra; aqui a materia so lhe
+    # da os nomes.
+    # ---------------------------------------------------------------
+    "ev-6c:u1:n1": {
+        "explica": "Antes de comecar um trabalho junta-se tudo o que se "
+                   "vai precisar, e no fim deixa-se o espaco limpo para "
+                   "quem vem a seguir.",
+        "exemplo": "Para desenhar: o lapis bem afiado, a borracha e a "
+                   "folha, tudo a mao antes de a primeira linha ser feita.",
+        "lembra": "Primeiro juntar, depois fazer, e sempre limpar.",
+    },
+    "ev-6c:u1:n2": {
+        "explica": "Ha muitos materiais riscadores: lapis de carvao, giz, "
+                   "carvao vegetal, lapis de cor, lapis de cera. Escolhe-se "
+                   "conforme o desenho que se quer.",
+        "exemplo": "A mina dura risca fino e serve o desenho rigoroso; a "
+                   "macia risca grosso e serve o desenho a mao livre.",
+        "lembra": "O material escolhe-se depois de saber o que se vai "
+                  "desenhar, nunca antes.",
+    },
+    "ev-6c:u2:n1": {
+        "explica": "As cores primarias nao saem de mistura nenhuma: sao "
+                   "puras. Sao tres -- o azul, o amarelo e o vermelho.",
+        "exemplo": "O verde nao e primaria, porque se faz juntando duas.",
+        "lembra": "Azul, amarelo e vermelho: destas tres saem as outras.",
+    },
+    "ev-6c:u2:n2": {
+        "explica": "Juntando duas cores primarias nasce uma cor "
+                   "secundaria. Sao tres: o laranja, o verde e o violeta.",
+        "exemplo": "Amarelo com vermelho da laranja; amarelo com azul da "
+                   "verde; vermelho com azul da violeta.",
+        "lembra": "Duas primarias juntas fazem sempre uma secundaria.",
+    },
+    "ev-6c:u2:n3": {
+        "explica": "Tons sao as tonalidades dentro da mesma cor. Junta-se "
+                   "branco para clarear e preto para escurecer.",
+        "exemplo": "Ao preto com um pouco de branco chama-se cinzento.",
+        "lembra": "O preto e o branco nao sao cores do arco-iris: sao "
+                  "cores neutras.",
+    },
+    "ev-6c:u3:n1": {
+        "explica": "Cada tinta pede a sua tecnica. A aguarela mistura-se "
+                   "com agua, o guache e mais espesso, e as tintas "
+                   "artesanais fazem-se com o que ha na comunidade.",
+        "exemplo": "Depois de pintar, o pincel lava-se e poe-se a secar "
+                   "com os pelos para cima.",
+        "lembra": "Pincel sujo que seca fica perdido.",
+    },
+    "ev-6c:u4:n1": {
+        "explica": "Imprimir e estampar e passar um desenho de uma "
+                   "superficie para outra, e repeti-lo quantas vezes se "
+                   "quiser.",
+        "exemplo": "Com o dedo pintado faz-se impressao digital; com um "
+                   "carimbo repete-se o mesmo desenho ao longo do papel.",
+        "lembra": "Poe sempre uma proteccao por baixo antes de comecar.",
+    },
+    "ev-6c:u5:n1": {
+        "explica": "O papel corta-se, dobra-se, pica-se e cola-se. Cada "
+                   "uma destas e uma tecnica com a sua regra.",
+        "exemplo": "Na dobragem o papel nao se corta; no recorte corta-se "
+                   "pela linha marcada.",
+        "lembra": "A tesoura passa-se com as pontas viradas para quem a "
+                  "da, nunca para quem a recebe.",
+    },
+    # ---------------------------------------------------------------
+    # Educacao Visual e Oficios -- 5a classe
+    #
+    # Do livro EVO da 5a classe, 2023. Ao contrario da 6a, esta e sobretudo
+    # OFICIO: barro, fibras, cestaria. Nao tem cor porque o livro nao a
+    # ensina nesta classe.
+    # ---------------------------------------------------------------
+    "ev-5c:u1:n1": {
+        "explica": "Antes de comecar junta-se tudo o que se vai precisar, e "
+                   "no fim deixa-se o espaco limpo para quem vem a seguir.",
+        "exemplo": "Antes da aula: os lapis afiados. Antes de pintar: a "
+                   "mesa forrada.",
+        "lembra": "Preparar antes custa um minuto; limpar depois custa a "
+                  "aula toda.",
+    },
+    "ev-5c:u1:n2": {
+        "explica": "Ha varias maneiras de desenhar. De observacao e "
+                   "desenhar o que se tem a frente; com tema dado e "
+                   "desenhar o assunto que o professor disse.",
+        "exemplo": "A ilustracao acompanha um texto e ajuda a explica-lo. "
+                   "Um painel colectivo faz-se com os colegas todos.",
+        "lembra": "Olha primeiro, desenha depois.",
+    },
+    "ev-5c:u2:n1": {
+        "explica": "Imprimir e estampar e passar um desenho de uma "
+                   "superficie para outra, e repeti-lo quantas vezes se "
+                   "quiser.",
+        "exemplo": "Uma batata cortada ao meio e mergulhada em tinta faz um "
+                   "carimbo.",
+        "lembra": "Poe sempre uma proteccao por baixo antes de comecar.",
+    },
+    "ev-5c:u2:n2": {
+        "explica": "O papel corta-se, dobra-se, pica-se e cola-se. Cada uma "
+                   "destas e uma tecnica com a sua regra.",
+        "exemplo": "Na dobragem o papel nao se corta; no picotado fazem-se "
+                   "muitos furos pequenos seguidos.",
+        "lembra": "A tesoura passa-se pelo cabo, com as pontas seguras na "
+                  "nossa mao.",
+    },
+    "ev-5c:u3:n1": {
+        "explica": "Modelagem e dar forma a uma materia-prima modelavel. "
+                   "Moldagem e reproduzir um objecto atraves de um molde.",
+        "exemplo": "Um vaso feito a mao com barro e modelagem; dez vasos "
+                   "iguais tirados do mesmo molde sao moldagem.",
+        "lembra": "A vantagem da modelagem: ve-se a peca de todos os lados.",
+    },
+    "ev-5c:u3:n2": {
+        "explica": "O barro prepara-se por passos: limpa-se, peneira-se "
+                   "para tirar as pedras, mistura-se com agua e amassa-se.",
+        "exemplo": "Amassa-se ate a massa ficar homogenea e deixar de se "
+                   "colar as maos.",
+        "lembra": "Guarda o barro num plastico, senao seca e perde-se.",
+    },
+    "ev-5c:u4:n1": {
+        "explica": "As fibras naturais saem da natureza -- algodao, sisal, "
+                   "la, linho. As artificiais fazem-se na industria, como o "
+                   "nylon. As reciclaveis sao reaproveitadas.",
+        "exemplo": "Os fios dos sacos de comida, guardados e reaproveitados, "
+                   "sao fibras reciclaveis.",
+        "lembra": "Vem da planta ou do animal? E natural. Vem da fabrica? E "
+                  "artificial.",
+    },
+    "ev-5c:u4:n2": {
+        "explica": "Tecer e entrelacar fios. A cestaria usa o mesmo "
+                   "processo, com palha, bambu ou fitas de plastico.",
+        "exemplo": "Da cestaria saem cestos, chapeus, peneiras e esteiras.",
+        "lembra": "Tecelagem e cestaria sao a mesma ideia: entrelacar.",
+    },
+    # ---------------------------------------------------------------
+    # Educacao Visual e Oficios -- 4a classe
+    #
+    # ESTRUTURA PROVISORIA, SEM FONTE CONFIRMADA. Nao ha manual de EV da
+    # 4a classe publicado. Ver o cabecalho do conteudo_ev4c.py.
+    # ---------------------------------------------------------------
+    "ev-4c:u1:n1": {
+        "explica": "Um trabalho manual comeca antes do trabalho: junta-se "
+                   "tudo o que se vai precisar e prepara-se a mesa.",
+        "exemplo": "Antes de pintar, poe-se papel ou jornal por baixo para "
+                   "a mesa nao ficar suja.",
+        "lembra": "Quem prepara antes nao interrompe depois.",
+    },
+    "ev-4c:u1:n2": {
+        "explica": "As ferramentas cortam e furam, e por isso pedem regras. "
+                   "Guardam-se no seu lugar depois de usadas.",
+        "exemplo": "A tesoura passa-se pelo cabo: seguras nas pontas e "
+                   "das-lhe o cabo a quem a recebe.",
+        "lembra": "Com a tesoura na mao, ninguem corre.",
+    },
+    "ev-4c:u2:n1": {
+        "explica": "Desenha-se com muitos materiais: lapis, giz, carvao "
+                   "vegetal. Cada um risca de sua maneira.",
+        "exemplo": "Um lapis bem afiado risca fino; um lapis rombo risca "
+                   "grosso.",
+        "lembra": "O lapis afia-se antes da aula, nao a meio dela.",
+    },
+    "ev-4c:u2:n2": {
+        "explica": "Desenhar o que se tem a frente e desenho de "
+                   "observacao. Desenhar o que apetece e desenho livre.",
+        "exemplo": "Antes de desenhar uma cadeira, olha-se bem para ela: "
+                   "quantas pernas tem, onde e o encosto.",
+        "lembra": "Olha primeiro, desenha depois.",
+    },
+    "ev-4c:u3:n1": {
+        "explica": "Recortar e colar sao duas tecnicas que andam juntas: "
+                   "corta-se o papel e junta-se numa folha.",
+        "exemplo": "Marca-se a linha a lapis, corta-se por cima dela, e "
+                   "cola-se com pouca cola bem espalhada.",
+        "lembra": "Muita cola enruga o papel. Pouca e melhor.",
+    },
+    "ev-4c:u3:n2": {
+        "explica": "Na dobragem o papel dobra-se sem se cortar. No "
+                   "picotado fazem-se muitos furos pequenos seguidos.",
+        "exemplo": "Passa-se a unha por cima do vinco para a dobra ficar "
+                   "direita.",
+        "lembra": "Dobrar nao e cortar: o papel fica inteiro.",
+    },
+    "ev-4c:u4:n1": {
+        "explica": "Na nossa comunidade ha muitos oficios feitos com as "
+                   "maos: cestaria, costura, carpintaria, jardinagem.",
+        "exemplo": "Quem faz cestos e esteiras com palha trabalha na "
+                   "cestaria; quem trabalha a madeira e carpinteiro.",
+        "lembra": "Cada oficio tem o seu material e a sua tecnica.",
+    },
+    "ev-4c:u4:n2": {
+        "explica": "Os materiais dos trabalhos manuais vem muitas vezes da "
+                   "natureza que temos a volta: argila, palha, bambu.",
+        "exemplo": "Com argila fazem-se vasos e panelas; com palha e bambu, "
+                   "cestos e esteiras.",
+        "lembra": "Um saco velho reaproveitado tambem e material.",
+    },
 }

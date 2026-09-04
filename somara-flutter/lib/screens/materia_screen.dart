@@ -1,6 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import '../models/content.dart';
+import '../services/sons.dart';
 import '../theme.dart';
 import '../widgets/roby.dart';
 
@@ -46,6 +47,9 @@ class _MateriaScreenState extends State<MateriaScreen>
       vsync: this,
       duration: const Duration(milliseconds: 1500),
     )..forward();
+    // A aula e lida em voz alta pela Raquel: musica por cima tornava-a
+    // dificil de perceber a quem ainda nao le e depende do audio.
+    Sons.i.pedirSilencio();
     _ler();
   }
 
@@ -62,6 +66,7 @@ class _MateriaScreenState extends State<MateriaScreen>
 
   @override
   void dispose() {
+    Sons.i.largarSilencio();
     _entrada.dispose();
     _voz.dispose();
     super.dispose();

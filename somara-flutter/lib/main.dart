@@ -14,6 +14,9 @@ void main() async {
   // aberta. Não vai à rede: só arranca o SDK, e devolve logo se a consola
   // ainda não estiver configurada.
   await Nuvem.i.arrancar();
+  // Antes de qualquer som: define o foco de áudio para os nossos efeitos
+  // não calarem a nossa própria música.
+  await Sons.i.arrancar();
   // App para crianças: só retrato, para o tabuleiro nunca ficar deitado.
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
@@ -71,10 +74,21 @@ class _ArranqueState extends State<_Arranque> with WidgetsBindingObserver {
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState estado) {
-    if (estado == AppLifecycleState.resumed) {
-      Sons.i.retomarDoSegundoPlano();
-    } else {
-      Sons.i.pausarPorSegundoPlano();
+    switch (estado) {
+      case AppLifecycleState.resumed:
+        Sons.i.emPrimeiroPlano();
+
+      // `inactive` é transitório e a app continua à vista: a sombra do
+      // multitarefas, a barra de notificações a descer meio dedo, um
+      // aviso de chamada. Calar a música aqui foi o que a matou — ficava
+      // em pausa e o `resumed` que a devolvia nem sempre chegava.
+      case AppLifecycleState.inactive:
+        break;
+
+      case AppLifecycleState.paused:
+      case AppLifecycleState.hidden:
+      case AppLifecycleState.detached:
+        Sons.i.emSegundoPlano();
     }
   }
 

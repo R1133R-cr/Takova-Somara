@@ -43,12 +43,41 @@ echo "── Somara ${NOME} (código ${CODIGO}) · ${MODO}"
 
 # Recusar sobrepor uma versão já arquivada: a cópia antiga é justamente o
 # que permite voltar atrás quando uma versão nova sai com defeito.
+#
+# Em modo ABI os ficheiros têm outro nome, e o guarda tem de olhar para
+# esses — senão recusava-se a gerar a divisão de uma versão cujo APK
+# único já existisse, que é precisamente o caso normal.
+if [[ "$SPLIT" == "abi" ]]; then
+  ALVO="$ARQUIVO/somara-${NOME}+${CODIGO}-arm64-v8a-${MODO}.apk"
+fi
+
 if [[ -e "$ALVO" ]]; then
   echo
   echo "ERRO: já existe $ALVO"
   echo "Sobe a versão no pubspec.yaml antes de compilar outra vez,"
   echo "ou apaga a cópia à mão se souberes o que estás a fazer."
   exit 1
+fi
+
+# O áudio diz o que as regras de pronúncia mandam dizer?
+#
+# O nome de cada mp3 é o SHA-1 do texto do ECRÃ, e não muda quando uma
+# regra de pronúncia muda. O ficheiro fica com o nome certo e o som
+# errado, e não há maneira de dar por isso a olhar para o disco.
+#
+# Já aconteceu duas vezes. Da segunda ficaram sessenta ficheiros de
+# Matemática da 3ª à 6ª classe a ler "dois dois três" onde está escrito
+# "2² × 2³", e a versão saiu na mesma. Agora não sai.
+if command -v python >/dev/null 2>&1; then
+  echo "── a conferir o áudio"
+  if ! python tools/regravar_siglas.py --conferir; then
+    echo
+    echo "ERRO: há áudio que não diz o que devia dizer (ver acima)."
+    echo "Regrava-o antes de compilar."
+    exit 1
+  fi
+else
+  echo "AVISO: sem python — o áudio não foi conferido" >&2
 fi
 
 echo "── análise e testes"

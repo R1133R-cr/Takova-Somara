@@ -7,7 +7,10 @@ import '../models/content.dart';
 import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
+import '../widgets/desenho_geometrico.dart';
+import '../widgets/mostra_cores.dart';
 import '../widgets/roby.dart';
+import '../widgets/teclado_numerico.dart';
 import 'complete_screen.dart';
 
 class LessonScreen extends StatefulWidget {
@@ -89,6 +92,11 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
       duration: const Duration(milliseconds: 420),
     );
     _prepararQuestao();
+    // Musica fora enquanto se resolve. Uma pergunta de Matematica exige
+    // concentracao, e som por cima de quem esta a contar nos dedos
+    // atrapalha em vez de animar. E o enunciado lido em voz alta tem de se
+    // ouvir por cima de nada.
+    Sons.i.pedirSilencio();
     _lerEnunciado();
   }
 
@@ -111,6 +119,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
 
   @override
   void dispose() {
+    Sons.i.largarSilencio();
     _entrada.dispose();
     _abanao.dispose();
     _input.dispose();
@@ -414,13 +423,31 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
 
   Widget _corpoQuestao() {
     final cur = q;
-    return switch (cur) {
+    final resposta = switch (cur) {
       QCount() => _vistaCount(cur),
       QChoice() => _opcoes(cur.options),
       QInput() => _vistaInput(),
       QMatch() => _vistaMatch(cur),
       QDrag() => _vistaDrag(cur),
     };
+
+    final fig = cur.figura;
+    final cor = cur.cores;
+    if (fig == null && (cor == null || !cor.temMistura)) return resposta;
+
+    // A figura e as tintas entram entre o enunciado e a resposta, que e onde
+    // a crianca olha a seguir a ler a pergunta. "Um quadrado tem 5 cm de
+    // lado" sem quadrado nenhum obriga-a a imagina-lo antes de poder pensar
+    // nele; "amarelo mais azul" sem as tintas a vista ensina tres palavras
+    // e nao uma cor.
+    return Column(
+      children: [
+        if (fig != null) DesenhoGeometrico(figura: fig),
+        if (cor != null && cor.temMistura) MostraCores(cores: cor),
+        const SizedBox(height: 8),
+        resposta,
+      ],
+    );
   }
 
   Widget _vistaCount(QCount cur) => Column(
@@ -477,6 +504,9 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     final cur = q;
     final certa = cur is QChoice ? cur.a : (cur is QCount ? cur.a : -1);
 
+    final paleta = cur.cores?.opcoes ?? const <int>[];
+    final gota = i < paleta.length ? Color(paleta[i]) : null;
+
     Color borda = S.line, fundo = S.surface, txt = S.tx;
     if (revelar && i == certa) {
       borda = S.chart; fundo = S.green700.withValues(alpha: 0.35); txt = S.chart;
@@ -505,14 +535,69 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
           border: Border.all(color: borda, width: 2),
           borderRadius: BorderRadius.circular(S.rMd),
         ),
-        child: Text(texto,
-            textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: txt)),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // A cor da resposta, quando a pergunta e de Educacao Visual. Vai
+            // AO LADO do nome e nao em vez dele: assim a crianca escolhe
+            // pela cor e fica a saber como ela se chama.
+            if (gota != null) GotaDaOpcao(cor: gota),
+            Flexible(
+              child: Text(texto,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: 18, fontWeight: FontWeight.w600, color: txt)),
+            ),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _vistaInput() => Padding(
+  /// A resposta desta pergunta e um numero?
+  ///
+  /// Olha-se para a resposta certa e nao para o enunciado: e ela que diz o
+  /// que se espera. Cento e dezassete das cento e cinquenta e uma respostas
+  /// escritas do curriculo sao numeros.
+  bool get _respostaENumero {
+    final cur = q;
+    return cur is QInput && RegExp(r'^\d+$').hasMatch(cur.a.trim());
+  }
+
+  Widget _vistaInput() =>
+      _respostaENumero ? _vistaNumero() : _vistaTexto();
+
+  /// Resposta numerica: mostrador e teclado proprio, sem o teclado do
+  /// sistema a tapar a pergunta.
+  Widget _vistaNumero() => Padding(
+    padding: const EdgeInsets.only(top: 8),
+    child: Column(
+      children: [
+        MostradorDoNumero(
+          valor: _input.text,
+          erro: fase == Fase.errado,
+        ),
+        const SizedBox(height: 14),
+        TecladoNumerico(
+          activo: fase == Fase.responder,
+          aoDigito: (d) {
+            // Cinco algarismos chegam: a maior resposta do curriculo tem
+            // quatro, e sem travao a crianca podia encher a caixa a brincar.
+            if (_input.text.length >= 5) return;
+            setState(() => _input.text = '${_input.text}$d');
+          },
+          aoApagar: () {
+            if (_input.text.isEmpty) return;
+            setState(() => _input.text =
+                _input.text.substring(0, _input.text.length - 1));
+          },
+        ),
+      ],
+    ),
+  );
+
+  Widget _vistaTexto() => Padding(
         padding: const EdgeInsets.only(top: 8),
         child: TextField(
           controller: _input,

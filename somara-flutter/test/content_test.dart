@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o ensino primário inteiro, da 1ª à 6ª classe', () {
-    expect(c.cursos.length, 16);
+    expect(c.cursos.length, 21);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -33,18 +33,13 @@ void main() {
           containsAll(['Matemática', 'Português']), reason: classe);
     }
 
-    // A 4ª devia ter quatro e tem duas: faltam os manuais de Português e
-    // de Ciências Sociais dessa classe. Fica registado aqui — este teste
-    // falha no dia em que os livros chegarem, que é quando queremos saber.
-    expect(
-        c.cursos.where((x) => x.classe == '4ª classe').map((x) => x.disciplina),
-        containsAll(['Matemática', 'Ciências Naturais']));
-
-    // A 5ª e a 6ª estão completas.
-    for (final classe in ['5ª classe', '6ª classe']) {
+    // O II ciclo — 4ª, 5ª e 6ª — tem as quatro disciplinas académicas. A
+    // 4ª esteve incompleta durante meses, com Matemática e Ciências
+    // Naturais só; o Português e as Ciências Sociais chegaram com os
+    // Cadernos de Actividades do MINEDH.
+    for (final classe in ['4ª classe', '5ª classe', '6ª classe']) {
       final daClasse =
           c.cursos.where((x) => x.classe == classe).map((x) => x.disciplina);
-      expect(daClasse.length, 4, reason: classe);
       expect(
           daClasse,
           containsAll([
@@ -53,6 +48,15 @@ void main() {
             'Ciências Naturais',
             'Ciências Sociais',
           ]),
+          reason: classe);
+    }
+
+    // Educação Visual e Ofícios é a quinta disciplina do II ciclo, e o
+    // ciclo fica coberto por inteiro.
+    for (final classe in ['4ª classe', '5ª classe', '6ª classe']) {
+      expect(
+          c.cursos.where((x) => x.classe == classe).map((x) => x.disciplina),
+          contains('Educação Visual e Ofícios'),
           reason: classe);
     }
   });
@@ -69,13 +73,78 @@ void main() {
     }
   });
 
-  test('todas as 851 questões sobreviveram à migração', () {
+  test('o corpus de perguntas não encolhe sem se dar por isso', () {
+    // O número sobe quando se acrescenta conteúdo, e isso tem de ser um
+    // acto deliberado: se descer, ou subir sem ninguém ter escrito nada,
+    // perdeu-se ou duplicou-se conteúdo numa migração.
+    //
+    //   851  até à 0.19.3
+    //   908  com o Português da 4ª classe (57 perguntas)
+    //   958  com as Ciências Sociais da 4ª classe (50 perguntas)
+    //   992  com a Educação Visual da 6ª classe (34 perguntas)
+    //  1027  com a Educação Visual da 5ª classe (35 perguntas)
+    //  1060  com a Educação Visual da 4ª classe (33 perguntas)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 851);
+    expect(total, 1060);
+  });
+
+  test('as cores da Educação Visual estão bem formadas', () {
+    // A Educação Visual mostra a cor em vez de a nomear: a pergunta traz
+    // as tintas a misturar e cada resposta traz a sua mancha. Duas coisas
+    // podem correr mal em silêncio, e nenhuma daria erro na app.
+    var comCor = 0;
+    for (final curso in c.cursos) {
+      for (final u in curso.units) {
+        for (final n in u.niveis) {
+          for (final q in n.questoes) {
+            final cor = q.cores;
+            if (cor == null) continue;
+            comCor++;
+            final onde = '${curso.id}/${u.id}/${n.id}: ${q.q}';
+
+            // Uma mistura de uma cor só não é mistura nenhuma.
+            if (cor.mistura.isNotEmpty) {
+              expect(cor.mistura.length, greaterThanOrEqualTo(2), reason: onde);
+            }
+
+            // Se há manchas nas opções, tem de haver uma por opção. Com
+            // menos, as últimas respostas ficavam sem cor e a criança não
+            // percebia porquê.
+            if (cor.opcoes.isNotEmpty && q is QChoice) {
+              expect(cor.opcoes.length, q.options.length, reason: onde);
+            }
+
+            // Opacas. Uma cor sem alfa sai invisível no fundo escuro.
+            for (final v in [...cor.mistura, ...cor.opcoes]) {
+              expect(v >> 24 & 0xFF, 0xFF, reason: '$onde: cor transparente');
+            }
+          }
+        }
+      }
+    }
+    expect(comCor, greaterThan(0), reason: 'nenhuma pergunta mostra cor');
+  });
+
+  test('o conteúdo sem manual está marcado como tal', () {
+    // Dos cursos da app, um só foi montado sem livro: a Educação Visual da
+    // 4ª classe, porque não existe manual publicado. Isso não é um defeito
+    // — é uma decisão — mas tem de estar escrito onde alguém tropece nele,
+    // e não só na mensagem de um commit de há um ano.
+    //
+    // Se um dia o livro aparecer e o curso for refeito, tira-se o campo e
+    // este teste avisa que a lista mudou.
+    final provisorios =
+        c.cursos.where((x) => x.provisorio).map((x) => x.id).toList();
+    expect(provisorios, ['ev-4c'],
+        reason: 'mudou a lista de cursos sem manual');
+
+    final ev4 = c.cursos.firstWhere((x) => x.id == 'ev-4c');
+    expect(ev4.fonte, contains('provisória'));
+    expect(ev4.fonte, contains('sem fonte confirmada'));
   });
 
   test('dentro de uma classe, cada enunciado é único', () {
@@ -174,6 +243,40 @@ void main() {
 
     expect(semAudio, isEmpty, reason: 'perguntas sem áudio atribuído');
     expect(emFalta, isEmpty, reason: 'áudio atribuído mas ficheiro inexistente');
+  });
+
+  test('nenhum ficheiro de áudio está vazio', () {
+    // Existir não chega. A matéria do metical da 3ª classe passou uma
+    // versão inteira com um mp3 de zero bytes: o ficheiro estava lá, o
+    // teste de existência passava, e a aula era muda. Uma gravação que
+    // falha a meio deixa exactamente isto para trás.
+    //
+    // Este teste cobre também o áudio da MATÉRIA, que o de cima não via —
+    // e era ali que estava o defeito.
+    var vazios = <String>[];
+
+    void conferir(String? ficheiro, String onde) {
+      if (ficheiro == null) return;
+      final f = File('assets/audio/$ficheiro');
+      if (!f.existsSync()) return; // já é apanhado pelo teste de cima
+      final bytes = f.lengthSync();
+      // Uma frase curta da Raquel não desce dos 10 kB. Abaixo de 1 kB não
+      // há fala nenhuma lá dentro.
+      if (bytes < 1024) vazios.add('$onde -> $ficheiro ($bytes bytes)');
+    }
+
+    for (final curso in c.cursos) {
+      for (final u in curso.units) {
+        for (final n in u.niveis) {
+          conferir(n.materia?.audio, '${curso.id}/${n.id} (matéria)');
+          for (final q in n.questoes) {
+            conferir(q.audio, '${curso.id}/${n.id}: ${q.q}');
+          }
+        }
+      }
+    }
+
+    expect(vazios, isEmpty, reason: 'áudio sem som lá dentro');
   });
 
   test('nenhum nível fica sem enunciado ou sem questões', () {
