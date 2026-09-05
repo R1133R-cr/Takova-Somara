@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o primário inteiro, e o primeiro degrau do secundário', () {
-    expect(c.cursos.length, 23);
+    expect(c.cursos.length, 24);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -92,12 +92,13 @@ void main() {
     //  1076  com os exercícios interactivos de Ciências (16)
     //  1150  com a Matemática da 7ª classe (74)
     //  1219  com o Português da 7ª classe (69)
+    //  1274  com a História da 7ª classe (55)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 1219);
+    expect(total, 1274);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {

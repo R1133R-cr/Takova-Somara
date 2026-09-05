@@ -56,13 +56,64 @@ SOLETRAR = ['SADC', 'CPLP', 'HIV', 'UA']
 # "eme-te" em vez de "meticais" estragava a licao inteira.
 DIZER = {
     'MT': 'meticais',
-    # Seculos em numeracao romana. So estes tres aparecem no curriculo; a
-    # lista curta e de proposito, para nao apanhar por engano palavras
-    # como MIL ou DIVIDIR que tambem sao letras romanas validas.
+    # Seculos em numeracao romana, SOLTOS -- sem a palavra "seculo" a
+    # frente. A lista curta e de proposito: MIL, DIVIDIR e CIVIL tambem sao
+    # feitos de letras romanas validas, e uma regra geral comia-os.
+    #
+    # Quando vem a seguir a "seculo" ou "seculos" ha uma regra melhor, que
+    # nao precisa de lista nenhuma -- ver [dizer_seculos].
     'XV': 'quinze',
     'XIX': 'dezanove',
     'XX': 'vinte',
 }
+
+# Os seculos, quando a palavra "seculo" os anuncia.
+#
+# A Historia da 7a classe fala de reinos "do seculo IX ao XVII", da
+# formacao do capitalismo "nos seculos XV-XVIII", da Grecia e de Roma. Sao
+# muitos mais do que os tres da lista de cima, e por-los todos la seria
+# perigoso: "MIL" e "CIVIL" tambem se leem como numeros romanos.
+#
+# Ancorada na palavra, a regra deixa de ter esse risco: so se toca no que
+# vem LOGO A SEGUIR a "seculo" ou "seculos", e ai um numero romano e mesmo
+# um numero romano. Apanha tambem o segundo numero de um intervalo --
+# "seculo IX – XVII" --, que de outra maneira ficava por dizer.
+#
+# Em portugues os seculos leem-se em ordinal ate ao decimo e em cardinal a
+# partir do decimo primeiro: "seculo nono", "seculo quinze".
+_SECULOS = {
+    'I': 'primeiro', 'II': 'segundo', 'III': 'terceiro', 'IV': 'quarto',
+    'V': 'quinto', 'VI': 'sexto', 'VII': 'sétimo', 'VIII': 'oitavo',
+    'IX': 'nono', 'X': 'décimo',
+    'XI': 'onze', 'XII': 'doze', 'XIII': 'treze', 'XIV': 'catorze',
+    'XV': 'quinze', 'XVI': 'dezasseis', 'XVII': 'dezassete',
+    'XVIII': 'dezoito', 'XIX': 'dezanove', 'XX': 'vinte',
+    'XXI': 'vinte e um',
+}
+
+# O grupo do meio é só a ligação, sem o segundo número lá dentro. Já
+# esteve de outra maneira e o resultado foi "do século nono ao XVII
+# dezassete": o número romano ficava, e a palavra vinha atrás dele.
+_SECULO = re.compile(
+    r'\b(séculos?)\s+([IVX]+)'
+    r'(?:(\s*(?:[-–—]|a|e|até|ao)\s*)([IVX]+))?',
+    re.IGNORECASE,
+)
+
+
+def dizer_seculos(texto: str) -> str:
+    """"século IX" -> "século nono"; "séculos XV-XVIII" -> por extenso."""
+    def um(m):
+        palavra, primeiro, meio, segundo = m.group(1, 2, 3, 4)
+        fora = f'{palavra} {_SECULOS.get(primeiro.upper(), primeiro)}'
+        if segundo:
+            # Um travessão entre dois séculos lê-se "a", e não em silêncio.
+            ligacao = meio.strip()
+            if ligacao in ('-', '–', '—', ''):
+                ligacao = 'a'
+            fora += f' {ligacao} {_SECULOS.get(segundo.upper(), segundo)}'
+        return fora
+    return _SECULO.sub(um, texto)
 
 # Siglas que ja se dizem como palavra e portanto nao se tocam. Estao aqui
 # escritas so para ficar registado que a decisao foi tomada e nao esquecida.
@@ -357,6 +408,10 @@ def para_dizer(texto: str) -> str:
     # Primeiro as frases que nomeiam a sigla: depois de soletrada, ela
     # deixa de casar com as regras gerais e fica protegida delas.
     fora = _NOMEIA.sub(lambda m: f'{m.group(1)} {soletrar(m.group(2))}', texto)
+    # Os séculos antes da lista das siglas: assim o "XV" de "século XV" já
+    # foi dito por extenso e não chega à regra solta, e o "XVII" — que não
+    # está na lista — também sai.
+    fora = dizer_seculos(fora)
     # As mais compridas primeiro: sem isso, o XX comia o inicio do XIX.
     for sigla in sorted(SOLETRAR, key=len, reverse=True):
         fora = re.sub(rf'\b{sigla}\b', soletrar(sigla), fora)

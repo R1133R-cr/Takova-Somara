@@ -339,5 +339,42 @@ class DivisaoComDoisPontos(unittest.TestCase):
         self.assertEqual(para_dizer('Nota: 5 pontos'), 'Nota: 5 pontos')
 
 
+
+class Seculos(unittest.TestCase):
+    """Os seculos, quando a palavra "seculo" os anuncia.
+
+    A Historia da 7a classe fala de reinos "do seculo IX ao XVII". A lista
+    solta de siglas so tem tres seculos, e alarga-la seria perigoso: MIL e
+    CIVIL tambem se leem como numeros romanos. Ancorada na palavra, a regra
+    apanha todos sem esse risco.
+    """
+
+    def test_ate_ao_decimo_le_se_em_ordinal(self):
+        self.assertEqual(para_dizer('no século IX'), 'no século nono')
+        self.assertEqual(para_dizer('o século V'), 'o século quinto')
+
+    def test_a_partir_do_onze_le_se_em_cardinal(self):
+        self.assertEqual(para_dizer('o século XV'), 'o século quinze')
+        self.assertEqual(para_dizer('século XVI'), 'século dezasseis')
+        self.assertEqual(para_dizer('o século XXI'), 'o século vinte e um')
+
+    def test_o_intervalo_diz_os_dois(self):
+        # Ja esteve assim: "do século nono ao XVII dezassete" -- o numero
+        # romano ficava e a palavra vinha atras dele.
+        self.assertEqual(para_dizer('do século IX ao XVII'),
+                         'do século nono ao dezassete')
+        self.assertEqual(para_dizer('entre os séculos IX e XVII'),
+                         'entre os séculos nono e dezassete')
+
+    def test_o_travessao_entre_seculos_le_se(self):
+        self.assertEqual(para_dizer('séculos XV-XVIII'),
+                         'séculos quinze a dezoito')
+
+    def test_as_palavras_de_letras_romanas_ficam_quietas(self):
+        # E por isto que a regra esta ancorada na palavra "seculo".
+        for palavra in ('MIL homens', 'a guerra CIVIL', 'DIVIDIR por 3'):
+            self.assertEqual(para_dizer(palavra), palavra)
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

@@ -1891,4 +1891,71 @@ MATERIA = {
         "exemplo": "Directo: «O Jorge disse: — Vou à escola.» Indirecto: «O Jorge disse que ia à escola.»",
         "lembra": "Ao passar a indirecto, o travessão desaparece e entra o «que».",
     },
+
+    # ---------------------------------------------------------------
+    # Historia -- 7a classe  (1o ciclo do Ensino Secundario)
+    #
+    # A primeira Historia separada da app: da 4a a 6a classe ela vem
+    # dentro das Ciencias Sociais, como o primario a ensina.
+    # ---------------------------------------------------------------
+    "his-7c:u1:n1": {
+        "explica": "A História é a ciência que estuda o passado das sociedades humanas. Não serve para decorar datas: serve para perceber como chegámos onde estamos. Apoia-se noutras ciências — a Arqueologia, a Geografia, a Antropologia e a Economia.",
+        "exemplo": "A Arqueologia escava e estuda os objectos que ficaram; a Antropologia estuda os costumes; a Geografia diz onde tudo aconteceu.",
+        "lembra": "A História explica o presente pelo passado.",
+    },
+    "his-7c:u1:n2": {
+        "explica": "Fonte histórica é tudo o que nos dá informação sobre o passado. Há fontes escritas, materiais e orais. Em África as orais têm um peso especial, porque muito do passado foi transmitido de boca em boca, de geração em geração.",
+        "exemplo": "Uma carta antiga é fonte escrita; uma machadinha de pedra é material; o que um ancião conta sobre a sua aldeia é oral.",
+        "lembra": "Nenhuma fonte diz tudo: cruzam-se umas com as outras.",
+    },
+    "his-7c:u1:n3": {
+        "explica": "A História mede o tempo em décadas, séculos e milénios, e conta os anos a partir do nascimento de Cristo, para trás e para a frente. O século um vai do ano 1 ao ano 100 — e é por isso que os anos 1900 são o século vinte.",
+        "exemplo": "Década: 10 anos. Século: 100. Milénio: 1000. O ano de 1975 pertence ao século vinte, porque este vai de 1901 a 2000.",
+        "lembra": "Anos 1900 são o século vinte, não o dezanove.",
+    },
+    "his-7c:u2:n1": {
+        "explica": "Há duas explicações para a origem do Homem. A teoria da criação atribui-a a uma acção divina. A da evolução defende que o ser humano resultou de transformações lentas ao longo de milhões de anos: a hominização.",
+        "exemplo": "São factores da hominização a posição erecta, a libertação das mãos, o trabalho, a linguagem e o aumento do cérebro.",
+        "lembra": "Hominização é o caminho lento até ao ser humano de hoje.",
+    },
+    "his-7c:u2:n2": {
+        "explica": "África é o berço da Humanidade porque foi aí que se encontraram os vestígios mais antigos dos hominídeos, sobretudo no Vale do Rift. O trabalho foi decisivo: usar as mãos desenvolveu-as, e desenvolveu a inteligência.",
+        "exemplo": "Os primeiros instrumentos eram de pedra lascada, e serviam para cortar, raspar e caçar.",
+        "lembra": "A Humanidade começou em África, e os ossos provam-no.",
+    },
+    "his-7c:u2:n3": {
+        "explica": "O domínio do fogo mudou a vida: aquecia, afastava os animais e permitia cozinhar. Depois veio a agricultura, e com ela a passagem de sociedades nómadas — que se deslocavam à procura de alimento — a sociedades sedentárias, fixas num lugar.",
+        "exemplo": "As pinturas rupestres, feitas nas paredes das grutas, mostram que esses homens já tinham arte e religião.",
+        "lembra": "Nómada anda; sedentário fica. Foi a agricultura que fixou.",
+    },
+    "his-7c:u3:n1": {
+        "explica": "Com a agricultura e a domesticação de animais, o Homem passou a produzir o alimento em vez de o procurar. Ao produzir mais do que consumia, apareceu o excedente — e com ele a diferenciação social.",
+        "exemplo": "Quem guardava o excedente ganhava poder sobre quem não tinha. É aí que começam as diferenças entre grupos sociais.",
+        "lembra": "Excedente é o que sobra — e foi ele que criou as desigualdades.",
+    },
+    "his-7c:u3:n2": {
+        "explica": "Os primeiros Estados nasceram junto de grandes rios, onde a terra era fértil: o Egipto no vale do Nilo, governado pelo faraó, e a Mesopotâmia entre o Tigre e o Eufrates, onde nasceu a escrita cuneiforme.",
+        "exemplo": "O Código de Hamurábi é um dos primeiros conjuntos de leis escritas que se conhecem: as regras deixaram de depender da memória de quem julgava.",
+        "lembra": "Os primeiros Estados nasceram onde havia rio e terra boa.",
+    },
+    "his-7c:u3:n3": {
+        "explica": "A Grécia Antiga organizava-se em cidades-Estado, as pólis. Em Atenas nasceu a democracia, mas só votavam os cidadãos homens livres: mulheres, escravos e estrangeiros ficavam de fora.",
+        "exemplo": "Numa Atenas de dezenas de milhares de habitantes, só uma parte podia votar. Era democracia, e era limitada.",
+        "lembra": "A democracia ateniense excluía mais gente do que incluía.",
+    },
+    "his-7c:u4:n1": {
+        "explica": "Os Khoisan foram dos mais antigos habitantes da África Austral: viviam da caça e da recolecção, em pequenos grupos. Os povos de língua bantu chegaram depois, e traziam a agricultura e a metalurgia do ferro.",
+        "exemplo": "Com o ferro fizeram-se enxadas e catanas melhores, e com elas cultivou-se mais terra e alimentou-se mais gente.",
+        "lembra": "Os bantu trouxeram a enxada de ferro — e com ela, aldeias maiores.",
+    },
+    "his-7c:u4:n2": {
+        "explica": "O Reino do Zimbabwe ergueu grandes construções de pedra sem argamassa e enriqueceu com o ouro e o marfim. O Império de Mutapa formou-se depois, no vale do Zambeze, e comerciava com os swahili da costa.",
+        "exemplo": "O ouro do interior descia até à costa e trocava-se por tecidos e missangas vindos do outro lado do Índico.",
+        "lembra": "O território de Mutapa fica hoje entre Moçambique e o Zimbabwe.",
+    },
+    "his-7c:u4:n3": {
+        "explica": "Na África Ocidental, três impérios sucederam-se à custa do comércio transaariano: Ghana, Mali e Songhai. As caravanas de camelos atravessavam o deserto levando ouro do sul e trazendo sal do norte.",
+        "exemplo": "No Mali, Timbuctu tornou-se centro de comércio e de estudo. Mansa Musa ficou célebre pela enorme riqueza do seu império. O Songhai teve capital em Gao.",
+        "lembra": "Ouro para norte, sal para sul: era esse o negócio do Saara.",
+    },
 }
