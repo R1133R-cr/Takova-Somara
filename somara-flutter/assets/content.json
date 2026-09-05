@@ -9306,7 +9306,8 @@
       }
      ]
     }
-   ]
+   ],
+   "provisorio": true
   },
   {
    "id": "mat-5c",
@@ -15689,6 +15690,938 @@
         "exemplo": "Na dobragem o papel nao se corta; no recorte corta-se pela linha marcada.",
         "lembra": "A tesoura passa-se com as pontas viradas para quem a da, nunca para quem a recebe.",
         "audio": "561a2b0ac550.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mat-7c",
+   "disciplina": "Matemática",
+   "classe": "7ª classe",
+   "tag": "MAT",
+   "fonte": "Programa de Ensino da Disciplina de Matemática — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024. As unidades e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 7ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Números e operações (1)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Conjuntos e elementos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um conjunto é:",
+         "options": [
+          "Uma colecção de objectos bem definidos",
+          "Um número muito grande",
+          "Uma conta por resolver"
+         ],
+         "a": 0,
+         "audio": "45800e0eb3c5.mp3"
+        },
+        {
+         "t": "input",
+         "q": "O conjunto A = {2, 4, 6, 8, 10}. Quantos elementos tem? Esse número chama-se cardinal de A.",
+         "a": "5",
+         "audio": "b61f3f93d07b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Sendo B = {a, e, i, o, u}, o símbolo ∈ em «e ∈ B» quer dizer:",
+         "options": [
+          "e pertence a B",
+          "e não pertence a B",
+          "e está contido em B"
+         ],
+         "a": 0,
+         "audio": "f84dbb073314.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Escrever C = {1, 3, 5, 7, 9} é definir o conjunto:",
+         "options": [
+          "Por extensão, nomeando os elementos",
+          "Em compreensão, dizendo a regra",
+          "Por cardinal"
+         ],
+         "a": 0,
+         "audio": "d157cf264a2c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada símbolo ao que ele diz.",
+         "pairs": [
+          [
+           "∈",
+           "Pertence a"
+          ],
+          [
+           "∉",
+           "Não pertence a"
+          ]
+         ],
+         "audio": "110f16101dbe.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um conjunto é uma colecção de objectos bem definidos, a que chamamos elementos. Escreve-se entre chavetas. O número de elementos chama-se cardinal.",
+        "exemplo": "A = {2, 4, 6, 8, 10}. Os elementos são 2, 4, 6, 8 e 10. O cardinal de A é 5. Dizemos 4 ∈ A e 5 ∉ A.",
+        "lembra": "∈ liga um elemento a um conjunto: pertence ou não pertence.",
+        "audio": "0aedb478cf6f.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Reunião e intersecção",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«A ⊂ B» lê-se:",
+         "options": [
+          "A está contido em B",
+          "A pertence a B",
+          "A é igual a B"
+         ],
+         "a": 0,
+         "audio": "c7e7b63a9903.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A = {1, 2, 3} e B = {3, 4}. Quantos elementos tem A ∪ B?",
+         "a": "4",
+         "audio": "1408e60de658.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A = {1, 2, 3} e B = {3, 4}. Quantos elementos tem A ∩ B?",
+         "a": "1",
+         "audio": "063ff4f8961d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Dois conjuntos que não têm nenhum elemento em comum dizem-se:",
+         "options": [
+          "Disjuntos",
+          "Iguais",
+          "Singulares"
+         ],
+         "a": 0,
+         "audio": "cf5f0fdb82e5.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos elementos tem o conjunto vazio?",
+         "a": "0",
+         "audio": "513efe2e4379.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes símbolos representa o conjunto vazio?",
+         "options": [
+          "∅",
+          "∩",
+          "∪"
+         ],
+         "a": 0,
+         "audio": "beb041859b3f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A reunião de dois conjuntos junta todos os elementos dos dois. A intersecção fica só com os que estão nos dois ao mesmo tempo. Um conjunto está contido noutro quando todos os seus elementos também são do outro.",
+        "exemplo": "A = {1, 2, 3} e B = {3, 4}. A ∪ B = {1, 2, 3, 4}, que tem 4 elementos. A ∩ B = {3}, que tem 1.",
+        "lembra": "Reunião junta tudo; intersecção guarda só o que se repete.",
+        "audio": "a23cee189150.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Números inteiros relativos",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Qual é o simétrico de 7?",
+         "a": "-7",
+         "audio": "428a74ab71e4.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o módulo, ou valor absoluto, de −9?",
+         "a": "9",
+         "audio": "cbcb6203112c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes números é menor?",
+         "options": [
+          "−8",
+          "−5",
+          "−1"
+         ],
+         "a": 0,
+         "audio": "c421bc49dba6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em Lichinga, a temperatura era de 3 graus e desceu 8 graus durante a noite. Que temperatura ficou?",
+         "a": "-5",
+         "audio": "51d845a428cc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na recta numérica, os números negativos ficam:",
+         "options": [
+          "À esquerda do zero",
+          "À direita do zero",
+          "Em cima do zero"
+         ],
+         "a": 0,
+         "audio": "9b1ffd92b437.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Aos números naturais juntam-se agora os negativos. Na recta numérica, os negativos ficam à esquerda do zero. O simétrico de um número está do outro lado do zero, à mesma distância. O módulo é essa distância, e nunca é negativo.",
+        "exemplo": "O simétrico de 7 é −7. O módulo de −9 é 9. Entre −8 e −5, o menor é −8, porque está mais à esquerda.",
+        "lembra": "Quanto mais à esquerda na recta, menor é o número.",
+        "audio": "b1adb2e2f525.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Operações com números inteiros",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Calcula: −12 + 7",
+         "a": "-5",
+         "audio": "1c617af2d00d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Calcula: −8 − 5",
+         "a": "-13",
+         "audio": "33f25d1954de.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Calcula: (−4) × 3",
+         "a": "-12",
+         "audio": "6a8dc9d359df.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Calcula: (−20) : 4",
+         "a": "-5",
+         "audio": "97b5f1ed6f78.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O produto de dois números negativos é:",
+         "options": [
+          "Positivo",
+          "Negativo",
+          "Sempre zero"
+         ],
+         "a": 0,
+         "audio": "64fbbdae999c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Somar um número negativo é andar para a esquerda na recta. Na multiplicação e na divisão, sinais iguais dão positivo e sinais diferentes dão negativo.",
+        "exemplo": "−12 + 7 = −5. (−4) × 3 = −12, porque os sinais são diferentes. (−4) × (−3) = 12, porque são iguais.",
+        "lembra": "Sinais iguais, positivo. Sinais diferentes, negativo.",
+        "audio": "4eec5825295c.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Geometria (1)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Polígonos e triângulos",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto vale a soma das medidas dos ângulos internos de um triângulo, em graus?",
+         "a": "180",
+         "audio": "3366a0f39b6e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um triângulo com um ângulo recto chama-se:",
+         "options": [
+          "Rectângulo",
+          "Acutângulo",
+          "Obtusângulo"
+         ],
+         "a": 0,
+         "audio": "fd76b26af912.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos lados tem um hexágono?",
+         "a": "6",
+         "audio": "6d6b67d2c3da.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O apótema de um polígono regular é a distância do centro:",
+         "options": [
+          "Ao meio de um lado",
+          "A um vértice",
+          "A outro polígono"
+         ],
+         "a": 0,
+         "audio": "88e23bf1bc45.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada polígono ao número de lados.",
+         "pairs": [
+          [
+           "Pentágono",
+           "5"
+          ],
+          [
+           "Octógono",
+           "8"
+          ]
+         ],
+         "audio": "1a549c9cbab4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um polígono é uma figura fechada feita de segmentos de recta. Classifica-se pelo número de lados. Num triângulo, a soma dos ângulos internos é sempre 180 graus.",
+        "exemplo": "Um pentágono tem 5 lados, um hexágono 6. Num triângulo com ângulos de 90 e 60 graus, o terceiro é 30, porque 90 + 60 + 30 = 180.",
+        "lembra": "Os ângulos de qualquer triângulo somam 180 graus.",
+        "audio": "cd9fb3f3069a.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Circunferência, círculo e sólidos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A circunferência é a linha; o círculo é:",
+         "options": [
+          "A parte de dentro, com a linha",
+          "A mesma coisa",
+          "Só o centro"
+         ],
+         "a": 0,
+         "audio": "88f70faf2862.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma circunferência tem 7 cm de raio. Quantos centímetros mede o diâmetro?",
+         "a": "14",
+         "figura": {
+          "forma": "circulo",
+          "a": 7
+         },
+         "audio": "9d08a9acd596.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A corda de uma circunferência é o segmento que une:",
+         "options": [
+          "Dois pontos da circunferência",
+          "O centro a um ponto",
+          "Dois centros"
+         ],
+         "a": 0,
+         "audio": "b56486b626bc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes sólidos não tem nenhuma face plana?",
+         "options": [
+          "A esfera",
+          "O cubo",
+          "O prisma"
+         ],
+         "a": 0,
+         "audio": "09f1c35ffdc4.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada elemento à sua descrição.",
+         "pairs": [
+          [
+           "Raio",
+           "Do centro à circunferência"
+          ],
+          [
+           "Diâmetro",
+           "Passa pelo centro, de lado a lado"
+          ]
+         ],
+         "audio": "12ef3dd20fd6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A circunferência é a linha; o círculo é a região que ela fecha. O raio vai do centro à linha; o diâmetro atravessa o círculo pelo centro e vale dois raios. A corda une dois pontos da circunferência.",
+        "exemplo": "Se o raio é 7 cm, o diâmetro é 14 cm. Um sólido como a esfera não tem nenhuma face plana; o cubo tem seis.",
+        "lembra": "Diâmetro é sempre o dobro do raio.",
+        "audio": "beb14a7c163d.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Números racionais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Fracções e fracções equivalentes",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na fracção 3/5, o número 5 chama-se:",
+         "options": [
+          "Denominador",
+          "Numerador",
+          "Cardinal"
+         ],
+         "a": 0,
+         "audio": "a624d2c8f953.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas fracções é equivalente a 1/2?",
+         "options": [
+          "4/8",
+          "2/5",
+          "3/7"
+         ],
+         "a": 0,
+         "audio": "a9419a2cd5dd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A fracção 6/8, simplificada, fica:",
+         "options": [
+          "3/4",
+          "2/3",
+          "6/4"
+         ],
+         "a": 0,
+         "audio": "1e91832d2433.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma fracção diz-se irredutível quando:",
+         "options": [
+          "Já não se pode simplificar mais",
+          "O numerador é maior",
+          "É maior do que 1"
+         ],
+         "a": 0,
+         "audio": "404f4907902a.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Três amigos repartem 12 mangas em partes iguais. Quantas mangas leva cada um?",
+         "a": "4",
+         "audio": "b6522d8630c5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma fracção representa partes de um todo. O denominador diz em quantas partes se dividiu; o numerador, quantas se tomaram. Fracções equivalentes representam a mesma quantidade escrita de outra maneira.",
+        "exemplo": "1/2 = 2/4 = 4/8, e todas valem metade. Para simplificar 6/8, divide-se o de cima e o de baixo por 2: fica 3/4.",
+        "lembra": "Uma fracção é irredutível quando já não se pode simplificar.",
+        "audio": "a3799756062c.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Comparar, somar e subtrair fracções",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para somar 1/4 com 2/4, o que se faz?",
+         "options": [
+          "Somam-se os numeradores e mantém-se o denominador",
+          "Somam-se os dois de cima e os dois de baixo",
+          "Multiplicam-se as fracções"
+         ],
+         "a": 0,
+         "audio": "43d8dc92ca67.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 1/4 + 2/4?",
+         "options": [
+          "3/4",
+          "3/8",
+          "2/8"
+         ],
+         "a": 0,
+         "audio": "5512738a0ad3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é maior: 2/3 ou 1/3?",
+         "options": [
+          "2/3",
+          "1/3",
+          "São iguais"
+         ],
+         "a": 0,
+         "audio": "d4bd2ca5986d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para somar 1/2 com 1/3 é preciso primeiro:",
+         "options": [
+          "Reduzir as fracções ao mesmo denominador",
+          "Simplificar as duas",
+          "Trocar os numeradores"
+         ],
+         "a": 0,
+         "audio": "21b899e219d6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Com o mesmo denominador, somam-se ou subtraem-se os numeradores e o denominador fica na mesma. Com denominadores diferentes, reduzem-se primeiro ao mesmo.",
+        "exemplo": "1/4 + 2/4 = 3/4. Para 1/2 + 1/3, passa-se aos sextos: 3/6 + 2/6 = 5/6.",
+        "lembra": "Só se somam fracções que estejam partidas do mesmo tamanho.",
+        "audio": "540776ebe917.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Decimais e arredondamentos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A fracção 1/4, na forma decimal, é:",
+         "options": [
+          "0,25",
+          "0,14",
+          "1,4"
+         ],
+         "a": 0,
+         "audio": "4060b3fe7e87.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O número 3,7 arredondado às unidades fica:",
+         "options": [
+          "4",
+          "3",
+          "3,5"
+         ],
+         "a": 0,
+         "audio": "12f1e44e6a10.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma dízima periódica é um número decimal em que:",
+         "options": [
+          "Um grupo de algarismos se repete sem fim",
+          "Não há vírgula",
+          "Só há um algarismo"
+         ],
+         "a": 0,
+         "audio": "2797d28c85fa.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um caderno custa 25 meticais. Quanto custam 4 cadernos, em meticais?",
+         "a": "100",
+         "audio": "38897c2b6e73.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Toda a fracção se pode escrever na forma decimal, dividindo o numerador pelo denominador. Às vezes a divisão não acaba e um grupo de algarismos repete-se sem fim: é uma dízima periódica.",
+        "exemplo": "1/4 = 0,25. E 1/3 = 0,333... , que é periódica. Arredondando 3,7 às unidades fica 4, porque 7 é maior que 5.",
+        "lembra": "Para arredondar, olha-se para o algarismo seguinte.",
+        "audio": "56962c928e9b.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Grandezas e medidas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Perímetros",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Um rectângulo tem 8 cm de comprimento e 5 cm de largura. Quantos centímetros mede o perímetro?",
+         "a": "26",
+         "figura": {
+          "forma": "rectangulo",
+          "a": 8,
+          "b": 5
+         },
+         "audio": "47760685b87d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um quadrado tem 9 cm de lado. Quantos centímetros mede o perímetro?",
+         "a": "36",
+         "figura": {
+          "forma": "quadrado",
+          "a": 9
+         },
+         "audio": "a2bb6f0d9e49.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O perímetro de uma figura é:",
+         "options": [
+          "A medida do contorno",
+          "A medida da superfície",
+          "O espaço que ocupa"
+         ],
+         "a": 0,
+         "audio": "13b3f2f95031.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma machamba tem a forma de um triângulo com lados de 12 m, 15 m e 20 m. Quantos metros de cerca são precisos para a rodear?",
+         "a": "47",
+         "audio": "02e886a316ba.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O perímetro é a medida do contorno de uma figura: soma-se o comprimento de todos os lados.",
+        "exemplo": "Um rectângulo de 8 cm por 5 cm tem perímetro 8 + 5 + 8 + 5 = 26 cm. Um quadrado de 9 cm de lado tem 4 × 9 = 36 cm.",
+        "lembra": "Perímetro é o caminho à volta; área é o espaço lá dentro.",
+        "audio": "c32ffc49a1c9.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Áreas e volumes",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Um trapézio tem base maior de 10 cm, base menor de 6 cm e altura de 4 cm. Quantos centímetros quadrados mede a área?",
+         "a": "32",
+         "figura": {
+          "forma": "trapezio",
+          "a": 10,
+          "b": 6
+         },
+         "audio": "45754c2ea7f6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um losango tem diagonais de 12 cm e 5 cm. Quantos centímetros quadrados mede a área?",
+         "a": "30",
+         "figura": {
+          "forma": "losango",
+          "a": 12,
+          "b": 5
+         },
+         "audio": "cb7e2dab68b5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A área do círculo calcula-se com:",
+         "options": [
+          "π × r × r",
+          "2 × π × r",
+          "π × d × d"
+         ],
+         "a": 0,
+         "audio": "856ae47ac797.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um prisma recto tem 20 centímetros quadrados de área da base e 6 cm de altura. Quantos centímetros cúbicos mede o volume?",
+         "a": "120",
+         "audio": "da1057b96409.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A área do trapézio é a soma das bases a dividir por 2, vezes a altura. A do losango é o produto das diagonais a dividir por 2. O volume de um prisma é a área da base vezes a altura.",
+        "exemplo": "Trapézio de bases 10 e 6 e altura 4: (10 + 6) : 2 = 8, e 8 × 4 = 32 centímetros quadrados. Losango de diagonais 12 e 5: 12 × 5 : 2 = 30.",
+        "lembra": "Área mede-se em unidades quadradas; volume, em cúbicas.",
+        "audio": "b8068b607608.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Álgebra",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O que é uma equação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma equação é uma igualdade que tem:",
+         "options": [
+          "Pelo menos uma incógnita",
+          "Só números",
+          "Sempre duas soluções"
+         ],
+         "a": 0,
+         "audio": "2c9fc0d3d6cd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na equação 2x + 3 = 11, o x chama-se:",
+         "options": [
+          "Incógnita",
+          "Solução",
+          "Termo certo"
+         ],
+         "a": 0,
+         "audio": "a5cbe662883a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O valor x = 4 é solução de x + 5 = 9?",
+         "options": [
+          "Sim, porque 4 + 5 = 9",
+          "Não, porque 4 é menor que 9",
+          "Só se x for negativo"
+         ],
+         "a": 0,
+         "audio": "82baf1054c37.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Duas equações dizem-se equivalentes quando:",
+         "options": [
+          "Têm a mesma solução",
+          "Têm os mesmos números",
+          "São escritas da mesma maneira"
+         ],
+         "a": 0,
+         "audio": "62d5b2becdc8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma equação é uma igualdade com pelo menos uma letra desconhecida, a incógnita. Resolver é descobrir o valor que torna a igualdade verdadeira: a solução. Duas equações com a mesma solução dizem-se equivalentes.",
+        "exemplo": "Em x + 5 = 9, a incógnita é x e a solução é 4, porque 4 + 5 = 9. As equações x + 5 = 9 e x = 4 são equivalentes.",
+        "lembra": "Uma solução verifica-se substituindo e vendo se dá certo.",
+        "audio": "0b02b237495e.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Resolver equações",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Resolve: x + 7 = 12",
+         "a": "5",
+         "audio": "ccb21320f1ab.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Resolve: 3x = 21",
+         "a": "7",
+         "audio": "54fb9efd66f7.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Resolve: 2x − 6 = 10",
+         "a": "8",
+         "audio": "0087f8d731aa.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Resolve: x : 4 = 5",
+         "a": "20",
+         "audio": "aab745ea1642.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A Amina tem x meticais. Gastou 30 e ficou com 45. Quantos meticais tinha?",
+         "a": "75",
+         "audio": "264098a4729e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Para resolver, isola-se a incógnita fazendo a mesma coisa aos dois lados da igualdade. O que está a somar passa a subtrair; o que está a multiplicar passa a dividir.",
+        "exemplo": "x + 7 = 12. Tira-se 7 dos dois lados: x = 5. Em 3x = 21, divide-se tudo por 3: x = 7.",
+        "lembra": "O que se faz de um lado faz-se do outro, sempre.",
+        "audio": "2bd7a5b18f73.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Percentagens e dinheiro",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Percentagens",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é 25% de 80?",
+         "a": "20",
+         "audio": "b9ea395d8656.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é 10% de 350?",
+         "a": "35",
+         "audio": "332d6660aa95.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "50% é o mesmo que a fracção:",
+         "options": [
+          "1/2",
+          "1/5",
+          "5/10 de 10"
+         ],
+         "a": 0,
+         "audio": "ba6f3e7bddbb.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma camisola custa 400 meticais e tem 20% de desconto. Quantos meticais se poupam?",
+         "a": "80",
+         "audio": "d398fe23c68b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num gráfico circular, o círculo inteiro representa:",
+         "options": [
+          "100%",
+          "50%",
+          "10%"
+         ],
+         "a": 0,
+         "audio": "c719299a66dc.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma percentagem é uma fracção de denominador 100. Para calcular uma percentagem de uma quantidade, divide-se por 100 e multiplica-se pela percentagem.",
+        "exemplo": "25% de 80: 80 : 100 = 0,8, e 0,8 × 25 = 20. Num desconto de 20% sobre 400 meticais, poupam-se 80.",
+        "lembra": "50% é metade, 25% é um quarto, 10% é dividir por dez.",
+        "audio": "01c4a1d78ff4.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Relações proporcionais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Razões e proporções",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A razão entre 6 e 3 é:",
+         "options": [
+          "2",
+          "9",
+          "3"
+         ],
+         "a": 0,
+         "audio": "899bb4449ba4.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Na proporção 3/4 = x/8, quanto vale x?",
+         "a": "6",
+         "audio": "f1cf54675294.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Se 4 cadernos custam 100 meticais, quantos meticais custam 6 cadernos?",
+         "a": "150",
+         "audio": "bc3f6ec27a14.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa proporção, os extremos são:",
+         "options": [
+          "O primeiro e o último termo",
+          "Os dois do meio",
+          "Os dois de cima"
+         ],
+         "a": 0,
+         "audio": "c2dffc57f714.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma razão compara duas quantidades por divisão. Uma proporção é a igualdade entre duas razões. Numa proporção, o produto dos extremos é igual ao produto dos meios.",
+        "exemplo": "A razão entre 6 e 3 é 2. Em 3/4 = x/8, faz-se 3 × 8 = 4 × x, ou seja 24 = 4x, logo x = 6.",
+        "lembra": "Multiplica em cruz: extremos com extremos, meios com meios.",
+        "audio": "8800641f5154.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Escala, coordenadas e proporcionalidade",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Num mapa à escala 1:100, 1 cm no papel corresponde a:",
+         "options": [
+          "100 cm na realidade",
+          "1 cm na realidade",
+          "10 cm na realidade"
+         ],
+         "a": 0,
+         "audio": "ae3a4b5e07d6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No plano cartesiano, o ponto onde os dois eixos se cruzam chama-se:",
+         "options": [
+          "Origem",
+          "Vértice",
+          "Extremo"
+         ],
+         "a": 0,
+         "audio": "6eb6b60f89ee.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se ao dobrar uma grandeza a outra também dobra, elas são:",
+         "options": [
+          "Directamente proporcionais",
+          "Inversamente proporcionais",
+          "Independentes"
+         ],
+         "a": 0,
+         "audio": "505b2afa1cc9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto mais trabalhadores, menos tempo leva a obra. Estas grandezas são:",
+         "options": [
+          "Inversamente proporcionais",
+          "Directamente proporcionais",
+          "Iguais"
+         ],
+         "a": 0,
+         "audio": "4206334ee356.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A escala diz quantas vezes o desenho é menor do que a realidade. Duas grandezas são directamente proporcionais quando crescem juntas, e inversamente proporcionais quando uma cresce e a outra diminui.",
+        "exemplo": "Numa escala 1:100, 1 cm no papel são 100 cm na realidade. Mais trabalhadores, menos tempo de obra: são inversamente proporcionais.",
+        "lembra": "Directa: dobra uma, dobra a outra. Inversa: dobra uma, a outra fica a metade.",
+        "audio": "85ec6b80ca15.mp3"
        }
       }
      ]

@@ -1,5 +1,5 @@
 ﻿name: somara
-description: "Somara — app didáctica gamificada da Takova. Ensino primário completo, nível a nível."
+description: "Somara — app didáctica gamificada da Takova. Da 1ª à 7ª classe, nível a nível."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -22,7 +22,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # Editar este ficheiro com Get-Content/Set-Content do PowerShell estraga os
 # acentos (lê em ANSI e grava em UTF-8). Já aconteceu uma vez e ficou
 # commitado: alterar à mão, ou com uma ferramenta que respeite o UTF-8.
-version: 0.36.1+55
+version: 0.37.0+56
 
 environment:
   sdk: ^3.12.2

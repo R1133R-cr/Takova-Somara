@@ -295,7 +295,21 @@ class QGrelha extends Questao {
 }
 
 /// As formas que a app sabe desenhar.
-enum FormaGeo { quadrado, rectangulo, triangulo, circulo, cubo }
+/// As formas que a app sabe desenhar.
+///
+/// O trapézio e o losango entraram com a 7ª classe: as fórmulas da área de
+/// um e de outro são conteúdo do programa, e uma pergunta que dá as
+/// medidas de uma figura tem de a mostrar — é a regra que o
+/// `figura_test.dart` guarda.
+enum FormaGeo {
+  quadrado,
+  rectangulo,
+  triangulo,
+  circulo,
+  cubo,
+  trapezio,
+  losango,
+}
 
 /// A figura que acompanha uma pergunta de geometria.
 ///
@@ -330,14 +344,17 @@ class Figura {
     return '${inteiro ? valor.round() : valor} $unidade';
   }
 
-  static FormaGeo _formaDe(String nome) => switch (nome) {
-        'quadrado' => FormaGeo.quadrado,
-        'rectangulo' => FormaGeo.rectangulo,
-        'triangulo' => FormaGeo.triangulo,
-        'circulo' => FormaGeo.circulo,
-        'cubo' => FormaGeo.cubo,
-        _ => throw FormatException('Forma desconhecida: $nome'),
-      };
+  /// O nome no JSON é o nome no `enum`, e é por isso que esta função o
+  /// procura em vez de o traduzir numa lista à parte.
+  ///
+  /// A lista existia, escrita à mão, e custou o que costuma custar: no dia
+  /// em que o trapézio entrou no `enum`, ficou de fora daqui e o
+  /// content.json inteiro deixou de se ler. Uma forma nova passa a precisar
+  /// de uma alteração só.
+  static FormaGeo _formaDe(String nome) => FormaGeo.values.firstWhere(
+        (f) => f.name == nome,
+        orElse: () => throw FormatException('Forma desconhecida: $nome'),
+      );
 
   factory Figura.fromJson(Map<String, dynamic> j) => Figura(
         forma: _formaDe(j['forma'] as String),
@@ -521,18 +538,29 @@ class Curso {
   /// De onde saiu o conteúdo deste curso.
   ///
   /// Quase todos vêm de um manual escolar moçambicano, e nesses este campo
-  /// não existe — a fonte está escrita na ferramenta que os gerou.
+  /// não existe — a fonte está escrita na ferramenta que os gerou. Está
+  /// aqui para os que saem de outro sítio, e diz de onde.
   ///
-  /// Está aqui para o caso contrário: um curso montado SEM livro, a partir
-  /// do que o currículo descreve e do que se sabe das classes vizinhas.
-  /// Isso tem de ficar dito onde alguém tropece nele, e não só no commit.
-  ///
-  /// Hoje é um só: a Educação Visual da 4ª classe, que não tem manual
-  /// publicado. Se aparecer um, tira-se este campo.
+  /// A Matemática da 7ª classe é o primeiro assim: sai do programa de
+  /// ensino do INDE, e não de um livro do aluno, porque não há livro do
+  /// aluno da 7ª publicado. Um programa traz os conteúdos e não traz
+  /// exercícios — é uma fonte oficial, mas é outra coisa.
   final String? fonte;
 
-  /// Este curso foi montado sem manual?
-  bool get provisorio => fonte != null;
+  /// Este curso foi montado SEM fonte nenhuma?
+  ///
+  /// Não é a mesma pergunta que [fonte]. Ter fonte declarada é bom sinal;
+  /// isto marca o caso mau — um curso derivado do que o currículo descreve
+  /// e do que se sabe das classes vizinhas, porque não se encontrou
+  /// documento nenhum.
+  ///
+  /// Chegou a ser `fonte != null`, e isso baralhava as duas coisas: no dia
+  /// em que entrou um curso com fonte oficial declarada, ele passou a
+  /// contar como provisório sem nada de provisório ter.
+  ///
+  /// Hoje é um só: a Educação Visual da 4ª classe, que não tem manual
+  /// publicado nem programa que se tenha encontrado.
+  final bool provisorio;
 
   final List<Unidade> units;
 
@@ -544,6 +572,7 @@ class Curso {
     required this.units,
     this.abrev,
     this.fonte,
+    this.provisorio = false,
   });
 
   /// O que se mostra na aba.
@@ -556,6 +585,7 @@ class Curso {
         tag: (j['tag'] ?? '') as String,
         abrev: j['abrev'] as String?,
         fonte: j['fonte'] as String?,
+        provisorio: (j['provisorio'] ?? false) as bool,
         units: (j['units'] as List)
             .map((u) => Unidade.fromJson(u as Map<String, dynamic>))
             .toList(),

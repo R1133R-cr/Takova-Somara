@@ -206,7 +206,10 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
   static String _norm(String s) {
     const de = 'áàâãäéèêëíìîïóòôõöúùûüçÁÀÂÃÄÉÈÊËÍÌÎÏÓÒÔÕÖÚÙÛÜÇ';
     const para = 'aaaaaeeeeiiiiooooouuuucAAAAAEEEEIIIIOOOOOUUUUC';
-    var r = s.trim().toLowerCase();
+    // O sinal de menos tem três formas que se parecem todas: o hífen do
+    // teclado, o menos tipográfico (−) e o travessão. Quem escreve o
+    // currículo usa o do meio; quem responde carrega no do teclado.
+    var r = s.trim().toLowerCase().replaceAll('−', '-').replaceAll('–', '-');
     final b = StringBuffer();
     for (final ch in r.split('')) {
       final i = de.indexOf(ch);
@@ -647,7 +650,13 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
   /// escritas do curriculo sao numeros.
   bool get _respostaENumero {
     final cur = q;
-    return cur is QInput && RegExp(r'^\d+$').hasMatch(cur.a.trim());
+    return cur is QInput && RegExp(r'^-?\d+$').hasMatch(cur.a.trim());
+  }
+
+  /// A resposta certa é negativa. Só então aparece a tecla do sinal.
+  bool get _respostaPodeSerNegativa {
+    final cur = q;
+    return cur is QInput && cur.a.trim().startsWith('-');
   }
 
   /// A conta armada, com o teclado por baixo.
@@ -695,7 +704,10 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
           aoDigito: (d) {
             // Cinco algarismos chegam: a maior resposta do curriculo tem
             // quatro, e sem travao a crianca podia encher a caixa a brincar.
-            if (_input.text.length >= 5) return;
+            // O sinal nao conta para o travao — senao um numero negativo
+            // ficava com menos um algarismo do que um positivo.
+            final algarismos = _input.text.replaceAll('-', '').length;
+            if (algarismos >= 5) return;
             setState(() => _input.text = '${_input.text}$d');
           },
           aoApagar: () {
@@ -703,6 +715,13 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
             setState(() => _input.text =
                 _input.text.substring(0, _input.text.length - 1));
           },
+          aoSinal: _respostaPodeSerNegativa
+              ? () => setState(() {
+                    _input.text = _input.text.startsWith('-')
+                        ? _input.text.substring(1)
+                        : '-${_input.text}';
+                  })
+              : null,
         ),
       ],
     ),

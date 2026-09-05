@@ -94,6 +94,35 @@ SINAIS = {
     '>': ' é maior que ',
 }
 
+# Os simbolos da teoria de conjuntos, que entram na 7a classe.
+#
+# Nenhum destes se le sozinho. A Raquel diz "5 ∈ A" como "cinco a" -- come
+# o simbolo em silencio, e a frase que sobra ate parece uma frase, o que e
+# pior do que um erro audivel: quem depende do audio fica a ouvir uma coisa
+# que faz sentido e esta errada.
+#
+# Escrevem-se por extenso e com espacos dos dois lados, para a voz nao os
+# colar ao numero anterior.
+CONJUNTOS = {
+    '∈': ' pertence a ',
+    '∉': ' não pertence a ',
+    '⊂': ' está contido em ',
+    '⊄': ' não está contido em ',
+    '⊆': ' está contido ou é igual a ',
+    '⊃': ' contém ',
+    '∪': ' reunião ',
+    '∩': ' intersecção ',
+    '∅': ' conjunto vazio ',
+    '≠': ' é diferente de ',
+    '≤': ' é menor ou igual a ',
+    '≥': ' é maior ou igual a ',
+    # As letras dos conjuntos numericos. Le-se o NOME da letra: um aluno
+    # que ouca "zê" sabe do que se trata, e um que ouca "z" nao ouve nada.
+    'ℕ': ' ene ',
+    'ℤ': ' zê ',
+    'ℚ': ' quê ',
+}
+
 # A divisao neste curriculo escreve-se com dois pontos, como nas escolas
 # portuguesas: "48 : 6 = 8". Mas os dois pontos sao tambem pontuacao
 # vulgar -- 533 ocorrencias, quase todas a abrir uma frase.
@@ -103,7 +132,53 @@ SINAIS = {
 # convencao tipografica -- espaco dos dois lados na divisao, nenhum antes
 # na pontuacao -- verificou-se em todo o curriculo: 16 divisoes com
 # espacos, 9 pontuacoes sem, e nenhuma excepcao.
-_DIVISAO = re.compile(r'(?<=\d) : (?=\d)')
+#
+# ACRESCENTO: nao e so um numero que pode estar do lado esquerdo. No
+# curriculo ha "___ : 5 = 6", "x : 4 = 12" e "(base × altura) : 2" -- tres
+# divisoes que esta regra deixava passar por serem precedidas de um
+# underscore, de uma letra e de um parentesis. Eram lidas como pontuacao,
+# isto e, como uma pausa, e a conta desaparecia do audio.
+#
+# O que distingue continua a ser o espaco dos dois lados mais o algarismo a
+# seguir: a pontuacao vulgar nao leva espaco antes dos dois pontos.
+_DIVISAO = re.compile(r'(?<=\S) : (?=\d)')
+
+# Fraccoes: "3/4" le-se "tres quartos", e nao "tres, quatro".
+#
+# Sem isto a barra caia na regra do _BARRA e virava virgula, e a app lia
+# "Qual e maior: 1, 2 ou 1, 4?" -- duas listas de numeros onde estavam duas
+# fraccoes. Sao 53 textos do curriculo, quase todos da 2a e da 3a classe,
+# onde a crianca esta a aprender exactamente isto.
+#
+# Um a dois algarismos de cada lado, de proposito: assim um par de anos
+# como "2024/2025" nao vira fraccao.
+_FRACCAO = re.compile(r'\b(\d{1,2})/(\d{1,2})\b')
+
+# Os nomes das partes. Ate ao decimo tem nome proprio; daí para cima diz-se
+# "avos" -- 5/12 le-se "cinco doze avos".
+_PARTES = {
+    2: ('meio', 'meios'),
+    3: ('terço', 'terços'),
+    4: ('quarto', 'quartos'),
+    5: ('quinto', 'quintos'),
+    6: ('sexto', 'sextos'),
+    7: ('sétimo', 'sétimos'),
+    8: ('oitavo', 'oitavos'),
+    9: ('nono', 'nonos'),
+    10: ('décimo', 'décimos'),
+}
+
+
+def dizer_fraccoes(texto: str) -> str:
+    """"3/4" -> "3 quartos". O numero fica em algarismos porque a voz
+    ja o le bem; o que ela nao sabe e o nome da parte."""
+    def uma(m):
+        cima, baixo = int(m.group(1)), int(m.group(2))
+        if baixo < 2:
+            return m.group(0)
+        singular, plural = _PARTES.get(baixo, (f'{baixo} avos', f'{baixo} avos'))
+        return f'{cima} {singular if cima == 1 else plural}'
+    return _FRACCAO.sub(uma, texto)
 
 # A barra separa palavras numa lista para ordenar ("bola / a / é"). Nao e
 # divisao: le-se como uma pausa, para as palavras nao virem coladas.
@@ -239,10 +314,18 @@ def dizer_unidades(texto: str) -> str:
 def dizer_sinais(texto: str) -> str:
     """Troca os sinais de contas pelo que se diz."""
     fora = _DIVISAO.sub(' a dividir por ', texto)
+    # As fracções antes do _BARRA, que é quem transforma a barra em vírgula:
+    # depois dele já não há barra nenhuma para reconhecer.
+    fora = dizer_fraccoes(fora)
     fora = _BARRA.sub(', ', fora)
     # Antes de o `limpar` os apagar: e ele que varre os underscores, e sem
     # esta linha a pausa desaparecia com eles.
     fora = _BRANCO.sub('...', fora)
+    # Os de conjuntos e os de contas não se pisam: "≠", "≤" e "≥" são cada
+    # um o seu caracter, e não um "=" com um traço por cima. A ordem aqui é
+    # só para ser sempre a mesma.
+    for simbolo, palavra in CONJUNTOS.items():
+        fora = fora.replace(simbolo, palavra)
     for sinal, palavra in SINAIS.items():
         fora = fora.replace(sinal, palavra)
     # Sobrou espaco a dobrar de tantas trocas.

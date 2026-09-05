@@ -14,13 +14,18 @@ void main() {
     c = await Conteudo.carregar();
   });
 
-  test('cobre o ensino primário inteiro, da 1ª à 6ª classe', () {
-    expect(c.cursos.length, 21);
+  test('cobre o primário inteiro, e o primeiro degrau do secundário', () {
+    expect(c.cursos.length, 22);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
       '1ª classe', '2ª classe', '3ª classe',
       '4ª classe', '5ª classe', '6ª classe',
+      // A 7ª já não é primário: pela Lei nº 18/2018 o Ensino Primário são
+      // seis classes, e a 7ª abre o 1º ciclo do Ensino Secundário Geral.
+      // Continua dentro dos nove anos de escolaridade obrigatória, e é
+      // por isso que a app a cobre.
+      '7ª classe',
     });
   });
 
@@ -85,12 +90,13 @@ void main() {
     //  1027  com a Educação Visual da 5ª classe (35 perguntas)
     //  1060  com a Educação Visual da 4ª classe (33 perguntas)
     //  1076  com os exercícios interactivos de Ciências (16)
+    //  1150  com a Matemática da 7ª classe (74)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 1076);
+    expect(total, 1150);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {
@@ -130,22 +136,34 @@ void main() {
     expect(comCor, greaterThan(0), reason: 'nenhuma pergunta mostra cor');
   });
 
-  test('o conteúdo sem manual está marcado como tal', () {
-    // Dos cursos da app, um só foi montado sem livro: a Educação Visual da
-    // 4ª classe, porque não existe manual publicado. Isso não é um defeito
-    // — é uma decisão — mas tem de estar escrito onde alguém tropece nele,
-    // e não só na mensagem de um commit de há um ano.
-    //
-    // Se um dia o livro aparecer e o curso for refeito, tira-se o campo e
-    // este teste avisa que a lista mudou.
+  test('o conteúdo sem fonte nenhuma está marcado como tal', () {
+    // Dos cursos da app, um só foi montado sem documento nenhum: a
+    // Educação Visual da 4ª classe, porque não existe manual publicado nem
+    // programa que se tenha encontrado. Isso não é um defeito — é uma
+    // decisão — mas tem de estar escrito onde alguém tropece nele, e não
+    // só na mensagem de um commit de há um ano.
     final provisorios =
         c.cursos.where((x) => x.provisorio).map((x) => x.id).toList();
     expect(provisorios, ['ev-4c'],
-        reason: 'mudou a lista de cursos sem manual');
+        reason: 'mudou a lista de cursos sem fonte nenhuma');
 
     final ev4 = c.cursos.firstWhere((x) => x.id == 'ev-4c');
     expect(ev4.fonte, contains('provisória'));
     expect(ev4.fonte, contains('sem fonte confirmada'));
+  });
+
+  test('e o que sai de uma fonte que não é um livro diz qual é', () {
+    // Ter `fonte` não quer dizer «provisório» — quer dizer «não veio de um
+    // manual, e aqui fica de onde veio». O campo já significou as duas
+    // coisas ao mesmo tempo, e no dia em que entrou a Matemática da 7ª
+    // classe ela passou a contar como provisória sem nada de provisória
+    // ter. São perguntas diferentes e agora são campos diferentes.
+    final mat7 = c.cursos.firstWhere((x) => x.id == 'mat-7c');
+    expect(mat7.provisorio, isFalse,
+        reason: 'a 7ª tem fonte oficial: o programa do INDE');
+    expect(mat7.fonte, contains('INDE'));
+    expect(mat7.fonte, contains('programa'),
+        reason: 'tem de dizer que é um programa e não um livro do aluno');
   });
 
   test('dentro de uma classe, cada enunciado é único', () {

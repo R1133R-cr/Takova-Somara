@@ -14,6 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from pronuncia import (  # noqa: E402
+    CONJUNTOS,
     dizer_unidades,
     nome_da_unidade,
     para_dizer,
@@ -255,6 +256,87 @@ class OsEspacosParaPreencher(unittest.TestCase):
 
     def test_um_underscore_solto_nao_e_espaco(self):
         self.assertEqual(para_dizer('o ficheiro a_b'), 'o ficheiro a_b')
+
+
+class Conjuntos(unittest.TestCase):
+    """Os simbolos que entram na 7a classe.
+
+    A voz comia-os em silencio: "5 ∈ A" saia "cinco a". Um erro que nao se
+    ouve e pior do que um que se ouca -- a frase que sobra ate parece uma
+    frase, e quem depende do audio nao tem como desconfiar.
+    """
+
+    def test_pertence(self):
+        self.assertEqual(para_dizer('5 ∈ A'), '5 pertence a A')
+
+    def test_nao_pertence(self):
+        self.assertEqual(para_dizer('7 ∉ B'), '7 não pertence a B')
+
+    def test_contido(self):
+        self.assertEqual(para_dizer('A ⊂ B'), 'A está contido em B')
+
+    def test_reuniao_e_interseccao(self):
+        self.assertEqual(para_dizer('A ∪ B'), 'A reunião B')
+        self.assertEqual(para_dizer('A ∩ B'), 'A intersecção B')
+
+    def test_as_letras_dos_conjuntos_dizem_o_nome(self):
+        # "z" nao se ouve; "zê" ouve-se.
+        self.assertEqual(para_dizer('o conjunto ℤ'), 'o conjunto zê')
+
+    def test_nenhum_simbolo_fica_por_dizer(self):
+        for simbolo in CONJUNTOS:
+            self.assertNotIn(simbolo, para_dizer(f'x {simbolo} y'),
+                             f'o {simbolo} passou em silencio')
+
+
+class Fraccoes(unittest.TestCase):
+    """A barra da fraccao nao e uma virgula.
+
+    Eram 53 textos do curriculo, quase todos da 2a e da 3a classe -- onde a
+    crianca esta a aprender exactamente isto -- lidos como duas listas de
+    numeros: "Qual e maior: 1, 2 ou 1, 4?".
+    """
+
+    def test_as_partes_tem_nome(self):
+        self.assertEqual(para_dizer('3/4 do bolo'), '3 quartos do bolo')
+        self.assertEqual(para_dizer('2/3 das mangas'), '2 terços das mangas')
+
+    def test_o_singular_concorda(self):
+        self.assertEqual(para_dizer('1/2 do bolo'), '1 meio do bolo')
+        self.assertEqual(para_dizer('1/10 do total'), '1 décimo do total')
+
+    def test_acima_do_decimo_diz_avos(self):
+        self.assertEqual(para_dizer('5/12 do bolo'), '5 12 avos do bolo')
+
+    def test_um_par_de_anos_nao_e_fraccao(self):
+        # O travao dos dois algarismos existe para isto.
+        self.assertEqual(para_dizer('o ano 2024/2025'), 'o ano 2024, 2025')
+
+
+class DivisaoComDoisPontos(unittest.TestCase):
+    """A divisao nao e so entre dois algarismos.
+
+    O curriculo tinha tres contas escritas com um underscore, uma letra e um
+    parentesis do lado esquerdo. A regra antiga so olhava para algarismos, e
+    por isso liam-se como pontuacao -- ou seja, como uma pausa. A conta
+    desaparecia do audio sem deixar rasto.
+    """
+
+    def test_depois_de_um_algarismo(self):
+        self.assertIn('a dividir por', para_dizer('48 : 6 = 8'))
+
+    def test_depois_de_uma_letra(self):
+        self.assertIn('a dividir por', para_dizer('x : 4 = 12'))
+
+    def test_depois_de_um_espaco_por_preencher(self):
+        self.assertIn('a dividir por', para_dizer('___ : 5 = 6'))
+
+    def test_depois_de_um_parentesis(self):
+        self.assertIn('a dividir por', para_dizer('(base × altura) : 2'))
+
+    def test_a_pontuacao_normal_fica_quieta(self):
+        # Sem espaco antes dos dois pontos nao ha divisao nenhuma.
+        self.assertEqual(para_dizer('Nota: 5 pontos'), 'Nota: 5 pontos')
 
 
 if __name__ == '__main__':

@@ -68,6 +68,9 @@ CURSO = {
     "classe": "4ª classe",
     "tag": "EV",
     "fonte": FONTE,
+    # Sem fonte nenhuma, e nao so com outra fonte: e este campo que
+    # marca o caso mau. Ver Curso.provisorio no content.dart.
+    "provisorio": True,
     "units": [
         # ---------------------------------------------------------------
         # 1: Higiene e seguranca -- abre todas as unidades dos livros da

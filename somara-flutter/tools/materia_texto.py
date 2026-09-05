@@ -1657,4 +1657,156 @@ MATERIA = {
                    "cestos e esteiras.",
         "lembra": "Um saco velho reaproveitado tambem e material.",
     },
+
+    # ---------------------------------------------------------------
+    # Matematica -- 7a classe  (1o ciclo do Ensino Secundario)
+    #
+    # O tom sobe com a idade. Um aluno de doze anos nao precisa de frases
+    # de cinco palavras; precisa de uma definicao que aguente ser lida
+    # duas vezes, e de um exemplo que se possa copiar para o caderno.
+    # ---------------------------------------------------------------
+    "mat-7c:u1:n1": {
+        "explica": "Um conjunto é uma colecção de objectos bem definidos, a "
+                   "que chamamos elementos. Escreve-se entre chavetas. O "
+                   "número de elementos chama-se cardinal.",
+        "exemplo": "A = {2, 4, 6, 8, 10}. Os elementos são 2, 4, 6, 8 e 10. "
+                   "O cardinal de A é 5. Dizemos 4 ∈ A e 5 ∉ A.",
+        "lembra": "∈ liga um elemento a um conjunto: pertence ou não pertence.",
+    },
+    "mat-7c:u1:n2": {
+        "explica": "A reunião de dois conjuntos junta todos os elementos dos "
+                   "dois. A intersecção fica só com os que estão nos dois ao "
+                   "mesmo tempo. Um conjunto está contido noutro quando "
+                   "todos os seus elementos também são do outro.",
+        "exemplo": "A = {1, 2, 3} e B = {3, 4}. A ∪ B = {1, 2, 3, 4}, que "
+                   "tem 4 elementos. A ∩ B = {3}, que tem 1.",
+        "lembra": "Reunião junta tudo; intersecção guarda só o que se repete.",
+    },
+    "mat-7c:u1:n3": {
+        "explica": "Aos números naturais juntam-se agora os negativos. Na "
+                   "recta numérica, os negativos ficam à esquerda do zero. O "
+                   "simétrico de um número está do outro lado do zero, à "
+                   "mesma distância. O módulo é essa distância, e nunca é "
+                   "negativo.",
+        "exemplo": "O simétrico de 7 é −7. O módulo de −9 é 9. Entre −8 e "
+                   "−5, o menor é −8, porque está mais à esquerda.",
+        "lembra": "Quanto mais à esquerda na recta, menor é o número.",
+    },
+    "mat-7c:u1:n4": {
+        "explica": "Somar um número negativo é andar para a esquerda na "
+                   "recta. Na multiplicação e na divisão, sinais iguais dão "
+                   "positivo e sinais diferentes dão negativo.",
+        "exemplo": "−12 + 7 = −5. (−4) × 3 = −12, porque os sinais são "
+                   "diferentes. (−4) × (−3) = 12, porque são iguais.",
+        "lembra": "Sinais iguais, positivo. Sinais diferentes, negativo.",
+    },
+    "mat-7c:u2:n1": {
+        "explica": "Um polígono é uma figura fechada feita de segmentos de "
+                   "recta. Classifica-se pelo número de lados. Num triângulo, "
+                   "a soma dos ângulos internos é sempre 180 graus.",
+        "exemplo": "Um pentágono tem 5 lados, um hexágono 6. Num triângulo "
+                   "com ângulos de 90 e 60 graus, o terceiro é 30, porque "
+                   "90 + 60 + 30 = 180.",
+        "lembra": "Os ângulos de qualquer triângulo somam 180 graus.",
+    },
+    "mat-7c:u2:n2": {
+        "explica": "A circunferência é a linha; o círculo é a região que ela "
+                   "fecha. O raio vai do centro à linha; o diâmetro atravessa "
+                   "o círculo pelo centro e vale dois raios. A corda une dois "
+                   "pontos da circunferência.",
+        "exemplo": "Se o raio é 7 cm, o diâmetro é 14 cm. Um sólido como a "
+                   "esfera não tem nenhuma face plana; o cubo tem seis.",
+        "lembra": "Diâmetro é sempre o dobro do raio.",
+    },
+    "mat-7c:u3:n1": {
+        "explica": "Uma fracção representa partes de um todo. O denominador "
+                   "diz em quantas partes se dividiu; o numerador, quantas se "
+                   "tomaram. Fracções equivalentes representam a mesma "
+                   "quantidade escrita de outra maneira.",
+        "exemplo": "1/2 = 2/4 = 4/8, e todas valem metade. Para simplificar "
+                   "6/8, divide-se o de cima e o de baixo por 2: fica 3/4.",
+        "lembra": "Uma fracção é irredutível quando já não se pode simplificar.",
+    },
+    "mat-7c:u3:n2": {
+        "explica": "Com o mesmo denominador, somam-se ou subtraem-se os "
+                   "numeradores e o denominador fica na mesma. Com "
+                   "denominadores diferentes, reduzem-se primeiro ao mesmo.",
+        "exemplo": "1/4 + 2/4 = 3/4. Para 1/2 + 1/3, passa-se aos sextos: "
+                   "3/6 + 2/6 = 5/6.",
+        "lembra": "Só se somam fracções que estejam partidas do mesmo tamanho.",
+    },
+    "mat-7c:u3:n3": {
+        "explica": "Toda a fracção se pode escrever na forma decimal, "
+                   "dividindo o numerador pelo denominador. Às vezes a "
+                   "divisão não acaba e um grupo de algarismos repete-se sem "
+                   "fim: é uma dízima periódica.",
+        "exemplo": "1/4 = 0,25. E 1/3 = 0,333... , que é periódica. "
+                   "Arredondando 3,7 às unidades fica 4, porque 7 é maior "
+                   "que 5.",
+        "lembra": "Para arredondar, olha-se para o algarismo seguinte.",
+    },
+    "mat-7c:u4:n1": {
+        "explica": "O perímetro é a medida do contorno de uma figura: "
+                   "soma-se o comprimento de todos os lados.",
+        "exemplo": "Um rectângulo de 8 cm por 5 cm tem perímetro "
+                   "8 + 5 + 8 + 5 = 26 cm. Um quadrado de 9 cm de lado tem "
+                   "4 × 9 = 36 cm.",
+        "lembra": "Perímetro é o caminho à volta; área é o espaço lá dentro.",
+    },
+    "mat-7c:u4:n2": {
+        "explica": "A área do trapézio é a soma das bases a dividir por 2, "
+                   "vezes a altura. A do losango é o produto das diagonais a "
+                   "dividir por 2. O volume de um prisma é a área da base "
+                   "vezes a altura.",
+        "exemplo": "Trapézio de bases 10 e 6 e altura 4: (10 + 6) : 2 = 8, e "
+                   "8 × 4 = 32 centímetros quadrados. Losango de diagonais "
+                   "12 e 5: 12 × 5 : 2 = 30.",
+        "lembra": "Área mede-se em unidades quadradas; volume, em cúbicas.",
+    },
+    "mat-7c:u5:n1": {
+        "explica": "Uma equação é uma igualdade com pelo menos uma letra "
+                   "desconhecida, a incógnita. Resolver é descobrir o valor "
+                   "que torna a igualdade verdadeira: a solução. Duas "
+                   "equações com a mesma solução dizem-se equivalentes.",
+        "exemplo": "Em x + 5 = 9, a incógnita é x e a solução é 4, porque "
+                   "4 + 5 = 9. As equações x + 5 = 9 e x = 4 são "
+                   "equivalentes.",
+        "lembra": "Uma solução verifica-se substituindo e vendo se dá certo.",
+    },
+    "mat-7c:u5:n2": {
+        "explica": "Para resolver, isola-se a incógnita fazendo a mesma coisa "
+                   "aos dois lados da igualdade. O que está a somar passa a "
+                   "subtrair; o que está a multiplicar passa a dividir.",
+        "exemplo": "x + 7 = 12. Tira-se 7 dos dois lados: x = 5. "
+                   "Em 3x = 21, divide-se tudo por 3: x = 7.",
+        "lembra": "O que se faz de um lado faz-se do outro, sempre.",
+    },
+    "mat-7c:u6:n1": {
+        "explica": "Uma percentagem é uma fracção de denominador 100. Para "
+                   "calcular uma percentagem de uma quantidade, divide-se por "
+                   "100 e multiplica-se pela percentagem.",
+        "exemplo": "25% de 80: 80 : 100 = 0,8, e 0,8 × 25 = 20. "
+                   "Num desconto de 20% sobre 400 meticais, poupam-se 80.",
+        "lembra": "50% é metade, 25% é um quarto, 10% é dividir por dez.",
+    },
+    "mat-7c:u7:n1": {
+        "explica": "Uma razão compara duas quantidades por divisão. Uma "
+                   "proporção é a igualdade entre duas razões. Numa "
+                   "proporção, o produto dos extremos é igual ao produto dos "
+                   "meios.",
+        "exemplo": "A razão entre 6 e 3 é 2. Em 3/4 = x/8, faz-se "
+                   "3 × 8 = 4 × x, ou seja 24 = 4x, logo x = 6.",
+        "lembra": "Multiplica em cruz: extremos com extremos, meios com meios.",
+    },
+    "mat-7c:u7:n2": {
+        "explica": "A escala diz quantas vezes o desenho é menor do que a "
+                   "realidade. Duas grandezas são directamente proporcionais "
+                   "quando crescem juntas, e inversamente proporcionais "
+                   "quando uma cresce e a outra diminui.",
+        "exemplo": "Numa escala 1:100, 1 cm no papel são 100 cm na "
+                   "realidade. Mais trabalhadores, menos tempo de obra: são "
+                   "inversamente proporcionais.",
+        "lembra": "Directa: dobra uma, dobra a outra. Inversa: dobra uma, a "
+                  "outra fica a metade.",
+    },
 }

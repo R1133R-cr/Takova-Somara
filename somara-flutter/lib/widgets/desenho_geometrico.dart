@@ -73,6 +73,84 @@ class _Pintor extends CustomPainter {
         _circulo(canvas, campo, linha, dentro);
       case FormaGeo.cubo:
         _cubo(canvas, campo, linha, dentro);
+      case FormaGeo.trapezio:
+        _trapezio(canvas, campo, linha, dentro);
+      case FormaGeo.losango:
+        _losango(canvas, campo, linha, dentro);
+    }
+  }
+
+  /// Trapézio: base maior em [a], base menor em [b].
+  ///
+  /// A altura não cabe nos dois números que a figura guarda, e por isso é
+  /// dita no enunciado e não desenhada. O que a figura tem de mostrar é a
+  /// forma — duas bases paralelas de tamanhos diferentes —, porque é isso
+  /// que distingue um trapézio de um rectângulo aos olhos de quem ainda
+  /// não sabe qual é qual.
+  void _trapezio(Canvas canvas, Rect campo, Paint linha, Paint dentro) {
+    final maior = f.a;
+    final menor = f.b ?? f.a * 0.6;
+    final w = campo.width;
+    final h = w * 0.5 > campo.height ? campo.height : w * 0.5;
+    final c = campo.center;
+    final meiaMaior = w / 2;
+    // A base menor guarda a proporção da maior: se o enunciado diz 10 e 6,
+    // a de cima tem de SER mais curta, e nesta medida.
+    final meiaMenor = meiaMaior * (menor / maior);
+
+    final p = Path()
+      ..moveTo(c.dx - meiaMaior, c.dy + h / 2)
+      ..lineTo(c.dx + meiaMaior, c.dy + h / 2)
+      ..lineTo(c.dx + meiaMenor, c.dy - h / 2)
+      ..lineTo(c.dx - meiaMenor, c.dy - h / 2)
+      ..close();
+    canvas.drawPath(p, dentro);
+    canvas.drawPath(p, linha);
+
+    _medida(canvas, f.medidaDe(f.a), Offset(c.dx, c.dy + h / 2 + 16));
+    if (f.b != null) {
+      _medida(canvas, f.medidaDe(f.b!), Offset(c.dx, c.dy - h / 2 - 14));
+    }
+  }
+
+  /// Losango: diagonal maior em [a], diagonal menor em [b].
+  ///
+  /// Aqui as duas medidas são mesmo as duas diagonais, e desenham-se as
+  /// duas — é delas que sai a área, e ver as linhas cruzadas ajuda mais do
+  /// que a fórmula escrita.
+  void _losango(Canvas canvas, Rect campo, Paint linha, Paint dentro) {
+    final maior = f.a;
+    final menor = f.b ?? f.a;
+    var w = campo.width;
+    var h = w * (menor / maior);
+    if (h > campo.height) {
+      h = campo.height;
+      w = h * (maior / menor);
+    }
+    final c = campo.center;
+
+    final p = Path()
+      ..moveTo(c.dx - w / 2, c.dy)
+      ..lineTo(c.dx, c.dy - h / 2)
+      ..lineTo(c.dx + w / 2, c.dy)
+      ..lineTo(c.dx, c.dy + h / 2)
+      ..close();
+    canvas.drawPath(p, dentro);
+    canvas.drawPath(p, linha);
+
+    // As diagonais a tracejado leve, para se ver o que as medidas medem.
+    final fina = Paint()
+      ..color = linha.color.withValues(alpha: 0.45)
+      ..strokeWidth = 1.5;
+    canvas.drawLine(
+        Offset(c.dx - w / 2, c.dy), Offset(c.dx + w / 2, c.dy), fina);
+    canvas.drawLine(
+        Offset(c.dx, c.dy - h / 2), Offset(c.dx, c.dy + h / 2), fina);
+
+    _medida(canvas, f.medidaDe(f.a), Offset(c.dx, c.dy + h / 2 + 16));
+    if (f.b != null) {
+      _medida(canvas, f.medidaDe(f.b!), Offset(c.dx - w / 2 - 20, c.dy),
+          rodado: true);
     }
   }
 

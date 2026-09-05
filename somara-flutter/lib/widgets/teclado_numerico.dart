@@ -16,6 +16,16 @@ class TecladoNumerico extends StatelessWidget {
   final ValueChanged<int> aoDigito;
   final VoidCallback aoApagar;
 
+  /// Troca o sinal da resposta. Nulo esconde a tecla — e é assim na
+  /// esmagadora maioria das perguntas.
+  ///
+  /// A tecla só aparece onde a resposta certa é negativa, e por isso só a
+  /// partir da 7ª classe, onde entram os números inteiros relativos. Dá-la
+  /// a uma criança da 1ª classe seria oferecer-lhe uma tecla que nunca
+  /// serve e que só a pode fazer errar. Na conta armada da grelha também
+  /// não entra: lá cada casa leva um algarismo.
+  final VoidCallback? aoSinal;
+
   /// Fora deste estado o teclado fica visível mas inerte — desaparecer
   /// depois de responder faria o ecrã saltar por baixo do dedo.
   final bool activo;
@@ -24,6 +34,7 @@ class TecladoNumerico extends StatelessWidget {
     super.key,
     required this.aoDigito,
     required this.aoApagar,
+    this.aoSinal,
     this.activo = true,
   });
 
@@ -49,14 +60,32 @@ class TecladoNumerico extends StatelessWidget {
                 ],
               ),
             ),
-          SizedBox(
-            width: double.infinity,
-            child: _tecla(
-              '⌫  Apagar',
-              aoApagar,
-              cor: S.surface,
-              corTexto: S.txSoft,
-            ),
+          Row(
+            children: [
+              if (aoSinal != null) ...[
+                // O sinal fica do lado esquerdo, longe do Apagar: são as
+                // duas teclas que não são algarismos, e trocá-las por
+                // engano estraga a resposta de maneiras diferentes.
+                Expanded(
+                  child: _tecla(
+                    '+/−',
+                    aoSinal!,
+                    cor: S.gm800,
+                    corTexto: S.chart,
+                  ),
+                ),
+                const SizedBox(width: 8),
+              ],
+              Expanded(
+                flex: 2,
+                child: _tecla(
+                  '⌫  Apagar',
+                  aoApagar,
+                  cor: S.surface,
+                  corTexto: S.txSoft,
+                ),
+              ),
+            ],
           ),
         ],
       ),
