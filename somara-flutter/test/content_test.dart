@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o primário inteiro, e o primeiro degrau do secundário', () {
-    expect(c.cursos.length, 25);
+    expect(c.cursos.length, 31);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -94,12 +94,15 @@ void main() {
     //  1219  com o Português da 7ª classe (69)
     //  1274  com a História da 7ª classe (55)
     //  1349  com a Geografia da 7ª classe (75)
+    //  1636  com as seis que fecham a 7ª classe: Biologia (62),
+    //        Inglês (64), Educação Visual (42), Educação Física (40),
+    //        Agropecuária (42) e TIC (37)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 1349);
+    expect(total, 1636);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {

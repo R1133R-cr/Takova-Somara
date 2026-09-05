@@ -1,10 +1,13 @@
 # Somara
 
 App didáctica da Takova para a escolaridade obrigatória moçambicana — as
-seis classes do ensino primário e, desde a 0.37.0, a 7ª, que já é o 1º ciclo
-do secundário. Matemática, Português, Ciências Naturais, Ciências Sociais e
-Educação Visual, tiradas dos manuais oficiais; a 7ª, do programa de ensino
-do INDE, porque não há manual do aluno publicado.
+seis classes do ensino primário e a 7ª, que já é o 1º ciclo do secundário.
+
+No primário: Matemática, Português, Ciências Naturais, Ciências Sociais e
+Educação Visual, tiradas dos manuais escolares oficiais. Na 7ª classe, o
+plano de estudos completo — dez disciplinas —, tirado dos programas de
+ensino do INDE, porque não há manuais do aluno da 7ª publicados. A Física,
+a Química e o Francês não estão porque começam na 8ª.
 
 A app funciona **inteira sem internet**. Isso não é um modo de emergência:
 é o modo normal de quem a usa em Lichinga. Tudo o que precisa de rede —

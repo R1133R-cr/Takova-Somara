@@ -47,7 +47,10 @@ LETRAS = {
 }
 
 # Siglas que em portugues se dizem letra a letra.
-SOLETRAR = ['SADC', 'CPLP', 'HIV', 'UA']
+# TIC entrou com a disciplina de Tecnologias de Informacao e
+# Comunicacao da 7a classe. Lida como palavra sairia "tique"; em
+# Mocambique diz-se "te-i-ce", e e o proprio nome da disciplina.
+SOLETRAR = ['SADC', 'CPLP', 'HIV', 'UA', 'TIC']
 
 # Abreviaturas e numeros que valem uma palavra.
 #

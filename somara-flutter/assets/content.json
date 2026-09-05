@@ -19376,6 +19376,4208 @@
      ]
     }
    ]
+  },
+  {
+   "id": "bio-7c",
+   "disciplina": "Biologia",
+   "classe": "7ª classe",
+   "tag": "BIO",
+   "fonte": "Programa de Ensino da Disciplina de Biologia — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024. As cinco unidades temáticas e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 7ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Introdução à Biologia",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A Biologia e os seus ramos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Biologia é a ciência que estuda:",
+         "options": [
+          "Os seres vivos e a vida",
+          "As rochas e os minerais",
+          "Os astros e os planetas"
+         ],
+         "a": 0,
+         "audio": "de40cc752eb3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A palavra «Biologia» vem do grego e quer dizer:",
+         "options": [
+          "Ciência da vida",
+          "Ciência da terra",
+          "Ciência do corpo"
+         ],
+         "a": 0,
+         "audio": "d5a345fca6a9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O ramo da Biologia que estuda os animais chama-se:",
+         "options": [
+          "Zoologia",
+          "Botânica",
+          "Citologia"
+         ],
+         "a": 0,
+         "audio": "fff1bcc2d25f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O ramo que estuda as plantas chama-se:",
+         "options": [
+          "Botânica",
+          "Zoologia",
+          "Anatomia"
+         ],
+         "a": 0,
+         "audio": "5c233bd9372e.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada ramo da Biologia ao que ele estuda.",
+         "pairs": [
+          [
+           "Citologia",
+           "A célula"
+          ],
+          [
+           "Anatomia",
+           "A forma do corpo"
+          ]
+         ],
+         "audio": "c4ea2f8db65f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Biologia é a ciência da vida: estuda os seres vivos, como funcionam e como se relacionam. Divide-se em ramos — a Zoologia trata dos animais, a Botânica das plantas, a Citologia da célula e a Anatomia da forma do corpo.",
+        "exemplo": "A palavra vem do grego: «bios» é vida e «logos» é ciência. Ciência da vida.",
+        "lembra": "Cada ramo da Biologia olha para uma parte da mesma coisa: a vida.",
+        "audio": "1af69814fb2d.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O método científico",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O método científico começa por:",
+         "options": [
+          "Observar com atenção",
+          "Tirar conclusões",
+          "Escrever o relatório"
+         ],
+         "a": 0,
+         "audio": "256927fdc704.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A experimentação serve para:",
+         "options": [
+          "Pôr à prova o que se pensa que acontece",
+          "Confirmar sempre a opinião do cientista",
+          "Evitar ter de observar"
+         ],
+         "a": 0,
+         "audio": "e5ebad60898e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de mexer numa substância numa experiência, deve-se:",
+         "options": [
+          "Ler o rótulo e conhecer os riscos",
+          "Provar um pouco para ver o sabor",
+          "Cheirar de perto"
+         ],
+         "a": 0,
+         "audio": "ac363859be4c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa aula prática, o que NUNCA se deve fazer?",
+         "options": [
+          "Realizar actividades não autorizadas",
+          "Lavar as mãos no fim",
+          "Registar o que se observou"
+         ],
+         "a": 0,
+         "audio": "d14a27da15c9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O método científico é a maneira de procurar respostas sem se enganar a si próprio: observa-se, levanta-se uma explicação possível, põe-se à prova com uma experiência e regista-se o que aconteceu — mesmo quando contraria o esperado.",
+        "exemplo": "Numa experiência, lê-se sempre o rótulo antes de mexer numa substância, e nunca se faz nada que não tenha sido autorizado.",
+        "lembra": "Observar, experimentar, registar. E aceitar o resultado.",
+        "audio": "3d2a2ac34302.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Primeiros socorros",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Perante um ferimento com corte, a primeira coisa a fazer é:",
+         "options": [
+          "Lavar a ferida com água e sabão",
+          "Deitar areia por cima",
+          "Esperar que pare sozinho"
+         ],
+         "a": 0,
+         "audio": "498fae4cd0b2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa queimadura ligeira, deve-se:",
+         "options": [
+          "Arrefecer com água corrente e não rebentar as bolhas",
+          "Pôr óleo ou pasta de dentes",
+          "Rebentar as bolhas com uma agulha"
+         ],
+         "a": 0,
+         "audio": "c5fbbfc191f5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se alguém engolir um produto tóxico, deve-se:",
+         "options": [
+          "Levar ao hospital com a embalagem do produto",
+          "Dar de beber muito leite e esperar",
+          "Fazer vomitar sempre"
+         ],
+         "a": 0,
+         "audio": "13f1182e59ad.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os primeiros socorros são:",
+         "options": [
+          "Os cuidados imediatos até chegar ajuda médica",
+          "O tratamento completo da doença",
+          "Um exame feito no hospital"
+         ],
+         "a": 0,
+         "audio": "e485c9ebc4fd.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Primeiros socorros são os cuidados imediatos até chegar ajuda médica. Não substituem o hospital: ganham tempo. Num corte, lava-se com água e sabão; numa queimadura, arrefece-se com água corrente e não se rebentam as bolhas.",
+        "exemplo": "Se alguém engolir um produto tóxico, leva-se ao hospital com a embalagem: saber o que foi engolido é metade do tratamento.",
+        "lembra": "Socorrer é ganhar tempo até chegar quem sabe mais.",
+        "audio": "69efceed442f.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Seres vivos e ambiente",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A célula e o microscópio",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A célula é:",
+         "options": [
+          "A unidade básica dos seres vivos",
+          "Um órgão do corpo humano",
+          "Um tipo de microscópio"
+         ],
+         "a": 0,
+         "audio": "11397393a772.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para ver uma célula é preciso:",
+         "options": [
+          "Um microscópio",
+          "Uma lupa de bolso",
+          "Um telescópio"
+         ],
+         "a": 0,
+         "audio": "fa5e7ce13622.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas partes existe na célula vegetal e não na animal?",
+         "options": [
+          "A parede celular",
+          "O núcleo",
+          "O citoplasma"
+         ],
+         "a": 0,
+         "audio": "b220b373657b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O microscópio electrónico distingue-se do óptico porque:",
+         "options": [
+          "Amplia muito mais",
+          "É mais pequeno",
+          "Usa luz do sol"
+         ],
+         "a": 0,
+         "audio": "0535fba18ba4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A parte da célula que comanda o seu funcionamento é:",
+         "options": [
+          "O núcleo",
+          "A membrana",
+          "A parede"
+         ],
+         "a": 0,
+         "audio": "c3e732f8ab7e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A célula é a unidade básica de todos os seres vivos, e é pequena de mais para se ver a olho nu — daí o microscópio. A célula vegetal tem parede celular, que a animal não tem. O núcleo comanda o funcionamento.",
+        "exemplo": "O microscópio óptico usa luz e amplia centenas de vezes; o electrónico usa electrões e amplia muito mais.",
+        "lembra": "Parede celular: sinal de que a célula é vegetal.",
+        "audio": "c6c4d06dfee2.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Classificar os seres vivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Classificar os seres vivos serve para:",
+         "options": [
+          "Os organizar em grupos com características comuns",
+          "Decidir quais são mais úteis",
+          "Contar quantos existem"
+         ],
+         "a": 0,
+         "audio": "44246f4d6ac8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um ser vivo formado por uma só célula diz-se:",
+         "options": [
+          "Unicelular",
+          "Pluricelular",
+          "Vertebrado"
+         ],
+         "a": 0,
+         "audio": "7a0f86d7553f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As bactérias são seres:",
+         "options": [
+          "Unicelulares",
+          "Pluricelulares",
+          "Vertebrados"
+         ],
+         "a": 0,
+         "audio": "d35ad25b838c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os fungos, como os cogumelos, alimentam-se:",
+         "options": [
+          "De matéria orgânica já formada",
+          "Fazendo fotossíntese",
+          "Só de água"
+         ],
+         "a": 0,
+         "audio": "5931c7a25b1b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Classificar é arrumar os seres vivos em grupos que partilham características. Uns são unicelulares, feitos de uma só célula, como as bactérias; outros são pluricelulares. Os fungos não fazem fotossíntese: alimentam-se de matéria já formada.",
+        "exemplo": "Um cogumelo não é planta nem animal — é fungo, e por isso tem grupo próprio.",
+        "lembra": "Classificar não é ordenar por importância: é agrupar por parecença.",
+        "audio": "3942f02f9fb0.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Plantas e animais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As plantas produzem o seu alimento por:",
+         "options": [
+          "Fotossíntese",
+          "Respiração",
+          "Digestão"
+         ],
+         "a": 0,
+         "audio": "8d6efb5de9c5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na fotossíntese, a planta liberta:",
+         "options": [
+          "Oxigénio",
+          "Dióxido de carbono",
+          "Azoto"
+         ],
+         "a": 0,
+         "audio": "c8d6b9b781a2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os animais com coluna vertebral chamam-se:",
+         "options": [
+          "Vertebrados",
+          "Invertebrados",
+          "Mamíferos"
+         ],
+         "a": 0,
+         "audio": "0030fb6eb40a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um invertebrado?",
+         "options": [
+          "A minhoca",
+          "O peixe",
+          "A cobra"
+         ],
+         "a": 0,
+         "audio": "62d787827e01.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As plantas são importantes para o ambiente porque:",
+         "options": [
+          "Produzem oxigénio e seguram o solo",
+          "Só servem de alimento",
+          "Não têm importância nenhuma"
+         ],
+         "a": 0,
+         "audio": "58793bda9b1b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As plantas fabricam o seu alimento por fotossíntese, usando luz, água e dióxido de carbono, e libertam oxigénio. Os animais dividem-se em vertebrados, que têm coluna, e invertebrados, que não têm.",
+        "exemplo": "A minhoca e a formiga são invertebrados; o peixe, a cobra e o cabrito são vertebrados.",
+        "lembra": "As plantas dão-nos o oxigénio que respiramos.",
+        "audio": "7844616e747a.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Alimentação, nutrição e saúde",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Alimentos e nutrientes",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um nutriente é:",
+         "options": [
+          "A substância do alimento que o corpo aproveita",
+          "Qualquer coisa que se come",
+          "Uma refeição completa"
+         ],
+         "a": 0,
+         "audio": "1e9787dbb1a2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os alimentos que dão sobretudo energia são ricos em:",
+         "options": [
+          "Hidratos de carbono",
+          "Vitaminas",
+          "Água"
+         ],
+         "a": 0,
+         "audio": "e3e24dc173c4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As proteínas servem sobretudo para:",
+         "options": [
+          "Construir e reparar o corpo",
+          "Dar energia imediata",
+          "Arrefecer o corpo"
+         ],
+         "a": 0,
+         "audio": "492045a1e4cf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma alimentação equilibrada é aquela que:",
+         "options": [
+          "Tem alimentos variados e nas quantidades certas",
+          "Tem sempre carne",
+          "É a mais barata"
+         ],
+         "a": 0,
+         "audio": "da25855e4f7a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A laranja e o limão são ricos sobretudo em:",
+         "options": [
+          "Vitamina C",
+          "Gorduras",
+          "Proteínas"
+         ],
+         "a": 0,
+         "audio": "7cbe3e3dbf4c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Alimento é o que se come; nutriente é a substância que o corpo aproveita. Os hidratos de carbono dão energia, as proteínas constroem e reparam o corpo, e as vitaminas e os sais minerais fazem tudo funcionar.",
+        "exemplo": "A laranja e o limão são ricos em vitamina C. O feijão e o peixe dão proteínas. A mandioca e o milho dão energia.",
+        "lembra": "Comer variado é mais importante do que comer muito.",
+        "audio": "ab606a727b67.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Conservar os alimentos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Conservar os alimentos serve para:",
+         "options": [
+          "Travar os micróbios que os estragam",
+          "Os tornar mais saborosos",
+          "Aumentar a sua quantidade"
+         ],
+         "a": 0,
+         "audio": "e52b54c76a28.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um método tradicional de conservação?",
+         "options": [
+          "Secar ao sol",
+          "Guardar num saco fechado ao calor",
+          "Deixar ao ar livre molhado"
+         ],
+         "a": 0,
+         "audio": "344aa884c86e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de preparar comida, deve-se sempre:",
+         "options": [
+          "Lavar bem as mãos",
+          "Provar os alimentos crus",
+          "Deixar a comida destapada"
+         ],
+         "a": 0,
+         "audio": "a23f732f3b2e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A salga conserva o peixe porque:",
+         "options": [
+          "Tira a água de que os micróbios precisam",
+          "Aquece o peixe",
+          "Adiciona vitaminas"
+         ],
+         "a": 0,
+         "audio": "1abfeaf83b7c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os alimentos estragam-se porque os micróbios crescem neles. Conservar é travar esse crescimento — secando, salgando, fumando ou arrefecendo. Todos estes métodos fazem o mesmo: tiram aos micróbios a água ou o calor de que precisam.",
+        "exemplo": "O peixe salgado dura semanas porque o sal lhe retira a água. Lavar as mãos antes de cozinhar evita levar micróbios à comida.",
+        "lembra": "Sem água e sem calor, o micróbio não se multiplica.",
+        "audio": "df08147754fd.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Intoxicação alimentar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A intoxicação alimentar acontece quando se come:",
+         "options": [
+          "Alimento estragado ou contaminado",
+          "Alimento demasiado quente",
+          "Alimento sem sal"
+         ],
+         "a": 0,
+         "audio": "7a51bab2c057.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um sinal comum de intoxicação alimentar?",
+         "options": [
+          "Vómitos e diarreia",
+          "Dor de dentes",
+          "Visão turva apenas"
+         ],
+         "a": 0,
+         "audio": "daea03aecafe.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quem tem diarreia deve sobretudo:",
+         "options": [
+          "Beber muitos líquidos para não desidratar",
+          "Deixar de beber água",
+          "Comer mais gordura"
+         ],
+         "a": 0,
+         "audio": "ce80e52e4e91.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para evitar a cólera é essencial:",
+         "options": [
+          "Beber água tratada ou fervida",
+          "Comer só à noite",
+          "Beber água do rio"
+         ],
+         "a": 0,
+         "audio": "998c65d86aa8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A intoxicação alimentar acontece ao comer alimento estragado ou contaminado. Dá vómitos e diarreia, e o maior perigo não é a doença em si: é a desidratação que vem com ela, sobretudo nas crianças.",
+        "exemplo": "Quem tem diarreia deve beber muitos líquidos. Para evitar a cólera, bebe-se água fervida ou tratada.",
+        "lembra": "Com diarreia, o que salva é beber, não deixar de beber.",
+        "audio": "2abcdc76c3d6.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Sistemas do corpo humano",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O sistema digestivo e os dentes",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A digestão começa:",
+         "options": [
+          "Na boca",
+          "No estômago",
+          "No intestino"
+         ],
+         "a": 0,
+         "audio": "53ccdbaf7d44.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A absorção dos nutrientes faz-se sobretudo:",
+         "options": [
+          "No intestino delgado",
+          "No esófago",
+          "Na boca"
+         ],
+         "a": 0,
+         "audio": "f9b3aa6869de.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos dentes tem, normalmente, um adulto?",
+         "a": "32",
+         "audio": "19f3e0191e46.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os dentes que servem para cortar os alimentos são:",
+         "options": [
+          "Os incisivos",
+          "Os molares",
+          "Os caninos"
+         ],
+         "a": 0,
+         "audio": "b5b567a6185e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A cárie dentária resulta sobretudo de:",
+         "options": [
+          "Restos de açúcar e falta de higiene",
+          "Beber água",
+          "Escovar os dentes"
+         ],
+         "a": 0,
+         "audio": "263ea47e9b7b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A digestão começa na boca, onde os dentes cortam e trituram e a saliva começa a desfazer o alimento. A absorção dos nutrientes faz-se sobretudo no intestino delgado. Um adulto tem 32 dentes.",
+        "exemplo": "Os incisivos cortam, os caninos rasgam e os molares trituram. A cárie nasce dos restos de açúcar deixados entre os dentes.",
+        "lembra": "Mastigar bem é começar bem a digestão.",
+        "audio": "177ba5e32349.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O sistema circulatório",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O órgão que bombeia o sangue é:",
+         "options": [
+          "O coração",
+          "O pulmão",
+          "O fígado"
+         ],
+         "a": 0,
+         "audio": "f4f161b06788.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os vasos que levam o sangue do coração para o corpo chamam-se:",
+         "options": [
+          "Artérias",
+          "Veias",
+          "Nervos"
+         ],
+         "a": 0,
+         "audio": "21ac7a733d27.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os glóbulos vermelhos servem para:",
+         "options": [
+          "Transportar o oxigénio",
+          "Defender o corpo dos micróbios",
+          "Coagular o sangue"
+         ],
+         "a": 0,
+         "audio": "c9466254de5a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os glóbulos brancos servem para:",
+         "options": [
+          "Defender o corpo dos micróbios",
+          "Transportar oxigénio",
+          "Dar cor ao sangue"
+         ],
+         "a": 0,
+         "audio": "7b359edd2ee2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O coração bombeia o sangue para todo o corpo. As artérias levam o sangue do coração para fora; as veias trazem-no de volta. Os glóbulos vermelhos transportam oxigénio e os brancos defendem o corpo.",
+        "exemplo": "Uma ferida infectada incha porque os glóbulos brancos acorreram ao local a combater os micróbios.",
+        "lembra": "Artérias saem, veias voltam.",
+        "audio": "db1577e9b58e.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "O sistema respiratório",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As trocas gasosas fazem-se:",
+         "options": [
+          "Nos alvéolos pulmonares",
+          "No estômago",
+          "No coração"
+         ],
+         "a": 0,
+         "audio": "13733fb92232.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao inspirar, entra no corpo sobretudo:",
+         "options": [
+          "Oxigénio",
+          "Dióxido de carbono",
+          "Azoto puro"
+         ],
+         "a": 0,
+         "audio": "26016f87283d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os dois movimentos respiratórios chamam-se:",
+         "options": [
+          "Inspiração e expiração",
+          "Sístole e diástole",
+          "Digestão e absorção"
+         ],
+         "a": 0,
+         "audio": "6643ac36a13a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O tabaco prejudica sobretudo:",
+         "options": [
+          "Os pulmões",
+          "Os ossos",
+          "Os dentes de leite"
+         ],
+         "a": 0,
+         "audio": "8462dd0f942e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A imunidade é a capacidade do corpo de:",
+         "options": [
+          "Se defender das doenças",
+          "Digerir os alimentos",
+          "Crescer depressa"
+         ],
+         "a": 0,
+         "audio": "b74feb3d62e4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Ao inspirar entra ar rico em oxigénio; ao expirar sai ar com dióxido de carbono. As trocas fazem-se nos alvéolos pulmonares, sacos minúsculos onde o ar e o sangue quase se tocam. A imunidade é a defesa do corpo contra as doenças.",
+        "exemplo": "O fumo do tabaco destrói os alvéolos, e por isso quem fuma cansa-se mais depressa a subir escadas.",
+        "lembra": "Inspirar e expirar são os dois movimentos, e não um só.",
+        "audio": "acc2690d109d.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Auto-descobrimento",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A adolescência",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A adolescência é:",
+         "options": [
+          "A fase de passagem da infância para a idade adulta",
+          "Uma doença passageira",
+          "O fim do crescimento"
+         ],
+         "a": 0,
+         "audio": "db3d86140ef8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As mudanças do corpo na adolescência são:",
+         "options": [
+          "Normais e acontecem a toda a gente",
+          "Um sinal de doença",
+          "Iguais em todos ao mesmo tempo"
+         ],
+         "a": 0,
+         "audio": "522f2b1f588e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se tiveres dúvidas sobre o teu corpo, o melhor é:",
+         "options": [
+          "Falar com um adulto de confiança ou um profissional de saúde",
+          "Guardar para ti",
+          "Perguntar só a quem tem a tua idade"
+         ],
+         "a": 0,
+         "audio": "1d624b355c5d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A higiene pessoal na adolescência é:",
+         "options": [
+          "Mais importante, porque o corpo transpira mais",
+          "Menos importante do que na infância",
+          "Indiferente"
+         ],
+         "a": 0,
+         "audio": "e6e353e74bd3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A adolescência é a passagem da infância para a idade adulta. O corpo muda, e muda em ritmos diferentes de pessoa para pessoa — isso é normal e não é doença. A higiene passa a ser mais importante, porque o corpo transpira mais.",
+        "exemplo": "Quem tem dúvidas sobre o próprio corpo deve falar com um adulto de confiança ou com um profissional de saúde.",
+        "lembra": "Cada corpo tem o seu ritmo. Não há atraso nem pressa.",
+        "audio": "3df5264e9377.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Relacionamentos e respeito",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Num relacionamento saudável há sempre:",
+         "options": [
+          "Respeito mútuo",
+          "Uma pessoa a mandar",
+          "Ciúmes constantes"
+         ],
+         "a": 0,
+         "audio": "2c9dafdd0545.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se alguém te pressionar a fazer algo que não queres, deves:",
+         "options": [
+          "Dizer que não e procurar ajuda de um adulto",
+          "Ceder para não perder a amizade",
+          "Ficar calado"
+         ],
+         "a": 0,
+         "audio": "c092c8ceb984.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A gravidez precoce prejudica sobretudo:",
+         "options": [
+          "A saúde e os estudos da rapariga",
+          "Apenas a família",
+          "Ninguém"
+         ],
+         "a": 0,
+         "audio": "9c23da7a3867.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Continuar a estudar durante a adolescência é importante porque:",
+         "options": [
+          "Abre mais escolhas para o futuro",
+          "É obrigatório e mais nada",
+          "Evita o crescimento"
+         ],
+         "a": 0,
+         "audio": "74e7c6c2528c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um relacionamento saudável assenta em respeito mútuo: ninguém manda no outro e ninguém é pressionado. Dizer não é sempre uma resposta legítima, e procurar ajuda de um adulto não é fraqueza.",
+        "exemplo": "A gravidez precoce afecta a saúde e interrompe os estudos da rapariga, e é por isso que continuar a estudar abre mais escolhas.",
+        "lembra": "Quem gosta de ti respeita o teu não.",
+        "audio": "5fe9e537e9ee.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ev-7c",
+   "disciplina": "Educação Visual",
+   "classe": "7ª classe",
+   "tag": "EV",
+   "abrev": "Ed. Visual",
+   "fonte": "Programa de Ensino da Disciplina de Educação Visual — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024. As cinco unidades temáticas e os conteúdos são do programa. Metade deste programa é produzir trabalhos com as mãos, e isso avalia-se com o trabalho à frente; aqui avalia-se o saber que o sustenta. Os exercícios foram escritos a partir dos conteúdos, porque um programa de ensino não traz exercícios e não há livro do aluno da 7ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Introdução ao estudo da Arte",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O que é a Arte",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Arte é sobretudo:",
+         "options": [
+          "Uma forma de o ser humano se exprimir e comunicar",
+          "Um passatempo sem utilidade",
+          "Uma cópia exacta da realidade"
+         ],
+         "a": 0,
+         "audio": "e2ffabb94f0d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas NÃO é uma forma de expressão artística?",
+         "options": [
+          "A contabilidade",
+          "A escultura",
+          "A pintura"
+         ],
+         "a": 0,
+         "audio": "1087900ff754.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A cerâmica é a arte de trabalhar:",
+         "options": [
+          "A argila",
+          "A madeira",
+          "O metal"
+         ],
+         "a": 0,
+         "audio": "2f54b2d1fa59.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A arquitectura é a arte de:",
+         "options": [
+          "Conceber edifícios e espaços",
+          "Pintar quadros",
+          "Fazer música"
+         ],
+         "a": 0,
+         "audio": "1f368da32083.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Arte é uma forma de o ser humano se exprimir e comunicar. Toma muitas formas: arquitectura, escultura, pintura, cerâmica, música, dança. Em Moçambique, muita arte vive dentro do quotidiano — nas cerimónias, nos objectos, nas casas.",
+        "exemplo": "A cerâmica trabalha a argila; a escultura, a madeira ou a pedra; a arquitectura concebe os espaços onde se vive.",
+        "lembra": "A Arte não copia o mundo: diz alguma coisa sobre ele.",
+        "audio": "7bdd2fb6e3c4.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Artistas moçambicanos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Malangatana Valente Ngwenya ficou conhecido sobretudo como:",
+         "options": [
+          "Pintor",
+          "Músico",
+          "Escritor"
+         ],
+         "a": 0,
+         "audio": "ab1eecc1edac.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Alberto Chissano destacou-se na:",
+         "options": [
+          "Escultura",
+          "Pintura",
+          "Fotografia"
+         ],
+         "a": 0,
+         "audio": "d001c87eeee5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Reinata Sadimba é conhecida pelo seu trabalho em:",
+         "options": [
+          "Cerâmica",
+          "Arquitectura",
+          "Música"
+         ],
+         "a": 0,
+         "audio": "7d4ccbc4a471.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "José Forjaz é um nome ligado à:",
+         "options": [
+          "Arquitectura",
+          "Escultura",
+          "Pintura"
+         ],
+         "a": 0,
+         "audio": "85e2384771c9.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada artista à sua forma de expressão.",
+         "pairs": [
+          [
+           "Malangatana",
+           "Pintura"
+          ],
+          [
+           "Chissano",
+           "Escultura"
+          ]
+         ],
+         "audio": "603ad9818645.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Moçambique tem artistas conhecidos dentro e fora do país. Malangatana Valente Ngwenya na pintura, Alberto Chissano na escultura, Reinata Sadimba na cerâmica e José Forjaz na arquitectura.",
+        "exemplo": "As telas de Malangatana são reconhecíveis pelas figuras densas e pelas cores fortes.",
+        "lembra": "Cada artista trabalha um material — e o material molda a obra.",
+        "audio": "dad821ab5641.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Suportes e materiais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O caderno de esboços e o godê",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um caderno de esboços serve para:",
+         "options": [
+          "Registar ideias e experiências gráficas",
+          "Passar os trabalhos a limpo",
+          "Guardar as notas dos testes"
+         ],
+         "a": 0,
+         "audio": "6ef8553646d9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um godê é um recipiente que serve para:",
+         "options": [
+          "Preparar e misturar tintas",
+          "Guardar lápis",
+          "Medir ângulos"
+         ],
+         "a": 0,
+         "audio": "c7bba8a5397f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Fazer um godê com tampas de plástico usadas é um exemplo de:",
+         "options": [
+          "Reaproveitamento de material",
+          "Desperdício",
+          "Desenho geométrico"
+         ],
+         "a": 0,
+         "audio": "fa91f0b1d351.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O cartão é muito usado como suporte porque:",
+         "options": [
+          "É resistente, barato e fácil de encontrar",
+          "É o único material que existe",
+          "Não se pode pintar"
+         ],
+         "a": 0,
+         "audio": "355b5da8511e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O suporte é aquilo sobre que se trabalha; o material é aquilo com que se trabalha. Um caderno de esboços serve para registar ideias, e um godê para preparar tintas. Muito material bom vem do que se ia deitar fora.",
+        "exemplo": "Tampas de plástico iguais coladas num cartão fazem um godê. Um cartão resistente faz capa de caderno.",
+        "lembra": "Antes de comprar material, olha para o que já existe.",
+        "audio": "a19e226f8d98.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O relevo e a segurança no trabalho",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um quadro em relevo distingue-se de um quadro pintado porque:",
+         "options": [
+          "Tem partes salientes que se sentem ao toque",
+          "É sempre maior",
+          "Não tem cor"
+         ],
+         "a": 0,
+         "audio": "e04c15de4b2c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma composição abstracta é aquela que:",
+         "options": [
+          "Não representa objectos reconhecíveis",
+          "Copia a realidade tal como é",
+          "Só usa uma cor"
+         ],
+         "a": 0,
+         "audio": "7f9ba3a89cbd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao usar cola de secagem rápida, deve-se:",
+         "options": [
+          "Trabalhar em local arejado e não tocar nos olhos",
+          "Cheirar de perto para testar",
+          "Aquecer a embalagem"
+         ],
+         "a": 0,
+         "audio": "2f062b9897fb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Depois de um trabalho de recorte e colagem, deve-se:",
+         "options": [
+          "Arrumar as ferramentas e limpar o espaço",
+          "Deixar tudo como está",
+          "Guardar a tesoura aberta"
+         ],
+         "a": 0,
+         "audio": "8d211f421d9e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um quadro em relevo tem partes salientes que se sentem ao toque. Uma composição é realística se representa objectos reconhecíveis, e abstracta se não representa. A segurança vale sempre: local arejado e ferramentas arrumadas.",
+        "exemplo": "Recortam-se formas em cartão, colam-se sobre o suporte e obtém-se relevo sem precisar de esculpir nada.",
+        "lembra": "Abstracto não é mal feito: é outra intenção.",
+        "audio": "763169bb2a1f.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Materiais e técnicas de expressão gráfica",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Suportes e riscadores",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes é um suporte, e não um riscador?",
+         "options": [
+          "A cartolina",
+          "O lápis",
+          "O carvão"
+         ],
+         "a": 0,
+         "audio": "a74fe7a0522b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um riscador?",
+         "options": [
+          "O giz",
+          "O papel",
+          "A parede"
+         ],
+         "a": 0,
+         "audio": "e1cd4773abf3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O carvão é apreciado no desenho porque:",
+         "options": [
+          "Dá traços intensos e esbate-se com facilidade",
+          "Nunca suja as mãos",
+          "É o mais fino de todos"
+         ],
+         "a": 0,
+         "audio": "fbede01303af.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Escolher o material certo para um trabalho depende:",
+         "options": [
+          "Do resultado que se quer obter",
+          "Só do preço",
+          "Só do tamanho do papel"
+         ],
+         "a": 0,
+         "audio": "9033a5c1624f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Nos materiais de expressão gráfica distinguem-se os suportes — papel, cartolina, parede, quadro — dos riscadores — lápis, esferográfica, carvão, giz, marcador. Escolher bem depende do resultado que se quer.",
+        "exemplo": "O carvão dá traço intenso e esbate-se com o dedo; a esferográfica dá traço fino e não se apaga.",
+        "lembra": "Suporte é onde se desenha; riscador é com que se desenha.",
+        "audio": "935ae70a8a2d.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "As técnicas de expressão gráfica",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O desenho de observação é aquele que se faz:",
+         "options": [
+          "Olhando para o objecto real",
+          "De memória",
+          "Copiando de um livro"
+         ],
+         "a": 0,
+         "audio": "2b8f76e7395f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O pontilhismo é uma técnica em que a imagem se forma com:",
+         "options": [
+          "Pequenos pontos de cor",
+          "Linhas contínuas",
+          "Manchas sopradas"
+         ],
+         "a": 0,
+         "audio": "2838877e4fdf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na pintura soprada, a tinta espalha-se:",
+         "options": [
+          "Com o sopro, muitas vezes através de uma palhinha",
+          "Com o pincel apenas",
+          "Com os dedos"
+         ],
+         "a": 0,
+         "audio": "06e177b5ac97.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A técnica mista consiste em:",
+         "options": [
+          "Combinar vários materiais e técnicas no mesmo trabalho",
+          "Usar só lápis de cor",
+          "Misturar duas cores"
+         ],
+         "a": 0,
+         "audio": "f45ec62d1702.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um painel colectivo é um trabalho:",
+         "options": [
+          "Feito por várias pessoas em conjunto",
+          "Feito por uma pessoa só",
+          "Feito apenas com fotografias"
+         ],
+         "a": 0,
+         "audio": "b398bba7401c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As técnicas gráficas mudam o resultado com o mesmo material. O desenho de observação faz-se com o objecto à frente; o pontilhismo constrói a imagem com pontos; a pintura soprada espalha a tinta com o sopro. A técnica mista combina várias.",
+        "exemplo": "Num painel colectivo, cada aluno trabalha uma parte e o conjunto forma uma obra só.",
+        "lembra": "Experimenta antes de escolher: é assim que se descobre a técnica certa.",
+        "audio": "a6a235c602d3.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Comunicação visual",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Códigos visuais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A comunicação visual transmite mensagens através:",
+         "options": [
+          "De imagens, sinais e símbolos",
+          "Apenas da palavra escrita",
+          "Apenas do som"
+         ],
+         "a": 0,
+         "audio": "ab01781fda4c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um sinal de trânsito é um exemplo de:",
+         "options": [
+          "Código visual",
+          "Banda desenhada",
+          "Técnica mista"
+         ],
+         "a": 0,
+         "audio": "7ec558b3de8e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um ícone é um sinal que:",
+         "options": [
+          "Se parece com aquilo que representa",
+          "Não tem relação com o que representa",
+          "Só se usa em texto"
+         ],
+         "a": 0,
+         "audio": "59c729155935.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um bom código visual deve ser:",
+         "options": [
+          "Simples e compreendido à primeira",
+          "Complicado, para chamar a atenção",
+          "Sempre a preto e branco"
+         ],
+         "a": 0,
+         "audio": "cf8768a1067b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A comunicação visual transmite mensagens por imagens, sinais e símbolos, sem precisar de palavras. Um ícone parece-se com o que representa; um símbolo representa por convenção. Um bom código visual entende-se à primeira.",
+        "exemplo": "Um sinal de trânsito diz o que fazer em silêncio e a quem passa depressa. É comunicação visual a funcionar.",
+        "lembra": "Se é preciso explicar o símbolo, o símbolo falhou.",
+        "audio": "430a2480d8d4.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Cartazes e banda desenhada",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um cartaz eficaz tem:",
+         "options": [
+          "Pouco texto, imagem forte e letra legível ao longe",
+          "Muito texto pequeno",
+          "Imagens sem relação com a mensagem"
+         ],
+         "a": 0,
+         "audio": "4ce3af7eaebd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na banda desenhada, o texto do que uma personagem diz aparece:",
+         "options": [
+          "Num balão",
+          "No título",
+          "Na legenda do autor"
+         ],
+         "a": 0,
+         "audio": "923fec82aae4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cada quadrado de uma banda desenhada chama-se:",
+         "options": [
+          "Vinheta",
+          "Balão",
+          "Painel colectivo"
+         ],
+         "a": 0,
+         "audio": "4cd37c1b305d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um cartaz sobre igualdade de género serve para:",
+         "options": [
+          "Fazer pensar e mudar comportamentos",
+          "Decorar a parede apenas",
+          "Vender um produto"
+         ],
+         "a": 0,
+         "audio": "3078212b9bd6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um cartaz tem pouco texto, imagem forte e letra legível ao longe. A banda desenhada conta uma história por vinhetas — os quadrados — e põe a fala das personagens dentro de balões.",
+        "exemplo": "Um cartaz sobre igualdade de género serve para fazer pensar e mudar comportamentos, e não só para decorar a parede.",
+        "lembra": "Cartaz lê-se de longe e em poucos segundos.",
+        "audio": "1cac86b54c67.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Desenho geométrico",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A normalização",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O desenho geométrico serve sobretudo para:",
+         "options": [
+          "Representar objectos com rigor e medidas",
+          "Exprimir emoções",
+          "Pintar paisagens"
+         ],
+         "a": 0,
+         "audio": "465f3871dad6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A normalização no desenho técnico serve para:",
+         "options": [
+          "Que todos entendam o desenho da mesma maneira",
+          "Tornar o desenho mais bonito",
+          "Poupar papel"
+         ],
+         "a": 0,
+         "audio": "e101e6bcc3bb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A esquadria de uma folha de desenho é:",
+         "options": [
+          "A moldura traçada junto às margens",
+          "Um instrumento de medida",
+          "O título do trabalho"
+         ],
+         "a": 0,
+         "audio": "178f54a56021.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A legenda de uma folha de desenho técnico contém:",
+         "options": [
+          "A identificação do trabalho e de quem o fez",
+          "Um desenho decorativo",
+          "As cores usadas"
+         ],
+         "a": 0,
+         "audio": "5e79e193c606.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O desenho geométrico representa objectos com rigor e medidas. A normalização é o conjunto de regras que faz com que toda a gente leia o desenho da mesma maneira: esquadria a delimitar a folha e legenda a identificar o trabalho.",
+        "exemplo": "A esquadria é a moldura traçada junto às margens; a legenda vai no canto inferior direito.",
+        "lembra": "Normalizar é combinar regras para todos se entenderem.",
+        "audio": "2d06a83306e7.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Letras e algarismos normalizados",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As letras do desenho técnico devem ser:",
+         "options": [
+          "Simples, iguais e fáceis de ler",
+          "Decoradas e diferentes umas das outras",
+          "Escritas à pressa"
+         ],
+         "a": 0,
+         "audio": "9debcd313bfb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa folha de desenho técnico, a legenda coloca-se normalmente:",
+         "options": [
+          "No canto inferior direito",
+          "No meio da folha",
+          "Fora da esquadria"
+         ],
+         "a": 0,
+         "audio": "f6122185712d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Escrever à mão livre num desenho técnico, sem respeitar a normalização:",
+         "options": [
+          "Torna o desenho difícil de interpretar",
+          "Não tem importância",
+          "Melhora a leitura"
+         ],
+         "a": 0,
+         "audio": "4cbb922224ae.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de começar um desenho técnico, a primeira coisa a traçar é:",
+         "options": [
+          "A esquadria",
+          "A legenda",
+          "O desenho em si"
+         ],
+         "a": 0,
+         "audio": "1905bfe81ff1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As letras e os algarismos do desenho técnico são simples, iguais entre si e fáceis de ler. Não são decoração: são informação, e um desenho mal escrito deixa de se poder executar.",
+        "exemplo": "Traça-se primeiro a esquadria, depois a legenda, e só então o desenho. A ordem evita ter de refazer.",
+        "lembra": "Num desenho técnico, a letra bonita é a letra clara.",
+        "audio": "fbf33dc6b28d.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "edf-7c",
+   "disciplina": "Educação Física",
+   "classe": "7ª classe",
+   "tag": "EDF",
+   "abrev": "Ed. Física",
+   "fonte": "Programa de Ensino da Disciplina de Educação Física — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024. As unidades são as do programa da 7ª classe, reunidas sem repetir as que voltam em mais de um trimestre. Educação Física faz-se com o corpo e nenhuma pergunta substitui isso; aqui avalia-se o que se aprende na sala e vale no campo — regras, gestos técnicos, aquecimento, socorro e hidratação. Os exercícios foram escritos a partir dos conteúdos, porque um programa de ensino não traz exercícios e não há livro do aluno da 7ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Ginástica",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Aquecer antes de trabalhar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O aquecimento antes do exercício serve sobretudo para:",
+         "options": [
+          "Preparar os músculos e evitar lesões",
+          "Cansar antes de começar",
+          "Ganhar pontos"
+         ],
+         "a": 0,
+         "audio": "16977ec8bd9d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O retorno à calma, no fim da aula, serve para:",
+         "options": [
+          "Baixar aos poucos o ritmo do corpo",
+          "Aumentar o esforço no fim",
+          "Poupar tempo"
+         ],
+         "a": 0,
+         "audio": "c60b8ae4a8c7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Durante o exercício, deve-se beber água:",
+         "options": [
+          "Em pequenas quantidades e com regularidade",
+          "Só no fim, de uma vez",
+          "Nunca, para não ter cãibras"
+         ],
+         "a": 0,
+         "audio": "ae8ae06880e9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de fazer ginástica num colchão, deve-se:",
+         "options": [
+          "Verificar se o espaço está livre e seguro",
+          "Começar logo, para não perder tempo",
+          "Fazer o exercício mais difícil primeiro"
+         ],
+         "a": 0,
+         "audio": "bf3dbca71bb3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O aquecimento prepara músculos e articulações e reduz o risco de lesão; o retorno à calma baixa o ritmo aos poucos no fim. A água bebe-se em pequenas quantidades ao longo do esforço, e não toda de uma vez no fim.",
+        "exemplo": "Cinco minutos de corrida leve mais alguns alongamentos chegam para aquecer antes de uma aula.",
+        "lembra": "Nunca comeces a esforçar-te com o corpo frio.",
+        "audio": "1cf00a138afd.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Elementos da ginástica de solo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O rolamento à frente executa-se apoiando primeiro:",
+         "options": [
+          "As mãos no solo e enrolando a cabeça para dentro",
+          "A cabeça directamente no solo",
+          "As costas de uma vez"
+         ],
+         "a": 0,
+         "audio": "1244ac922686.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na ginástica, o equilíbrio melhora quando:",
+         "options": [
+          "A base de apoio é mais larga e o centro de gravidade mais baixo",
+          "Se fecham os olhos",
+          "Se levantam os braços ao máximo"
+         ],
+         "a": 0,
+         "audio": "2fee138be0a8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A ajuda de um colega durante um exercício de ginástica serve para:",
+         "options": [
+          "Dar segurança e corrigir o movimento",
+          "Fazer o exercício por ele",
+          "Ganhar mais pontos"
+         ],
+         "a": 0,
+         "audio": "e15db9605acd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A flexibilidade trabalha-se sobretudo com:",
+         "options": [
+          "Alongamentos regulares",
+          "Corridas de velocidade",
+          "Levantamento de pesos"
+         ],
+         "a": 0,
+         "audio": "7220f300849b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na ginástica de solo trabalham-se rolamentos, equilíbrios e flexibilidade. O equilíbrio melhora com base de apoio mais larga e centro de gravidade mais baixo. A ajuda de um colega dá segurança e corrige o movimento.",
+        "exemplo": "No rolamento à frente apoiam-se as mãos e enrola-se a cabeça para dentro — nunca se apoia a cabeça no solo.",
+        "lembra": "Mais baixo e mais largo: é assim que não se cai.",
+        "audio": "486592ed263b.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Atletismo",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Corridas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Nas corridas de velocidade, a partida faz-se normalmente:",
+         "options": [
+          "De blocos, em posição baixa",
+          "De pé, parado",
+          "A andar"
+         ],
+         "a": 0,
+         "audio": "a7f7416d830a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa corrida de estafetas, o que passa de atleta para atleta é:",
+         "options": [
+          "O testemunho",
+          "A bola",
+          "O dorsal"
+         ],
+         "a": 0,
+         "audio": "defdb1e979a5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa corrida de fundo, o atleta deve:",
+         "options": [
+          "Gerir o esforço ao longo de toda a prova",
+          "Correr ao máximo desde o início",
+          "Parar de vez em quando"
+         ],
+         "a": 0,
+         "audio": "e7b7ff7689a2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A corrida de barreiras exige sobretudo:",
+         "options": [
+          "Ritmo e coordenação entre passadas e salto",
+          "Apenas força nos braços",
+          "Apenas resistência"
+         ],
+         "a": 0,
+         "audio": "ca72e643c354.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No atletismo há corridas de velocidade, de fundo, de barreiras e de estafetas. Na velocidade parte-se de blocos; no fundo gere-se o esforço; nas estafetas passa-se o testemunho dentro da zona marcada.",
+        "exemplo": "Quem corre uma prova longa ao máximo desde o início chega ao fim sem nada — gerir é parte da prova.",
+        "lembra": "Velocidade é explosão; fundo é gestão.",
+        "audio": "ecfef1e77f5e.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Saltos e lançamentos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "No salto em comprimento, a marca que conta é:",
+         "options": [
+          "A mais próxima da tábua deixada na queda",
+          "O ponto de chamada",
+          "O ponto mais distante da caixa"
+         ],
+         "a": 0,
+         "audio": "34bf81c16a77.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As quatro fases do salto em comprimento são:",
+         "options": [
+          "Corrida, chamada, voo e queda",
+          "Partida, corrida, salto e paragem",
+          "Aquecimento, corrida, salto e descanso"
+         ],
+         "a": 0,
+         "audio": "772b44c930f6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No lançamento do peso, o peso é:",
+         "options": [
+          "Empurrado a partir do ombro",
+          "Atirado por cima da cabeça",
+          "Lançado com as duas mãos de baixo"
+         ],
+         "a": 0,
+         "audio": "e094d4fe94ac.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de um lançamento, é obrigatório:",
+         "options": [
+          "Confirmar que a zona de queda está livre",
+          "Correr o mais depressa possível",
+          "Fechar os olhos"
+         ],
+         "a": 0,
+         "audio": "3fe2e47a8ab9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O salto em comprimento tem quatro fases: corrida, chamada, voo e queda, e mede-se pela marca mais próxima da tábua. No lançamento do peso, o peso é empurrado a partir do ombro e nunca atirado.",
+        "exemplo": "Antes de qualquer lançamento, confirma-se que a zona de queda está livre. É a regra que evita o acidente.",
+        "lembra": "O peso empurra-se; não se atira.",
+        "audio": "ae76677d3220.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Andebol",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As regras do andebol",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quantos jogadores de campo tem uma equipa de andebol, sem contar o guarda-redes?",
+         "a": "6",
+         "audio": "e4fe65ac41ca.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Com a bola na mão, um jogador de andebol pode dar no máximo:",
+         "options": [
+          "Três passos",
+          "Cinco passos",
+          "Um passo"
+         ],
+         "a": 0,
+         "audio": "6118cbe571e0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A área de baliza do andebol só pode ser ocupada:",
+         "options": [
+          "Pelo guarda-redes",
+          "Por dois defesas",
+          "Por qualquer jogador"
+         ],
+         "a": 0,
+         "audio": "da3d4f6c939d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Jogar a bola com o pé, no andebol, é:",
+         "options": [
+          "Falta",
+          "Permitido",
+          "Permitido só ao guarda-redes na sua área"
+         ],
+         "a": 0,
+         "audio": "f3b3612a9df7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No andebol jogam sete por equipa: seis de campo e um guarda-redes. Com a bola na mão dão-se no máximo três passos, a área de baliza é só do guarda-redes, e jogar com o pé é falta.",
+        "exemplo": "Três passos, drible, mais três passos — é assim que se avança legalmente com a bola.",
+        "lembra": "Três passos com bola. Ao quarto, é falta.",
+        "audio": "6b0b48326b6f.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Gestos técnicos do andebol",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O drible, no andebol, é:",
+         "options": [
+          "Bater a bola no chão com uma mão",
+          "Correr com a bola presa",
+          "Passar a bola com o pé"
+         ],
+         "a": 0,
+         "audio": "11150fecacad.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O passe de ombro serve sobretudo para:",
+         "options": [
+          "Enviar a bola ao longe com precisão",
+          "Passar a um colega ao lado",
+          "Marcar golo"
+         ],
+         "a": 0,
+         "audio": "34b8ceef8db1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O remate em suspensão faz-se:",
+         "options": [
+          "Com o corpo no ar, antes de tocar o solo",
+          "Sentado",
+          "Com os dois pés no chão"
+         ],
+         "a": 0,
+         "audio": "8ac41d12ae00.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na defesa, o objectivo principal é:",
+         "options": [
+          "Impedir o remate e recuperar a bola",
+          "Empurrar o adversário",
+          "Sair da área"
+         ],
+         "a": 0,
+         "audio": "dbcf35f10ec4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os gestos base do andebol são o passe, a recepção, o drible e o remate. O passe de ombro leva a bola ao longe com precisão; o remate em suspensão faz-se com o corpo no ar, antes de tocar o solo.",
+        "exemplo": "Na defesa, o objectivo é impedir o remate e recuperar a bola — sem empurrar nem agarrar.",
+        "lembra": "Remate em suspensão: sai do chão antes de atirar.",
+        "audio": "7908db268f87.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Futebol",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As regras do futebol",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quantos jogadores tem em campo, ao mesmo tempo, uma equipa de futebol de onze?",
+         "a": "11",
+         "audio": "3e9d3bdbdba8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Só um jogador pode tocar a bola com as mãos dentro da sua área:",
+         "options": [
+          "O guarda-redes",
+          "O capitão",
+          "O defesa central"
+         ],
+         "a": 0,
+         "audio": "041bc90b4ed9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando a bola sai pela linha lateral, o jogo recomeça com:",
+         "options": [
+          "Um lançamento de linha lateral",
+          "Um pontapé de canto",
+          "Um pontapé de baliza"
+         ],
+         "a": 0,
+         "audio": "6cde4c4fdeba.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O cartão vermelho significa que o jogador:",
+         "options": [
+          "Está expulso e sai do jogo",
+          "Está advertido",
+          "Vai bater um penálti"
+         ],
+         "a": 0,
+         "audio": "fbd4c6bceeb9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No futebol de onze cada equipa tem onze jogadores em campo, e só o guarda-redes toca a bola com as mãos dentro da sua área. Bola fora pela lateral recomeça com lançamento; o cartão vermelho expulsa.",
+        "exemplo": "Um jogador expulso não é substituído: a equipa fica a jogar com menos um.",
+        "lembra": "Amarelo avisa; vermelho manda sair.",
+        "audio": "c00a7f1178e6.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Gestos técnicos do futebol",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para um passe curto e rasteiro, usa-se sobretudo:",
+         "options": [
+          "A parte interna do pé",
+          "A ponta do pé",
+          "O calcanhar"
+         ],
+         "a": 0,
+         "audio": "6eed0668d2b8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A recepção da bola faz-se melhor:",
+         "options": [
+          "Amortecendo com o pé ou o peito",
+          "Parando a bola com a mão",
+          "Deixando a bola bater e seguir"
+         ],
+         "a": 0,
+         "audio": "0f01de9abc05.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A condução de bola consiste em:",
+         "options": [
+          "Levar a bola em corrida, com toques curtos",
+          "Chutar a bola para a frente e correr atrás",
+          "Segurar a bola nas mãos"
+         ],
+         "a": 0,
+         "audio": "426bb35fa080.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma entrada com os pitons em cima do adversário é:",
+         "options": [
+          "Falta grave, que pode dar cartão",
+          "Jogada normal",
+          "Permitida se for na área"
+         ],
+         "a": 0,
+         "audio": "66e714641842.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os gestos base do futebol são o passe, a recepção, a condução e o remate. O passe curto e rasteiro faz-se com a parte interna do pé, que é a zona mais larga e mais precisa. A recepção amortece a bola em vez de a repelir.",
+        "exemplo": "Conduzir é levar a bola em corrida com toques curtos, e não chutá-la para a frente e correr atrás.",
+        "lembra": "Parte interna do pé: mais superfície, mais pontaria.",
+        "audio": "d3b2a9934b79.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Danças e jogos educativos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As danças tradicionais moçambicanas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As danças tradicionais moçambicanas são importantes porque:",
+         "options": [
+          "Preservam a cultura e juntam a comunidade",
+          "Substituem o desporto",
+          "Só servem para as festas"
+         ],
+         "a": 0,
+         "audio": "b1b6cd9dd21c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Mapiko é uma dança tradicional associada sobretudo:",
+         "options": [
+          "Ao povo Maconde, no norte de Moçambique",
+          "Ao sul do país",
+          "À cidade de Maputo"
+         ],
+         "a": 0,
+         "audio": "a86ee180e27e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa dança de grupo, o mais importante é:",
+         "options": [
+          "Acompanhar o ritmo em conjunto",
+          "Dançar mais depressa do que os outros",
+          "Ficar à frente"
+         ],
+         "a": 0,
+         "audio": "dfb646b669ee.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A dança desenvolve sobretudo:",
+         "options": [
+          "A coordenação, o ritmo e a expressão",
+          "Apenas a força",
+          "Apenas a velocidade"
+         ],
+         "a": 0,
+         "audio": "2464c9c2879a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As danças tradicionais moçambicanas preservam a cultura e juntam a comunidade. O Mapiko, dos Macondes, é uma das mais conhecidas. Dançar em grupo exige acompanhar o ritmo em conjunto, e não ser o mais rápido.",
+        "exemplo": "A dança desenvolve coordenação, ritmo e expressão — capacidades que servem em qualquer desporto.",
+        "lembra": "Numa dança de grupo, o ritmo é de todos.",
+        "audio": "6801c9827189.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Jogos educativos e desportivismo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um jogo educativo serve para:",
+         "options": [
+          "Aprender e cooperar enquanto se joga",
+          "Escolher os melhores alunos",
+          "Passar o tempo sem objectivo"
+         ],
+         "a": 0,
+         "audio": "04b9ddde6fde.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O «ntxuva» é:",
+         "options": [
+          "Um jogo tradicional moçambicano de tabuleiro",
+          "Uma dança do norte",
+          "Um desporto olímpico"
+         ],
+         "a": 0,
+         "audio": "400a55a034ec.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Perder um jogo com desportivismo quer dizer:",
+         "options": [
+          "Aceitar o resultado e cumprimentar o adversário",
+          "Culpar o árbitro",
+          "Não voltar a jogar"
+         ],
+         "a": 0,
+         "audio": "fb123686ad06.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se um colega se magoar durante o jogo, deve-se:",
+         "options": [
+          "Parar o jogo e chamar o professor",
+          "Continuar a jogar",
+          "Levantá-lo à força"
+         ],
+         "a": 0,
+         "audio": "7f680fda22f3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os jogos educativos ensinam enquanto se joga: raciocínio, estratégia, cooperação. O desportivismo é aceitar o resultado e cumprimentar o adversário, tenha-se ganho ou perdido.",
+        "exemplo": "O ntxuva é um jogo tradicional moçambicano de tabuleiro, e treina o mesmo cálculo que a matemática pede.",
+        "lembra": "Se alguém se magoa, o jogo pára. Sempre.",
+        "audio": "a02e4cc53352.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "agr-7c",
+   "disciplina": "Agropecuária",
+   "classe": "7ª classe",
+   "tag": "AGR",
+   "fonte": "Programa de Ensino da Disciplina de Agropecuária — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024. As nove unidades do programa estão em cinco: a preparação do solo junta-se à propagação de plantas, e as três unidades de criação de aves — galinhas, patos e perus — juntam-se numa de avicultura, porque tratam do mesmo com três aves. Os exercícios foram escritos a partir dos conteúdos, porque um programa de ensino não traz exercícios e não há livro do aluno da 7ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Introdução ao estudo da agricultura",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O que é a agricultura",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A agricultura é a actividade de:",
+         "options": [
+          "Cultivar plantas e criar animais",
+          "Vender produtos no mercado",
+          "Transportar mercadorias"
+         ],
+         "a": 0,
+         "audio": "0904f874471d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A agricultura é importante para Moçambique sobretudo porque:",
+         "options": [
+          "Garante alimento e emprego à maioria da população",
+          "Só serve para exportar",
+          "Não tem importância económica"
+         ],
+         "a": 0,
+         "audio": "0158e2671f2c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Chama-se segurança alimentar a:",
+         "options": [
+          "Todos terem acesso a alimento suficiente e seguro",
+          "Guardar as sementes num cofre",
+          "Vender toda a colheita"
+         ],
+         "a": 0,
+         "audio": "a3f156e3badf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A pecuária é a parte da agropecuária que trata:",
+         "options": [
+          "Da criação de animais",
+          "Do cultivo de cereais",
+          "Da venda de adubos"
+         ],
+         "a": 0,
+         "audio": "ef9b555bf585.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A agropecuária junta duas actividades: a agricultura, que cultiva plantas, e a pecuária, que cria animais. Em Moçambique é a base do sustento da maior parte das famílias, e é dela que depende a segurança alimentar do país.",
+        "exemplo": "Segurança alimentar quer dizer que todos têm acesso a alimento suficiente, seguro e ao longo de todo o ano.",
+        "lembra": "Agricultura cultiva; pecuária cria. Juntas, agropecuária.",
+        "audio": "b9535db88c6b.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Os sistemas agrários",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Na agricultura de subsistência, o que se produz destina-se sobretudo:",
+         "options": [
+          "Ao consumo da própria família",
+          "À exportação",
+          "À indústria"
+         ],
+         "a": 0,
+         "audio": "8ead8b317595.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No sistema de rendimento, o agricultor produz sobretudo para:",
+         "options": [
+          "Vender e obter lucro",
+          "Comer em casa",
+          "Oferecer aos vizinhos"
+         ],
+         "a": 0,
+         "audio": "0d92f8f7603f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O sistema agro-industrial caracteriza-se por:",
+         "options": [
+          "Grande escala, máquinas e ligação à indústria",
+          "Enxada e trabalho familiar",
+          "Produzir só para a aldeia"
+         ],
+         "a": 0,
+         "audio": "97abaebeb4f0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A distribuição agro-ecológica das culturas explica porque:",
+         "options": [
+          "Cada cultura se dá melhor numa região do país",
+          "Todas as culturas crescem em todo o lado",
+          "As culturas não dependem do clima"
+         ],
+         "a": 0,
+         "audio": "f9ab3f89796e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Há três sistemas agrários. Na subsistência produz-se para comer em casa; no de rendimento produz-se para vender; no agro-industrial produz-se em grande escala, com máquinas e ligação à indústria.",
+        "exemplo": "Cada cultura dá-se melhor numa região: é isso que explica o cajueiro no norte e o gado no sul.",
+        "lembra": "O que se planta depende do clima e do solo do lugar.",
+        "audio": "4409b2330f4d.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "O solo e a propagação de plantas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Preparar o solo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Preparar o solo antes de semear serve para:",
+         "options": [
+          "Deixar a terra solta, limpa e pronta a receber a semente",
+          "Endurecer a terra",
+          "Tirar toda a matéria orgânica"
+         ],
+         "a": 0,
+         "audio": "7eded8d7f1e2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A lavoura, ou primeira mobilização do solo, serve para:",
+         "options": [
+          "Revolver a terra e enterrar as ervas",
+          "Espalhar as sementes",
+          "Colher os frutos"
+         ],
+         "a": 0,
+         "audio": "76fb8d9b5688.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A queimada como forma de limpar a machamba:",
+         "options": [
+          "Empobrece o solo e deve ser evitada",
+          "Melhora sempre o solo",
+          "Não tem efeito nenhum"
+         ],
+         "a": 0,
+         "audio": "3329d6092087.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um solo com muita matéria orgânica é, em geral:",
+         "options": [
+          "Mais fértil",
+          "Menos fértil",
+          "Impróprio para cultivo"
+         ],
+         "a": 0,
+         "audio": "d7fcf7049467.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Preparar o solo é deixar a terra solta, limpa e pronta a receber a semente. A lavoura revolve a terra e enterra as ervas. A queimada parece limpar depressa, mas destrói a matéria orgânica e empobrece o solo.",
+        "exemplo": "Um solo com muita matéria orgânica retém melhor a água e alimenta melhor a planta.",
+        "lembra": "Queimar limpa hoje e empobrece amanhã.",
+        "audio": "c027bd54205c.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Semear e propagar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A propagação por semente chama-se:",
+         "options": [
+          "Propagação sexuada",
+          "Propagação vegetativa",
+          "Enxertia"
+         ],
+         "a": 0,
+         "audio": "cd3e580e3f1f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Plantar um pedaço de caule de mandioca para dar uma planta nova é:",
+         "options": [
+          "Propagação vegetativa",
+          "Propagação por semente",
+          "Sementeira directa"
+         ],
+         "a": 0,
+         "audio": "b5607cbd7d88.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um viveiro serve para:",
+         "options": [
+          "Criar as plantas pequenas antes de as levar para o campo",
+          "Guardar a colheita",
+          "Criar animais"
+         ],
+         "a": 0,
+         "audio": "b84040122f7b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O compasso de sementeira é:",
+         "options": [
+          "A distância entre as plantas e entre as linhas",
+          "A profundidade do sulco",
+          "A hora de semear"
+         ],
+         "a": 0,
+         "audio": "ff2008ed1154.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Semear demasiado junto faz com que as plantas:",
+         "options": [
+          "Compitam por luz, água e nutrientes",
+          "Cresçam mais depressa",
+          "Dêem mais fruto"
+         ],
+         "a": 0,
+         "audio": "d18169bbb008.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As plantas propagam-se por semente — propagação sexuada — ou por partes da própria planta, como estacas, que é propagação vegetativa. O compasso é a distância entre plantas e entre linhas.",
+        "exemplo": "A mandioca planta-se por estaca do caule. Semear demasiado junto põe as plantas a competir por luz, água e nutrientes.",
+        "lembra": "O viveiro cria a planta pequena antes de ir para o campo.",
+        "audio": "418b91ea2136.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Práticas culturais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Regar, sachar e adubar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Sachar a machamba serve para:",
+         "options": [
+          "Tirar as ervas daninhas e arejar o solo",
+          "Regar as plantas",
+          "Colher os frutos"
+         ],
+         "a": 0,
+         "audio": "ea414ce95c2e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As ervas daninhas prejudicam a cultura porque:",
+         "options": [
+          "Competem por água, luz e nutrientes",
+          "Dão sombra útil",
+          "Adubam o solo"
+         ],
+         "a": 0,
+         "audio": "49dbc43aee0e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A melhor altura para regar, em dias de muito calor, é:",
+         "options": [
+          "De manhã cedo ou ao fim da tarde",
+          "Ao meio-dia",
+          "Só quando a planta murchar"
+         ],
+         "a": 0,
+         "audio": "aeaca01abd33.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O estrume de curral é um adubo:",
+         "options": [
+          "Orgânico",
+          "Químico",
+          "Mineral"
+         ],
+         "a": 0,
+         "audio": "9d7f36b96fe7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As práticas culturais são o trabalho depois da sementeira: sachar tira as ervas e areja o solo, regar dá água quando falta chuva, adubar devolve à terra o que a colheita levou.",
+        "exemplo": "Rega-se de manhã cedo ou ao fim da tarde: ao meio-dia grande parte da água evapora antes de chegar à raiz.",
+        "lembra": "As ervas daninhas comem o que era para a cultura.",
+        "audio": "2a7a61c7a08e.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Pragas e doenças",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma praga agrícola é:",
+         "options": [
+          "Um organismo que ataca e prejudica a cultura",
+          "Uma doença do solo",
+          "Uma falta de chuva"
+         ],
+         "a": 0,
+         "audio": "c03c96f08093.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A rotação de culturas ajuda a controlar as pragas porque:",
+         "options": [
+          "Quebra o ciclo de vida dos que atacam sempre a mesma planta",
+          "Mata todos os insectos",
+          "Aumenta o uso de pesticidas"
+         ],
+         "a": 0,
+         "audio": "cd1a794c1563.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao aplicar um pesticida, é obrigatório:",
+         "options": [
+          "Usar protecção e respeitar as instruções do rótulo",
+          "Aplicar mais do que o indicado",
+          "Trabalhar contra o vento sem máscara"
+         ],
+         "a": 0,
+         "audio": "2d42ea39621c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Consociar culturas, como milho com feijão, ajuda porque:",
+         "options": [
+          "Aproveita melhor o terreno e protege o solo",
+          "Aumenta as pragas",
+          "Impede o crescimento das duas"
+         ],
+         "a": 0,
+         "audio": "bfa83709712b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma praga é um organismo que ataca a cultura. Combate-se de várias maneiras, e nem todas envolvem veneno: a rotação de culturas quebra o ciclo de vida das pragas, e a consociação aproveita melhor o terreno.",
+        "exemplo": "Milho com feijão na mesma machamba protege o solo e aproveita o espaço melhor do que cada um sozinho.",
+        "lembra": "Pesticida usa-se com protecção e conforme o rótulo.",
+        "audio": "04acca4e4135.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Colheita e armazenamento",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A colheita",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Colher antes do ponto certo faz com que o produto:",
+         "options": [
+          "Fique de pior qualidade e se conserve mal",
+          "Dure mais tempo",
+          "Fique mais saboroso"
+         ],
+         "a": 0,
+         "audio": "916e2dcd1ec0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Depois de colhido, o milho deve primeiro:",
+         "options": [
+          "Ser bem seco",
+          "Ser guardado húmido",
+          "Ser lavado com água"
+         ],
+         "a": 0,
+         "audio": "41cda8f54457.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Guardar grão húmido no celeiro provoca:",
+         "options": [
+          "Bolor e perda da colheita",
+          "Melhor conservação",
+          "Mais peso útil"
+         ],
+         "a": 0,
+         "audio": "1e292c70e19e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As perdas pós-colheita são:",
+         "options": [
+          "O que se estraga depois de colhido",
+          "O que não nasceu",
+          "O que se vendeu barato"
+         ],
+         "a": 0,
+         "audio": "fadd2b3f7c67.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Colher no ponto certo decide a qualidade e a conservação: cedo de mais, o produto não amadureceu; tarde de mais, começa a estragar-se. Depois de colhido, o grão tem de ser bem seco antes de guardado.",
+        "exemplo": "Guardar milho húmido dá bolor, e o bolor não estraga só uma parte: passa a toda a pilha.",
+        "lembra": "Perdas pós-colheita são colheita que se teve e se perdeu.",
+        "audio": "b8f9e99e1071.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Armazenar bem",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um bom celeiro deve ser:",
+         "options": [
+          "Seco, arejado e protegido de roedores",
+          "Fechado e húmido",
+          "Aberto ao chão"
+         ],
+         "a": 0,
+         "audio": "e341d1038b73.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Levantar o celeiro do chão serve para:",
+         "options": [
+          "Impedir a humidade e a entrada de roedores",
+          "Facilitar a colheita",
+          "Poupar material"
+         ],
+         "a": 0,
+         "audio": "e85f142ce6e2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O gorgulho é:",
+         "options": [
+          "Uma praga do grão armazenado",
+          "Uma doença das folhas",
+          "Um tipo de adubo"
+         ],
+         "a": 0,
+         "audio": "fea284270dd4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Guardar semente para a próxima campanha exige escolher:",
+         "options": [
+          "Os grãos maiores, sãos e bem secos",
+          "Os grãos partidos",
+          "Os grãos com bolor"
+         ],
+         "a": 0,
+         "audio": "8aef1dcc2dbb.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um bom celeiro é seco, arejado, levantado do chão e protegido de roedores. A semente que se guarda para a campanha seguinte escolhe-se entre os grãos maiores, sãos e bem secos.",
+        "exemplo": "O gorgulho é uma praga do grão já armazenado — ataca depois da colheita, e não no campo.",
+        "lembra": "Celeiro levantado do chão: sem humidade e sem ratos.",
+        "audio": "969139394849.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Pecuária e criação de aves",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Introdução à pecuária",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A pecuária é a criação de animais para:",
+         "options": [
+          "Obter carne, leite, ovos e outros produtos",
+          "Companhia apenas",
+          "Transporte apenas"
+         ],
+         "a": 0,
+         "audio": "5a66380d8ffd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Chama-se maneio ao conjunto de:",
+         "options": [
+          "Cuidados diários com os animais",
+          "Doenças dos animais",
+          "Rações compradas"
+         ],
+         "a": 0,
+         "audio": "28a7d49fe34f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A vacinação dos animais serve para:",
+         "options": [
+          "Prevenir doenças",
+          "Os engordar",
+          "Aumentar a postura"
+         ],
+         "a": 0,
+         "audio": "8d71e72c7c7d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um animal doente deve ser:",
+         "options": [
+          "Separado dos outros e tratado",
+          "Mantido junto do rebanho",
+          "Vendido depressa"
+         ],
+         "a": 0,
+         "audio": "507b79a45b7a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A pecuária cria animais para obter carne, leite, ovos e outros produtos. Maneio é o conjunto de cuidados diários: alimentar, dar água, limpar, observar. A vacinação previne doenças, e um animal doente separa-se dos outros.",
+        "exemplo": "Observar os animais todos os dias é o que permite apanhar a doença no início, quando ainda se trata.",
+        "lembra": "Prevenir com vacina custa menos do que tratar depois.",
+        "audio": "0cd4b89fc42c.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Criar galinhas, patos e perus",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um bom galinheiro deve ser sobretudo:",
+         "options": [
+          "Seco, arejado e limpo",
+          "Húmido e fechado",
+          "Sem cobertura"
+         ],
+         "a": 0,
+         "audio": "13263946e879.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As galinhas criadas para pôr ovos chamam-se:",
+         "options": [
+          "Poedeiras",
+          "Frangos de corte",
+          "Pintos do dia"
+         ],
+         "a": 0,
+         "audio": "9e8ef62d7024.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A doença de Newcastle ataca sobretudo:",
+         "options": [
+          "As aves",
+          "Os bovinos",
+          "As cabras"
+         ],
+         "a": 0,
+         "audio": "09488ca103f3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O que os patos precisam e as galinhas não é:",
+         "options": [
+          "Acesso a água para nadar",
+          "Comida",
+          "Abrigo"
+         ],
+         "a": 0,
+         "audio": "770a020d18f4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Comparado com a galinha, o peru distingue-se por:",
+         "options": [
+          "Ser maior e demorar mais tempo a crescer",
+          "Crescer mais depressa",
+          "Pôr mais ovos por ano"
+         ],
+         "a": 0,
+         "audio": "69f8190061d2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A avicultura cria aves. O galinheiro deve ser seco, arejado e limpo. As galinhas dividem-se em poedeiras, criadas para o ovo, e frangos de corte, criados para a carne. A doença de Newcastle é a principal ameaça.",
+        "exemplo": "Os patos precisam de água para nadar, e os perus são maiores e demoram mais tempo a crescer do que as galinhas.",
+        "lembra": "Galinheiro húmido é galinheiro doente.",
+        "audio": "4a6c32bf206d.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tic-7c",
+   "disciplina": "TIC",
+   "classe": "7ª classe",
+   "tag": "TIC",
+   "fonte": "Programa de Ensino da Disciplina de Tecnologias de Informação e Comunicação, 7ª e 8ª Classe. INDE/MINEDH, Maputo, Setembro de 2024. As três unidades temáticas e os conteúdos são do programa, que diz expressamente que na 7ª classe a disciplina «cinge-se à teoria que servirá de suporte para as actividades práticas». Os exercícios foram escritos a partir dos conteúdos, porque um programa de ensino não traz exercícios e não há livro do aluno da 7ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "As TIC e o computador",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O que são as TIC",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A sigla TIC quer dizer:",
+         "options": [
+          "Tecnologias de Informação e Comunicação",
+          "Técnicas de Informática e Cálculo",
+          "Trabalho, Investigação e Ciência"
+         ],
+         "a": 0,
+         "audio": "9c6a773f16f2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As TIC servem sobretudo para:",
+         "options": [
+          "Tratar, guardar e transmitir informação",
+          "Fabricar máquinas agrícolas",
+          "Construir estradas"
+         ],
+         "a": 0,
+         "audio": "8d00390d6a2f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes NÃO é um dispositivo computacional?",
+         "options": [
+          "Uma enxada",
+          "Um smartphone",
+          "Uma calculadora científica"
+         ],
+         "a": 0,
+         "audio": "1225c3d3b1b0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As TIC mudaram a sociedade sobretudo porque:",
+         "options": [
+          "Aproximaram as pessoas e aceleraram o acesso à informação",
+          "Acabaram com o trabalho",
+          "Tornaram os livros inúteis"
+         ],
+         "a": 0,
+         "audio": "5d09bf16ea48.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "TIC quer dizer Tecnologias de Informação e Comunicação: o conjunto de meios que servem para tratar, guardar e transmitir informação. Computador, telemóvel, Internet e calculadora científica são todos dispositivos computacionais.",
+        "exemplo": "Antes das TIC, uma carta de Lichinga a Maputo demorava dias. Hoje a mesma mensagem chega em segundos.",
+        "lembra": "As TIC não criam informação: tratam-na e transmitem-na.",
+        "audio": "5a2d4c7ca1a2.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Hardware e software",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Chama-se hardware:",
+         "options": [
+          "À parte física do computador, que se toca",
+          "Aos programas",
+          "Aos ficheiros guardados"
+         ],
+         "a": 0,
+         "audio": "a687b83f24d8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Chama-se software:",
+         "options": [
+          "Aos programas que dizem ao computador o que fazer",
+          "Ao teclado e ao rato",
+          "Ao ecrã"
+         ],
+         "a": 0,
+         "audio": "7e6ef1df8e7d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um dispositivo de entrada?",
+         "options": [
+          "O teclado",
+          "O monitor",
+          "A impressora"
+         ],
+         "a": 0,
+         "audio": "5c3bd7b4645e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um dispositivo de saída?",
+         "options": [
+          "O monitor",
+          "O rato",
+          "O microfone"
+         ],
+         "a": 0,
+         "audio": "2fb5cbd8ac6a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O sistema operativo é um software:",
+         "options": [
+          "De propósito geral, que faz o computador funcionar",
+          "De propósito específico",
+          "Que é hardware"
+         ],
+         "a": 0,
+         "audio": "5b53be4ba97d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Hardware é a parte física, aquilo em que se toca. Software são os programas, que dizem ao computador o que fazer. Os dispositivos de entrada dão informação à máquina; os de saída devolvem-na.",
+        "exemplo": "Teclado e rato são entrada; monitor e impressora são saída. O sistema operativo é o software que faz o resto funcionar.",
+        "lembra": "Se se pode tocar, é hardware.",
+        "audio": "cfb7fb39265a.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Cuidar dos dispositivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As regras ergonómicas servem para:",
+         "options": [
+          "Evitar dores e lesões ao usar o computador",
+          "Fazer o computador correr mais depressa",
+          "Poupar electricidade"
+         ],
+         "a": 0,
+         "audio": "503dbec6ea23.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao trabalhar ao computador, o ecrã deve ficar:",
+         "options": [
+          "À altura dos olhos, a cerca de um braço de distância",
+          "Muito abaixo, para baixar a cabeça",
+          "O mais perto possível dos olhos"
+         ],
+         "a": 0,
+         "audio": "638aa7220614.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para proteger um computador da poeira e do calor, deve-se:",
+         "options": [
+          "Mantê-lo limpo e num local arejado",
+          "Tapá-lo com um pano enquanto trabalha",
+          "Pô-lo ao sol"
+         ],
+         "a": 0,
+         "audio": "34725aa70620.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um equipamento informático velho e avariado deve:",
+         "options": [
+          "Ir para reciclagem própria de lixo electrónico",
+          "Ser deitado no lixo comum",
+          "Ser queimado"
+         ],
+         "a": 0,
+         "audio": "0823d1e5ef24.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As regras ergonómicas evitam dores e lesões: ecrã à altura dos olhos, costas apoiadas, pausas regulares. O equipamento dura mais se estiver limpo e arejado, e quando morre vai para reciclagem própria.",
+        "exemplo": "O lixo electrónico tem metais que contaminam o solo, e por isso não vai no lixo comum nem se queima.",
+        "lembra": "Ecrã à altura dos olhos, a cerca de um braço.",
+        "audio": "057071b8ecc5.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Comunicação e cidadania digital",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Comunicar em rede",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Internet é:",
+         "options": [
+          "Uma rede mundial que liga computadores entre si",
+          "Um programa do computador",
+          "Um tipo de telemóvel"
+         ],
+         "a": 0,
+         "audio": "f16bd7ae3421.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Wi-Fi e Bluetooth são formas de ligação:",
+         "options": [
+          "Sem fios",
+          "Por cabo",
+          "Por satélite"
+         ],
+         "a": 0,
+         "audio": "f12ea557d96b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um navegador, ou browser, serve para:",
+         "options": [
+          "Aceder a páginas da Internet",
+          "Escrever textos",
+          "Fazer contas"
+         ],
+         "a": 0,
+         "audio": "18722cd58ff5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nem tudo o que está na Internet é verdadeiro. Antes de acreditar, deve-se:",
+         "options": [
+          "Verificar a fonte e comparar com outras",
+          "Partilhar logo",
+          "Acreditar se tiver muitas partilhas"
+         ],
+         "a": 0,
+         "audio": "fba1cfec6224.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Internet é uma rede mundial que liga computadores entre si. Liga-se por cabo ou sem fios, com Wi-Fi ou Bluetooth. O navegador é o programa que abre as páginas.",
+        "exemplo": "Nem tudo o que está na Internet é verdade. Antes de acreditar, verifica-se a fonte e compara-se com outras.",
+        "lembra": "Muitas partilhas não fazem uma coisa verdadeira.",
+        "audio": "cbbe8567d2f4.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Cidadania digital",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Dados pessoais são:",
+         "options": [
+          "Informações que identificam uma pessoa",
+          "Ficheiros do sistema",
+          "Programas instalados"
+         ],
+         "a": 0,
+         "audio": "f8da518c35bc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Publicar uma fotografia de um colega sem lhe perguntar é:",
+         "options": [
+          "Uma violação da privacidade dele",
+          "Normal, se for engraçada",
+          "Permitido entre amigos"
+         ],
+         "a": 0,
+         "audio": "5fd65e3d3942.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se alguém te insultar ou ameaçar em linha, deves:",
+         "options": [
+          "Guardar a prova e contar a um adulto de confiança",
+          "Responder da mesma maneira",
+          "Não fazer nada"
+         ],
+         "a": 0,
+         "audio": "fab3edfcd4da.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Copiar um texto da Internet e apresentá-lo como teu é:",
+         "options": [
+          "Plágio",
+          "Pesquisa",
+          "Citação"
+         ],
+         "a": 0,
+         "audio": "0e72d0628ad2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Dados pessoais são as informações que identificam uma pessoa, e têm dono. Publicar a fotografia de alguém sem lhe perguntar é violar a privacidade dessa pessoa, mesmo que a intenção seja boa.",
+        "exemplo": "Copiar um texto da Internet e apresentá-lo como teu chama-se plágio. Citar a fonte transforma o mesmo texto em pesquisa honesta.",
+        "lembra": "Se te ameaçarem em linha: guarda a prova e conta a um adulto.",
+        "audio": "17e95e4c6d96.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "As TIC na aprendizagem",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma plataforma de apoio ao ensino serve para:",
+         "options": [
+          "Aceder a materiais e actividades de estudo",
+          "Jogar apenas",
+          "Comprar produtos"
+         ],
+         "a": 0,
+         "audio": "e07934f7ce4d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Usar o telemóvel para estudar é útil quando:",
+         "options": [
+          "Se procura informação com um objectivo claro",
+          "Se usa durante a aula sem autorização",
+          "Se copia tudo sem ler"
+         ],
+         "a": 0,
+         "audio": "798f2f0ba13d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Jogos como a dama, o xadrez e o ntxuva ajudam a:",
+         "options": [
+          "Desenvolver o raciocínio e a estratégia",
+          "Perder tempo",
+          "Aprender a escrever"
+         ],
+         "a": 0,
+         "audio": "b06013d10ff4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um repositório de partilha de informação é:",
+         "options": [
+          "Um lugar em linha onde se guardam e partilham materiais",
+          "Um tipo de computador",
+          "Uma rede sem fios"
+         ],
+         "a": 0,
+         "audio": "b3b5cf82ce5e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As TIC servem para aprender quando se usam com um objectivo. Plataformas de apoio, repositórios de partilha e até jogos ajudam — desde que a procura seja dirigida e não uma deriva sem fim.",
+        "exemplo": "A dama, o xadrez e o ntxuva desenvolvem raciocínio e estratégia, e são jogos que não precisam de electricidade.",
+        "lembra": "Procurar com objectivo é estudar; sem objectivo é passar o tempo.",
+        "audio": "3945dfd5ddcc.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Cibersegurança e aplicações das TIC",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Senhas e controlo de acesso",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma senha segura deve:",
+         "options": [
+          "Ser longa, misturar letras e números e não se partilhar",
+          "Ser a data de nascimento",
+          "Ser igual em todos os sítios"
+         ],
+         "a": 0,
+         "audio": "a382ca41ec8e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é a pior senha?",
+         "options": [
+          "123456",
+          "Ch7va#Lich",
+          "Mz2024$xk"
+         ],
+         "a": 0,
+         "audio": "1ceadf696c0f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Emprestar a tua senha a um colega:",
+         "options": [
+          "Põe em risco tudo o que está na tua conta",
+          "É seguro se for amigo",
+          "Não tem consequências"
+         ],
+         "a": 0,
+         "audio": "d569f362dfa3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se receberes uma mensagem a pedir a tua senha, deves:",
+         "options": [
+          "Não responder: serviços sérios nunca a pedem",
+          "Responder depressa",
+          "Enviar só uma parte"
+         ],
+         "a": 0,
+         "audio": "9081006557b2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma senha protege tudo o que está na conta. Boa senha é longa, mistura letras, números e símbolos, não é uma data conhecida, e não se repete de serviço para serviço. E não se empresta.",
+        "exemplo": "«123456» é a pior senha que há. Serviços sérios nunca pedem a senha por mensagem — quem pede está a tentar enganar-te.",
+        "lembra": "A senha é como a chave de casa: não se empresta.",
+        "audio": "0a1d97ff4640.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Proteger o dispositivo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um vírus informático é:",
+         "options": [
+          "Um programa que danifica ou rouba dados",
+          "Uma peça avariada",
+          "Um tipo de ficheiro de texto"
+         ],
+         "a": 0,
+         "audio": "eff888b68045.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Instalar aplicações só de lojas oficiais serve para:",
+         "options": [
+          "Reduzir o risco de instalar software malicioso",
+          "Poupar bateria",
+          "Ter mais espaço"
+         ],
+         "a": 0,
+         "audio": "ac2545436fe6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Deixar o Bluetooth sempre ligado e visível:",
+         "options": [
+          "Facilita ligações indesejadas ao teu aparelho",
+          "Melhora a segurança",
+          "Não tem risco nenhum"
+         ],
+         "a": 0,
+         "audio": "85522df920b8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Fazer cópias de segurança dos ficheiros serve para:",
+         "options": [
+          "Não perder o trabalho se o aparelho se estragar",
+          "Deixar o aparelho mais rápido",
+          "Poupar dados móveis"
+         ],
+         "a": 0,
+         "audio": "7b7f938b47fb.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um vírus informático é um programa que danifica ou rouba dados. Protege-se instalando aplicações só de lojas oficiais, desligando o Bluetooth quando não é preciso, e fazendo cópias de segurança dos ficheiros.",
+        "exemplo": "Uma cópia de segurança é o que separa perder o telemóvel de perder o telemóvel e o trabalho todo.",
+        "lembra": "Cópia de segurança feita antes vale mais do que arrepender-se depois.",
+        "audio": "b72b9d469649.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "As TIC no dia-a-dia",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As TIC aplicadas à agricultura permitem, por exemplo:",
+         "options": [
+          "Consultar a previsão do tempo e preços de mercado",
+          "Substituir a chuva",
+          "Dispensar a sementeira"
+         ],
+         "a": 0,
+         "audio": "d633dc3fc5a9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O dinheiro móvel, no telemóvel, permite:",
+         "options": [
+          "Enviar e receber dinheiro sem ir ao banco",
+          "Imprimir notas",
+          "Criar dinheiro novo"
+         ],
+         "a": 0,
+         "audio": "092230b8e5de.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na saúde, as TIC ajudam sobretudo a:",
+         "options": [
+          "Guardar registos de doentes e ligar unidades distantes",
+          "Substituir o médico",
+          "Curar doenças à distância sozinhas"
+         ],
+         "a": 0,
+         "audio": "382da81cac2e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A sigla STEM, ligada às TIC, junta:",
+         "options": [
+          "Ciências, Tecnologia, Engenharia e Matemática",
+          "Saúde, Trabalho, Escola e Música",
+          "Sociedade, Turismo, Economia e Meio ambiente"
+         ],
+         "a": 0,
+         "audio": "752552af14d8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As TIC aplicam-se a tudo. Na agricultura, para consultar o tempo e os preços; na saúde, para guardar registos e ligar unidades distantes; no comércio, para pagar pelo telemóvel sem ir ao banco.",
+        "exemplo": "STEM junta Ciências, Tecnologia, Engenharia e Matemática, e é aí que as TIC servem de ferramenta a todas as outras.",
+        "lembra": "A tecnologia não substitui quem sabe: dá-lhe alcance.",
+        "audio": "6fea16beadc3.mp3"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ing-7c",
+   "disciplina": "Inglês",
+   "classe": "7ª classe",
+   "tag": "ING",
+   "fonte": "Programa de Ensino da Disciplina de Língua Inglesa — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024. As nove unidades do Grade 7 estão agrupadas em cinco por proximidade de assunto. Os enunciados estão em português e o inglês vive nas opções: a app tem uma só voz, portuguesa, e uma voz portuguesa a ler inglês ensinaria a pronúncia errada. Os exercícios foram escritos a partir dos conteúdos, porque um programa de ensino não traz exercícios e não há livro do aluno da 7ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Cumprimentos e escola",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Cumprimentar e apresentar-se",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se diz «bom dia» em inglês?",
+         "options": [
+          "Good morning",
+          "Good night",
+          "Goodbye"
+         ],
+         "a": 0,
+         "audio": "2dbefa5d43f9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «boa tarde» em inglês?",
+         "options": [
+          "Good afternoon",
+          "Good morning",
+          "Good night"
+         ],
+         "a": 0,
+         "audio": "4a83b5c812d8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como perguntas o nome de alguém, em inglês?",
+         "options": [
+          "What is your name?",
+          "How old are you?",
+          "Where are you from?"
+         ],
+         "a": 0,
+         "audio": "4f5cd4baa4d8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para dizer «eu sou o Jorge», escreve-se:",
+         "options": [
+          "I am Jorge",
+          "You are Jorge",
+          "He is Jorge"
+         ],
+         "a": 0,
+         "audio": "177747807cc7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «até amanhã» em inglês?",
+         "options": [
+          "See you tomorrow",
+          "See you never",
+          "Good luck"
+         ],
+         "a": 0,
+         "audio": "b9a6154f5dea.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Em inglês cumprimenta-se conforme a hora do dia: «good morning» de manhã, «good afternoon» de tarde e «good evening» ao fim do dia. Para se apresentar diz-se «I am» seguido do nome.",
+        "exemplo": "«Good morning! What is your name?» — «I am Amina.» Para se despedir: «Goodbye» ou «See you tomorrow».",
+        "lembra": "«Good night» é para ir dormir, não para chegar.",
+        "audio": "a578f4218316.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Números, países e nacionalidades",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se escreve o número 12 em inglês?",
+         "options": [
+          "Twelve",
+          "Twenty",
+          "Two"
+         ],
+         "a": 0,
+         "audio": "c3e3f08d5a00.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve o número 15 em inglês?",
+         "options": [
+          "Fifteen",
+          "Fifty",
+          "Five"
+         ],
+         "a": 0,
+         "audio": "d4e246b0fea0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Alguém de Moçambique é, em inglês:",
+         "options": [
+          "Mozambican",
+          "Mozambique",
+          "Mozambiquese"
+         ],
+         "a": 0,
+         "audio": "faa7db8b48cf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para perguntar de onde alguém é, dizes:",
+         "options": [
+          "Where are you from?",
+          "What are you from?",
+          "Who are you from?"
+         ],
+         "a": 0,
+         "audio": "2bd734d2180a.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada número ao seu nome em inglês.",
+         "pairs": [
+          [
+           "7",
+           "Seven"
+          ],
+          [
+           "20",
+           "Twenty"
+          ]
+         ],
+         "audio": "4b9cd6f80255.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os números até vinte aprendem-se de cor, porque muitos não seguem regra. De países formam-se nacionalidades: Mozambique dá «Mozambican». Para perguntar a origem usa-se «Where are you from?».",
+        "exemplo": "Twelve é 12 e twenty é 20. Cuidado: «thirteen» é 13 e «thirty» é 30 — a diferença está no fim da palavra.",
+        "lembra": "-teen é adolescente do número: treze a dezanove.",
+        "audio": "757b41794f77.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A escola e as horas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se diz «sala de aula» em inglês?",
+         "options": [
+          "Classroom",
+          "Playground",
+          "Library"
+         ],
+         "a": 0,
+         "audio": "ec31b7300378.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «biblioteca» em inglês?",
+         "options": [
+          "Library",
+          "Bookshop",
+          "Classroom"
+         ],
+         "a": 0,
+         "audio": "9e27901e2bc3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para perguntar as horas, dizes:",
+         "options": [
+          "What time is it?",
+          "What day is it?",
+          "How much is it?"
+         ],
+         "a": 0,
+         "audio": "cb81a64d84af.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O primeiro dia da semana escolar, «segunda-feira», é em inglês:",
+         "options": [
+          "Monday",
+          "Sunday",
+          "Saturday"
+         ],
+         "a": 0,
+         "audio": "2acc31b781a8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O plural de «book» é:",
+         "options": [
+          "Books",
+          "Bookes",
+          "Book"
+         ],
+         "a": 0,
+         "audio": "1987380afa28.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na escola há «classroom», «library» e «playground». Para as horas pergunta-se «What time is it?». Os dias da semana escrevem-se sempre com letra grande em inglês, ao contrário do português.",
+        "exemplo": "O plural faz-se quase sempre com -s: book dá books. Monday é segunda-feira e Sunday é domingo.",
+        "lembra": "Em inglês, os dias da semana levam maiúscula.",
+        "audio": "f33494d7dc4e.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "A família e os amigos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Os membros da família",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se diz «mãe» em inglês?",
+         "options": [
+          "Mother",
+          "Sister",
+          "Aunt"
+         ],
+         "a": 0,
+         "audio": "2b065745eace.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «irmão» em inglês?",
+         "options": [
+          "Brother",
+          "Father",
+          "Cousin"
+         ],
+         "a": 0,
+         "audio": "31b172d68bd4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «avó» em inglês?",
+         "options": [
+          "Grandmother",
+          "Grandfather",
+          "Mother"
+         ],
+         "a": 0,
+         "audio": "6a105537f60c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra ao seu significado.",
+         "pairs": [
+          [
+           "Father",
+           "Pai"
+          ],
+          [
+           "Daughter",
+           "Filha"
+          ]
+         ],
+         "audio": "1a9a6c2b6313.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os nomes da família em inglês: mother, father, brother, sister, son, daughter. Os avós formam-se com «grand-»: grandmother e grandfather.",
+        "exemplo": "«This is my brother» — este é o meu irmão. «She is my grandmother» — ela é a minha avó.",
+        "lembra": "«Grand-» à frente transforma pai em avô.",
+        "audio": "5fac8bbcd299.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Os possessivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«A minha mãe» diz-se, em inglês:",
+         "options": [
+          "My mother",
+          "Your mother",
+          "Her mother"
+         ],
+         "a": 0,
+         "audio": "c118b13195bd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O irmão dela» diz-se:",
+         "options": [
+          "Her brother",
+          "His brother",
+          "Their brother"
+         ],
+         "a": 0,
+         "audio": "523bccaedd6c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O livro dele» diz-se:",
+         "options": [
+          "His book",
+          "Her book",
+          "Its book"
+         ],
+         "a": 0,
+         "audio": "59e1233b61fe.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A nossa casa» diz-se:",
+         "options": [
+          "Our house",
+          "Your house",
+          "Their house"
+         ],
+         "a": 0,
+         "audio": "37e0b2dae5b8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os possessivos dizem de quem é a coisa e vêm antes do nome: my, your, his, her, its, our, their. Ao contrário do português, não mudam com o plural do objecto.",
+        "exemplo": "«My book» e «my books» — o possessivo não muda. «His book» é dele; «her book» é dela.",
+        "lembra": "His é dele, her é dela. O sexo é de quem tem, não do que se tem.",
+        "audio": "a6598d24c1ae.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Falar dos amigos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Ela é a minha amiga» escreve-se:",
+         "options": [
+          "She is my friend",
+          "He is my friend",
+          "She are my friend"
+         ],
+         "a": 0,
+         "audio": "977f040839df.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «eu não sou estudante»?",
+         "options": [
+          "I am not a student",
+          "I not am a student",
+          "I am no student"
+         ],
+         "a": 0,
+         "audio": "57a7d5a3e0dc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para perguntar a idade de alguém, dizes:",
+         "options": [
+          "How old are you?",
+          "How are you?",
+          "How many are you?"
+         ],
+         "a": 0,
+         "audio": "a93b876853d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eles são meus amigos» escreve-se:",
+         "options": [
+          "They are my friends",
+          "They is my friends",
+          "Them are my friends"
+         ],
+         "a": 0,
+         "audio": "35ae5b881005.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O verbo «to be» muda com a pessoa: I am, you are, he/she/it is, we/you/they are. A negativa faz-se juntando «not», e a pergunta trocando a ordem.",
+        "exemplo": "«She is my friend.» Negativa: «She is not my friend.» Pergunta: «Is she your friend?»",
+        "lembra": "Para perguntar com «to be», o verbo vai à frente.",
+        "audio": "e48a863f2ea7.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "O corpo, a saúde e a casa",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As partes do corpo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se diz «cabeça» em inglês?",
+         "options": [
+          "Head",
+          "Hand",
+          "Heart"
+         ],
+         "a": 0,
+         "audio": "294b811f8892.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «mão» em inglês?",
+         "options": [
+          "Hand",
+          "Foot",
+          "Arm"
+         ],
+         "a": 0,
+         "audio": "61d01e5314e3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «olhos» em inglês?",
+         "options": [
+          "Eyes",
+          "Ears",
+          "Legs"
+         ],
+         "a": 0,
+         "audio": "670e3e35872c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada parte do corpo ao seu nome em inglês.",
+         "pairs": [
+          [
+           "Perna",
+           "Leg"
+          ],
+          [
+           "Boca",
+           "Mouth"
+          ]
+         ],
+         "audio": "1fa7314b2ffe.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As partes do corpo em inglês: head, eyes, ears, mouth, arm, hand, leg, foot. Alguns plurais são irregulares: foot dá feet, e tooth dá teeth.",
+        "exemplo": "«I have two hands and two feet.» Repara: não é «foots».",
+        "lembra": "Foot dá feet, tooth dá teeth. São dos poucos assim.",
+        "audio": "9f86c740aa91.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A saúde e a alimentação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Estou doente» diz-se, em inglês:",
+         "options": [
+          "I am sick",
+          "I am hungry",
+          "I am tired"
+         ],
+         "a": 0,
+         "audio": "848d5dc15ad8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Dor de cabeça» diz-se:",
+         "options": [
+          "Headache",
+          "Toothache",
+          "Stomachache"
+         ],
+         "a": 0,
+         "audio": "dec93cef2efc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «água» em inglês?",
+         "options": [
+          "Water",
+          "Milk",
+          "Juice"
+         ],
+         "a": 0,
+         "audio": "f81f9d213069.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Fruta» diz-se, em inglês:",
+         "options": [
+          "Fruit",
+          "Bread",
+          "Meat"
+         ],
+         "a": 0,
+         "audio": "592d63a0e2c4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Para falar de saúde usa-se «I am sick» ou «I have a…». As dores formam-se com «-ache»: headache é dor de cabeça, toothache dor de dentes.",
+        "exemplo": "«I have a headache.» Alimentos: water, milk, bread, fruit, meat, fish.",
+        "lembra": "«-ache» no fim da palavra quer dizer dor.",
+        "audio": "176ce1f53b5a.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A casa e a comunidade",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se diz «cozinha» em inglês?",
+         "options": [
+          "Kitchen",
+          "Bedroom",
+          "Bathroom"
+         ],
+         "a": 0,
+         "audio": "d3862f19ddfd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Há uma mesa na sala» escreve-se:",
+         "options": [
+          "There is a table in the room",
+          "There are a table in the room",
+          "It has a table in the room"
+         ],
+         "a": 0,
+         "audio": "bb0d344574d8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Há três cadeiras» escreve-se:",
+         "options": [
+          "There are three chairs",
+          "There is three chairs",
+          "There have three chairs"
+         ],
+         "a": 0,
+         "audio": "16f2568ec247.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «mercado» em inglês?",
+         "options": [
+          "Market",
+          "Hospital",
+          "School"
+         ],
+         "a": 0,
+         "audio": "a24277df1f8a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Para dizer que existe alguma coisa usa-se «there is» para o singular e «there are» para o plural. As divisões da casa: kitchen, bedroom, bathroom, living room.",
+        "exemplo": "«There is a table in the kitchen.» «There are three chairs.»",
+        "lembra": "Um: there is. Mais do que um: there are.",
+        "audio": "08034b671cae.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "O ambiente e a vida aquática",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A natureza",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se diz «árvore» em inglês?",
+         "options": [
+          "Tree",
+          "Grass",
+          "Flower"
+         ],
+         "a": 0,
+         "audio": "8db9dabf6225.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «rio» em inglês?",
+         "options": [
+          "River",
+          "Sea",
+          "Lake"
+         ],
+         "a": 0,
+         "audio": "fc4b213a4379.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Lixo» diz-se, em inglês:",
+         "options": [
+          "Rubbish",
+          "Rubber",
+          "Rock"
+         ],
+         "a": 0,
+         "audio": "59fa65340e78.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Não deites lixo no chão» escreve-se:",
+         "options": [
+          "Do not throw rubbish on the ground",
+          "No throw rubbish on the ground",
+          "Not throw rubbish on the ground"
+         ],
+         "a": 0,
+         "audio": "b5a883e8876c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Vocabulário da natureza: tree, grass, flower, river, lake, forest, rubbish. Para dar uma ordem negativa usa-se «Do not» seguido do verbo.",
+        "exemplo": "«Do not throw rubbish on the ground.» — não deites lixo no chão.",
+        "lembra": "Ordem negativa em inglês começa sempre por «Do not».",
+        "audio": "f5b3a98111be.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A vida aquática",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se diz «peixe» em inglês?",
+         "options": [
+          "Fish",
+          "Bird",
+          "Frog"
+         ],
+         "a": 0,
+         "audio": "9f2d9ae81089.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «mar» em inglês?",
+         "options": [
+          "Sea",
+          "Sky",
+          "Sand"
+         ],
+         "a": 0,
+         "audio": "a8b1944ffd7c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Os peixes vivem na água» escreve-se:",
+         "options": [
+          "Fish live in water",
+          "Fish lives in water",
+          "Fish living in water"
+         ],
+         "a": 0,
+         "audio": "f82b5d614510.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «tartaruga» em inglês?",
+         "options": [
+          "Turtle",
+          "Crab",
+          "Shark"
+         ],
+         "a": 0,
+         "audio": "561b64302a4c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A vida aquática: fish, turtle, crab, shark, sea, water. Repara que «fish» tem a mesma forma no singular e no plural.",
+        "exemplo": "«Fish live in water.» Um peixe é «a fish»; muitos peixes continuam «fish».",
+        "lembra": "Fish não leva -s no plural.",
+        "audio": "76381a5ffadf.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "O presente simples",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Ele estuda todos os dias» escreve-se:",
+         "options": [
+          "He studies every day",
+          "He study every day",
+          "He studying every day"
+         ],
+         "a": 0,
+         "audio": "dbe4207879be.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «ela não trabalha aqui»?",
+         "options": [
+          "She does not work here",
+          "She not works here",
+          "She do not works here"
+         ],
+         "a": 0,
+         "audio": "ddc59c5d8152.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A pergunta «Tu gostas de peixe?» escreve-se:",
+         "options": [
+          "Do you like fish?",
+          "Does you like fish?",
+          "You do like fish?"
+         ],
+         "a": 0,
+         "audio": "3daffdd13b84.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No presente simples, com «he», «she» e «it», o verbo leva:",
+         "options": [
+          "Um -s no fim",
+          "Um -ed no fim",
+          "Nada de diferente"
+         ],
+         "a": 0,
+         "audio": "8a35d3655666.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O presente simples usa-se para hábitos e factos. Com «he», «she» e «it» o verbo leva -s no fim. A negativa faz-se com «do not» ou «does not», e aí o verbo volta à forma simples.",
+        "exemplo": "«He studies every day.» Negativa: «He does not study every day» — sem o -s, porque já está no «does».",
+        "lembra": "He, she, it: o verbo leva -s. Mas só na afirmativa.",
+        "audio": "05626d7d3ca6.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Transportes, lazer e desporto",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Os transportes",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se diz «autocarro» em inglês?",
+         "options": [
+          "Bus",
+          "Car",
+          "Train"
+         ],
+         "a": 0,
+         "audio": "2ca9d521fc0d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «bicicleta» em inglês?",
+         "options": [
+          "Bicycle",
+          "Motorbike",
+          "Boat"
+         ],
+         "a": 0,
+         "audio": "4854e4fd1408.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Vou à escola a pé» escreve-se:",
+         "options": [
+          "I walk to school",
+          "I go school by foot",
+          "I am walk to school"
+         ],
+         "a": 0,
+         "audio": "84328cf1756a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «comboio» em inglês?",
+         "options": [
+          "Train",
+          "Truck",
+          "Plane"
+         ],
+         "a": 0,
+         "audio": "6fdb8653d8db.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os transportes em inglês: bus, car, train, bicycle, boat, plane. Para dizer como se vai a algum lado usa-se «by» — by bus, by car — excepto a pé, que é «on foot» ou simplesmente «I walk».",
+        "exemplo": "«I go to school by bus.» «I walk to school.»",
+        "lembra": "A pé não leva «by»: diz-se «on foot».",
+        "audio": "aa84b658ea4d.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A comunicação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se diz «carta» em inglês?",
+         "options": [
+          "Letter",
+          "Number",
+          "Paper"
+         ],
+         "a": 0,
+         "audio": "f1f95b546ecf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «telemóvel» em inglês?",
+         "options": [
+          "Mobile phone",
+          "Television",
+          "Radio"
+         ],
+         "a": 0,
+         "audio": "197bd4955b8f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao atender o telefone em inglês, dizes:",
+         "options": [
+          "Hello",
+          "Goodbye",
+          "Please"
+         ],
+         "a": 0,
+         "audio": "940ae792af9a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Por favor» diz-se, em inglês:",
+         "options": [
+          "Please",
+          "Sorry",
+          "Thanks"
+         ],
+         "a": 0,
+         "audio": "5418160c0f31.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A comunicação: letter, mobile phone, radio, television, message. Ao telefone atende-se com «Hello». A cortesia faz-se com «please», «thank you» e «sorry».",
+        "exemplo": "«Hello, can I speak to Jorge, please?» — «Please» no fim transforma um pedido numa boa maneira.",
+        "lembra": "«Please» e «thank you» abrem mais portas do que o resto do vocabulário.",
+        "audio": "f83989048204.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Lazer e desporto",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se diz «futebol» em inglês britânico?",
+         "options": [
+          "Football",
+          "Handball",
+          "Baseball"
+         ],
+         "a": 0,
+         "audio": "2a1baba5e46d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eu gosto de música» escreve-se:",
+         "options": [
+          "I like music",
+          "I likes music",
+          "I am like music"
+         ],
+         "a": 0,
+         "audio": "70e98b2b238c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ele joga futebol ao sábado» escreve-se:",
+         "options": [
+          "He plays football on Saturday",
+          "He play football on Saturday",
+          "He playing football on Saturday"
+         ],
+         "a": 0,
+         "audio": "3889ffde7f6f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «nadar» em inglês?",
+         "options": [
+          "Swim",
+          "Run",
+          "Jump"
+         ],
+         "a": 0,
+         "audio": "b9fb7eb758d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «dançar» em inglês?",
+         "options": [
+          "Dance",
+          "Sing",
+          "Play"
+         ],
+         "a": 0,
+         "audio": "f602e77ae191.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Desporto e lazer: football, swim, run, dance, sing, play. Para gostos usa-se «I like» seguido do nome ou do verbo com -ing.",
+        "exemplo": "«I like music.» «He plays football on Saturday» — com -s, porque é «he».",
+        "lembra": "Em inglês britânico, futebol é «football».",
+        "audio": "2c0d1598b44c.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

@@ -2040,4 +2040,352 @@ MATERIA = {
         "exemplo": "Um vulcão levanta uma montanha em meses; a chuva demora milhares de anos a gastá-la. As duas forças trabalham sempre.",
         "lembra": "As quatro esferas estão ligadas: mexer numa mexe as outras.",
     },
+
+    # ---------------------------------------------------------------
+    # As seis disciplinas que fecham a 7a classe
+    #
+    # Biologia, Ingles, Educacao Visual, Educacao Fisica, Agropecuaria e
+    # TIC. Com estas, o plano de estudos da 7a fica coberto por inteiro:
+    # a Fisica, a Quimica e o Frances nao entram porque comecam na 8a.
+    # ---------------------------------------------------------------
+    "bio-7c:u1:n1": {
+        "explica": "A Biologia é a ciência da vida: estuda os seres vivos, como funcionam e como se relacionam. Divide-se em ramos — a Zoologia trata dos animais, a Botânica das plantas, a Citologia da célula e a Anatomia da forma do corpo.",
+        "exemplo": "A palavra vem do grego: «bios» é vida e «logos» é ciência. Ciência da vida.",
+        "lembra": "Cada ramo da Biologia olha para uma parte da mesma coisa: a vida.",
+    },
+    "bio-7c:u1:n2": {
+        "explica": "O método científico é a maneira de procurar respostas sem se enganar a si próprio: observa-se, levanta-se uma explicação possível, põe-se à prova com uma experiência e regista-se o que aconteceu — mesmo quando contraria o esperado.",
+        "exemplo": "Numa experiência, lê-se sempre o rótulo antes de mexer numa substância, e nunca se faz nada que não tenha sido autorizado.",
+        "lembra": "Observar, experimentar, registar. E aceitar o resultado.",
+    },
+    "bio-7c:u1:n3": {
+        "explica": "Primeiros socorros são os cuidados imediatos até chegar ajuda médica. Não substituem o hospital: ganham tempo. Num corte, lava-se com água e sabão; numa queimadura, arrefece-se com água corrente e não se rebentam as bolhas.",
+        "exemplo": "Se alguém engolir um produto tóxico, leva-se ao hospital com a embalagem: saber o que foi engolido é metade do tratamento.",
+        "lembra": "Socorrer é ganhar tempo até chegar quem sabe mais.",
+    },
+    "bio-7c:u2:n1": {
+        "explica": "A célula é a unidade básica de todos os seres vivos, e é pequena de mais para se ver a olho nu — daí o microscópio. A célula vegetal tem parede celular, que a animal não tem. O núcleo comanda o funcionamento.",
+        "exemplo": "O microscópio óptico usa luz e amplia centenas de vezes; o electrónico usa electrões e amplia muito mais.",
+        "lembra": "Parede celular: sinal de que a célula é vegetal.",
+    },
+    "bio-7c:u2:n2": {
+        "explica": "Classificar é arrumar os seres vivos em grupos que partilham características. Uns são unicelulares, feitos de uma só célula, como as bactérias; outros são pluricelulares. Os fungos não fazem fotossíntese: alimentam-se de matéria já formada.",
+        "exemplo": "Um cogumelo não é planta nem animal — é fungo, e por isso tem grupo próprio.",
+        "lembra": "Classificar não é ordenar por importância: é agrupar por parecença.",
+    },
+    "bio-7c:u2:n3": {
+        "explica": "As plantas fabricam o seu alimento por fotossíntese, usando luz, água e dióxido de carbono, e libertam oxigénio. Os animais dividem-se em vertebrados, que têm coluna, e invertebrados, que não têm.",
+        "exemplo": "A minhoca e a formiga são invertebrados; o peixe, a cobra e o cabrito são vertebrados.",
+        "lembra": "As plantas dão-nos o oxigénio que respiramos.",
+    },
+    "bio-7c:u3:n1": {
+        "explica": "Alimento é o que se come; nutriente é a substância que o corpo aproveita. Os hidratos de carbono dão energia, as proteínas constroem e reparam o corpo, e as vitaminas e os sais minerais fazem tudo funcionar.",
+        "exemplo": "A laranja e o limão são ricos em vitamina C. O feijão e o peixe dão proteínas. A mandioca e o milho dão energia.",
+        "lembra": "Comer variado é mais importante do que comer muito.",
+    },
+    "bio-7c:u3:n2": {
+        "explica": "Os alimentos estragam-se porque os micróbios crescem neles. Conservar é travar esse crescimento — secando, salgando, fumando ou arrefecendo. Todos estes métodos fazem o mesmo: tiram aos micróbios a água ou o calor de que precisam.",
+        "exemplo": "O peixe salgado dura semanas porque o sal lhe retira a água. Lavar as mãos antes de cozinhar evita levar micróbios à comida.",
+        "lembra": "Sem água e sem calor, o micróbio não se multiplica.",
+    },
+    "bio-7c:u3:n3": {
+        "explica": "A intoxicação alimentar acontece ao comer alimento estragado ou contaminado. Dá vómitos e diarreia, e o maior perigo não é a doença em si: é a desidratação que vem com ela, sobretudo nas crianças.",
+        "exemplo": "Quem tem diarreia deve beber muitos líquidos. Para evitar a cólera, bebe-se água fervida ou tratada.",
+        "lembra": "Com diarreia, o que salva é beber, não deixar de beber.",
+    },
+    "bio-7c:u4:n1": {
+        "explica": "A digestão começa na boca, onde os dentes cortam e trituram e a saliva começa a desfazer o alimento. A absorção dos nutrientes faz-se sobretudo no intestino delgado. Um adulto tem 32 dentes.",
+        "exemplo": "Os incisivos cortam, os caninos rasgam e os molares trituram. A cárie nasce dos restos de açúcar deixados entre os dentes.",
+        "lembra": "Mastigar bem é começar bem a digestão.",
+    },
+    "bio-7c:u4:n2": {
+        "explica": "O coração bombeia o sangue para todo o corpo. As artérias levam o sangue do coração para fora; as veias trazem-no de volta. Os glóbulos vermelhos transportam oxigénio e os brancos defendem o corpo.",
+        "exemplo": "Uma ferida infectada incha porque os glóbulos brancos acorreram ao local a combater os micróbios.",
+        "lembra": "Artérias saem, veias voltam.",
+    },
+    "bio-7c:u4:n3": {
+        "explica": "Ao inspirar entra ar rico em oxigénio; ao expirar sai ar com dióxido de carbono. As trocas fazem-se nos alvéolos pulmonares, sacos minúsculos onde o ar e o sangue quase se tocam. A imunidade é a defesa do corpo contra as doenças.",
+        "exemplo": "O fumo do tabaco destrói os alvéolos, e por isso quem fuma cansa-se mais depressa a subir escadas.",
+        "lembra": "Inspirar e expirar são os dois movimentos, e não um só.",
+    },
+    "bio-7c:u5:n1": {
+        "explica": "A adolescência é a passagem da infância para a idade adulta. O corpo muda, e muda em ritmos diferentes de pessoa para pessoa — isso é normal e não é doença. A higiene passa a ser mais importante, porque o corpo transpira mais.",
+        "exemplo": "Quem tem dúvidas sobre o próprio corpo deve falar com um adulto de confiança ou com um profissional de saúde.",
+        "lembra": "Cada corpo tem o seu ritmo. Não há atraso nem pressa.",
+    },
+    "bio-7c:u5:n2": {
+        "explica": "Um relacionamento saudável assenta em respeito mútuo: ninguém manda no outro e ninguém é pressionado. Dizer não é sempre uma resposta legítima, e procurar ajuda de um adulto não é fraqueza.",
+        "exemplo": "A gravidez precoce afecta a saúde e interrompe os estudos da rapariga, e é por isso que continuar a estudar abre mais escolhas.",
+        "lembra": "Quem gosta de ti respeita o teu não.",
+    },
+    "ing-7c:u1:n1": {
+        "explica": "Em inglês cumprimenta-se conforme a hora do dia: «good morning» de manhã, «good afternoon» de tarde e «good evening» ao fim do dia. Para se apresentar diz-se «I am» seguido do nome.",
+        "exemplo": "«Good morning! What is your name?» — «I am Amina.» Para se despedir: «Goodbye» ou «See you tomorrow».",
+        "lembra": "«Good night» é para ir dormir, não para chegar.",
+    },
+    "ing-7c:u1:n2": {
+        "explica": "Os números até vinte aprendem-se de cor, porque muitos não seguem regra. De países formam-se nacionalidades: Mozambique dá «Mozambican». Para perguntar a origem usa-se «Where are you from?».",
+        "exemplo": "Twelve é 12 e twenty é 20. Cuidado: «thirteen» é 13 e «thirty» é 30 — a diferença está no fim da palavra.",
+        "lembra": "-teen é adolescente do número: treze a dezanove.",
+    },
+    "ing-7c:u1:n3": {
+        "explica": "Na escola há «classroom», «library» e «playground». Para as horas pergunta-se «What time is it?». Os dias da semana escrevem-se sempre com letra grande em inglês, ao contrário do português.",
+        "exemplo": "O plural faz-se quase sempre com -s: book dá books. Monday é segunda-feira e Sunday é domingo.",
+        "lembra": "Em inglês, os dias da semana levam maiúscula.",
+    },
+    "ing-7c:u2:n1": {
+        "explica": "Os nomes da família em inglês: mother, father, brother, sister, son, daughter. Os avós formam-se com «grand-»: grandmother e grandfather.",
+        "exemplo": "«This is my brother» — este é o meu irmão. «She is my grandmother» — ela é a minha avó.",
+        "lembra": "«Grand-» à frente transforma pai em avô.",
+    },
+    "ing-7c:u2:n2": {
+        "explica": "Os possessivos dizem de quem é a coisa e vêm antes do nome: my, your, his, her, its, our, their. Ao contrário do português, não mudam com o plural do objecto.",
+        "exemplo": "«My book» e «my books» — o possessivo não muda. «His book» é dele; «her book» é dela.",
+        "lembra": "His é dele, her é dela. O sexo é de quem tem, não do que se tem.",
+    },
+    "ing-7c:u2:n3": {
+        "explica": "O verbo «to be» muda com a pessoa: I am, you are, he/she/it is, we/you/they are. A negativa faz-se juntando «not», e a pergunta trocando a ordem.",
+        "exemplo": "«She is my friend.» Negativa: «She is not my friend.» Pergunta: «Is she your friend?»",
+        "lembra": "Para perguntar com «to be», o verbo vai à frente.",
+    },
+    "ing-7c:u3:n1": {
+        "explica": "As partes do corpo em inglês: head, eyes, ears, mouth, arm, hand, leg, foot. Alguns plurais são irregulares: foot dá feet, e tooth dá teeth.",
+        "exemplo": "«I have two hands and two feet.» Repara: não é «foots».",
+        "lembra": "Foot dá feet, tooth dá teeth. São dos poucos assim.",
+    },
+    "ing-7c:u3:n2": {
+        "explica": "Para falar de saúde usa-se «I am sick» ou «I have a…». As dores formam-se com «-ache»: headache é dor de cabeça, toothache dor de dentes.",
+        "exemplo": "«I have a headache.» Alimentos: water, milk, bread, fruit, meat, fish.",
+        "lembra": "«-ache» no fim da palavra quer dizer dor.",
+    },
+    "ing-7c:u3:n3": {
+        "explica": "Para dizer que existe alguma coisa usa-se «there is» para o singular e «there are» para o plural. As divisões da casa: kitchen, bedroom, bathroom, living room.",
+        "exemplo": "«There is a table in the kitchen.» «There are three chairs.»",
+        "lembra": "Um: there is. Mais do que um: there are.",
+    },
+    "ing-7c:u4:n1": {
+        "explica": "Vocabulário da natureza: tree, grass, flower, river, lake, forest, rubbish. Para dar uma ordem negativa usa-se «Do not» seguido do verbo.",
+        "exemplo": "«Do not throw rubbish on the ground.» — não deites lixo no chão.",
+        "lembra": "Ordem negativa em inglês começa sempre por «Do not».",
+    },
+    "ing-7c:u4:n2": {
+        "explica": "A vida aquática: fish, turtle, crab, shark, sea, water. Repara que «fish» tem a mesma forma no singular e no plural.",
+        "exemplo": "«Fish live in water.» Um peixe é «a fish»; muitos peixes continuam «fish».",
+        "lembra": "Fish não leva -s no plural.",
+    },
+    "ing-7c:u4:n3": {
+        "explica": "O presente simples usa-se para hábitos e factos. Com «he», «she» e «it» o verbo leva -s no fim. A negativa faz-se com «do not» ou «does not», e aí o verbo volta à forma simples.",
+        "exemplo": "«He studies every day.» Negativa: «He does not study every day» — sem o -s, porque já está no «does».",
+        "lembra": "He, she, it: o verbo leva -s. Mas só na afirmativa.",
+    },
+    "ing-7c:u5:n1": {
+        "explica": "Os transportes em inglês: bus, car, train, bicycle, boat, plane. Para dizer como se vai a algum lado usa-se «by» — by bus, by car — excepto a pé, que é «on foot» ou simplesmente «I walk».",
+        "exemplo": "«I go to school by bus.» «I walk to school.»",
+        "lembra": "A pé não leva «by»: diz-se «on foot».",
+    },
+    "ing-7c:u5:n2": {
+        "explica": "A comunicação: letter, mobile phone, radio, television, message. Ao telefone atende-se com «Hello». A cortesia faz-se com «please», «thank you» e «sorry».",
+        "exemplo": "«Hello, can I speak to Jorge, please?» — «Please» no fim transforma um pedido numa boa maneira.",
+        "lembra": "«Please» e «thank you» abrem mais portas do que o resto do vocabulário.",
+    },
+    "ing-7c:u5:n3": {
+        "explica": "Desporto e lazer: football, swim, run, dance, sing, play. Para gostos usa-se «I like» seguido do nome ou do verbo com -ing.",
+        "exemplo": "«I like music.» «He plays football on Saturday» — com -s, porque é «he».",
+        "lembra": "Em inglês britânico, futebol é «football».",
+    },
+    "ev-7c:u1:n1": {
+        "explica": "A Arte é uma forma de o ser humano se exprimir e comunicar. Toma muitas formas: arquitectura, escultura, pintura, cerâmica, música, dança. Em Moçambique, muita arte vive dentro do quotidiano — nas cerimónias, nos objectos, nas casas.",
+        "exemplo": "A cerâmica trabalha a argila; a escultura, a madeira ou a pedra; a arquitectura concebe os espaços onde se vive.",
+        "lembra": "A Arte não copia o mundo: diz alguma coisa sobre ele.",
+    },
+    "ev-7c:u1:n2": {
+        "explica": "Moçambique tem artistas conhecidos dentro e fora do país. Malangatana Valente Ngwenya na pintura, Alberto Chissano na escultura, Reinata Sadimba na cerâmica e José Forjaz na arquitectura.",
+        "exemplo": "As telas de Malangatana são reconhecíveis pelas figuras densas e pelas cores fortes.",
+        "lembra": "Cada artista trabalha um material — e o material molda a obra.",
+    },
+    "ev-7c:u2:n1": {
+        "explica": "O suporte é aquilo sobre que se trabalha; o material é aquilo com que se trabalha. Um caderno de esboços serve para registar ideias, e um godê para preparar tintas. Muito material bom vem do que se ia deitar fora.",
+        "exemplo": "Tampas de plástico iguais coladas num cartão fazem um godê. Um cartão resistente faz capa de caderno.",
+        "lembra": "Antes de comprar material, olha para o que já existe.",
+    },
+    "ev-7c:u2:n2": {
+        "explica": "Um quadro em relevo tem partes salientes que se sentem ao toque. Uma composição é realística se representa objectos reconhecíveis, e abstracta se não representa. A segurança vale sempre: local arejado e ferramentas arrumadas.",
+        "exemplo": "Recortam-se formas em cartão, colam-se sobre o suporte e obtém-se relevo sem precisar de esculpir nada.",
+        "lembra": "Abstracto não é mal feito: é outra intenção.",
+    },
+    "ev-7c:u3:n1": {
+        "explica": "Nos materiais de expressão gráfica distinguem-se os suportes — papel, cartolina, parede, quadro — dos riscadores — lápis, esferográfica, carvão, giz, marcador. Escolher bem depende do resultado que se quer.",
+        "exemplo": "O carvão dá traço intenso e esbate-se com o dedo; a esferográfica dá traço fino e não se apaga.",
+        "lembra": "Suporte é onde se desenha; riscador é com que se desenha.",
+    },
+    "ev-7c:u3:n2": {
+        "explica": "As técnicas gráficas mudam o resultado com o mesmo material. O desenho de observação faz-se com o objecto à frente; o pontilhismo constrói a imagem com pontos; a pintura soprada espalha a tinta com o sopro. A técnica mista combina várias.",
+        "exemplo": "Num painel colectivo, cada aluno trabalha uma parte e o conjunto forma uma obra só.",
+        "lembra": "Experimenta antes de escolher: é assim que se descobre a técnica certa.",
+    },
+    "ev-7c:u4:n1": {
+        "explica": "A comunicação visual transmite mensagens por imagens, sinais e símbolos, sem precisar de palavras. Um ícone parece-se com o que representa; um símbolo representa por convenção. Um bom código visual entende-se à primeira.",
+        "exemplo": "Um sinal de trânsito diz o que fazer em silêncio e a quem passa depressa. É comunicação visual a funcionar.",
+        "lembra": "Se é preciso explicar o símbolo, o símbolo falhou.",
+    },
+    "ev-7c:u4:n2": {
+        "explica": "Um cartaz tem pouco texto, imagem forte e letra legível ao longe. A banda desenhada conta uma história por vinhetas — os quadrados — e põe a fala das personagens dentro de balões.",
+        "exemplo": "Um cartaz sobre igualdade de género serve para fazer pensar e mudar comportamentos, e não só para decorar a parede.",
+        "lembra": "Cartaz lê-se de longe e em poucos segundos.",
+    },
+    "ev-7c:u5:n1": {
+        "explica": "O desenho geométrico representa objectos com rigor e medidas. A normalização é o conjunto de regras que faz com que toda a gente leia o desenho da mesma maneira: esquadria a delimitar a folha e legenda a identificar o trabalho.",
+        "exemplo": "A esquadria é a moldura traçada junto às margens; a legenda vai no canto inferior direito.",
+        "lembra": "Normalizar é combinar regras para todos se entenderem.",
+    },
+    "ev-7c:u5:n2": {
+        "explica": "As letras e os algarismos do desenho técnico são simples, iguais entre si e fáceis de ler. Não são decoração: são informação, e um desenho mal escrito deixa de se poder executar.",
+        "exemplo": "Traça-se primeiro a esquadria, depois a legenda, e só então o desenho. A ordem evita ter de refazer.",
+        "lembra": "Num desenho técnico, a letra bonita é a letra clara.",
+    },
+    "edf-7c:u1:n1": {
+        "explica": "O aquecimento prepara músculos e articulações e reduz o risco de lesão; o retorno à calma baixa o ritmo aos poucos no fim. A água bebe-se em pequenas quantidades ao longo do esforço, e não toda de uma vez no fim.",
+        "exemplo": "Cinco minutos de corrida leve mais alguns alongamentos chegam para aquecer antes de uma aula.",
+        "lembra": "Nunca comeces a esforçar-te com o corpo frio.",
+    },
+    "edf-7c:u1:n2": {
+        "explica": "Na ginástica de solo trabalham-se rolamentos, equilíbrios e flexibilidade. O equilíbrio melhora com base de apoio mais larga e centro de gravidade mais baixo. A ajuda de um colega dá segurança e corrige o movimento.",
+        "exemplo": "No rolamento à frente apoiam-se as mãos e enrola-se a cabeça para dentro — nunca se apoia a cabeça no solo.",
+        "lembra": "Mais baixo e mais largo: é assim que não se cai.",
+    },
+    "edf-7c:u2:n1": {
+        "explica": "No atletismo há corridas de velocidade, de fundo, de barreiras e de estafetas. Na velocidade parte-se de blocos; no fundo gere-se o esforço; nas estafetas passa-se o testemunho dentro da zona marcada.",
+        "exemplo": "Quem corre uma prova longa ao máximo desde o início chega ao fim sem nada — gerir é parte da prova.",
+        "lembra": "Velocidade é explosão; fundo é gestão.",
+    },
+    "edf-7c:u2:n2": {
+        "explica": "O salto em comprimento tem quatro fases: corrida, chamada, voo e queda, e mede-se pela marca mais próxima da tábua. No lançamento do peso, o peso é empurrado a partir do ombro e nunca atirado.",
+        "exemplo": "Antes de qualquer lançamento, confirma-se que a zona de queda está livre. É a regra que evita o acidente.",
+        "lembra": "O peso empurra-se; não se atira.",
+    },
+    "edf-7c:u3:n1": {
+        "explica": "No andebol jogam sete por equipa: seis de campo e um guarda-redes. Com a bola na mão dão-se no máximo três passos, a área de baliza é só do guarda-redes, e jogar com o pé é falta.",
+        "exemplo": "Três passos, drible, mais três passos — é assim que se avança legalmente com a bola.",
+        "lembra": "Três passos com bola. Ao quarto, é falta.",
+    },
+    "edf-7c:u3:n2": {
+        "explica": "Os gestos base do andebol são o passe, a recepção, o drible e o remate. O passe de ombro leva a bola ao longe com precisão; o remate em suspensão faz-se com o corpo no ar, antes de tocar o solo.",
+        "exemplo": "Na defesa, o objectivo é impedir o remate e recuperar a bola — sem empurrar nem agarrar.",
+        "lembra": "Remate em suspensão: sai do chão antes de atirar.",
+    },
+    "edf-7c:u4:n1": {
+        "explica": "No futebol de onze cada equipa tem onze jogadores em campo, e só o guarda-redes toca a bola com as mãos dentro da sua área. Bola fora pela lateral recomeça com lançamento; o cartão vermelho expulsa.",
+        "exemplo": "Um jogador expulso não é substituído: a equipa fica a jogar com menos um.",
+        "lembra": "Amarelo avisa; vermelho manda sair.",
+    },
+    "edf-7c:u4:n2": {
+        "explica": "Os gestos base do futebol são o passe, a recepção, a condução e o remate. O passe curto e rasteiro faz-se com a parte interna do pé, que é a zona mais larga e mais precisa. A recepção amortece a bola em vez de a repelir.",
+        "exemplo": "Conduzir é levar a bola em corrida com toques curtos, e não chutá-la para a frente e correr atrás.",
+        "lembra": "Parte interna do pé: mais superfície, mais pontaria.",
+    },
+    "edf-7c:u5:n1": {
+        "explica": "As danças tradicionais moçambicanas preservam a cultura e juntam a comunidade. O Mapiko, dos Macondes, é uma das mais conhecidas. Dançar em grupo exige acompanhar o ritmo em conjunto, e não ser o mais rápido.",
+        "exemplo": "A dança desenvolve coordenação, ritmo e expressão — capacidades que servem em qualquer desporto.",
+        "lembra": "Numa dança de grupo, o ritmo é de todos.",
+    },
+    "edf-7c:u5:n2": {
+        "explica": "Os jogos educativos ensinam enquanto se joga: raciocínio, estratégia, cooperação. O desportivismo é aceitar o resultado e cumprimentar o adversário, tenha-se ganho ou perdido.",
+        "exemplo": "O ntxuva é um jogo tradicional moçambicano de tabuleiro, e treina o mesmo cálculo que a matemática pede.",
+        "lembra": "Se alguém se magoa, o jogo pára. Sempre.",
+    },
+    "agr-7c:u1:n1": {
+        "explica": "A agropecuária junta duas actividades: a agricultura, que cultiva plantas, e a pecuária, que cria animais. Em Moçambique é a base do sustento da maior parte das famílias, e é dela que depende a segurança alimentar do país.",
+        "exemplo": "Segurança alimentar quer dizer que todos têm acesso a alimento suficiente, seguro e ao longo de todo o ano.",
+        "lembra": "Agricultura cultiva; pecuária cria. Juntas, agropecuária.",
+    },
+    "agr-7c:u1:n2": {
+        "explica": "Há três sistemas agrários. Na subsistência produz-se para comer em casa; no de rendimento produz-se para vender; no agro-industrial produz-se em grande escala, com máquinas e ligação à indústria.",
+        "exemplo": "Cada cultura dá-se melhor numa região: é isso que explica o cajueiro no norte e o gado no sul.",
+        "lembra": "O que se planta depende do clima e do solo do lugar.",
+    },
+    "agr-7c:u2:n1": {
+        "explica": "Preparar o solo é deixar a terra solta, limpa e pronta a receber a semente. A lavoura revolve a terra e enterra as ervas. A queimada parece limpar depressa, mas destrói a matéria orgânica e empobrece o solo.",
+        "exemplo": "Um solo com muita matéria orgânica retém melhor a água e alimenta melhor a planta.",
+        "lembra": "Queimar limpa hoje e empobrece amanhã.",
+    },
+    "agr-7c:u2:n2": {
+        "explica": "As plantas propagam-se por semente — propagação sexuada — ou por partes da própria planta, como estacas, que é propagação vegetativa. O compasso é a distância entre plantas e entre linhas.",
+        "exemplo": "A mandioca planta-se por estaca do caule. Semear demasiado junto põe as plantas a competir por luz, água e nutrientes.",
+        "lembra": "O viveiro cria a planta pequena antes de ir para o campo.",
+    },
+    "agr-7c:u3:n1": {
+        "explica": "As práticas culturais são o trabalho depois da sementeira: sachar tira as ervas e areja o solo, regar dá água quando falta chuva, adubar devolve à terra o que a colheita levou.",
+        "exemplo": "Rega-se de manhã cedo ou ao fim da tarde: ao meio-dia grande parte da água evapora antes de chegar à raiz.",
+        "lembra": "As ervas daninhas comem o que era para a cultura.",
+    },
+    "agr-7c:u3:n2": {
+        "explica": "Uma praga é um organismo que ataca a cultura. Combate-se de várias maneiras, e nem todas envolvem veneno: a rotação de culturas quebra o ciclo de vida das pragas, e a consociação aproveita melhor o terreno.",
+        "exemplo": "Milho com feijão na mesma machamba protege o solo e aproveita o espaço melhor do que cada um sozinho.",
+        "lembra": "Pesticida usa-se com protecção e conforme o rótulo.",
+    },
+    "agr-7c:u4:n1": {
+        "explica": "Colher no ponto certo decide a qualidade e a conservação: cedo de mais, o produto não amadureceu; tarde de mais, começa a estragar-se. Depois de colhido, o grão tem de ser bem seco antes de guardado.",
+        "exemplo": "Guardar milho húmido dá bolor, e o bolor não estraga só uma parte: passa a toda a pilha.",
+        "lembra": "Perdas pós-colheita são colheita que se teve e se perdeu.",
+    },
+    "agr-7c:u4:n2": {
+        "explica": "Um bom celeiro é seco, arejado, levantado do chão e protegido de roedores. A semente que se guarda para a campanha seguinte escolhe-se entre os grãos maiores, sãos e bem secos.",
+        "exemplo": "O gorgulho é uma praga do grão já armazenado — ataca depois da colheita, e não no campo.",
+        "lembra": "Celeiro levantado do chão: sem humidade e sem ratos.",
+    },
+    "agr-7c:u5:n1": {
+        "explica": "A pecuária cria animais para obter carne, leite, ovos e outros produtos. Maneio é o conjunto de cuidados diários: alimentar, dar água, limpar, observar. A vacinação previne doenças, e um animal doente separa-se dos outros.",
+        "exemplo": "Observar os animais todos os dias é o que permite apanhar a doença no início, quando ainda se trata.",
+        "lembra": "Prevenir com vacina custa menos do que tratar depois.",
+    },
+    "agr-7c:u5:n2": {
+        "explica": "A avicultura cria aves. O galinheiro deve ser seco, arejado e limpo. As galinhas dividem-se em poedeiras, criadas para o ovo, e frangos de corte, criados para a carne. A doença de Newcastle é a principal ameaça.",
+        "exemplo": "Os patos precisam de água para nadar, e os perus são maiores e demoram mais tempo a crescer do que as galinhas.",
+        "lembra": "Galinheiro húmido é galinheiro doente.",
+    },
+    "tic-7c:u1:n1": {
+        "explica": "TIC quer dizer Tecnologias de Informação e Comunicação: o conjunto de meios que servem para tratar, guardar e transmitir informação. Computador, telemóvel, Internet e calculadora científica são todos dispositivos computacionais.",
+        "exemplo": "Antes das TIC, uma carta de Lichinga a Maputo demorava dias. Hoje a mesma mensagem chega em segundos.",
+        "lembra": "As TIC não criam informação: tratam-na e transmitem-na.",
+    },
+    "tic-7c:u1:n2": {
+        "explica": "Hardware é a parte física, aquilo em que se toca. Software são os programas, que dizem ao computador o que fazer. Os dispositivos de entrada dão informação à máquina; os de saída devolvem-na.",
+        "exemplo": "Teclado e rato são entrada; monitor e impressora são saída. O sistema operativo é o software que faz o resto funcionar.",
+        "lembra": "Se se pode tocar, é hardware.",
+    },
+    "tic-7c:u1:n3": {
+        "explica": "As regras ergonómicas evitam dores e lesões: ecrã à altura dos olhos, costas apoiadas, pausas regulares. O equipamento dura mais se estiver limpo e arejado, e quando morre vai para reciclagem própria.",
+        "exemplo": "O lixo electrónico tem metais que contaminam o solo, e por isso não vai no lixo comum nem se queima.",
+        "lembra": "Ecrã à altura dos olhos, a cerca de um braço.",
+    },
+    "tic-7c:u2:n1": {
+        "explica": "A Internet é uma rede mundial que liga computadores entre si. Liga-se por cabo ou sem fios, com Wi-Fi ou Bluetooth. O navegador é o programa que abre as páginas.",
+        "exemplo": "Nem tudo o que está na Internet é verdade. Antes de acreditar, verifica-se a fonte e compara-se com outras.",
+        "lembra": "Muitas partilhas não fazem uma coisa verdadeira.",
+    },
+    "tic-7c:u2:n2": {
+        "explica": "Dados pessoais são as informações que identificam uma pessoa, e têm dono. Publicar a fotografia de alguém sem lhe perguntar é violar a privacidade dessa pessoa, mesmo que a intenção seja boa.",
+        "exemplo": "Copiar um texto da Internet e apresentá-lo como teu chama-se plágio. Citar a fonte transforma o mesmo texto em pesquisa honesta.",
+        "lembra": "Se te ameaçarem em linha: guarda a prova e conta a um adulto.",
+    },
+    "tic-7c:u2:n3": {
+        "explica": "As TIC servem para aprender quando se usam com um objectivo. Plataformas de apoio, repositórios de partilha e até jogos ajudam — desde que a procura seja dirigida e não uma deriva sem fim.",
+        "exemplo": "A dama, o xadrez e o ntxuva desenvolvem raciocínio e estratégia, e são jogos que não precisam de electricidade.",
+        "lembra": "Procurar com objectivo é estudar; sem objectivo é passar o tempo.",
+    },
+    "tic-7c:u3:n1": {
+        "explica": "Uma senha protege tudo o que está na conta. Boa senha é longa, mistura letras, números e símbolos, não é uma data conhecida, e não se repete de serviço para serviço. E não se empresta.",
+        "exemplo": "«123456» é a pior senha que há. Serviços sérios nunca pedem a senha por mensagem — quem pede está a tentar enganar-te.",
+        "lembra": "A senha é como a chave de casa: não se empresta.",
+    },
+    "tic-7c:u3:n2": {
+        "explica": "Um vírus informático é um programa que danifica ou rouba dados. Protege-se instalando aplicações só de lojas oficiais, desligando o Bluetooth quando não é preciso, e fazendo cópias de segurança dos ficheiros.",
+        "exemplo": "Uma cópia de segurança é o que separa perder o telemóvel de perder o telemóvel e o trabalho todo.",
+        "lembra": "Cópia de segurança feita antes vale mais do que arrepender-se depois.",
+    },
+    "tic-7c:u3:n3": {
+        "explica": "As TIC aplicam-se a tudo. Na agricultura, para consultar o tempo e os preços; na saúde, para guardar registos e ligar unidades distantes; no comércio, para pagar pelo telemóvel sem ir ao banco.",
+        "exemplo": "STEM junta Ciências, Tecnologia, Engenharia e Matemática, e é aí que as TIC servem de ferramenta a todas as outras.",
+        "lembra": "A tecnologia não substitui quem sabe: dá-lhe alcance.",
+    },
 }
