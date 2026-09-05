@@ -1809,4 +1809,86 @@ MATERIA = {
         "lembra": "Directa: dobra uma, dobra a outra. Inversa: dobra uma, a "
                   "outra fica a metade.",
     },
+
+    # ---------------------------------------------------------------
+    # Portugues -- 7a classe  (1o ciclo do Ensino Secundario)
+    #
+    # As quinze unidades do INDE agrupadas em cinco por tipo de texto.
+    # Ver o cabecalho do tools/conteudo_por7c.py para a razao.
+    # ---------------------------------------------------------------
+    "por-7c:u1:n1": {
+        "explica": "Um texto normativo estabelece regras: diz o que se pode e o que não se pode fazer. O Regulamento Escolar é o exemplo mais próximo de ti. Organiza-se em artigos numerados e usa linguagem clara, formal e sem opiniões.",
+        "exemplo": "«Artigo 5 — O aluno deve chegar à escola cinco minutos antes do toque de entrada.» Diz o dever, e mais nada.",
+        "lembra": "Um regulamento manda ou proíbe; não conta nem opina.",
+    },
+    "por-7c:u1:n2": {
+        "explica": "O sujeito é quem pratica a acção. É simples quando tem um só núcleo e composto quando tem dois ou mais. As preposições — a, com, de — ligam palavras umas às outras.",
+        "exemplo": "«Os alunos chegaram cedo»: sujeito simples, o núcleo é «alunos». «A Amina e o Jorge estudam»: sujeito composto, dois núcleos.",
+        "lembra": "Conta os núcleos do sujeito: um é simples, dois ou mais é composto.",
+    },
+    "por-7c:u1:n3": {
+        "explica": "Formam-se palavras novas juntando pedaços a uma palavra que já existe: um prefixo antes, um sufixo depois. As formas de tratamento mudam consoante a pessoa a quem se fala.",
+        "exemplo": "De «feliz» faz-se «infeliz» (prefixo in-) e «felizmente» (sufixo -mente). Ao director escreve-se «o senhor director», e não «tu».",
+        "lembra": "Prefixo vem antes, sufixo vem depois.",
+    },
+    "por-7c:u2:n1": {
+        "explica": "O aviso comunica uma informação a muitas pessoas ao mesmo tempo. É curto, tem data e diz apenas o que é preciso saber. Costuma usar a passiva de se: «avisa-se», «comunica-se».",
+        "exemplo": "«Avisa-se toda a comunidade escolar de que as aulas recomeçam a 8 de Fevereiro. A Direcção, 2 de Fevereiro.»",
+        "lembra": "Um aviso sem data é um aviso que não serve.",
+    },
+    "por-7c:u2:n2": {
+        "explica": "O modo indicativo apresenta os factos como certos. Tem tempos: o presente para o que é agora, o pretérito para o que já foi, o futuro para o que há-de ser. O particípio passado acaba em -ado ou -ido.",
+        "exemplo": "Presente: «eu informo». Pretérito perfeito: «eu informei». Futuro: «eu informarei». Particípio passado: «informado».",
+        "lembra": "O indicativo conta o que é; não pede nem duvida.",
+    },
+    "por-7c:u2:n3": {
+        "explica": "Na voz activa o sujeito faz a acção; na voz passiva sofre-a. Para passar de uma à outra, o complemento directo passa a sujeito. Alguns verbos são irregulares e mudam de raiz ao conjugar.",
+        "exemplo": "Activa: «O secretário emitiu a declaração.» Passiva: «A declaração foi emitida pelo secretário.» Irregulares: eu vou, eu sou, eu ponho.",
+        "lembra": "Na passiva, quem fazia a acção fica no fim, com «por».",
+    },
+    "por-7c:u3:n1": {
+        "explica": "A notícia informa sobre um facto real e responde a cinco perguntas: o quê, quem, quando, onde e porquê. A linguagem é objectiva — o jornalista conta, não opina. O fait divers é uma notícia breve do dia-a-dia.",
+        "exemplo": "«Chuva forte cortou a estrada de Lichinga na madrugada de ontem, devido à cheia do rio.» Diz o quê, onde, quando e porquê.",
+        "lembra": "Se a notícia diz o que o autor sente, deixou de ser notícia.",
+    },
+    "por-7c:u3:n2": {
+        "explica": "Os complementos circunstanciais dizem as circunstâncias da acção: quando (tempo), onde (lugar), porquê (causa) e para quê (fim).",
+        "exemplo": "«A aula foi adiada ontem, na escola, por causa da chuva, para proteger os alunos»: tempo, lugar, causa e fim, por esta ordem.",
+        "lembra": "Pergunta quando, onde, porquê e para quê — a resposta é o complemento.",
+    },
+    "por-7c:u3:n3": {
+        "explica": "As conjunções coordenativas ligam orações do mesmo nível. As copulativas somam, as adversativas opõem e as conclusivas tiram uma conclusão.",
+        "exemplo": "Copulativa: «Estudou e passou.» Adversativa: «Estudou, mas faltou.» Conclusiva: «Estudou, logo passou.»",
+        "lembra": "«E» soma, «mas» opõe, «logo» conclui.",
+    },
+    "por-7c:u4:n1": {
+        "explica": "Os textos multiuso servem para aprender e consultar: manuais escolares, textos didácticos e científicos. Organizam-se com índice, títulos, esquemas e tabelas, e usam vocabulário rigoroso.",
+        "exemplo": "Para achar depressa a lição sobre o ciclo da água, vais ao índice em vez de folhear o livro todo.",
+        "lembra": "Num texto didáctico, o índice e os títulos são atalhos.",
+    },
+    "por-7c:u4:n2": {
+        "explica": "Os pronomes substituem ou acompanham o nome. Os demonstrativos situam, os possessivos dizem de quem é, os interrogativos perguntam e os indefinidos falam de alguém ou de algo que não se identifica.",
+        "exemplo": "Demonstrativo: «este livro». Possessivo: «o meu livro». Interrogativo: «quem chegou?». Indefinido: «alguém chegou».",
+        "lembra": "O pronome evita repetir o nome a toda a hora.",
+    },
+    "por-7c:u4:n3": {
+        "explica": "Os modos verbais dizem como se apresenta a acção. O indicativo dá o facto como certo, o imperativo dá uma ordem ou um pedido, e o conjuntivo exprime dúvida, desejo ou possibilidade.",
+        "exemplo": "Indicativo: «ele estuda». Imperativo: «estuda!» e «não estudes!». Conjuntivo: «espero que ele estude».",
+        "lembra": "Depois de «espero que» ou «talvez» vem o conjuntivo.",
+    },
+    "por-7c:u5:n1": {
+        "explica": "O conto narra uma história curta. A fábula também, mas as personagens costumam ser animais e termina com uma moral. O adjectivo flexiona em grau para comparar.",
+        "exemplo": "Comparativo de superioridade: «mais alta do que». De igualdade: «tão alta como». Superlativo absoluto: «altíssima» (sintético) ou «muito alta» (analítico).",
+        "lembra": "A fábula acaba sempre com uma lição.",
+    },
+    "por-7c:u5:n2": {
+        "explica": "Palavras homónimas escrevem-se e dizem-se igual, mas querem dizer coisas diferentes. Parónimas apenas se parecem. E compõem-se palavras juntando duas: por aglutinação, quando se perdem letras, ou por justaposição, quando não.",
+        "exemplo": "Homónimas: «canto» de cantar e «canto» da sala. Parónimas: «comprimento» e «cumprimento». Aglutinação: «passatempo». Justaposição: «guarda-chuva».",
+        "lembra": "Homónimas são iguais; parónimas só se parecem.",
+    },
+    "por-7c:u5:n3": {
+        "explica": "O texto dramático é escrito para ser representado: só tem as falas das personagens e as indicações de cena, chamadas didascálias. No discurso directo a personagem fala; no indirecto alguém conta o que ela disse.",
+        "exemplo": "Directo: «O Jorge disse: — Vou à escola.» Indirecto: «O Jorge disse que ia à escola.»",
+        "lembra": "Ao passar a indirecto, o travessão desaparece e entra o «que».",
+    },
 }

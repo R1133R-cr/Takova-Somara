@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o primário inteiro, e o primeiro degrau do secundário', () {
-    expect(c.cursos.length, 22);
+    expect(c.cursos.length, 23);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -91,12 +91,13 @@ void main() {
     //  1060  com a Educação Visual da 4ª classe (33 perguntas)
     //  1076  com os exercícios interactivos de Ciências (16)
     //  1150  com a Matemática da 7ª classe (74)
+    //  1219  com o Português da 7ª classe (69)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 1150);
+    expect(total, 1219);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {
@@ -164,6 +165,31 @@ void main() {
     expect(mat7.fonte, contains('INDE'));
     expect(mat7.fonte, contains('programa'),
         reason: 'tem de dizer que é um programa e não um livro do aluno');
+  });
+
+  test('nenhum enunciado manda olhar para o que não está lá', () {
+    // Escrevi uma pergunta que dizia "a expressão sublinhada indica:" — e
+    // a app não sublinha nada. Num livro há sublinhados, negritos e setas;
+    // aqui há uma linha de texto e três opções. Uma pergunta que aponta
+    // para uma marca que não existe é impossível de responder, e não há
+    // maneira de a criança perceber que o erro não é dela.
+    final apontam = <String>[];
+    final padrao = RegExp(
+      r'(sublinhad[oa]s?|a negrito|em negrito|assinalad[oa]s?|'
+      r'destacad[oa]s?|na figura acima|no quadro acima)',
+      caseSensitive: false,
+    );
+    for (final curso in c.cursos) {
+      for (final u in curso.units) {
+        for (final n in u.niveis) {
+          for (final q in n.questoes) {
+            if (padrao.hasMatch(q.q)) apontam.add('${curso.id}: ${q.q}');
+          }
+        }
+      }
+    }
+    expect(apontam, isEmpty,
+        reason: 'a pergunta aponta para uma marca que o ecrã não mostra');
   });
 
   test('dentro de uma classe, cada enunciado é único', () {
