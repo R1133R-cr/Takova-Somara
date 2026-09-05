@@ -3,8 +3,24 @@
 Porque e que isto existe
 ------------------------
 O conteudo da Somara sai dos manuais escolares moçambicanos, e sao 30 PDFs.
-Esta maquina nao tem `pdftoppm`, nem `pypdf`, nem pip para os instalar -- o
-Python e uma versao embutida. Sem isto nao ha como ler um livro.
+Quando isto foi escrito, a maquina nao tinha `pdftoppm`, nem `pypdf`, nem
+pip para os instalar -- o Python era uma versao embutida.
+
+DEIXOU DE SER VERDADE. A maquina passou a ter Python completo com pip, e
+o `pdftotext` esta na PATH:
+
+    pdftotext -layout livro.pdf saida.txt
+    pdftotext -layout -f 10 -l 40 livro.pdf so_essas_paginas.txt
+
+Usa o `pdftotext` primeiro. Le coisas que isto nao le, e a diferenca nao e
+de comodidade: os programas do INDE (2024) guardam o texto como NUMEROS DE
+GLIFO de fontes de subconjunto, e nao como letras. `<0033><0055>` e "Pr", e
+so a tabela embutida em cada fonte o diz -- sao oito fontes num ficheiro,
+cada uma com a sua numeracao, e nenhuma com a tabela completa. Este
+ficheiro devolve lixo nesses PDF, e devolve-o em silencio.
+
+Isto fica para o que ainda serve: um PDF que guarde o texto entre
+parentesis, quando nao se quiser sair do Python.
 
 Como funciona
 -------------
