@@ -376,5 +376,29 @@ class Seculos(unittest.TestCase):
             self.assertEqual(para_dizer(palavra), palavra)
 
 
+
+class Escalas(unittest.TestCase):
+    """"escala 1:100 000" le-se "escala um para cem mil".
+
+    Os dois pontos de uma escala nao tem espacos a volta, e por isso a
+    regra da divisao nao lhes toca. O que sobrava era uma leitura a sorte.
+    Ancorada na palavra "escala", como a dos seculos.
+    """
+
+    def test_a_escala_le_se_para(self):
+        self.assertEqual(para_dizer('Numa escala 1:100 000'),
+                         'Numa escala 1 para 100 000')
+        self.assertEqual(para_dizer('à escala 1:100'), 'à escala 1 para 100')
+
+    def test_duas_escalas_na_mesma_frase(self):
+        self.assertEqual(
+            para_dizer('escala 1:25 000 e escala 1:500 000'),
+            'escala 1 para 25 000 e escala 1 para 500 000')
+
+    def test_dois_pontos_sem_escala_ficam_como_estavam(self):
+        self.assertEqual(para_dizer('Nota: 5 pontos'), 'Nota: 5 pontos')
+        self.assertIn('a dividir por', para_dizer('48 : 6 = 8'))
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

@@ -101,6 +101,28 @@ _SECULO = re.compile(
 )
 
 
+# As escalas dos mapas: "escala 1:100 000" lê-se "escala um para cem mil".
+#
+# Sem isto os dois pontos ficavam à mercê do que a voz quisesse — a regra
+# da divisão não lhes toca (não têm espaços à volta), e o que sobra é uma
+# leitura à sorte: "um, cem mil", ou uma hora e tal.
+#
+# Ancorada na palavra "escala", pela mesma razão dos séculos: assim não há
+# risco de apanhar dois pontos que sejam pontuação.
+_ESCALA = re.compile(
+    r'\b(escalas?)\s+(\d[\d\s]*?)\s*:\s*(\d[\d\s]*\d|\d)',
+    re.IGNORECASE,
+)
+
+
+def dizer_escalas(texto: str) -> str:
+    """"escala 1:100 000" -> "escala 1 para 100 000"."""
+    return _ESCALA.sub(
+        lambda m: f'{m.group(1)} {m.group(2).strip()} para {m.group(3).strip()}',
+        texto,
+    )
+
+
 def dizer_seculos(texto: str) -> str:
     """"século IX" -> "século nono"; "séculos XV-XVIII" -> por extenso."""
     def um(m):
@@ -412,6 +434,9 @@ def para_dizer(texto: str) -> str:
     # foi dito por extenso e não chega à regra solta, e o "XVII" — que não
     # está na lista — também sai.
     fora = dizer_seculos(fora)
+    # As escalas antes dos sinais, para os dois pontos saírem como "para" e
+    # não caírem na regra da divisão nem ficarem por dizer.
+    fora = dizer_escalas(fora)
     # As mais compridas primeiro: sem isso, o XX comia o inicio do XIX.
     for sigla in sorted(SOLETRAR, key=len, reverse=True):
         fora = re.sub(rf'\b{sigla}\b', soletrar(sigla), fora)

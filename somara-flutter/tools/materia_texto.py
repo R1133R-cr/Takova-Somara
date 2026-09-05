@@ -1958,4 +1958,86 @@ MATERIA = {
         "exemplo": "No Mali, Timbuctu tornou-se centro de comércio e de estudo. Mansa Musa ficou célebre pela enorme riqueza do seu império. O Songhai teve capital em Gao.",
         "lembra": "Ouro para norte, sal para sul: era esse o negócio do Saara.",
     },
+
+    # ---------------------------------------------------------------
+    # Geografia -- 7a classe  (1o ciclo do Ensino Secundario)
+    #
+    # Com esta, a Geografia separa-se das Ciencias Sociais: da 4a a 6a
+    # classe vem la dentro, junto com a Historia.
+    # ---------------------------------------------------------------
+    "geo-7c:u1:n1": {
+        "explica": "A Geografia estuda a Terra e a relação entre o Homem e o espaço onde vive. Tem dois grandes ramos: a Física, que trata do relevo, do clima, dos rios e dos solos, e a Humana, que trata da população e do que ela faz.",
+        "exemplo": "Estudar onde chove mais é Geografia Física. Estudar porque é que as pessoas se mudam para a cidade é Geografia Humana.",
+        "lembra": "Física: a Terra. Humana: as pessoas na Terra.",
+    },
+    "geo-7c:u1:n2": {
+        "explica": "A Geografia não trabalha sozinha. Apoia-se na História para saber o passado dos lugares, na Geologia para as rochas, na Cartografia para os mapas, na Climatologia para os climas e na Demografia para as populações.",
+        "exemplo": "Para explicar porque é que uma cidade cresceu naquele sítio, é preciso saber o relevo, o rio, e também a História de quem lá chegou primeiro.",
+        "lembra": "Cada ciência vizinha responde a uma parte da pergunta.",
+    },
+    "geo-7c:u2:n1": {
+        "explica": "Para localizar um ponto da Terra usam-se linhas imaginárias. Os paralelos são círculos paralelos ao Equador; os meridianos vão de polo a polo. A latitude mede a distância ao Equador; a longitude, a Greenwich.",
+        "exemplo": "O Equador é o paralelo de 0 graus. Moçambique é atravessado pelo trópico de Capricórnio, a sul do Equador.",
+        "lembra": "Latitude conta a partir do Equador; longitude, de Greenwich.",
+    },
+    "geo-7c:u2:n2": {
+        "explica": "A Terra representa-se de três maneiras. O globo não deforma as formas, mas mostra pouco e não se transporta. O mapa cabe numa folha e mostra mais, mas deforma. A planta representa uma área pequena com muito pormenor.",
+        "exemplo": "Um mapa tem sempre título, legenda, escala e orientação. A legenda diz o que significam as cores e os símbolos.",
+        "lembra": "Um mapa sem legenda e sem escala não se lê.",
+    },
+    "geo-7c:u2:n3": {
+        "explica": "A escala diz quantas vezes o mapa é menor do que a realidade. Quanto menor o segundo número, maior o pormenor. E as paisagens dividem-se em naturais, onde o Homem quase não interveio, e humanizadas, que podem ser rurais ou urbanas.",
+        "exemplo": "Numa escala 1:100 000, 1 cm no mapa é 100 000 cm na realidade, ou seja 1 km. Uma machamba é paisagem humanizada rural.",
+        "lembra": "Escala pequena, muito terreno e pouco pormenor.",
+    },
+    "geo-7c:u3:n1": {
+        "explica": "O Universo é tudo o que existe. A explicação mais aceite para a sua origem é a teoria do Big Bang. É feito de galáxias, que são enormes conjuntos de estrelas, gás e poeira. As estrelas têm luz própria; os planetas e os satélites não.",
+        "exemplo": "A nossa galáxia chama-se Via Láctea. O Sol é uma estrela; a Terra é um planeta; a Lua é um satélite.",
+        "lembra": "Estrela brilha por si; planeta só reflecte.",
+    },
+    "geo-7c:u3:n2": {
+        "explica": "O Sistema Solar tem o Sol no centro e oito planetas a girar à volta dele. Pela ordem, a contar do Sol: Mercúrio, Vénus, Terra, Marte, Júpiter, Saturno, Úrano e Neptuno.",
+        "exemplo": "A Terra é o terceiro planeta a contar do Sol. Júpiter é o maior de todos.",
+        "lembra": "Oito planetas, e a Terra é o terceiro.",
+    },
+    "geo-7c:u3:n3": {
+        "explica": "A Terra tem dois movimentos. A rotação é a volta sobre si mesma, demora cerca de 24 horas e dá o dia e a noite. A translação é a volta ao Sol, demora cerca de 365 dias e, com a inclinação do eixo, dá as estações do ano.",
+        "exemplo": "É por a Terra rodar que o Sol parece nascer a este e pôr-se a oeste. Não é o Sol que anda: somos nós.",
+        "lembra": "Rotação: dia e noite. Translação: as estações.",
+    },
+    "geo-7c:u4:n1": {
+        "explica": "A atmosfera é a camada de ar que envolve a Terra. É feita sobretudo de azoto e de oxigénio, e divide-se em camadas. A mais baixa é a troposfera, onde acontecem as nuvens, a chuva e o vento.",
+        "exemplo": "Na estratosfera fica a camada de ozono, que trava os raios ultravioleta do Sol. Sem ela, o risco de cancro da pele aumenta.",
+        "lembra": "O tempo faz-se na troposfera, a camada de baixo.",
+    },
+    "geo-7c:u4:n2": {
+        "explica": "Tempo é o estado da atmosfera num momento; clima é o que se repete ao longo de muitos anos. Os elementos do clima medem-se — temperatura, precipitação. Os factores explicam-no: latitude, altitude, continentalidade e correntes marítimas.",
+        "exemplo": "«Hoje chove» é tempo. «Aqui chove de Novembro a Março» é clima. A chuva mede-se com o pluviómetro.",
+        "lembra": "Elemento mede-se; factor explica.",
+    },
+    "geo-7c:u4:n3": {
+        "explica": "Pela latitude, a Terra divide-se em zonas bioclimáticas: a intertropical, entre os dois trópicos; as temperadas, entre os trópicos e os círculos polares; e as frias, dos círculos polares aos polos.",
+        "exemplo": "Moçambique fica na zona intertropical, e por isso tem temperaturas altas todo o ano e uma época de chuvas.",
+        "lembra": "Quanto mais longe do Equador, mais frio.",
+    },
+    "geo-7c:u5:n1": {
+        "explica": "A hidrosfera é o conjunto das águas do planeta, e ocupa cerca de 71 por cento da superfície. As águas do mar mexem-se de três maneiras: ondas, feitas pelo vento; marés, pela atracção da Lua e do Sol; e correntes marítimas.",
+        "exemplo": "Moçambique é banhado pelo oceano Índico, ao longo de quase 2 700 km de costa.",
+        "lembra": "Ondas, vento. Marés, Lua. São coisas diferentes.",
+    },
+    "geo-7c:u5:n2": {
+        "explica": "Um rio nasce na nascente e desagua na foz; um rio que desagua noutro é um afluente. A água anda em ciclo: evapora, condensa em nuvens, cai em precipitação e volta ao mar pelos rios ou infiltra-se no solo.",
+        "exemplo": "O maior lago de Moçambique é o Niassa. O Zambeze é o maior rio que atravessa o país.",
+        "lembra": "Evaporar, condensar, precipitar: o ciclo não pára.",
+    },
+    "geo-7c:u5:n3": {
+        "explica": "A litosfera é a parte sólida. Por dentro, a Terra tem crusta, manto e núcleo. As rochas são de três tipos: magmáticas, do magma arrefecido; sedimentares, de sedimentos acumulados; e metamórficas, transformadas pelo calor.",
+        "exemplo": "O granito é magmático, o arenito é sedimentar e o mármore é metamórfico. O solo nasce da alteração das rochas mais a matéria orgânica.",
+        "lembra": "Crusta, manto, núcleo — de fora para dentro.",
+    },
+    "geo-7c:u5:n4": {
+        "explica": "O relevo é feito e desfeito ao mesmo tempo. Os agentes internos — sismos e vulcões — constroem; os externos — a água, o vento, o gelo — desgastam. A biosfera é o conjunto de todos os seres vivos, e depende das outras três esferas.",
+        "exemplo": "Um vulcão levanta uma montanha em meses; a chuva demora milhares de anos a gastá-la. As duas forças trabalham sempre.",
+        "lembra": "As quatro esferas estão ligadas: mexer numa mexe as outras.",
+    },
 }
