@@ -702,12 +702,17 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
         TecladoNumerico(
           activo: fase == Fase.responder,
           aoDigito: (d) {
-            // Cinco algarismos chegam: a maior resposta do curriculo tem
-            // quatro, e sem travao a crianca podia encher a caixa a brincar.
+            // O travao esteve em cinco algarismos, com a justificacao de
+            // que a maior resposta do curriculo tinha quatro. Deixou de ser
+            // verdade sem ninguem dar por isso: tres perguntas da 4a classe
+            // respondem 100000, e essas tres nao se conseguiam responder.
+            // Cinquenta e um tecto que nenhuma resposta escolar atinge, e
+            // serve so para a caixa nao crescer sem fim a brincar. O que a
+            // torna legivel e o mostrador, que agrupa os milhares e encolhe.
             // O sinal nao conta para o travao — senao um numero negativo
             // ficava com menos um algarismo do que um positivo.
             final algarismos = _input.text.replaceAll('-', '').length;
-            if (algarismos >= 5) return;
+            if (algarismos >= 50) return;
             setState(() => _input.text = '${_input.text}$d');
           },
           aoApagar: () {

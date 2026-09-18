@@ -150,8 +150,8 @@ class JoguinhosScreen extends StatelessWidget {
         _CartaoDoJogo(
           titulo: 'Water R Sort',
           descricao:
-              'Despeja os líquidos até cada frasco ficar com uma cor só. '
-              'Pensa duas jogadas à frente.',
+              'Arrasta ou toca para despejar os líquidos até cada frasco '
+              'ficar com uma cor só. Pensa duas jogadas à frente.',
           // Este não leva o Roby: leva o frasco, que é o que se vê lá
           // dentro e o que o distingue dos outros à primeira vista.
           icone: Icons.science_rounded,

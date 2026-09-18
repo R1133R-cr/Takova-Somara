@@ -97,6 +97,24 @@ class Frasco {
   Frasco comBlocos(List<CorDoLiquido> novos) => Frasco(novos, altura);
 }
 
+/// O que custa, em ouro, cada ajuda dentro do jogo.
+///
+/// A escala é a da loja: cinco minutos de jogo custam 20 GC, e uma lição
+/// rende entre 5 e 15. Um frasco extra é metade de uma lição; saltar um
+/// nível inteiro custa duas ou três — tem de doer um bocadinho, senão o
+/// jogo passa a ser uma escadaria que se sobe a pagar.
+///
+/// O Desfazer tem três de graça em cada nível antes de custar. Cobrar logo
+/// o primeiro era deixar presa, e sem saída, a criança que empancou e não
+/// tem ouro nenhum.
+class PrecoNosFrascos {
+  static const frascoExtra = 10;
+  static const maximoDeExtras = 2;
+  static const desfazeresGratis = 3;
+  static const desfazer = 1;
+  static const saltar = 30;
+}
+
 /// Uma jogada: quantos blocos passam de um frasco para outro.
 typedef Despejo = ({int de, int para, int quantos, CorDoLiquido cor});
 
@@ -151,6 +169,16 @@ class Frascos {
     novos[para] = b.comBlocos([...b.blocos, ...List.filled(n, cor)]);
     return Frascos(frascos: novos, nivel: nivel, params: params);
   }
+
+  /// A mesa com mais um frasco vazio ao lado. É o que se compra com ouro.
+  ///
+  /// Os parâmetros ficam os mesmos de propósito: o nível continua a ser o
+  /// nível; o que muda é a folga que a criança pagou para ter.
+  Frascos comFrascoVazio() => Frascos(
+        frascos: [...frascos, Frasco.vazio(params.altura)],
+        nivel: nivel,
+        params: params,
+      );
 
   /// Há alguma jogada por fazer? Sem isto, um tabuleiro empancado ficava a
   /// olhar para a criança sem lhe dizer que já não há nada a fazer.

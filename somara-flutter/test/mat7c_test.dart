@@ -158,7 +158,8 @@ void main() {
       await tester.pump();
       await tester.tap(find.text('+/−'));
       await tester.pump();
-      expect(find.text('-5'), findsOneWidget);
+      // O mostrador escreve o menos tipográfico, não o hífen da tecla.
+      expect(find.text('−5'), findsOneWidget);
       await tester.tap(find.text('+/−'));
       await tester.pump();
       expect(find.text('5'), findsWidgets);

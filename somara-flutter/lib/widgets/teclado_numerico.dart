@@ -148,13 +148,36 @@ class MostradorDoNumero extends StatelessWidget {
       borderRadius: BorderRadius.circular(S.rMd),
     ),
     alignment: Alignment.center,
-    child: Text(
-      valor.isEmpty ? '?' : valor,
-      style: TextStyle(
-        fontSize: 30,
-        fontWeight: FontWeight.w800,
-        color: valor.isEmpty ? S.txMut : (erro ? S.life : S.tx),
+    // Encolhe em vez de transbordar: um numero de vinte algarismos nao cabe
+    // a tamanho 30 num telemovel de 320, e sair pela borda fora e pior do
+    // que ficar mais pequeno.
+    child: FittedBox(
+      fit: BoxFit.scaleDown,
+      child: Text(
+        valor.isEmpty ? '?' : agrupar(valor),
+        maxLines: 1,
+        style: TextStyle(
+          fontSize: 30,
+          fontWeight: FontWeight.w800,
+          color: valor.isEmpty ? S.txMut : (erro ? S.life : S.tx),
+        ),
       ),
     ),
   );
+
+  /// "100000" mostra-se "100 000", e "-5" mostra-se "−5".
+  ///
+  /// So para mostrar: o que se compara com a resposta certa e o texto cru.
+  /// Os milhares separam-se por um espaco fino, como se escreve nas escolas
+  /// mocambicanas, e o sinal e o de menos tipografico e nao o hifen.
+  static String agrupar(String cru) {
+    final negativo = cru.startsWith('-');
+    final algarismos = negativo ? cru.substring(1) : cru;
+    final b = StringBuffer();
+    for (var i = 0; i < algarismos.length; i++) {
+      if (i > 0 && (algarismos.length - i) % 3 == 0) b.write(' ');
+      b.write(algarismos[i]);
+    }
+    return '${negativo ? '−' : ''}$b';
+  }
 }

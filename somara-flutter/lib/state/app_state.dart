@@ -239,6 +239,22 @@ class AppState extends ChangeNotifier {
     return ResultadoDaCompra.feito;
   }
 
+  /// Paga uma coisa que não é um item da loja — um frasco extra no Water R
+  /// Sort, saltar um nível. Devolve falso, e não mexe em nada, quando não
+  /// chega.
+  ///
+  /// Não passa pelo [comprar] porque não há item: o que se compra existe só
+  /// dentro do jogo e naquele nível. O que os dois têm em comum é a
+  /// carteira, e é ela que decide.
+  bool gastar(Moeda moeda, int preco) {
+    final paga = _carteira.comGasto(moeda, preco);
+    if (paga == null) return false;
+    _carteira = paga;
+    notifyListeners();
+    _gravar();
+    return true;
+  }
+
   /// Veste uma pose já comprada, ou volta à de fábrica com nulo.
   void escolherRoby(RobyPose? pose) {
     final nova = _coleccao.aUsar(pose);

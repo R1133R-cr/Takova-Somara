@@ -180,7 +180,7 @@ void main() {
           reason: 'o frasco escolhido devia dizer o que fazer a seguir');
 
       await tocarNoFrasco(tester, j.para);
-      await tester.pump(const Duration(milliseconds: 700));
+      await tester.pump(const Duration(milliseconds: 1100));
       expect(find.textContaining('1 jogada'), findsOneWidget);
     });
 
@@ -197,7 +197,7 @@ void main() {
 
       await tocarNoFrasco(tester, j.de);
       await tocarNoFrasco(tester, j.para);
-      await tester.pump(const Duration(milliseconds: 700));
+      await tester.pump(const Duration(milliseconds: 1100));
       expect(find.textContaining('1 jogada'), findsOneWidget);
 
       await tester.tap(find.text('Desfazer'));
@@ -208,7 +208,7 @@ void main() {
       // E outra vez, para o Recomeçar.
       await tocarNoFrasco(tester, j.de);
       await tocarNoFrasco(tester, j.para);
-      await tester.pump(const Duration(milliseconds: 700));
+      await tester.pump(const Duration(milliseconds: 1100));
       await tester.tap(find.text('Recomeçar'));
       await tester.pump();
       expect(find.textContaining('1 jogada'), findsNothing,
@@ -230,7 +230,7 @@ void main() {
       for (final j in jogadas!) {
         await tocarNoFrasco(tester, j.de);
         await tocarNoFrasco(tester, j.para);
-        await tester.pump(const Duration(milliseconds: 600));
+        await tester.pump(const Duration(milliseconds: 1100));
       }
 
       expect(find.textContaining('Arrumado!'), findsOneWidget);
@@ -272,7 +272,7 @@ void main() {
       await tester.pump();
       await tester.tap(botao);
       await tester.pump();
-      await tester.pump(const Duration(milliseconds: 700));
+      await tester.pump(const Duration(milliseconds: 1100));
       expect(find.text('Water R Sort · Nível 1'), findsOneWidget,
           reason: 'o botão do cartão não abriu o jogo');
     });
