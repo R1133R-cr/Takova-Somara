@@ -25715,6 +25715,854 @@
      ]
     }
    ]
+  },
+  {
+   "id": "geo-8c",
+   "disciplina": "Geografia",
+   "classe": "8ª classe",
+   "tag": "GEO",
+   "fonte": "Programa de Ensino da Disciplina de Geografia — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, pp. 23-35. As quatro unidades e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "A Geografia Humana",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O que estuda a Geografia Humana",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Geografia Humana ou Económica estuda:",
+         "options": [
+          "As pessoas e as suas actividades no espaço",
+          "Só o clima e o relevo",
+          "As estrelas e os planetas"
+         ],
+         "a": 0,
+         "audio": "5ee264bc174f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes assuntos é de Geografia Humana?",
+         "options": [
+          "A distribuição da população pelo mundo",
+          "A formação das rochas",
+          "O ciclo da água"
+         ],
+         "a": 0,
+         "audio": "b4e758b74d75.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada ramo da Geografia ao que estuda.",
+         "pairs": [
+          [
+           "Geografia Física",
+           "Relevo, clima, rios"
+          ],
+          [
+           "Geografia Humana",
+           "População, cidades, economia"
+          ]
+         ],
+         "audio": "42357c61e0bd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Estudar a Geografia Humana serve para:",
+         "options": [
+          "Perceber como as pessoas usam e organizam o espaço onde vivem",
+          "Decorar os nomes dos rios",
+          "Prever o tempo de amanhã"
+         ],
+         "a": 0,
+         "audio": "d7a918248fcb.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Geografia Física estuda a natureza: o relevo, o clima, os rios. A Geografia Humana ou Económica estuda as pessoas — onde vivem, quantas são, o que fazem e como organizam o espaço.",
+        "exemplo": "Perguntar porque é que Lichinga cresce, de que vive a sua gente e de onde vêm os que lá chegam é fazer Geografia Humana.",
+        "lembra": "Física é a natureza; Humana são as pessoas no espaço.",
+        "audio": "c3f0216c1b77.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "População",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Natalidade, mortalidade e migrações",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A taxa de natalidade indica:",
+         "options": [
+          "Quantos nascem por cada mil habitantes num ano",
+          "Quantos morrem por cada mil habitantes",
+          "Quantas pessoas mudam de país"
+         ],
+         "a": 0,
+         "audio": "f6f273aac0d5.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num ano, uma região teve 30 nascimentos e 10 mortes por cada mil habitantes. Qual foi o crescimento natural, por mil?",
+         "a": "20",
+         "audio": "28cba8f19f13.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma migração é:",
+         "options": [
+          "A mudança de residência de pessoas de um lugar para outro",
+          "O aumento dos nascimentos",
+          "A construção de estradas"
+         ],
+         "a": 0,
+         "audio": "9ec2a3d3f0ca.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra ao seu significado.",
+         "pairs": [
+          [
+           "Emigrante",
+           "Quem sai do seu país"
+          ],
+          [
+           "Imigrante",
+           "Quem chega a outro país"
+          ]
+         ],
+         "audio": "1a9a6c2b6313.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma causa frequente das migrações do campo para a cidade é:",
+         "options": [
+          "A procura de emprego e de serviços",
+          "O gosto pelo barulho",
+          "A falta de rios na cidade"
+         ],
+         "a": 0,
+         "audio": "6e940c699804.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O crescimento efectivo de uma população junta o crescimento natural com:",
+         "options": [
+          "O saldo migratório",
+          "A taxa de natalidade só",
+          "O número de cidades"
+         ],
+         "a": 0,
+         "audio": "d40021404070.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A natalidade conta os nascimentos e a mortalidade as mortes, por cada mil habitantes num ano. A diferença é o crescimento natural. As migrações são mudanças de residência: quem sai emigra, quem chega imigra.",
+        "exemplo": "30 nascimentos e 10 mortes por mil dão um crescimento natural de 20 por mil. Um jovem que deixa a aldeia para trabalhar em Nampula migrou do campo para a cidade.",
+        "lembra": "Crescimento natural: nascimentos menos mortes.",
+        "audio": "a60451c21841.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Evolução e estrutura da população",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A população mundial, nos últimos duzentos anos:",
+         "options": [
+          "Cresceu muito depressa",
+          "Ficou na mesma",
+          "Diminuiu para metade"
+         ],
+         "a": 0,
+         "audio": "556bfa872383.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma pirâmide etária mostra:",
+         "options": [
+          "A população por idades e por sexo",
+          "A altura das montanhas",
+          "O número de escolas"
+         ],
+         "a": 0,
+         "audio": "b506e71b6387.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma pirâmide etária de base larga e topo estreito indica uma população:",
+         "options": [
+          "Jovem",
+          "Envelhecida",
+          "Sem crianças"
+         ],
+         "a": 0,
+         "audio": "3e0134d2ca85.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A estrutura sectorial da população divide-a por:",
+         "options": [
+          "Sectores de actividade: primário, secundário e terciário",
+          "Cor dos olhos",
+          "Continentes"
+         ],
+         "a": 0,
+         "audio": "f6e9900e15c0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Equidade de género quer dizer:",
+         "options": [
+          "Igualdade de oportunidades para raparigas e rapazes",
+          "Só os rapazes vão à escola",
+          "As raparigas ficam em casa"
+         ],
+         "a": 0,
+         "audio": "38b77252812b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A população mundial cresceu depressa nos últimos dois séculos. A pirâmide etária mostra-a por idades e por sexo: base larga é população jovem, topo largo é população envelhecida. A estrutura sectorial divide-a pelo trabalho que faz.",
+        "exemplo": "Moçambique tem uma pirâmide de base larga: há muitas crianças. Um país europeu tem o topo mais largo: há muitos idosos.",
+        "lembra": "Base larga, população jovem.",
+        "audio": "ac905c515686.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Distribuição e problemas demográficos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual é um factor natural que atrai população?",
+         "options": [
+          "Solos férteis e água",
+          "Deserto sem água",
+          "Montanhas geladas"
+         ],
+         "a": 0,
+         "audio": "3a903b6f5d3f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é um factor humano da distribuição da população?",
+         "options": [
+          "A existência de emprego e de indústrias",
+          "O clima",
+          "O relevo"
+         ],
+         "a": 0,
+         "audio": "c7513841f604.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O continente mais populoso do mundo é:",
+         "options": [
+          "A Ásia",
+          "A Europa",
+          "A Oceânia"
+         ],
+         "a": 0,
+         "audio": "4dda485435be.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um problema demográfico dos países menos desenvolvidos é:",
+         "options": [
+          "O crescimento rápido da população sem serviços que cheguem",
+          "Haver demasiadas escolas",
+          "A falta de crianças"
+         ],
+         "a": 0,
+         "audio": "d6f86adc1ac5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma população que cresce muito num lugar com poucos recursos:",
+         "options": [
+          "Pressiona o ambiente: desmata, polui, esgota a água",
+          "Não tem efeito no ambiente",
+          "Faz chover mais"
+         ],
+         "a": 0,
+         "audio": "f16832021238.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A população concentra-se onde há solos férteis, água e clima ameno, e onde há emprego, estradas e serviços. A Ásia é o continente mais populoso. Crescer depressa sem recursos que cheguem cria problemas e pressiona o ambiente.",
+        "exemplo": "O vale do Zambeze é fértil e povoado; o deserto do Saara é quase vazio. Uma cidade que cresce sem água nem recolha de lixo polui os rios de que vive.",
+        "lembra": "As pessoas vão para onde há água, terra boa e trabalho.",
+        "audio": "48e317e0d6f3.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Actividades económicas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Os sectores e a agricultura",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada actividade ao seu sector.",
+         "pairs": [
+          [
+           "Agricultura e pesca",
+           "Sector primário"
+          ],
+          [
+           "Indústria",
+           "Sector secundário"
+          ],
+          [
+           "Comércio e transportes",
+           "Sector terciário"
+          ]
+         ],
+         "audio": "622775501a72.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A agricultura itinerante é aquela em que:",
+         "options": [
+          "O agricultor muda de terreno quando o solo se cansa",
+          "Se usam máquinas e adubos químicos",
+          "Só se cultiva para vender"
+         ],
+         "a": 0,
+         "audio": "f03cda1d61b4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A agricultura de sequeiro depende:",
+         "options": [
+          "Da chuva, sem rega",
+          "De rega artificial",
+          "De estufas"
+         ],
+         "a": 0,
+         "audio": "5190dba4060f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma característica da agricultura moderna?",
+         "options": [
+          "Máquinas, adubos e produção para o mercado",
+          "Enxada e produção só para a família",
+          "Mudar de machamba todos os anos"
+         ],
+         "a": 0,
+         "audio": "9ec117e13d15.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um problema ambiental causado pela agricultura é:",
+         "options": [
+          "O desgaste e a erosão dos solos",
+          "O aumento das florestas",
+          "A chuva ácida das fábricas"
+         ],
+         "a": 0,
+         "audio": "06cc15ecda02.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Há três sectores: primário (agricultura, pecuária, pesca), secundário (indústria) e terciário (comércio, transportes, serviços). A agricultura tradicional usa a enxada e a chuva; a moderna usa máquinas e produz para vender.",
+        "exemplo": "A machamba de milho de sequeiro depende da chuva. Uma plantação de chá em Gurué, com máquinas e trabalhadores, é agricultura moderna de plantação.",
+        "lembra": "Primário tira da natureza, secundário transforma, terciário serve.",
+        "audio": "3d7241ff8632.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A pecuária",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A pecuária é:",
+         "options": [
+          "A criação de animais para carne, leite, peles e trabalho",
+          "O cultivo de cereais",
+          "A pesca no mar"
+         ],
+         "a": 0,
+         "audio": "ae8ff250ef44.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na criação extensiva, o gado:",
+         "options": [
+          "Pasta livremente em grandes áreas",
+          "Vive fechado e alimentado com rações",
+          "Não existe"
+         ],
+         "a": 0,
+         "audio": "b055d0a3f324.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de gado ao seu nome.",
+         "pairs": [
+          [
+           "Bois e vacas",
+           "Gado bovino"
+          ],
+          [
+           "Cabras",
+           "Gado caprino"
+          ],
+          [
+           "Porcos",
+           "Gado suíno"
+          ]
+         ],
+         "audio": "578801d1ba63.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um problema ambiental da pecuária em excesso é:",
+         "options": [
+          "O pisoteio e o sobrepastoreio, que degradam o solo",
+          "O aumento da água nos rios",
+          "O crescimento das florestas"
+         ],
+         "a": 0,
+         "audio": "db9e03d4dd44.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A pecuária é a criação de animais para carne, leite, peles ou trabalho. Na criação extensiva o gado pasta livre em grandes áreas; na intensiva vive fechado e alimentado. Gado a mais no mesmo pasto degrada o solo.",
+        "exemplo": "Bovino são os bois e as vacas; caprino são as cabras; suíno são os porcos. Nas pastagens de Tete o gado bovino cria-se de forma extensiva.",
+        "lembra": "Extensiva: muito espaço, pouco gado por hectare.",
+        "audio": "bfb23b6f981a.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A indústria e a Revolução Industrial",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A indústria transforma:",
+         "options": [
+          "Matérias-primas em produtos",
+          "Produtos em matérias-primas",
+          "Água em chuva"
+         ],
+         "a": 0,
+         "audio": "0e31cef1e85a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Revolução Industrial começou:",
+         "options": [
+          "Em Inglaterra, no século XVIII",
+          "Em Moçambique, no século XX",
+          "Na China, no século V"
+         ],
+         "a": 0,
+         "audio": "71ff81005160.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma consequência da Revolução Industrial foi:",
+         "options": [
+          "O crescimento das cidades e das fábricas",
+          "O fim do comércio",
+          "O regresso de toda a gente ao campo"
+         ],
+         "a": 0,
+         "audio": "161ee2aaa414.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um factor que atrai a localização de uma indústria é:",
+         "options": [
+          "Matérias-primas, energia e mão-de-obra por perto",
+          "Estar longe de tudo",
+          "Não ter estradas"
+         ],
+         "a": 0,
+         "audio": "9608845a193d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quais são regiões muito industrializadas do mundo?",
+         "options": [
+          "Europa, América do Norte e Ásia Oriental",
+          "Só a África",
+          "Só a Oceânia"
+         ],
+         "a": 0,
+         "audio": "e139966c8516.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A indústria transforma matérias-primas em produtos. A Revolução Industrial começou em Inglaterra, no século XVIII, e fez crescer as fábricas e as cidades. Uma fábrica instala-se onde há matérias-primas, energia, mão-de-obra e transportes.",
+        "exemplo": "A Europa, a América do Norte e a Ásia Oriental são as regiões mais industrializadas. Uma fábrica de cimento instala-se perto do calcário e de uma estrada.",
+        "lembra": "A indústria vai para onde estão as matérias-primas e os transportes.",
+        "audio": "b266865f6572.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "O comércio",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O comércio é a actividade de:",
+         "options": [
+          "Comprar e vender produtos",
+          "Fabricar produtos",
+          "Cultivar a terra"
+         ],
+         "a": 0,
+         "audio": "76fabf865c2b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de comércio à sua descrição.",
+         "pairs": [
+          [
+           "Comércio interno",
+           "Dentro do mesmo país"
+          ],
+          [
+           "Comércio externo",
+           "Entre países"
+          ]
+         ],
+         "audio": "0aa8bfed91fc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A balança comercial compara:",
+         "options": [
+          "O valor das exportações com o das importações",
+          "O peso dos produtos",
+          "O número de lojas"
+         ],
+         "a": 0,
+         "audio": "4ca660ac6ce9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um país exportou 80 milhões e importou 50 milhões. Qual é o saldo da balança comercial, em milhões?",
+         "a": "30",
+         "audio": "b7d685a03c54.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os bancos e os seguros fazem parte do:",
+         "options": [
+          "Sistema financeiro",
+          "Sector primário",
+          "Relevo"
+         ],
+         "a": 0,
+         "audio": "2493b9f6fd43.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O comércio é comprar e vender. É interno dentro do país e externo entre países. A balança comercial compara o que se exporta com o que se importa: exporta-se mais, o saldo é positivo. Bancos e seguros formam o sistema financeiro.",
+        "exemplo": "Exportar 80 milhões e importar 50 dá um saldo de 30 milhões, positivo. Moçambique exporta carvão, alumínio e gás, e importa combustível e máquinas.",
+        "lembra": "Balança: exportações menos importações.",
+        "audio": "756f2846a438.mp3"
+       }
+      },
+      {
+       "id": "n5",
+       "titulo": "O turismo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O turismo é:",
+         "options": [
+          "A deslocação de pessoas para lazer, cultura ou descanso fora de onde vivem",
+          "A mudança definitiva de país",
+          "O transporte de mercadorias"
+         ],
+         "a": 0,
+         "audio": "015c60a9d4fd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de turismo ao seu exemplo.",
+         "pairs": [
+          [
+           "Turismo ambiental",
+           "Visitar o Lago Niassa"
+          ],
+          [
+           "Turismo cultural",
+           "Visitar a Ilha de Moçambique"
+          ],
+          [
+           "Turismo religioso",
+           "Uma peregrinação"
+          ]
+         ],
+         "audio": "0723b1ab410f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um factor que favorece o turismo numa região é:",
+         "options": [
+          "Paisagens, património e segurança",
+          "A falta de estradas",
+          "A poluição"
+         ],
+         "a": 0,
+         "audio": "a018ddfcc512.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O turismo em excesso pode:",
+         "options": [
+          "Poluir e estragar o património",
+          "Aumentar as florestas",
+          "Baixar os preços para os habitantes"
+         ],
+         "a": 0,
+         "audio": "30a4cad2fc47.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O turismo é a deslocação de pessoas, por lazer, cultura ou descanso, para fora de onde vivem. Pode ser cultural, ambiental, religioso, desportivo. Precisa de paisagens, património e segurança — e em excesso polui e estraga o que o atraiu.",
+        "exemplo": "O Lago Niassa e o Gorongosa atraem turismo ambiental; a Ilha de Moçambique, património da humanidade, atrai turismo cultural.",
+        "lembra": "O turismo vive do que preserva.",
+        "audio": "46cd86fdffec.mp3"
+       }
+      },
+      {
+       "id": "n6",
+       "titulo": "Transportes, comunicações e sustentabilidade",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada meio de transporte à sua via.",
+         "pairs": [
+          [
+           "Comboio",
+           "Via férrea"
+          ],
+          [
+           "Navio",
+           "Via marítima"
+          ],
+          [
+           "Avião",
+           "Via aérea"
+          ]
+         ],
+         "audio": "e123f826fc96.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma vantagem do transporte marítimo é:",
+         "options": [
+          "Levar muita carga a baixo custo",
+          "Ser o mais rápido",
+          "Chegar a todas as aldeias"
+         ],
+         "a": 0,
+         "audio": "d6945e3450d4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O telemóvel e a internet são:",
+         "options": [
+          "Meios de comunicação",
+          "Meios de transporte",
+          "Vias de comunicação"
+         ],
+         "a": 0,
+         "audio": "ef91b9be491e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na via pública, um peão deve:",
+         "options": [
+          "Atravessar na passadeira e olhar para os dois lados",
+          "Correr pela estrada",
+          "Atravessar a falar ao telemóvel"
+         ],
+         "a": 0,
+         "audio": "252693c762c8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Desenvolvimento sustentável é:",
+         "options": [
+          "Usar os recursos sem os esgotar para quem vem depois",
+          "Gastar tudo agora",
+          "Não usar recurso nenhum"
+         ],
+         "a": 0,
+         "audio": "336d5195707c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os transportes levam pessoas e cargas: por terra, mar e ar, cada um com vantagens. O navio leva muito a baixo custo; o avião é rápido. Os meios de comunicação levam informação. Desenvolvimento sustentável é usar os recursos sem os esgotar.",
+        "exemplo": "O corredor de Nacala liga o Malawi ao porto pela linha férrea. Um peão atravessa na passadeira e olha para os dois lados: é educação rodoviária.",
+        "lembra": "Transporte leva coisas; comunicação leva informação.",
+        "audio": "071b149e4574.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Cidades",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As cidades e a urbanização",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Depois da Revolução Industrial, as cidades:",
+         "options": [
+          "Cresceram muito, com a chegada de trabalhadores para as fábricas",
+          "Desapareceram",
+          "Ficaram do mesmo tamanho"
+         ],
+         "a": 0,
+         "audio": "0db7e20b8e15.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A taxa de urbanização indica:",
+         "options": [
+          "A percentagem da população que vive nas cidades",
+          "O número de estradas",
+          "A altura dos prédios"
+         ],
+         "a": 0,
+         "audio": "d6d7f33c8639.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num país com 10 milhões de habitantes, 4 milhões vivem em cidades. Qual é a taxa de urbanização, em percentagem?",
+         "a": "40",
+         "audio": "83c5270acc34.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O campo e a cidade:",
+         "options": [
+          "Dependem um do outro: o campo dá alimentos, a cidade dá serviços e produtos",
+          "Não têm nada a ver um com o outro",
+          "São a mesma coisa"
+         ],
+         "a": 0,
+         "audio": "455277ea9f31.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada cidade à sua função principal.",
+         "pairs": [
+          [
+           "Maputo",
+           "Capital, administrativa"
+          ],
+          [
+           "Beira",
+           "Porto e comércio"
+          ]
+         ],
+         "audio": "e019c36fb1d3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As cidades cresceram muito depois da Revolução Industrial, com a chegada de trabalhadores. A taxa de urbanização é a percentagem da população que vive em cidades. Campo e cidade dependem um do outro, e cada cidade tem funções principais.",
+        "exemplo": "4 milhões em cidades num país de 10 milhões dão 40% de urbanização. Maputo é a capital administrativa; a Beira é porto e comércio.",
+        "lembra": "O campo alimenta a cidade; a cidade serve o campo.",
+        "audio": "b19d0c9e7e14.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Problemas das cidades e planeamento",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um problema comum nas grandes cidades é:",
+         "options": [
+          "Bairros sem água, luz e saneamento",
+          "Haver campos a mais",
+          "A falta de pessoas"
+         ],
+         "a": 0,
+         "audio": "27b36ada78ae.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O planeamento urbano serve para:",
+         "options": [
+          "Organizar a cidade: ruas, bairros, água, escolas, espaços verdes",
+          "Aumentar o trânsito",
+          "Fechar as escolas"
+         ],
+         "a": 0,
+         "audio": "c5c51160a200.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O consumo de álcool, tabaco e outras drogas nas cidades:",
+         "options": [
+          "É um problema de saúde que se previne com informação e apoio",
+          "Não tem consequências",
+          "Faz bem ao estudo"
+         ],
+         "a": 0,
+         "audio": "bce24cbaba0c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Viver numa cultura de paz e de democracia é:",
+         "options": [
+          "Resolver os conflitos pelo diálogo e respeitar os direitos de todos",
+          "Obedecer sem discutir",
+          "Resolver tudo à força"
+         ],
+         "a": 0,
+         "audio": "5076587deb27.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma cidade sustentável:",
+         "options": [
+          "Recolhe o lixo, planta árvores e poupa água e energia",
+          "Deita o lixo nos rios",
+          "Corta todas as árvores"
+         ],
+         "a": 0,
+         "audio": "9c88a889d257.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Crescer depressa traz problemas às cidades: bairros sem água, luz e saneamento, trânsito, lixo, drogas. O planeamento urbano organiza ruas, bairros e serviços. Uma cidade sustentável recolhe o lixo, planta árvores e poupa água e energia.",
+        "exemplo": "Um bairro planeado tem ruas, água canalizada, escola e espaço verde. Os conflitos resolvem-se pelo diálogo, numa cultura de paz.",
+        "lembra": "Cidade planeada é cidade com água, escola e ruas para todos.",
+        "audio": "159d4b5650dd.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

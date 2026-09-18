@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o primário inteiro, e o primeiro degrau do secundário', () {
-    expect(c.cursos.length, 33);
+    expect(c.cursos.length, 34);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -102,12 +102,13 @@ void main() {
     //        Agropecuária (42) e TIC (37)
     //  1725  com a Matemática da 8ª classe (89)
     //  1800  com o Português da 8ª classe (75)
+    //  1858  com a Geografia da 8ª classe (58)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 1800);
+    expect(total, 1858);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {

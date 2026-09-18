@@ -51,7 +51,10 @@ void main() {
 
     // E no primário continuam juntas, que é como lá se dão.
     final noPrimario = c.cursos
-        .where((x) => x.classe != '7ª classe')
+        // O primário são as classes da 1ª à 6ª. Isto dizia "tudo o que
+        // não é a 7ª", e deixou de servir no dia em que a 8ª entrou
+        // com a sua Geografia e a sua História.
+        .where((x) => int.parse(x.classe[0]) <= 6)
         .map((x) => x.disciplina)
         .toSet();
     expect(noPrimario, contains('Ciências Sociais'));

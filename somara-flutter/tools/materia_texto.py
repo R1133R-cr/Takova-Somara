@@ -2725,4 +2725,140 @@ MATERIA = {
                    "diz-se «Senhor professor».",
         "lembra": "Directo tem travessão; indirecto tem «que».",
     },
+
+    # ---------------------------------------------------------------
+    # Geografia -- 8a classe  (Geografia Humana ou Economica)
+    # ---------------------------------------------------------------
+    "geo-8c:u1:n1": {
+        "explica": "A Geografia Física estuda a natureza: o relevo, o clima, "
+                   "os rios. A Geografia Humana ou Económica estuda as "
+                   "pessoas — onde vivem, quantas são, o que fazem e como "
+                   "organizam o espaço.",
+        "exemplo": "Perguntar porque é que Lichinga cresce, de que vive a "
+                   "sua gente e de onde vêm os que lá chegam é fazer "
+                   "Geografia Humana.",
+        "lembra": "Física é a natureza; Humana são as pessoas no espaço.",
+    },
+    "geo-8c:u2:n1": {
+        "explica": "A natalidade conta os nascimentos e a mortalidade as "
+                   "mortes, por cada mil habitantes num ano. A diferença é o "
+                   "crescimento natural. As migrações são mudanças de "
+                   "residência: quem sai emigra, quem chega imigra.",
+        "exemplo": "30 nascimentos e 10 mortes por mil dão um crescimento "
+                   "natural de 20 por mil. Um jovem que deixa a aldeia para "
+                   "trabalhar em Nampula migrou do campo para a cidade.",
+        "lembra": "Crescimento natural: nascimentos menos mortes.",
+    },
+    "geo-8c:u2:n2": {
+        "explica": "A população mundial cresceu depressa nos últimos dois "
+                   "séculos. A pirâmide etária mostra-a por idades e por "
+                   "sexo: base larga é população jovem, topo largo é "
+                   "população envelhecida. A estrutura sectorial divide-a "
+                   "pelo trabalho que faz.",
+        "exemplo": "Moçambique tem uma pirâmide de base larga: há muitas "
+                   "crianças. Um país europeu tem o topo mais largo: há "
+                   "muitos idosos.",
+        "lembra": "Base larga, população jovem.",
+    },
+    "geo-8c:u2:n3": {
+        "explica": "A população concentra-se onde há solos férteis, água e "
+                   "clima ameno, e onde há emprego, estradas e serviços. A "
+                   "Ásia é o continente mais populoso. Crescer depressa sem "
+                   "recursos que cheguem cria problemas e pressiona o "
+                   "ambiente.",
+        "exemplo": "O vale do Zambeze é fértil e povoado; o deserto do "
+                   "Saara é quase vazio. Uma cidade que cresce sem água nem "
+                   "recolha de lixo polui os rios de que vive.",
+        "lembra": "As pessoas vão para onde há água, terra boa e trabalho.",
+    },
+    "geo-8c:u3:n1": {
+        "explica": "Há três sectores: primário (agricultura, pecuária, "
+                   "pesca), secundário (indústria) e terciário (comércio, "
+                   "transportes, serviços). A agricultura tradicional usa a "
+                   "enxada e a chuva; a moderna usa máquinas e produz para "
+                   "vender.",
+        "exemplo": "A machamba de milho de sequeiro depende da chuva. Uma "
+                   "plantação de chá em Gurué, com máquinas e trabalhadores, "
+                   "é agricultura moderna de plantação.",
+        "lembra": "Primário tira da natureza, secundário transforma, "
+                  "terciário serve.",
+    },
+    "geo-8c:u3:n2": {
+        "explica": "A pecuária é a criação de animais para carne, leite, "
+                   "peles ou trabalho. Na criação extensiva o gado pasta "
+                   "livre em grandes áreas; na intensiva vive fechado e "
+                   "alimentado. Gado a mais no mesmo pasto degrada o solo.",
+        "exemplo": "Bovino são os bois e as vacas; caprino são as cabras; "
+                   "suíno são os porcos. Nas pastagens de Tete o gado bovino "
+                   "cria-se de forma extensiva.",
+        "lembra": "Extensiva: muito espaço, pouco gado por hectare.",
+    },
+    "geo-8c:u3:n3": {
+        "explica": "A indústria transforma matérias-primas em produtos. A "
+                   "Revolução Industrial começou em Inglaterra, no século "
+                   "XVIII, e fez crescer as fábricas e as cidades. Uma "
+                   "fábrica instala-se onde há matérias-primas, energia, "
+                   "mão-de-obra e transportes.",
+        "exemplo": "A Europa, a América do Norte e a Ásia Oriental são as "
+                   "regiões mais industrializadas. Uma fábrica de cimento "
+                   "instala-se perto do calcário e de uma estrada.",
+        "lembra": "A indústria vai para onde estão as matérias-primas e os "
+                  "transportes.",
+    },
+    "geo-8c:u3:n4": {
+        "explica": "O comércio é comprar e vender. É interno dentro do país e "
+                   "externo entre países. A balança comercial compara o que "
+                   "se exporta com o que se importa: exporta-se mais, o "
+                   "saldo é positivo. Bancos e seguros formam o sistema "
+                   "financeiro.",
+        "exemplo": "Exportar 80 milhões e importar 50 dá um saldo de 30 "
+                   "milhões, positivo. Moçambique exporta carvão, alumínio e "
+                   "gás, e importa combustível e máquinas.",
+        "lembra": "Balança: exportações menos importações.",
+    },
+    "geo-8c:u3:n5": {
+        "explica": "O turismo é a deslocação de pessoas, por lazer, cultura "
+                   "ou descanso, para fora de onde vivem. Pode ser cultural, "
+                   "ambiental, religioso, desportivo. Precisa de paisagens, "
+                   "património e segurança — e em excesso polui e estraga o "
+                   "que o atraiu.",
+        "exemplo": "O Lago Niassa e o Gorongosa atraem turismo ambiental; a "
+                   "Ilha de Moçambique, património da humanidade, atrai "
+                   "turismo cultural.",
+        "lembra": "O turismo vive do que preserva.",
+    },
+    "geo-8c:u3:n6": {
+        "explica": "Os transportes levam pessoas e cargas: por terra, mar e "
+                   "ar, cada um com vantagens. O navio leva muito a baixo "
+                   "custo; o avião é rápido. Os meios de comunicação levam "
+                   "informação. Desenvolvimento sustentável é usar os "
+                   "recursos sem os esgotar.",
+        "exemplo": "O corredor de Nacala liga o Malawi ao porto pela linha "
+                   "férrea. Um peão atravessa na passadeira e olha para os "
+                   "dois lados: é educação rodoviária.",
+        "lembra": "Transporte leva coisas; comunicação leva informação.",
+    },
+    "geo-8c:u4:n1": {
+        "explica": "As cidades cresceram muito depois da Revolução "
+                   "Industrial, com a chegada de trabalhadores. A taxa de "
+                   "urbanização é a percentagem da população que vive em "
+                   "cidades. Campo e cidade dependem um do outro, e cada "
+                   "cidade tem funções principais.",
+        "exemplo": "4 milhões em cidades num país de 10 milhões dão 40% de "
+                   "urbanização. Maputo é a capital administrativa; a Beira "
+                   "é porto e comércio.",
+        "lembra": "O campo alimenta a cidade; a cidade serve o campo.",
+    },
+    "geo-8c:u4:n2": {
+        "explica": "Crescer depressa traz problemas às cidades: bairros sem "
+                   "água, luz e saneamento, trânsito, lixo, drogas. O "
+                   "planeamento urbano organiza ruas, bairros e serviços. "
+                   "Uma cidade sustentável recolhe o lixo, planta árvores e "
+                   "poupa água e energia.",
+        "exemplo": "Um bairro planeado tem ruas, água canalizada, escola e "
+                   "espaço verde. Os conflitos resolvem-se pelo diálogo, "
+                   "numa cultura de paz.",
+        "lembra": "Cidade planeada é cidade com água, escola e ruas para "
+                  "todos.",
+    },
 }
