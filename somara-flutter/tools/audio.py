@@ -36,6 +36,7 @@ import json
 import re
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -117,14 +118,24 @@ def gravar(ecra: str, ficheiro: str, manifesto: dict | None = None) -> bool:
     destino = AUDIO / ficheiro
     destino.parent.mkdir(parents=True, exist_ok=True)
     fala = dito(ecra)
-    destino.unlink(missing_ok=True)
-    r = subprocess.run(
-        ["edge-tts", "--voice", VOZ, f"--pitch={TOM}", f"--rate={RITMO}",
-         "--text", fala, "--write-media", str(destino)],
-        capture_output=True,
-    )
-    ok = (r.returncode == 0 and destino.exists()
-          and destino.stat().st_size > 1024)
+    # O edge-tts fala com um servidor, e o servidor as vezes fecha-nos a
+    # porta a meio de um curso de sessenta gravacoes. Uma falha dessas nao
+    # e do texto: tenta-se outra vez, e so ao fim de tres se desiste. Foi
+    # uma so falha assim que deixou a Educacao Visual da 8a a meio.
+    ok = False
+    for tentativa in range(3):
+        if tentativa:
+            time.sleep(3)
+        destino.unlink(missing_ok=True)
+        r = subprocess.run(
+            ["edge-tts", "--voice", VOZ, f"--pitch={TOM}", f"--rate={RITMO}",
+             "--text", fala, "--write-media", str(destino)],
+            capture_output=True,
+        )
+        ok = (r.returncode == 0 and destino.exists()
+              and destino.stat().st_size > 1024)
+        if ok:
+            break
     if ok and manifesto is not None:
         manifesto[ficheiro] = sha(fala)
     return ok

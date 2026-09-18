@@ -32472,6 +32472,948 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ev-8c",
+   "disciplina": "Educação Visual",
+   "classe": "8ª classe",
+   "tag": "EV",
+   "fonte": "Programa de Ensino da Disciplina de Educação Visual — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, 8ª classe, pp. 23-32. As sete unidades temáticas e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Arte universal",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Pintura, escultura e arquitectura",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada obra à forma de expressão artística.",
+         "pairs": [
+          [
+           "Um quadro a óleo",
+           "Pintura"
+          ],
+          [
+           "Uma estátua de mármore",
+           "Escultura"
+          ],
+          [
+           "Uma catedral",
+           "Arquitectura"
+          ]
+         ],
+         "audio": "9dcd529bf858.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quem pintou a Mona Lisa?",
+         "options": [
+          "Leonardo da Vinci",
+          "Pablo Picasso",
+          "Miguel Ângelo"
+         ],
+         "a": 0,
+         "audio": "90881a6dc621.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quem esculpiu o David e pintou o tecto da Capela Sistina?",
+         "options": [
+          "Miguel Ângelo",
+          "Leonardo da Vinci",
+          "Pablo Picasso"
+         ],
+         "a": 0,
+         "audio": "deaa0ef6bbe2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pablo Picasso é conhecido sobretudo pelo:",
+         "options": [
+          "Cubismo, que parte as figuras em formas geométricas",
+          "Retrato realista",
+          "Desenho de catedrais"
+         ],
+         "a": 0,
+         "audio": "167e35204c17.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Para ler uma obra de arte, liga cada elemento à pergunta que ele responde.",
+         "pairs": [
+          [
+           "Tipo de expressão",
+           "É pintura, escultura ou arquitectura?"
+          ],
+          [
+           "Técnica e materiais",
+           "Foi feita com quê?"
+          ],
+          [
+           "Tema",
+           "De que fala?"
+          ]
+         ],
+         "audio": "7672dc61a431.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A arte universal é pintura, escultura e arquitectura. Leonardo da Vinci pintou a Mona Lisa; Miguel Ângelo esculpiu o David e pintou a Capela Sistina; Picasso inventou o cubismo. Uma obra lê-se pelo tipo, pela técnica e pelo tema.",
+        "exemplo": "Diante de um quadro pergunta-se: é pintura? Foi feito a óleo sobre tela? De que fala — uma pessoa, uma paisagem, uma guerra? São os três elementos da leitura.",
+        "lembra": "Tipo, técnica e tema: as três perguntas a uma obra.",
+        "audio": "56f8ca15676d.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Comunicação visual",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Indícios e pictogramas",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada código visual ao seu tipo.",
+         "pairs": [
+          [
+           "Fumo ao longe: há fogo",
+           "Indício"
+          ],
+          [
+           "Boneco numa porta: casa de banho",
+           "Pictograma"
+          ]
+         ],
+         "audio": "45bbe46f2fab.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um pictograma é:",
+         "options": [
+          "Um desenho simples que todos entendem sem ler",
+          "Um texto longo",
+          "Uma fotografia"
+         ],
+         "a": 0,
+         "audio": "9427eb6ba541.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pegadas frescas na areia são:",
+         "options": [
+          "Um indício de que alguém passou",
+          "Um pictograma",
+          "Um cartaz"
+         ],
+         "a": 0,
+         "audio": "b0ae2ec18c42.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nos aeroportos e hospitais usam-se pictogramas porque:",
+         "options": [
+          "Entendem-se em qualquer língua",
+          "São mais bonitos",
+          "Ocupam mais espaço"
+         ],
+         "a": 0,
+         "audio": "0056e3253d05.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um bom pictograma é:",
+         "options": [
+          "Simples, claro e sem pormenores a mais",
+          "Cheio de pormenores",
+          "Escrito em letras pequenas"
+         ],
+         "a": 0,
+         "audio": "b3bf44564075.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os códigos visuais comunicam sem palavras. O indício é um sinal natural de que algo aconteceu: fumo, pegadas. O pictograma é um desenho simples feito de propósito para toda a gente entender: o boneco na porta da casa de banho.",
+        "exemplo": "No aeroporto, quem não lê português percebe o pictograma da mala e da seta. Um bom pictograma é simples e sem pormenores a mais.",
+        "lembra": "Indício acontece; pictograma desenha-se.",
+        "audio": "608d19b59157.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O cartaz e a banda desenhada",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um cartaz tem de se perceber:",
+         "options": [
+          "De longe e num relance",
+          "Só de perto e com tempo",
+          "Só com uma lupa"
+         ],
+         "a": 0,
+         "audio": "ff4d39945b8a.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada etapa do cartaz à sua ordem.",
+         "pairs": [
+          [
+           "Escolher o tema e a mensagem",
+           "Primeiro"
+          ],
+          [
+           "Fazer o esboço",
+           "Depois"
+          ],
+          [
+           "Desenhar e pintar o cartaz final",
+           "Por fim"
+          ]
+         ],
+         "audio": "01cecac7362c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada elemento da banda desenhada ao que ele é.",
+         "pairs": [
+          [
+           "Vinheta",
+           "Cada quadradinho da história"
+          ],
+          [
+           "Balão",
+           "Onde vai a fala"
+          ],
+          [
+           "Onomatopeia",
+           "O som escrito: pum, zás"
+          ]
+         ],
+         "audio": "ed32f411b47d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um cartaz sobre igualdade de género ou direitos das crianças trata de um:",
+         "options": [
+          "Tema transversal",
+          "Tema geométrico",
+          "Tema secreto"
+         ],
+         "a": 0,
+         "audio": "20c4e465d061.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao cortar cartão com um x-acto deve-se:",
+         "options": [
+          "Cortar para fora do corpo, com a mão livre longe da lâmina",
+          "Cortar para o corpo",
+          "Segurar a lâmina com os dedos"
+         ],
+         "a": 0,
+         "audio": "095e2ff490ab.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um cartaz lê-se de longe e num relance: pouca letra, grande, e uma imagem forte. Faz-se em etapas — tema e mensagem, esboço, cartaz final. A banda desenhada conta com vinhetas, balões de fala e onomatopeias.",
+        "exemplo": "Um cartaz sobre os direitos das crianças: uma imagem, uma frase, cores fortes. Na banda desenhada, o «pum» escrito é a onomatopeia. Com o x-acto, corta-se para fora do corpo.",
+        "lembra": "Cartaz: ver de longe, perceber num relance.",
+        "audio": "2e2cbde8faff.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Estudo da forma",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Forma e função, e a malha",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Forma-função quer dizer que:",
+         "options": [
+          "A forma de um objecto depende do que ele serve",
+          "A forma não interessa",
+          "Todos os objectos são redondos"
+         ],
+         "a": 0,
+         "audio": "e8f61ca7f945.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada forma ao seu tipo.",
+         "pairs": [
+          [
+           "Uma folha de árvore",
+           "Natural"
+          ],
+          [
+           "Um copo",
+           "Artificial"
+          ],
+          [
+           "Uma cabaça transformada em recipiente",
+           "Mista"
+          ]
+         ],
+         "audio": "35a5888c4d2b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A rede ou malha serve para:",
+         "options": [
+          "Ampliar ou reduzir um desenho sem o deformar",
+          "Pintar mais depressa",
+          "Medir o peso do papel"
+         ],
+         "a": 0,
+         "audio": "9d69b0656a6c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um desenho está numa malha de quadrados de 1 centímetro e quer-se copiá-lo numa malha de quadrados de 3 centímetros. Quantas vezes fica maior cada lado?",
+         "a": "3",
+         "audio": "9b625767ff0e.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada elemento básico da comunicação gráfica ao que ele é.",
+         "pairs": [
+          [
+           "Ponto",
+           "A marca mais pequena"
+          ],
+          [
+           "Linha",
+           "Um ponto em movimento"
+          ],
+          [
+           "Plano",
+           "Uma superfície fechada por linhas"
+          ]
+         ],
+         "audio": "81b50ee715be.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Forma-função: a forma de um objecto depende do que ele serve. As formas são naturais, artificiais ou mistas. A malha, ou rede, deixa ampliar ou reduzir um desenho sem o deformar. Ponto, linha e plano são os elementos básicos.",
+        "exemplo": "Copiar um desenho de quadrados de 1 centímetro para quadrados de 3 amplia-o 3 vezes. Um copo tem a forma que tem porque serve para beber.",
+        "lembra": "A malha amplia e reduz sem deformar.",
+        "audio": "bd2304d9015c.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A cor e o círculo cromático",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As cores primárias são:",
+         "options": [
+          "Amarelo, azul e vermelho",
+          "Verde, laranja e roxo",
+          "Preto, branco e cinzento"
+         ],
+         "a": 0,
+         "audio": "06f551977a5f.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada mistura à cor secundária que dá.",
+         "pairs": [
+          [
+           "Amarelo com azul",
+           "Verde"
+          ],
+          [
+           "Amarelo com vermelho",
+           "Laranja"
+          ],
+          [
+           "Azul com vermelho",
+           "Roxo"
+          ]
+         ],
+         "audio": "f7ca434cb657.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma cor terciária obtém-se misturando:",
+         "options": [
+          "Uma primária com a secundária vizinha",
+          "Preto com branco",
+          "Duas cores iguais"
+         ],
+         "a": 0,
+         "audio": "74f66c5f3d68.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No trânsito, o vermelho quer dizer parar. Isso mostra que a cor:",
+         "options": [
+          "Comunica: tem significado",
+          "Só serve para enfeitar",
+          "Não se vê de longe"
+         ],
+         "a": 0,
+         "audio": "5b8c13387297.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Com lápis de cor, uma cor secundária obtém-se:",
+         "options": [
+          "Pintando uma primária por cima da outra",
+          "Molhando o papel",
+          "Apagando com borracha"
+         ],
+         "a": 0,
+         "audio": "585c6746922a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As cores primárias são o amarelo, o azul e o vermelho. Duas primárias dão uma secundária — verde, laranja, roxo — e uma primária com a secundária vizinha dá uma terciária. A cor comunica: o vermelho do trânsito manda parar.",
+        "exemplo": "Amarelo com azul dá verde; amarelo com vermelho dá laranja; azul com vermelho dá roxo. Com lápis de cor, pinta-se uma por cima da outra.",
+        "lembra": "Três primárias, três secundárias, e as terciárias entre elas.",
+        "audio": "b32c4dbd86ea.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A textura",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Textura é:",
+         "options": [
+          "O aspecto da superfície: lisa, rugosa, áspera, macia",
+          "A cor da superfície",
+          "O tamanho do objecto"
+         ],
+         "a": 0,
+         "audio": "8f2280b0b69a.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada textura ao seu tipo.",
+         "pairs": [
+          [
+           "A casca de uma árvore",
+           "Natural"
+          ],
+          [
+           "Um tecido tecido à máquina",
+           "Artificial"
+          ]
+         ],
+         "audio": "aa987c28b2b4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pôr um papel sobre uma moeda e esfregar com lápis para a textura aparecer chama-se:",
+         "options": [
+          "Decalque",
+          "Colagem",
+          "Recorte"
+         ],
+         "a": 0,
+         "audio": "7c5ebc3cd35c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada textura ao que se sente ao tocar.",
+         "pairs": [
+          [
+           "Vidro",
+           "Liso"
+          ],
+          [
+           "Lixa",
+           "Áspero"
+          ],
+          [
+           "Algodão",
+           "Macio"
+          ]
+         ],
+         "audio": "a9aee680d2ad.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pontos, traços e riscos repetidos num desenho para imitar uma superfície são:",
+         "options": [
+          "Elementos gráficos texturais",
+          "Cores terciárias",
+          "Pictogramas"
+         ],
+         "a": 0,
+         "audio": "7daf0b278554.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A textura é o aspecto da superfície: lisa, rugosa, áspera, macia. É natural, como a casca da árvore, ou artificial, como um tecido. No desenho imita-se com pontos, traços e riscos repetidos, ou obtém-se por decalque.",
+        "exemplo": "Pôr o papel sobre uma moeda e esfregar com o lápis faz aparecer a textura: é o decalque. O vidro é liso, a lixa é áspera, o algodão é macio.",
+        "lembra": "Textura é o que a superfície faz sentir ao tocar.",
+        "audio": "62405678ee27.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Desenho geométrico",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Espirais, oval e óvulo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma espiral de dois centros desenha-se com:",
+         "options": [
+          "Semicircunferências alternadas a partir de dois pontos",
+          "Uma só circunferência",
+          "Linhas rectas"
+         ],
+         "a": 0,
+         "audio": "dc535d30070e.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Na espiral de dois centros, cada meia volta aumenta o raio de uma distância igual à que vai de um centro ao outro. Se os centros distam 1 centímetro e o primeiro raio é 1, quanto mede o quarto raio, em centímetros?",
+         "a": "4",
+         "audio": "111f598503b8.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada figura à sua descrição.",
+         "pairs": [
+          [
+           "Oval",
+           "Dois eixos de simetria, como um ovo visto de lado"
+          ],
+          [
+           "Óvulo",
+           "Um só eixo, mais largo num lado, como o ovo"
+          ]
+         ],
+         "audio": "0b5e8ae9a4bd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Onde se vê uma espiral na natureza?",
+         "options": [
+          "Na concha do caracol",
+          "Numa folha de papel",
+          "Num tijolo"
+         ],
+         "a": 0,
+         "audio": "f5d089d061e0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para traçar arcos de circunferência com rigor usa-se:",
+         "options": [
+          "O compasso",
+          "A régua",
+          "O esquadro"
+         ],
+         "a": 0,
+         "audio": "22adb8656307.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A espiral de dois centros desenha-se com semicircunferências alternadas a partir de dois pontos, e o raio cresce a cada meia volta. A oval tem dois eixos de simetria; o óvulo, como o ovo, tem um só. Tudo com compasso.",
+        "exemplo": "Centros a 1 centímetro e primeiro raio 1: os raios seguintes são 2, 3, 4. A concha do caracol é uma espiral da natureza.",
+        "lembra": "Dois centros, meias voltas, raio a crescer.",
+        "audio": "4e56518d8a43.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Os arcos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O arco romano, ou de volta inteira, é:",
+         "options": [
+          "Uma semicircunferência com o centro no meio da abertura",
+          "Um arco em bico",
+          "Uma linha recta"
+         ],
+         "a": 0,
+         "audio": "391899f5a5d1.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada arco à sua forma.",
+         "pairs": [
+          [
+           "Ogiva",
+           "Acaba em bico, como nas igrejas góticas"
+          ],
+          [
+           "Árabe",
+           "Ferradura: fecha por baixo da largura maior"
+          ],
+          [
+           "Abatido",
+           "Mais baixo que meia circunferência"
+          ]
+         ],
+         "audio": "977c4ab0d5ed.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um arco romano tem uma abertura de 60 centímetros. Qual é o raio do arco, em centímetros?",
+         "a": "30",
+         "audio": "d1ab05cfd869.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O arco contracurvado junta:",
+         "options": [
+          "Curvas para um lado e curvas para o outro",
+          "Só linhas rectas",
+          "Uma circunferência inteira"
+         ],
+         "a": 0,
+         "audio": "370b8e98d829.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nas portas e janelas dos edifícios antigos de Moçambique vêem-se arcos. Isso mostra que o desenho geométrico:",
+         "options": [
+          "Está na arquitectura à nossa volta",
+          "Só existe no papel",
+          "Não se usa há muito tempo"
+         ],
+         "a": 0,
+         "audio": "a85cb3809a79.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O arco romano é meia circunferência com o centro no meio da abertura. A ogiva acaba em bico; o árabe fecha em ferradura; o abatido é mais baixo que meia circunferência; o contracurvado junta curvas para os dois lados.",
+        "exemplo": "Um arco romano com 60 centímetros de abertura tem 30 de raio. Nas portas antigas da ilha de Moçambique vêem-se arcos: o desenho geométrico está nas ruas.",
+        "lembra": "Arco romano: raio é metade da abertura.",
+        "audio": "80dcc836b54a.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Projecções ortogonais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Planos e vistas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As projecções ortogonais servem para:",
+         "options": [
+          "Mostrar todas as faces de um objecto numa só folha",
+          "Pintar o objecto",
+          "Medir o peso do objecto"
+         ],
+         "a": 0,
+         "audio": "a04f72a26d75.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada plano de projecção à vista que dá.",
+         "pairs": [
+          [
+           "Plano horizontal",
+           "Vista de cima"
+          ],
+          [
+           "Plano frontal",
+           "Vista de frente"
+          ],
+          [
+           "Plano de perfil",
+           "Vista de lado"
+          ]
+         ],
+         "audio": "7eeb7b1db1b2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um cilindro em pé, visto de cima, é:",
+         "options": [
+          "Um círculo",
+          "Um rectângulo",
+          "Um triângulo"
+         ],
+         "a": 0,
+         "audio": "97c4cb249a4b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O mesmo cilindro em pé, visto de frente, é:",
+         "options": [
+          "Um rectângulo",
+          "Um círculo",
+          "Um quadrado"
+         ],
+         "a": 0,
+         "audio": "9fbeed20ad87.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nas projecções ortogonais, as linhas de projecção são:",
+         "options": [
+          "Perpendiculares ao plano",
+          "Inclinadas ao plano",
+          "Curvas"
+         ],
+         "a": 0,
+         "audio": "537e25a1bb11.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As projecções ortogonais mostram todas as faces de um objecto numa só folha. O plano horizontal dá a vista de cima, o frontal a de frente, o de perfil a de lado. As linhas de projecção são perpendiculares ao plano.",
+        "exemplo": "Um cilindro em pé visto de cima é um círculo; visto de frente é um rectângulo. A mesma coisa, duas vistas.",
+        "lembra": "De cima, de frente, de lado: três vistas.",
+        "audio": "a439a72f388c.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Sólidos e a terceira vista",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma pirâmide quadrangular vista de cima é:",
+         "options": [
+          "Um quadrado com as diagonais",
+          "Um triângulo",
+          "Um círculo"
+         ],
+         "a": 0,
+         "audio": "63d349731350.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A mesma pirâmide vista de frente é:",
+         "options": [
+          "Um triângulo",
+          "Um quadrado",
+          "Um círculo"
+         ],
+         "a": 0,
+         "audio": "e4cca1537745.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada sólido à sua vista de cima.",
+         "pairs": [
+          [
+           "Prisma triangular deitado",
+           "Rectângulo"
+          ],
+          [
+           "Cubo",
+           "Quadrado"
+          ],
+          [
+           "Cone em pé",
+           "Círculo com um ponto no meio"
+          ]
+         ],
+         "audio": "362ab0474ea9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para achar a terceira vista a partir de duas vistas dadas usa-se:",
+         "options": [
+          "O cubo envolvente e o rebatimento dos planos",
+          "Uma balança",
+          "Um lápis de cor"
+         ],
+         "a": 0,
+         "audio": "6565d2b8f965.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um molde de costura ou a planta de uma casa são exemplos de:",
+         "options": [
+          "Projecções usadas no trabalho",
+          "Pictogramas",
+          "Texturas"
+         ],
+         "a": 0,
+         "audio": "4336004eb845.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os sólidos projectam-se vista a vista: a pirâmide quadrangular é um quadrado com as diagonais de cima e um triângulo de frente. Com duas vistas dadas, a terceira acha-se com o cubo envolvente e o rebatimento dos planos.",
+        "exemplo": "O cone em pé, de cima, é um círculo com um ponto no meio. Um molde de costura e a planta de uma casa são projecções que se usam no trabalho.",
+        "lembra": "Cubo envolvente: a caixa onde o sólido cabe.",
+        "audio": "1ff7a2473bfc.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Formas em axonometria",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Isométrica, dimétrica e cavaleira",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A axonometria serve para desenhar:",
+         "options": [
+          "Um objecto a três dimensões numa folha plana",
+          "Só a vista de frente",
+          "A cor do objecto"
+         ],
+         "a": 0,
+         "audio": "b3a1805c0e02.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de axonometria à sua característica.",
+         "pairs": [
+          [
+           "Isométrica",
+           "Os três eixos fazem 120 graus entre si"
+          ],
+          [
+           "Dimétrica",
+           "Dois eixos com a mesma escala, um diferente"
+          ],
+          [
+           "Cavaleira",
+           "A face da frente fica em verdadeira grandeza"
+          ]
+         ],
+         "audio": "87c7550c4840.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Na perspectiva isométrica, os três eixos fazem ângulos iguais entre si. Quantos graus tem cada ângulo?",
+         "a": "120",
+         "audio": "bfb1bea1a2a8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na perspectiva cavaleira, as medidas no eixo que foge para trás:",
+         "options": [
+          "Reduzem-se, em geral a metade",
+          "Duplicam",
+          "Ficam iguais"
+         ],
+         "a": 0,
+         "audio": "2a02d8cbf689.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um cubo em isometria vê-se como:",
+         "options": [
+          "Um hexágono com três losangos iguais",
+          "Um quadrado",
+          "Um círculo"
+         ],
+         "a": 0,
+         "audio": "af67d96ea78f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A axonometria desenha o objecto a três dimensões numa folha. Na isométrica os três eixos fazem 120 graus entre si; na dimétrica dois têm a mesma escala; na cavaleira a face da frente fica em verdadeira grandeza e o eixo que foge reduz-se.",
+        "exemplo": "Um cubo em isometria vê-se como um hexágono com três losangos iguais. Na cavaleira, a profundidade desenha-se em geral a metade.",
+        "lembra": "Isométrica: 120 graus, tudo à mesma escala.",
+        "audio": "4f494f7414eb.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Cotagem das formas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Esboço cotado e desenho cotado",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Cotar um desenho é:",
+         "options": [
+          "Escrever nele as medidas reais do objecto",
+          "Pintá-lo",
+          "Assiná-lo"
+         ],
+         "a": 0,
+         "audio": "4101aba12784.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo ao que ele é.",
+         "pairs": [
+          [
+           "Esboço cotado",
+           "À mão levantada, com as medidas"
+          ],
+          [
+           "Desenho cotado",
+           "A rigor, com régua e compasso, com as medidas"
+          ]
+         ],
+         "audio": "788d26b6f536.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A cotagem é importante porque:",
+         "options": [
+          "Quem constrói o objecto sabe as medidas certas",
+          "Fica mais bonito",
+          "Poupa papel"
+         ],
+         "a": 0,
+         "audio": "bf60a25d83ac.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma carteira de sala tem 120 centímetros de comprimento e 60 de largura no desenho cotado. Quantos centímetros tem o comprimento a mais do que a largura?",
+         "a": "60",
+         "audio": "69003a8a1cb5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Transportar as medidas das projecções ortogonais cotadas para a axonometria serve para:",
+         "options": [
+          "Desenhar o sólido a três dimensões com as medidas certas",
+          "Apagar as vistas",
+          "Mudar a cor do sólido"
+         ],
+         "a": 0,
+         "audio": "3e7dfb4de01c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Cotar é escrever no desenho as medidas reais do objecto. O esboço cotado é à mão levantada; o desenho cotado é a rigor. Com as cotas, quem constrói sabe as medidas certas e transporta-as das projecções para a axonometria.",
+        "exemplo": "Uma carteira com 120 centímetros de comprimento e 60 de largura: as cotas escrevem-se ao lado das linhas de cota, com setas nas pontas.",
+        "lembra": "Sem cotas não se constrói; com cotas não há dúvidas.",
+        "audio": "c2cad12756e0.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

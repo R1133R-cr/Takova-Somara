@@ -3728,4 +3728,140 @@ MATERIA = {
         "lembra": "«Mon», «ma», «mes» concordam com a coisa, não com quem "
                   "a tem.",
     },
+
+    # ---------------------------------------------------------------
+    # Educacao Visual -- 8a classe
+    # ---------------------------------------------------------------
+    "ev-8c:u1:n1": {
+        "explica": "A arte universal é pintura, escultura e arquitectura. "
+                   "Leonardo da Vinci pintou a Mona Lisa; Miguel Ângelo "
+                   "esculpiu o David e pintou a Capela Sistina; Picasso "
+                   "inventou o cubismo. Uma obra lê-se pelo tipo, pela "
+                   "técnica e pelo tema.",
+        "exemplo": "Diante de um quadro pergunta-se: é pintura? Foi feito "
+                   "a óleo sobre tela? De que fala — uma pessoa, uma "
+                   "paisagem, uma guerra? São os três elementos da "
+                   "leitura.",
+        "lembra": "Tipo, técnica e tema: as três perguntas a uma obra.",
+    },
+    "ev-8c:u2:n1": {
+        "explica": "Os códigos visuais comunicam sem palavras. O indício é "
+                   "um sinal natural de que algo aconteceu: fumo, pegadas. "
+                   "O pictograma é um desenho simples feito de propósito "
+                   "para toda a gente entender: o boneco na porta da casa "
+                   "de banho.",
+        "exemplo": "No aeroporto, quem não lê português percebe o "
+                   "pictograma da mala e da seta. Um bom pictograma é "
+                   "simples e sem pormenores a mais.",
+        "lembra": "Indício acontece; pictograma desenha-se.",
+    },
+    "ev-8c:u2:n2": {
+        "explica": "Um cartaz lê-se de longe e num relance: pouca letra, "
+                   "grande, e uma imagem forte. Faz-se em etapas — tema e "
+                   "mensagem, esboço, cartaz final. A banda desenhada conta "
+                   "com vinhetas, balões de fala e onomatopeias.",
+        "exemplo": "Um cartaz sobre os direitos das crianças: uma imagem, "
+                   "uma frase, cores fortes. Na banda desenhada, o «pum» "
+                   "escrito é a onomatopeia. Com o x-acto, corta-se para "
+                   "fora do corpo.",
+        "lembra": "Cartaz: ver de longe, perceber num relance.",
+    },
+    "ev-8c:u3:n1": {
+        "explica": "Forma-função: a forma de um objecto depende do que ele "
+                   "serve. As formas são naturais, artificiais ou mistas. "
+                   "A malha, ou rede, deixa ampliar ou reduzir um desenho "
+                   "sem o deformar. Ponto, linha e plano são os elementos "
+                   "básicos.",
+        "exemplo": "Copiar um desenho de quadrados de 1 centímetro para "
+                   "quadrados de 3 amplia-o 3 vezes. Um copo tem a forma "
+                   "que tem porque serve para beber.",
+        "lembra": "A malha amplia e reduz sem deformar.",
+    },
+    "ev-8c:u3:n2": {
+        "explica": "As cores primárias são o amarelo, o azul e o vermelho. "
+                   "Duas primárias dão uma "
+                   "secundária — verde, laranja, roxo — e uma primária com "
+                   "a secundária vizinha dá uma terciária. A cor comunica: "
+                   "o vermelho do trânsito manda parar.",
+        "exemplo": "Amarelo com azul dá verde; amarelo com vermelho dá "
+                   "laranja; azul com vermelho dá roxo. Com lápis de cor, "
+                   "pinta-se uma por cima da outra.",
+        "lembra": "Três primárias, três secundárias, e as terciárias entre "
+                  "elas.",
+    },
+    "ev-8c:u3:n3": {
+        "explica": "A textura é o aspecto da superfície: lisa, rugosa, "
+                   "áspera, macia. É natural, como a casca da árvore, ou "
+                   "artificial, como um tecido. No desenho imita-se com "
+                   "pontos, traços e riscos repetidos, ou obtém-se por "
+                   "decalque.",
+        "exemplo": "Pôr o papel sobre uma moeda e esfregar com o lápis faz "
+                   "aparecer a textura: é o decalque. O vidro é liso, a "
+                   "lixa é áspera, o algodão é macio.",
+        "lembra": "Textura é o que a superfície faz sentir ao tocar.",
+    },
+    "ev-8c:u4:n1": {
+        "explica": "A espiral de dois centros desenha-se com "
+                   "semicircunferências alternadas a partir de dois pontos, "
+                   "e o raio cresce a cada meia volta. A oval tem dois "
+                   "eixos de simetria; o óvulo, como o ovo, tem um só. "
+                   "Tudo com compasso.",
+        "exemplo": "Centros a 1 centímetro e primeiro raio 1: os raios "
+                   "seguintes são 2, 3, 4. A concha do caracol é uma "
+                   "espiral da natureza.",
+        "lembra": "Dois centros, meias voltas, raio a crescer.",
+    },
+    "ev-8c:u4:n2": {
+        "explica": "O arco romano é meia circunferência com o centro no "
+                   "meio da abertura. A ogiva acaba em bico; o árabe fecha "
+                   "em ferradura; o abatido é mais baixo que meia "
+                   "circunferência; o contracurvado junta curvas para os "
+                   "dois lados.",
+        "exemplo": "Um arco romano com 60 centímetros de abertura tem 30 "
+                   "de raio. Nas portas antigas da ilha de Moçambique "
+                   "vêem-se arcos: o desenho geométrico está nas ruas.",
+        "lembra": "Arco romano: raio é metade da abertura.",
+    },
+    "ev-8c:u5:n1": {
+        "explica": "As projecções ortogonais mostram todas as faces de um "
+                   "objecto numa só folha. O plano horizontal dá a vista de "
+                   "cima, o frontal a de frente, o de perfil a de lado. As "
+                   "linhas de projecção são perpendiculares ao plano.",
+        "exemplo": "Um cilindro em pé visto de cima é um círculo; visto de "
+                   "frente é um rectângulo. A mesma coisa, duas vistas.",
+        "lembra": "De cima, de frente, de lado: três vistas.",
+    },
+    "ev-8c:u5:n2": {
+        "explica": "Os sólidos projectam-se vista a vista: a pirâmide "
+                   "quadrangular é um quadrado com as diagonais de cima e "
+                   "um triângulo de frente. Com duas vistas dadas, a "
+                   "terceira acha-se com o cubo envolvente e o rebatimento "
+                   "dos planos.",
+        "exemplo": "O cone em pé, de cima, é um círculo com um ponto no "
+                   "meio. Um molde de costura e a planta de uma casa são "
+                   "projecções que se usam no trabalho.",
+        "lembra": "Cubo envolvente: a caixa onde o sólido cabe.",
+    },
+    "ev-8c:u6:n1": {
+        "explica": "A axonometria desenha o objecto a três dimensões numa "
+                   "folha. Na isométrica os três eixos fazem 120 graus "
+                   "entre si; na dimétrica dois têm a mesma escala; na "
+                   "cavaleira a face da frente fica em verdadeira grandeza "
+                   "e o eixo que foge reduz-se.",
+        "exemplo": "Um cubo em isometria vê-se como um hexágono com três "
+                   "losangos iguais. Na cavaleira, a profundidade "
+                   "desenha-se em geral a metade.",
+        "lembra": "Isométrica: 120 graus, tudo à mesma escala.",
+    },
+    "ev-8c:u7:n1": {
+        "explica": "Cotar é escrever no desenho as medidas reais do "
+                   "objecto. O esboço cotado é à mão levantada; o desenho "
+                   "cotado é a rigor. Com as cotas, quem constrói sabe as "
+                   "medidas certas e transporta-as das projecções para a "
+                   "axonometria.",
+        "exemplo": "Uma carteira com 120 centímetros de comprimento e 60 "
+                   "de largura: as cotas escrevem-se ao lado das linhas de "
+                   "cota, com setas nas pontas.",
+        "lembra": "Sem cotas não se constrói; com cotas não há dúvidas.",
+    },
 }
