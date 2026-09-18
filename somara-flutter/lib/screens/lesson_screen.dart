@@ -224,12 +224,7 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
     if (cur is QChoice) return escolha == cur.a;
     if (cur is QInput) return _norm(_input.text) == _norm(cur.a);
     if (cur is QDrag) return zonaLargada == cur.a;
-    if (cur is QMatch) {
-      for (var e = 0; e < cur.pairs.length; e++) {
-        if (ligacoes[e] != e) return false;
-      }
-      return true;
-    }
+    if (cur is QMatch) return cur.certa(ligacoes);
     if (cur is QSequencia) return cur.certa(_ordem);
     if (cur is QGrupos) return cur.certa(_porGrupo);
     if (cur is QCenario) return cur.certa(_noCenario);

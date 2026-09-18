@@ -158,6 +158,23 @@ class QInput extends Questao {
 class QMatch extends Questao {
   final List<(String, String)> pairs;
   const QMatch(super.q, super.audio, {super.figura, super.cores, required this.pairs});
+
+  /// [ligacoes] leva cada índice da esquerda ao índice da ficha da direita
+  /// em que a criança tocou.
+  ///
+  /// Compara-se o **texto** da ficha, não o índice. Numa ligação como
+  /// «Oxigénio → Elementar, Ferro → Elementar, Água → Composta» há duas
+  /// fichas «Elementar» iguais no ecrã; ligar o Ferro à primeira em vez da
+  /// segunda está certo, e a comparação por índice dava-o como errado.
+  bool certa(Map<int, int> ligacoes) {
+    if (ligacoes.length != pairs.length) return false;
+    for (var e = 0; e < pairs.length; e++) {
+      final d = ligacoes[e];
+      if (d == null || d < 0 || d >= pairs.length) return false;
+      if (pairs[d].$2 != pairs[e].$2) return false;
+    }
+    return true;
+  }
 }
 
 /// Arrastar uma peça para a zona certa.
