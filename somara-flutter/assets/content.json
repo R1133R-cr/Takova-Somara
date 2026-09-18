@@ -35721,6 +35721,1236 @@
      ]
     }
    ]
+  },
+  {
+   "id": "mat-9c",
+   "disciplina": "Matemática",
+   "classe": "9ª classe",
+   "tag": "MAT",
+   "fonte": "Programa de Ensino da Disciplina de Matemática — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, 9ª classe, pp. 82-110. As oito unidades temáticas e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 9ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Números e operações (1)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Teoria de conjuntos",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "A = {1, 2, 3} e B = {3, 4}. Quantos elementos tem A ∪ B?",
+         "a": "4",
+         "audio": "1408e60de658.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A = {1, 2, 3, 4} e B = {2, 4, 6}. Quantos elementos tem A ∩ B?",
+         "a": "2",
+         "audio": "cac931d2ca6e.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A = {1, 2, 3, 4, 5} e B = {2, 4}. Quantos elementos tem a diferença A menos B?",
+         "a": "3",
+         "audio": "714481a2dabf.mp3"
+        },
+        {
+         "t": "input",
+         "q": "O universo U é {1, 2, 3, 4, 5, 6} e A = {1, 3, 5}. Quantos elementos tem o complementar de A?",
+         "a": "3",
+         "audio": "0178f5b9f92d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Dois conjuntos sem nenhum elemento em comum dizem-se:",
+         "options": [
+          "Disjuntos",
+          "Iguais",
+          "Infinitos"
+         ],
+         "a": 0,
+         "audio": "f99d03f68276.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O conjunto dos números naturais é:",
+         "options": [
+          "Infinito: nunca acaba",
+          "Finito: acaba no 100",
+          "Vazio"
+         ],
+         "a": 0,
+         "audio": "16303ed30b2d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A reunião A ∪ B junta os dois conjuntos; a intersecção A ∩ B fica só com os comuns; a diferença A menos B tira a A o que está em B; o complementar de A é o que está no universo e não em A. Sem elementos comuns, são disjuntos.",
+        "exemplo": "A = {1, 2, 3} e B = {3, 4}: A ∪ B tem 4 elementos, A ∩ B tem 1, A menos B tem 2. Os naturais são um conjunto infinito: nunca acabam.",
+        "lembra": "Reunião junta, intersecção cruza, diferença tira.",
+        "audio": "e00864ca3234.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Os números reais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um número irracional é o que:",
+         "options": [
+          "Não se escreve como fracção: a dízima é infinita e não periódica",
+          "É negativo",
+          "É muito grande"
+         ],
+         "a": 0,
+         "audio": "64dc04e20d82.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada número ao conjunto mais pequeno a que pertence.",
+         "pairs": [
+          [
+           "7",
+           "Naturais"
+          ],
+          [
+           "−3",
+           "Inteiros"
+          ],
+          [
+           "1/2",
+           "Racionais"
+          ],
+          [
+           "√2",
+           "Irracionais"
+          ]
+         ],
+         "audio": "ad48012e8c41.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O conjunto dos números reais é:",
+         "options": [
+          "Os racionais juntos com os irracionais",
+          "Só os inteiros",
+          "Só os positivos"
+         ],
+         "a": 0,
+         "audio": "ba9f7b39ac97.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes é um número irracional?",
+         "options": [
+          "π",
+          "0,5",
+          "−4"
+         ],
+         "a": 0,
+         "audio": "fb0a92fd37e2.mp3"
+        },
+        {
+         "t": "input",
+         "q": "√50 está entre dois números naturais seguidos. Qual é o menor deles?",
+         "a": "7",
+         "audio": "952d102eb722.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os racionais escrevem-se como fracção e a dízima é finita ou periódica. Os irracionais, como √2 e π, têm dízima infinita não periódica. Juntos formam os reais, que enchem a recta: ℕ está dentro de ℤ, ℤ dentro de ℚ, ℚ dentro de ℝ.",
+        "exemplo": "7 é natural, −3 é inteiro, 1/2 é racional, √2 é irracional. √50 está entre 7 e 8, porque 49 é menor que 50 e 64 é maior.",
+        "lembra": "Racional tem fracção; irracional não tem.",
+        "audio": "57fe75fa97f6.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Radiciação",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto é ∛27?",
+         "a": "3",
+         "audio": "9b6c5898024c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é ∛(−8)?",
+         "a": "-2",
+         "audio": "21de42493d20.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um cubo tem 125 centímetros cúbicos de volume. Quanto mede a aresta, em centímetros?",
+         "a": "5",
+         "audio": "5ede16d6b1ca.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A potência 8 elevado a um terço é o mesmo que:",
+         "options": [
+          "∛8, que dá 2",
+          "8 a dividir por 3",
+          "8³"
+         ],
+         "a": 0,
+         "audio": "746f7d12b6db.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Passando o factor para fora do radical, √12 fica:",
+         "options": [
+          "2√3",
+          "3√2",
+          "6√2"
+         ],
+         "a": 0,
+         "audio": "00e8690fe5ce.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A raiz cúbica é o contrário do cubo: ∛27 é 3 porque 3 ao cubo é 27, e ∛(−8) é −2. Uma potência de expoente fraccionário é uma raiz: 8 elevado a um terço é ∛8. Um factor sai do radical quando é um quadrado.",
+        "exemplo": "Um cubo com 125 de volume tem aresta ∛125, que é 5. √12 é √(4 × 3), e como 4 é 2 ao quadrado, sai: 2√3.",
+        "lembra": "Expoente um terço é raiz cúbica.",
+        "audio": "b07048817884.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Operações com radicais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quanto é 2√3 + 5√3?",
+         "options": [
+          "7√3",
+          "7√6",
+          "10√3"
+         ],
+         "a": 0,
+         "audio": "7bb8aad8b120.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é √4 × √9?",
+         "a": "6",
+         "audio": "41a93c548d11.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é √50 a dividir por √2?",
+         "a": "5",
+         "audio": "0adf2cdc559d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quanto é (√7)²?",
+         "a": "7",
+         "audio": "cd488efa6b13.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Racionalizar o denominador de 1 sobre √2 dá:",
+         "options": [
+          "√2 sobre 2",
+          "2 sobre √2",
+          "√2"
+         ],
+         "a": 0,
+         "audio": "7550d764a7f0.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Radicais semelhantes somam-se: 2√3 mais 5√3 dá 7√3. Multiplicam-se e dividem-se por dentro: √4 × √9 é √36. O quadrado de uma raiz quadrada é o radicando. Racionalizar é tirar a raiz do denominador, multiplicando em cima e em baixo.",
+        "exemplo": "√50 a dividir por √2 é √25, que é 5. (√7)² é 7. 1 sobre √2 vira √2 sobre 2.",
+        "lembra": "Só se somam radicais com o mesmo radicando.",
+        "audio": "21902730f248.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Álgebra (1)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Inequações lineares",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Qual é o maior número natural que satisfaz 2x + 1 < 9?",
+         "a": "3",
+         "audio": "5c611d5a5ea1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o menor número natural que satisfaz 3x − 5 > 7?",
+         "a": "5",
+         "audio": "0520c74b4ae4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao multiplicar os dois membros de uma inequação por um número negativo:",
+         "options": [
+          "O sinal da desigualdade inverte-se",
+          "O sinal fica igual",
+          "A inequação deixa de ter solução"
+         ],
+         "a": 0,
+         "audio": "dc0a4001079e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A solução de x − 2 ≥ 1, em intervalo, é:",
+         "options": [
+          "[3, +∞[",
+          "]−∞, 3]",
+          "[1, 3]"
+         ],
+         "a": 0,
+         "audio": "ae66370ad1cb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na recta graduada, a solução de x < 4 marca-se com:",
+         "options": [
+          "Bola aberta no 4 e traço para a esquerda",
+          "Bola fechada no 4 e traço para a direita",
+          "Só um ponto no 4"
+         ],
+         "a": 0,
+         "audio": "1b6f0e4e311b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma inequação resolve-se como uma equação, com uma excepção: ao multiplicar ou dividir por um negativo, o sinal da desigualdade inverte-se. A solução é um intervalo, e na recta marca-se bola aberta para < e > e bola fechada para ≤ e ≥.",
+        "exemplo": "2x + 1 < 9 dá x < 4: o maior natural é 3. 3x − 5 > 7 dá x > 4: o menor natural é 5. x − 2 ≥ 1 é [3, +∞[.",
+        "lembra": "Negativo a multiplicar vira o sinal.",
+        "audio": "cdf1b6604c1e.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Sistemas de inequações",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quantos números inteiros satisfazem ao mesmo tempo x > 1 e x < 5?",
+         "a": "3",
+         "audio": "bc61705638e3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A solução de um sistema de duas inequações é:",
+         "options": [
+          "A intersecção das soluções das duas",
+          "A reunião das soluções das duas",
+          "A solução da primeira"
+         ],
+         "a": 0,
+         "audio": "216a1e517656.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O sistema x > 3 e x < 1 tem solução:",
+         "options": [
+          "Nenhuma: é impossível",
+          "Todos os números",
+          "x = 2"
+         ],
+         "a": 0,
+         "audio": "30da7dd38247.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um quarto rectangular tem o comprimento 1 metro maior que a largura e o perímetro inferior a 22 metros. Qual é a maior largura inteira possível, em metros?",
+         "a": "4",
+         "audio": "74509551fe0e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A solução de x ≥ −1 e x ≤ 2, em intervalo, é:",
+         "options": [
+          "[−1, 2]",
+          "]−1, 2[",
+          "[2, +∞["
+         ],
+         "a": 0,
+         "audio": "42233a0b8bb9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Num sistema de inequações, as duas condições têm de valer ao mesmo tempo: a solução é a intersecção das duas. Se não há parte comum, o sistema é impossível. Muitos problemas da vida têm duas condições e dão um sistema.",
+        "exemplo": "x > 1 e x < 5 dá ]1, 5[: os inteiros são 2, 3 e 4. x > 3 e x < 1 não tem solução. Um quarto com perímetro menor que 22 e comprimento igual à largura mais 1: a largura vai até 4.",
+        "lembra": "Sistema é intersecção: o que serve às duas.",
+        "audio": "78c74b48f79a.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Geometria (1)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Razões, proporções e homotetia",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Na proporção 3 está para 4 assim como 9 está para x, quanto vale x?",
+         "a": "12",
+         "audio": "1f9aef3d79c7.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma homotetia de razão 3 transforma um segmento de 4 centímetros num segmento de quantos centímetros?",
+         "a": "12",
+         "audio": "c3285fda5317.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma homotetia de razão entre 0 e 1:",
+         "options": [
+          "Reduz a figura",
+          "Amplia a figura",
+          "Roda a figura"
+         ],
+         "a": 0,
+         "audio": "28a646432bd1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um quadrado de lado 2 é ampliado com razão 3. Qual é a área do quadrado ampliado?",
+         "a": "36",
+         "audio": "5c5897063045.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa ampliação, os ângulos da figura:",
+         "options": [
+          "Ficam iguais",
+          "Ficam maiores",
+          "Ficam menores"
+         ],
+         "a": 0,
+         "audio": "5be948d90c5f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Numa proporção, os produtos cruzados são iguais. Uma homotetia amplia ou reduz uma figura por uma razão: os comprimentos multiplicam-se pela razão, os ângulos ficam iguais, e a área multiplica-se pela razão ao quadrado.",
+        "exemplo": "3 está para 4 como 9 está para 12. Razão 3: um segmento de 4 passa a 12, e um quadrado de lado 2 passa a lado 6, com área 36. Razão entre 0 e 1 reduz.",
+        "lembra": "A área cresce com o quadrado da razão.",
+        "audio": "9a704a676534.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Semelhança de triângulos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Dois triângulos são semelhantes quando:",
+         "options": [
+          "Têm os ângulos iguais e os lados proporcionais",
+          "Têm a mesma área",
+          "Têm o mesmo perímetro"
+         ],
+         "a": 0,
+         "audio": "019c68673900.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada critério de semelhança ao que ele exige.",
+         "pairs": [
+          [
+           "Lado-lado-lado",
+           "Os três lados proporcionais"
+          ],
+          [
+           "Ângulo-ângulo",
+           "Dois ângulos iguais"
+          ],
+          [
+           "Lado-ângulo-lado",
+           "Dois lados proporcionais e o ângulo entre eles igual"
+          ]
+         ],
+         "audio": "db923fca6816.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Dois triângulos são semelhantes com razão 2. Um lado do primeiro mede 5. Quanto mede o lado correspondente do segundo?",
+         "a": "10",
+         "audio": "6e28898d9cb2.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Dois triângulos semelhantes têm razão 3. Se o perímetro do primeiro é 10, qual é o perímetro do segundo?",
+         "a": "30",
+         "audio": "b95e25537b1d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Dois triângulos semelhantes têm razão 2. Se a área do primeiro é 6, qual é a área do segundo?",
+         "a": "24",
+         "audio": "4cdb7b61014a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Dois triângulos são semelhantes quando têm os ângulos iguais e os lados proporcionais. Basta um critério: lado-lado-lado, ângulo-ângulo, ou lado-ângulo-lado. Os perímetros estão na razão; as áreas, na razão ao quadrado.",
+        "exemplo": "Razão 2: um lado de 5 passa a 10. Razão 3: perímetro 10 passa a 30. Razão 2: área 6 passa a 24, porque 2 ao quadrado é 4.",
+        "lembra": "Dois ângulos iguais chegam para a semelhança.",
+        "audio": "1478f825ebe4.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Thales e Pitágoras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O teorema de Thales diz que rectas paralelas cortadas por duas secantes:",
+         "options": [
+          "Determinam segmentos proporcionais",
+          "Determinam segmentos iguais",
+          "Nunca se cortam"
+         ],
+         "a": 0,
+         "audio": "454c397f953c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um poste de 2 metros faz uma sombra de 3 metros. À mesma hora, uma árvore faz uma sombra de 12 metros. Quantos metros tem a árvore?",
+         "a": "8",
+         "audio": "ece89f943c7f.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num triângulo rectângulo os catetos medem 6 e 8. Quanto mede a hipotenusa?",
+         "a": "10",
+         "audio": "5a79e24a4e37.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num triângulo rectângulo a hipotenusa mede 13 e um cateto mede 5. Quanto mede o outro cateto?",
+         "a": "12",
+         "audio": "10dbff20f8c6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um triângulo de lados 3, 4 e 5 é:",
+         "options": [
+          "Rectângulo, porque 9 mais 16 é 25",
+          "Equilátero",
+          "Impossível"
+         ],
+         "a": 0,
+         "audio": "72b61c7ccaf2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Thales: rectas paralelas cortadas por duas secantes determinam segmentos proporcionais: é por isso que a sombra do poste dá a altura da árvore. Pitágoras: no triângulo rectângulo, a hipotenusa ao quadrado é a soma dos quadrados dos catetos.",
+        "exemplo": "Poste de 2 com sombra 3, árvore com sombra 12: a árvore tem 8. Catetos 6 e 8: hipotenusa 10. Hipotenusa 13 e cateto 5: o outro é 12.",
+        "lembra": "Hipotenusa ao quadrado é cateto mais cateto, ao quadrado.",
+        "audio": "aa222ea09900.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Álgebra (2)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Polinómios",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Qual é o grau do polinómio 2x³ + x² − 5?",
+         "a": "3",
+         "audio": "7fd0e2ca84a6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é (3x + 2) + (2x − 5)?",
+         "options": [
+          "5x − 3",
+          "5x + 7",
+          "x − 3"
+         ],
+         "a": 0,
+         "audio": "40aa47a70c64.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 2x × (x + 3)?",
+         "options": [
+          "2x² + 6x",
+          "2x² + 3",
+          "2x + 6x"
+         ],
+         "a": 0,
+         "audio": "0f09bbd1c6d8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é (x + 2) × (x + 3)?",
+         "options": [
+          "x² + 5x + 6",
+          "x² + 6",
+          "x² + 5x"
+         ],
+         "a": 0,
+         "audio": "fdbd730bff64.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o valor numérico de x² + 3x − 1 para x = 2?",
+         "a": "9",
+         "audio": "5d390746fe31.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um polinómio é uma soma de monómios; o grau é o maior expoente. Somam-se juntando os semelhantes; um monómio multiplica um polinómio distribuindo; dois binómios multiplicam-se termo a termo. O valor numérico sai substituindo o x.",
+        "exemplo": "(3x + 2) + (2x − 5) é 5x − 3. 2x × (x + 3) é 2x² + 6x. (x + 2) × (x + 3) é x² + 5x + 6. Para x = 2, x² + 3x − 1 dá 9.",
+        "lembra": "Cada termo de um multiplica cada termo do outro.",
+        "audio": "ba17a2c13c54.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Produtos notáveis e factorização",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quanto é (x + 3)²?",
+         "options": [
+          "x² + 6x + 9",
+          "x² + 9",
+          "x² + 3x + 9"
+         ],
+         "a": 0,
+         "audio": "6a5a14c100b3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é (x − 2)²?",
+         "options": [
+          "x² − 4x + 4",
+          "x² − 4",
+          "x² + 4x + 4"
+         ],
+         "a": 0,
+         "audio": "a4c0d731a311.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é (x + 5) × (x − 5)?",
+         "options": [
+          "x² − 25",
+          "x² + 25",
+          "x² − 10x + 25"
+         ],
+         "a": 0,
+         "audio": "dcaac08445a9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pondo o factor comum em evidência, 3x² + 6x fica:",
+         "options": [
+          "3x(x + 2)",
+          "3(x + 2)",
+          "x(3x + 6x)"
+         ],
+         "a": 0,
+         "audio": "ee2a6830f183.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Factorizando, x² − 9 fica:",
+         "options": [
+          "(x + 3)(x − 3)",
+          "(x − 3)²",
+          "(x + 9)(x − 1)"
+         ],
+         "a": 0,
+         "audio": "226587c6cfa4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os produtos notáveis poupam contas: (a + b)² é a² + 2ab + b², (a − b)² é a² − 2ab + b², e (a + b)(a − b) é a² − b². Factorizar é o caminho ao contrário: pôr o factor comum em evidência ou reconhecer um caso notável.",
+        "exemplo": "(x + 3)² é x² + 6x + 9. (x − 2)² é x² − 4x + 4. (x + 5)(x − 5) é x² − 25. 3x² + 6x é 3x(x + 2). x² − 9 é (x + 3)(x − 3).",
+        "lembra": "Soma vezes diferença é diferença de quadrados.",
+        "audio": "56a3c8d01085.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Equações quadráticas incompletas",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Resolve x² − 16 = 0. Qual é a raiz positiva?",
+         "a": "4",
+         "audio": "c111d16a14f6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Resolve x² − 5x = 0. Qual é a raiz diferente de zero?",
+         "a": "5",
+         "audio": "d370cf139018.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A lei do anulamento do produto diz que se a × b = 0, então:",
+         "options": [
+          "a = 0 ou b = 0",
+          "a = 0 e b = 0",
+          "a = b"
+         ],
+         "a": 0,
+         "audio": "ef9c00907015.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A equação x² + 4 = 0:",
+         "options": [
+          "Não tem solução real: nenhum quadrado é negativo",
+          "Tem solução x = 2",
+          "Tem solução x = −2"
+         ],
+         "a": 0,
+         "audio": "3d139c28afea.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantas soluções tem a equação x² = 0?",
+         "a": "1",
+         "audio": "b60f1b6c1942.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma equação quadrática tem x ao quadrado. Sem o termo em x, isola-se o quadrado e tira-se a raiz: duas soluções simétricas, ou nenhuma se der negativo. Sem termo independente, põe-se x em evidência e usa-se a lei do anulamento do produto.",
+        "exemplo": "x² − 16 = 0 dá x = 4 ou x = −4. x² − 5x = 0 é x(x − 5) = 0, logo x = 0 ou x = 5. x² + 4 = 0 não tem solução real. x² = 0 só tem o zero.",
+        "lembra": "Produto zero: um dos factores é zero.",
+        "audio": "2aec18545fec.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Equações quadráticas completas",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Na equação x² − 5x + 6 = 0, quanto vale o discriminante, b² − 4ac?",
+         "a": "1",
+         "audio": "76b85d8e1b55.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Resolve x² − 5x + 6 = 0. Qual é a maior raiz?",
+         "a": "3",
+         "audio": "ae7adb9db6a8.mp3"
+        },
+        {
+         "t": "input",
+         "q": "As raízes de x² − 7x + 10 = 0 são 2 e 5. Quanto vale a soma das raízes?",
+         "a": "7",
+         "audio": "ec69c6d1cd58.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se o discriminante é negativo, a equação quadrática:",
+         "options": [
+          "Não tem raízes reais",
+          "Tem duas raízes iguais",
+          "Tem duas raízes diferentes"
+         ],
+         "a": 0,
+         "audio": "60f121c86110.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A área de um quadrado mais o triplo do seu lado é 28. Quanto mede o lado?",
+         "a": "4",
+         "audio": "e01fc405281a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na equação completa ax² + bx + c = 0, o discriminante b² − 4ac diz quantas raízes há: duas se é positivo, uma se é zero, nenhuma se é negativo. A fórmula resolvente dá-as, e a soma das raízes é −b sobre a; o produto, c sobre a.",
+        "exemplo": "x² − 5x + 6 = 0: discriminante 25 − 24 = 1, raízes 2 e 3. Um quadrado cuja área mais o triplo do lado dá 28 tem lado 4, porque 16 + 12 é 28.",
+        "lembra": "Discriminante negativo: sem raízes reais.",
+        "audio": "87587feb33fe.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Funções",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A função quadrática",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O gráfico de uma função quadrática é:",
+         "options": [
+          "Uma parábola",
+          "Uma recta",
+          "Uma circunferência"
+         ],
+         "a": 0,
+         "audio": "2e05476a699c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Sendo f(x) = 2x², quanto vale f(3)?",
+         "a": "18",
+         "audio": "b7cf315cb784.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em y = ax², se a é negativo a parábola tem a concavidade:",
+         "options": [
+          "Voltada para baixo",
+          "Voltada para cima",
+          "Para a direita"
+         ],
+         "a": 0,
+         "audio": "37dc059ee15a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O vértice da parábola y = x² é:",
+         "options": [
+          "A origem, (0, 0)",
+          "O ponto (1, 1)",
+          "O ponto (0, 1)"
+         ],
+         "a": 0,
+         "audio": "7964cd6bbdd1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O eixo de simetria de y = 3x² é:",
+         "options": [
+          "O eixo das ordenadas, x = 0",
+          "O eixo das abcissas, y = 0",
+          "A recta y = x"
+         ],
+         "a": 0,
+         "audio": "4deeba50cb93.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A função quadrática y = ax² tem por gráfico uma parábola com o vértice na origem e o eixo das ordenadas como eixo de simetria. Se a é positivo, a concavidade é para cima; se é negativo, para baixo.",
+        "exemplo": "f(x) = 2x²: f(3) é 2 × 9, que é 18. y = −x² é a parábola de y = x² virada para baixo.",
+        "lembra": "a positivo sorri; a negativo faz beicinho.",
+        "audio": "ea323b9f9975.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Vértice, zeros e translações",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "A parábola y = x² − 9 corta o eixo das abcissas em dois pontos. Qual é a abcissa positiva?",
+         "a": "3",
+         "audio": "7d06367e016e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O gráfico de y = x² + 2 é o de y = x²:",
+         "options": [
+          "Subido 2 unidades",
+          "Descido 2 unidades",
+          "Deslocado 2 para a direita"
+         ],
+         "a": 0,
+         "audio": "db2c0b509026.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O vértice da parábola y = (x − 4)² + 1 é:",
+         "options": [
+          "(4, 1)",
+          "(−4, 1)",
+          "(1, 4)"
+         ],
+         "a": 0,
+         "audio": "ab72525682b3.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A função y = x² − 4x tem dois zeros. Qual é o zero diferente de 0?",
+         "a": "4",
+         "audio": "84445c7edcda.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se a parábola tem a concavidade para cima, o vértice é:",
+         "options": [
+          "O mínimo da função",
+          "O máximo da função",
+          "Um zero da função"
+         ],
+         "a": 0,
+         "audio": "fa2298d1c05c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Somar c a ax² sobe ou desce a parábola; escrever a(x − h)² + k põe o vértice em (h, k). Os zeros são onde a parábola corta o eixo das abcissas, e o vértice é o mínimo se a concavidade é para cima, ou o máximo se é para baixo.",
+        "exemplo": "y = x² − 9 tem zeros em −3 e 3. y = x² + 2 é y = x² subida 2. y = (x − 4)² + 1 tem vértice (4, 1). y = x² − 4x tem zeros em 0 e 4.",
+        "lembra": "Em a(x − h)² + k, o vértice é (h, k).",
+        "audio": "af4242a99b30.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Álgebra (3)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Inequações quadráticas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para resolver x² − 4 < 0 começa-se por:",
+         "options": [
+          "Achar as raízes de x² − 4 = 0",
+          "Dividir tudo por x",
+          "Passar o 4 para o outro lado e esquecer o quadrado"
+         ],
+         "a": 0,
+         "audio": "96d78810cff9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A solução de x² − 4 < 0 é:",
+         "options": [
+          "]−2, 2[",
+          "]2, +∞[",
+          "]−∞, −2["
+         ],
+         "a": 0,
+         "audio": "2406b571552e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A solução de x² − 4 > 0 é:",
+         "options": [
+          "x < −2 ou x > 2",
+          "−2 < x < 2",
+          "Só x > 2"
+         ],
+         "a": 0,
+         "audio": "3d0c95df8252.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos números inteiros satisfazem x² − 9 ≤ 0?",
+         "a": "7",
+         "audio": "492ce671ea2a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na resolução gráfica de uma inequação quadrática, olha-se para onde a parábola está:",
+         "options": [
+          "Acima ou abaixo do eixo das abcissas",
+          "À esquerda do eixo das ordenadas",
+          "Mais perto da origem"
+         ],
+         "a": 0,
+         "audio": "b82351afc813.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma inequação quadrática resolve-se achando as raízes da equação e vendo depois o sinal entre elas e fora delas, numa tabela de sinais ou no esboço da parábola: abaixo do eixo o valor é negativo, acima é positivo.",
+        "exemplo": "x² − 4 < 0 é ]−2, 2[: entre as raízes a parábola está em baixo. x² − 4 > 0 é fora: x < −2 ou x > 2. x² − 9 ≤ 0 tem 7 inteiros, de −3 a 3.",
+        "lembra": "Raízes primeiro, sinal depois.",
+        "audio": "b529e25eae28.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Organização e tratamento de dados",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "População, amostra e frequências",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Para saber a altura média dos alunos da escola mediram-se 40 alunos. Liga cada coisa ao seu nome.",
+         "pairs": [
+          [
+           "Todos os alunos da escola",
+           "População"
+          ],
+          [
+           "Os 40 alunos medidos",
+           "Amostra"
+          ]
+         ],
+         "audio": "157717dfffde.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Numa turma de 40 alunos, 10 têm 14 anos. Qual é a frequência relativa percentual dos que têm 14 anos?",
+         "a": "25",
+         "audio": "2e92d963ba06.mp3"
+        },
+        {
+         "t": "input",
+         "q": "As frequências absolutas são 5, 8 e 7. Qual é a frequência acumulada até à segunda classe?",
+         "a": "13",
+         "audio": "9d77030babda.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num gráfico circular, uma fatia de 25 por cento tem quantos graus?",
+         "a": "90",
+         "audio": "9acd9821bd2f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A idade é uma variável:",
+         "options": [
+          "Quantitativa",
+          "Qualitativa",
+          "Sem valor"
+         ],
+         "a": 0,
+         "audio": "271792d781e6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A população é o todo; a amostra é a parte que se observa. A frequência absoluta conta; a relativa divide pelo total, e em percentagem multiplica por 100; a acumulada soma até à classe. No gráfico circular, 100 por cento são 360 graus.",
+        "exemplo": "10 em 40 alunos são 25 por cento. Frequências 5, 8 e 7: a acumulada até à segunda é 13. Uma fatia de 25 por cento tem 90 graus.",
+        "lembra": "Relativa é a parte sobre o todo.",
+        "audio": "118bf699ffae.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Média, moda e mediana",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Qual é a média de 12, 14 e 16?",
+         "a": "14",
+         "audio": "3e1840d2d00c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é a moda de 3, 5, 5, 7, 9?",
+         "a": "5",
+         "audio": "cdf4b745bc61.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é a mediana de 4, 9, 2, 7, 5?",
+         "a": "5",
+         "audio": "46b9673a5d1d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é a mediana de 2, 4, 6, 8?",
+         "a": "5",
+         "audio": "bca4674b5d1c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um aluno teve 10 em três testes e 14 num quarto. Qual é a média dos quatro?",
+         "a": "11",
+         "audio": "874ef81437c6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A média é a soma a dividir pelo número de dados. A moda é o valor mais frequente. A mediana é o valor do meio depois de ordenar: com um número par de dados, é a média dos dois do meio.",
+        "exemplo": "Média de 12, 14 e 16: 14. Moda de 3, 5, 5, 7, 9: 5. Mediana de 2, 4, 5, 7, 9: 5. Mediana de 2, 4, 6, 8: entre 4 e 6, que é 5.",
+        "lembra": "Mediana: ordenar primeiro, meio depois.",
+        "audio": "d64d1f82f876.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Geometria (2)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Poliedros e prismas",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Um cubo tem 8 vértices e 6 faces. Pela relação de Euler, quantas arestas tem?",
+         "a": "12",
+         "audio": "e5f8acddf29d.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada poliedro ao seu número de faces.",
+         "pairs": [
+          [
+           "Tetraedro",
+           "4"
+          ],
+          [
+           "Hexaedro",
+           "6"
+          ],
+          [
+           "Octaedro",
+           "8"
+          ]
+         ],
+         "audio": "f9bf29f2fb5e.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um prisma recto tem base rectangular de 3 por 4 e altura 5. Qual é o volume?",
+         "a": "60",
+         "audio": "80630ba0d1d2.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um prisma recto tem base triangular de área 6 e altura 10. Qual é o volume?",
+         "a": "60",
+         "audio": "7e80315f0ae1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um cubo tem aresta 3. Qual é a área total das suas faces?",
+         "a": "54",
+         "audio": "b2d8adee38a9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um poliedro é um sólido de faces planas, e a relação de Euler diz que vértices menos arestas mais faces dá 2. O prisma tem duas bases iguais e paralelas, e o volume é a área da base vezes a altura.",
+        "exemplo": "Cubo: 8 vértices, 6 faces, logo 12 arestas. Prisma de base 3 por 4 e altura 5: volume 60. Cubo de aresta 3: 6 faces de 9, área total 54.",
+        "lembra": "Vértices menos arestas mais faces é 2.",
+        "audio": "26119f889034.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Pirâmides",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Uma pirâmide quadrangular tem quantas faces, contando a base?",
+         "a": "5",
+         "audio": "0e79ee44fa29.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma pirâmide tem base quadrada de lado 6 e altura 5. Qual é o volume?",
+         "a": "60",
+         "audio": "84ba98765b4b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O volume da pirâmide é:",
+         "options": [
+          "Um terço do volume do prisma com a mesma base e altura",
+          "O dobro do volume do prisma",
+          "Igual ao volume do prisma"
+         ],
+         "a": 0,
+         "audio": "cd7d99dc1c7c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma pirâmide triangular tem quantos vértices?",
+         "a": "4",
+         "audio": "601b734ebd15.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um prisma e uma pirâmide têm a mesma base e a mesma altura. O prisma tem volume 90. Qual é o volume da pirâmide?",
+         "a": "30",
+         "audio": "0d3dd0eacfe7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A pirâmide tem uma base e faces triangulares que se juntam no vértice. O volume é um terço da área da base vezes a altura: uma pirâmide com a mesma base e altura que um prisma tem um terço do volume dele.",
+        "exemplo": "Base quadrada de lado 6 e altura 5: 36 × 5 a dividir por 3 dá 60. Prisma de volume 90: a pirâmide igual tem 30. A pirâmide quadrangular tem 5 faces.",
+        "lembra": "Pirâmide é um terço do prisma.",
+        "audio": "b03665ae3a1a.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Cilindro, cone e esfera",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada sólido de revolução à figura que o gera ao rodar.",
+         "pairs": [
+          [
+           "Cilindro",
+           "Rectângulo"
+          ],
+          [
+           "Cone",
+           "Triângulo rectângulo"
+          ],
+          [
+           "Esfera",
+           "Semicírculo"
+          ]
+         ],
+         "audio": "2a33057c4ce9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um cilindro tem raio 2 e altura 5. Tomando π igual a 3, qual é o volume?",
+         "a": "60",
+         "audio": "e90511f7710e.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um cone tem raio 3 e altura 4. Tomando π igual a 3, qual é o volume?",
+         "a": "36",
+         "audio": "2bcb9cd56a05.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma esfera tem raio 3. Tomando π igual a 3, qual é o volume?",
+         "a": "108",
+         "audio": "28b1ebd88709.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um cilindro tem raio 1 e altura 10. Tomando π igual a 3, qual é a área lateral?",
+         "a": "60",
+         "audio": "35111bac4a3f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Cilindro, cone e esfera nascem de rodar um rectângulo, um triângulo rectângulo e um semicírculo. Volume do cilindro: π r² h; do cone: um terço disso; da esfera: quatro terços de π r³. A área lateral do cilindro é 2π r h.",
+        "exemplo": "Com π igual a 3: cilindro de raio 2 e altura 5 dá 60; cone de raio 3 e altura 4 dá 36; esfera de raio 3 dá 108; a área lateral de um cilindro de raio 1 e altura 10 dá 60.",
+        "lembra": "Cone é um terço do cilindro com a mesma base e altura.",
+        "audio": "19b26771ff17.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

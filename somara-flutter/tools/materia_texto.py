@@ -4196,4 +4196,232 @@ MATERIA = {
                    "Maputo antes de vender, vende melhor.",
         "lembra": "Informação a tempo é dinheiro e é vida.",
     },
+
+    # ---------------------------------------------------------------
+    # Matematica -- 9a classe
+    # ---------------------------------------------------------------
+    "mat-9c:u1:n1": {
+        "explica": "A reunião A ∪ B junta os dois conjuntos; a "
+                   "intersecção A ∩ B fica só com os comuns; a diferença "
+                   "A menos B tira a A o que está em B; o complementar de "
+                   "A é o que está no universo e não em A. Sem elementos "
+                   "comuns, são disjuntos.",
+        "exemplo": "A = {1, 2, 3} e B = {3, 4}: A ∪ B tem 4 elementos, A ∩ "
+                   "B tem 1, A menos B tem 2. Os naturais são um conjunto "
+                   "infinito: nunca acabam.",
+        "lembra": "Reunião junta, intersecção cruza, diferença tira.",
+    },
+    "mat-9c:u1:n2": {
+        "explica": "Os racionais escrevem-se como fracção e a dízima é "
+                   "finita ou periódica. Os irracionais, como √2 e π, têm "
+                   "dízima infinita não periódica. Juntos formam os reais, "
+                   "que enchem a recta: ℕ está dentro de ℤ, ℤ dentro de "
+                   "ℚ, ℚ dentro de ℝ.",
+        "exemplo": "7 é natural, −3 é inteiro, 1/2 é racional, √2 é "
+                   "irracional. √50 está entre 7 e 8, porque 49 é menor "
+                   "que 50 e 64 é maior.",
+        "lembra": "Racional tem fracção; irracional não tem.",
+    },
+    "mat-9c:u1:n3": {
+        "explica": "A raiz cúbica é o contrário do cubo: ∛27 é 3 porque 3 "
+                   "ao cubo é 27, e ∛(−8) é −2. Uma potência de expoente "
+                   "fraccionário é uma raiz: 8 elevado a um terço é ∛8. "
+                   "Um factor sai do radical quando é um quadrado.",
+        "exemplo": "Um cubo com 125 de volume tem aresta ∛125, que é 5. "
+                   "√12 é √(4 × 3), e como 4 é 2 ao quadrado, sai: 2√3.",
+        "lembra": "Expoente um terço é raiz cúbica.",
+    },
+    "mat-9c:u1:n4": {
+        "explica": "Radicais semelhantes somam-se: 2√3 mais 5√3 dá 7√3. "
+                   "Multiplicam-se e dividem-se por dentro: √4 × √9 é √36. "
+                   "O quadrado de uma raiz quadrada é o radicando. "
+                   "Racionalizar é tirar a raiz do denominador, "
+                   "multiplicando em cima e em baixo.",
+        "exemplo": "√50 a dividir por √2 é √25, que é 5. (√7)² é 7. 1 sobre "
+                   "√2 vira √2 sobre 2.",
+        "lembra": "Só se somam radicais com o mesmo radicando.",
+    },
+    "mat-9c:u2:n1": {
+        "explica": "Uma inequação resolve-se como uma equação, com uma "
+                   "excepção: ao multiplicar ou dividir por um "
+                   "negativo, o sinal da desigualdade inverte-se. A solução "
+                   "é um intervalo, e na recta marca-se bola aberta para < "
+                   "e > e bola fechada para ≤ e ≥.",
+        "exemplo": "2x + 1 < 9 dá x < 4: o maior natural é 3. 3x − 5 > 7 "
+                   "dá x > 4: o menor natural é 5. x − 2 ≥ 1 é [3, +∞[.",
+        "lembra": "Negativo a multiplicar vira o sinal.",
+    },
+    "mat-9c:u2:n2": {
+        "explica": "Num sistema de inequações, as duas condições têm de "
+                   "valer ao mesmo tempo: a solução é a intersecção das "
+                   "duas. Se não há parte comum, o sistema é impossível. "
+                   "Muitos problemas da vida têm duas condições e dão um "
+                   "sistema.",
+        "exemplo": "x > 1 e x < 5 dá ]1, 5[: os inteiros são 2, 3 e 4. x > "
+                   "3 e x < 1 não tem solução. Um quarto com perímetro "
+                   "menor que 22 e comprimento igual à largura mais 1: a "
+                   "largura vai até 4.",
+        "lembra": "Sistema é intersecção: o que serve às duas.",
+    },
+    "mat-9c:u3:n1": {
+        "explica": "Numa proporção, os produtos cruzados são iguais. Uma "
+                   "homotetia amplia ou reduz uma figura por uma razão: os "
+                   "comprimentos multiplicam-se pela razão, os ângulos "
+                   "ficam iguais, e a área multiplica-se pela razão ao "
+                   "quadrado.",
+        "exemplo": "3 está para 4 como 9 está para 12. Razão 3: um segmento "
+                   "de 4 passa a 12, e um quadrado de lado 2 passa a lado "
+                   "6, com área 36. Razão entre 0 e 1 reduz.",
+        "lembra": "A área cresce com o quadrado da razão.",
+    },
+    "mat-9c:u3:n2": {
+        "explica": "Dois triângulos são semelhantes quando têm os ângulos "
+                   "iguais e os lados proporcionais. Basta um critério: "
+                   "lado-lado-lado, ângulo-ângulo, ou lado-ângulo-lado. Os "
+                   "perímetros estão na razão; as áreas, na razão ao "
+                   "quadrado.",
+        "exemplo": "Razão 2: um lado de 5 passa a 10. Razão 3: perímetro "
+                   "10 passa a 30. Razão 2: área 6 passa a 24, porque 2 ao "
+                   "quadrado é 4.",
+        "lembra": "Dois ângulos iguais chegam para a semelhança.",
+    },
+    "mat-9c:u3:n3": {
+        "explica": "Thales: rectas paralelas cortadas por duas secantes "
+                   "determinam segmentos proporcionais: é por isso que a "
+                   "sombra do poste dá a altura da árvore. "
+                   "Pitágoras: no triângulo rectângulo, a hipotenusa ao "
+                   "quadrado é a soma dos quadrados dos catetos.",
+        "exemplo": "Poste de 2 com sombra 3, árvore com sombra 12: a "
+                   "árvore tem 8. Catetos 6 e 8: hipotenusa 10. Hipotenusa "
+                   "13 e cateto 5: o outro é 12.",
+        "lembra": "Hipotenusa ao quadrado é cateto mais cateto, ao "
+                  "quadrado.",
+    },
+    "mat-9c:u4:n1": {
+        "explica": "Um polinómio é uma soma de monómios; o grau é o "
+                   "maior expoente. Somam-se juntando os semelhantes; um "
+                   "monómio multiplica um polinómio distribuindo; dois "
+                   "binómios multiplicam-se termo a termo. O valor "
+                   "numérico sai substituindo o x.",
+        "exemplo": "(3x + 2) + (2x − 5) é 5x − 3. 2x × (x + 3) é 2x² + 6x. "
+                   "(x + 2) × (x + 3) é x² + 5x + 6. Para x = 2, x² + 3x − "
+                   "1 dá 9.",
+        "lembra": "Cada termo de um multiplica cada termo do outro.",
+    },
+    "mat-9c:u4:n2": {
+        "explica": "Os produtos notáveis poupam contas: (a + b)² é a² + "
+                   "2ab + b², (a − b)² é a² − 2ab + b², e (a + b)(a − b) é "
+                   "a² − b². Factorizar é o caminho ao contrário: pôr o "
+                   "factor comum em evidência ou reconhecer um caso "
+                   "notável.",
+        "exemplo": "(x + 3)² é x² + 6x + 9. (x − 2)² é x² − 4x + 4. (x + "
+                   "5)(x − 5) é x² − 25. 3x² + 6x é 3x(x + 2). x² − 9 é (x + "
+                   "3)(x − 3).",
+        "lembra": "Soma vezes diferença é diferença de quadrados.",
+    },
+    "mat-9c:u4:n3": {
+        "explica": "Uma equação quadrática tem x ao quadrado. Sem o "
+                   "termo em x, isola-se o quadrado e tira-se a raiz: duas "
+                   "soluções simétricas, ou nenhuma se der negativo. "
+                   "Sem termo independente, põe-se x em evidência e "
+                   "usa-se a lei do anulamento do produto.",
+        "exemplo": "x² − 16 = 0 dá x = 4 ou x = −4. x² − 5x = 0 é x(x − 5) "
+                   "= 0, logo x = 0 ou x = 5. x² + 4 = 0 não tem solução "
+                   "real. x² = 0 só tem o zero.",
+        "lembra": "Produto zero: um dos factores é zero.",
+    },
+    "mat-9c:u4:n4": {
+        "explica": "Na equação completa ax² + bx + c = 0, o discriminante "
+                   "b² − 4ac diz quantas raízes há: duas se é positivo, uma "
+                   "se é zero, nenhuma se é negativo. A fórmula resolvente "
+                   "dá-as, e a soma das raízes é −b sobre a; o produto, c "
+                   "sobre a.",
+        "exemplo": "x² − 5x + 6 = 0: discriminante 25 − 24 = 1, raízes 2 e "
+                   "3. Um quadrado cuja área mais o triplo do lado dá 28 "
+                   "tem lado 4, porque 16 + 12 é 28.",
+        "lembra": "Discriminante negativo: sem raízes reais.",
+    },
+    "mat-9c:u5:n1": {
+        "explica": "A função quadrática y = ax² tem por gráfico uma "
+                   "parábola com o vértice na origem e o eixo das "
+                   "ordenadas como eixo de simetria. Se a é positivo, a "
+                   "concavidade é para cima; se é negativo, para baixo.",
+        "exemplo": "f(x) = 2x²: f(3) é 2 × 9, que é 18. y = −x² é a "
+                   "parábola de y = x² virada para baixo.",
+        "lembra": "a positivo sorri; a negativo faz beicinho.",
+    },
+    "mat-9c:u5:n2": {
+        "explica": "Somar c a ax² sobe ou desce a parábola; escrever a(x − "
+                   "h)² + k põe o vértice em (h, k). Os zeros são onde a "
+                   "parábola corta o eixo das abcissas, e o vértice é o "
+                   "mínimo se a concavidade é para cima, ou o máximo se é "
+                   "para baixo.",
+        "exemplo": "y = x² − 9 tem zeros em −3 e 3. y = x² + 2 é y = x² "
+                   "subida 2. y = (x − 4)² + 1 tem vértice (4, 1). y = x² − "
+                   "4x tem zeros em 0 e 4.",
+        "lembra": "Em a(x − h)² + k, o vértice é (h, k).",
+    },
+    "mat-9c:u6:n1": {
+        "explica": "Uma inequação quadrática resolve-se achando as raízes "
+                   "da equação e vendo depois o sinal entre elas e fora "
+                   "delas, numa tabela de sinais ou no esboço da parábola: "
+                   "abaixo do eixo o valor é negativo, acima é positivo.",
+        "exemplo": "x² − 4 < 0 é ]−2, 2[: entre as raízes a parábola está "
+                   "em baixo. x² − 4 > 0 é fora: x < −2 ou x > 2. x² − 9 ≤ "
+                   "0 tem 7 inteiros, de −3 a 3.",
+        "lembra": "Raízes primeiro, sinal depois.",
+    },
+    "mat-9c:u7:n1": {
+        "explica": "A população é o todo; a amostra é a parte que "
+                   "se observa. A frequência absoluta conta; a relativa "
+                   "divide pelo total, e em percentagem multiplica por 100; "
+                   "a acumulada soma até à classe. No gráfico circular, 100 "
+                   "por cento são 360 graus.",
+        "exemplo": "10 em 40 alunos são 25 por cento. Frequências 5, 8 e 7: "
+                   "a acumulada até à segunda é 13. Uma fatia de 25 por "
+                   "cento tem 90 graus.",
+        "lembra": "Relativa é a parte sobre o todo.",
+    },
+    "mat-9c:u7:n2": {
+        "explica": "A média é a soma a dividir pelo número de dados. A moda "
+                   "é o valor mais frequente. A mediana é o valor do meio "
+                   "depois de ordenar: com um número par de dados, é a "
+                   "média dos dois do meio.",
+        "exemplo": "Média de 12, 14 e 16: 14. Moda de 3, 5, 5, 7, 9: 5. "
+                   "Mediana de 2, 4, 5, 7, 9: 5. Mediana de 2, 4, 6, 8: "
+                   "entre 4 e 6, que é 5.",
+        "lembra": "Mediana: ordenar primeiro, meio depois.",
+    },
+    "mat-9c:u8:n1": {
+        "explica": "Um poliedro é um sólido de faces planas, e a relação de "
+                   "Euler diz que vértices menos arestas mais faces dá 2. O "
+                   "prisma tem duas bases iguais e paralelas, e o volume é "
+                   "a área da base vezes a altura.",
+        "exemplo": "Cubo: 8 vértices, 6 faces, logo 12 arestas. Prisma de "
+                   "base 3 por 4 e altura 5: volume 60. Cubo de aresta 3: "
+                   "6 faces de 9, área total 54.",
+        "lembra": "Vértices menos arestas mais faces é 2.",
+    },
+    "mat-9c:u8:n2": {
+        "explica": "A pirâmide tem uma base e faces triangulares que se "
+                   "juntam no vértice. O volume é um terço da área da base "
+                   "vezes a altura: uma pirâmide com a mesma base e altura "
+                   "que um prisma tem um terço do volume dele.",
+        "exemplo": "Base quadrada de lado 6 e altura 5: 36 × 5 a dividir "
+                   "por 3 dá 60. Prisma de volume 90: a pirâmide igual tem "
+                   "30. A pirâmide quadrangular tem 5 faces.",
+        "lembra": "Pirâmide é um terço do prisma.",
+    },
+    "mat-9c:u8:n3": {
+        "explica": "Cilindro, cone e esfera nascem de rodar um rectângulo, "
+                   "um triângulo rectângulo e um semicírculo. Volume do "
+                   "cilindro: π r² h; do cone: um terço disso; da esfera: "
+                   "quatro terços de π r³. A área lateral do cilindro é "
+                   "2π r h.",
+        "exemplo": "Com π igual a 3: cilindro de raio 2 e altura 5 dá 60; "
+                   "cone de raio 3 e altura 4 dá 36; esfera de raio 3 dá "
+                   "108; a área lateral de um cilindro de raio 1 e altura "
+                   "10 dá 60.",
+        "lembra": "Cone é um terço do cilindro com a mesma base e altura.",
+    },
 }

@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o primário inteiro, e o primeiro degrau do secundário', () {
-    expect(c.cursos.length, 44);
+    expect(c.cursos.length, 45);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -29,6 +29,9 @@ void main() {
       // A 8ª: a Matemática abre-a, como abriu a 7ª. As outras doze
       // disciplinas do plano de estudos entram uma a uma.
       '8ª classe',
+      // A 9ª fecha o 1º ciclo do secundário. Sem TIC: o programa das TIC
+      // é só de 7ª e 8ª.
+      '9ª classe',
     });
   });
 
@@ -113,12 +116,13 @@ void main() {
     //  2355  com a Educação Física da 8ª classe (46)
     //  2411  com a Agropecuária da 8ª classe (56)
     //  2462  com as TIC da 8ª classe (51)
+    //  2568  com a Matemática da 9ª classe (106)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 2462);
+    expect(total, 2568);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {

@@ -416,6 +416,11 @@ class SimbolosDa8a(unittest.TestCase):
     def test_a_raiz_leva_o_de(self):
         self.assertEqual(para_dizer('√49'), 'raiz quadrada de 49')
 
+    def test_a_raiz_cubica_entra_com_a_9a(self):
+        # A radiciacao da 9a traz o cubo ao contrario. Sem regra, "∛27"
+        # saia mudo ou como um sinal estranho.
+        self.assertEqual(para_dizer('Quanto é ∛27?'), 'Quanto é raiz cúbica de 27?')
+
     def test_o_pi_e_os_reais(self):
         self.assertEqual(para_dizer('π × r²'), 'pi vezes r ao quadrado')
         self.assertEqual(para_dizer('o conjunto ℝ'), 'o conjunto erre')

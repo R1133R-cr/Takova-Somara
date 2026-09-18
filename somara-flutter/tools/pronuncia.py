@@ -201,6 +201,7 @@ CONJUNTOS = {
     # A 8a classe traz a raiz e o pi. A raiz le-se com o "de" ja dentro,
     # porque vem sempre colada ao numero: "√49" -> "raiz quadrada de 49".
     '√': ' raiz quadrada de ',
+    '∛': ' raiz cúbica de ',
     'π': ' pi ',
     # Os expoentes. O audio.py conta a historia: "2² × 2³" saiu "dois dois
     # tres" em sessenta ficheiros, e a razao e que a voz le o algarismo
