@@ -5080,4 +5080,167 @@ MATERIA = {
                    "inchaço depois de um remédio são alergia: pára-se.",
         "lembra": "Exame cedo salva; remédio só com receita.",
     },
+
+    # ---------------------------------------------------------------
+    # Fisica -- 9a classe
+    # ---------------------------------------------------------------
+    "fis-9c:u1:n1": {
+        "explica": "Os espelhos esféricos são côncavos, como o do "
+                   "dentista, ou convexos, como o retrovisor. O foco fica "
+                   "a meio do raio de curvatura. No côncavo, o raio "
+                   "paralelo reflecte-se pelo foco. O convexo dá sempre "
+                   "imagem direita e menor.",
+        "exemplo": "Raio de curvatura 40 centímetros: foco a 20. Um objecto "
+                   "entre o foco e o espelho côncavo dá uma imagem "
+                   "direita, maior e virtual: é a lupa do dentista.",
+        "lembra": "Foco é metade do raio.",
+    },
+    "fis-9c:u1:n2": {
+        "explica": "A refracção é o desvio da luz ao mudar de meio: do ar "
+                   "para a água abranda e aproxima-se da normal. O índice "
+                   "de refracção diz quantas vezes a luz é mais lenta "
+                   "nesse meio do que no vazio.",
+        "exemplo": "O lápis no copo parece partido porque a luz muda de "
+                   "direcção ao sair da água. Num vidro de índice 1,5, a "
+                   "luz anda a 200 mil quilómetros por segundo em vez de "
+                   "300 mil.",
+        "lembra": "Muda o meio, muda a direcção.",
+    },
+    "fis-9c:u1:n3": {
+        "explica": "A lente convergente, mais grossa no meio, junta os "
+                   "raios no foco; a divergente afasta-os. O olho é uma "
+                   "lente convergente: a miopia, que vê mal ao longe, "
+                   "corrige-se com divergente; a hipermetropia, com "
+                   "convergente.",
+        "exemplo": "Uma lupa é convergente: uma imagem 3 vezes maior faz "
+                   "de 2 centímetros 6. Ler com luz, não olhar para o Sol "
+                   "e lavar as mãos protegem os olhos.",
+        "lembra": "Míope: divergente. Hipermétrope: convergente.",
+    },
+    "fis-9c:u2:n1": {
+        "explica": "O centro de gravidade é o ponto onde se considera "
+                   "aplicado o peso. O equilíbrio é estável, instável ou "
+                   "indiferente. O momento de uma força é força vezes "
+                   "braço: quanto maior o braço, mais fácil rodar.",
+        "exemplo": "20 newtons a 2 metros do eixo dão 40 newtons-metro. "
+                   "Empurra-se a porta longe das dobradiças. Um camião "
+                   "carregado no alto vira mais depressa.",
+        "lembra": "Momento é força vezes braço.",
+    },
+    "fis-9c:u2:n2": {
+        "explica": "As máquinas simples poupam força: a alavanca, a "
+                   "roldana fixa, que só muda a direcção, a móvel, que "
+                   "divide a força por dois, o plano inclinado. Mas não "
+                   "poupam trabalho: é a regra de ouro da mecânica.",
+        "exemplo": "80 newtons a 1 metro do apoio equilibram-se com 20 "
+                   "newtons a 4 metros. Com uma roldana móvel, 100 "
+                   "newtons levantam-se com 50.",
+        "lembra": "Ganha-se em força, perde-se em distância.",
+    },
+    "fis-9c:u2:n3": {
+        "explica": "Densidade é massa a dividir por volume. Pressão é "
+                   "força a dividir por área, em pascal: a faca afiada "
+                   "corta porque a área é pequena. Num líquido, a pressão "
+                   "cresce com a profundidade; a do ar mediu-a Torricelli.",
+        "exemplo": "200 gramas em 100 centímetros cúbicos: densidade 2. "
+                   "200 newtons em 4 metros quadrados: 50 pascal. A 2 "
+                   "metros de água, com gravidade 10: 20 000 pascal.",
+        "lembra": "Pressão é força sobre área.",
+    },
+    "fis-9c:u2:n4": {
+        "explica": "Pascal: a pressão num líquido fechado transmite-se "
+                   "igual a todos os pontos; é assim que a prensa "
+                   "hidráulica multiplica a força. Arquimedes: o corpo "
+                   "recebe um empuxo igual ao peso do líquido deslocado, "
+                   "e flutua se for menos denso.",
+        "exemplo": "Êmbolo grande com 10 vezes a área do pequeno: 50 "
+                   "newtons viram 500. Nos vasos comunicantes, a água "
+                   "fica à mesma altura. Na praia, nunca nadar sozinho.",
+        "lembra": "Flutua o que é menos denso que a água.",
+    },
+    "fis-9c:u3:n1": {
+        "explica": "Os corpos electrizam-se por atrito, contacto ou "
+                   "indução: ganham electrões e ficam negativos, ou "
+                   "perdem-nos e ficam positivos. Cargas iguais "
+                   "repelem-se, contrárias atraem-se. O electroscópio "
+                   "detecta a carga.",
+        "exemplo": "A régua esfregada no cabelo atrai papelinhos: "
+                   "electrizou-se por atrito. As folhas do electroscópio "
+                   "abrem-se quando um corpo carregado lhe toca.",
+        "lembra": "Iguais repelem, contrárias atraem.",
+    },
+    "fis-9c:u3:n2": {
+        "explica": "A corrente é o movimento de cargas num circuito "
+                   "fechado. Mede-se em amperes; a tensão em volts; a "
+                   "resistência em ohms. A pilha dá corrente contínua, a "
+                   "rede dá alternada. O amperímetro liga-se em série, o "
+                   "voltímetro em paralelo.",
+        "exemplo": "A rede em Moçambique tem 220 volts: um fio descarnado "
+                   "pode matar, nunca se mexe com a corrente ligada.",
+        "lembra": "Amperímetro em série, voltímetro em paralelo.",
+    },
+    "fis-9c:u3:n3": {
+        "explica": "Primeira lei de Ohm: a tensão é a resistência vezes a "
+                   "intensidade. Segunda lei: a resistência cresce com o "
+                   "comprimento do fio e diminui com a sua grossura. No "
+                   "gráfico da intensidade pela "
+                   "tensão sai uma recta pela origem.",
+        "exemplo": "4 ohms a 12 volts: 3 amperes. Uma lâmpada com 2 "
+                   "amperes a 220 volts tem 110 ohms.",
+        "lembra": "Tensão é resistência vezes intensidade.",
+    },
+    "fis-9c:u3:n4": {
+        "explica": "Em série as resistências somam-se; em paralelo a "
+                   "total é menor que a menor. A potência é tensão vezes "
+                   "intensidade, em watts; a energia é potência vezes "
+                   "tempo. Pela lei de Joule-Lenz, a corrente aquece a "
+                   "resistência.",
+        "exemplo": "2, 3 e 5 ohms em série dão 10; dois de 6 em paralelo "
+                   "dão 3. Um ferro a 220 volts e 2 amperes tem 440 watts. "
+                   "100 watts durante 10 horas são 1 quilowatt-hora.",
+        "lembra": "Potência é tensão vezes intensidade.",
+    },
+    "fis-9c:u4:n1": {
+        "explica": "Um íman tem pólo norte e pólo sul, e partido dá dois "
+                   "ímanes. Pólos iguais repelem-se, contrários atraem-se. "
+                   "O campo magnético é a região onde se sentem essas "
+                   "forças; a Terra tem o seu, e é por ele que a bússola "
+                   "aponta ao norte.",
+        "exemplo": "O íman atrai o ferro e o aço, e não a madeira nem o "
+                   "plástico. A agulha da bússola é um íman pequeno.",
+        "lembra": "Um íman nunca fica só com um pólo.",
+    },
+    "fis-9c:u4:n2": {
+        "explica": "Oersted viu a bússola desviar-se ao pé de um fio com "
+                   "corrente: a corrente cria campo magnético. Daí o "
+                   "electroíman, um fio enrolado num núcleo de ferro, que "
+                   "se liga e desliga com a corrente e fica mais forte com "
+                   "mais voltas.",
+        "exemplo": "A campainha eléctrica, a grua da sucata e o motor "
+                   "eléctrico usam electroímanes. Sem corrente, o "
+                   "electroíman larga o ferro.",
+        "lembra": "Corrente faz íman.",
+    },
+    "fis-9c:u5:n1": {
+        "explica": "Amplitude é o afastamento máximo da posição de "
+                   "equilíbrio, período é o tempo de uma oscilação, "
+                   "frequência é quantas faz por segundo, em hertz: 1 "
+                   "sobre o período. O período do pêndulo depende do "
+                   "comprimento, não da massa.",
+        "exemplo": "Meio segundo por oscilação: 2 hertz. A 5 hertz, em 4 "
+                   "segundos fazem-se 20 oscilações. No gráfico da "
+                   "elongação pelo tempo sai uma onda.",
+        "lembra": "Frequência é 1 sobre o período.",
+    },
+    "fis-9c:u5:n2": {
+        "explica": "A onda mecânica é a propagação de uma oscilação num "
+                   "meio, sem transportar matéria. O comprimento de onda "
+                   "é a distância entre duas cristas, e a velocidade é "
+                   "comprimento de onda vezes frequência. O som é uma onda "
+                   "mecânica: precisa do ar.",
+        "exemplo": "2 metros de comprimento de onda a 5 hertz: 10 metros "
+                   "por segundo. Música muito alta durante horas danifica "
+                   "o ouvido: baixa-se o volume.",
+        "lembra": "Velocidade é comprimento de onda vezes frequência.",
+    },
 }

@@ -41494,6 +41494,1053 @@
      ]
     }
    ]
+  },
+  {
+   "id": "fis-9c",
+   "disciplina": "Física",
+   "classe": "9ª classe",
+   "tag": "FIS",
+   "fonte": "Programa de Ensino da Disciplina de Física — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, 9ª classe, pp. 32-44. As cinco unidades e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 9ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Óptica geométrica",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Espelhos esféricos",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada espelho esférico ao seu exemplo.",
+         "pairs": [
+          [
+           "Côncavo",
+           "O espelho do dentista, que amplia"
+          ],
+          [
+           "Convexo",
+           "O retrovisor do carro, que mostra mais campo"
+          ]
+         ],
+         "audio": "2c4304c6dabe.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num espelho esférico, o foco fica a meio caminho entre o espelho e o centro de curvatura. Se o raio de curvatura é 40 centímetros, a quantos centímetros está o foco?",
+         "a": "20",
+         "audio": "f5e828725c34.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num espelho côncavo, um raio que chega paralelo ao eixo reflecte-se:",
+         "options": [
+          "Passando pelo foco",
+          "Paralelo ao eixo",
+          "De volta pelo mesmo caminho"
+         ],
+         "a": 0,
+         "audio": "8dc0a2439b88.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um objecto entre o foco e um espelho côncavo dá uma imagem:",
+         "options": [
+          "Direita, maior e virtual",
+          "Invertida e mais pequena",
+          "Nenhuma"
+         ],
+         "a": 0,
+         "audio": "a42d5e8c4c41.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A imagem num espelho convexo é sempre:",
+         "options": [
+          "Direita, mais pequena e virtual",
+          "Invertida e maior",
+          "Real e do mesmo tamanho"
+         ],
+         "a": 0,
+         "audio": "8dcb653d7d58.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os espelhos esféricos são côncavos, como o do dentista, ou convexos, como o retrovisor. O foco fica a meio do raio de curvatura. No côncavo, o raio paralelo reflecte-se pelo foco. O convexo dá sempre imagem direita e menor.",
+        "exemplo": "Raio de curvatura 40 centímetros: foco a 20. Um objecto entre o foco e o espelho côncavo dá uma imagem direita, maior e virtual: é a lupa do dentista.",
+        "lembra": "Foco é metade do raio.",
+        "audio": "1221a80539ea.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A refracção da luz",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A refracção é:",
+         "options": [
+          "O desvio da luz ao passar de um meio para outro, como do ar para a água",
+          "A luz a voltar para trás",
+          "A luz a apagar-se"
+         ],
+         "a": 0,
+         "audio": "6d90315cb3b7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um lápis dentro de um copo com água parece partido porque:",
+         "options": [
+          "A luz muda de direcção ao sair da água para o ar",
+          "A água parte o lápis",
+          "O copo é curvo"
+         ],
+         "a": 0,
+         "audio": "8ccdde2a0699.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao passar do ar para a água, a luz:",
+         "options": [
+          "Abranda e aproxima-se da normal",
+          "Acelera e afasta-se da normal",
+          "Não muda"
+         ],
+         "a": 0,
+         "audio": "988662835dd6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O índice de refracção de um meio diz:",
+         "options": [
+          "Quantas vezes a luz é mais lenta nesse meio do que no vazio",
+          "A cor da luz",
+          "O peso do meio"
+         ],
+         "a": 0,
+         "audio": "dd7f6cbec624.mp3"
+        },
+        {
+         "t": "input",
+         "q": "No vazio a luz anda a 300 mil quilómetros por segundo. Num vidro de índice de refracção 1,5, anda a quantos mil quilómetros por segundo?",
+         "a": "200",
+         "audio": "567b3814d561.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A refracção é o desvio da luz ao mudar de meio: do ar para a água abranda e aproxima-se da normal. O índice de refracção diz quantas vezes a luz é mais lenta nesse meio do que no vazio.",
+        "exemplo": "O lápis no copo parece partido porque a luz muda de direcção ao sair da água. Num vidro de índice 1,5, a luz anda a 200 mil quilómetros por segundo em vez de 300 mil.",
+        "lembra": "Muda o meio, muda a direcção.",
+        "audio": "0b4d1a26f55c.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Lentes e o olho humano",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada lente ao que ela faz aos raios paralelos.",
+         "pairs": [
+          [
+           "Convergente, mais grossa no meio",
+           "Junta-os no foco"
+          ],
+          [
+           "Divergente, mais fina no meio",
+           "Afasta-os"
+          ]
+         ],
+         "audio": "c25e9916ad7b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma lupa é uma lente:",
+         "options": [
+          "Convergente",
+          "Divergente",
+          "Plana"
+         ],
+         "a": 0,
+         "audio": "8c8457c405a3.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma lente dá uma imagem 3 vezes maior que o objecto. Se o objecto tem 2 centímetros, quantos centímetros tem a imagem?",
+         "a": "6",
+         "audio": "d6c9f482314b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada defeito do olho à lente que o corrige.",
+         "pairs": [
+          [
+           "Miopia: vê mal ao longe",
+           "Divergente"
+          ],
+          [
+           "Hipermetropia: vê mal ao perto",
+           "Convergente"
+          ]
+         ],
+         "audio": "e62665960985.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para cuidar dos olhos deve-se:",
+         "options": [
+          "Não olhar para o Sol, ler com luz suficiente e lavar as mãos antes de os tocar",
+          "Esfregá-los com força",
+          "Ler no escuro"
+         ],
+         "a": 0,
+         "audio": "2e1f23d06855.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A lente convergente, mais grossa no meio, junta os raios no foco; a divergente afasta-os. O olho é uma lente convergente: a miopia, que vê mal ao longe, corrige-se com divergente; a hipermetropia, com convergente.",
+        "exemplo": "Uma lupa é convergente: uma imagem 3 vezes maior faz de 2 centímetros 6. Ler com luz, não olhar para o Sol e lavar as mãos protegem os olhos.",
+        "lembra": "Míope: divergente. Hipermétrope: convergente.",
+        "audio": "b50c2829a862.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Estática dos sólidos e dos fluidos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Equilíbrio e momento de uma força",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada tipo de equilíbrio ao seu exemplo.",
+         "pairs": [
+          [
+           "Estável",
+           "Uma bola no fundo de uma taça"
+          ],
+          [
+           "Instável",
+           "Uma bola no cimo de uma bola maior"
+          ],
+          [
+           "Indiferente",
+           "Uma bola numa mesa plana"
+          ]
+         ],
+         "audio": "7345d8e41dea.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O centro de gravidade de um corpo é:",
+         "options": [
+          "O ponto onde se pode considerar aplicado o seu peso",
+          "O ponto mais alto",
+          "O ponto mais pesado"
+         ],
+         "a": 0,
+         "audio": "804a71eb0176.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma força de 20 newtons aplicada a 2 metros do eixo tem que momento, em newtons-metro?",
+         "a": "40",
+         "audio": "39b54bae19b7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para abrir uma porta com menos esforço, empurra-se:",
+         "options": [
+          "Longe das dobradiças, porque o braço é maior",
+          "Junto às dobradiças",
+          "No meio"
+         ],
+         "a": 0,
+         "audio": "202bb9fbda00.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um camião carregado no alto vira mais facilmente porque:",
+         "options": [
+          "O centro de gravidade subiu",
+          "O centro de gravidade desceu",
+          "Tem mais rodas"
+         ],
+         "a": 0,
+         "audio": "aced7a352f40.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O centro de gravidade é o ponto onde se considera aplicado o peso. O equilíbrio é estável, instável ou indiferente. O momento de uma força é força vezes braço: quanto maior o braço, mais fácil rodar.",
+        "exemplo": "20 newtons a 2 metros do eixo dão 40 newtons-metro. Empurra-se a porta longe das dobradiças. Um camião carregado no alto vira mais depressa.",
+        "lembra": "Momento é força vezes braço.",
+        "audio": "fc5162c6ae0d.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "As máquinas simples",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada alavanca ao seu tipo.",
+         "pairs": [
+          [
+           "Tesoura: o apoio no meio",
+           "Interfixa"
+          ],
+          [
+           "Carrinho de mão: a carga no meio",
+           "Inter-resistente"
+          ],
+          [
+           "Pinça: a força no meio",
+           "Interpotente"
+          ]
+         ],
+         "audio": "60dcfe8635c3.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Numa alavanca, uma pedra de 80 newtons está a 1 metro do apoio. Que força, em newtons, a equilibra a 4 metros do apoio?",
+         "a": "20",
+         "audio": "c6f4a3c163f6.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada roldana ao que ela faz.",
+         "pairs": [
+          [
+           "Fixa",
+           "Só muda a direcção da força"
+          ],
+          [
+           "Móvel",
+           "Divide a força por dois"
+          ]
+         ],
+         "audio": "820f385ba1bc.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Com uma roldana móvel, para levantar 100 newtons bastam quantos newtons?",
+         "a": "50",
+         "audio": "78216a197a05.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A regra de ouro da mecânica diz que as máquinas simples:",
+         "options": [
+          "Poupam força mas não poupam trabalho: o que se ganha em força perde-se em distância",
+          "Poupam trabalho",
+          "Criam energia"
+         ],
+         "a": 0,
+         "audio": "75920a3f4292.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As máquinas simples poupam força: a alavanca, a roldana fixa, que só muda a direcção, a móvel, que divide a força por dois, o plano inclinado. Mas não poupam trabalho: é a regra de ouro da mecânica.",
+        "exemplo": "80 newtons a 1 metro do apoio equilibram-se com 20 newtons a 4 metros. Com uma roldana móvel, 100 newtons levantam-se com 50.",
+        "lembra": "Ganha-se em força, perde-se em distância.",
+        "audio": "920a7642ba9a.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Densidade e pressão",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Um corpo de 200 gramas ocupa 100 centímetros cúbicos. Qual é a densidade, em gramas por centímetro cúbico?",
+         "a": "2",
+         "audio": "34907a531dd8.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma força de 200 newtons apoia-se numa superfície de 4 metros quadrados. Qual é a pressão, em pascal?",
+         "a": "50",
+         "audio": "604ae98c1add.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma faca afiada corta melhor porque:",
+         "options": [
+          "A mesma força fica numa área menor e a pressão é maior",
+          "Pesa mais",
+          "É mais comprida"
+         ],
+         "a": 0,
+         "audio": "a5a444159c65.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A pressão da água a uma profundidade é densidade vezes gravidade vezes altura. Com densidade 1000, gravidade 10 e 2 metros de profundidade, qual é a pressão, em pascal?",
+         "a": "20000",
+         "audio": "ada0e93417ff.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A experiência de Torricelli mediu:",
+         "options": [
+          "A pressão atmosférica, com uma coluna de mercúrio de 76 centímetros",
+          "A pressão de um sólido",
+          "A densidade do ar"
+         ],
+         "a": 0,
+         "audio": "4ddf8f37bdaf.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Densidade é massa a dividir por volume. Pressão é força a dividir por área, em pascal: a faca afiada corta porque a área é pequena. Num líquido, a pressão cresce com a profundidade; a do ar mediu-a Torricelli.",
+        "exemplo": "200 gramas em 100 centímetros cúbicos: densidade 2. 200 newtons em 4 metros quadrados: 50 pascal. A 2 metros de água, com gravidade 10: 20 000 pascal.",
+        "lembra": "Pressão é força sobre área.",
+        "audio": "a718f61b1314.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Pascal, Arquimedes e a flutuação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O princípio de Pascal diz que a pressão feita num líquido fechado:",
+         "options": [
+          "Transmite-se igual a todos os pontos do líquido",
+          "Só se sente no fundo",
+          "Desaparece"
+         ],
+         "a": 0,
+         "audio": "046f124e50ec.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Numa prensa hidráulica, o êmbolo grande tem 10 vezes a área do pequeno. Com 50 newtons no pequeno, quantos newtons faz o grande?",
+         "a": "500",
+         "audio": "46ca62b87488.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O princípio de Arquimedes diz que um corpo num líquido recebe:",
+         "options": [
+          "Um empuxo para cima igual ao peso do líquido que desloca",
+          "Uma força para baixo",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "00a2f60b03e3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um corpo flutua quando:",
+         "options": [
+          "É menos denso que o líquido",
+          "É mais denso que o líquido",
+          "É muito pequeno"
+         ],
+         "a": 0,
+         "audio": "f535fc945b71.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nos vasos comunicantes, o mesmo líquido em repouso fica:",
+         "options": [
+          "À mesma altura em todos os ramos",
+          "Mais alto no ramo mais largo",
+          "Mais alto no ramo mais estreito"
+         ],
+         "a": 0,
+         "audio": "c551d1121f79.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para prevenir afogamentos na praia ou no rio:",
+         "options": [
+          "Não nadar sozinho nem onde não se sabe a profundidade, e respeitar as bandeiras",
+          "Nadar depois de beber",
+          "Ir para longe da margem"
+         ],
+         "a": 0,
+         "audio": "4cddfcdba773.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Pascal: a pressão num líquido fechado transmite-se igual a todos os pontos; é assim que a prensa hidráulica multiplica a força. Arquimedes: o corpo recebe um empuxo igual ao peso do líquido deslocado, e flutua se for menos denso.",
+        "exemplo": "Êmbolo grande com 10 vezes a área do pequeno: 50 newtons viram 500. Nos vasos comunicantes, a água fica à mesma altura. Na praia, nunca nadar sozinho.",
+        "lembra": "Flutua o que é menos denso que a água.",
+        "audio": "8e2420ea2cb0.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Electricidade",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Carga eléctrica e electrização",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Esfregar uma régua de plástico no cabelo e ela atrair papelinhos é electrização por:",
+         "options": [
+          "Atrito",
+          "Contacto",
+          "Indução"
+         ],
+         "a": 0,
+         "audio": "30a0f1bac3dd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada par de cargas ao que acontece entre elas.",
+         "pairs": [
+          [
+           "Duas cargas iguais",
+           "Repelem-se"
+          ],
+          [
+           "Duas cargas contrárias",
+           "Atraem-se"
+          ]
+         ],
+         "audio": "078777bff444.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O electroscópio de folhas serve para:",
+         "options": [
+          "Detectar se um corpo está electrizado",
+          "Medir a temperatura",
+          "Pesar cargas"
+         ],
+         "a": 0,
+         "audio": "de54d54c60ea.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um corpo fica com carga negativa quando:",
+         "options": [
+          "Ganha electrões",
+          "Perde electrões",
+          "Ganha protões"
+         ],
+         "a": 0,
+         "audio": "065fcbe14dd3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O campo eléctrico é:",
+         "options": [
+          "A região à volta de uma carga onde se sentem forças eléctricas",
+          "Um campo de futebol",
+          "Um fio de cobre"
+         ],
+         "a": 0,
+         "audio": "cc8cb2d4e60b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os corpos electrizam-se por atrito, contacto ou indução: ganham electrões e ficam negativos, ou perdem-nos e ficam positivos. Cargas iguais repelem-se, contrárias atraem-se. O electroscópio detecta a carga.",
+        "exemplo": "A régua esfregada no cabelo atrai papelinhos: electrizou-se por atrito. As folhas do electroscópio abrem-se quando um corpo carregado lhe toca.",
+        "lembra": "Iguais repelem, contrárias atraem.",
+        "audio": "9436d638ab8a.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Corrente, tensão e circuito",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada grandeza à sua unidade.",
+         "pairs": [
+          [
+           "Intensidade da corrente",
+           "Ampere"
+          ],
+          [
+           "Tensão eléctrica",
+           "Volt"
+          ],
+          [
+           "Resistência",
+           "Ohm"
+          ]
+         ],
+         "audio": "abdd02eb05b6.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada corrente ao seu exemplo.",
+         "pairs": [
+          [
+           "Contínua",
+           "A de uma pilha"
+          ],
+          [
+           "Alternada",
+           "A da rede eléctrica em casa"
+          ]
+         ],
+         "audio": "b3592e510ac5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A corrente eléctrica só existe num circuito:",
+         "options": [
+          "Fechado, com uma fonte de tensão",
+          "Aberto",
+          "Sem fonte"
+         ],
+         "a": 0,
+         "audio": "0627fc21de49.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada aparelho de medida à forma de o ligar no circuito.",
+         "pairs": [
+          [
+           "Amperímetro",
+           "Em série"
+          ],
+          [
+           "Voltímetro",
+           "Em paralelo"
+          ]
+         ],
+         "audio": "63759c6640bf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A tensão da rede em Moçambique é de 220 volts. Tocar num fio descarnado:",
+         "options": [
+          "Pode matar: nunca se mexe em fios com a corrente ligada",
+          "Não faz nada",
+          "Só dá cócegas"
+         ],
+         "a": 0,
+         "audio": "7482194b9e85.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A corrente é o movimento de cargas num circuito fechado. Mede-se em amperes; a tensão em volts; a resistência em ohms. A pilha dá corrente contínua, a rede dá alternada. O amperímetro liga-se em série, o voltímetro em paralelo.",
+        "exemplo": "A rede em Moçambique tem 220 volts: um fio descarnado pode matar, nunca se mexe com a corrente ligada.",
+        "lembra": "Amperímetro em série, voltímetro em paralelo.",
+        "audio": "3b4def052b26.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A lei de Ohm e a resistência",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A primeira lei de Ohm diz que a tensão é igual a:",
+         "options": [
+          "Resistência vezes intensidade",
+          "Resistência a dividir pela intensidade",
+          "Intensidade ao quadrado"
+         ],
+         "a": 0,
+         "audio": "4f7ad9899c29.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma resistência de 4 ohms está ligada a 12 volts. Que intensidade a atravessa, em amperes?",
+         "a": "3",
+         "audio": "6807daf5b9c6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Por uma lâmpada passam 2 amperes quando está a 220 volts. Qual é a sua resistência, em ohms?",
+         "a": "110",
+         "audio": "37950a9d626e.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Pela segunda lei de Ohm, liga cada mudança no fio ao efeito na resistência.",
+         "pairs": [
+          [
+           "Fio mais comprido",
+           "Resistência maior"
+          ],
+          [
+           "Fio mais grosso",
+           "Resistência menor"
+          ]
+         ],
+         "audio": "aa6035729032.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No gráfico da intensidade em função da tensão, um condutor que segue a lei de Ohm dá:",
+         "options": [
+          "Uma recta que passa pela origem",
+          "Uma curva",
+          "Uma recta horizontal"
+         ],
+         "a": 0,
+         "audio": "25d72b50d6f5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Primeira lei de Ohm: a tensão é a resistência vezes a intensidade. Segunda lei: a resistência cresce com o comprimento do fio e diminui com a sua grossura. No gráfico da intensidade pela tensão sai uma recta pela origem.",
+        "exemplo": "4 ohms a 12 volts: 3 amperes. Uma lâmpada com 2 amperes a 220 volts tem 110 ohms.",
+        "lembra": "Tensão é resistência vezes intensidade.",
+        "audio": "4c5565ec50c9.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Associações, potência e a lei de Joule",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Três resistências de 2, 3 e 5 ohms em série dão uma resistência total de quantos ohms?",
+         "a": "10",
+         "audio": "adbe501dce42.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Duas resistências de 6 ohms em paralelo dão uma resistência total de quantos ohms?",
+         "a": "3",
+         "audio": "afea29e911cc.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um ferro de engomar a 220 volts é atravessado por 2 amperes. Qual é a potência, em watts?",
+         "a": "440",
+         "audio": "8988684dc9eb.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma lâmpada de 100 watts ligada 10 horas consome quantos quilowatt-hora?",
+         "a": "1",
+         "audio": "15aa3595ecfc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A lei de Joule-Lenz explica que a corrente numa resistência:",
+         "options": [
+          "Produz calor, como no ferro de engomar e no fogão eléctrico",
+          "Produz frio",
+          "Não produz nada"
+         ],
+         "a": 0,
+         "audio": "d889652db5ed.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um curto-circuito:",
+         "options": [
+          "Deixa passar uma corrente enorme, aquece os fios e pode causar incêndio",
+          "Poupa energia",
+          "Faz a luz mais forte sem perigo"
+         ],
+         "a": 0,
+         "audio": "783d18a966d7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Em série as resistências somam-se; em paralelo a total é menor que a menor. A potência é tensão vezes intensidade, em watts; a energia é potência vezes tempo. Pela lei de Joule-Lenz, a corrente aquece a resistência.",
+        "exemplo": "2, 3 e 5 ohms em série dão 10; dois de 6 em paralelo dão 3. Um ferro a 220 volts e 2 amperes tem 440 watts. 100 watts durante 10 horas são 1 quilowatt-hora.",
+        "lembra": "Potência é tensão vezes intensidade.",
+        "audio": "3defc9154b24.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Electromagnetismo",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ímanes e campo magnético",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada par de pólos ao que acontece entre eles.",
+         "pairs": [
+          [
+           "Norte com norte",
+           "Repelem-se"
+          ],
+          [
+           "Norte com sul",
+           "Atraem-se"
+          ]
+         ],
+         "audio": "877ffc8c2d05.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se se parte um íman ao meio:",
+         "options": [
+          "Ficam dois ímanes, cada um com norte e sul",
+          "Fica um pólo norte e um pólo sul separados",
+          "Deixa de ser íman"
+         ],
+         "a": 0,
+         "audio": "c6e3d8f3b23f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O campo magnético é:",
+         "options": [
+          "A região à volta do íman onde se sentem forças magnéticas",
+          "O peso do íman",
+          "A cor do íman"
+         ],
+         "a": 0,
+         "audio": "cc8da53d7cb8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A bússola aponta para o norte porque:",
+         "options": [
+          "A Terra tem um campo magnético e a agulha é um íman",
+          "O norte é mais frio",
+          "O Sol a puxa"
+         ],
+         "a": 0,
+         "audio": "5fda72b2e91c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um íman atrai:",
+         "options": [
+          "O ferro e o aço",
+          "A madeira e o plástico",
+          "Tudo"
+         ],
+         "a": 0,
+         "audio": "2b295a96218d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um íman tem pólo norte e pólo sul, e partido dá dois ímanes. Pólos iguais repelem-se, contrários atraem-se. O campo magnético é a região onde se sentem essas forças; a Terra tem o seu, e é por ele que a bússola aponta ao norte.",
+        "exemplo": "O íman atrai o ferro e o aço, e não a madeira nem o plástico. A agulha da bússola é um íman pequeno.",
+        "lembra": "Um íman nunca fica só com um pólo.",
+        "audio": "4f0433c525b4.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Oersted e o electroíman",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A experiência de Oersted mostrou que:",
+         "options": [
+          "Uma corrente eléctrica cria um campo magnético: a bússola desvia-se ao pé do fio",
+          "Os ímanes produzem corrente",
+          "A luz é magnética"
+         ],
+         "a": 0,
+         "audio": "6bef71f869ca.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um electroíman faz-se com:",
+         "options": [
+          "Um fio enrolado à volta de um núcleo de ferro, com corrente a passar",
+          "Um íman de pedra",
+          "Um fio de plástico"
+         ],
+         "a": 0,
+         "audio": "bf872c7cf8b7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A vantagem do electroíman sobre o íman permanente é:",
+         "options": [
+          "Liga-se e desliga-se com a corrente",
+          "Ser mais bonito",
+          "Não precisar de ferro"
+         ],
+         "a": 0,
+         "audio": "683f306d52ed.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada aparelho ao que o electroíman faz nele.",
+         "pairs": [
+          [
+           "Campainha eléctrica",
+           "Puxa o martelo que bate na campânula"
+          ],
+          [
+           "Grua de sucata",
+           "Levanta e larga o ferro"
+          ],
+          [
+           "Motor eléctrico",
+           "Faz girar o eixo"
+          ]
+         ],
+         "audio": "4187303b93fd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para o electroíman ficar mais forte:",
+         "options": [
+          "Mais voltas de fio ou mais corrente",
+          "Menos voltas",
+          "Tirar o núcleo de ferro"
+         ],
+         "a": 0,
+         "audio": "4786795d479b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Oersted viu a bússola desviar-se ao pé de um fio com corrente: a corrente cria campo magnético. Daí o electroíman, um fio enrolado num núcleo de ferro, que se liga e desliga com a corrente e fica mais forte com mais voltas.",
+        "exemplo": "A campainha eléctrica, a grua da sucata e o motor eléctrico usam electroímanes. Sem corrente, o electroíman larga o ferro.",
+        "lembra": "Corrente faz íman.",
+        "audio": "0ccd8151be16.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Oscilações e ondas mecânicas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As oscilações",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada grandeza da oscilação ao que ela é.",
+         "pairs": [
+          [
+           "Amplitude",
+           "O afastamento máximo da posição de equilíbrio"
+          ],
+          [
+           "Período",
+           "O tempo de uma oscilação completa"
+          ],
+          [
+           "Frequência",
+           "O número de oscilações por segundo"
+          ]
+         ],
+         "audio": "4f3068fd6433.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um pêndulo faz uma oscilação completa em meio segundo. Qual é a frequência, em hertz?",
+         "a": "2",
+         "audio": "e92c7fe38fff.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma oscilação tem frequência de 5 hertz. Quantas oscilações faz em 4 segundos?",
+         "a": "20",
+         "audio": "5bf3636b87b5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O período de um pêndulo simples depende:",
+         "options": [
+          "Do comprimento do fio, e não da massa",
+          "Da massa, e não do comprimento",
+          "Da cor do peso"
+         ],
+         "a": 0,
+         "audio": "5a14b8e99524.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No gráfico da elongação em função do tempo, o movimento harmónico simples dá:",
+         "options": [
+          "Uma curva em onda",
+          "Uma recta",
+          "Um círculo"
+         ],
+         "a": 0,
+         "audio": "dc6faa9737ca.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Amplitude é o afastamento máximo da posição de equilíbrio, período é o tempo de uma oscilação, frequência é quantas faz por segundo, em hertz: 1 sobre o período. O período do pêndulo depende do comprimento, não da massa.",
+        "exemplo": "Meio segundo por oscilação: 2 hertz. A 5 hertz, em 4 segundos fazem-se 20 oscilações. No gráfico da elongação pelo tempo sai uma onda.",
+        "lembra": "Frequência é 1 sobre o período.",
+        "audio": "e821f581f492.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "As ondas mecânicas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma onda mecânica é:",
+         "options": [
+          "A propagação de uma oscilação num meio, sem transportar matéria",
+          "Uma pedra a cair",
+          "O vento"
+         ],
+         "a": 0,
+         "audio": "dfdcef72dcb5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O comprimento de onda é:",
+         "options": [
+          "A distância entre duas cristas seguidas",
+          "A altura da crista",
+          "O tempo de uma oscilação"
+         ],
+         "a": 0,
+         "audio": "2da3d9d1409c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma onda tem 2 metros de comprimento de onda e frequência de 5 hertz. A que velocidade se propaga, em metros por segundo?",
+         "a": "10",
+         "audio": "4b9dc8442847.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O som é uma onda mecânica porque:",
+         "options": [
+          "Precisa de um meio, como o ar, para se propagar",
+          "Anda no vazio",
+          "É luz"
+         ],
+         "a": 0,
+         "audio": "02ac8384b6e6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A poluição sonora, como música muito alta durante horas:",
+         "options": [
+          "Danifica o ouvido e tira o sono: baixa-se o volume",
+          "Faz bem aos ouvidos",
+          "Não tem efeito"
+         ],
+         "a": 0,
+         "audio": "9989a09c7464.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A onda mecânica é a propagação de uma oscilação num meio, sem transportar matéria. O comprimento de onda é a distância entre duas cristas, e a velocidade é comprimento de onda vezes frequência. O som é uma onda mecânica: precisa do ar.",
+        "exemplo": "2 metros de comprimento de onda a 5 hertz: 10 metros por segundo. Música muito alta durante horas danifica o ouvido: baixa-se o volume.",
+        "lembra": "Velocidade é comprimento de onda vezes frequência.",
+        "audio": "0203b92d0aeb.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }
