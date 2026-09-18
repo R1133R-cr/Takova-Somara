@@ -2388,4 +2388,186 @@ MATERIA = {
         "exemplo": "STEM junta Ciências, Tecnologia, Engenharia e Matemática, e é aí que as TIC servem de ferramenta a todas as outras.",
         "lembra": "A tecnologia não substitui quem sabe: dá-lhe alcance.",
     },
+
+    # ---------------------------------------------------------------
+    # Matematica -- 8a classe
+    #
+    # A classe em que a Matematica deixa de ser contas e passa a ser
+    # letras. As explicacoes definem; os exemplos sao para copiar para o
+    # caderno com os passos a vista.
+    # ---------------------------------------------------------------
+    "mat-8c:u1:n1": {
+        "explica": "A está contido em B quando todos os elementos de A também "
+                   "são de B: A ⊂ B, e B contém A. Dois conjuntos são iguais "
+                   "quando têm exactamente os mesmos elementos. O universal é "
+                   "o conjunto de tudo o que está em estudo.",
+        "exemplo": "A = {1, 2} e B = {1, 2, 3, 4}. Todos os elementos de A "
+                   "estão em B, logo A ⊂ B. Os subconjuntos de dois elementos "
+                   "de {a, b, c} são {a, b}, {a, c} e {b, c}.",
+        "lembra": "⊂ é entre conjuntos; ∈ é entre um elemento e um conjunto.",
+    },
+    "mat-8c:u1:n2": {
+        "explica": "A reunião A ∪ B junta os elementos dos dois conjuntos, sem "
+                   "repetir. A intersecção A ∩ B fica só com os que estão nos "
+                   "dois. Se a intersecção é vazia, os conjuntos são "
+                   "disjuntos. Um conjunto é finito quando se contam os "
+                   "elementos até ao fim.",
+        "exemplo": "A = {2, 4, 6} e B = {4, 6, 8}. A ∪ B = {2, 4, 6, 8}, com 4 "
+                   "elementos. A ∩ B = {4, 6}, com 2.",
+        "lembra": "Na reunião, o que se repete conta uma vez só.",
+    },
+    "mat-8c:u1:n3": {
+        "explica": "Um número racional escreve-se como fracção de dois "
+                   "inteiros, com denominador diferente de zero. Os naturais "
+                   "cabem nos inteiros e estes nos racionais: ℕ ⊂ ℤ ⊂ ℚ. Na "
+                   "recta, os negativos ficam à esquerda do zero.",
+        "exemplo": "−1/2 fica entre −1 e 0. Entre −3/4 e −1/4, o menor é −3/4, "
+                   "porque está mais à esquerda. O módulo de −7/7 é 1.",
+        "lembra": "Quanto mais à esquerda na recta, menor é o número.",
+    },
+    "mat-8c:u1:n4": {
+        "explica": "Com racionais opera-se como com fracções, com atenção ao "
+                   "sinal. Uma potência de base negativa e expoente par dá "
+                   "positivo. A raiz quadrada de um número é o que, ao "
+                   "quadrado, dá esse número.",
+        "exemplo": "−1/2 + 3/4 = −2/4 + 3/4 = 1/4. (−3)² = 9, porque "
+                   "(−3) × (−3) = 9. √49 = 7, porque 7 × 7 = 49.",
+        "lembra": "Sinais iguais na multiplicação dão positivo.",
+    },
+    "mat-8c:u2:n1": {
+        "explica": "Um ponto do plano tem duas coordenadas: a abcissa, no eixo "
+                   "horizontal, e a ordenada, no vertical. Na "
+                   "proporcionalidade directa, y é x vezes uma constante; na "
+                   "inversa, o produto x × y é constante.",
+        "exemplo": "Em (3, −2) a abcissa é 3. Se y = 12 quando x = 4, a "
+                   "constante é 12 : 4 = 3. Se x × y = 24 e x = 6, então "
+                   "y = 4.",
+        "lembra": "Primeiro anda-se na horizontal, depois na vertical.",
+    },
+    "mat-8c:u2:n2": {
+        "explica": "Uma função é uma correspondência em que cada objecto tem "
+                   "uma só imagem. Escreve-se f(x). Para achar a imagem, "
+                   "substitui-se o x pelo valor. A variável independente é o "
+                   "x; a dependente é o y.",
+        "exemplo": "f(x) = 2x + 1. Então f(3) = 2 × 3 + 1 = 7. Se f(x) = "
+                   "5 − x, f(8) = 5 − 8 = −3.",
+        "lembra": "f(3) quer dizer: põe 3 no lugar do x e faz a conta.",
+    },
+    "mat-8c:u2:n3": {
+        "explica": "Uma função linear é do tipo y = ax + b. O gráfico é uma "
+                   "recta: a é o declive, b é onde ela corta o eixo das "
+                   "ordenadas. O zero da função é o x que dá y = 0.",
+        "exemplo": "f(x) = 2x − 8. Zero: 2x − 8 = 0, logo x = 4. Em "
+                   "y = −2x + 5, a recta corta o eixo dos y em 5 e desce, "
+                   "porque a = −2 é negativo.",
+        "lembra": "Declive positivo sobe; declive negativo desce.",
+    },
+    "mat-8c:u3:n1": {
+        "explica": "Há números que não se escrevem como fracção: são dízimas "
+                   "infinitas sem período, como √2 ou π. Chamam-se "
+                   "irracionais. Racionais e irracionais juntos formam os "
+                   "números reais, ℝ.",
+        "exemplo": "√9 = 3 é racional. √2 = 1,4142... não acaba nem repete: é "
+                   "irracional. Assim, ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ.",
+        "lembra": "Se a raiz não é exacta, o número é irracional.",
+    },
+    "mat-8c:u4:n1": {
+        "explica": "Um intervalo é o conjunto dos reais entre dois números. "
+                   "Parêntesis recto para dentro inclui o extremo; para fora "
+                   "exclui. Intersecção é a parte comum; reunião é tudo junto.",
+        "exemplo": "2 ≤ x ≤ 5 é [2, 5]. Em ]0, 3] o 0 fica de fora e o 3 "
+                   "dentro. [1, 6] ∩ [4, 9] = [4, 6].",
+        "lembra": "Parêntesis virado para dentro, o número entra.",
+    },
+    "mat-8c:u4:n2": {
+        "explica": "Uma inequação resolve-se como uma equação, com uma "
+                   "excepção: ao multiplicar ou dividir os dois membros por um "
+                   "número negativo, o sentido da desigualdade inverte-se.",
+        "exemplo": "x + 3 > 7 dá x > 4. Mas −x < 3: divide-se por −1 e vira, "
+                   "x > −3. Em 3x − 4 > 5 vem x > 3, e o menor inteiro é 4.",
+        "lembra": "Dividir por negativo vira o sinal da desigualdade.",
+    },
+    "mat-8c:u5:n1": {
+        "explica": "Uma recta pode ser exterior à circunferência, tangente se "
+                   "lhe toca num só ponto, ou secante se a corta em dois. A "
+                   "tangente é perpendicular ao raio no ponto de tangência. A "
+                   "maior corda é o diâmetro.",
+        "exemplo": "Uma roda de bicicleta no chão: o chão é tangente, toca-lhe "
+                   "num ponto só, e faz 90 graus com o raio até esse ponto.",
+        "lembra": "Tangente toca; secante corta.",
+    },
+    "mat-8c:u5:n2": {
+        "explica": "A circunferência completa tem 360 graus. Um ângulo "
+                   "inscrito mede metade do ângulo ao centro que abrange o "
+                   "mesmo arco. O perímetro é 2 × π × r, e um arco é a parte "
+                   "do perímetro que o seu ângulo ocupa.",
+        "exemplo": "Raio 7 cm com π = 22/7: perímetro 2 × 22/7 × 7 = 44 cm. "
+                   "Um arco de 90 graus é um quarto da volta: 40 : 4 = 10 cm.",
+        "lembra": "Inscrito é metade do ângulo ao centro.",
+    },
+    "mat-8c:u6:n1": {
+        "explica": "Um monómio é um número vezes letras com expoentes: 5x³ tem "
+                   "coeficiente 5 e parte literal x³. O grau é a soma dos "
+                   "expoentes. Só se somam monómios semelhantes, com a mesma "
+                   "parte literal.",
+        "exemplo": "4x²y³ tem grau 2 + 3 = 5. 3x + 5x = 8x, porque são "
+                   "semelhantes. 2x × 3x = 6x², somando os expoentes.",
+        "lembra": "Soma-se o que é semelhante; multiplica-se tudo.",
+    },
+    "mat-8c:u6:n2": {
+        "explica": "Um sistema de duas equações a duas incógnitas tem por "
+                   "solução o par (x, y) que verifica as duas ao mesmo tempo. "
+                   "Resolve-se por substituição ou somando as equações para "
+                   "eliminar uma incógnita.",
+        "exemplo": "x + y = 10 e x − y = 2. Somando: 2x = 12, x = 6. Então "
+                   "y = 4. Se as rectas fossem paralelas, não havia solução.",
+        "lembra": "Verifica: a solução tem de servir nas duas equações.",
+    },
+    "mat-8c:u7:n1": {
+        "explica": "Dois triângulos são congruentes quando têm os lados e os "
+                   "ângulos iguais, cada um ao seu. Basta verificar um "
+                   "critério: LLL, LAL ou ALA. Uma isometria move a figura "
+                   "sem lhe mudar as distâncias.",
+        "exemplo": "Dois triângulos com lados 3, 4 e 5 são congruentes pelo "
+                   "critério LLL. Se têm dois lados iguais e o ângulo entre "
+                   "eles igual, é LAL.",
+        "lembra": "L é lado, A é ângulo: LLL, LAL, ALA.",
+    },
+    "mat-8c:u7:n2": {
+        "explica": "Num triângulo rectângulo, o lado oposto ao ângulo recto é "
+                   "a hipotenusa e os outros dois são os catetos. Teorema de "
+                   "Pitágoras: o quadrado da hipotenusa é a soma dos "
+                   "quadrados dos catetos.",
+        "exemplo": "Catetos 3 e 4: 3² + 4² = 9 + 16 = 25, e a hipotenusa é "
+                   "√25 = 5. Hipotenusa 13 e cateto 5: 13² − 5² = 144, e o "
+                   "outro cateto é 12.",
+        "lembra": "A hipotenusa é sempre o lado maior.",
+    },
+    "mat-8c:u7:n3": {
+        "explica": "Um quadrilátero tem quatro lados e os ângulos internos "
+                   "somam 360 graus. O paralelogramo tem lados opostos "
+                   "paralelos e iguais; o losango tem os quatro iguais; o "
+                   "trapézio tem só um par de lados paralelos.",
+        "exemplo": "Ângulos de 90, 90 e 110: o quarto é 360 − 290 = 70 graus.",
+        "lembra": "Os quatro ângulos somam 360, como duas vezes 180.",
+    },
+    "mat-8c:u8:n1": {
+        "explica": "A população é o conjunto todo; a amostra é a parte que se "
+                   "observa. A frequência absoluta é quantas vezes um valor "
+                   "aparece. A média soma tudo e divide; a moda é o mais "
+                   "frequente; a mediana é o do meio, depois de ordenar.",
+        "exemplo": "Notas 12, 14, 16, 18: média (12 + 14 + 16 + 18) : 4 = 15. "
+                   "Em 3, 9, 4, 7, 5 ordena-se 3, 4, 5, 7, 9 e a mediana é 5.",
+        "lembra": "Para a mediana, ordena primeiro.",
+    },
+    "mat-8c:u9:n1": {
+        "explica": "Uma translação desloca a figura segundo um vector, sem a "
+                   "rodar. Uma reflexão espelha-a num eixo: cada ponto fica "
+                   "à mesma distância, do outro lado. Uma rotação roda-a à "
+                   "volta de um ponto, por um ângulo.",
+        "exemplo": "Um quadrado tem 4 eixos de simetria: dois pelas diagonais "
+                   "e dois pelo meio dos lados. Quatro rotações de 90 graus "
+                   "dão a volta completa.",
+        "lembra": "Translação desliza, reflexão espelha, rotação roda.",
+    },
 }

@@ -197,7 +197,23 @@ CONJUNTOS = {
     'ℕ': ' ene ',
     'ℤ': ' zê ',
     'ℚ': ' quê ',
+    'ℝ': ' erre ',
+    # A 8a classe traz a raiz e o pi. A raiz le-se com o "de" ja dentro,
+    # porque vem sempre colada ao numero: "√49" -> "raiz quadrada de 49".
+    '√': ' raiz quadrada de ',
+    'π': ' pi ',
+    # Os expoentes. O audio.py conta a historia: "2² × 2³" saiu "dois dois
+    # tres" em sessenta ficheiros, e a razao e que a voz le o algarismo
+    # pequeno como um algarismo. A regra nunca chegou a existir -- as seis
+    # perguntas de potencias que a app ja tinha continuavam a dizer isso.
+    '²': ' ao quadrado ',
+    '³': ' ao cubo ',
 }
+
+# A notacao de funcao, que entra na 8a: "f(x)" diz-se "f de x", e "f(3)"
+# diz-se "f de 3". Sem isto a voz lia "f x" e "f 3", e a crianca ouvia uma
+# letra e um numero sem nada a liga-los.
+_FUNCAO = re.compile(r'\b([a-hA-H])\(([a-zA-Z]|-?\d+)\)')
 
 # A divisao neste curriculo escreve-se com dois pontos, como nas escolas
 # portuguesas: "48 : 6 = 8". Mas os dois pontos sao tambem pontuacao
@@ -400,6 +416,9 @@ def dizer_sinais(texto: str) -> str:
     # Os de conjuntos e os de contas não se pisam: "≠", "≤" e "≥" são cada
     # um o seu caracter, e não um "=" com um traço por cima. A ordem aqui é
     # só para ser sempre a mesma.
+    # A notacao de funcao antes dos simbolos: depois de "x²" virar "x ao
+    # quadrado" ja nao havia parentesis a fechar logo a seguir a letra.
+    fora = _FUNCAO.sub(r'\1 de \2', fora)
     for simbolo, palavra in CONJUNTOS.items():
         fora = fora.replace(simbolo, palavra)
     for sinal, palavra in SINAIS.items():

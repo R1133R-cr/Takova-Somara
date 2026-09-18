@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o primário inteiro, e o primeiro degrau do secundário', () {
-    expect(c.cursos.length, 31);
+    expect(c.cursos.length, 32);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -26,6 +26,9 @@ void main() {
       // Continua dentro dos nove anos de escolaridade obrigatória, e é
       // por isso que a app a cobre.
       '7ª classe',
+      // A 8ª: a Matemática abre-a, como abriu a 7ª. As outras doze
+      // disciplinas do plano de estudos entram uma a uma.
+      '8ª classe',
     });
   });
 
@@ -97,12 +100,13 @@ void main() {
     //  1636  com as seis que fecham a 7ª classe: Biologia (62),
     //        Inglês (64), Educação Visual (42), Educação Física (40),
     //        Agropecuária (42) e TIC (37)
+    //  1725  com a Matemática da 8ª classe (89)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 1636);
+    expect(total, 1725);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {

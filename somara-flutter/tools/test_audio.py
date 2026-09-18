@@ -29,7 +29,10 @@ class OQueSeVaiDizer(unittest.TestCase):
 
     def test_aplica_os_sinais(self):
         self.assertEqual(audio.dito('2 + 1 = 3'), '2 mais 1 é igual a 3')
-        self.assertEqual(audio.dito('2² × 2³'), '2² vezes 2³')
+        # Os expoentes tambem se dizem. O teste antigo esperava '2² vezes
+        # 2³' -- os algarismos pequenos tal e qual -- e a voz lia isso
+        # como 'dois dois tres'. Estava a guardar o defeito.
+        self.assertEqual(audio.dito('2² × 2³'), '2 ao quadrado vezes 2 ao cubo')
 
     def test_aplica_as_siglas(self):
         self.assertEqual(audio.dito('A SADC'), 'A ésse, á, dê, cê')

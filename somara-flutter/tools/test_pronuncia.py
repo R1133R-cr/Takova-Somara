@@ -400,5 +400,35 @@ class Escalas(unittest.TestCase):
         self.assertIn('a dividir por', para_dizer('48 : 6 = 8'))
 
 
+
+class SimbolosDa8a(unittest.TestCase):
+    """O que a 8a classe trouxe: expoentes, raiz, pi, os reais e f(x).
+
+    O expoente e o caso mais antigo: "2² × 2³" saiu "dois dois tres" em
+    sessenta ficheiros, e a regra nunca tinha chegado a existir.
+    """
+
+    def test_o_expoente_diz_se(self):
+        self.assertEqual(para_dizer('Quanto é 5²?'), 'Quanto é 5 ao quadrado ?')
+        self.assertEqual(para_dizer('2³'), '2 ao cubo')
+        self.assertIn('x ao quadrado', para_dizer('x² − 4 = 0'))
+
+    def test_a_raiz_leva_o_de(self):
+        self.assertEqual(para_dizer('√49'), 'raiz quadrada de 49')
+
+    def test_o_pi_e_os_reais(self):
+        self.assertEqual(para_dizer('π × r²'), 'pi vezes r ao quadrado')
+        self.assertEqual(para_dizer('o conjunto ℝ'), 'o conjunto erre')
+
+    def test_a_funcao_diz_de(self):
+        self.assertEqual(para_dizer('f(x) = 2x + 1'), 'f de x é igual a 2x mais 1')
+        self.assertEqual(para_dizer('quanto vale f(3)?'), 'quanto vale f de 3?')
+        self.assertEqual(para_dizer('f(-2)'), 'f de -2')
+
+    def test_um_parentesis_vulgar_fica_quieto(self):
+        # "(base × altura)" nao e uma funcao chamada "base".
+        self.assertNotIn(' de ', para_dizer('(base × altura) : 2').split('vezes')[0])
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

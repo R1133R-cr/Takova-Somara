@@ -23578,6 +23578,1129 @@
      ]
     }
    ]
+  },
+  {
+   "id": "mat-8c",
+   "disciplina": "Matemática",
+   "classe": "8ª classe",
+   "tag": "MAT",
+   "fonte": "Programa de Ensino da Disciplina de Matemática — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, pp. 46-81. As nove unidades temáticas e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Números e operações (1)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Subconjuntos e inclusão",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A = {1, 2} e B = {1, 2, 3, 4}. Qual é a afirmação certa?",
+         "options": [
+          "A ⊂ B",
+          "B ⊂ A",
+          "A = B"
+         ],
+         "a": 0,
+         "audio": "373013c2998e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«B contém A» escreve-se:",
+         "options": [
+          "B ⊃ A",
+          "B ∈ A",
+          "B ⊂ A"
+         ],
+         "a": 0,
+         "audio": "c64af846d722.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Dois conjuntos são iguais quando:",
+         "options": [
+          "Têm exactamente os mesmos elementos",
+          "Têm o mesmo número de elementos",
+          "Um está contido no outro"
+         ],
+         "a": 0,
+         "audio": "23f61fed67a9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos subconjuntos com dois elementos tem o conjunto {a, b, c}?",
+         "a": "3",
+         "audio": "2be95a24ee0b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O conjunto universal é:",
+         "options": [
+          "O conjunto de todos os elementos em estudo",
+          "O conjunto sem elementos",
+          "O maior subconjunto de A"
+         ],
+         "a": 0,
+         "audio": "c61a79865e38.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A está contido em B quando todos os elementos de A também são de B: A ⊂ B, e B contém A. Dois conjuntos são iguais quando têm exactamente os mesmos elementos. O universal é o conjunto de tudo o que está em estudo.",
+        "exemplo": "A = {1, 2} e B = {1, 2, 3, 4}. Todos os elementos de A estão em B, logo A ⊂ B. Os subconjuntos de dois elementos de {a, b, c} são {a, b}, {a, c} e {b, c}.",
+        "lembra": "⊂ é entre conjuntos; ∈ é entre um elemento e um conjunto.",
+        "audio": "effa350a112f.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Operações com conjuntos",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "A = {2, 4, 6} e B = {4, 6, 8}. Quantos elementos tem A ∪ B?",
+         "a": "4",
+         "audio": "d367fc40d08f.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A = {2, 4, 6} e B = {4, 6, 8}. Quantos elementos tem A ∩ B?",
+         "a": "2",
+         "audio": "374869015621.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um conjunto finito é um conjunto:",
+         "options": [
+          "Cujos elementos se podem contar até ao fim",
+          "Que tem menos de dez elementos",
+          "Que não tem elementos"
+         ],
+         "a": 0,
+         "audio": "e5406bdc24ce.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se A ∩ B = ∅, os conjuntos A e B dizem-se:",
+         "options": [
+          "Disjuntos",
+          "Iguais",
+          "Universais"
+         ],
+         "a": 0,
+         "audio": "35def92930f0.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A reunião A ∪ B junta os elementos dos dois conjuntos, sem repetir. A intersecção A ∩ B fica só com os que estão nos dois. Se a intersecção é vazia, os conjuntos são disjuntos. Um conjunto é finito quando se contam os elementos até ao fim.",
+        "exemplo": "A = {2, 4, 6} e B = {4, 6, 8}. A ∪ B = {2, 4, 6, 8}, com 4 elementos. A ∩ B = {4, 6}, com 2.",
+        "lembra": "Na reunião, o que se repete conta uma vez só.",
+        "audio": "6267823e9007.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Os números racionais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um número racional é um número que se pode escrever como:",
+         "options": [
+          "Uma fracção de dois inteiros, com denominador diferente de zero",
+          "Um número natural",
+          "Uma dízima infinita não periódica"
+         ],
+         "a": 0,
+         "audio": "0ec4da68e419.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas relações entre conjuntos numéricos está certa?",
+         "options": [
+          "ℕ ⊂ ℤ ⊂ ℚ",
+          "ℚ ⊂ ℤ ⊂ ℕ",
+          "ℤ ⊂ ℕ ⊂ ℚ"
+         ],
+         "a": 0,
+         "audio": "8324dc92932a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes números é menor?",
+         "options": [
+          "−3/4",
+          "−1/4",
+          "1/2"
+         ],
+         "a": 0,
+         "audio": "c421bc49dba6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na recta numérica, −1/2 fica:",
+         "options": [
+          "Entre −1 e 0",
+          "Entre 0 e 1",
+          "À direita do 1"
+         ],
+         "a": 0,
+         "audio": "fa0cfa7f32be.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o módulo de −7/7?",
+         "a": "1",
+         "audio": "f92b639f3c5f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um número racional escreve-se como fracção de dois inteiros, com denominador diferente de zero. Os naturais cabem nos inteiros e estes nos racionais: ℕ ⊂ ℤ ⊂ ℚ. Na recta, os negativos ficam à esquerda do zero.",
+        "exemplo": "−1/2 fica entre −1 e 0. Entre −3/4 e −1/4, o menor é −3/4, porque está mais à esquerda. O módulo de −7/7 é 1.",
+        "lembra": "Quanto mais à esquerda na recta, menor é o número.",
+        "audio": "67b891ae4eae.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Operar com racionais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quanto é −1/2 + 3/4?",
+         "options": [
+          "1/4",
+          "−1/4",
+          "2/6"
+         ],
+         "a": 0,
+         "audio": "15e12c995e28.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é (−2/3) × (3/4)?",
+         "options": [
+          "−1/2",
+          "1/2",
+          "−6/7"
+         ],
+         "a": 0,
+         "audio": "a1248e8fc7b9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Calcula: (−3)²",
+         "a": "9",
+         "audio": "e49f8fc83fe5.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Calcula: √49",
+         "a": "7",
+         "audio": "dea9f276bbad.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é (1/2)²?",
+         "options": [
+          "1/4",
+          "1/2",
+          "2/4"
+         ],
+         "a": 0,
+         "audio": "94c45f5ac2e6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Com racionais opera-se como com fracções, com atenção ao sinal. Uma potência de base negativa e expoente par dá positivo. A raiz quadrada de um número é o que, ao quadrado, dá esse número.",
+        "exemplo": "−1/2 + 3/4 = −2/4 + 3/4 = 1/4. (−3)² = 9, porque (−3) × (−3) = 9. √49 = 7, porque 7 × 7 = 49.",
+        "lembra": "Sinais iguais na multiplicação dão positivo.",
+        "audio": "9eaf4d3873f3.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Funções (1)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Coordenadas e proporcionalidade",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "No ponto (3, −2), o número 3 é:",
+         "options": [
+          "A abcissa, no eixo horizontal",
+          "A ordenada, no eixo vertical",
+          "A origem"
+         ],
+         "a": 0,
+         "audio": "ad5ea1fecf50.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em que quadrante fica o ponto (−2, 5)?",
+         "options": [
+          "No segundo",
+          "No primeiro",
+          "No quarto"
+         ],
+         "a": 0,
+         "audio": "6b9f703adb45.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Se y é directamente proporcional a x e y = 12 quando x = 4, qual é a constante de proporcionalidade?",
+         "a": "3",
+         "audio": "5cddbbbd3103.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Duas grandezas são inversamente proporcionais e x × y = 24. Se x = 6, quanto vale y?",
+         "a": "4",
+         "audio": "2ab1e807f599.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um ponto do plano tem duas coordenadas: a abcissa, no eixo horizontal, e a ordenada, no vertical. Na proporcionalidade directa, y é x vezes uma constante; na inversa, o produto x × y é constante.",
+        "exemplo": "Em (3, −2) a abcissa é 3. Se y = 12 quando x = 4, a constante é 12 : 4 = 3. Se x × y = 24 e x = 6, então y = 4.",
+        "lembra": "Primeiro anda-se na horizontal, depois na vertical.",
+        "audio": "74f1025aef51.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O que é uma função",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma correspondência é uma função quando:",
+         "options": [
+          "A cada objecto corresponde uma só imagem",
+          "Cada imagem tem vários objectos",
+          "Os dois conjuntos são iguais"
+         ],
+         "a": 0,
+         "audio": "432c2e6ef21b.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Sendo f(x) = 2x + 1, quanto vale f(3)?",
+         "a": "7",
+         "audio": "301872ea0ad2.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Sendo f(x) = 5 − x, quanto vale f(8)?",
+         "a": "-3",
+         "audio": "03955c983c15.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em y = 3x, a variável independente é:",
+         "options": [
+          "x",
+          "y",
+          "3"
+         ],
+         "a": 0,
+         "audio": "b86b42312256.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma aplicação em que objectos diferentes têm sempre imagens diferentes diz-se:",
+         "options": [
+          "Injectiva",
+          "Sobrejectiva",
+          "Constante"
+         ],
+         "a": 0,
+         "audio": "019adf0b919e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma função é uma correspondência em que cada objecto tem uma só imagem. Escreve-se f(x). Para achar a imagem, substitui-se o x pelo valor. A variável independente é o x; a dependente é o y.",
+        "exemplo": "f(x) = 2x + 1. Então f(3) = 2 × 3 + 1 = 7. Se f(x) = 5 − x, f(8) = 5 − 8 = −3.",
+        "lembra": "f(3) quer dizer: põe 3 no lugar do x e faz a conta.",
+        "audio": "b167ad0391ea.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A função linear e o seu gráfico",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O gráfico de uma função do tipo y = ax + b é:",
+         "options": [
+          "Uma recta",
+          "Uma parábola",
+          "Um círculo"
+         ],
+         "a": 0,
+         "audio": "7ed1887a8317.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o zero da função f(x) = 2x − 8?",
+         "a": "4",
+         "audio": "e80717b2b8c3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em y = −2x + 5, o gráfico corta o eixo das ordenadas em:",
+         "options": [
+          "5",
+          "−2",
+          "0"
+         ],
+         "a": 0,
+         "audio": "c07e82e1650a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em y = ax + b, se a é negativo a recta:",
+         "options": [
+          "Desce da esquerda para a direita",
+          "Sobe da esquerda para a direita",
+          "É horizontal"
+         ],
+         "a": 0,
+         "audio": "58ae669b4b5d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma recta passa pela origem e pelo ponto (2, 6). Qual é o declive?",
+         "a": "3",
+         "audio": "56a64b6ad5e9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma função linear é do tipo y = ax + b. O gráfico é uma recta: a é o declive, b é onde ela corta o eixo das ordenadas. O zero da função é o x que dá y = 0.",
+        "exemplo": "f(x) = 2x − 8. Zero: 2x − 8 = 0, logo x = 4. Em y = −2x + 5, a recta corta o eixo dos y em 5 e desce, porque a = −2 é negativo.",
+        "lembra": "Declive positivo sobe; declive negativo desce.",
+        "audio": "ef862e343d1e.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Números reais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Irracionais e reais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual destes números é irracional?",
+         "options": [
+          "√2",
+          "√9",
+          "0,5"
+         ],
+         "a": 0,
+         "audio": "8c9c94b2b8ea.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um número irracional é uma dízima:",
+         "options": [
+          "Infinita e não periódica",
+          "Infinita e periódica",
+          "Finita"
+         ],
+         "a": 0,
+         "audio": "6280060836f8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O conjunto ℝ dos números reais junta:",
+         "options": [
+          "Os racionais e os irracionais",
+          "Só os inteiros e os naturais",
+          "Só os números positivos"
+         ],
+         "a": 0,
+         "audio": "950ddec8144f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é a relação certa?",
+         "options": [
+          "ℚ ⊂ ℝ",
+          "ℝ ⊂ ℚ",
+          "ℝ ⊂ ℤ"
+         ],
+         "a": 0,
+         "audio": "dbd4520d222e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O número π é:",
+         "options": [
+          "Irracional, aproximadamente 3,14",
+          "Racional, igual a 22/7",
+          "Inteiro"
+         ],
+         "a": 0,
+         "audio": "d71506598a32.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Há números que não se escrevem como fracção: são dízimas infinitas sem período, como √2 ou π. Chamam-se irracionais. Racionais e irracionais juntos formam os números reais, ℝ.",
+        "exemplo": "√9 = 3 é racional. √2 = 1,4142... não acaba nem repete: é irracional. Assim, ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ.",
+        "lembra": "Se a raiz não é exacta, o número é irracional.",
+        "audio": "054b43f34677.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Inequações lineares",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Intervalos de números reais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os números reais x tais que 2 ≤ x ≤ 5 formam o intervalo:",
+         "options": [
+          "[2, 5]",
+          "]2, 5[",
+          "[2, 5["
+         ],
+         "a": 0,
+         "audio": "ab7bcdc70aae.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No intervalo ]0, 3], o número 0:",
+         "options": [
+          "Não pertence ao intervalo",
+          "Pertence ao intervalo",
+          "É o maior elemento"
+         ],
+         "a": 0,
+         "audio": "6b6fd0ca05b7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A intersecção de [1, 6] com [4, 9] é:",
+         "options": [
+          "[4, 6]",
+          "[1, 9]",
+          "[6, 9]"
+         ],
+         "a": 0,
+         "audio": "38d6da0a3bf7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A reunião de [1, 3] com [3, 7] é:",
+         "options": [
+          "[1, 7]",
+          "[3, 3]",
+          "[1, 3]"
+         ],
+         "a": 0,
+         "audio": "f93788eb83ba.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um intervalo é o conjunto dos reais entre dois números. Parêntesis recto para dentro inclui o extremo; para fora exclui. Intersecção é a parte comum; reunião é tudo junto.",
+        "exemplo": "2 ≤ x ≤ 5 é [2, 5]. Em ]0, 3] o 0 fica de fora e o 3 dentro. [1, 6] ∩ [4, 9] = [4, 6].",
+        "lembra": "Parêntesis virado para dentro, o número entra.",
+        "audio": "ee1afc11745f.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Resolver inequações",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A solução de x + 3 > 7 é:",
+         "options": [
+          "x > 4",
+          "x > 10",
+          "x < 4"
+         ],
+         "a": 0,
+         "audio": "829e2bccf28e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A solução de 2x ≤ 10 é:",
+         "options": [
+          "x ≤ 5",
+          "x ≥ 5",
+          "x ≤ 20"
+         ],
+         "a": 0,
+         "audio": "455accc75e9c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao multiplicar os dois membros de uma inequação por um número negativo:",
+         "options": [
+          "O sentido da desigualdade inverte-se",
+          "O sentido mantém-se",
+          "A inequação fica sem solução"
+         ],
+         "a": 0,
+         "audio": "dc0a4001079e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A solução de −x < 3 é:",
+         "options": [
+          "x > −3",
+          "x < −3",
+          "x < 3"
+         ],
+         "a": 0,
+         "audio": "506f0abea5e9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o menor número inteiro que verifica 3x − 4 > 5?",
+         "a": "4",
+         "audio": "13f0508ee166.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma inequação resolve-se como uma equação, com uma excepção: ao multiplicar ou dividir os dois membros por um número negativo, o sentido da desigualdade inverte-se.",
+        "exemplo": "x + 3 > 7 dá x > 4. Mas −x < 3: divide-se por −1 e vira, x > −3. Em 3x − 4 > 5 vem x > 3, e o menor inteiro é 4.",
+        "lembra": "Dividir por negativo vira o sinal da desigualdade.",
+        "audio": "1bcbdd91d51c.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Circunferência e círculo",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Elementos e posições da recta",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma recta que toca a circunferência num só ponto chama-se:",
+         "options": [
+          "Tangente",
+          "Secante",
+          "Exterior"
+         ],
+         "a": 0,
+         "audio": "def40db9e3a1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma recta que corta a circunferência em dois pontos chama-se:",
+         "options": [
+          "Secante",
+          "Tangente",
+          "Diâmetro"
+         ],
+         "a": 0,
+         "audio": "7ec81478114f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A maior corda de uma circunferência é:",
+         "options": [
+          "O diâmetro",
+          "O raio",
+          "O arco"
+         ],
+         "a": 0,
+         "audio": "cdfe557a4f02.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A recta tangente e o raio no ponto de tangência formam um ângulo de:",
+         "options": [
+          "90 graus",
+          "45 graus",
+          "180 graus"
+         ],
+         "a": 0,
+         "audio": "5be5b3b95915.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma recta pode ser exterior à circunferência, tangente se lhe toca num só ponto, ou secante se a corta em dois. A tangente é perpendicular ao raio no ponto de tangência. A maior corda é o diâmetro.",
+        "exemplo": "Uma roda de bicicleta no chão: o chão é tangente, toca-lhe num ponto só, e faz 90 graus com o raio até esse ponto.",
+        "lembra": "Tangente toca; secante corta.",
+        "audio": "b207e2f27c50.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Ângulos, perímetro e arcos",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Um ângulo ao centro mede 80 graus. Quantos graus mede o ângulo inscrito que abrange o mesmo arco?",
+         "a": "40",
+         "audio": "2c931ec7f43c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma circunferência completa tem quantos graus?",
+         "a": "360",
+         "audio": "b17bc37fbd1d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O perímetro de uma circunferência de raio r calcula-se com:",
+         "options": [
+          "2 × π × r",
+          "π × r²",
+          "π × r"
+         ],
+         "a": 0,
+         "audio": "782c9cd07de6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma circunferência tem raio de 7 cm. Usando π = 22/7, quantos centímetros mede o perímetro?",
+         "a": "44",
+         "figura": {
+          "forma": "circulo",
+          "a": 7
+         },
+         "audio": "d876dad422e4.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um arco corresponde a um ângulo ao centro de 90 graus numa circunferência de perímetro 40 cm. Quantos centímetros mede o arco?",
+         "a": "10",
+         "audio": "b04b2218f197.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A circunferência completa tem 360 graus. Um ângulo inscrito mede metade do ângulo ao centro que abrange o mesmo arco. O perímetro é 2 × π × r, e um arco é a parte do perímetro que o seu ângulo ocupa.",
+        "exemplo": "Raio 7 cm com π = 22/7: perímetro 2 × 22/7 × 7 = 44 cm. Um arco de 90 graus é um quarto da volta: 40 : 4 = 10 cm.",
+        "lembra": "Inscrito é metade do ângulo ao centro.",
+        "audio": "5bc562f4ce88.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Álgebra (2)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Monómios",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "No monómio 5x³, o coeficiente é:",
+         "options": [
+          "5",
+          "x",
+          "3"
+         ],
+         "a": 0,
+         "audio": "c244d91ebf37.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é o grau do monómio 4x²y³?",
+         "a": "5",
+         "audio": "34b03925e458.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Dois monómios são semelhantes quando:",
+         "options": [
+          "Têm a mesma parte literal",
+          "Têm o mesmo coeficiente",
+          "Têm o mesmo grau"
+         ],
+         "a": 0,
+         "audio": "ea758ddde485.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 3x + 5x?",
+         "options": [
+          "8x",
+          "8x²",
+          "15x"
+         ],
+         "a": 0,
+         "audio": "212fe9dbc631.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quanto é 2x × 3x?",
+         "options": [
+          "6x²",
+          "6x",
+          "5x²"
+         ],
+         "a": 0,
+         "audio": "6764e615f1e4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um monómio é um número vezes letras com expoentes: 5x³ tem coeficiente 5 e parte literal x³. O grau é a soma dos expoentes. Só se somam monómios semelhantes, com a mesma parte literal.",
+        "exemplo": "4x²y³ tem grau 2 + 3 = 5. 3x + 5x = 8x, porque são semelhantes. 2x × 3x = 6x², somando os expoentes.",
+        "lembra": "Soma-se o que é semelhante; multiplica-se tudo.",
+        "audio": "7ad2c9da50e3.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Sistemas de duas equações",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um sistema de duas equações lineares a duas incógnitas tem por solução:",
+         "options": [
+          "Um par de valores que verifica as duas",
+          "Um valor só",
+          "Duas equações novas"
+         ],
+         "a": 0,
+         "audio": "7c2e1304f269.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Se x + y = 10 e x − y = 2, quanto vale x?",
+         "a": "6",
+         "audio": "c0cc3b51bd91.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Se x + y = 10 e x − y = 2, quanto vale y?",
+         "a": "4",
+         "audio": "b4580c464ee9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um sistema em que as duas rectas são paralelas é:",
+         "options": [
+          "Impossível: não tem solução",
+          "Possível e determinado",
+          "Possível e indeterminado"
+         ],
+         "a": 0,
+         "audio": "d12eeaef0323.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Dois cadernos e uma caneta custam 70 meticais; um caderno e uma caneta custam 45. Quantos meticais custa um caderno?",
+         "a": "25",
+         "audio": "061f54be32ee.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um sistema de duas equações a duas incógnitas tem por solução o par (x, y) que verifica as duas ao mesmo tempo. Resolve-se por substituição ou somando as equações para eliminar uma incógnita.",
+        "exemplo": "x + y = 10 e x − y = 2. Somando: 2x = 12, x = 6. Então y = 4. Se as rectas fossem paralelas, não havia solução.",
+        "lembra": "Verifica: a solução tem de servir nas duas equações.",
+        "audio": "13b052fd885a.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Geometria (2)",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Congruência de triângulos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Dois triângulos são congruentes quando:",
+         "options": [
+          "Têm os lados e os ângulos iguais, cada um ao seu",
+          "Têm a mesma área",
+          "Têm um ângulo igual"
+         ],
+         "a": 0,
+         "audio": "015b236b4b64.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O critério lado-ângulo-lado exige:",
+         "options": [
+          "Dois lados iguais e o ângulo entre eles igual",
+          "Três ângulos iguais",
+          "Um lado e um ângulo iguais"
+         ],
+         "a": 0,
+         "audio": "1ecc2bf09774.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada critério de congruência à sua sigla.",
+         "pairs": [
+          [
+           "Lado-lado-lado",
+           "LLL"
+          ],
+          [
+           "Ângulo-lado-ângulo",
+           "ALA"
+          ]
+         ],
+         "audio": "4e658187550e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma isometria é uma transformação que:",
+         "options": [
+          "Mantém as distâncias",
+          "Duplica as figuras",
+          "Muda os ângulos"
+         ],
+         "a": 0,
+         "audio": "4bcab0e72cd7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Dois triângulos são congruentes quando têm os lados e os ângulos iguais, cada um ao seu. Basta verificar um critério: LLL, LAL ou ALA. Uma isometria move a figura sem lhe mudar as distâncias.",
+        "exemplo": "Dois triângulos com lados 3, 4 e 5 são congruentes pelo critério LLL. Se têm dois lados iguais e o ângulo entre eles igual, é LAL.",
+        "lembra": "L é lado, A é ângulo: LLL, LAL, ALA.",
+        "audio": "c90c77dd764b.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O teorema de Pitágoras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O teorema de Pitágoras aplica-se a:",
+         "options": [
+          "Triângulos rectângulos",
+          "Todos os triângulos",
+          "Só a triângulos equiláteros"
+         ],
+         "a": 0,
+         "audio": "1f15ef29b188.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num triângulo rectângulo, o lado oposto ao ângulo recto chama-se:",
+         "options": [
+          "Hipotenusa",
+          "Cateto",
+          "Altura"
+         ],
+         "a": 0,
+         "audio": "39598c62b0c6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num triângulo rectângulo os catetos medem 3 e 4. Quanto mede a hipotenusa?",
+         "a": "5",
+         "audio": "0e06b99323ba.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num triângulo rectângulo a hipotenusa mede 13 e um cateto mede 5. Quanto mede o outro cateto?",
+         "a": "12",
+         "audio": "10dbff20f8c6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma escada de 10 metros está encostada a uma parede, com o pé a 6 metros dela. A que altura, em metros, toca na parede?",
+         "a": "8",
+         "audio": "d827207cca94.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Num triângulo rectângulo, o lado oposto ao ângulo recto é a hipotenusa e os outros dois são os catetos. Teorema de Pitágoras: o quadrado da hipotenusa é a soma dos quadrados dos catetos.",
+        "exemplo": "Catetos 3 e 4: 3² + 4² = 9 + 16 = 25, e a hipotenusa é √25 = 5. Hipotenusa 13 e cateto 5: 13² − 5² = 144, e o outro cateto é 12.",
+        "lembra": "A hipotenusa é sempre o lado maior.",
+        "audio": "b6d0370bb8d7.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Quadriláteros",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Quanto vale a soma dos ângulos internos de um quadrilátero, em graus?",
+         "a": "360",
+         "audio": "8ce9c831b7ff.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um quadrilátero com os quatro lados iguais e os ângulos não todos rectos é um:",
+         "options": [
+          "Losango",
+          "Rectângulo",
+          "Trapézio"
+         ],
+         "a": 0,
+         "audio": "5ac3d318d389.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um paralelogramo tem:",
+         "options": [
+          "Os lados opostos paralelos e iguais",
+          "Só um par de lados paralelos",
+          "Os quatro ângulos rectos, sempre"
+         ],
+         "a": 0,
+         "audio": "1d940d6c131e.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Três ângulos de um quadrilátero medem 90, 90 e 110 graus. Quantos graus mede o quarto?",
+         "a": "70",
+         "audio": "141880bc83b9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um quadrilátero tem quatro lados e os ângulos internos somam 360 graus. O paralelogramo tem lados opostos paralelos e iguais; o losango tem os quatro iguais; o trapézio tem só um par de lados paralelos.",
+        "exemplo": "Ângulos de 90, 90 e 110: o quarto é 360 − 290 = 70 graus.",
+        "lembra": "Os quatro ângulos somam 360, como duas vezes 180.",
+        "audio": "e61311dcd575.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Estatística",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "População, tabelas e médias",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Numa sondagem a 50 alunos de uma escola com 800, os 50 são:",
+         "options": [
+          "A amostra",
+          "A população",
+          "A moda"
+         ],
+         "a": 0,
+         "audio": "68a83c5c427d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "As notas de um aluno foram 12, 14, 16 e 18. Qual é a média?",
+         "a": "15",
+         "audio": "0873c0d4d2f9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Numa turma, 5 alunos têm 12 anos, 15 têm 13 e 8 têm 14. Qual é a moda das idades?",
+         "a": "13",
+         "audio": "93a505317ea8.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Qual é a mediana de 3, 9, 4, 7 e 5?",
+         "a": "5",
+         "audio": "eb6256475a7f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A frequência absoluta de um valor é:",
+         "options": [
+          "O número de vezes que ele aparece",
+          "A sua percentagem no total",
+          "O maior valor observado"
+         ],
+         "a": 0,
+         "audio": "6705b05539d7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A população é o conjunto todo; a amostra é a parte que se observa. A frequência absoluta é quantas vezes um valor aparece. A média soma tudo e divide; a moda é o mais frequente; a mediana é o do meio, depois de ordenar.",
+        "exemplo": "Notas 12, 14, 16, 18: média (12 + 14 + 16 + 18) : 4 = 15. Em 3, 9, 4, 7, 5 ordena-se 3, 4, 5, 7, 9 e a mediana é 5.",
+        "lembra": "Para a mediana, ordena primeiro.",
+        "audio": "76e901723745.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u9",
+     "titulo": "Movimentos no plano",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Translação, reflexão e rotação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Deslocar uma figura sem a rodar nem a virar é uma:",
+         "options": [
+          "Translação",
+          "Rotação",
+          "Reflexão"
+         ],
+         "a": 0,
+         "audio": "4f48db2e2825.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma translação fica definida por:",
+         "options": [
+          "Um vector",
+          "Um ângulo",
+          "Um eixo"
+         ],
+         "a": 0,
+         "audio": "4c84bf96d52c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos eixos de simetria tem um quadrado?",
+         "a": "4",
+         "audio": "18713379ac56.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A reflexão de um ponto num eixo dá um ponto:",
+         "options": [
+          "À mesma distância do eixo, do outro lado",
+          "Mais afastado do eixo",
+          "Em cima do eixo"
+         ],
+         "a": 0,
+         "audio": "32fdcf2909c4.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma rotação de 90 graus repetida quantas vezes dá uma volta completa?",
+         "a": "4",
+         "audio": "fa526b5f718f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma translação desloca a figura segundo um vector, sem a rodar. Uma reflexão espelha-a num eixo: cada ponto fica à mesma distância, do outro lado. Uma rotação roda-a à volta de um ponto, por um ângulo.",
+        "exemplo": "Um quadrado tem 4 eixos de simetria: dois pelas diagonais e dois pelo meio dos lados. Quatro rotações de 90 graus dão a volta completa.",
+        "lembra": "Translação desliza, reflexão espelha, rotação roda.",
+        "audio": "ac20bb149534.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }
