@@ -4598,4 +4598,172 @@ MATERIA = {
                    "rapariga e a escola que fica para trás.",
         "lembra": "Didascália: o que se faz, não o que se diz.",
     },
+
+    # ---------------------------------------------------------------
+    # Geografia -- 9a classe  (a Geografia de Mocambique)
+    # ---------------------------------------------------------------
+    "geo-9c:u1:n1": {
+        "explica": "Moçambique fica na costa oriental da África Austral, "
+                   "com uns 2700 quilómetros de Índico. Faz fronteira com "
+                   "seis países: Tanzânia a norte, além do Rovuma; Malawi "
+                   "e Zâmbia a noroeste; Zimbabué a oeste; África do Sul e "
+                   "Essuatíni a sul.",
+        "exemplo": "Do Rovuma ao Maputo são mais de 2000 quilómetros. O "
+                   "canal de Moçambique separa-nos de Madagáscar.",
+        "lembra": "Seis vizinhos por terra, o Índico por mar.",
+    },
+    "geo-9c:u1:n2": {
+        "explica": "As rochas mais antigas, do Pré-câmbrico, estão no "
+                   "interior e no norte; as mais recentes, do Fanerozóico "
+                   "— Karroo, Cretácico, Quaternário — nas bacias e no "
+                   "litoral. Daí vêm os minerais: energéticos, metálicos e "
+                   "não metálicos.",
+        "exemplo": "Carvão em Moatize, gás em Pande e Temane, areias "
+                   "pesadas em Moma, rubis em Montepuez. Os solos aluviais "
+                   "dos grandes rios são os mais férteis.",
+        "lembra": "Pré-câmbrico é o velho; Fanerozóico é o novo.",
+    },
+    "geo-9c:u1:n3": {
+        "explica": "O relevo nasce de processos endógenos, de dentro da "
+                   "Terra, e exógenos, a erosão da chuva, do vento e dos "
+                   "rios. O país sobe do litoral para o interior: "
+                   "planícies na costa e no sul, planaltos no centro e no "
+                   "norte, montanhas a oeste.",
+        "exemplo": "O monte Binga, em Manica, tem 2436 metros e é o mais "
+                   "alto do país. Lichinga está no planalto do Niassa, a "
+                   "mais de 1300 metros.",
+        "lembra": "Planície, planalto, montanha: de leste para oeste.",
+    },
+    "geo-9c:u1:n4": {
+        "explica": "O clima é tropical, com uma estação quente e chuvosa, "
+                   "de Outubro a Março, e outra fresca e seca. Varia com a "
+                   "latitude, a altitude e a distância ao mar: húmido no "
+                   "litoral norte e centro, seco no interior sul, de "
+                   "altitude nos planaltos.",
+        "exemplo": "Num gráfico termopluviométrico, as barras são a chuva "
+                   "de cada mês e a linha é a temperatura. Em Lichinga a "
+                   "linha é mais baixa do que em Pemba.",
+        "lembra": "Chuva de Outubro a Março; seco de Maio a Setembro.",
+    },
+    "geo-9c:u1:n5": {
+        "explica": "A savana e o miombo cobrem o país; elefantes e leões "
+                   "vivem nas áreas protegidas: Gorongosa, Reserva do "
+                   "Niassa, Bazaruto. O Zambeze é o maior rio; Rovuma, "
+                   "Lúrio, Save e Limpopo fazem as outras bacias. O lago "
+                   "Niassa é o terceiro de África.",
+        "exemplo": "Cahora Bassa, no Zambeze, dá electricidade ao país e "
+                   "aos vizinhos. O lago Niassa é partilhado com o Malawi "
+                   "e a Tanzânia.",
+        "lembra": "Rovuma e Lúrio a norte, Zambeze ao centro, Limpopo a "
+                  "sul.",
+    },
+    "geo-9c:u2:n1": {
+        "explica": "No censo de 2017, Moçambique tinha uns 28 milhões "
+                   "de habitantes. A natalidade conta os nascimentos por "
+                   "mil habitantes, a mortalidade as mortes, e a "
+                   "diferença é o crescimento natural. O "
+                   "planeamento familiar deixa escolher quando ter filhos.",
+        "exemplo": "40 nascimentos e 12 mortes por mil dão um crescimento "
+                   "natural de 28 por mil. Vacinas, água limpa e postos de "
+                   "saúde fazem baixar a mortalidade infantil.",
+        "lembra": "Crescimento natural: natalidade menos mortalidade.",
+    },
+    "geo-9c:u2:n2": {
+        "explica": "A população muda pelo movimento natural, nascimentos "
+                   "e mortes, e pelo migratório, entradas e saídas. Quem "
+                   "sai do país emigra; quem entra imigra; quem deixa o "
+                   "campo pela cidade faz o êxodo rural. A causa principal "
+                   "é a procura de trabalho.",
+        "exemplo": "Um jovem do Niassa que vai para as minas da África do "
+                   "Sul emigra. Longe da família, cresce o risco de "
+                   "infecções como o HIV: é a ligação entre migração e "
+                   "saúde.",
+        "lembra": "Emigra quem sai; imigra quem entra.",
+    },
+    "geo-9c:u2:n3": {
+        "explica": "A população é jovem: quase metade tem menos de 15 "
+                   "anos. Trabalha sobretudo no sector primário e "
+                   "concentra-se no litoral e nos vales, onde há água, "
+                   "solos e portos: "
+                   "Nampula e Zambézia são as mais povoadas, o Niassa o "
+                   "menos denso.",
+        "exemplo": "Não há trabalhos só de homens nem só de mulheres. A "
+                   "violência baseada no género é crime e denuncia-se.",
+        "lembra": "Base larga: país jovem.",
+    },
+    "geo-9c:u3:n1": {
+        "explica": "A agricultura de subsistência é a da família, com "
+                   "enxada, para comer; a de plantação é de grandes áreas "
+                   "para vender, herdada do tempo colonial e do trabalho "
+                   "forçado. Depende do clima, do solo, da água, da terra "
+                   "e do trabalho.",
+        "exemplo": "Caju em Nampula, chá no Gurué, açúcar nos vales do "
+                   "Incomáti e do Búzi, milho e feijão nos planaltos. O "
+                   "gado bovino cria-se sobretudo no sul.",
+        "lembra": "Subsistência alimenta; plantação exporta.",
+    },
+    "geo-9c:u3:n2": {
+        "explica": "A pesca artesanal faz-se de canoa perto da costa e "
+                   "nos lagos; a industrial, de barco grande ao largo, "
+                   "exporta camarão. A silvicultura cultiva e explora as "
+                   "florestas, e conservá-las é evitar queimadas e cortar "
+                   "só com licença, replantando.",
+        "exemplo": "No lago Niassa pesca-se o chambo e a usipa. O miombo "
+                   "do Niassa dá lenha, carvão e madeira, mas só dura se "
+                   "não se queimar.",
+        "lembra": "Camarão para fora; chambo para a mesa.",
+    },
+    "geo-9c:u3:n3": {
+        "explica": "A indústria extractiva tira minerais da terra: carvão "
+                   "em Moatize, gás em Inhambane. A transformadora faz "
+                   "produtos: a pesada, como o alumínio da Mozal e o "
+                   "cimento; a ligeira, como os refrescos. Está sobretudo "
+                   "em Maputo, na Beira e Nampula.",
+        "exemplo": "Uma fábrica que despeja resíduos no rio mata os "
+                   "peixes: é o impacto ambiental, e a lei obriga a "
+                   "tratá-los.",
+        "lembra": "Extractiva tira; transformadora faz.",
+    },
+    "geo-9c:u3:n4": {
+        "explica": "Os corredores de Nacala, da Beira e de Maputo ligam os "
+                   "portos ao interior, e a Estrada "
+                   "Nacional número 1 atravessa o país de sul a norte. O "
+                   "comércio interno é formal e informal; o externo "
+                   "exporta alumínio, carvão, gás, camarão e caju.",
+        "exemplo": "Oferta é o que há para vender; procura é o que se "
+                   "quer comprar; inflação é os preços a subir. Cinto "
+                   "posto e sem álcool ao volante previnem acidentes.",
+        "lembra": "Três corredores, três portos: Nacala, Beira, Maputo.",
+    },
+    "geo-9c:u3:n5": {
+        "explica": "O turismo é de praia, no Bazaruto; de "
+                   "natureza, na Gorongosa e no Niassa; cultural, na Ilha "
+                   "de Moçambique. Cria empregos e vive da "
+                   "identidade cultural. Poupar é guardar, investir é pôr "
+                   "a render, crédito é emprestado com juros.",
+        "exemplo": "Quem poupa 150 meticais por mês tem 1800 ao fim de um "
+                   "ano — o suficiente para começar um pequeno negócio.",
+        "lembra": "Poupar primeiro, investir depois, crédito com cuidado.",
+    },
+    "geo-9c:u4:n1": {
+        "explica": "A África Austral é o sul do continente. A SADC, a "
+                   "Comunidade de Desenvolvimento da África Austral, "
+                   "nasceu em 1992 em Windhoek, da organização de 1980, e "
+                   "tem sede em Gaborone. Fala-se português, inglês, "
+                   "francês e malgaxe nos seus países.",
+        "exemplo": "Moçambique e Angola falam português; a Zâmbia e o "
+                   "Zimbabué, inglês; Madagáscar, malgaxe e francês.",
+        "lembra": "SADC: 1992, Windhoek, sede em Gaborone.",
+    },
+    "geo-9c:u4:n2": {
+        "explica": "A SADC coopera nos transportes, no comércio e na paz. "
+                   "Moçambique é a porta do mar dos países do interior: os "
+                   "corredores levam-lhes as mercadorias. A integração pede "
+                   "cultura de paz, direitos humanos e democracia, e "
+                   "combate a xenofobia.",
+        "exemplo": "O Malawi, a Zâmbia e o Zimbabué exportam pelos portos "
+                   "da Beira e de Nacala. Numa democracia o povo escolhe "
+                   "quem governa, em eleições livres.",
+        "lembra": "Integração é ganhar com os vizinhos, não contra eles.",
+    },
 }

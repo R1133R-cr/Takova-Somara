@@ -38122,6 +38122,1215 @@
      ]
     }
    ]
+  },
+  {
+   "id": "geo-9c",
+   "disciplina": "Geografia",
+   "classe": "9ª classe",
+   "tag": "GEO",
+   "fonte": "Programa de Ensino da Disciplina de Geografia — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, 9ª classe, pp. 37-47. As quatro unidades e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 9ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Geografia física de Moçambique",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Situação geográfica e limites",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Moçambique fica:",
+         "options": [
+          "Na costa oriental da África Austral, banhado pelo Oceano Índico",
+          "Na costa ocidental de África",
+          "No norte de África"
+         ],
+         "a": 0,
+         "audio": "ceed4a9ff5dc.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Com quantos países faz fronteira Moçambique?",
+         "a": "6",
+         "audio": "8487dc4583f6.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada país vizinho ao lado em que fica.",
+         "pairs": [
+          [
+           "Tanzânia",
+           "Norte, do outro lado do Rovuma"
+          ],
+          [
+           "Malawi e Zâmbia",
+           "Noroeste"
+          ],
+          [
+           "Zimbabué",
+           "Oeste"
+          ],
+          [
+           "África do Sul e Essuatíni",
+           "Sul e sudoeste"
+          ]
+         ],
+         "audio": "bffedfd803f9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O rio que marca a fronteira norte com a Tanzânia é o:",
+         "options": [
+          "Rovuma",
+          "Zambeze",
+          "Limpopo"
+         ],
+         "a": 0,
+         "audio": "28bb874f4f50.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A costa moçambicana tem cerca de:",
+         "options": [
+          "2700 quilómetros",
+          "300 quilómetros",
+          "10 000 quilómetros"
+         ],
+         "a": 0,
+         "audio": "02a9c1054d92.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Moçambique fica na costa oriental da África Austral, com uns 2700 quilómetros de Índico. Faz fronteira com seis países: Tanzânia a norte, além do Rovuma; Malawi e Zâmbia a noroeste; Zimbabué a oeste; África do Sul e Essuatíni a sul.",
+        "exemplo": "Do Rovuma ao Maputo são mais de 2000 quilómetros. O canal de Moçambique separa-nos de Madagáscar.",
+        "lembra": "Seis vizinhos por terra, o Índico por mar.",
+        "audio": "640ae3bc4608.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Geologia, minerais e solos",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada unidade geológica ao que ela é.",
+         "pairs": [
+          [
+           "Pré-câmbrico",
+           "As rochas mais antigas, no interior e no norte"
+          ],
+          [
+           "Fanerozóico",
+           "As rochas mais recentes: Karroo, Cretácico, Quaternário"
+          ]
+         ],
+         "audio": "ddef246f9e57.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada recurso mineral ao lugar onde se explora.",
+         "pairs": [
+          [
+           "Carvão",
+           "Moatize, em Tete"
+          ],
+          [
+           "Gás natural",
+           "Pande e Temane, em Inhambane"
+          ],
+          [
+           "Areias pesadas",
+           "Moma, em Nampula"
+          ],
+          [
+           "Rubis",
+           "Montepuez, em Cabo Delgado"
+          ]
+         ],
+         "audio": "12897d728147.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada mineral ao seu grupo.",
+         "pairs": [
+          [
+           "Carvão e gás",
+           "Energéticos"
+          ],
+          [
+           "Ouro e ferro",
+           "Metálicos"
+          ],
+          [
+           "Calcário e areia",
+           "Não metálicos"
+          ]
+         ],
+         "audio": "5561f0f8925a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os recursos minerais são importantes porque:",
+         "options": [
+          "Dão emprego, exportações e receitas ao Estado",
+          "Não se acabam nunca",
+          "Só servem para enfeitar"
+         ],
+         "a": 0,
+         "audio": "53fa4b62329a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os solos das planícies dos grandes rios são:",
+         "options": [
+          "Aluviais e férteis, bons para a agricultura",
+          "Rochosos e estéreis",
+          "Sempre salgados"
+         ],
+         "a": 0,
+         "audio": "cf6320fcb3f1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As rochas mais antigas, do Pré-câmbrico, estão no interior e no norte; as mais recentes, do Fanerozóico — Karroo, Cretácico, Quaternário — nas bacias e no litoral. Daí vêm os minerais: energéticos, metálicos e não metálicos.",
+        "exemplo": "Carvão em Moatize, gás em Pande e Temane, areias pesadas em Moma, rubis em Montepuez. Os solos aluviais dos grandes rios são os mais férteis.",
+        "lembra": "Pré-câmbrico é o velho; Fanerozóico é o novo.",
+        "audio": "8d86b3130c82.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "O relevo",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada processo de formação do relevo ao seu tipo.",
+         "pairs": [
+          [
+           "Vulcões e sismos, vindos de dentro da Terra",
+           "Endógeno"
+          ],
+          [
+           "Erosão pela chuva, pelo vento e pelos rios",
+           "Exógeno"
+          ]
+         ],
+         "audio": "d934f21a6fda.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada forma de relevo ao lugar onde domina em Moçambique.",
+         "pairs": [
+          [
+           "Planícies",
+           "O litoral, sobretudo no sul"
+          ],
+          [
+           "Planaltos",
+           "O interior do centro e do norte"
+          ],
+          [
+           "Montanhas",
+           "As fronteiras oeste: Manica, Niassa, Tete"
+          ]
+         ],
+         "audio": "cf5264d7ea27.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O ponto mais alto de Moçambique é o monte:",
+         "options": [
+          "Binga, em Manica",
+          "Namuli",
+          "Gorongosa"
+         ],
+         "a": 0,
+         "audio": "06b4083aa559.mp3"
+        },
+        {
+         "t": "input",
+         "q": "O monte Binga tem cerca de 2436 metros. Quantos metros lhe faltam para os 3000?",
+         "a": "564",
+         "audio": "3005624b6fd4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Lichinga fica:",
+         "options": [
+          "No planalto do Niassa, a mais de 1300 metros de altitude",
+          "Na planície do litoral",
+          "Ao nível do mar"
+         ],
+         "a": 0,
+         "audio": "1c9f8cc18a0e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O relevo nasce de processos endógenos, de dentro da Terra, e exógenos, a erosão da chuva, do vento e dos rios. O país sobe do litoral para o interior: planícies na costa e no sul, planaltos no centro e no norte, montanhas a oeste.",
+        "exemplo": "O monte Binga, em Manica, tem 2436 metros e é o mais alto do país. Lichinga está no planalto do Niassa, a mais de 1300 metros.",
+        "lembra": "Planície, planalto, montanha: de leste para oeste.",
+        "audio": "2648be5e3a12.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "O clima",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O clima de Moçambique é, no geral:",
+         "options": [
+          "Tropical, com uma estação quente e chuvosa e outra fresca e seca",
+          "Polar",
+          "Desértico em todo o país"
+         ],
+         "a": 0,
+         "audio": "64731a971b9f.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de clima à zona onde ocorre.",
+         "pairs": [
+          [
+           "Tropical húmido",
+           "Litoral norte e centro"
+          ],
+          [
+           "Tropical seco",
+           "Interior sul, como Gaza"
+          ],
+          [
+           "Tropical de altitude",
+           "Planaltos e montanhas, como Lichinga"
+          ]
+         ],
+         "audio": "aeabb0843ec3.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada factor do clima ao seu efeito.",
+         "pairs": [
+          [
+           "Latitude",
+           "Mais perto do equador, mais calor"
+          ],
+          [
+           "Altitude",
+           "Mais alto, mais fresco"
+          ],
+          [
+           "Proximidade do mar",
+           "Mais humidade e chuva"
+          ]
+         ],
+         "audio": "711d69811229.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num gráfico termopluviométrico, as barras mostram:",
+         "options": [
+          "A chuva de cada mês",
+          "A temperatura de cada mês",
+          "A altitude"
+         ],
+         "a": 0,
+         "audio": "e5fe6bf66b32.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A estação das chuvas em Moçambique vai, em geral:",
+         "options": [
+          "De Outubro ou Novembro a Março ou Abril",
+          "De Maio a Setembro",
+          "O ano inteiro"
+         ],
+         "a": 0,
+         "audio": "405a7df965b5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O clima é tropical, com uma estação quente e chuvosa, de Outubro a Março, e outra fresca e seca. Varia com a latitude, a altitude e a distância ao mar: húmido no litoral norte e centro, seco no interior sul, de altitude nos planaltos.",
+        "exemplo": "Num gráfico termopluviométrico, as barras são a chuva de cada mês e a linha é a temperatura. Em Lichinga a linha é mais baixa do que em Pemba.",
+        "lembra": "Chuva de Outubro a Março; seco de Maio a Setembro.",
+        "audio": "5a145fbd12b8.mp3"
+       }
+      },
+      {
+       "id": "n5",
+       "titulo": "Vegetação, fauna, rios e lagos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A vegetação mais espalhada em Moçambique é:",
+         "options": [
+          "A savana e a floresta aberta de miombo",
+          "A floresta equatorial densa",
+          "O deserto"
+         ],
+         "a": 0,
+         "audio": "7fa9900dbfc8.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada área protegida à província onde fica.",
+         "pairs": [
+          [
+           "Parque Nacional da Gorongosa",
+           "Sofala"
+          ],
+          [
+           "Reserva Especial do Niassa",
+           "Niassa e Cabo Delgado"
+          ],
+          [
+           "Parque Nacional do Bazaruto",
+           "Inhambane"
+          ]
+         ],
+         "audio": "71de15f42224.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O maior rio de Moçambique, onde está a barragem de Cahora Bassa, é o:",
+         "options": [
+          "Zambeze",
+          "Limpopo",
+          "Lúrio"
+         ],
+         "a": 0,
+         "audio": "d82fe945db9b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada rio à zona do país por onde corre.",
+         "pairs": [
+          [
+           "Rovuma e Lúrio",
+           "Norte"
+          ],
+          [
+           "Zambeze e Save",
+           "Centro"
+          ],
+          [
+           "Limpopo e Incomáti",
+           "Sul"
+          ]
+         ],
+         "audio": "ebb05fc9027e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O lago Niassa é:",
+         "options": [
+          "O terceiro maior lago de África, partilhado com o Malawi e a Tanzânia",
+          "Um lago artificial",
+          "O maior lago do mundo"
+         ],
+         "a": 0,
+         "audio": "9bc74ce4f68c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A savana e o miombo cobrem o país; elefantes e leões vivem nas áreas protegidas: Gorongosa, Reserva do Niassa, Bazaruto. O Zambeze é o maior rio; Rovuma, Lúrio, Save e Limpopo fazem as outras bacias. O lago Niassa é o terceiro de África.",
+        "exemplo": "Cahora Bassa, no Zambeze, dá electricidade ao país e aos vizinhos. O lago Niassa é partilhado com o Malawi e a Tanzânia.",
+        "lembra": "Rovuma e Lúrio a norte, Zambeze ao centro, Limpopo a sul.",
+        "audio": "01b9bc3466d1.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "População",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Indicadores demográficos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "No censo de 2017, a população de Moçambique era de cerca de:",
+         "options": [
+          "28 milhões de habitantes",
+          "5 milhões de habitantes",
+          "100 milhões de habitantes"
+         ],
+         "a": 0,
+         "audio": "6bc4f1c88c71.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Numa vila nasceram 40 crianças por cada 1000 habitantes e morreram 12. Qual é a taxa de crescimento natural, por mil?",
+         "a": "28",
+         "audio": "9107f0af240b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada indicador ao que ele mede.",
+         "pairs": [
+          [
+           "Taxa de natalidade",
+           "Nascimentos por mil habitantes num ano"
+          ],
+          [
+           "Taxa de mortalidade",
+           "Mortes por mil habitantes num ano"
+          ],
+          [
+           "Crescimento natural",
+           "Natalidade menos mortalidade"
+          ]
+         ],
+         "audio": "67197a93e47b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O planeamento familiar permite:",
+         "options": [
+          "Decidir quando e quantos filhos ter, com saúde para a mãe e os filhos",
+          "Ter o máximo de filhos possível",
+          "Proibir os filhos"
+         ],
+         "a": 0,
+         "audio": "a374b632711e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A mortalidade infantil baixa quando há:",
+         "options": [
+          "Vacinas, água limpa e postos de saúde",
+          "Mais festas",
+          "Menos escolas"
+         ],
+         "a": 0,
+         "audio": "b616c7207688.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No censo de 2017, Moçambique tinha uns 28 milhões de habitantes. A natalidade conta os nascimentos por mil habitantes, a mortalidade as mortes, e a diferença é o crescimento natural. O planeamento familiar deixa escolher quando ter filhos.",
+        "exemplo": "40 nascimentos e 12 mortes por mil dão um crescimento natural de 28 por mil. Vacinas, água limpa e postos de saúde fazem baixar a mortalidade infantil.",
+        "lembra": "Crescimento natural: natalidade menos mortalidade.",
+        "audio": "4c6d58aff514.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Movimentos populacionais",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada movimento da população ao que ele é.",
+         "pairs": [
+          [
+           "Movimento natural",
+           "Nascimentos e mortes"
+          ],
+          [
+           "Movimento migratório",
+           "Entradas e saídas de pessoas"
+          ]
+         ],
+         "audio": "d901bce9ff61.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um jovem do Niassa que vai trabalhar para as minas da África do Sul faz uma:",
+         "options": [
+          "Emigração",
+          "Imigração",
+          "Migração interna"
+         ],
+         "a": 0,
+         "audio": "b76961652aab.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A saída do campo para as cidades chama-se:",
+         "options": [
+          "Êxodo rural",
+          "Emigração",
+          "Crescimento natural"
+         ],
+         "a": 0,
+         "audio": "e6077a761ebb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma consequência das migrações para a saúde é:",
+         "options": [
+          "Maior risco de infecções de transmissão sexual, como o HIV, longe da família",
+          "Menos doenças",
+          "Nenhuma"
+         ],
+         "a": 0,
+         "audio": "ec2708ff8d73.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As migrações têm como causa principal:",
+         "options": [
+          "A procura de trabalho e de melhores condições de vida",
+          "O gosto por viajar",
+          "O clima"
+         ],
+         "a": 0,
+         "audio": "3c599b6e599a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A população muda pelo movimento natural, nascimentos e mortes, e pelo migratório, entradas e saídas. Quem sai do país emigra; quem entra imigra; quem deixa o campo pela cidade faz o êxodo rural. A causa principal é a procura de trabalho.",
+        "exemplo": "Um jovem do Niassa que vai para as minas da África do Sul emigra. Longe da família, cresce o risco de infecções como o HIV: é a ligação entre migração e saúde.",
+        "lembra": "Emigra quem sai; imigra quem entra.",
+        "audio": "dbb321f8d2d1.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Estrutura e distribuição da população",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A pirâmide etária de Moçambique tem a base larga porque:",
+         "options": [
+          "A população é muito jovem: quase metade tem menos de 15 anos",
+          "Há muitos idosos",
+          "Não há crianças"
+         ],
+         "a": 0,
+         "audio": "bf74c2f15fed.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada sector de actividade ao seu exemplo.",
+         "pairs": [
+          [
+           "Primário",
+           "Agricultura e pesca"
+          ],
+          [
+           "Secundário",
+           "Indústria"
+          ],
+          [
+           "Terciário",
+           "Comércio, transportes e serviços"
+          ]
+         ],
+         "audio": "543c33add972.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada província à sua densidade de população.",
+         "pairs": [
+          [
+           "Nampula e Zambézia",
+           "As mais povoadas"
+          ],
+          [
+           "Niassa",
+           "A menos densa, com muita terra por habitante"
+          ]
+         ],
+         "audio": "f97d9e1590d7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A população concentra-se no litoral e nos vales dos rios porque:",
+         "options": [
+          "Há água, solos férteis, portos e estradas",
+          "Há mais frio",
+          "Não há terra"
+         ],
+         "a": 0,
+         "audio": "db89df15a686.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A violência baseada no género:",
+         "options": [
+          "É crime, e denuncia-se à polícia ou ao gabinete de atendimento",
+          "É um assunto privado da família",
+          "Só acontece nas cidades"
+         ],
+         "a": 0,
+         "audio": "fbe70c9cf0f1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A população é jovem: quase metade tem menos de 15 anos. Trabalha sobretudo no sector primário e concentra-se no litoral e nos vales, onde há água, solos e portos: Nampula e Zambézia são as mais povoadas, o Niassa o menos denso.",
+        "exemplo": "Não há trabalhos só de homens nem só de mulheres. A violência baseada no género é crime e denuncia-se.",
+        "lembra": "Base larga: país jovem.",
+        "audio": "41c33cbda1a1.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Actividades económicas em Moçambique",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Agricultura e pecuária",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada tipo de agricultura ao que ela é.",
+         "pairs": [
+          [
+           "De subsistência",
+           "A família cultiva para comer, com enxada"
+          ],
+          [
+           "De plantação",
+           "Grandes áreas de uma cultura para vender"
+          ]
+         ],
+         "audio": "56aa57b0c6ec.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No tempo colonial, as plantações de chá, sisal e açúcar:",
+         "options": [
+          "Eram dos colonos e usavam trabalho forçado dos moçambicanos",
+          "Eram dos camponeses",
+          "Não existiam"
+         ],
+         "a": 0,
+         "audio": "d8414cfbde32.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada cultura à região onde mais se produz.",
+         "pairs": [
+          [
+           "Castanha de caju",
+           "Nampula"
+          ],
+          [
+           "Chá",
+           "Gurué, na Zambézia"
+          ],
+          [
+           "Cana-de-açúcar",
+           "Vales do Incomáti e do Búzi"
+          ],
+          [
+           "Milho e feijão",
+           "Planaltos do centro e do norte"
+          ]
+         ],
+         "audio": "416ced2e2f4b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os principais factores da produção agrícola são:",
+         "options": [
+          "O clima, o solo, a água, a terra e o trabalho",
+          "Só a chuva",
+          "Só o dinheiro"
+         ],
+         "a": 0,
+         "audio": "abb84634ee52.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de gado à zona onde mais se cria.",
+         "pairs": [
+          [
+           "Bovino",
+           "Sul: Gaza, Inhambane e Maputo"
+          ],
+          [
+           "Caprino",
+           "Todo o país, na criação familiar"
+          ]
+         ],
+         "audio": "5917b7c6b0dd.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A agricultura de subsistência é a da família, com enxada, para comer; a de plantação é de grandes áreas para vender, herdada do tempo colonial e do trabalho forçado. Depende do clima, do solo, da água, da terra e do trabalho.",
+        "exemplo": "Caju em Nampula, chá no Gurué, açúcar nos vales do Incomáti e do Búzi, milho e feijão nos planaltos. O gado bovino cria-se sobretudo no sul.",
+        "lembra": "Subsistência alimenta; plantação exporta.",
+        "audio": "4d104ac4da89.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Pesca e silvicultura",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada tipo de pesca ao que ela é.",
+         "pairs": [
+          [
+           "Artesanal",
+           "Canoas e redes, perto da costa, para comer e vender"
+          ],
+          [
+           "Industrial",
+           "Barcos grandes, ao largo, para exportar"
+          ]
+         ],
+         "audio": "62e1b2ca70e7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O principal produto pesqueiro de exportação de Moçambique é:",
+         "options": [
+          "O camarão",
+          "A sardinha",
+          "O bacalhau"
+         ],
+         "a": 0,
+         "audio": "99ca14b844a9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No lago Niassa pesca-se sobretudo:",
+         "options": [
+          "Peixe de água doce, como o chambo e a usipa",
+          "Camarão",
+          "Atum"
+         ],
+         "a": 0,
+         "audio": "c9d9984cb9a6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Silvicultura é:",
+         "options": [
+          "O cultivo e a exploração das florestas",
+          "A criação de gado",
+          "A pesca no rio"
+         ],
+         "a": 0,
+         "audio": "733c4afd163f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para conservar as florestas de miombo do Niassa deve-se:",
+         "options": [
+          "Evitar as queimadas e cortar só com licença, replantando",
+          "Queimar para limpar",
+          "Cortar tudo para vender"
+         ],
+         "a": 0,
+         "audio": "1ca2678c6c6d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A pesca artesanal faz-se de canoa perto da costa e nos lagos; a industrial, de barco grande ao largo, exporta camarão. A silvicultura cultiva e explora as florestas, e conservá-las é evitar queimadas e cortar só com licença, replantando.",
+        "exemplo": "No lago Niassa pesca-se o chambo e a usipa. O miombo do Niassa dá lenha, carvão e madeira, mas só dura se não se queimar.",
+        "lembra": "Camarão para fora; chambo para a mesa.",
+        "audio": "f9e96a4ba71b.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A indústria",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada indústria ao seu tipo.",
+         "pairs": [
+          [
+           "Mina de carvão",
+           "Extractiva"
+          ],
+          [
+           "Fábrica de cimento",
+           "Transformadora pesada"
+          ],
+          [
+           "Fábrica de refrescos",
+           "Transformadora ligeira"
+          ]
+         ],
+         "audio": "ba41fc77a0ee.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada indústria ao lugar onde está.",
+         "pairs": [
+          [
+           "Alumínio da Mozal",
+           "Maputo"
+          ],
+          [
+           "Carvão",
+           "Moatize"
+          ],
+          [
+           "Gás natural",
+           "Inhambane e Cabo Delgado"
+          ]
+         ],
+         "audio": "e6102e69b001.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A indústria transformadora:",
+         "options": [
+          "Transforma matérias-primas em produtos: cimento, açúcar, cerveja",
+          "Tira minerais da terra",
+          "Planta árvores"
+         ],
+         "a": 0,
+         "audio": "71296e8b88c4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A indústria moçambicana concentra-se:",
+         "options": [
+          "Em Maputo, na Beira e em Nampula",
+          "Nas aldeias do interior",
+          "Só no Niassa"
+         ],
+         "a": 0,
+         "audio": "22d37a6eac05.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma fábrica que despeja resíduos no rio:",
+         "options": [
+          "Polui a água e mata os peixes: é impacto ambiental",
+          "Ajuda os peixes",
+          "Não tem efeito"
+         ],
+         "a": 0,
+         "audio": "7c4a42e08d37.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A indústria extractiva tira minerais da terra: carvão em Moatize, gás em Inhambane. A transformadora faz produtos: a pesada, como o alumínio da Mozal e o cimento; a ligeira, como os refrescos. Está sobretudo em Maputo, na Beira e Nampula.",
+        "exemplo": "Uma fábrica que despeja resíduos no rio mata os peixes: é o impacto ambiental, e a lei obriga a tratá-los.",
+        "lembra": "Extractiva tira; transformadora faz.",
+        "audio": "2740829ab164.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Transportes, comunicações e comércio",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada corredor de transportes ao porto onde chega.",
+         "pairs": [
+          [
+           "Corredor de Nacala",
+           "Porto de Nacala, em Nampula"
+          ],
+          [
+           "Corredor da Beira",
+           "Porto da Beira, em Sofala"
+          ],
+          [
+           "Corredor de Maputo",
+           "Porto de Maputo"
+          ]
+         ],
+         "audio": "29fa892b676d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A estrada que atravessa o país de sul a norte é a:",
+         "options": [
+          "Estrada Nacional número 1",
+          "Linha de Sena",
+          "Estrada do Rovuma"
+         ],
+         "a": 0,
+         "audio": "87696ffcf0dd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para prevenir acidentes rodoviários:",
+         "options": [
+          "Cinto posto, sem álcool ao volante e velocidade dentro do limite",
+          "Andar mais depressa",
+          "Buzinar muito"
+         ],
+         "a": 0,
+         "audio": "bb6402313d2c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada noção de comércio ao que ela é.",
+         "pairs": [
+          [
+           "Oferta",
+           "O que há para vender"
+          ],
+          [
+           "Procura",
+           "O que as pessoas querem comprar"
+          ],
+          [
+           "Inflação",
+           "A subida geral dos preços"
+          ],
+          [
+           "Exportação",
+           "Vender para fora do país"
+          ]
+         ],
+         "audio": "cd79e9827846.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os principais produtos que Moçambique exporta são:",
+         "options": [
+          "Alumínio, carvão, gás, camarão e castanha de caju",
+          "Automóveis e computadores",
+          "Petróleo refinado"
+         ],
+         "a": 0,
+         "audio": "2000a00c4a1f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os corredores de Nacala, da Beira e de Maputo ligam os portos ao interior, e a Estrada Nacional número 1 atravessa o país de sul a norte. O comércio interno é formal e informal; o externo exporta alumínio, carvão, gás, camarão e caju.",
+        "exemplo": "Oferta é o que há para vender; procura é o que se quer comprar; inflação é os preços a subir. Cinto posto e sem álcool ao volante previnem acidentes.",
+        "lembra": "Três corredores, três portos: Nacala, Beira, Maputo.",
+        "audio": "36476180bfee.mp3"
+       }
+      },
+      {
+       "id": "n5",
+       "titulo": "Turismo e educação financeira",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada espaço turístico ao seu tipo de turismo.",
+         "pairs": [
+          [
+           "Bazaruto e Tofo",
+           "De praia"
+          ],
+          [
+           "Gorongosa e Reserva do Niassa",
+           "De natureza"
+          ],
+          [
+           "Ilha de Moçambique",
+           "Cultural e histórico"
+          ]
+         ],
+         "audio": "4f211a99f53f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O turismo cria:",
+         "options": [
+          "Empregos, divisas e mercado para os produtos locais",
+          "Só poluição",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "72381a2a6c4d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As danças, as línguas e as cerimónias de Moçambique são:",
+         "options": [
+          "Identidade cultural, que também atrai turistas",
+          "Coisas do passado sem valor",
+          "Só para as cidades"
+         ],
+         "a": 0,
+         "audio": "6430b0accda4.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada noção de educação financeira ao que ela é.",
+         "pairs": [
+          [
+           "Poupança",
+           "Guardar parte do que se ganha"
+          ],
+          [
+           "Investimento",
+           "Pôr dinheiro num negócio para render"
+          ],
+          [
+           "Crédito",
+           "Dinheiro emprestado que se paga com juros"
+          ]
+         ],
+         "audio": "c83f273330c9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma jovem poupa 150 meticais por mês. Quantos meticais tem ao fim de 12 meses?",
+         "a": "1800",
+         "audio": "18132362cde6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O turismo é de praia, no Bazaruto; de natureza, na Gorongosa e no Niassa; cultural, na Ilha de Moçambique. Cria empregos e vive da identidade cultural. Poupar é guardar, investir é pôr a render, crédito é emprestado com juros.",
+        "exemplo": "Quem poupa 150 meticais por mês tem 1800 ao fim de um ano — o suficiente para começar um pequeno negócio.",
+        "lembra": "Poupar primeiro, investir depois, crédito com cuidado.",
+        "audio": "c5bd57839be0.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Moçambique e a SADC",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A África Austral e a SADC",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A África Austral é:",
+         "options": [
+          "A parte sul do continente africano",
+          "O norte de África",
+          "Uma ilha"
+         ],
+         "a": 0,
+         "audio": "b74bc928f0af.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada país da África Austral à sua língua oficial.",
+         "pairs": [
+          [
+           "Moçambique e Angola",
+           "Português"
+          ],
+          [
+           "Zâmbia e Zimbabué",
+           "Inglês"
+          ],
+          [
+           "Madagáscar",
+           "Malgaxe e francês"
+          ]
+         ],
+         "audio": "c09a427bb20b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A SADC é:",
+         "options": [
+          "A Comunidade de Desenvolvimento da África Austral",
+          "Um banco",
+          "Um partido político"
+         ],
+         "a": 0,
+         "audio": "4a83ead88a45.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A SADC foi criada em 1992, em Windhoek, a partir da organização de cooperação fundada em 1980. Quantos anos passaram entre uma e outra?",
+         "a": "12",
+         "audio": "44960e18a673.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A sede da SADC fica em:",
+         "options": [
+          "Gaborone, no Botsuana",
+          "Maputo",
+          "Pretória"
+         ],
+         "a": 0,
+         "audio": "443ab8df5919.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A África Austral é o sul do continente. A SADC, a Comunidade de Desenvolvimento da África Austral, nasceu em 1992 em Windhoek, da organização de 1980, e tem sede em Gaborone. Fala-se português, inglês, francês e malgaxe nos seus países.",
+        "exemplo": "Moçambique e Angola falam português; a Zâmbia e o Zimbabué, inglês; Madagáscar, malgaxe e francês.",
+        "lembra": "SADC: 1992, Windhoek, sede em Gaborone.",
+        "audio": "f245f48fd6e8.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Integração regional, direitos humanos e democracia",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada área de cooperação da SADC ao seu exemplo.",
+         "pairs": [
+          [
+           "Transportes",
+           "Os corredores que ligam os portos ao interior"
+          ],
+          [
+           "Comércio",
+           "Livre circulação de mercadorias"
+          ],
+          [
+           "Paz e segurança",
+           "Mediação de conflitos"
+          ]
+         ],
+         "audio": "0122ea392c7c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Moçambique é importante na SADC porque:",
+         "options": [
+          "Os seus portos servem os países do interior, como o Malawi, a Zâmbia e o Zimbabué",
+          "É o país mais rico",
+          "Não tem costa"
+         ],
+         "a": 0,
+         "audio": "0aacc996edae.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A xenofobia é:",
+         "options": [
+          "O ódio aos estrangeiros, contrário aos direitos humanos",
+          "O amor à pátria",
+          "Uma doença"
+         ],
+         "a": 0,
+         "audio": "3ba6c816ce6e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa democracia:",
+         "options": [
+          "O povo escolhe os governantes em eleições livres",
+          "Manda quem tem mais força",
+          "Não há leis"
+         ],
+         "a": 0,
+         "audio": "c722d4b48d09.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A cultura de paz constrói-se:",
+         "options": [
+          "Com diálogo, tolerância e respeito pelas diferenças",
+          "Com armas",
+          "Ignorando os conflitos"
+         ],
+         "a": 0,
+         "audio": "b0fb85cf928e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A SADC coopera nos transportes, no comércio e na paz. Moçambique é a porta do mar dos países do interior: os corredores levam-lhes as mercadorias. A integração pede cultura de paz, direitos humanos e democracia, e combate a xenofobia.",
+        "exemplo": "O Malawi, a Zâmbia e o Zimbabué exportam pelos portos da Beira e de Nacala. Numa democracia o povo escolhe quem governa, em eleições livres.",
+        "lembra": "Integração é ganhar com os vizinhos, não contra eles.",
+        "audio": "de722bb9cd8f.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }
