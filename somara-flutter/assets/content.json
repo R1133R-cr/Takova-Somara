@@ -34092,6 +34092,865 @@
      ]
     }
    ]
+  },
+  {
+   "id": "agr-8c",
+   "disciplina": "Agropecuária",
+   "classe": "8ª classe",
+   "tag": "AGR",
+   "fonte": "Programa de Ensino da Disciplina de Agropecuária — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, 8ª classe, pp. 37-49. As seis unidades temáticas e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Culturas alimentares: as hortícolas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As hortícolas de Moçambique",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Alface, cebola, cenoura, tomate e couve são:",
+         "options": [
+          "Hortícolas",
+          "Cereais",
+          "Leguminosas"
+         ],
+         "a": 0,
+         "audio": "e0e77fabe418.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada hortícola à parte que se come.",
+         "pairs": [
+          [
+           "Cenoura",
+           "A raiz"
+          ],
+          [
+           "Alface",
+           "As folhas"
+          ],
+          [
+           "Tomate",
+           "O fruto"
+          ],
+          [
+           "Cebola",
+           "O bolbo"
+          ]
+         ],
+         "audio": "89d7d1e9b083.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As hortícolas são importantes para a família porque:",
+         "options": [
+          "Dão vitaminas à mesa e renda no mercado",
+          "Só servem para vender",
+          "Não precisam de água"
+         ],
+         "a": 0,
+         "audio": "607e07d95620.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A maior parte das hortícolas semeia-se primeiro:",
+         "options": [
+          "No alfobre, e depois transplanta-se para o campo",
+          "Directamente no campo, sempre",
+          "Dentro de casa"
+         ],
+         "a": 0,
+         "audio": "2c749323e402.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A época mais fresca e seca, com rega, é a melhor para:",
+         "options": [
+          "A alface, a couve e a cenoura",
+          "O arroz",
+          "O coco"
+         ],
+         "a": 0,
+         "audio": "34de0809ea58.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As hortícolas — alface, alho, cebola, cenoura, pepino, pimento, tomate, couve, repolho — dão vitaminas à mesa e renda no mercado. Quase todas se semeiam no alfobre e transplantam-se, e a época fresca e seca, com rega, é a melhor.",
+        "exemplo": "Da cenoura come-se a raiz, da alface as folhas, do tomate o fruto, da cebola o bolbo. O alfobre é o canteiro onde as plantinhas nascem protegidas.",
+        "lembra": "Alfobre primeiro, campo depois.",
+        "audio": "679a888c9ad9.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Do alfobre à colheita",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada prática cultural ao que ela é.",
+         "pairs": [
+          [
+           "Sacha",
+           "Tirar as ervas daninhas"
+          ],
+          [
+           "Desbaste",
+           "Arrancar plantas a mais para as outras crescerem"
+          ],
+          [
+           "Tutoragem",
+           "Pôr uma estaca a segurar a planta"
+          ],
+          [
+           "Adubação",
+           "Dar alimento ao solo"
+          ]
+         ],
+         "audio": "e3403fa25a04.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um camponês transplanta tomateiros em linhas com 5 plantas cada. Quantas plantas tem em 12 linhas?",
+         "a": "60",
+         "audio": "c06c168d4c73.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O compasso de sementeira é:",
+         "options": [
+          "A distância entre as plantas e entre as linhas",
+          "O instrumento de desenhar círculos",
+          "A hora de semear"
+         ],
+         "a": 0,
+         "audio": "ff2008ed1154.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O tomateiro precisa de tutor porque:",
+         "options": [
+          "O caule não aguenta o peso dos frutos",
+          "Cresce debaixo da terra",
+          "Não gosta de sol"
+         ],
+         "a": 0,
+         "audio": "3404f41f7b92.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A couve e a alface colhem-se:",
+         "options": [
+          "De manhã cedo, antes do calor, para não murcharem",
+          "Ao meio-dia",
+          "Só depois de secarem"
+         ],
+         "a": 0,
+         "audio": "ed16eba98666.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As práticas culturais são os cuidados depois de plantar: sacha para tirar ervas, desbaste para arrancar plantas a mais, adubação, rega, tutoragem para segurar o tomateiro. O compasso é a distância entre plantas e entre linhas.",
+        "exemplo": "Doze linhas de 5 tomateiros são 60 plantas. A couve e a alface colhem-se de manhã cedo, antes do calor, para não murcharem.",
+        "lembra": "Sacha, desbaste, adubação, rega, tutor.",
+        "audio": "25d252024750.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Leguminosas de grão",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Os feijões e o amendoim",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Feijão-nhemba, feijão-vulgar, feijão-bóer e amendoim são:",
+         "options": [
+          "Leguminosas de grão",
+          "Cereais",
+          "Raízes e tubérculos"
+         ],
+         "a": 0,
+         "audio": "44c039553267.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As leguminosas são ricas em:",
+         "options": [
+          "Proteínas",
+          "Água",
+          "Sal"
+         ],
+         "a": 0,
+         "audio": "d6bb5e24c1ac.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As leguminosas fazem bem ao solo porque:",
+         "options": [
+          "Fixam o azoto do ar nas raízes e enriquecem a terra",
+          "Secam a terra",
+          "Atraem pragas"
+         ],
+         "a": 0,
+         "audio": "7014243c83b7.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada leguminosa à sua característica.",
+         "pairs": [
+          [
+           "Feijão-nhemba",
+           "Aguenta bem a seca"
+          ],
+          [
+           "Feijão-bóer",
+           "Arbusto que dura mais de um ano"
+          ],
+          [
+           "Amendoim",
+           "A vagem cresce debaixo da terra"
+          ]
+         ],
+         "audio": "f398e41d90e3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Semear as leguminosas na época certa importa porque:",
+         "options": [
+          "Precisam de chuva para nascer e de tempo seco para a colheita",
+          "Nascem em qualquer altura",
+          "Não gostam de chuva"
+         ],
+         "a": 0,
+         "audio": "f5b74dfbf96d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As leguminosas de grão — nhemba, vulgar, bóer, feijão-verde, amendoim — são ricas em proteínas e fazem bem ao solo, porque fixam o azoto do ar nas raízes. Semeiam-se com a chuva e colhem-se no tempo seco.",
+        "exemplo": "O nhemba aguenta a seca; o bóer é um arbusto que dura anos; o amendoim cria a vagem debaixo da terra.",
+        "lembra": "Leguminosa: proteína na mesa, azoto na terra.",
+        "audio": "ae0d5dc4bc84.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Semear, cuidar e colher",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "O feijão semeia-se com 2 grãos por cova. Quantos grãos vão em 40 covas?",
+         "a": "80",
+         "audio": "36b5c9b517b6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Plantar milho com feijão-nhemba na mesma machamba chama-se:",
+         "options": [
+          "Consociação",
+          "Monocultura",
+          "Estacaria"
+         ],
+         "a": 0,
+         "audio": "ded753467bb6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O feijão colhe-se quando:",
+         "options": [
+          "As vagens estão secas e amarelas",
+          "As flores abrem",
+          "As folhas estão verdes"
+         ],
+         "a": 0,
+         "audio": "19776f8ec0c6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para guardar o feijão sem gorgulho deve-se:",
+         "options": [
+          "Secá-lo bem e fechá-lo em recipiente limpo e seco",
+          "Guardá-lo húmido",
+          "Deixá-lo ao ar"
+         ],
+         "a": 0,
+         "audio": "4588687833f7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O amendoim colhe-se:",
+         "options": [
+          "Arrancando a planta e secando as vagens",
+          "Apanhando os frutos da árvore",
+          "Cortando as folhas"
+         ],
+         "a": 0,
+         "audio": "b7d796fc7dba.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O feijão semeia-se com dois grãos por cova e dá-se bem com o milho na mesma machamba: é a consociação. Colhe-se com as vagens secas e amarelas e guarda-se bem seco, em recipiente limpo e fechado, contra o gorgulho.",
+        "exemplo": "Quarenta covas com dois grãos são 80 grãos. O amendoim colhe-se arrancando a planta inteira e pondo as vagens a secar.",
+        "lembra": "Seco e fechado, o feijão dura o ano.",
+        "audio": "b615ffe56612.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Raízes e tubérculos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Mandioca, batata e inhame",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada cultura ao que se colhe dela.",
+         "pairs": [
+          [
+           "Mandioca",
+           "Raiz"
+          ],
+          [
+           "Batata-reno",
+           "Tubérculo"
+          ],
+          [
+           "Batata-doce",
+           "Raiz"
+          ],
+          [
+           "Inhame",
+           "Tubérculo"
+          ]
+         ],
+         "audio": "2e9421945073.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A mandioca é importante em Moçambique porque:",
+         "options": [
+          "Aguenta a seca e os solos pobres, e dá comida todo o ano",
+          "Precisa de muita água",
+          "Só cresce nas cidades"
+         ],
+         "a": 0,
+         "audio": "0171d30ef014.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A mandioca e a batata-doce propagam-se por:",
+         "options": [
+          "Estacas de caule ou de rama",
+          "Sementes",
+          "Enxertia"
+         ],
+         "a": 0,
+         "audio": "ef38c40366a3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A batata-reno propaga-se por:",
+         "options": [
+          "Tubérculos com olhos, os rebentos",
+          "Folhas",
+          "Flores"
+         ],
+         "a": 0,
+         "audio": "458621b46529.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Estas culturas são sobretudo fonte de:",
+         "options": [
+          "Energia: hidratos de carbono",
+          "Proteínas",
+          "Gordura"
+         ],
+         "a": 0,
+         "audio": "8f32fcca01b0.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A mandioca e a batata-doce são raízes; a batata-reno e o inhame são tubérculos. Dão energia, hidratos de carbono. A mandioca aguenta a seca e os solos pobres e propaga-se por estacas; a batata-reno propaga-se por tubérculos com olhos.",
+        "exemplo": "Um pedaço de caule de mandioca espetado na terra dá uma planta nova. A batata-doce planta-se por ramas.",
+        "lembra": "Mandioca por estaca, batata-reno por tubérculo.",
+        "audio": "3a27522e24e0.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Plantar, amontoar e colher",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Amontoa é:",
+         "options": [
+          "Chegar terra ao pé da planta para os tubérculos não ficarem à vista",
+          "Regar de manhã",
+          "Cortar as folhas"
+         ],
+         "a": 0,
+         "audio": "118e3bbafc9d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "As estacas de mandioca plantam-se a 1 metro umas das outras. Numa linha de 25 metros, quantas estacas cabem, contando as duas pontas?",
+         "a": "26",
+         "audio": "381d4864a1dd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A mandioca amarga tem de se:",
+         "options": [
+          "Descascar, demolhar ou secar bem antes de comer",
+          "Comer crua",
+          "Comer com casca"
+         ],
+         "a": 0,
+         "audio": "b7175d20ac4c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para a batata-doce durar, guarda-se:",
+         "options": [
+          "Em lugar fresco, seco e arejado",
+          "Ao sol",
+          "Dentro de água"
+         ],
+         "a": 0,
+         "audio": "074bc5a73cfb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A mandioca demora a colher:",
+         "options": [
+          "Cerca de um ano",
+          "Uma semana",
+          "Um mês"
+         ],
+         "a": 0,
+         "audio": "9d3099caee06.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A amontoa chega terra ao pé da planta para os tubérculos não ficarem à vista. A mandioca leva cerca de um ano a colher, e a amarga descasca-se, demolha-se ou seca-se antes de comer. A batata-doce guarda-se em lugar fresco, seco e arejado.",
+        "exemplo": "Estacas a 1 metro numa linha de 25 metros: 26 estacas, contando as duas pontas.",
+        "lembra": "Mandioca amarga: nunca crua.",
+        "audio": "664e4d5802c5.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Cultivo dos cereais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Milho, arroz, mapira e mexoeira",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Milho, arroz, trigo, mapira e mexoeira são:",
+         "options": [
+          "Cereais",
+          "Hortícolas",
+          "Tubérculos"
+         ],
+         "a": 0,
+         "audio": "f70d09a135b9.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada cereal ao lugar onde se dá melhor.",
+         "pairs": [
+          [
+           "Arroz",
+           "Baixas alagadas"
+          ],
+          [
+           "Mapira e mexoeira",
+           "Zonas secas"
+          ],
+          [
+           "Milho",
+           "Terras com chuva regular"
+          ]
+         ],
+         "audio": "32375ce3c51b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O cereal mais cultivado em Moçambique, de que se faz a xima, é:",
+         "options": [
+          "O milho",
+          "O trigo",
+          "O arroz"
+         ],
+         "a": 0,
+         "audio": "903824eef893.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A mapira e a mexoeira são importantes porque:",
+         "options": [
+          "Dão colheita mesmo com pouca chuva",
+          "Precisam de água alagada",
+          "Só crescem no frio"
+         ],
+         "a": 0,
+         "audio": "05fa1b827657.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Preparar o solo antes de semear serve para:",
+         "options": [
+          "Soltar a terra, tirar ervas e deixar a raiz respirar",
+          "Endurecer a terra",
+          "Secar a terra"
+         ],
+         "a": 0,
+         "audio": "7eded8d7f1e2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os cereais — milho, arroz, trigo, mapira, mexoeira — são a base da alimentação. O milho quer chuva regular e dá a xima; o arroz quer baixas alagadas; a mapira e a mexoeira dão colheita com pouca chuva. O solo prepara-se antes de semear.",
+        "exemplo": "Numa zona seca do Niassa, a mexoeira dá onde o milho falha. Lavrar solta a terra, tira as ervas e deixa a raiz respirar.",
+        "lembra": "Milho com chuva, mapira e mexoeira sem ela.",
+        "audio": "0bd27b372cae.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Semear, cuidar e guardar o grão",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "O milho semeia-se em linhas afastadas 80 centímetros. Quantas linhas cabem numa machamba com 16 metros de largura?",
+         "a": "20",
+         "audio": "3f73ebf67e7a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A amontoa no milho serve para:",
+         "options": [
+          "Segurar a planta e proteger as raízes",
+          "Cortar as folhas",
+          "Colher o grão"
+         ],
+         "a": 0,
+         "audio": "177fe3bb681c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada praga ou doença ao cereal que ataca.",
+         "pairs": [
+          [
+           "Lagarta do funil",
+           "Milho"
+          ],
+          [
+           "Pássaros na espiga",
+           "Mapira e mexoeira"
+          ],
+          [
+           "Gorgulho no celeiro",
+           "Grão guardado"
+          ]
+         ],
+         "audio": "c4c1ff8c5816.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O milho colhe-se quando:",
+         "options": [
+          "A planta seca e o grão está duro",
+          "A planta ainda está verde",
+          "Aparecem as flores"
+         ],
+         "a": 0,
+         "audio": "ca000417f57c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para guardar o grão sem perdas deve estar:",
+         "options": [
+          "Bem seco, num celeiro limpo e fechado",
+          "Húmido",
+          "Ao ar livre"
+         ],
+         "a": 0,
+         "audio": "cd7961705927.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O milho semeia-se em linhas afastadas 80 centímetros e amontoa-se para segurar a planta. A lagarta do funil ataca-o, os pássaros comem a mapira, o gorgulho ataca o grão guardado. Colhe-se seco e guarda-se num celeiro limpo e fechado.",
+        "exemplo": "Dezasseis metros de largura a 80 centímetros por linha dão 20 linhas. Grão húmido no celeiro é grão perdido.",
+        "lembra": "Colher seco, guardar fechado.",
+        "audio": "a990c8f87a42.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Criação de coelhos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Instalações e alimentação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Criar coelhos é bom para a família porque:",
+         "options": [
+          "Reproduzem-se depressa e dão carne com pouco espaço",
+          "Comem carne",
+          "Vivem sem comer"
+         ],
+         "a": 0,
+         "audio": "8a9898f50074.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada forma de criação ao que ela é.",
+         "pairs": [
+          [
+           "Familiar",
+           "Poucos animais, para a casa e o mercado local"
+          ],
+          [
+           "Industrial",
+           "Muitos animais, para vender em grande"
+          ]
+         ],
+         "audio": "ec7f296069d5.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada equipamento da coelheira ao que ele é.",
+         "pairs": [
+          [
+           "Comedouro",
+           "Onde se põe a comida"
+          ],
+          [
+           "Bebedouro",
+           "Onde se põe a água"
+          ],
+          [
+           "Ninho",
+           "Onde a fêmea tem as crias"
+          ]
+         ],
+         "audio": "67b9f68391b0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A coelheira deve ficar:",
+         "options": [
+          "Em terreno seco, à sombra e sem vento forte",
+          "Num charco",
+          "Ao sol todo o dia"
+         ],
+         "a": 0,
+         "audio": "9928e8ca3181.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os coelhos comem:",
+         "options": [
+          "Pastos e forragens, e ração quando há",
+          "Carne",
+          "Só água"
+         ],
+         "a": 0,
+         "audio": "379528632858.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os coelhos reproduzem-se depressa e dão carne com pouco espaço. Criam-se de forma familiar ou industrial, numa coelheira em terreno seco, à sombra e sem vento, com comedouro, bebedouro e ninho. Comem pastos, forragens e ração.",
+        "exemplo": "Uma coelheira de família: quatro fêmeas e um macho em gaiolas com ninho, e capim fresco todos os dias.",
+        "lembra": "Seco, à sombra, com água e capim.",
+        "audio": "056bc95ef24d.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Saúde e reprodução",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada doença dos coelhos ao seu sinal.",
+         "pairs": [
+          [
+           "Coccidiose",
+           "Diarreia e barriga inchada"
+          ],
+          [
+           "Sarna",
+           "Crostas nas orelhas e na pele"
+          ],
+          [
+           "Coriza",
+           "Espirros e nariz a pingar"
+          ]
+         ],
+         "audio": "f53dfa22d8e1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para prevenir doenças, a coelheira:",
+         "options": [
+          "Limpa-se todos os dias e desinfecta-se",
+          "Nunca se limpa",
+          "Enche-se de água"
+         ],
+         "a": 0,
+         "audio": "b17992f623d9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A gestação da coelha dura cerca de 31 dias. Se foi coberta a 1 de Março, em que dia de Abril pare, aproximadamente?",
+         "a": "1",
+         "audio": "6f852f3e1ccf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O cio é:",
+         "options": [
+          "O período em que a fêmea aceita o macho",
+          "Uma doença",
+          "O nome do ninho"
+         ],
+         "a": 0,
+         "audio": "024d9c135ab8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os coelhos recém-nascidos:",
+         "options": [
+          "Nascem sem pêlo e de olhos fechados, e precisam do ninho quente",
+          "Nascem a correr",
+          "Comem capim no primeiro dia"
+         ],
+         "a": 0,
+         "audio": "7391f3dfea77.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A coccidiose dá diarreia, a sarna dá crostas, a coriza dá espirros; previnem-se com limpeza e desinfecção diárias. A fêmea aceita o macho no cio, a gestação dura cerca de 31 dias, e as crias nascem sem pêlo e de olhos fechados.",
+        "exemplo": "Coberta a 1 de Março, a coelha pare por volta de 1 de Abril. O ninho tem de estar quente e limpo para as crias.",
+        "lembra": "Um mês de gestação; ninho quente para as crias.",
+        "audio": "edd79e4aec1b.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Criação de suínos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Pocilga, alimentação e saúde",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os suínos são:",
+         "options": [
+          "Os porcos",
+          "As cabras",
+          "As galinhas"
+         ],
+         "a": 0,
+         "audio": "cb4f8fd8d116.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A pocilga deve ter:",
+         "options": [
+          "Chão que se lave, sombra, comedouro e bebedouro",
+          "Chão de lama e sem tecto",
+          "Só uma corda"
+         ],
+         "a": 0,
+         "audio": "3f5b3d32a8b1.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada alimento dos porcos à sua origem.",
+         "pairs": [
+          [
+           "Restos da machamba",
+           "Ramas, folhas, mandioca"
+          ],
+          [
+           "Restos da cozinha",
+           "Cascas e sobras"
+          ],
+          [
+           "Ração industrial",
+           "Comprada, já equilibrada"
+          ]
+         ],
+         "audio": "07033729e353.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada doença dos porcos ao que ela é.",
+         "pairs": [
+          [
+           "Peste suína africana",
+           "Vírus mortal, sem cura: mata a vara toda"
+          ],
+          [
+           "Sarna",
+           "Comichão e crostas na pele"
+          ],
+          [
+           "Mal-rubro",
+           "Manchas vermelhas na pele e febre"
+          ]
+         ],
+         "audio": "5e4f249f8787.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para evitar a peste suína africana:",
+         "options": [
+          "Não se metem porcos novos sem quarentena e não se dão restos de carne de porco",
+          "Dão-se restos de carne crua",
+          "Deixam-se os porcos soltos na vila"
+         ],
+         "a": 0,
+         "audio": "9bd4ccfb8869.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma porca pare 8 leitões numa ninhada e tem 2 ninhadas por ano. Quantos leitões dá num ano?",
+         "a": "16",
+         "audio": "0fbd72c920a1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os porcos criam-se numa pocilga com chão que se lave, sombra, comedouro e bebedouro. Comem restos da machamba e da cozinha, pastos e ração. A peste suína africana não tem cura: porcos novos em quarentena e nunca restos de carne de porco.",
+        "exemplo": "Uma porca com 8 leitões por ninhada e duas ninhadas por ano dá 16 leitões. A sarna dá comichão; o mal-rubro dá manchas vermelhas e febre.",
+        "lembra": "Peste suína: quarentena, e nunca carne de porco na comida.",
+        "audio": "1e555c0366e4.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

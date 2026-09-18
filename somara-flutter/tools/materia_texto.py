@@ -3964,4 +3964,124 @@ MATERIA = {
                    "conjunto.",
         "lembra": "Desmarcar, ocupar o espaço, proteger a bola.",
     },
+
+    # ---------------------------------------------------------------
+    # Agropecuaria -- 8a classe
+    # ---------------------------------------------------------------
+    "agr-8c:u1:n1": {
+        "explica": "As hortícolas — alface, alho, cebola, cenoura, pepino, "
+                   "pimento, tomate, couve, repolho — dão vitaminas à mesa "
+                   "e renda no mercado. Quase todas se semeiam no alfobre "
+                   "e transplantam-se, e a época fresca e seca, com rega, é "
+                   "a melhor.",
+        "exemplo": "Da cenoura come-se a raiz, da alface as folhas, do "
+                   "tomate o fruto, da cebola o bolbo. O alfobre é o "
+                   "canteiro onde as plantinhas nascem protegidas.",
+        "lembra": "Alfobre primeiro, campo depois.",
+    },
+    "agr-8c:u1:n2": {
+        "explica": "As práticas culturais são os cuidados depois de "
+                   "plantar: sacha para tirar ervas, desbaste para arrancar "
+                   "plantas a mais, adubação, rega, tutoragem para segurar "
+                   "o tomateiro. O compasso é a distância entre plantas e "
+                   "entre linhas.",
+        "exemplo": "Doze linhas de 5 tomateiros são 60 plantas. A couve e "
+                   "a alface colhem-se de manhã cedo, antes do calor, para "
+                   "não murcharem.",
+        "lembra": "Sacha, desbaste, adubação, rega, tutor.",
+    },
+    "agr-8c:u2:n1": {
+        "explica": "As leguminosas de grão — nhemba, vulgar, bóer, "
+                   "feijão-verde, amendoim — são ricas em proteínas e fazem "
+                   "bem ao solo, porque fixam o azoto do ar nas raízes. "
+                   "Semeiam-se com a chuva e colhem-se no tempo seco.",
+        "exemplo": "O nhemba aguenta a seca; o bóer é um arbusto que dura "
+                   "anos; o amendoim cria a vagem debaixo da terra.",
+        "lembra": "Leguminosa: proteína na mesa, azoto na terra.",
+    },
+    "agr-8c:u2:n2": {
+        "explica": "O feijão semeia-se com dois grãos por cova e "
+                   "dá-se bem com o milho na mesma machamba: é a "
+                   "consociação. Colhe-se com as vagens secas e amarelas e "
+                   "guarda-se bem seco, em recipiente limpo e fechado, "
+                   "contra o gorgulho.",
+        "exemplo": "Quarenta covas com dois grãos são 80 grãos. O amendoim "
+                   "colhe-se arrancando a planta inteira e pondo as vagens "
+                   "a secar.",
+        "lembra": "Seco e fechado, o feijão dura o ano.",
+    },
+    "agr-8c:u3:n1": {
+        "explica": "A mandioca e a batata-doce são raízes; a batata-reno e "
+                   "o inhame são tubérculos. Dão energia, hidratos de "
+                   "carbono. A mandioca aguenta a seca e os solos pobres e "
+                   "propaga-se por estacas; a batata-reno propaga-se por "
+                   "tubérculos com olhos.",
+        "exemplo": "Um pedaço de caule de mandioca espetado na terra dá "
+                   "uma planta nova. A batata-doce planta-se por ramas.",
+        "lembra": "Mandioca por estaca, batata-reno por tubérculo.",
+    },
+    "agr-8c:u3:n2": {
+        "explica": "A amontoa chega terra ao pé da planta para os "
+                   "tubérculos não ficarem à vista. A mandioca leva cerca "
+                   "de um ano a colher, e a amarga descasca-se, demolha-se "
+                   "ou seca-se antes de comer. A batata-doce guarda-se em "
+                   "lugar fresco, seco e arejado.",
+        "exemplo": "Estacas a 1 metro numa linha de 25 metros: 26 estacas, "
+                   "contando as duas pontas.",
+        "lembra": "Mandioca amarga: nunca crua.",
+    },
+    "agr-8c:u4:n1": {
+        "explica": "Os cereais — milho, arroz, trigo, mapira, mexoeira — "
+                   "são a base da alimentação. O milho quer chuva regular e "
+                   "dá a xima; o arroz quer baixas alagadas; a mapira e a "
+                   "mexoeira dão colheita com pouca chuva. O solo "
+                   "prepara-se antes de semear.",
+        "exemplo": "Numa zona seca do Niassa, a mexoeira dá onde o milho "
+                   "falha. Lavrar solta a terra, tira as ervas e deixa a "
+                   "raiz respirar.",
+        "lembra": "Milho com chuva, mapira e mexoeira sem ela.",
+    },
+    "agr-8c:u4:n2": {
+        "explica": "O milho semeia-se em linhas afastadas 80 centímetros e "
+                   "amontoa-se para segurar a planta. A lagarta do funil "
+                   "ataca-o, os pássaros comem a mapira, o "
+                   "gorgulho ataca o grão guardado. Colhe-se seco e "
+                   "guarda-se num celeiro limpo e fechado.",
+        "exemplo": "Dezasseis metros de largura a 80 centímetros por linha "
+                   "dão 20 linhas. Grão húmido no celeiro é grão perdido.",
+        "lembra": "Colher seco, guardar fechado.",
+    },
+    "agr-8c:u5:n1": {
+        "explica": "Os coelhos reproduzem-se depressa e dão carne com "
+                   "pouco espaço. Criam-se de forma familiar ou "
+                   "industrial, numa coelheira em terreno seco, à sombra e "
+                   "sem vento, com comedouro, bebedouro e ninho. Comem "
+                   "pastos, forragens e ração.",
+        "exemplo": "Uma coelheira de família: quatro fêmeas e um macho em "
+                   "gaiolas com ninho, e capim fresco todos os dias.",
+        "lembra": "Seco, à sombra, com água e capim.",
+    },
+    "agr-8c:u5:n2": {
+        "explica": "A coccidiose dá diarreia, a sarna dá crostas, a coriza "
+                   "dá espirros; previnem-se com limpeza e desinfecção "
+                   "diárias. A fêmea aceita o macho no cio, a gestação "
+                   "dura cerca de 31 dias, e as crias nascem sem pêlo e de "
+                   "olhos fechados.",
+        "exemplo": "Coberta a 1 de Março, a coelha pare por volta de 1 de "
+                   "Abril. O ninho tem de estar quente e limpo para as "
+                   "crias.",
+        "lembra": "Um mês de gestação; ninho quente para as crias.",
+    },
+    "agr-8c:u6:n1": {
+        "explica": "Os porcos criam-se numa pocilga com chão que se lave, "
+                   "sombra, comedouro e bebedouro. Comem restos da "
+                   "machamba e da cozinha, pastos e ração. A peste suína "
+                   "africana não tem cura: porcos novos em quarentena e "
+                   "nunca restos de carne de porco.",
+        "exemplo": "Uma porca com 8 leitões por ninhada e duas ninhadas "
+                   "por ano dá 16 leitões. A sarna dá comichão; o mal-rubro "
+                   "dá manchas vermelhas e febre.",
+        "lembra": "Peste suína: quarentena, e nunca carne de porco na "
+                  "comida.",
+    },
 }
