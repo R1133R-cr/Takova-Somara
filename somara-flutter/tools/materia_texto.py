@@ -4084,4 +4084,116 @@ MATERIA = {
         "lembra": "Peste suína: quarentena, e nunca carne de porco na "
                   "comida.",
     },
+
+    # ---------------------------------------------------------------
+    # TIC -- 8a classe
+    # ---------------------------------------------------------------
+    "tic-8c:u1:n1": {
+        "explica": "Sem software o hardware não faz nada. O operacional, "
+                   "como o Windows, arranca o computador e gere "
+                   "tudo; o básico, como os controladores, faz os aparelhos "
+                   "funcionar; o de protecção é o antivírus; o de gestão "
+                   "organiza contas e alunos.",
+        "exemplo": "A escola usa o sistema operativo para ligar o "
+                   "computador, o controlador para a impressora imprimir, "
+                   "o antivírus para se proteger e um programa de gestão "
+                   "para as pautas.",
+        "lembra": "Operacional, básico, de protecção, de gestão.",
+    },
+    "tic-8c:u1:n2": {
+        "explica": "Um programa é obra de alguém e tem direitos de autor. "
+                   "O software livre pode usar-se, estudar-se, alterar-se e "
+                   "partilhar-se; o proprietário só como o dono autoriza; o "
+                   "comercial paga-se. Copiar um programa pago sem licença "
+                   "é pirataria.",
+        "exemplo": "Um programa pode ser grátis e proprietário ao mesmo "
+                   "tempo: não se paga, mas não se pode alterar nem "
+                   "redistribuir. A licença é o acordo que diz o que se "
+                   "pode.",
+        "lembra": "Grátis não é o mesmo que livre.",
+    },
+    "tic-8c:u1:n3": {
+        "explica": "Uma aplicação descarrega-se da loja ou do sítio "
+                   "oficial. Um vírus é um programa malicioso que se copia "
+                   "e estraga ou rouba dados; o antivírus instala-se, "
+                   "configura-se e actualiza-se. Actualizar fecha falhas de "
+                   "segurança.",
+        "exemplo": "Uma lanterna que pede acesso aos contactos, à câmara e "
+                   "às mensagens é suspeita: não se instala.",
+        "lembra": "Só da loja oficial, e sempre actualizado.",
+    },
+    "tic-8c:u2:n1": {
+        "explica": "Uma rede são dois ou mais computadores ligados para "
+                   "trocar dados. A Internet nasceu da ARPANET. As "
+                   "topologias são a estrela, o anel e o barramento; as "
+                   "ligações são com fios, por cabo, ou sem fios, por "
+                   "Wi-Fi.",
+        "exemplo": "Na escola, os computadores ligam-se todos ao router, "
+                   "em estrela, e o router liga a escola à Internet.",
+        "lembra": "Estrela, anel, barramento: as três topologias.",
+    },
+    "tic-8c:u2:n2": {
+        "explica": "A rede dá serviços: a web, o e-mail, a transferência "
+                   "de ficheiros. No e-mail, o que vem depois da arroba é o "
+                   "fornecedor. No computador da escola termina-se a "
+                   "sessão no fim, e nunca se dá a palavra-passe a quem a "
+                   "pede por e-mail.",
+        "exemplo": "Para enviar o trabalho a três colegas, põem-se os três "
+                   "endereços separados por vírgulas. Um e-mail do «banco» "
+                   "a pedir o código é burla.",
+        "lembra": "Sessão terminada, palavra-passe guardada.",
+    },
+    "tic-8c:u2:n3": {
+        "explica": "A nuvem são servidores na Internet onde se guardam "
+                   "ficheiros, acessíveis de qualquer aparelho. Faz-se "
+                   "upload para lá pôr, download para trazer, e partilha-se "
+                   "só com quem precisa. Precisa de Internet, e em Lichinga "
+                   "os dados pagam-se.",
+        "exemplo": "Se o telemóvel se perde, as fotografias que estavam na "
+                   "nuvem continuam lá. Partilhar um trabalho é dar acesso "
+                   "ao professor, não ao mundo inteiro.",
+        "lembra": "Upload sobe, download desce.",
+    },
+    "tic-8c:u2:n4": {
+        "explica": "O ciberespaço é o espaço das redes; a cibercultura são "
+                   "os hábitos de quem lá vive. Ciber-higiene são os bons "
+                   "hábitos: palavras-passe compridas, com letras, números "
+                   "e sinais, diferentes em cada conta. Entrar na conta de "
+                   "outro é crime.",
+        "exemplo": "Uma palavra-passe com pelo menos oito caracteres: se "
+                   "tem cinco, faltam três. O nome ou «um, dois, três, "
+                   "quatro» não servem.",
+        "lembra": "Comprida, misturada, e uma para cada conta.",
+    },
+    "tic-8c:u3:n1": {
+        "explica": "Uma transacção electrónica é um pagamento ou "
+                   "transferência por meios digitais: carteira móvel, caixa "
+                   "automática, cartão. O código secreto nunca se diz a "
+                   "ninguém, nem a quem diz ser do banco, e na caixa "
+                   "leva-se o cartão e confere-se o talão.",
+        "exemplo": "Uma mãe recebe 500 meticais na carteira móvel e paga "
+                   "120 de electricidade: ficam-lhe 380, sem sair de casa.",
+        "lembra": "O código secreto é só teu.",
+    },
+    "tic-8c:u3:n2": {
+        "explica": "A Lei número 3 de 2017 dá valor legal aos documentos "
+                   "e assinaturas electrónicos. O comércio electrónico é "
+                   "comprar e vender pela Internet: só em lojas conhecidas "
+                   "e sítios seguros, e nunca com pagamento adiantado para "
+                   "receber prémios.",
+        "exemplo": "Comprar pela Internet chega a produtos que não há na "
+                   "vila. Uma mensagem a pedir dinheiro para receber um "
+                   "prémio é burla.",
+        "lembra": "Loja conhecida, sítio seguro, sem adiantamentos.",
+    },
+    "tic-8c:u3:n3": {
+        "explica": "As TIC servem a agricultura, a saúde e o ambiente. A "
+                   "e-Agricultura informa o camponês da chuva e dos "
+                   "preços; a e-Saúde guarda o registo do doente e marca "
+                   "consultas; os satélites vigiam queimadas e o aviso de "
+                   "ciclone chega por mensagem.",
+        "exemplo": "Um camponês do Niassa que vê o preço do feijão em "
+                   "Maputo antes de vender, vende melhor.",
+        "lembra": "Informação a tempo é dinheiro e é vida.",
+    },
 }

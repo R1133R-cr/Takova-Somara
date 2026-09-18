@@ -34951,6 +34951,776 @@
      ]
     }
    ]
+  },
+  {
+   "id": "tic-8c",
+   "disciplina": "TIC",
+   "classe": "8ª classe",
+   "tag": "TIC",
+   "fonte": "Programa de Ensino de Tecnologias de Informação e Comunicação, 7ª e 8ª Classe. INDE/MINEDH, Maputo, Setembro de 2024, 8ª classe, pp. 26-33. As três unidades temáticas e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Componentes básicos de sistemas computacionais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A classificação do software",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Sem software, o hardware:",
+         "options": [
+          "Não faz nada: é o software que lhe diz o que fazer",
+          "Funciona na mesma",
+          "Fica mais rápido"
+         ],
+         "a": 0,
+         "audio": "29e43be9b90f.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada software à sua classe.",
+         "pairs": [
+          [
+           "Windows e Android",
+           "Software operacional"
+          ],
+          [
+           "Antivírus",
+           "Software de protecção"
+          ],
+          [
+           "Programa de contabilidade",
+           "Software de gestão"
+          ]
+         ],
+         "audio": "51184cf9aee3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O sistema operativo é o software que:",
+         "options": [
+          "Arranca o computador e gere o hardware e os outros programas",
+          "Só serve para jogar",
+          "Escreve cartas"
+         ],
+         "a": 0,
+         "audio": "9b22a688ed76.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um controlador, ou driver, que faz a impressora funcionar é:",
+         "options": [
+          "Software básico",
+          "Software de gestão",
+          "Um vírus"
+         ],
+         "a": 0,
+         "audio": "a67dfa0992f4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O software de gestão serve para:",
+         "options": [
+          "Organizar o trabalho de uma empresa ou escola: contas, stocks, alunos",
+          "Proteger contra vírus",
+          "Arrancar o computador"
+         ],
+         "a": 0,
+         "audio": "29cecbc19ca7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Sem software o hardware não faz nada. O operacional, como o Windows, arranca o computador e gere tudo; o básico, como os controladores, faz os aparelhos funcionar; o de protecção é o antivírus; o de gestão organiza contas e alunos.",
+        "exemplo": "A escola usa o sistema operativo para ligar o computador, o controlador para a impressora imprimir, o antivírus para se proteger e um programa de gestão para as pautas.",
+        "lembra": "Operacional, básico, de protecção, de gestão.",
+        "audio": "2a3b6317c09f.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Software e direitos de autor",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um programa de computador é obra de alguém e está protegido por:",
+         "options": [
+          "Direitos de autor",
+          "Nada: é de todos",
+          "A polícia de trânsito"
+         ],
+         "a": 0,
+         "audio": "30824a2b86b2.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de software ao que ele permite.",
+         "pairs": [
+          [
+           "Software livre",
+           "Usar, estudar, alterar e partilhar"
+          ],
+          [
+           "Software proprietário",
+           "Usar só como o dono autoriza"
+          ],
+          [
+           "Software comercial",
+           "Usar depois de pagar a licença"
+          ]
+         ],
+         "audio": "ce88a41a9de5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Copiar um programa pago e dá-lo a um amigo sem licença é:",
+         "options": [
+          "Pirataria: viola os direitos de autor",
+          "Partilha permitida",
+          "Software livre"
+         ],
+         "a": 0,
+         "audio": "123937da10b1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um software pode ser grátis e mesmo assim:",
+         "options": [
+          "Proprietário, se não se pode alterar nem redistribuir",
+          "Só livre",
+          "Ilegal"
+         ],
+         "a": 0,
+         "audio": "4c4c6a1d9b39.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A licença de um software é:",
+         "options": [
+          "O acordo que diz o que se pode fazer com ele",
+          "O preço do computador",
+          "A cor do ícone"
+         ],
+         "a": 0,
+         "audio": "61fa62aa2982.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um programa é obra de alguém e tem direitos de autor. O software livre pode usar-se, estudar-se, alterar-se e partilhar-se; o proprietário só como o dono autoriza; o comercial paga-se. Copiar um programa pago sem licença é pirataria.",
+        "exemplo": "Um programa pode ser grátis e proprietário ao mesmo tempo: não se paga, mas não se pode alterar nem redistribuir. A licença é o acordo que diz o que se pode.",
+        "lembra": "Grátis não é o mesmo que livre.",
+        "audio": "3b84e9f7a416.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Instalar, proteger e actualizar",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Antes de descarregar uma aplicação da Internet deve-se:",
+         "options": [
+          "Confirmar que vem da loja ou do sítio oficial",
+          "Aceitar tudo sem ler",
+          "Desligar o antivírus"
+         ],
+         "a": 0,
+         "audio": "dbc65594db7d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um vírus informático é:",
+         "options": [
+          "Um programa malicioso que se copia e estraga ou rouba dados",
+          "Uma doença do teclado",
+          "Uma actualização"
+         ],
+         "a": 0,
+         "audio": "eff888b68045.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada passo da instalação de um antivírus à sua ordem.",
+         "pairs": [
+          [
+           "Descarregar do sítio oficial",
+           "Primeiro"
+          ],
+          [
+           "Instalar e configurar",
+           "Depois"
+          ],
+          [
+           "Actualizar e analisar o disco",
+           "Por fim"
+          ]
+         ],
+         "audio": "03232260b132.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Actualizar o software serve para:",
+         "options": [
+          "Corrigir erros e fechar falhas de segurança",
+          "Ocupar mais espaço",
+          "Apagar os ficheiros"
+         ],
+         "a": 0,
+         "audio": "baa75739fec5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma aplicação que pede acesso aos contactos, à câmara e às mensagens sem precisar deles:",
+         "options": [
+          "É suspeita: não se instala",
+          "É normal",
+          "É mais segura"
+         ],
+         "a": 0,
+         "audio": "e48115f479a9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma aplicação descarrega-se da loja ou do sítio oficial. Um vírus é um programa malicioso que se copia e estraga ou rouba dados; o antivírus instala-se, configura-se e actualiza-se. Actualizar fecha falhas de segurança.",
+        "exemplo": "Uma lanterna que pede acesso aos contactos, à câmara e às mensagens é suspeita: não se instala.",
+        "lembra": "Só da loja oficial, e sempre actualizado.",
+        "audio": "2844bc62ec5c.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Comunicação, cidadania digital e cibersegurança",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Redes de computadores",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma rede de computadores é:",
+         "options": [
+          "Dois ou mais computadores ligados para trocar dados",
+          "Um computador sozinho",
+          "Uma pasta de ficheiros"
+         ],
+         "a": 0,
+         "audio": "e16f8bada47e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Internet nasceu de uma rede militar e universitária americana dos anos 60 e 70 chamada:",
+         "options": [
+          "ARPANET",
+          "Wi-Fi",
+          "Bluetooth"
+         ],
+         "a": 0,
+         "audio": "b531d5b2271b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada topologia à sua forma.",
+         "pairs": [
+          [
+           "Estrela",
+           "Todos ligados a um ponto central"
+          ],
+          [
+           "Anel",
+           "Cada um ligado ao seguinte, em círculo"
+          ],
+          [
+           "Barramento",
+           "Todos ligados a um só cabo"
+          ]
+         ],
+         "audio": "16d7636aea6e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O modelo de referência das redes em sete camadas chama-se:",
+         "options": [
+          "Modelo OSI",
+          "Modelo ATM",
+          "Modelo USB"
+         ],
+         "a": 0,
+         "audio": "86aa9e213042.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada ligação ao seu tipo.",
+         "pairs": [
+          [
+           "Wi-Fi",
+           "Sem fios"
+          ],
+          [
+           "Cabo de rede",
+           "Com fios"
+          ]
+         ],
+         "audio": "ce23c22beee2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O aparelho que liga a rede da escola à Internet é:",
+         "options": [
+          "O router",
+          "O teclado",
+          "A impressora"
+         ],
+         "a": 0,
+         "audio": "902ddb0156b2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma rede são dois ou mais computadores ligados para trocar dados. A Internet nasceu da ARPANET. As topologias são a estrela, o anel e o barramento; as ligações são com fios, por cabo, ou sem fios, por Wi-Fi.",
+        "exemplo": "Na escola, os computadores ligam-se todos ao router, em estrela, e o router liga a escola à Internet.",
+        "lembra": "Estrela, anel, barramento: as três topologias.",
+        "audio": "bd4fdd5d8c29.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Serviços de rede e correio electrónico",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada serviço de rede ao que ele faz.",
+         "pairs": [
+          [
+           "Web",
+           "Ver páginas no navegador"
+          ],
+          [
+           "E-mail",
+           "Enviar e receber mensagens"
+          ],
+          [
+           "Transferência de ficheiros",
+           "Enviar ficheiros entre computadores"
+          ]
+         ],
+         "audio": "c779027c7288.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num endereço de e-mail, o que vem depois da arroba é:",
+         "options": [
+          "O fornecedor do serviço",
+          "O nome da pessoa",
+          "A palavra-passe"
+         ],
+         "a": 0,
+         "audio": "b28dad14a11d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao usar o e-mail num computador da escola, no fim deve-se:",
+         "options": [
+          "Terminar a sessão",
+          "Deixar a conta aberta",
+          "Escrever a palavra-passe num papel colado ao ecrã"
+         ],
+         "a": 0,
+         "audio": "e2c82d868012.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um e-mail de um desconhecido a pedir a palavra-passe ou dados do banco:",
+         "options": [
+          "É uma burla: não se responde nem se clica nas ligações",
+          "Responde-se depressa",
+          "Reencaminha-se aos amigos"
+         ],
+         "a": 0,
+         "audio": "2a31f8218961.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para enviar o mesmo e-mail a vários colegas usa-se:",
+         "options": [
+          "Vários destinatários, separados por vírgulas",
+          "Vários computadores",
+          "Várias contas"
+         ],
+         "a": 0,
+         "audio": "0cd47e266dc9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A rede dá serviços: a web, o e-mail, a transferência de ficheiros. No e-mail, o que vem depois da arroba é o fornecedor. No computador da escola termina-se a sessão no fim, e nunca se dá a palavra-passe a quem a pede por e-mail.",
+        "exemplo": "Para enviar o trabalho a três colegas, põem-se os três endereços separados por vírgulas. Um e-mail do «banco» a pedir o código é burla.",
+        "lembra": "Sessão terminada, palavra-passe guardada.",
+        "audio": "6eb62adb111b.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Computação na nuvem",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Guardar ficheiros na nuvem é guardá-los:",
+         "options": [
+          "Em servidores na Internet, acessíveis de qualquer aparelho",
+          "No céu",
+          "Só no telemóvel"
+         ],
+         "a": 0,
+         "audio": "738983fd310d.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada operação na nuvem ao que ela é.",
+         "pairs": [
+          [
+           "Upload",
+           "Enviar um ficheiro para a nuvem"
+          ],
+          [
+           "Download",
+           "Trazer um ficheiro da nuvem"
+          ],
+          [
+           "Partilhar",
+           "Dar acesso a outra pessoa"
+          ]
+         ],
+         "audio": "025a3b43c7c3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma vantagem da nuvem é:",
+         "options": [
+          "Se o telemóvel se perder, os ficheiros continuam lá",
+          "Não precisar de Internet",
+          "Ser sempre grátis e sem limite"
+         ],
+         "a": 0,
+         "audio": "0229477aa1ac.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma desvantagem da nuvem em Lichinga é:",
+         "options": [
+          "Precisa de Internet, e os dados pagam-se",
+          "Estraga o telemóvel",
+          "Apaga as fotografias"
+         ],
+         "a": 0,
+         "audio": "b77bad273017.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao partilhar um ficheiro da nuvem deve-se:",
+         "options": [
+          "Dar acesso só a quem precisa",
+          "Tornar tudo público",
+          "Enviar a palavra-passe da conta"
+         ],
+         "a": 0,
+         "audio": "798e3671fe64.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A nuvem são servidores na Internet onde se guardam ficheiros, acessíveis de qualquer aparelho. Faz-se upload para lá pôr, download para trazer, e partilha-se só com quem precisa. Precisa de Internet, e em Lichinga os dados pagam-se.",
+        "exemplo": "Se o telemóvel se perde, as fotografias que estavam na nuvem continuam lá. Partilhar um trabalho é dar acesso ao professor, não ao mundo inteiro.",
+        "lembra": "Upload sobe, download desce.",
+        "audio": "1223e16ebe2e.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Ciber-higiene e crime informático",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada conceito ao que ele é.",
+         "pairs": [
+          [
+           "Ciberespaço",
+           "O espaço das redes e da Internet"
+          ],
+          [
+           "Cibercultura",
+           "Os hábitos e valores de quem lá vive"
+          ]
+         ],
+         "audio": "d8d4eb75968b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma boa palavra-passe é:",
+         "options": [
+          "Comprida, com letras, números e sinais, e diferente em cada conta",
+          "O nome da pessoa",
+          "Um, dois, três, quatro"
+         ],
+         "a": 0,
+         "audio": "16a179c4e78a.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma palavra-passe deve ter pelo menos oito caracteres. Se já tem 5, quantos faltam?",
+         "a": "3",
+         "audio": "4c7b186b8888.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ciber-higiene é:",
+         "options": [
+          "O conjunto de bons hábitos que mantêm as contas e os aparelhos seguros",
+          "Limpar o ecrã com um pano",
+          "Lavar as mãos antes de usar o teclado"
+         ],
+         "a": 0,
+         "audio": "28ec2d937115.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Entrar na conta de outra pessoa sem autorização ou roubar dados é:",
+         "options": [
+          "Crime informático, punido pela lei moçambicana",
+          "Uma brincadeira",
+          "Permitido se for um amigo"
+         ],
+         "a": 0,
+         "audio": "c0b9e870cda9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O ciberespaço é o espaço das redes; a cibercultura são os hábitos de quem lá vive. Ciber-higiene são os bons hábitos: palavras-passe compridas, com letras, números e sinais, diferentes em cada conta. Entrar na conta de outro é crime.",
+        "exemplo": "Uma palavra-passe com pelo menos oito caracteres: se tem cinco, faltam três. O nome ou «um, dois, três, quatro» não servem.",
+        "lembra": "Comprida, misturada, e uma para cada conta.",
+        "audio": "3917efb205e2.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Transacções electrónicas e aplicações das TIC",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Transacções electrónicas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma transacção electrónica é:",
+         "options": [
+          "Um pagamento ou transferência feito por meios digitais",
+          "Uma compra com dinheiro na mão",
+          "Uma carta pelo correio"
+         ],
+         "a": 0,
+         "audio": "bc53cde08061.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada meio ao que ele é.",
+         "pairs": [
+          [
+           "M-Pesa e e-Mola",
+           "Carteira móvel no telemóvel"
+          ],
+          [
+           "ATM",
+           "Caixa automática do banco"
+          ],
+          [
+           "Cartão de débito",
+           "Paga directamente da conta"
+          ]
+         ],
+         "audio": "611056cd0485.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O código secreto do cartão ou da carteira móvel:",
+         "options": [
+          "Nunca se diz a ninguém, nem a quem diz ser do banco",
+          "Diz-se ao balconista",
+          "Escreve-se no cartão"
+         ],
+         "a": 0,
+         "audio": "b869f59cb5d8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na caixa automática, antes de sair deve-se:",
+         "options": [
+          "Levar o cartão e o dinheiro e conferir o talão",
+          "Deixar o cartão lá dentro",
+          "Pedir ajuda a um desconhecido"
+         ],
+         "a": 0,
+         "audio": "6f84f9adae16.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma mãe recebe 500 meticais na carteira móvel e paga 120 de electricidade. Quantos meticais lhe ficam?",
+         "a": "380",
+         "audio": "7c4260e76cef.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma transacção electrónica é um pagamento ou transferência por meios digitais: carteira móvel, caixa automática, cartão. O código secreto nunca se diz a ninguém, nem a quem diz ser do banco, e na caixa leva-se o cartão e confere-se o talão.",
+        "exemplo": "Uma mãe recebe 500 meticais na carteira móvel e paga 120 de electricidade: ficam-lhe 380, sem sair de casa.",
+        "lembra": "O código secreto é só teu.",
+        "audio": "36abd899091e.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A lei e o comércio electrónico",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Em Moçambique, as transacções electrónicas são reguladas pela Lei número 3 de 2017, de 9 de Janeiro, que:",
+         "options": [
+          "Dá valor legal aos documentos e assinaturas electrónicos",
+          "Proíbe os pagamentos pelo telemóvel",
+          "Só fala de futebol"
+         ],
+         "a": 0,
+         "audio": "b70f01b36bc9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Comércio electrónico é:",
+         "options": [
+          "Comprar e vender pela Internet",
+          "Vender no mercado da vila",
+          "Trocar produtos sem dinheiro"
+         ],
+         "a": 0,
+         "audio": "e212be94397b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de comprar numa loja da Internet deve-se:",
+         "options": [
+          "Confirmar que a loja é conhecida e o sítio é seguro",
+          "Pagar primeiro e ver depois",
+          "Enviar o cartão por mensagem"
+         ],
+         "a": 0,
+         "audio": "14a60dba9488.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma oferta na Internet que pede um pagamento adiantado para libertar um prémio é:",
+         "options": [
+          "Uma burla",
+          "Um bom negócio",
+          "A lei"
+         ],
+         "a": 0,
+         "audio": "3d2f32925b7c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Comprar pela Internet tem a vantagem de:",
+         "options": [
+          "Chegar a produtos que não há na vila",
+          "Ser sempre mais barato",
+          "Não precisar de pagar"
+         ],
+         "a": 0,
+         "audio": "6030367b6be2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Lei número 3 de 2017 dá valor legal aos documentos e assinaturas electrónicos. O comércio electrónico é comprar e vender pela Internet: só em lojas conhecidas e sítios seguros, e nunca com pagamento adiantado para receber prémios.",
+        "exemplo": "Comprar pela Internet chega a produtos que não há na vila. Uma mensagem a pedir dinheiro para receber um prémio é burla.",
+        "lembra": "Loja conhecida, sítio seguro, sem adiantamentos.",
+        "audio": "cfb395fc5320.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "As TIC na agricultura, na saúde e no ambiente",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A e-Agricultura é:",
+         "options": [
+          "Usar as TIC para informar e ajudar os camponeses",
+          "Plantar computadores",
+          "Vender telemóveis no campo"
+         ],
+         "a": 0,
+         "audio": "ad14cf9f6da2.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada uso das TIC ao seu campo.",
+         "pairs": [
+          [
+           "Mensagem com a previsão da chuva e o preço do milho",
+           "Agricultura"
+          ],
+          [
+           "Marcar consulta e lembrar a vacina pelo telemóvel",
+           "Saúde"
+          ],
+          [
+           "Satélite a vigiar queimadas e desflorestação",
+           "Ambiente"
+          ]
+         ],
+         "audio": "b5091578b208.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A e-Saúde permite:",
+         "options": [
+          "Guardar o registo do doente e falar com o médico à distância",
+          "Curar sem médico",
+          "Vender medicamentos sem receita"
+         ],
+         "a": 0,
+         "audio": "36a4d5994a73.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um aviso de ciclone enviado por mensagem a toda a província é as TIC:",
+         "options": [
+          "A ajudar na segurança face às alterações climáticas",
+          "A causar o ciclone",
+          "A vender dados"
+         ],
+         "a": 0,
+         "audio": "6f2709c5c6ea.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um camponês do Niassa que vê o preço do feijão em Maputo antes de vender:",
+         "options": [
+          "Vende melhor, porque sabe o mercado",
+          "Perde tempo",
+          "Não precisa da informação"
+         ],
+         "a": 0,
+         "audio": "998b03b96c0d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As TIC servem a agricultura, a saúde e o ambiente. A e-Agricultura informa o camponês da chuva e dos preços; a e-Saúde guarda o registo do doente e marca consultas; os satélites vigiam queimadas e o aviso de ciclone chega por mensagem.",
+        "exemplo": "Um camponês do Niassa que vê o preço do feijão em Maputo antes de vender, vende melhor.",
+        "lembra": "Informação a tempo é dinheiro e é vida.",
+        "audio": "647a339e3fa7.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }
