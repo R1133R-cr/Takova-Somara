@@ -45651,6 +45651,767 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ev-9c",
+   "disciplina": "Educação Visual",
+   "classe": "9ª classe",
+   "tag": "EV",
+   "fonte": "Programa de Ensino da Disciplina de Educação Visual — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, 9ª classe, pp. 34-42. As sete unidades temáticas e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 9ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Arte moçambicana e universal",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A arte moçambicana",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada artista ou obra moçambicana à sua forma de expressão.",
+         "pairs": [
+          [
+           "Malangatana",
+           "Pintura"
+          ],
+          [
+           "Alberto Chissano",
+           "Escultura"
+          ],
+          [
+           "Fortaleza da Ilha de Moçambique",
+           "Arquitectura"
+          ]
+         ],
+         "audio": "2a996311065d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A escultura maconde, de Cabo Delgado, faz-se sobretudo em:",
+         "options": [
+          "Madeira de pau-preto",
+          "Barro cozido",
+          "Ferro fundido"
+         ],
+         "a": 0,
+         "audio": "4023043e30e7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O grande painel pintado por Malangatana num muro de Maputo é:",
+         "options": [
+          "Um mural",
+          "Uma escultura",
+          "Um cartaz"
+         ],
+         "a": 0,
+         "audio": "e2c8c58cb601.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Casa de Ferro, em Maputo, é famosa por:",
+         "options": [
+          "Ser toda feita de placas de ferro, vindas da Europa",
+          "Ser de madeira",
+          "Estar debaixo de água"
+         ],
+         "a": 0,
+         "audio": "4b4bb809ac2d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As manifestações artísticas da comunidade, como as máscaras e as esteiras, são:",
+         "options": [
+          "Arte, e parte da identidade cultural",
+          "Só objectos sem valor",
+          "Coisas importadas"
+         ],
+         "a": 0,
+         "audio": "d5518acca5f8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A arte moçambicana tem pintura, como a de Malangatana; escultura, como a de Alberto Chissano e a maconde em pau-preto; e arquitectura, como a Fortaleza da Ilha de Moçambique e a Casa de Ferro em Maputo.",
+        "exemplo": "As máscaras mapiko, as esteiras e os murais também são arte, e fazem parte da identidade cultural de cada comunidade.",
+        "lembra": "Pintura, escultura e arquitectura, também de cá.",
+        "audio": "b2e11f7e6e25.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A arte medieval e a contemporânea",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada período da arte à sua característica.",
+         "pairs": [
+          [
+           "Medieval",
+           "Temas religiosos, catedrais e vitrais"
+          ],
+          [
+           "Contemporânea",
+           "Novos materiais, abstracção e arte digital"
+          ]
+         ],
+         "audio": "07568c8b4a20.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os vitrais coloridos das catedrais góticas são da arte:",
+         "options": [
+          "Medieval",
+          "Contemporânea",
+          "Pré-histórica"
+         ],
+         "a": 0,
+         "audio": "ebdca4d46e5d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma pintura que não representa nada de reconhecível, só formas e cores, é:",
+         "options": [
+          "Abstracta",
+          "Figurativa",
+          "Um retrato"
+         ],
+         "a": 0,
+         "audio": "6aaaac385924.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na Idade Média, os livros eram decorados à mão com:",
+         "options": [
+          "Iluminuras",
+          "Fotografias",
+          "Pictogramas digitais"
+         ],
+         "a": 0,
+         "audio": "3731f47d68cd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um artista contemporâneo pode fazer uma obra com:",
+         "options": [
+          "Latas, garrafas e outros materiais reaproveitados",
+          "Só tinta a óleo",
+          "Só mármore"
+         ],
+         "a": 0,
+         "audio": "30a0fa1e7228.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A arte medieval é religiosa: catedrais, vitrais, iluminuras nos livros. A arte contemporânea usa novos materiais, a abstracção, a instalação e o digital, e pode fazer-se de latas e garrafas reaproveitadas.",
+        "exemplo": "Um vitral gótico conta uma história da Bíblia com luz e vidro de cor; uma pintura abstracta só mostra formas e cores.",
+        "lembra": "Medieval reza; contemporâneo experimenta.",
+        "audio": "87349684ed6f.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Comunicação visual",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Cartaz, banda desenhada e painel",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada etapa da banda desenhada à sua ordem.",
+         "pairs": [
+          [
+           "Escrever a história e dividi-la em cenas",
+           "Primeiro"
+          ],
+          [
+           "Esboçar as vinhetas",
+           "Depois"
+          ],
+          [
+           "Passar a tinta, pintar e pôr os balões",
+           "Por fim"
+          ]
+         ],
+         "audio": "483150c73c1b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um painel colectivo é:",
+         "options": [
+          "Uma obra grande feita por vários alunos juntos",
+          "Um desenho de um aluno só",
+          "Um livro"
+         ],
+         "a": 0,
+         "audio": "c2ed116579ac.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num cartaz sobre os direitos das crianças, o texto deve ser:",
+         "options": [
+          "Curto, grande e legível de longe",
+          "Longo e em letra pequena",
+          "Escondido na imagem"
+         ],
+         "a": 0,
+         "audio": "30769dfebedf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um balão de pensamento, na banda desenhada, desenha-se:",
+         "options": [
+          "Como uma nuvem ligada por bolinhas",
+          "Com uma seta recta",
+          "Sem contorno"
+         ],
+         "a": 0,
+         "audio": "f27a8cb380e4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um cartaz sobre segurança no trabalho numa oficina deve mostrar:",
+         "options": [
+          "Luvas, óculos e botas de protecção",
+          "Só o logótipo da empresa",
+          "Um poema"
+         ],
+         "a": 0,
+         "audio": "67c3a1195d6a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A banda desenhada faz-se por etapas: história e cenas, esboço das vinhetas, tinta, cor e balões. O painel colectivo é uma obra grande feita por muitos. Num cartaz, o texto é curto e legível de longe.",
+        "exemplo": "O balão de fala tem uma seta para quem fala; o de pensamento é uma nuvem ligada por bolinhas.",
+        "lembra": "História, esboço, tinta: a banda desenhada.",
+        "audio": "9a7eb902fd89.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Os programas gráficos",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada programa ao que se faz melhor com ele.",
+         "pairs": [
+          [
+           "Photoshop",
+           "Editar fotografias"
+          ],
+          [
+           "CorelDraw e Illustrator",
+           "Desenho vectorial e logótipos"
+          ],
+          [
+           "Paint",
+           "Desenhos simples no computador"
+          ]
+         ],
+         "audio": "e378ff367915.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um programa como o Canva serve para:",
+         "options": [
+          "Fazer cartazes e convites com modelos prontos",
+          "Escrever programas de computador",
+          "Calcular contas"
+         ],
+         "a": 0,
+         "audio": "bc5663b503f3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma imagem vectorial, ao ser ampliada:",
+         "options": [
+          "Não perde qualidade",
+          "Fica aos quadradinhos",
+          "Muda de cor"
+         ],
+         "a": 0,
+         "audio": "5497bf13b7d7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma fotografia ampliada demais fica aos quadradinhos porque é feita de:",
+         "options": [
+          "Píxeis",
+          "Vectores",
+          "Linhas de cota"
+         ],
+         "a": 0,
+         "audio": "9cf68d1a806f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de fazer um cartaz no computador convém:",
+         "options": [
+          "Fazer um esboço no papel",
+          "Imprimir logo",
+          "Escolher só as cores"
+         ],
+         "a": 0,
+         "audio": "74017b53fed2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os programas gráficos ajudam a desenhar: o Photoshop edita fotografias; o CorelDraw e o Illustrator fazem desenho vectorial, que amplia sem perder qualidade; o Paint e o Canva servem para trabalhos simples.",
+        "exemplo": "Uma fotografia muito ampliada fica aos quadradinhos: são os píxeis. Um logótipo vectorial fica nítido em qualquer tamanho.",
+        "lembra": "Vector amplia bem; píxel não.",
+        "audio": "d953fb267ee8.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Desenho geométrico",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As curvas cónicas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As curvas cónicas chamam-se assim porque:",
+         "options": [
+          "Obtêm-se cortando um cone por um plano",
+          "Têm a forma de um cone",
+          "Desenham-se com um cone"
+         ],
+         "a": 0,
+         "audio": "72511d4328cd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada curva cónica a um objecto de uso comum.",
+         "pairs": [
+          [
+           "Elipse",
+           "A mesa oval e a órbita da Terra"
+          ],
+          [
+           "Parábola",
+           "A antena parabólica e o jacto de água"
+          ],
+          [
+           "Hipérbole",
+           "As torres de arrefecimento das centrais"
+          ]
+         ],
+         "audio": "c780eb22498c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um círculo visto de lado, inclinado, parece:",
+         "options": [
+          "Uma elipse",
+          "Uma parábola",
+          "Um triângulo"
+         ],
+         "a": 0,
+         "audio": "8d1eb9042460.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma elipse tem dois focos. Quantos eixos de simetria tem?",
+         "a": "2",
+         "audio": "bf764683aa16.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma composição decorativa não figurativa:",
+         "options": [
+          "Usa só formas geométricas, sem representar pessoas nem objectos",
+          "Representa uma pessoa",
+          "É uma fotografia"
+         ],
+         "a": 0,
+         "audio": "4a287a2ec612.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As curvas cónicas saem de cortar um cone com um plano: a elipse, a parábola e a hipérbole. Estão à nossa volta: na mesa oval, na antena parabólica, nas torres de arrefecimento.",
+        "exemplo": "Um círculo inclinado parece uma elipse, com dois eixos de simetria. O jacto de água de uma mangueira desenha uma parábola.",
+        "lembra": "Elipse, parábola, hipérbole: cortes do cone.",
+        "audio": "9537d02f5f01.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Projecções ortogonais",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Formas planas e tridimensionais",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Na 9ª classe, as projecções fazem-se sobre quantos planos de projecção?",
+         "a": "4",
+         "audio": "22baadae8787.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada plano de projecção à vista que dá.",
+         "pairs": [
+          [
+           "Plano horizontal",
+           "Planta, a vista de cima"
+          ],
+          [
+           "Plano frontal",
+           "Alçado, a vista de frente"
+          ],
+          [
+           "Plano lateral",
+           "Vista de lado"
+          ]
+         ],
+         "audio": "7eeb7b1db1b2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma forma tridimensional pode construir-se com:",
+         "options": [
+          "Cartão, esferovite, madeira ou barro",
+          "Só papel de desenho",
+          "Só lápis"
+         ],
+         "a": 0,
+         "audio": "cbbe889ab101.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um cone deitado, visto de cima, é:",
+         "options": [
+          "Um triângulo",
+          "Um círculo",
+          "Um quadrado"
+         ],
+         "a": 0,
+         "audio": "7b511c7caa3e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para construir uma caixa a partir das suas projecções, primeiro desenha-se:",
+         "options": [
+          "A planificação: as faces abertas num plano",
+          "A sombra",
+          "A perspectiva a dois pontos de fuga"
+         ],
+         "a": 0,
+         "audio": "201206562d44.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na 9ª, as projecções fazem-se sobre quatro planos: a planta, vista de cima; o alçado, de frente; e as duas vistas laterais. As formas criam-se primeiro, em cartão, esferovite, madeira ou barro.",
+        "exemplo": "Um cone deitado visto de cima é um triângulo. Para construir uma caixa desenha-se primeiro a planificação.",
+        "lembra": "Planta de cima, alçado de frente.",
+        "audio": "19eac7be542a.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Formas em axonometria",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Da projecção à axonometria",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para desenhar em isometria com mais facilidade usa-se:",
+         "options": [
+          "A malha reticulada de triângulos",
+          "Uma folha lisa",
+          "O transferidor só"
+         ],
+         "a": 0,
+         "audio": "5eb3839d966c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na perspectiva cavaleira, a face da frente desenha-se:",
+         "options": [
+          "Em verdadeira grandeza, sem deformar",
+          "Reduzida a metade",
+          "Inclinada a 120 graus"
+         ],
+         "a": 0,
+         "audio": "4fa0abc64f3a.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Na cavaleira, a profundidade reduz-se a metade. Uma caixa com 10 centímetros de fundo desenha-se com quantos centímetros?",
+         "a": "5",
+         "audio": "978c97f0670f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A partir das três vistas de um sólido em projecção ortogonal, pode-se:",
+         "options": [
+          "Desenhá-lo em axonometria, e vice-versa",
+          "Saber o seu peso",
+          "Saber a sua cor"
+         ],
+         "a": 0,
+         "audio": "830bb61967ea.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nas perspectivas axonométricas desenhadas a rigor, as cotas:",
+         "options": [
+          "Inscrevem-se com as medidas reais",
+          "Nunca se põem",
+          "Escrevem-se reduzidas"
+         ],
+         "a": 0,
+         "audio": "1d113d6accf1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Isométrica, dimétrica e cavaleira são as axonometrias. Na isométrica ajuda a malha de triângulos; na cavaleira a frente fica em verdadeira grandeza e a profundidade reduz-se a metade. As cotas escrevem-se com as medidas reais.",
+        "exemplo": "Uma caixa de 10 centímetros de fundo desenha-se em cavaleira com 5. Das três vistas chega-se à axonometria, e dela às vistas.",
+        "lembra": "Cavaleira: fundo a metade.",
+        "audio": "1b591d2aadd2.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Perspectiva visual",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A linha do horizonte e os pontos de fuga",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Numa estrada comprida, as bermas parecem juntar-se ao longe. Esse ponto chama-se:",
+         "options": [
+          "Ponto de fuga",
+          "Ponto de vista",
+          "Linha de terra"
+         ],
+         "a": 0,
+         "audio": "dd25a8f62715.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A linha do horizonte fica sempre:",
+         "options": [
+          "À altura dos olhos de quem observa",
+          "No fundo da folha",
+          "No cimo da folha"
+         ],
+         "a": 0,
+         "audio": "16ed34c7c91d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na perspectiva visual, um objecto mais longe parece:",
+         "options": [
+          "Mais pequeno",
+          "Maior",
+          "Igual"
+         ],
+         "a": 0,
+         "audio": "68fcf4df2a69.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada posição do objecto à perspectiva que se usa.",
+         "pairs": [
+          [
+           "Uma face virada de frente para nós",
+           "Um ponto de fuga"
+          ],
+          [
+           "Uma aresta virada para nós, de canto",
+           "Dois pontos de fuga"
+          ]
+         ],
+         "audio": "c87d2eddc8e8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um objecto desenhado acima da linha do horizonte vê-se:",
+         "options": [
+          "Por baixo",
+          "Por cima",
+          "Só de frente"
+         ],
+         "a": 0,
+         "audio": "eaf4c17fc74f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na perspectiva visual, o que está longe parece mais pequeno e as linhas paralelas juntam-se num ponto de fuga, sobre a linha do horizonte, à altura dos olhos. Uma face de frente pede um ponto de fuga; um canto, dois.",
+        "exemplo": "As bermas de uma estrada comprida juntam-se ao longe. Um objecto acima da linha do horizonte vê-se por baixo.",
+        "lembra": "O horizonte está à altura dos olhos.",
+        "audio": "ae9d0f58a180.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Perspectiva rigorosa",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Os elementos da perspectiva rigorosa",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada elemento da perspectiva rigorosa à sua sigla.",
+         "pairs": [
+          [
+           "Ponto de vista",
+           "PV"
+          ],
+          [
+           "Linha do horizonte",
+           "LH"
+          ],
+          [
+           "Ponto de fuga",
+           "PF"
+          ],
+          [
+           "Linha de terra",
+           "LT"
+          ]
+         ],
+         "audio": "eef6d3fb783b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O ponto de vista é:",
+         "options": [
+          "O lugar do olho de quem observa",
+          "O centro do objecto",
+          "O canto da folha"
+         ],
+         "a": 0,
+         "audio": "75f05de84fc9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O plano do quadro é:",
+         "options": [
+          "O plano transparente onde a imagem se desenha, entre o olho e o objecto",
+          "O chão",
+          "O céu"
+         ],
+         "a": 0,
+         "audio": "a4b7dfc8e902.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A linha de terra é onde se encontram:",
+         "options": [
+          "O plano de terra e o plano do quadro",
+          "Dois pontos de fuga",
+          "O céu e o mar"
+         ],
+         "a": 0,
+         "audio": "7e351b0a9b8f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A perspectiva rigorosa usa-se:",
+         "options": [
+          "Na arquitectura, no desenho de casas e cidades",
+          "Só na música",
+          "Só no desporto"
+         ],
+         "a": 0,
+         "audio": "a52eb5e13fde.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A perspectiva rigorosa desenha com regras: o ponto de vista é o olho; o plano do quadro, onde se desenha; a linha de terra, onde o chão encontra o quadro; a linha do horizonte e os pontos de fuga. Usa-se na arquitectura.",
+        "exemplo": "As siglas: PV, ponto de vista; LH, linha do horizonte; PF, ponto de fuga; LT, linha de terra.",
+        "lembra": "PV, LH, PF, LT: os quatro essenciais.",
+        "audio": "7f1275c69655.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A um e a dois pontos de fuga",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A perspectiva central, ou cónica, tem:",
+         "options": [
+          "Um ponto de fuga",
+          "Dois pontos de fuga",
+          "Nenhum ponto de fuga"
+         ],
+         "a": 0,
+         "audio": "bfe553d0169a.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um cubo desenhado de canto, com uma aresta virada para nós, precisa de quantos pontos de fuga?",
+         "a": "2",
+         "audio": "3a8bf6c97416.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na perspectiva a um ponto de fuga, as linhas de profundidade:",
+         "options": [
+          "Convergem todas no ponto de fuga",
+          "Ficam paralelas",
+          "São verticais"
+         ],
+         "a": 0,
+         "audio": "5e1c9919364a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um círculo em perspectiva rigorosa, deitado no chão, desenha-se como:",
+         "options": [
+          "Uma elipse",
+          "Um quadrado",
+          "Uma recta"
+         ],
+         "a": 0,
+         "audio": "c6a9a9989eb8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se se muda a posição do ponto de vista, o desenho do objecto:",
+         "options": [
+          "Muda: vê-se de outro ângulo",
+          "Fica igual",
+          "Desaparece"
+         ],
+         "a": 0,
+         "audio": "3c40b563b9fd.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A perspectiva central, ou cónica, tem um ponto de fuga, onde convergem as linhas de profundidade. Um objecto de canto pede dois. Um círculo deitado desenha-se como elipse, e mudar o ponto de vista muda o desenho.",
+        "exemplo": "Um corredor visto de frente: um ponto de fuga. Uma casa vista da esquina: dois.",
+        "lembra": "De frente, um ponto; de canto, dois.",
+        "audio": "1a476a8ab621.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

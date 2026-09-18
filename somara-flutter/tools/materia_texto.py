@@ -5648,4 +5648,106 @@ MATERIA = {
                    "escola merecem respeito.",
         "lembra": "Qui, quand, où, pourquoi, combien.",
     },
+
+    # ---------------------------------------------------------------
+    # Educacao Visual -- 9a classe
+    # ---------------------------------------------------------------
+    "ev-9c:u1:n1": {
+        "explica": "A arte moçambicana tem pintura, como a de "
+                   "Malangatana; escultura, como a de Alberto Chissano e a "
+                   "maconde em pau-preto; e arquitectura, como a Fortaleza "
+                   "da Ilha de Moçambique e a Casa de Ferro em Maputo.",
+        "exemplo": "As máscaras mapiko, as esteiras e os murais também são "
+                   "arte, e fazem parte da identidade cultural de cada "
+                   "comunidade.",
+        "lembra": "Pintura, escultura e arquitectura, também de cá.",
+    },
+    "ev-9c:u1:n2": {
+        "explica": "A arte medieval é religiosa: catedrais, vitrais, "
+                   "iluminuras nos livros. A arte contemporânea usa novos "
+                   "materiais, a abstracção, a instalação e o digital, e "
+                   "pode fazer-se de latas e garrafas reaproveitadas.",
+        "exemplo": "Um vitral gótico conta uma história da Bíblia com luz "
+                   "e vidro de cor; uma pintura abstracta só mostra formas "
+                   "e cores.",
+        "lembra": "Medieval reza; contemporâneo experimenta.",
+    },
+    "ev-9c:u2:n1": {
+        "explica": "A banda desenhada faz-se por etapas: história e cenas, "
+                   "esboço das vinhetas, tinta, cor e balões. O painel "
+                   "colectivo é uma obra grande feita por muitos. Num "
+                   "cartaz, o texto é curto e legível de longe.",
+        "exemplo": "O balão de fala tem uma seta para quem fala; o de "
+                   "pensamento é uma nuvem ligada por bolinhas.",
+        "lembra": "História, esboço, tinta: a banda desenhada.",
+    },
+    "ev-9c:u2:n2": {
+        "explica": "Os programas gráficos ajudam a desenhar: o Photoshop "
+                   "edita fotografias; o CorelDraw e o Illustrator fazem "
+                   "desenho vectorial, que amplia sem perder qualidade; o "
+                   "Paint e o Canva servem para trabalhos simples.",
+        "exemplo": "Uma fotografia muito ampliada fica aos quadradinhos: são "
+                   "os píxeis. Um logótipo vectorial fica nítido em "
+                   "qualquer tamanho.",
+        "lembra": "Vector amplia bem; píxel não.",
+    },
+    "ev-9c:u3:n1": {
+        "explica": "As curvas cónicas saem de cortar um cone com um plano: "
+                   "a elipse, a parábola e a hipérbole. Estão à nossa "
+                   "volta: na mesa oval, na antena parabólica, nas torres "
+                   "de arrefecimento.",
+        "exemplo": "Um círculo inclinado parece uma elipse, com dois eixos "
+                   "de simetria. O jacto de água de uma mangueira desenha "
+                   "uma parábola.",
+        "lembra": "Elipse, parábola, hipérbole: cortes do cone.",
+    },
+    "ev-9c:u4:n1": {
+        "explica": "Na 9ª, as projecções fazem-se sobre quatro planos: a "
+                   "planta, vista de cima; o alçado, de frente; e as duas "
+                   "vistas laterais. As formas criam-se primeiro, em "
+                   "cartão, esferovite, madeira ou barro.",
+        "exemplo": "Um cone deitado visto de cima é um triângulo. Para "
+                   "construir uma caixa desenha-se primeiro a planificação.",
+        "lembra": "Planta de cima, alçado de frente.",
+    },
+    "ev-9c:u5:n1": {
+        "explica": "Isométrica, dimétrica e cavaleira são as axonometrias. "
+                   "Na isométrica ajuda a malha de triângulos; na "
+                   "cavaleira a frente fica em verdadeira grandeza e a "
+                   "profundidade reduz-se a metade. As cotas escrevem-se "
+                   "com as medidas reais.",
+        "exemplo": "Uma caixa de 10 centímetros de fundo desenha-se em "
+                   "cavaleira com 5. Das três vistas chega-se à "
+                   "axonometria, e dela às vistas.",
+        "lembra": "Cavaleira: fundo a metade.",
+    },
+    "ev-9c:u6:n1": {
+        "explica": "Na perspectiva visual, o que está longe parece mais "
+                   "pequeno e as linhas paralelas juntam-se num ponto de "
+                   "fuga, sobre a linha do horizonte, à altura dos olhos. "
+                   "Uma face de frente pede um ponto de fuga; um canto, "
+                   "dois.",
+        "exemplo": "As bermas de uma estrada comprida juntam-se ao longe. "
+                   "Um objecto acima da linha do horizonte vê-se por baixo.",
+        "lembra": "O horizonte está à altura dos olhos.",
+    },
+    "ev-9c:u7:n1": {
+        "explica": "A perspectiva rigorosa desenha com regras: o ponto de "
+                   "vista é o olho; o plano do quadro, onde se desenha; a "
+                   "linha de terra, onde o chão encontra o quadro; a linha "
+                   "do horizonte e os pontos de fuga. Usa-se na "
+                   "arquitectura.",
+        "exemplo": "As siglas: PV, ponto de vista; LH, linha do horizonte; "
+                   "PF, ponto de fuga; LT, linha de terra.",
+        "lembra": "PV, LH, PF, LT: os quatro essenciais.",
+    },
+    "ev-9c:u7:n2": {
+        "explica": "A perspectiva central, ou cónica, tem um ponto de fuga, "
+                   "onde convergem as linhas de profundidade. Um objecto "
+                   "de canto pede dois. Um círculo deitado desenha-se como "
+                   "elipse, e mudar o ponto de vista muda o desenho.",
+        "exemplo": "Um corredor visto de frente: um ponto de fuga. Uma casa "
+                   "vista da esquina: dois.",
+        "lembra": "De frente, um ponto; de canto, dois.",
+    },
 }
