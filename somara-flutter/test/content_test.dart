@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o primário inteiro, e o primeiro degrau do secundário', () {
-    expect(c.cursos.length, 51);
+    expect(c.cursos.length, 52);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -123,12 +123,13 @@ void main() {
     //  2858  com a Biologia da 9ª classe (75)
     //  2935  com a Física da 9ª classe (77)
     //  3010  com a Química da 9ª classe (75)
+    //  3080  com o Inglês da 9ª classe (70)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 3010);
+    expect(total, 3080);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {

@@ -43710,6 +43710,1175 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ing-9c",
+   "disciplina": "Inglês",
+   "classe": "9ª classe",
+   "tag": "ING",
+   "fonte": "Programa de Ensino da Disciplina de Língua Inglesa — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, Grade 9, pp. 48-63. As nove unidades, o vocabulário e a gramática são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 9ª classe publicado. Os enunciados são em português e o inglês fica nas opções, porque a voz da app é portuguesa.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "O inglês no mundo dos negócios",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Comércio e comparações",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada palavra do comércio ao inglês.",
+         "pairs": [
+          [
+           "Moeda",
+           "Currency"
+          ],
+          [
+           "Empréstimo",
+           "Loan"
+          ],
+          [
+           "Cliente",
+           "Customer"
+          ],
+          [
+           "Comércio",
+           "Trade"
+          ]
+         ],
+         "audio": "58d6e462a752.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O inglês é tão importante como o português» escreve-se:",
+         "options": [
+          "English is as important as Portuguese",
+          "English is so important than Portuguese",
+          "English is as important than Portuguese"
+         ],
+         "a": 0,
+         "audio": "823faffb5a3f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O mercado de Lichinga é menos caro do que o de Maputo» escreve-se:",
+         "options": [
+          "Lichinga market is less expensive than Maputo market",
+          "Lichinga market is least expensive than Maputo market",
+          "Lichinga market is less expensive as Maputo market"
+         ],
+         "a": 0,
+         "audio": "0065dc45a620.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «integração regional» em inglês?",
+         "options": [
+          "Regional integration",
+          "Regional independence",
+          "Integral region"
+         ],
+         "a": 0,
+         "audio": "1a6c0eec1a0a.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada país vizinho à sua língua oficial.",
+         "pairs": [
+          [
+           "Malawi",
+           "English"
+          ],
+          [
+           "Angola",
+           "Portuguese"
+          ],
+          [
+           "Zimbabwe",
+           "English"
+          ]
+         ],
+         "audio": "4d1af014192a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No comércio usam-se «currency», «loan», «customer», «trade». Compara-se com «as ... as» para igualdade, «less ... than» para inferioridade e «more ... than» ou «-er than» para superioridade. Os vizinhos da SADC falam inglês ou português.",
+        "exemplo": "«English is as important as Portuguese.» «Lichinga market is less expensive than Maputo market.» O Malawi fala inglês; Angola, português.",
+        "lembra": "As ... as é igual; less ... than é menos.",
+        "audio": "be5c37fd4722.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Probabilidade e futuro",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Pode ser que os preços subam» escreve-se, com probabilidade:",
+         "options": [
+          "Prices may go up",
+          "Prices must go up",
+          "Prices going up"
+         ],
+         "a": 0,
+         "audio": "0054cc5809c2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O inglês pode abrir-te muitas portas» escreve-se:",
+         "options": [
+          "English can open many doors for you",
+          "English cans open many doors for you",
+          "English can opens many doors for you"
+         ],
+         "a": 0,
+         "audio": "9cd02f70090a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Amanhã vamos vender os tomates no mercado» escreve-se, com o futuro de intenção:",
+         "options": [
+          "We are going to sell the tomatoes at the market tomorrow",
+          "We go to sell the tomatoes at the market tomorrow",
+          "We sold the tomatoes at the market tomorrow"
+         ],
+         "a": 0,
+         "audio": "c40d4fbb7882.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Um dia, o meu negócio vai crescer» escreve-se, como previsão:",
+         "options": [
+          "One day, my business will grow",
+          "One day, my business grows will",
+          "One day, my business will grows"
+         ],
+         "a": 0,
+         "audio": "0774fd5006e5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «lucro» em inglês?",
+         "options": [
+          "Profit",
+          "Loss",
+          "Price"
+         ],
+         "a": 0,
+         "audio": "1862d1a49bd6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "«May» diz que algo pode acontecer; «can» diz que é possível ou que se sabe fazer. O futuro de intenção faz-se com «going to»; a previsão, com «will». Depois de «can», «may» e «will» o verbo não leva «s».",
+        "exemplo": "«Prices may go up.» «English can open many doors for you.» «We are going to sell the tomatoes tomorrow.» Lucro é «profit».",
+        "lembra": "Can, may, will: o verbo a seguir fica simples.",
+        "audio": "d5df6ec42111.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "A importância da educação",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Educação e advérbios de modo",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada palavra da educação ao inglês.",
+         "pairs": [
+          [
+           "Formação",
+           "Training"
+          ],
+          [
+           "Cidadania",
+           "Citizenship"
+          ],
+          [
+           "Qualidade",
+           "Quality"
+          ],
+          [
+           "Espírito crítico",
+           "Critical sense"
+          ]
+         ],
+         "audio": "a6679712c203.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela estuda com atenção» escreve-se, com um advérbio de modo:",
+         "options": [
+          "She studies carefully",
+          "She studies careful",
+          "She careful studies"
+         ],
+         "a": 0,
+         "audio": "417dcf488bdf.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada adjectivo ao seu advérbio de modo.",
+         "pairs": [
+          [
+           "Quick",
+           "Quickly"
+          ],
+          [
+           "Easy",
+           "Easily"
+          ],
+          [
+           "Good",
+           "Well"
+          ]
+         ],
+         "audio": "cf122a86b770.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Educar as raparigas é importante para o país» escreve-se:",
+         "options": [
+          "Educating girls is important for the country",
+          "Educate girls are important for the country",
+          "Educating girls are important for the country"
+         ],
+         "a": 0,
+         "audio": "01c5e9e53f58.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os pais ensinam em casa e os professores na escola. «Em casa» diz-se:",
+         "options": [
+          "At home",
+          "In home",
+          "On home"
+         ],
+         "a": 0,
+         "audio": "c1f5f9e61cdf.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A educação traz «training», «citizenship», «critical sense». O advérbio de modo diz como se faz, e forma-se quase sempre com «-ly»: «careful» dá «carefully». Irregular: «good» dá «well».",
+        "exemplo": "«She studies carefully.» «Educating girls is important for the country.» Em casa diz-se «at home».",
+        "lembra": "Adjectivo mais «-ly» dá advérbio; good dá well.",
+        "audio": "6385405b5ed2.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Formar palavras e o present perfect continuous",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada nome ao adjectivo que dele se forma.",
+         "pairs": [
+          [
+           "Use",
+           "Useful"
+          ],
+          [
+           "Danger",
+           "Dangerous"
+          ],
+          [
+           "Care",
+           "Careless"
+          ]
+         ],
+         "audio": "f51ddb7d823c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Tenho estado a estudar há duas horas» escreve-se:",
+         "options": [
+          "I have been studying for two hours",
+          "I have studying for two hours",
+          "I am been studying for two hours"
+         ],
+         "a": 0,
+         "audio": "3c560abcb240.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela tem ensinado nesta escola desde 2020» escreve-se:",
+         "options": [
+          "She has been teaching at this school since 2020",
+          "She has been teaching at this school for 2020",
+          "She have been teaching at this school since 2020"
+         ],
+         "a": 0,
+         "audio": "4e8546d4f2cb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Com uma data usa-se «since»; com uma duração, como «três anos», usa-se:",
+         "options": [
+          "For",
+          "Since",
+          "Ago"
+         ],
+         "a": 0,
+         "audio": "56928eb86cfd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destes adjectivos quer dizer «sem esperança»?",
+         "options": [
+          "Hopeless",
+          "Hopeful",
+          "Hoping"
+         ],
+         "a": 0,
+         "audio": "3833bbccd1da.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "De nomes fazem-se adjectivos: «-ful» é com, «-less» é sem, «-ous» é cheio de. O present perfect continuous, «have been» mais «-ing», diz o que começou antes e ainda continua: «since» com a data, «for» com a duração.",
+        "exemplo": "«Useful», «careless», «dangerous». «I have been studying for two hours.» «She has been teaching here since 2020.»",
+        "lembra": "Since com a data; for com a duração.",
+        "audio": "85323dd84803.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Direitos humanos e género",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Direitos, deveres e o passado",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada palavra dos direitos ao inglês.",
+         "pairs": [
+          [
+           "Lei",
+           "Law"
+          ],
+          [
+           "Crime",
+           "Crime"
+          ],
+          [
+           "Paz",
+           "Peace"
+          ],
+          [
+           "Violência doméstica",
+           "Domestic violence"
+          ]
+         ],
+         "audio": "b0d439f02fd9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«As crianças têm de ir à escola» escreve-se:",
+         "options": [
+          "Children have to go to school",
+          "Children has to go to school",
+          "Children have go to school"
+         ],
+         "a": 0,
+         "audio": "93edfd6af6b5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela tem de ajudar em casa» escreve-se:",
+         "options": [
+          "She has to help at home",
+          "She have to help at home",
+          "She has help at home"
+         ],
+         "a": 0,
+         "audio": "3471fafc90a0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A lei protegeu as raparigas» escreve-se:",
+         "options": [
+          "The law protected the girls",
+          "The law protects the girls yesterday",
+          "The law protecting the girls"
+         ],
+         "a": 0,
+         "audio": "23706e16ab40.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual é a diferença entre «sex» e «gender»?",
+         "options": [
+          "Sex é biológico; gender são os papéis que a sociedade dá",
+          "São a mesma coisa",
+          "Gender é biológico; sex é social"
+         ],
+         "a": 0,
+         "audio": "0618ee6a88d4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os direitos têm a sua língua: «law», «crime», «peace», «domestic violence». «Have to» é obrigação, e com «he» ou «she» fica «has to». O passado simples regular acaba em «-ed». Sex é biológico; gender são os papéis sociais.",
+        "exemplo": "«Children have to go to school.» «She has to help at home.» «The law protected the girls.»",
+        "lembra": "He e she: has to.",
+        "audio": "3147e79e7413.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Ambos, um ou outro, nenhum",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Tanto os rapazes como as raparigas têm direitos» escreve-se:",
+         "options": [
+          "Both boys and girls have rights",
+          "Either boys and girls have rights",
+          "Neither boys and girls have rights"
+         ],
+         "a": 0,
+         "audio": "f381d94419e1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Nem o pai nem a mãe podem bater nos filhos» escreve-se:",
+         "options": [
+          "Neither the father nor the mother can hit the children",
+          "Either the father nor the mother can hit the children",
+          "Neither the father or the mother can hit the children"
+         ],
+         "a": 0,
+         "audio": "63154a81975f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Podes falar com o professor ou com o director» escreve-se:",
+         "options": [
+          "You can talk to either the teacher or the headmaster",
+          "You can talk to neither the teacher or the headmaster",
+          "You can talk to both the teacher or the headmaster"
+         ],
+         "a": 0,
+         "audio": "55f621bf2dfd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada direito da criança ao inglês.",
+         "pairs": [
+          [
+           "Direito à educação",
+           "Right to education"
+          ],
+          [
+           "Direito à saúde",
+           "Right to health"
+          ],
+          [
+           "Direito a brincar",
+           "Right to play"
+          ]
+         ],
+         "audio": "0a26fa0d2abf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «igualdade de direitos» em inglês?",
+         "options": [
+          "Equal rights",
+          "Same laws",
+          "Right equals"
+         ],
+         "a": 0,
+         "audio": "abf223e37f1b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "«Both ... and» junta dois; «either ... or» escolhe um dos dois; «neither ... nor» nega os dois. Os direitos da criança: «right to education», «to health», «to play». Igualdade de direitos é «equal rights».",
+        "exemplo": "«Both boys and girls have rights.» «Neither the father nor the mother can hit the children.» «Talk to either the teacher or the headmaster.»",
+        "lembra": "Neither vai com nor; either vai com or.",
+        "audio": "13e366f4e761.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "A economia e a agricultura",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Campo, pesca e quantidades",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada palavra do campo ao inglês.",
+         "pairs": [
+          [
+           "Adubo",
+           "Fertilizer"
+          ],
+          [
+           "Tractor",
+           "Tractor"
+          ],
+          [
+           "Barragem",
+           "Dam"
+          ],
+          [
+           "Albufeira",
+           "Reservoir"
+          ]
+         ],
+         "audio": "746e3681760b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Os tractores são mais rápidos do que as enxadas» escreve-se:",
+         "options": [
+          "Tractors are faster than hoes",
+          "Tractors are more fast than hoes",
+          "Tractors are fastest than hoes"
+         ],
+         "a": 0,
+         "audio": "51712a7bc1c5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Deverias secar o peixe antes de o vender» escreve-se, como conselho:",
+         "options": [
+          "You should dry the fish before selling it",
+          "You should to dry the fish before selling it",
+          "You should drying the fish before selling it"
+         ],
+         "a": 0,
+         "audio": "a6d45cc3c5c7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Há poucos peixes no rio este ano» escreve-se:",
+         "options": [
+          "There are few fish in the river this year",
+          "There is little fish in the river this year",
+          "There are much fish in the river this year"
+         ],
+         "a": 0,
+         "audio": "5562dc19ca18.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A aldeia inteira ajudou na colheita» escreve-se:",
+         "options": [
+          "The whole village helped with the harvest",
+          "The all village helped with the harvest",
+          "The whole villages helped with the harvest"
+         ],
+         "a": 0,
+         "audio": "f254788d0f6d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No campo: «fertilizer», «tractor», «dam», «reservoir». Os adjectivos curtos comparam-se com «-er than». «Few» é para o que se conta, «little» para o que não; «whole» é inteiro. «Should» dá conselho.",
+        "exemplo": "«Tractors are faster than hoes.» «You should dry the fish before selling it.» «The whole village helped with the harvest.»",
+        "lembra": "Curto: -er than. Longo: more ... than.",
+        "audio": "f509e24d3541.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Fazer negócio",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O negócio, few e little",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada palavra do negócio ao inglês.",
+         "pairs": [
+          [
+           "Fábrica",
+           "Factory"
+          ],
+          [
+           "Matéria-prima",
+           "Raw material"
+          ],
+          [
+           "Mercado informal",
+           "Informal market"
+          ],
+          [
+           "Rendimento",
+           "Income"
+          ]
+         ],
+         "audio": "436768b41647.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Tenho um pouco de dinheiro» escreve-se:",
+         "options": [
+          "I have a little money",
+          "I have a few money",
+          "I have a little moneys"
+         ],
+         "a": 0,
+         "audio": "9afa8d9628d1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Tenho alguns clientes» escreve-se:",
+         "options": [
+          "I have a few customers",
+          "I have a little customers",
+          "I have a few customer"
+         ],
+         "a": 0,
+         "audio": "83235d21f39c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Abre a loja às oito!» escreve-se, no imperativo:",
+         "options": [
+          "Open the shop at eight",
+          "You opens the shop at eight",
+          "Opening the shop at eight"
+         ],
+         "a": 0,
+         "audio": "9ef656698a47.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada expressão de tempo à preposição certa em inglês.",
+         "pairs": [
+          [
+           "… Monday",
+           "On"
+          ],
+          [
+           "… eight o'clock",
+           "At"
+          ],
+          [
+           "… January",
+           "In"
+          ]
+         ],
+         "audio": "7c3611fce0d3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No negócio: «factory», «raw material», «informal market», «income». «A little» vai com o que não se conta, «a few» com o que se conta. O imperativo é o verbo sozinho. «On» é para dias, «at» para horas, «in» para meses.",
+        "exemplo": "«I have a little money.» «I have a few customers.» «Open the shop at eight.» «On Monday», «in January».",
+        "lembra": "On o dia, at a hora, in o mês.",
+        "audio": "f0344319e040.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A passiva e a carta de negócio",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«O caju é exportado para a Índia» escreve-se, na passiva:",
+         "options": [
+          "Cashew is exported to India",
+          "Cashew exports to India",
+          "Cashew is export to India"
+         ],
+         "a": 0,
+         "audio": "0a43ba23296e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Estes cestos são feitos à mão» escreve-se:",
+         "options": [
+          "These baskets are made by hand",
+          "These baskets make by hand",
+          "These baskets are make by hand"
+         ],
+         "a": 0,
+         "audio": "1707819a50e6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma carta de negócio a quem não se conhece começa por:",
+         "options": [
+          "Dear Sir or Madam",
+          "Hi friend",
+          "Hello boss"
+         ],
+         "a": 0,
+         "audio": "edf009012886.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A loja fica no mercado» escreve-se:",
+         "options": [
+          "The shop is in the market",
+          "The shop is on the market",
+          "The shop is at the market street on"
+         ],
+         "a": 0,
+         "audio": "b8934b91adf0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ganhamos mais e gastamos menos» escreve-se:",
+         "options": [
+          "We earn more and spend less",
+          "We earn most and spend least",
+          "We earn more and spend fewer"
+         ],
+         "a": 0,
+         "audio": "3238bc0e175a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A passiva põe a coisa à frente: «is» ou «are» mais o particípio. A carta de negócio a quem não se conhece começa por «Dear Sir or Madam». «More» e «less» comparam quantidades.",
+        "exemplo": "«Cashew is exported to India.» «These baskets are made by hand.» «We earn more and spend less.»",
+        "lembra": "Passiva: is ou are e o particípio.",
+        "audio": "97adbd3dc051.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Disciplinas e profissões futuras",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Disciplinas e relativos",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada disciplina ao inglês.",
+         "pairs": [
+          [
+           "Matemática",
+           "Mathematics"
+          ],
+          [
+           "Física",
+           "Physics"
+          ],
+          [
+           "Química",
+           "Chemistry"
+          ],
+          [
+           "Geografia",
+           "Geography"
+          ]
+         ],
+         "audio": "2197323304d5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Um médico é uma pessoa que trata os doentes» escreve-se:",
+         "options": [
+          "A doctor is a person who treats sick people",
+          "A doctor is a person which treats sick people",
+          "A doctor is a person what treats sick people"
+         ],
+         "a": 0,
+         "audio": "01d28d3ff266.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A disciplina de que mais gosto é a Biologia» escreve-se:",
+         "options": [
+          "The subject that I like most is Biology",
+          "The subject who I like most is Biology",
+          "The subject I like more is Biology most"
+         ],
+         "a": 0,
+         "audio": "05188ef4bffb.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada disciplina à profissão que ela prepara.",
+         "pairs": [
+          [
+           "Biology",
+           "Nurse"
+          ],
+          [
+           "Mathematics",
+           "Engineer"
+          ],
+          [
+           "Agriculture",
+           "Farmer"
+          ]
+         ],
+         "audio": "020e22357939.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A Física é mais difícil do que a Geografia» escreve-se:",
+         "options": [
+          "Physics is more difficult than Geography",
+          "Physics is difficulter than Geography",
+          "Physics is most difficult than Geography"
+         ],
+         "a": 0,
+         "audio": "ac7d8a0e79a2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As disciplinas: «Mathematics», «Physics», «Chemistry», «Geography». O relativo «who» é para pessoas, «which» para coisas, «that» para as duas. Cada disciplina prepara profissões.",
+        "exemplo": "«A doctor is a person who treats sick people.» «The subject that I like most is Biology.» Biologia leva a «nurse»; Matemática a «engineer».",
+        "lembra": "Who para pessoas; which para coisas.",
+        "audio": "8462ce7bbcb9.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Passado, present perfect e orações de tempo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Ontem terminei os trabalhos» escreve-se:",
+         "options": [
+          "I finished my homework yesterday",
+          "I have finished my homework yesterday",
+          "I finish my homework yesterday"
+         ],
+         "a": 0,
+         "audio": "6acccafe4bd6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Já escolhi a minha profissão» escreve-se:",
+         "options": [
+          "I have already chosen my profession",
+          "I already chose my profession yesterday",
+          "I have already choose my profession"
+         ],
+         "a": 0,
+         "audio": "4b6c26446192.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Logo que acabar a escola, vou trabalhar» escreve-se:",
+         "options": [
+          "As soon as I finish school, I will work",
+          "As soon as I will finish school, I work",
+          "As soon as I finished school, I will work"
+         ],
+         "a": 0,
+         "audio": "d29bcf3ac2b3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A ponte foi construída em 2009» escreve-se, na passiva do passado:",
+         "options": [
+          "The bridge was built in 2009",
+          "The bridge is built in 2009",
+          "The bridge built in 2009"
+         ],
+         "a": 0,
+         "audio": "46b3a2b5d6ac.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Estudo enquanto a minha irmã cozinha» escreve-se:",
+         "options": [
+          "I study while my sister cooks",
+          "I study until my sister cooks",
+          "I study as soon my sister cooks"
+         ],
+         "a": 0,
+         "audio": "a6439ba10945.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O passado simples diz quando: «yesterday», «in 2009». O present perfect não diz quando: «already», «just». A passiva do passado usa «was» ou «were». Depois de «as soon as» e «when», o verbo fica no presente, mesmo a falar do futuro.",
+        "exemplo": "«I finished my homework yesterday.» «I have already chosen my profession.» «As soon as I finish school, I will work.»",
+        "lembra": "Com yesterday, passado simples.",
+        "audio": "1f3a881c8e9d.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Ciência e tecnologia no século XXI",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Aparelhos, do e make, e o past perfect",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada aparelho ao inglês.",
+         "pairs": [
+          [
+           "Painel solar",
+           "Solar panel"
+          ],
+          [
+           "Telemóvel",
+           "Cell phone"
+          ],
+          [
+           "Bomba de água a pedal",
+           "Pedal water pump"
+          ],
+          [
+           "Sítio da Internet",
+           "Website"
+          ]
+         ],
+         "audio": "f6845e498a98.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada expressão ao verbo que ela pede em inglês.",
+         "pairs": [
+          [
+           "… homework",
+           "Do"
+          ],
+          [
+           "… a phone call",
+           "Make"
+          ],
+          [
+           "… a mistake",
+           "Make"
+          ]
+         ],
+         "audio": "8d59a588c44c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Embora a Internet seja útil, custa caro» escreve-se:",
+         "options": [
+          "Although the Internet is useful, it is expensive",
+          "Although the Internet is useful, but it is expensive",
+          "Although the Internet useful, it expensive"
+         ],
+         "a": 0,
+         "audio": "e245c3457a0d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Nunca tinha usado um computador antes de 2020» escreve-se:",
+         "options": [
+          "I had never used a computer before 2020",
+          "I have never used a computer before 2020",
+          "I had never use a computer before 2020"
+         ],
+         "a": 0,
+         "audio": "2410f5c92e61.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma desvantagem das tecnologias de informação, em inglês, é:",
+         "options": [
+          "Data costs money",
+          "Data is free",
+          "Phones never break"
+         ],
+         "a": 0,
+         "audio": "dfaa6bb35425.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A tecnologia: «solar panel», «cell phone», «pedal water pump», «website». «Do» vai com tarefas, «make» com o que se fabrica ou produz. «Although» opõe sem «but». O past perfect, «had» mais particípio, é o passado do passado.",
+        "exemplo": "«Do homework», «make a phone call», «make a mistake». «Although the Internet is useful, it is expensive.» «I had never used a computer before 2020.»",
+        "lembra": "Although nunca leva but.",
+        "audio": "beb4058f5b43.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Pessoas famosas e de sucesso",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Heróis, comparações e discurso indirecto",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada figura moçambicana à sua área, em inglês.",
+         "pairs": [
+          [
+           "Maria de Lurdes Mutola",
+           "Sport"
+          ],
+          [
+           "Malangatana",
+           "Painting"
+          ],
+          [
+           "Mia Couto",
+           "Writing"
+          ],
+          [
+           "Eduardo Mondlane",
+           "Politics"
+          ]
+         ],
+         "audio": "81912157baaa.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela corre tão depressa como um carro» escreve-se:",
+         "options": [
+          "She runs as fast as a car",
+          "She runs as faster as a car",
+          "She runs so fast than a car"
+         ],
+         "a": 0,
+         "audio": "f8f449dd8636.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eu sou professor», disse ele. Em discurso indirecto:",
+         "options": [
+          "He said that he was a teacher",
+          "He said that I am a teacher",
+          "He said that he is being a teacher"
+         ],
+         "a": 0,
+         "audio": "505c6608d7e0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Estou a pintar», disse ela. Em discurso indirecto:",
+         "options": [
+          "She said that she was painting",
+          "She said that she is paint",
+          "She said that I was painting"
+         ],
+         "a": 0,
+         "audio": "a635acce8bb1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Canta como um anjo» escreve-se:",
+         "options": [
+          "He sings like an angel",
+          "He sings as an angel like",
+          "He sing like a angel"
+         ],
+         "a": 0,
+         "audio": "82a36f1ea7e0.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Moçambique tem figuras em cada área: Mutola no desporto, Malangatana na pintura, Mia Couto na escrita, Mondlane na política. «As ... as» e «like» comparam. No discurso indirecto, o verbo recua: «am» passa a «was».",
+        "exemplo": "«She runs as fast as a car.» «He sings like an angel.» «I am a teacher», he said: «he said that he was a teacher».",
+        "lembra": "Indirecto: o presente vira passado.",
+        "audio": "a9e7edb04cb2.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u9",
+     "titulo": "A vida depois da escola",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Trabalho, empreendedorismo e revisão",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada palavra do trabalho ao inglês.",
+         "pairs": [
+          [
+           "Empreendedorismo",
+           "Entrepreneurship"
+          ],
+          [
+           "Trabalho por conta própria",
+           "Self-employment"
+          ],
+          [
+           "Formação profissional",
+           "Vocational training"
+          ]
+         ],
+         "audio": "d67c07472ed1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Gosto de trabalhar em equipa» escreve-se, com o gerúndio:",
+         "options": [
+          "I enjoy working in a team",
+          "I enjoy to working in a team",
+          "I enjoy work in a team"
+         ],
+         "a": 0,
+         "audio": "f297e1051c98.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Se eu tivesse dinheiro, abriria uma loja» escreve-se:",
+         "options": [
+          "If I had money, I would open a shop",
+          "If I have money, I would open a shop",
+          "If I had money, I will open a shop"
+         ],
+         "a": 0,
+         "audio": "3c710cb05328.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada qualidade pessoal ao inglês.",
+         "pairs": [
+          [
+           "Trabalhador",
+           "Hard-working"
+          ],
+          [
+           "Honesto",
+           "Honest"
+          ],
+          [
+           "Pontual",
+           "Punctual"
+          ]
+         ],
+         "audio": "29d1efcfe626.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa sociedade, «business partnership» quer dizer:",
+         "options": [
+          "Duas ou mais pessoas a fazer um negócio juntas",
+          "Um negócio de uma pessoa só",
+          "Um empréstimo do banco"
+         ],
+         "a": 0,
+         "audio": "36aa7fe1bea1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Depois da escola há «vocational training», «self-employment», «entrepreneurship». Depois de «enjoy» vem o gerúndio, com «-ing». A segunda condicional imagina: «if» com o passado, «would» na outra parte.",
+        "exemplo": "«I enjoy working in a team.» «If I had money, I would open a shop.» «Hard-working», «honest» e «punctual» valem em qualquer emprego.",
+        "lembra": "Enjoy pede -ing.",
+        "audio": "b1426b2827fc.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

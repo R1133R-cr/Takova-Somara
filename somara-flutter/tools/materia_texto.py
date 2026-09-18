@@ -5407,4 +5407,152 @@ MATERIA = {
                    "turva-a: é o dióxido de carbono do nosso ar.",
         "lembra": "Areia faz vidro; calcário faz cimento.",
     },
+
+    # ---------------------------------------------------------------
+    # Ingles -- 9a classe
+    # ---------------------------------------------------------------
+    "ing-9c:u1:n1": {
+        "explica": "No comércio usam-se «currency», «loan», «customer», "
+                   "«trade». Compara-se com «as ... as» para igualdade, "
+                   "«less ... than» para inferioridade e «more ... than» ou "
+                   "«-er than» para superioridade. Os vizinhos da SADC "
+                   "falam inglês ou português.",
+        "exemplo": "«English is as important as Portuguese.» «Lichinga "
+                   "market is less expensive than Maputo market.» O Malawi "
+                   "fala inglês; Angola, português.",
+        "lembra": "As ... as é igual; less ... than é menos.",
+    },
+    "ing-9c:u1:n2": {
+        "explica": "«May» diz que algo pode acontecer; «can» diz que é "
+                   "possível ou que se sabe fazer. O futuro de intenção faz-"
+                   "se com «going to»; a previsão, com «will». Depois de "
+                   "«can», «may» e «will» o verbo não leva «s».",
+        "exemplo": "«Prices may go up.» «English can open many doors for "
+                   "you.» «We are going to sell the tomatoes tomorrow.» "
+                   "Lucro é «profit».",
+        "lembra": "Can, may, will: o verbo a seguir fica simples.",
+    },
+    "ing-9c:u2:n1": {
+        "explica": "A educação traz «training», «citizenship», «critical "
+                   "sense». O advérbio de modo diz como se faz, e forma-se "
+                   "quase sempre com «-ly»: «careful» dá «carefully». "
+                   "Irregular: «good» dá «well».",
+        "exemplo": "«She studies carefully.» «Educating girls is important "
+                   "for the country.» Em casa diz-se «at home».",
+        "lembra": "Adjectivo mais «-ly» dá advérbio; good dá well.",
+    },
+    "ing-9c:u2:n2": {
+        "explica": "De nomes fazem-se adjectivos: «-ful» é com, «-less» é "
+                   "sem, «-ous» é cheio de. O present perfect continuous, "
+                   "«have been» mais «-ing», diz o que começou antes e "
+                   "ainda continua: «since» com a data, «for» com a "
+                   "duração.",
+        "exemplo": "«Useful», «careless», «dangerous». «I have been "
+                   "studying for two hours.» «She has been teaching here "
+                   "since 2020.»",
+        "lembra": "Since com a data; for com a duração.",
+    },
+    "ing-9c:u3:n1": {
+        "explica": "Os direitos têm a sua língua: «law», «crime», «peace», "
+                   "«domestic violence». «Have to» é obrigação, e com «he» "
+                   "ou «she» fica «has to». O passado simples regular "
+                   "acaba em «-ed». Sex é biológico; gender são os papéis "
+                   "sociais.",
+        "exemplo": "«Children have to go to school.» «She has to help at "
+                   "home.» «The law protected the girls.»",
+        "lembra": "He e she: has to.",
+    },
+    "ing-9c:u3:n2": {
+        "explica": "«Both ... and» junta dois; «either ... or» escolhe um "
+                   "dos dois; «neither ... nor» nega os dois. Os direitos "
+                   "da criança: «right to education», «to health», «to "
+                   "play». Igualdade de direitos é «equal rights».",
+        "exemplo": "«Both boys and girls have rights.» «Neither the father "
+                   "nor the mother can hit the children.» «Talk to either "
+                   "the teacher or the headmaster.»",
+        "lembra": "Neither vai com nor; either vai com or.",
+    },
+    "ing-9c:u4:n1": {
+        "explica": "No campo: «fertilizer», «tractor», «dam», «reservoir». "
+                   "Os adjectivos curtos comparam-se com «-er than». «Few» "
+                   "é para o que se conta, «little» para o que não; "
+                   "«whole» é inteiro. «Should» dá conselho.",
+        "exemplo": "«Tractors are faster than hoes.» «You should dry the "
+                   "fish before selling it.» «The whole village helped with "
+                   "the harvest.»",
+        "lembra": "Curto: -er than. Longo: more ... than.",
+    },
+    "ing-9c:u5:n1": {
+        "explica": "No negócio: «factory», «raw material», «informal "
+                   "market», «income». «A little» vai com o que não se "
+                   "conta, «a few» com o que se conta. O imperativo é o "
+                   "verbo sozinho. «On» é para dias, «at» para horas, «in» "
+                   "para meses.",
+        "exemplo": "«I have a little money.» «I have a few customers.» "
+                   "«Open the shop at eight.» «On Monday», «in January».",
+        "lembra": "On o dia, at a hora, in o mês.",
+    },
+    "ing-9c:u5:n2": {
+        "explica": "A passiva põe a coisa à frente: «is» ou «are» mais o "
+                   "particípio. A carta de negócio a quem não se conhece "
+                   "começa por «Dear Sir or Madam». «More» e «less» "
+                   "comparam quantidades.",
+        "exemplo": "«Cashew is exported to India.» «These baskets are made "
+                   "by hand.» «We earn more and spend less.»",
+        "lembra": "Passiva: is ou are e o particípio.",
+    },
+    "ing-9c:u6:n1": {
+        "explica": "As disciplinas: «Mathematics», «Physics», "
+                   "«Chemistry», «Geography». O relativo «who» é para "
+                   "pessoas, «which» para coisas, «that» para as duas. "
+                   "Cada disciplina prepara profissões.",
+        "exemplo": "«A doctor is a person who treats sick people.» «The "
+                   "subject that I like most is Biology.» Biologia leva a "
+                   "«nurse»; Matemática a «engineer».",
+        "lembra": "Who para pessoas; which para coisas.",
+    },
+    "ing-9c:u6:n2": {
+        "explica": "O passado simples diz quando: «yesterday», «in 2009». "
+                   "O present perfect não diz quando: «already», «just». "
+                   "A passiva do passado usa «was» ou «were». Depois de "
+                   "«as soon as» e «when», o verbo fica no presente, mesmo "
+                   "a falar do futuro.",
+        "exemplo": "«I finished my homework yesterday.» «I have already "
+                   "chosen my profession.» «As soon as I finish school, I "
+                   "will work.»",
+        "lembra": "Com yesterday, passado simples.",
+    },
+    "ing-9c:u7:n1": {
+        "explica": "A tecnologia: «solar panel», «cell phone», «pedal water "
+                   "pump», «website». «Do» vai com tarefas, «make» com o "
+                   "que se fabrica ou produz. «Although» opõe sem «but». O "
+                   "past perfect, «had» mais particípio, é o passado do "
+                   "passado.",
+        "exemplo": "«Do homework», «make a phone call», «make a mistake». "
+                   "«Although the Internet is useful, it is expensive.» «I "
+                   "had never used a computer before 2020.»",
+        "lembra": "Although nunca leva but.",
+    },
+    "ing-9c:u8:n1": {
+        "explica": "Moçambique tem figuras em cada área: Mutola no "
+                   "desporto, Malangatana na pintura, Mia Couto na "
+                   "escrita, Mondlane na política. «As ... as» e «like» "
+                   "comparam. No discurso indirecto, o verbo recua: «am» "
+                   "passa a «was».",
+        "exemplo": "«She runs as fast as a car.» «He sings like an angel.» "
+                   "«I am a teacher», he said: «he said that he was a "
+                   "teacher».",
+        "lembra": "Indirecto: o presente vira passado.",
+    },
+    "ing-9c:u9:n1": {
+        "explica": "Depois da escola há «vocational training», "
+                   "«self-employment», «entrepreneurship». Depois de "
+                   "«enjoy» vem o gerúndio, com «-ing». A segunda "
+                   "condicional imagina: «if» com o passado, «would» na "
+                   "outra parte.",
+        "exemplo": "«I enjoy working in a team.» «If I had money, I would "
+                   "open a shop.» «Hard-working», «honest» e «punctual» "
+                   "valem em qualquer emprego.",
+        "lembra": "Enjoy pede -ing.",
+    },
 }
