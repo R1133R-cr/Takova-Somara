@@ -5243,4 +5243,168 @@ MATERIA = {
                    "o ouvido: baixa-se o volume.",
         "lembra": "Velocidade é comprimento de onda vezes frequência.",
     },
+
+    # ---------------------------------------------------------------
+    # Quimica -- 9a classe
+    #
+    # Sem formulas, como na 8a: "H2SO4" nao se diz.
+    # ---------------------------------------------------------------
+    "qui-9c:u1:n1": {
+        "explica": "Um óxido é o oxigénio junto com outro elemento. Com um "
+                   "metal forma um óxido básico, que com a água dá uma "
+                   "base; com um não metal forma um óxido ácido, que com a "
+                   "água dá um ácido.",
+        "exemplo": "A cal viva, óxido de cálcio, com água dá hidróxido de "
+                   "cálcio: uma base. O dióxido de carbono com água dá "
+                   "ácido carbónico: é por isso que os refrescos com gás "
+                   "são ácidos.",
+        "lembra": "Metal dá base; não metal dá ácido.",
+    },
+    "qui-9c:u1:n2": {
+        "explica": "Para Arrhenius, um ácido liberta na água iões "
+                   "hidrogénio e uma base liberta iões hidroxilo. Os "
+                   "ácidos são oxiácidos, com oxigénio, ou hidrácidos, sem "
+                   "ele. Ácido com base dá sal e água: é a neutralização.",
+        "exemplo": "O ácido clorídrico com o hidróxido de sódio dá cloreto "
+                   "de sódio e água. Ácidos e bases fortes queimam: nunca "
+                   "se provam nem se tocam sem luvas.",
+        "lembra": "Ácido mais base: sal mais água.",
+    },
+    "qui-9c:u1:n3": {
+        "explica": "Um indicador muda de cor conforme o meio é ácido ou "
+                   "básico; há naturais, como o sumo de beterraba ou de "
+                   "buganvília. Os sais saem da neutralização e têm muitos "
+                   "usos: temperar, construir, adubar.",
+        "exemplo": "Limão e vinagre são ácidos; água de sabão e de cinza "
+                   "são básicas. O sal de cozinha leva iodo por lei, contra "
+                   "o bócio; o calcário dá cimento; o nitrato de amónio é "
+                   "adubo.",
+        "lembra": "O indicador mostra pela cor.",
+    },
+    "qui-9c:u2:n1": {
+        "explica": "O átomo tem no núcleo os protões, positivos, e os "
+                   "neutrões, sem carga; à volta, em níveis de energia, os "
+                   "electrões, negativos. Número atómico são os protões; "
+                   "número de massa, protões mais neutrões. Isótopos têm "
+                   "neutrões diferentes.",
+        "exemplo": "Número atómico 11 e massa 23: 23 menos 11 dá 12 "
+                   "neutrões. O cloro neutro tem 17 protões e 17 "
+                   "electrões.",
+        "lembra": "Neutrões são massa menos número atómico.",
+    },
+    "qui-9c:u2:n2": {
+        "explica": "A Tabela Periódica, da lei de Mendeleev, ordena os "
+                   "elementos pelo número atómico. As linhas são "
+                   "períodos, e o período é o número de níveis; as colunas "
+                   "são grupos, e o grupo diz os electrões do último "
+                   "nível.",
+        "exemplo": "O sódio, 2, 8, 1: três níveis, terceiro período, um "
+                   "electrão no último nível. Ao descer num grupo o raio "
+                   "cresce, porque há mais níveis.",
+        "lembra": "Período conta níveis; grupo conta o último.",
+    },
+    "qui-9c:u3:n1": {
+        "explica": "Os átomos ligam-se para ficar com oito electrões no "
+                   "último nível: a regra do octeto. Na ligação iónica, um "
+                   "dá electrões e o outro recebe, e formam-se iões. Na "
+                   "covalente, partilham pares de electrões.",
+        "exemplo": "O sódio perde um electrão e fica catião; o cloro "
+                   "ganha-o e fica anião: sal. Dissolvido, conduz a "
+                   "corrente, porque os iões se movem. A água é covalente.",
+        "lembra": "Iónica troca; covalente partilha.",
+    },
+    "qui-9c:u3:n2": {
+        "explica": "Na ligação metálica, os electrões andam livres entre "
+                   "os iões do metal: por isso os metais conduzem o calor "
+                   "e a corrente. As ligas juntam metais: aço, bronze, "
+                   "latão. O ferro obtém-se no alto-forno, reduzindo o "
+                   "minério com carvão.",
+        "exemplo": "O aço é ferro com carbono; o bronze, cobre com "
+                   "estanho; o latão, cobre com zinco. A Mozal, em Maputo, "
+                   "produz alumínio para exportar.",
+        "lembra": "Electrões livres: bom condutor.",
+    },
+    "qui-9c:u4:n1": {
+        "explica": "Os halogéneos — flúor, cloro, bromo, iodo — têm sete "
+                   "electrões no último nível e reagem muito. O cloro "
+                   "desinfecta a água, o flúor protege os dentes, o iodo "
+                   "entra no sal. O sal vem das salinas.",
+        "exemplo": "Umas gotas de lixívia, com cloro, tornam a água de "
+                   "beber segura. O estômago faz ácido clorídrico para "
+                   "digerir.",
+        "lembra": "Sete electrões: sempre à procura de um.",
+    },
+    "qui-9c:u4:n2": {
+        "explica": "Oxidar é perder electrões, e o número de oxidação "
+                   "sobe; reduzir é ganhá-los, e desce. O oxidante "
+                   "reduz-se e faz o outro oxidar. Uma mole de qualquer "
+                   "gás, em condições normais, ocupa 22,4 litros.",
+        "exemplo": "No cloreto de sódio, o cloro tem menos 1 e o sódio "
+                   "mais 1: a soma dá zero. 44,8 litros de gás são 2 "
+                   "moles.",
+        "lembra": "Perde oxida, ganha reduz.",
+    },
+    "qui-9c:u5:n1": {
+        "explica": "O enxofre tem variedades alotrópicas, a rômbica e a "
+                   "monoclínica. Dele se faz o ácido sulfúrico, pelo "
+                   "método de contacto: o ácido mais usado, das baterias "
+                   "aos adubos. O sulfureto de hidrogénio cheira a ovo "
+                   "podre.",
+        "exemplo": "A bateria do carro leva ácido sulfúrico diluído. Um "
+                   "cheiro a ovo podre perto de águas paradas é sulfureto "
+                   "de hidrogénio.",
+        "lembra": "Ácido sulfúrico: o mais usado na indústria.",
+    },
+    "qui-9c:u5:n2": {
+        "explica": "Uma reacção dá-se quando as partículas chocam com "
+                   "energia suficiente, a energia de activação. É mais "
+                   "rápida com mais temperatura, mais superfície de "
+                   "contacto, mais concentração, ou com um catalisador, "
+                   "que baixa essa energia.",
+        "exemplo": "Açúcar em água quente dissolve-se depressa; lenha "
+                   "rachada arde mais que o tronco; a cinza acelera o "
+                   "amadurecer da banana; a saliva digere o amido do pão.",
+        "lembra": "Calor, pedaços, concentração, catalisador.",
+    },
+    "qui-9c:u6:n1": {
+        "explica": "O azoto é 78 por cento do ar. Dele se faz o amoníaco, "
+                   "pelo processo de Haber-Bosch, e do amoníaco o ácido "
+                   "nítrico, pelo de Ostwald. Os nitratos, seus sais, são "
+                   "adubos e explosivos.",
+        "exemplo": "Quase todo o amoníaco do mundo vai para adubos: é o "
+                   "azoto que faz crescer as folhas do milho.",
+        "lembra": "Haber faz amoníaco; Ostwald faz ácido nítrico.",
+    },
+    "qui-9c:u6:n2": {
+        "explica": "O fósforo branco é venenoso e arde no ar; o vermelho é "
+                   "estável e vai nos fósforos. Os adubos dão azoto, "
+                   "fósforo e potássio, mas a mais poluem. Uma reacção "
+                   "reversível chega ao equilíbrio, e Le Chatelier diz "
+                   "como este se desloca.",
+        "exemplo": "Azoto para as folhas, fósforo para as raízes, potássio "
+                   "para os frutos. O composto de restos e estrume é o "
+                   "adubo natural.",
+        "lembra": "Equilíbrio perturbado reage contra a perturbação.",
+    },
+    "qui-9c:u7:n1": {
+        "explica": "O carbono tem formas cristalinas, o diamante, duríssimo, "
+                   "e a grafite, macia e condutora, e formas amorfas, os "
+                   "carvões: minerais, como a hulha, e artificiais, como o "
+                   "carvão de lenha e o coque.",
+        "exemplo": "O carvão de Moatize é exportado. Carvão a arder numa "
+                   "casa fechada liberta monóxido de carbono, que mata sem "
+                   "cheiro: deixa-se sempre ar entrar.",
+        "lembra": "Carvão numa casa fechada mata.",
+    },
+    "qui-9c:u7:n2": {
+        "explica": "O dióxido de carbono turva a água de cal e, a mais no "
+                   "ar, aumenta o efeito de estufa. O silício está na "
+                   "areia, dióxido de silício. Da areia faz-se o vidro; do "
+                   "calcário e da argila, o cimento; da argila, a "
+                   "cerâmica.",
+        "exemplo": "O calcário do cimento extrai-se em Salamanga, no Dondo "
+                   "e em Nacala. Soprar com uma palhinha para água de cal "
+                   "turva-a: é o dióxido de carbono do nosso ar.",
+        "lembra": "Areia faz vidro; calcário faz cimento.",
+    },
 }
