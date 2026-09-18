@@ -24701,6 +24701,1020 @@
      ]
     }
    ]
+  },
+  {
+   "id": "por-8c",
+   "disciplina": "Português",
+   "classe": "8ª classe",
+   "tag": "POR",
+   "fonte": "Programa de Ensino da Disciplina de Língua Portuguesa — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, pp. 34-53. As quinze unidades do programa juntam-se por tipo de texto em cinco; os conteúdos são os do programa e os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Textos normativos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O regulamento de avaliação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um regulamento de avaliação é um texto:",
+         "options": [
+          "Normativo: diz o que se deve fazer",
+          "Literário: conta uma história",
+          "Jornalístico: dá uma notícia"
+         ],
+         "a": 0,
+         "audio": "56fe11ff9c33.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A linguagem de um regulamento é:",
+         "options": [
+          "Clara, objectiva e impessoal",
+          "Poética e cheia de imagens",
+          "Familiar, como entre amigos"
+         ],
+         "a": 0,
+         "audio": "84fea992b2ae.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na mancha gráfica de um regulamento aparecem:",
+         "options": [
+          "Artigos numerados, uns a seguir aos outros",
+          "Versos e estrofes",
+          "Um título e falas de personagens"
+         ],
+         "a": 0,
+         "audio": "fde5c58b12e9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O aluno deve apresentar-se à prova com o cartão de estudante.» Esta frase:",
+         "options": [
+          "Impõe um dever",
+          "Conta um acontecimento",
+          "Faz um pedido"
+         ],
+         "a": 0,
+         "audio": "f89c2b3e1c1c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "«Os alunos devem entregar o trabalho até sexta-feira.» Escreve o verbo que indica obrigação.",
+         "a": "devem",
+         "audio": "5c617786adfc.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um regulamento de avaliação é um texto normativo: diz o que se deve e não se deve fazer. Organiza-se em artigos numerados, e a linguagem é clara, objectiva e impessoal — não fala de ninguém em particular.",
+        "exemplo": "«Artigo 3. O aluno deve apresentar-se à prova com o cartão de estudante.» O verbo «deve» impõe um dever a todos os alunos.",
+        "lembra": "Normativo é o texto que manda; dever e proibir são as suas palavras.",
+        "audio": "24b22301bca3.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Concordância nominal, imperativo e infinitivo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Qual frase está certa quanto à concordância em género e número?",
+         "options": [
+          "As provas escritas são obrigatórias.",
+          "As provas escrito são obrigatórias.",
+          "As provas escritas é obrigatória."
+         ],
+         "a": 0,
+         "audio": "e21dfe29849d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Entrega o teste ao professor.» O verbo «entrega» está no modo:",
+         "options": [
+          "Imperativo",
+          "Indicativo",
+          "Conjuntivo"
+         ],
+         "a": 0,
+         "audio": "ba073ea4b26f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«É proibido copiar durante a prova.» O verbo «copiar» está no:",
+         "options": [
+          "Infinitivo",
+          "Imperativo",
+          "Gerúndio"
+         ],
+         "a": 0,
+         "audio": "803ab8ace1b4.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Completa com o adjectivo a concordar: «Os resultados ___ saem em Dezembro.» (final)",
+         "a": "finais",
+         "audio": "9c8651ae8f30.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual frase usa o imperativo para dar uma ordem a várias pessoas?",
+         "options": [
+          "Sentem-se e leiam as instruções.",
+          "Vocês sentaram-se.",
+          "Eles vão sentar-se."
+         ],
+         "a": 0,
+         "audio": "9df1c5348138.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Nome e adjectivo concordam em género e número: prova escrita, provas escritas. Para dar ordens usa-se o imperativo — entrega, sentem-se. Nos regulamentos, a regra vem muitas vezes no infinitivo: é proibido copiar.",
+        "exemplo": "Os resultados finais saem em Dezembro. Sentem-se e leiam as instruções. É proibido copiar durante a prova.",
+        "lembra": "O adjectivo veste-se como o nome: no mesmo género e no mesmo número.",
+        "audio": "ac99a8703d37.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Voz passiva e orações coordenadas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«O director aprovou o regulamento.» Na voz passiva fica:",
+         "options": [
+          "O regulamento foi aprovado pelo director.",
+          "O regulamento aprovou o director.",
+          "O director foi aprovado pelo regulamento."
+         ],
+         "a": 0,
+         "audio": "bc68cf20d848.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em «O regulamento foi aprovado pelo director», o agente da passiva é:",
+         "options": [
+          "pelo director",
+          "o regulamento",
+          "foi aprovado"
+         ],
+         "a": 0,
+         "audio": "9c9b59781433.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Estudas ou reprovas.» A oração ligada por «ou» é coordenada:",
+         "options": [
+          "Disjuntiva",
+          "Copulativa",
+          "Adversativa"
+         ],
+         "a": 0,
+         "audio": "22dd8e1848ee.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas conjunções é coordenativa disjuntiva?",
+         "options": [
+          "ou",
+          "e",
+          "mas"
+         ],
+         "a": 0,
+         "audio": "76ca060f31c9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A prova foi corrigida pela professora.» Na voz activa:",
+         "options": [
+          "A professora corrigiu a prova.",
+          "A prova corrigiu a professora.",
+          "A professora foi corrigida pela prova."
+         ],
+         "a": 0,
+         "audio": "7a38d128ea83.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na voz activa o sujeito faz a acção; na passiva recebe-a, e quem a faz passa a agente da passiva, com «por». As orações coordenadas disjuntivas ligam-se por «ou» e apresentam alternativas.",
+        "exemplo": "O director aprovou o regulamento. Na passiva: O regulamento foi aprovado pelo director. Disjuntiva: Estudas ou reprovas.",
+        "lembra": "Na passiva, o «pelo» aponta para quem fez.",
+        "audio": "86d75c819538.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Textos administrativos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A convocatória e a concordância verbal",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma convocatória serve para:",
+         "options": [
+          "Chamar pessoas a uma reunião, com data, hora e local",
+          "Contar uma história",
+          "Anunciar uma venda"
+         ],
+         "a": 0,
+         "audio": "1e41bc87b366.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O que não pode faltar numa convocatória?",
+         "options": [
+          "O dia, a hora e o local da reunião",
+          "Uma rima",
+          "O nome do herói"
+         ],
+         "a": 0,
+         "audio": "1a459646496b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em qual frase o verbo concorda com o sujeito?",
+         "options": [
+          "Os pais foram convocados para a reunião.",
+          "Os pais foi convocados para a reunião.",
+          "Os pais fomos convocados para a reunião."
+         ],
+         "a": 0,
+         "audio": "af10fd4c2b42.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Tu e o teu irmão ___ à reunião.» A forma certa é:",
+         "options": [
+          "vão",
+          "vai",
+          "vou"
+         ],
+         "a": 0,
+         "audio": "1c3b06e922b4.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Completa com o verbo estar: «Ontem, nós ___ na reunião.»",
+         "a": "estivemos",
+         "audio": "59bce9e6666b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A convocatória chama pessoas a uma reunião e tem de dizer o dia, a hora, o local e o assunto. O verbo concorda com o sujeito em pessoa e número: os pais foram, tu e o teu irmão vão.",
+        "exemplo": "«Convocam-se os encarregados de educação para a reunião de sexta-feira, às 15 horas, na sala 4.» Ontem nós estivemos na reunião.",
+        "lembra": "Sujeito no plural, verbo no plural.",
+        "audio": "436e6a1d1ed6.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A acta",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A acta é o texto que:",
+         "options": [
+          "Regista o que se passou numa reunião",
+          "Convoca para uma reunião",
+          "Anuncia um produto"
+         ],
+         "a": 0,
+         "audio": "f1b8fc354751.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A acta escreve-se:",
+         "options": [
+          "Depois da reunião, com o que foi decidido",
+          "Antes da reunião, com o que se vai decidir",
+          "Durante a aula de Português"
+         ],
+         "a": 0,
+         "audio": "76515bef49e1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na estrutura de uma acta aparecem:",
+         "options": [
+          "A data, os presentes, os assuntos e as decisões",
+          "Versos e estrofes",
+          "Um pedido de desculpa"
+         ],
+         "a": 0,
+         "audio": "2a84fc250aac.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa acta, a linguagem deve ser:",
+         "options": [
+          "Formal e objectiva",
+          "Familiar",
+          "Poética"
+         ],
+         "a": 0,
+         "audio": "9121e885fd1b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quem assina a acta no fim?",
+         "options": [
+          "O secretário e o presidente da reunião",
+          "Só os alunos",
+          "Ninguém"
+         ],
+         "a": 0,
+         "audio": "35d1b15ca0b9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A acta regista o que se passou numa reunião: a data, quem esteve presente, os assuntos tratados e as decisões. Escreve-se depois da reunião, em linguagem formal e objectiva, e é assinada pelo secretário e pelo presidente.",
+        "exemplo": "«Aos dez dias de Março reuniram-se os pais... Foi decidido comprar livros para a biblioteca.» Assinam o secretário e o presidente.",
+        "lembra": "A convocatória vem antes da reunião; a acta vem depois.",
+        "audio": "7b431335a222.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "O modo conjuntivo e os tempos compostos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Espero que os pais venham à reunião.» O verbo «venham» está no modo:",
+         "options": [
+          "Conjuntivo",
+          "Indicativo",
+          "Imperativo"
+         ],
+         "a": 0,
+         "audio": "3f253717c1aa.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual forma está no presente do conjuntivo?",
+         "options": [
+          "que eu fale",
+          "eu falo",
+          "eu falei"
+         ],
+         "a": 0,
+         "audio": "73db45084ff4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Quando cheguei, a reunião já tinha começado.» «Tinha começado» é o:",
+         "options": [
+          "Pretérito mais-que-perfeito composto",
+          "Presente do indicativo",
+          "Futuro"
+         ],
+         "a": 0,
+         "audio": "b1bc27cdabaf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um tempo composto forma-se com:",
+         "options": [
+          "O auxiliar ter ou haver e um particípio",
+          "Dois verbos no infinitivo",
+          "Um verbo e um adjectivo"
+         ],
+         "a": 0,
+         "audio": "104481d679a4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa convocatória dirigida ao director, a forma de tratamento adequada é:",
+         "options": [
+          "Excelentíssimo Senhor Director",
+          "Olá, chefe",
+          "Tu, director"
+         ],
+         "a": 0,
+         "audio": "8631e7e7ae71.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O modo conjuntivo exprime desejo, dúvida ou possibilidade: espero que venham. Os tempos compostos formam-se com o auxiliar ter e um particípio: tinha começado é o pretérito mais-que-perfeito composto.",
+        "exemplo": "Presente do conjuntivo: que eu fale. Quando cheguei, a reunião já tinha começado. Ao director escreve-se «Excelentíssimo Senhor Director».",
+        "lembra": "Tinha + particípio: uma coisa que aconteceu antes de outra no passado.",
+        "audio": "3dc7bb7dcb56.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Textos jornalísticos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A notícia e as suas perguntas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma notícia responde às perguntas:",
+         "options": [
+          "Quem? O quê? Quando? Onde? Como? Porquê?",
+          "Rima? Verso? Estrofe?",
+          "Herói? Vilão? Final feliz?"
+         ],
+         "a": 0,
+         "audio": "7b74d0b8af3c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O primeiro parágrafo de uma notícia:",
+         "options": [
+          "Resume o essencial do acontecimento",
+          "Dá a opinião do jornalista",
+          "É sempre um poema"
+         ],
+         "a": 0,
+         "audio": "82e551c63fc8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Chuvas fortes fecharam a estrada de Lichinga a Cuamba na terça-feira.» O «quando» é:",
+         "options": [
+          "na terça-feira",
+          "chuvas fortes",
+          "a estrada"
+         ],
+         "a": 0,
+         "audio": "c441c4190160.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na mesma notícia das chuvas, o «onde» é:",
+         "options": [
+          "a estrada de Lichinga a Cuamba",
+          "na terça-feira",
+          "chuvas fortes"
+         ],
+         "a": 0,
+         "audio": "d997debdf19a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A linguagem de uma notícia deve ser:",
+         "options": [
+          "Clara, objectiva e sem opiniões",
+          "Cheia de rimas",
+          "Em primeira pessoa, com sentimentos"
+         ],
+         "a": 0,
+         "audio": "3cdbfb6ff466.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A notícia conta um acontecimento real e responde a seis perguntas: quem, o quê, quando, onde, como e porquê. O primeiro parágrafo resume o essencial, e a linguagem é clara e objectiva, sem opiniões.",
+        "exemplo": "«Chuvas fortes fecharam a estrada de Lichinga a Cuamba na terça-feira.» O quê: chuvas fecharam a estrada. Onde: de Lichinga a Cuamba. Quando: na terça-feira.",
+        "lembra": "Primeiro o essencial; os pormenores vêm depois.",
+        "audio": "bb4799e1bad0.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Advérbios, numerais e complementos circunstanciais",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Em «A escola abriu ontem», «ontem» é advérbio de:",
+         "options": [
+          "Tempo",
+          "Lugar",
+          "Modo"
+         ],
+         "a": 0,
+         "audio": "876eedd88537.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em «Os alunos entraram devagar», «devagar» é advérbio de:",
+         "options": [
+          "Modo",
+          "Tempo",
+          "Lugar"
+         ],
+         "a": 0,
+         "audio": "f345eee39168.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Vinte» é um numeral cardinal. «Vigésimo» é um numeral:",
+         "options": [
+          "Ordinal",
+          "Cardinal",
+          "Colectivo"
+         ],
+         "a": 0,
+         "audio": "fc77e36ad8a1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em «O jogo começou às quinze horas no campo da escola», o complemento circunstancial de lugar é:",
+         "options": [
+          "no campo da escola",
+          "às quinze horas",
+          "o jogo"
+         ],
+         "a": 0,
+         "audio": "36f75ab72e80.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Escreve por extenso o numeral ordinal que corresponde a 3.",
+         "a": "terceiro",
+         "audio": "14e94eb04b3f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os advérbios dizem quando (ontem), onde (aqui) e como (devagar). Os numerais cardinais contam (vinte); os ordinais ordenam (vigésimo). Os complementos circunstanciais dizem o tempo, o lugar e o modo da acção.",
+        "exemplo": "O jogo começou às quinze horas (tempo) no campo da escola (lugar). Terceiro é o ordinal de três.",
+        "lembra": "Advérbio de tempo, lugar ou modo: pergunta quando, onde, como.",
+        "audio": "222cdc526328.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Classificados, preposições e acentuação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um anúncio classificado é:",
+         "options": [
+          "Um texto curto que oferece ou procura alguma coisa",
+          "Uma notícia longa",
+          "Um poema"
+         ],
+         "a": 0,
+         "audio": "9eb7ccb2d599.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Vende-se bicicleta em bom estado. Contactar a Amina.» A linguagem é:",
+         "options": [
+          "Curta e directa, para poupar espaço",
+          "Longa e descritiva",
+          "Poética"
+         ],
+         "a": 0,
+         "audio": "d2a1ce389f0b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em «Vou de Lichinga para Cuamba», as preposições são:",
+         "options": [
+          "de e para",
+          "vou e Cuamba",
+          "Lichinga e Cuamba"
+         ],
+         "a": 0,
+         "audio": "69573f01f1e5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual palavra está bem acentuada?",
+         "options": [
+          "lâmpada",
+          "lampada",
+          "lampáda"
+         ],
+         "a": 0,
+         "audio": "5f130b690b3f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As palavras esdrúxulas, com a sílaba tónica na antepenúltima:",
+         "options": [
+          "Acentuam-se sempre",
+          "Nunca se acentuam",
+          "Só se acentuam no plural"
+         ],
+         "a": 0,
+         "audio": "ab156040207b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O anúncio classificado é curto e directo, para caber num espaço pequeno. As preposições a, de, em, para e por ligam palavras. As esdrúxulas acentuam-se sempre: lâmpada, médico, sílaba.",
+        "exemplo": "«Vende-se bicicleta em bom estado. Contactar a Amina.» Vou de Lichinga para Cuamba: de e para são preposições.",
+        "lembra": "Sílaba tónica na antepenúltima: leva sempre acento.",
+        "audio": "442f8d3366e0.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Textos multiuso",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O texto expositivo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um texto expositivo serve para:",
+         "options": [
+          "Explicar um assunto de forma clara e organizada",
+          "Contar uma aventura",
+          "Convencer alguém a comprar"
+         ],
+         "a": 0,
+         "audio": "cf403fbc625b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um texto de um manual de Ciências é um texto:",
+         "options": [
+          "Didáctico e expositivo",
+          "Literário",
+          "Administrativo"
+         ],
+         "a": 0,
+         "audio": "4ef0b542190f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num texto expositivo, as ideias organizam-se:",
+         "options": [
+          "Do geral para o particular, com exemplos",
+          "Ao acaso",
+          "Em versos"
+         ],
+         "a": 0,
+         "audio": "5ecfc20bef2a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A linguagem de um texto científico é:",
+         "options": [
+          "Objectiva e com termos precisos",
+          "Cheia de sentimentos",
+          "Familiar"
+         ],
+         "a": 0,
+         "audio": "645e9b0f8237.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O texto expositivo explica um assunto de forma clara e organizada: é o texto dos manuais de Ciências e de História. Vai do geral para o particular, dá exemplos, e usa termos precisos e uma linguagem objectiva.",
+        "exemplo": "«A água existe em três estados: sólido, líquido e gasoso. O gelo, por exemplo, é água no estado sólido.» Primeiro a ideia geral, depois o exemplo.",
+        "lembra": "Expor é explicar, não contar nem convencer.",
+        "audio": "f4c7380aa5d0.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Verbos transitivos, sujeito e complementos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Em «A Amina leu o livro», o verbo «leu» é:",
+         "options": [
+          "Transitivo: precisa de complemento directo",
+          "Intransitivo",
+          "Impessoal"
+         ],
+         "a": 0,
+         "audio": "bd27d49567df.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em «O bebé dormiu», o verbo «dormiu» é:",
+         "options": [
+          "Intransitivo",
+          "Transitivo directo",
+          "Transitivo indirecto"
+         ],
+         "a": 0,
+         "audio": "e7208556a3e4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em «A Amina leu o livro», o complemento directo é:",
+         "options": [
+          "o livro",
+          "a Amina",
+          "leu"
+         ],
+         "a": 0,
+         "audio": "85531bb15202.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em «O professor deu um prémio ao aluno», o complemento indirecto é:",
+         "options": [
+          "ao aluno",
+          "um prémio",
+          "o professor"
+         ],
+         "a": 0,
+         "audio": "dbac5d6992a3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em «Os alunos escreveram um relato», o sujeito é:",
+         "options": [
+          "os alunos",
+          "um relato",
+          "escreveram"
+         ],
+         "a": 0,
+         "audio": "ad54c3a04adf.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um verbo transitivo precisa de um complemento: leu o livro. Um intransitivo não precisa: dormiu. O complemento directo responde a «o quê?»; o indirecto responde a «a quem?». O sujeito é quem faz a acção.",
+        "exemplo": "A Amina (sujeito) leu o livro (complemento directo). O professor deu um prémio ao aluno (complemento indirecto).",
+        "lembra": "Directo: o quê? Indirecto: a quem?",
+        "audio": "20310652fae7.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Relato, condicional e orações subordinadas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um relato de acontecimentos conta:",
+         "options": [
+          "Factos reais, pela ordem em que aconteceram",
+          "Uma lenda",
+          "Um sonho em versos"
+         ],
+         "a": 0,
+         "audio": "8e3b0b244adf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eu iria à festa se pudesse.» O verbo «iria» está no:",
+         "options": [
+          "Condicional",
+          "Presente",
+          "Pretérito perfeito"
+         ],
+         "a": 0,
+         "audio": "6e81b6feb376.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Quando a chuva parou, saímos.» A oração «quando a chuva parou» é subordinada:",
+         "options": [
+          "Temporal",
+          "Condicional",
+          "Causal"
+         ],
+         "a": 0,
+         "audio": "0ccfddca276f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Se estudares, passas.» A oração «se estudares» é subordinada:",
+         "options": [
+          "Condicional",
+          "Temporal",
+          "Final"
+         ],
+         "a": 0,
+         "audio": "d2520abe3f38.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Completa com o verbo dizer: «Ontem ele ___ a verdade.»",
+         "a": "disse",
+         "audio": "a9989c4dea43.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O relato conta factos reais pela ordem em que aconteceram. O condicional diz o que aconteceria: iria. As orações subordinadas temporais dizem quando (quando chegou); as condicionais põem uma condição (se estudares).",
+        "exemplo": "Eu iria à festa se pudesse. Quando a chuva parou, saímos. Se estudares, passas. Ontem ele disse a verdade.",
+        "lembra": "«Quando» é tempo; «se» é condição.",
+        "audio": "482624b1ad48.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Textos literários",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Lenda e mito: o tempo e as personagens",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma lenda é:",
+         "options": [
+          "Uma narrativa tradicional que mistura factos reais e imaginação",
+          "Um texto de leis",
+          "Uma notícia"
+         ],
+         "a": 0,
+         "audio": "37780d463ec8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um mito serve, sobretudo, para:",
+         "options": [
+          "Explicar a origem do mundo ou de um fenómeno",
+          "Vender um produto",
+          "Convocar uma reunião"
+         ],
+         "a": 0,
+         "audio": "5688fe2ff045.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O tempo psicológico de uma narrativa é:",
+         "options": [
+          "O tempo como a personagem o sente",
+          "O tempo do relógio e do calendário",
+          "O tempo que se leva a ler"
+         ],
+         "a": 0,
+         "audio": "3b0057566aa0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O Ali era alto e tinha os olhos escuros.» Este retrato é:",
+         "options": [
+          "Físico, por caracterização directa",
+          "Psicológico",
+          "Do espaço"
+         ],
+         "a": 0,
+         "audio": "34046d8a2069.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando o narrador pára a acção para descrever um lugar, há um momento de:",
+         "options": [
+          "Pausa",
+          "Avanço",
+          "Diálogo"
+         ],
+         "a": 0,
+         "audio": "ec130e887bc3.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Completa com o verbo vir: «Ontem eu ___ cedo para casa.»",
+         "a": "vim",
+         "audio": "04a079422cce.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A lenda é uma narrativa tradicional que mistura factos e imaginação; o mito explica a origem de alguma coisa. O tempo pode ser cronológico, o do relógio, ou psicológico, o que a personagem sente. O retrato é físico ou psicológico.",
+        "exemplo": "«O Ali era alto e tinha os olhos escuros» é um retrato físico directo. Quando o narrador pára para descrever o rio, há uma pausa na acção. Ontem eu vim cedo.",
+        "lembra": "Directo é o que o narrador diz; indirecto é o que se adivinha pelo que a personagem faz.",
+        "audio": "aa7e71d136d2.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O poema: verso, estrofe e recursos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Cada linha de um poema chama-se:",
+         "options": [
+          "Verso",
+          "Estrofe",
+          "Parágrafo"
+         ],
+         "a": 0,
+         "audio": "052f83ec8cda.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um grupo de versos separado dos outros por um espaço em branco é:",
+         "options": [
+          "Uma estrofe",
+          "Um capítulo",
+          "Uma rima"
+         ],
+         "a": 0,
+         "audio": "d5f224aac168.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Os teus olhos são duas estrelas.» O recurso estilístico é:",
+         "options": [
+          "Metáfora",
+          "Comparação",
+          "Hipérbole"
+         ],
+         "a": 0,
+         "audio": "109e67b82451.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Chorei um rio de lágrimas.» O recurso estilístico é:",
+         "options": [
+          "Hipérbole",
+          "Comparação",
+          "Metáfora"
+         ],
+         "a": 0,
+         "audio": "971d954aa519.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Rui de Noronha e Marcelino dos Santos foram:",
+         "options": [
+          "Poetas moçambicanos",
+          "Jogadores de futebol",
+          "Presidentes de Portugal"
+         ],
+         "a": 0,
+         "audio": "e3d4ccfe8c31.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Num poema cada linha é um verso e cada grupo de versos é uma estrofe. A comparação usa «como»; a metáfora diz que uma coisa é outra; a hipérbole exagera. Rui de Noronha e Marcelino dos Santos são poetas moçambicanos.",
+        "exemplo": "«Os teus olhos são como estrelas» é comparação. «Os teus olhos são duas estrelas» é metáfora. «Chorei um rio de lágrimas» é hipérbole.",
+        "lembra": "Com «como» é comparação; sem «como» é metáfora.",
+        "audio": "6cf749b63e61.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "O drama e o discurso directo e indirecto",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um texto dramático é escrito para:",
+         "options": [
+          "Ser representado num palco",
+          "Ser cantado",
+          "Ser publicado num jornal"
+         ],
+         "a": 0,
+         "audio": "e16c92d7cfb4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num texto dramático, as indicações sobre gestos e cenário chamam-se:",
+         "options": [
+          "Didascálias",
+          "Estrofes",
+          "Rimas"
+         ],
+         "a": 0,
+         "audio": "a3811678d093.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A Amina disse: — Vou à escola.» Este é discurso:",
+         "options": [
+          "Directo",
+          "Indirecto",
+          "Livre"
+         ],
+         "a": 0,
+         "audio": "8fd75c0489e6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No discurso indirecto, «A Amina disse: — Vou à escola.» fica:",
+         "options": [
+          "A Amina disse que ia à escola.",
+          "A Amina disse: vou à escola.",
+          "A Amina vai à escola."
+         ],
+         "a": 0,
+         "audio": "c915d561a30d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao falar com um professor numa peça, a personagem usa a forma de tratamento:",
+         "options": [
+          "Senhor professor",
+          "Tu, pá",
+          "Ó tipo"
+         ],
+         "a": 0,
+         "audio": "e9a4ea98bc97.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O texto dramático é escrito para ser representado: tem falas de personagens e didascálias, as indicações sobre gestos e cenário. No discurso directo a personagem fala; no indirecto o narrador conta o que ela disse.",
+        "exemplo": "Directo: A Amina disse: — Vou à escola. Indirecto: A Amina disse que ia à escola. Numa peça, ao professor diz-se «Senhor professor».",
+        "lembra": "Directo tem travessão; indirecto tem «que».",
+        "audio": "0d6fc94eb954.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

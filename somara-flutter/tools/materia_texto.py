@@ -2570,4 +2570,159 @@ MATERIA = {
                    "dão a volta completa.",
         "lembra": "Translação desliza, reflexão espelha, rotação roda.",
     },
+
+    # ---------------------------------------------------------------
+    # Portugues -- 8a classe
+    # ---------------------------------------------------------------
+    "por-8c:u1:n1": {
+        "explica": "Um regulamento de avaliação é um texto normativo: diz o "
+                   "que se deve e não se deve fazer. Organiza-se em artigos "
+                   "numerados, e a linguagem é clara, objectiva e impessoal — "
+                   "não fala de ninguém em particular.",
+        "exemplo": "«Artigo 3. O aluno deve apresentar-se à prova com o "
+                   "cartão de estudante.» O verbo «deve» impõe um dever a "
+                   "todos os alunos.",
+        "lembra": "Normativo é o texto que manda; dever e proibir são as suas "
+                  "palavras.",
+    },
+    "por-8c:u1:n2": {
+        "explica": "Nome e adjectivo concordam em género e número: prova "
+                   "escrita, provas escritas. Para dar ordens usa-se o "
+                   "imperativo — entrega, sentem-se. Nos regulamentos, a "
+                   "regra vem muitas vezes no infinitivo: é proibido copiar.",
+        "exemplo": "Os resultados finais saem em Dezembro. Sentem-se e leiam "
+                   "as instruções. É proibido copiar durante a prova.",
+        "lembra": "O adjectivo veste-se como o nome: no mesmo género e no "
+                  "mesmo número.",
+    },
+    "por-8c:u1:n3": {
+        "explica": "Na voz activa o sujeito faz a acção; na passiva recebe-a, "
+                   "e quem a faz passa a agente da passiva, com «por». As "
+                   "orações coordenadas disjuntivas ligam-se por «ou» e "
+                   "apresentam alternativas.",
+        "exemplo": "O director aprovou o regulamento. Na passiva: O "
+                   "regulamento foi aprovado pelo director. Disjuntiva: "
+                   "Estudas ou reprovas.",
+        "lembra": "Na passiva, o «pelo» aponta para quem fez.",
+    },
+    "por-8c:u2:n1": {
+        "explica": "A convocatória chama pessoas a uma reunião e tem de dizer "
+                   "o dia, a hora, o local e o assunto. O verbo concorda com "
+                   "o sujeito em pessoa e número: os pais foram, tu e o teu "
+                   "irmão vão.",
+        "exemplo": "«Convocam-se os encarregados de educação para a reunião "
+                   "de sexta-feira, às 15 horas, na sala 4.» Ontem nós "
+                   "estivemos na reunião.",
+        "lembra": "Sujeito no plural, verbo no plural.",
+    },
+    "por-8c:u2:n2": {
+        "explica": "A acta regista o que se passou numa reunião: a data, "
+                   "quem esteve presente, os assuntos tratados e as decisões. "
+                   "Escreve-se depois da reunião, em linguagem formal e "
+                   "objectiva, e é assinada pelo secretário e pelo presidente.",
+        "exemplo": "«Aos dez dias de Março reuniram-se os pais... Foi "
+                   "decidido comprar livros para a biblioteca.» Assinam o "
+                   "secretário e o presidente.",
+        "lembra": "A convocatória vem antes da reunião; a acta vem depois.",
+    },
+    "por-8c:u2:n3": {
+        "explica": "O modo conjuntivo exprime desejo, dúvida ou possibilidade: "
+                   "espero que venham. Os tempos compostos formam-se com o "
+                   "auxiliar ter e um particípio: tinha começado é o "
+                   "pretérito mais-que-perfeito composto.",
+        "exemplo": "Presente do conjuntivo: que eu fale. Quando cheguei, a "
+                   "reunião já tinha começado. Ao director escreve-se "
+                   "«Excelentíssimo Senhor Director».",
+        "lembra": "Tinha + particípio: uma coisa que aconteceu antes de outra "
+                  "no passado.",
+    },
+    "por-8c:u3:n1": {
+        "explica": "A notícia conta um acontecimento real e responde a seis "
+                   "perguntas: quem, o quê, quando, onde, como e porquê. O "
+                   "primeiro parágrafo resume o essencial, e a linguagem é "
+                   "clara e objectiva, sem opiniões.",
+        "exemplo": "«Chuvas fortes fecharam a estrada de Lichinga a Cuamba na "
+                   "terça-feira.» O quê: chuvas fecharam a estrada. Onde: de "
+                   "Lichinga a Cuamba. Quando: na terça-feira.",
+        "lembra": "Primeiro o essencial; os pormenores vêm depois.",
+    },
+    "por-8c:u3:n2": {
+        "explica": "Os advérbios dizem quando (ontem), onde (aqui) e como "
+                   "(devagar). Os numerais cardinais contam (vinte); os "
+                   "ordinais ordenam (vigésimo). Os complementos "
+                   "circunstanciais dizem o tempo, o lugar e o modo da acção.",
+        "exemplo": "O jogo começou às quinze horas (tempo) no campo da escola "
+                   "(lugar). Terceiro é o ordinal de três.",
+        "lembra": "Advérbio de tempo, lugar ou modo: pergunta quando, onde, "
+                  "como.",
+    },
+    "por-8c:u3:n3": {
+        "explica": "O anúncio classificado é curto e directo, para caber num "
+                   "espaço pequeno. As preposições a, de, em, para e por ligam "
+                   "palavras. As esdrúxulas acentuam-se sempre: lâmpada, "
+                   "médico, sílaba.",
+        "exemplo": "«Vende-se bicicleta em bom estado. Contactar a Amina.» "
+                   "Vou de Lichinga para Cuamba: de e para são preposições.",
+        "lembra": "Sílaba tónica na antepenúltima: leva sempre acento.",
+    },
+    "por-8c:u4:n1": {
+        "explica": "O texto expositivo explica um assunto de forma clara e "
+                   "organizada: é o texto dos manuais de Ciências e de "
+                   "História. Vai do geral para o particular, dá exemplos, e "
+                   "usa termos precisos e uma linguagem objectiva.",
+        "exemplo": "«A água existe em três estados: sólido, líquido e gasoso. "
+                   "O gelo, por exemplo, é água no estado sólido.» Primeiro a "
+                   "ideia geral, depois o exemplo.",
+        "lembra": "Expor é explicar, não contar nem convencer.",
+    },
+    "por-8c:u4:n2": {
+        "explica": "Um verbo transitivo precisa de um complemento: leu o "
+                   "livro. Um intransitivo não precisa: dormiu. O complemento "
+                   "directo responde a «o quê?»; o indirecto responde a «a "
+                   "quem?». O sujeito é quem faz a acção.",
+        "exemplo": "A Amina (sujeito) leu o livro (complemento directo). O "
+                   "professor deu um prémio ao aluno (complemento indirecto).",
+        "lembra": "Directo: o quê? Indirecto: a quem?",
+    },
+    "por-8c:u4:n3": {
+        "explica": "O relato conta factos reais pela ordem em que aconteceram. "
+                   "O condicional diz o que aconteceria: iria. As orações "
+                   "subordinadas temporais dizem quando (quando chegou); as "
+                   "condicionais põem uma condição (se estudares).",
+        "exemplo": "Eu iria à festa se pudesse. Quando a chuva parou, saímos. "
+                   "Se estudares, passas. Ontem ele disse a verdade.",
+        "lembra": "«Quando» é tempo; «se» é condição.",
+    },
+    "por-8c:u5:n1": {
+        "explica": "A lenda é uma narrativa tradicional que mistura factos e "
+                   "imaginação; o mito explica a origem de alguma coisa. O "
+                   "tempo pode ser cronológico, o do relógio, ou psicológico, "
+                   "o que a personagem sente. O retrato é físico ou "
+                   "psicológico.",
+        "exemplo": "«O Ali era alto e tinha os olhos escuros» é um retrato "
+                   "físico directo. Quando o narrador pára para descrever o "
+                   "rio, há uma pausa na acção. Ontem eu vim cedo.",
+        "lembra": "Directo é o que o narrador diz; indirecto é o que se "
+                  "adivinha pelo que a personagem faz.",
+    },
+    "por-8c:u5:n2": {
+        "explica": "Num poema cada linha é um verso e cada grupo de versos é "
+                   "uma estrofe. A comparação usa «como»; a metáfora diz que "
+                   "uma coisa é outra; a hipérbole exagera. Rui de Noronha e "
+                   "Marcelino dos Santos são poetas moçambicanos.",
+        "exemplo": "«Os teus olhos são como estrelas» é comparação. «Os teus "
+                   "olhos são duas estrelas» é metáfora. «Chorei um rio de "
+                   "lágrimas» é hipérbole.",
+        "lembra": "Com «como» é comparação; sem «como» é metáfora.",
+    },
+    "por-8c:u5:n3": {
+        "explica": "O texto dramático é escrito para ser representado: tem "
+                   "falas de personagens e didascálias, as indicações sobre "
+                   "gestos e cenário. No discurso directo a personagem fala; "
+                   "no indirecto o narrador conta o que ela disse.",
+        "exemplo": "Directo: A Amina disse: — Vou à escola. Indirecto: A "
+                   "Amina disse que ia à escola. Numa peça, ao professor "
+                   "diz-se «Senhor professor».",
+        "lembra": "Directo tem travessão; indirecto tem «que».",
+    },
 }
