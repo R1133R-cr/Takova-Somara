@@ -5750,4 +5750,94 @@ MATERIA = {
                    "vista da esquina: dois.",
         "lembra": "De frente, um ponto; de canto, dois.",
     },
+
+    # ---------------------------------------------------------------
+    # Educacao Fisica -- 9a classe
+    # ---------------------------------------------------------------
+    "edf-9c:u1:n1": {
+        "explica": "Os jogos recreativos treinam o corpo e o grupo: o "
+                   "fartlek muda de ritmo pelo terreno, as corridas em "
+                   "grupo pedem cooperação, os jogos matemáticos juntam "
+                   "contas e corrida. Antes, explicam-se as regras a "
+                   "todos.",
+        "exemplo": "Correr 100 metros de mãos dadas com a turma só "
+                   "resulta se todos combinarem o passo: é o espírito de "
+                   "equipa.",
+        "lembra": "Regras claras, e todos a ganhar juntos.",
+    },
+    "edf-9c:u1:n2": {
+        "explica": "As danças africanas guardam a cultura dos povos: a "
+                   "marrabenta do sul de Moçambique, o semba e o kuduro de "
+                   "Angola, o funaná de Cabo Verde. Aprendem-se ouvindo o "
+                   "ritmo e os passos básicos primeiro.",
+        "exemplo": "A marrabenta nasceu à volta de Maputo e dança-se com "
+                   "as ancas soltas ao ritmo da guitarra.",
+        "lembra": "Primeiro o ritmo, depois os passos.",
+    },
+    "edf-9c:u2:n1": {
+        "explica": "Na ginástica de solo há o rolamento, a vela, a roda e o "
+                   "pino. No rolamento o queixo vai ao peito; no pino, um "
+                   "colega segura no fim. Com a turma grande, trabalha-se "
+                   "por estações.",
+        "exemplo": "Quatro exercícios de salto à corda em grupo, "
+                   "encadeados, fazem uma pequena coreografia.",
+        "lembra": "Queixo ao peito no rolamento.",
+    },
+    "edf-9c:u2:n2": {
+        "explica": "Na acrobática, o mais pesado é o base, em baixo, e o "
+                   "mais leve é o volante, em cima. O base mantém as costas "
+                   "direitas; o volante nunca pisa o meio da coluna. Pares, "
+                   "trios e quartetos, sempre com um ajudante.",
+        "exemplo": "Numa pirâmide a três, dois bases de gatas e um volante "
+                   "de pé com os pés nos ombros e nas ancas deles, nunca "
+                   "nos rins.",
+        "lembra": "Pesado em baixo, leve em cima, segurança primeiro.",
+    },
+    "edf-9c:u3:n1": {
+        "explica": "O teste de Cooper mede a resistência: 12 minutos a "
+                   "correr sem parar, e conta a distância. A corrida de "
+                   "barreiras tem partida, aproximação, transposição e "
+                   "corrida final, e aprende-se com obstáculos no chão.",
+        "exemplo": "Barreiras de paus à altura do joelho: cada aluno "
+                   "transpõe pelo menos três.",
+        "lembra": "Cooper: 12 minutos sem parar.",
+    },
+    "edf-9c:u3:n2": {
+        "explica": "O salto em altura tem corrida de balanço, chamada, "
+                   "transposição e queda. Na técnica de tesoura, as pernas "
+                   "passam a fasquia uma de cada vez. A fasquia começa "
+                   "baixa e é leve, para cair sem magoar.",
+        "exemplo": "Os colegas seguram a fasquia à altura do umbigo; "
+                   "quem salta corre de lado e passa uma perna e depois a "
+                   "outra.",
+        "lembra": "Tesoura: uma perna de cada vez.",
+    },
+    "edf-9c:u4:n1": {
+        "explica": "O guarda-redes só usa as mãos na sua grande área e "
+                   "coloca-se entre a bola e o centro da baliza. Um bom "
+                   "plano de jogo dá um papel a cada um, e a decisão do "
+                   "árbitro respeita-se.",
+        "exemplo": "Um jogo formal tem duas partes de 45 minutos; na aula "
+                   "fazem-se jogos reduzidos, para todos tocarem mais "
+                   "vezes na bola.",
+        "lembra": "Entre a bola e o centro da baliza.",
+    },
+    "edf-9c:u5:n1": {
+        "explica": "No voleibol há seis por equipa e três toques para "
+                   "passar a bola. O serviço põe a bola em jogo; o passe "
+                   "é por cima, com os dedos; o remate é o ataque forte. "
+                   "Na aula a rede pode baixar.",
+        "exemplo": "Serviço por baixo: a mão bate a bola de baixo para "
+                   "cima, à frente do corpo, e a bola passa a rede.",
+        "lembra": "Seis jogadores, três toques.",
+    },
+    "edf-9c:u5:n2": {
+        "explica": "A manchete recebe bolas baixas com os antebraços "
+                   "juntos; o bloco, junto à rede, trava o remate. A bola "
+                   "bate-se, nunca se agarra. Ganha o set quem chega "
+                   "primeiro a 25 pontos com dois de vantagem.",
+        "exemplo": "Receber em manchete, passar por cima, rematar: os três "
+                   "toques feitos por três colegas diferentes.",
+        "lembra": "Manchete em baixo, passe em cima.",
+    },
 }

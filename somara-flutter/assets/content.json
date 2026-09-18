@@ -46412,6 +46412,659 @@
      ]
     }
    ]
+  },
+  {
+   "id": "edf-9c",
+   "disciplina": "Educação Física",
+   "classe": "9ª classe",
+   "tag": "EDF",
+   "fonte": "Programa de Ensino da Disciplina de Educação Física — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, 9ª classe, pp. 33-40. As cinco unidades temáticas e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 9ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Danças e jogos educativos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Os jogos recreativos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O fartlek é uma corrida em que:",
+         "options": [
+          "Se muda de ritmo, ora depressa, ora devagar, pelo terreno",
+          "Se corre sempre à mesma velocidade",
+          "Se corre para trás"
+         ],
+         "a": 0,
+         "audio": "e84fa5fe05b8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Correr 100 metros de mãos dadas com a turma é um jogo que treina:",
+         "options": [
+          "O espírito de equipa e a cooperação",
+          "A força de um aluno só",
+          "A velocidade individual"
+         ],
+         "a": 0,
+         "audio": "f8367ee99a07.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num jogo matemático, cada equipa corre até ao número que é a soma de 7 e 8. A que número correm?",
+         "a": "15",
+         "audio": "0af71802400a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um jogo educativo sobre casamentos prematuros serve para:",
+         "options": [
+          "Pensar e conversar sobre o assunto a brincar",
+          "Ridicularizar os colegas",
+          "Ganhar pontos sem regras"
+         ],
+         "a": 0,
+         "audio": "dfa4b763fd7d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes de ensinar um jogo aos colegas, deve-se:",
+         "options": [
+          "Explicar as regras de forma clara, para todos saberem o que fazer",
+          "Começar sem dizer nada",
+          "Mudar as regras a meio"
+         ],
+         "a": 0,
+         "audio": "f1c0b2a9c029.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os jogos recreativos treinam o corpo e o grupo: o fartlek muda de ritmo pelo terreno, as corridas em grupo pedem cooperação, os jogos matemáticos juntam contas e corrida. Antes, explicam-se as regras a todos.",
+        "exemplo": "Correr 100 metros de mãos dadas com a turma só resulta se todos combinarem o passo: é o espírito de equipa.",
+        "lembra": "Regras claras, e todos a ganhar juntos.",
+        "audio": "842d91cf7571.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "As danças africanas",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada dança ao país de onde vem.",
+         "pairs": [
+          [
+           "Marrabenta",
+           "Moçambique"
+          ],
+          [
+           "Semba",
+           "Angola"
+          ],
+          [
+           "Funaná",
+           "Cabo Verde"
+          ]
+         ],
+         "audio": "c43149a9b55d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A marrabenta nasceu:",
+         "options": [
+          "No sul de Moçambique, à volta de Maputo",
+          "No Brasil",
+          "Em Portugal"
+         ],
+         "a": 0,
+         "audio": "991ae22e7397.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O kuduro é uma dança de:",
+         "options": [
+          "Angola",
+          "Moçambique",
+          "Cabo Verde"
+         ],
+         "a": 0,
+         "audio": "162fb15f3f11.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Dançar as danças africanas na escola serve para:",
+         "options": [
+          "Conhecer e guardar a cultura dos povos africanos",
+          "Esquecer a tradição",
+          "Só fazer exercício"
+         ],
+         "a": 0,
+         "audio": "594c7415ac27.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para dançar bem uma dança africana, primeiro:",
+         "options": [
+          "Ouve-se o ritmo e aprendem-se os passos básicos",
+          "Faz-se a coreografia final",
+          "Escolhe-se a roupa"
+         ],
+         "a": 0,
+         "audio": "70410bb6ceb1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As danças africanas guardam a cultura dos povos: a marrabenta do sul de Moçambique, o semba e o kuduro de Angola, o funaná de Cabo Verde. Aprendem-se ouvindo o ritmo e os passos básicos primeiro.",
+        "exemplo": "A marrabenta nasceu à volta de Maputo e dança-se com as ancas soltas ao ritmo da guitarra.",
+        "lembra": "Primeiro o ritmo, depois os passos.",
+        "audio": "2504bcdb6604.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Ginástica",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Ginástica geral e artística",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Na 9ª classe, combinam-se pelo menos quantos exercícios de salto à corda em grupo?",
+         "a": "4",
+         "audio": "7806d849d875.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada elemento da ginástica de solo ao que ele é.",
+         "pairs": [
+          [
+           "Rolamento para a frente",
+           "Rolar sobre as costas, com o queixo ao peito"
+          ],
+          [
+           "Vela",
+           "Deitado, pernas e tronco esticados para cima"
+          ],
+          [
+           "Roda",
+           "Apoio das mãos, uma a uma, com as pernas a passar por cima"
+          ],
+          [
+           "Pino",
+           "Equilíbrio de pernas para o ar, apoiado nas mãos"
+          ]
+         ],
+         "audio": "fccafe2e469d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No rolamento para a frente, o queixo vai:",
+         "options": [
+          "Encostado ao peito, para proteger o pescoço",
+          "Levantado para trás",
+          "Virado para o lado"
+         ],
+         "a": 0,
+         "audio": "dc8318940ff7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No pino, na fase de aprendizagem:",
+         "options": [
+          "Um colega ajuda a segurar as pernas no fim",
+          "Faz-se sozinho logo da primeira vez",
+          "Faz-se no cimento"
+         ],
+         "a": 0,
+         "audio": "878dc8abe116.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Trabalhar por estações, na aula de ginástica, é:",
+         "options": [
+          "Dividir a turma em grupos que rodam por exercícios diferentes",
+          "Todos a fazer o mesmo ao mesmo tempo",
+          "Esperar numa estação de comboio"
+         ],
+         "a": 0,
+         "audio": "3f46c8cc1d74.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na ginástica de solo há o rolamento, a vela, a roda e o pino. No rolamento o queixo vai ao peito; no pino, um colega segura no fim. Com a turma grande, trabalha-se por estações.",
+        "exemplo": "Quatro exercícios de salto à corda em grupo, encadeados, fazem uma pequena coreografia.",
+        "lembra": "Queixo ao peito no rolamento.",
+        "audio": "bab3b71c134f.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Ginástica acrobática",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada papel na ginástica acrobática ao aluno que o faz.",
+         "pairs": [
+          [
+           "Base, em baixo",
+           "O mais pesado e forte"
+          ],
+          [
+           "Volante, em cima",
+           "O mais leve"
+          ]
+         ],
+         "audio": "113be6e3cfb7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O volante, quando sobe, nunca põe os pés:",
+         "options": [
+          "No meio da coluna do base, nos rins",
+          "Nos ombros do base",
+          "Nas coxas do base"
+         ],
+         "a": 0,
+         "audio": "a54bcb9c5206.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O base deve ter sempre:",
+         "options": [
+          "As costas direitas e a barriga contraída",
+          "As costas curvadas",
+          "Os joelhos soltos"
+         ],
+         "a": 0,
+         "audio": "3ac3b7f1dc41.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Na acrobática, uma figura de trio tem quantos alunos?",
+         "a": "3",
+         "audio": "e1debb61c013.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na acrobática, primeiro está:",
+         "options": [
+          "A segurança: pegas firmes e um ajudante a ver",
+          "A dificuldade do exercício",
+          "A rapidez"
+         ],
+         "a": 0,
+         "audio": "ff0688894439.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na acrobática, o mais pesado é o base, em baixo, e o mais leve é o volante, em cima. O base mantém as costas direitas; o volante nunca pisa o meio da coluna. Pares, trios e quartetos, sempre com um ajudante.",
+        "exemplo": "Numa pirâmide a três, dois bases de gatas e um volante de pé com os pés nos ombros e nas ancas deles, nunca nos rins.",
+        "lembra": "Pesado em baixo, leve em cima, segurança primeiro.",
+        "audio": "ad27b1d27291.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Atletismo",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Resistência e barreiras",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "O teste de Cooper é uma corrida sem parar durante quantos minutos?",
+         "a": "12",
+         "audio": "237a225fbd0e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O teste de Cooper mede:",
+         "options": [
+          "A resistência: a distância que se corre no tempo dado",
+          "A força dos braços",
+          "A flexibilidade"
+         ],
+         "a": 0,
+         "audio": "ad0cfc34867e.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada fase da corrida de barreiras à sua ordem.",
+         "pairs": [
+          [
+           "Partida",
+           "Primeira"
+          ],
+          [
+           "Aproximação à primeira barreira",
+           "Segunda"
+          ],
+          [
+           "Transposição das barreiras",
+           "Terceira"
+          ],
+          [
+           "Corrida depois da última barreira",
+           "Quarta"
+          ]
+         ],
+         "audio": "6894c684da8b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nas barreiras, aprende-se primeiro:",
+         "options": [
+          "Com obstáculos no chão, e depois cada vez mais altos",
+          "Com as barreiras no máximo",
+          "Sem barreiras nunca"
+         ],
+         "a": 0,
+         "audio": "9d9f15a6ac14.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Na 9ª classe, cada aluno deve transpor no mínimo quantas barreiras à altura do joelho?",
+         "a": "3",
+         "audio": "695c4340e72c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O teste de Cooper mede a resistência: 12 minutos a correr sem parar, e conta a distância. A corrida de barreiras tem partida, aproximação, transposição e corrida final, e aprende-se com obstáculos no chão.",
+        "exemplo": "Barreiras de paus à altura do joelho: cada aluno transpõe pelo menos três.",
+        "lembra": "Cooper: 12 minutos sem parar.",
+        "audio": "68d1c989fa44.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O salto em altura",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada fase do salto em altura à sua ordem.",
+         "pairs": [
+          [
+           "Corrida de balanço",
+           "Primeira"
+          ],
+          [
+           "Chamada",
+           "Segunda"
+          ],
+          [
+           "Transposição da fasquia",
+           "Terceira"
+          ],
+          [
+           "Queda",
+           "Quarta"
+          ]
+         ],
+         "audio": "acf321efd507.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na técnica de tesoura, as pernas passam a fasquia:",
+         "options": [
+          "Uma de cada vez, como as lâminas de uma tesoura",
+          "As duas juntas",
+          "De cabeça para baixo"
+         ],
+         "a": 0,
+         "audio": "9d19eb6343ea.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No salto em altura, começa-se:",
+         "options": [
+          "Com a fasquia baixa, e sobe-se aos poucos",
+          "Com a fasquia no máximo",
+          "Sem fasquia"
+         ],
+         "a": 0,
+         "audio": "5c349e25e6e1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os exercícios do abecedário da corrida fazem-se:",
+         "options": [
+          "No início de todas as aulas de atletismo",
+          "Só no fim do ano",
+          "Nunca"
+         ],
+         "a": 0,
+         "audio": "cc23f2640bfd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A fasquia no salto em altura deve ser:",
+         "options": [
+          "Leve e fácil de cair, para ninguém se magoar",
+          "Um pau pesado e fixo",
+          "Um arame"
+         ],
+         "a": 0,
+         "audio": "b0fc2fd6495d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O salto em altura tem corrida de balanço, chamada, transposição e queda. Na técnica de tesoura, as pernas passam a fasquia uma de cada vez. A fasquia começa baixa e é leve, para cair sem magoar.",
+        "exemplo": "Os colegas seguram a fasquia à altura do umbigo; quem salta corre de lado e passa uma perna e depois a outra.",
+        "lembra": "Tesoura: uma perna de cada vez.",
+        "audio": "a10496a35d9a.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Futebol",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O guarda-redes e o jogo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O guarda-redes pode agarrar a bola com as mãos:",
+         "options": [
+          "Só dentro da sua grande área",
+          "Em todo o campo",
+          "Nunca"
+         ],
+         "a": 0,
+         "audio": "ccd584de8049.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um bom guarda-redes coloca-se:",
+         "options": [
+          "Entre a bola e o centro da baliza",
+          "Sempre encostado a um poste",
+          "Fora da área"
+         ],
+         "a": 0,
+         "audio": "a1e844d9146a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando o árbitro decide:",
+         "options": [
+          "Respeita-se a decisão e continua-se a jogar",
+          "Discute-se até ele mudar",
+          "Sai-se do campo"
+         ],
+         "a": 0,
+         "audio": "a7fa7917763e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um bom plano de jogo:",
+         "options": [
+          "Dá um papel a cada jogador da equipa",
+          "Põe todos atrás da bola",
+          "Deixa os mais fracos de fora"
+         ],
+         "a": 0,
+         "audio": "f62a72d57cf2.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num jogo formal de futebol, cada parte dura quantos minutos?",
+         "a": "45",
+         "audio": "ed52c9d2e3c9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O guarda-redes só usa as mãos na sua grande área e coloca-se entre a bola e o centro da baliza. Um bom plano de jogo dá um papel a cada um, e a decisão do árbitro respeita-se.",
+        "exemplo": "Um jogo formal tem duas partes de 45 minutos; na aula fazem-se jogos reduzidos, para todos tocarem mais vezes na bola.",
+        "lembra": "Entre a bola e o centro da baliza.",
+        "audio": "cb4932da7e40.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Voleibol",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Serviço, passe e remate",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "No voleibol, quantos jogadores tem cada equipa em campo?",
+         "a": "6",
+         "audio": "874d843396dd.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos toques pode dar uma equipa na bola antes de a passar para o outro lado?",
+         "a": "3",
+         "audio": "f71191b430ed.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada gesto do voleibol ao que ele é.",
+         "pairs": [
+          [
+           "Serviço",
+           "O primeiro batimento, que põe a bola em jogo"
+          ],
+          [
+           "Passe",
+           "Toque por cima, com as pontas dos dedos das duas mãos"
+          ],
+          [
+           "Remate",
+           "O ataque forte, a bater a bola para o campo do outro"
+          ]
+         ],
+         "audio": "3e3b7fbb93d6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No serviço por baixo, a bola bate-se:",
+         "options": [
+          "Com a mão, de baixo para cima, à frente do corpo",
+          "Com o pé",
+          "Com a cabeça"
+         ],
+         "a": 0,
+         "audio": "9223743797d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na aula, a rede pode baixar-se para:",
+         "options": [
+          "Todos conseguirem passar a bola por cima",
+          "Ninguém jogar",
+          "Ficar mais difícil"
+         ],
+         "a": 0,
+         "audio": "a18d7d05a73a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No voleibol há seis por equipa e três toques para passar a bola. O serviço põe a bola em jogo; o passe é por cima, com os dedos; o remate é o ataque forte. Na aula a rede pode baixar.",
+        "exemplo": "Serviço por baixo: a mão bate a bola de baixo para cima, à frente do corpo, e a bola passa a rede.",
+        "lembra": "Seis jogadores, três toques.",
+        "audio": "bc2eee8e0a11.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Manchete, bloco e regras",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A manchete usa-se para receber:",
+         "options": [
+          "Bolas baixas, com os antebraços juntos",
+          "Bolas altas, com os dedos",
+          "Bolas no chão, com o pé"
+         ],
+         "a": 0,
+         "audio": "3e740a837a2c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O bloco faz-se:",
+         "options": [
+          "Junto à rede, saltando de braços erguidos contra o remate",
+          "No fundo do campo",
+          "Sentado"
+         ],
+         "a": 0,
+         "audio": "d2985e13f5aa.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No voleibol, a bola não pode:",
+         "options": [
+          "Ser agarrada nem conduzida: só batida",
+          "Passar por cima da rede",
+          "Ser servida"
+         ],
+         "a": 0,
+         "audio": "b87345dfad4d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Num set de voleibol, ganha a equipa que chega primeiro a quantos pontos, com dois de vantagem?",
+         "a": "25",
+         "audio": "53467fd5be9b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No voleibol, a equipa ganha:",
+         "options": [
+          "Cooperando: ninguém faz os três toques sozinho",
+          "Com um jogador a fazer tudo",
+          "Sem passar a bola"
+         ],
+         "a": 0,
+         "audio": "7cb01a327b28.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A manchete recebe bolas baixas com os antebraços juntos; o bloco, junto à rede, trava o remate. A bola bate-se, nunca se agarra. Ganha o set quem chega primeiro a 25 pontos com dois de vantagem.",
+        "exemplo": "Receber em manchete, passar por cima, rematar: os três toques feitos por três colegas diferentes.",
+        "lembra": "Manchete em baixo, passe em cima.",
+        "audio": "998dbf3a53e5.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }
