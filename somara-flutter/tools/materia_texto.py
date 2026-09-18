@@ -5555,4 +5555,97 @@ MATERIA = {
                    "valem em qualquer emprego.",
         "lembra": "Enjoy pede -ing.",
     },
+
+    # ---------------------------------------------------------------
+    # Frances -- 9a classe
+    # ---------------------------------------------------------------
+    "fra-9c:u1:n1": {
+        "explica": "A família: «le grand-père», «la tante», «le cousin», "
+                   "«les parents». O adjectivo possessivo vai antes do "
+                   "nome e concorda com ele: «ma mère», «mon père». O "
+                   "pronome possessivo substitui o nome: «le mien», «la "
+                   "mienne».",
+        "exemplo": "«Ce livre est le mien.» «Je préfère ma petite sœur.» Há "
+                   "famílias tradicionais, monoparentais e recompostas.",
+        "lembra": "Ma mère, mon père; le mien, la mienne.",
+    },
+    "fra-9c:u1:n2": {
+        "explica": "As festas e cerimónias: «l'anniversaire», «les "
+                   "fiançailles», «le mariage», «les funérailles». O "
+                   "casamento é tradicional, religioso ou civil. O "
+                   "«faire-part» anuncia um casamento ou um nascimento; o "
+                   "cartão deseja «meilleurs vœux».",
+        "exemplo": "«Nous décorons la salle et nous dansons.» Verbos em "
+                   "«-er» com «nous» acabam em «-ons».",
+        "lembra": "Faire-part anuncia; meilleurs vœux deseja.",
+    },
+    "fra-9c:u1:n3": {
+        "explica": "A carta e o email de convite têm lugar e data, "
+                   "destinatário, fórmula de chamada, corpo, fórmula final "
+                   "e assinatura. Convida-se com «tu veux venir», "
+                   "aceita-se com «avec plaisir» e recusa-se com «je ne "
+                   "peux pas».",
+        "exemplo": "«Cher ami, tu veux venir à ma fête samedi?» — «Je ne "
+                   "peux pas venir, j'ai un examen.»",
+        "lembra": "Ne ... pas à volta do verbo que se nega.",
+    },
+    "fra-9c:u1:n4": {
+        "explica": "Ao telefone atende-se com «allô». «Décrocher» é "
+                   "atender, «raccrocher» desligar, «rappeler» voltar a "
+                   "ligar. Pergunta-se com «est-ce que», e recusa-se com "
+                   "educação: «c'est gentil, mais je ne suis pas libre».",
+        "exemplo": "«Allô? Est-ce que tu veux aller au cinéma samedi?» O "
+                   "telemóvel é «le portable», a rede é «le réseau».",
+        "lembra": "Recusar bem: agradecer primeiro.",
+    },
+    "fra-9c:u1:n5": {
+        "explica": "As refeições: «petit-déjeuner», «déjeuner», «goûter», "
+                   "«dîner». Os partitivos dizem uma parte: «du pain», «de "
+                   "la viande». «En» substitui a quantidade. «Il faut» e o "
+                   "infinitivo dá conselho e obrigação.",
+        "exemplo": "«Je mange du pain et je bois du lait.» «Combien coûte le "
+                   "poisson?» «Tu veux du riz? Oui, j'en veux un peu.» «Il "
+                   "faut manger des fruits.»",
+        "lembra": "Du, de la, des: uma parte do que há.",
+    },
+    "fra-9c:u1:n6": {
+        "explica": "A casa: «la chambre», «la cuisine», «la salle à "
+                   "manger», «la salle de bains»; os móveis e aparelhos: "
+                   "«le lit», «l'armoire», «le frigo». «Personne» e «rien» "
+                   "negam com «ne», sem «pas».",
+        "exemplo": "«Il n'y a personne dans la cuisine.» «Je n'ai rien "
+                   "acheté.» As tarefas de casa dividem-se entre rapazes e "
+                   "raparigas.",
+        "lembra": "Ne ... personne, ne ... rien: nunca com pas.",
+    },
+    "fra-9c:u1:n7": {
+        "explica": "Os anúncios de arrendamento abreviam: «T3» é uma casa "
+                   "de três divisões. «Louer» é arrendar, «vendre» vender, "
+                   "«chercher» procurar. Os ordinais contam os andares; o "
+                   "superlativo e o comparativo comparam as casas.",
+        "exemplo": "«L'appartement est au deuxième étage.» «Cette maison "
+                   "est la moins chère.» «La maison est aussi grande que "
+                   "l'appartement.»",
+        "lembra": "Premier, deuxième, troisième: os ordinais.",
+    },
+    "fra-9c:u2:n1": {
+        "explica": "O regulamento escolar diz o que se pode, o que se não "
+                   "pode e o que se deve. Permissão: «on peut». Proibição: "
+                   "«il est interdit de», «défense de», «il ne faut pas». "
+                   "Obrigação: «il faut», «devoir».",
+        "exemplo": "«On peut sortir à la récréation.» «Il est interdit de "
+                   "fumer.» «Les élèves doivent faire les devoirs.» «Il ne "
+                   "faut pas crier.»",
+        "lembra": "On peut, il faut, il est interdit.",
+    },
+    "fra-9c:u2:n2": {
+        "explica": "Para apresentar a escola dizem-se os seus espaços e as "
+                   "suas pessoas: «le directeur», «le directeur adjoint», "
+                   "«la secrétaire». As perguntas: «qui», «quand», «où», "
+                   "«pourquoi», «combien».",
+        "exemplo": "«Combien d'élèves il y a dans l'école?» «Le secrétariat "
+                   "est à côté de la bibliothèque.» Todas as profissões da "
+                   "escola merecem respeito.",
+        "lembra": "Qui, quand, où, pourquoi, combien.",
+    },
 }

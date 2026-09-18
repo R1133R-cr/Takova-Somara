@@ -44879,6 +44879,778 @@
      ]
     }
    ]
+  },
+  {
+   "id": "fra-9c",
+   "disciplina": "Francês",
+   "classe": "9ª classe",
+   "tag": "FRA",
+   "fonte": "Programme d'Enseignement de la Discipline de Langue Française — Enseignement Secondaire, 1er Cycle. INDE/MINEDH, Maputo, Setembro de 2024, 9ème classe, pp. 8 e 22-31. As duas unidades, os nove temas, o vocabulário e a gramática são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 9ª classe publicado. Os enunciados são em português e o francês fica nas opções, porque a voz da app é portuguesa.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "A minha família",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A família e os possessivos",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada membro da família ao francês.",
+         "pairs": [
+          [
+           "O avô",
+           "Le grand-père"
+          ],
+          [
+           "A tia",
+           "La tante"
+          ],
+          [
+           "O primo",
+           "Le cousin"
+          ],
+          [
+           "Os pais",
+           "Les parents"
+          ]
+         ],
+         "audio": "b9220d1b145b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A minha mãe e o meu pai» escreve-se:",
+         "options": [
+          "Ma mère et mon père",
+          "Mon mère et ma père",
+          "Mes mère et mes père"
+         ],
+         "a": 0,
+         "audio": "0594074e2e33.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Este livro é o meu» escreve-se, com o pronome possessivo:",
+         "options": [
+          "Ce livre est le mien",
+          "Ce livre est mon",
+          "Ce livre est la mienne"
+         ],
+         "a": 0,
+         "audio": "e1b88adbfce5.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de família ao francês.",
+         "pairs": [
+          [
+           "Família tradicional",
+           "Famille traditionnelle"
+          ],
+          [
+           "Família monoparental",
+           "Famille monoparentale"
+          ],
+          [
+           "Família recomposta",
+           "Famille recomposée"
+          ]
+         ],
+         "audio": "c89d9d7f419e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eu prefiro a minha irmã mais nova» escreve-se:",
+         "options": [
+          "Je préfère ma petite sœur",
+          "Je préfére mon petite sœur",
+          "Je préfère ma petit sœur"
+         ],
+         "a": 0,
+         "audio": "ef4a15d211e8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A família: «le grand-père», «la tante», «le cousin», «les parents». O adjectivo possessivo vai antes do nome e concorda com ele: «ma mère», «mon père». O pronome possessivo substitui o nome: «le mien», «la mienne».",
+        "exemplo": "«Ce livre est le mien.» «Je préfère ma petite sœur.» Há famílias tradicionais, monoparentais e recompostas.",
+        "lembra": "Ma mère, mon père; le mien, la mienne.",
+        "audio": "8eb45240eaa3.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "As festas e as cerimónias",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada festa ou cerimónia ao francês.",
+         "pairs": [
+          [
+           "Aniversário",
+           "L'anniversaire"
+          ],
+          [
+           "Noivado",
+           "Les fiançailles"
+          ],
+          [
+           "Casamento",
+           "Le mariage"
+          ],
+          [
+           "Funeral",
+           "Les funérailles"
+          ]
+         ],
+         "audio": "3749ac5b2107.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um cartão que anuncia um casamento ou um nascimento chama-se, em francês:",
+         "options": [
+          "Un faire-part",
+          "Une recette",
+          "Un règlement"
+         ],
+         "a": 0,
+         "audio": "12111ea7086b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de casamento ao francês.",
+         "pairs": [
+          [
+           "Tradicional",
+           "Traditionnel"
+          ],
+          [
+           "Religioso",
+           "Religieux"
+          ],
+          [
+           "Civil",
+           "Officiel"
+          ]
+         ],
+         "audio": "c9df103368e9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Nós decoramos a sala e dançamos» escreve-se:",
+         "options": [
+          "Nous décorons la salle et nous dansons",
+          "Nous décorez la salle et nous dansez",
+          "Nous décore la salle et nous danse"
+         ],
+         "a": 0,
+         "audio": "3bf343c8d361.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num cartão de boas festas escreve-se:",
+         "options": [
+          "Meilleurs vœux",
+          "Bon appétit",
+          "Au secours"
+         ],
+         "a": 0,
+         "audio": "ebdc679a1844.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As festas e cerimónias: «l'anniversaire», «les fiançailles», «le mariage», «les funérailles». O casamento é tradicional, religioso ou civil. O «faire-part» anuncia um casamento ou um nascimento; o cartão deseja «meilleurs vœux».",
+        "exemplo": "«Nous décorons la salle et nous dansons.» Verbos em «-er» com «nous» acabam em «-ons».",
+        "lembra": "Faire-part anuncia; meilleurs vœux deseja.",
+        "audio": "02799be2b356.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A carta e o email de convite",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada parte da carta ao francês.",
+         "pairs": [
+          [
+           "Local e data",
+           "Lieu et date"
+          ],
+          [
+           "Destinatário",
+           "Destinataire"
+          ],
+          [
+           "Assinatura",
+           "Signature"
+          ]
+         ],
+         "audio": "5f89bc8a40d7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Queres vir à minha festa?» escreve-se:",
+         "options": [
+          "Tu veux venir à ma fête",
+          "Tu voulez venir à ma fête",
+          "Tu veux viens à ma fête"
+         ],
+         "a": 0,
+         "audio": "887b5022df20.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para aceitar um convite diz-se:",
+         "options": [
+          "Avec plaisir, je viens",
+          "Désolé, je ne peux pas",
+          "Non, merci"
+         ],
+         "a": 0,
+         "audio": "8a5b8f91ad4a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Não posso ir, tenho um exame» escreve-se:",
+         "options": [
+          "Je ne peux pas venir, j'ai un examen",
+          "Je peux ne pas venir, j'ai un examen",
+          "Je ne pas peux venir, j'ai un examen"
+         ],
+         "a": 0,
+         "audio": "42af03a69087.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma carta a um amigo começa com a fórmula:",
+         "options": [
+          "Cher ami",
+          "Monsieur le Directeur",
+          "Au revoir"
+         ],
+         "a": 0,
+         "audio": "73bc62d55e74.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A carta e o email de convite têm lugar e data, destinatário, fórmula de chamada, corpo, fórmula final e assinatura. Convida-se com «tu veux venir», aceita-se com «avec plaisir» e recusa-se com «je ne peux pas».",
+        "exemplo": "«Cher ami, tu veux venir à ma fête samedi?» — «Je ne peux pas venir, j'ai un examen.»",
+        "lembra": "Ne ... pas à volta do verbo que se nega.",
+        "audio": "2e71ceae5b4e.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "O convite pelo telefone",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada palavra do telefone ao francês.",
+         "pairs": [
+          [
+           "Telemóvel",
+           "Le portable"
+          ],
+          [
+           "Chamada",
+           "L'appel"
+          ],
+          [
+           "Rede",
+           "Le réseau"
+          ],
+          [
+           "Bateria",
+           "La batterie"
+          ]
+         ],
+         "audio": "5d4d4b10ceef.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada acção ao verbo francês.",
+         "pairs": [
+          [
+           "Atender",
+           "Décrocher"
+          ],
+          [
+           "Desligar",
+           "Raccrocher"
+          ],
+          [
+           "Voltar a ligar",
+           "Rappeler"
+          ]
+         ],
+         "audio": "f129ed6feabc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ao atender o telefone em França, diz-se:",
+         "options": [
+          "Allô",
+          "Salut, merci",
+          "Bon appétit"
+         ],
+         "a": 0,
+         "audio": "81b69a2ece11.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Queres ir ao cinema no sábado?» escreve-se, com «est-ce que»:",
+         "options": [
+          "Est-ce que tu veux aller au cinéma samedi",
+          "Est-ce tu veux aller au cinéma samedi",
+          "Est-ce que veux tu aller au cinéma samedi"
+         ],
+         "a": 0,
+         "audio": "b6f2f62efa48.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para recusar com educação diz-se:",
+         "options": [
+          "C'est gentil, mais je ne suis pas libre",
+          "Non, je ne veux pas, au revoir",
+          "Laisse-moi tranquille"
+         ],
+         "a": 0,
+         "audio": "b8c07d2d54d4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Ao telefone atende-se com «allô». «Décrocher» é atender, «raccrocher» desligar, «rappeler» voltar a ligar. Pergunta-se com «est-ce que», e recusa-se com educação: «c'est gentil, mais je ne suis pas libre».",
+        "exemplo": "«Allô? Est-ce que tu veux aller au cinéma samedi?» O telemóvel é «le portable», a rede é «le réseau».",
+        "lembra": "Recusar bem: agradecer primeiro.",
+        "audio": "5182d412b9e4.mp3"
+       }
+      },
+      {
+       "id": "n5",
+       "titulo": "A alimentação",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada refeição do dia ao francês.",
+         "pairs": [
+          [
+           "Pequeno-almoço",
+           "Le petit-déjeuner"
+          ],
+          [
+           "Almoço",
+           "Le déjeuner"
+          ],
+          [
+           "Lanche",
+           "Le goûter"
+          ],
+          [
+           "Jantar",
+           "Le dîner"
+          ]
+         ],
+         "audio": "c9d3d3513a72.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eu como pão e bebo leite» escreve-se, com os partitivos:",
+         "options": [
+          "Je mange du pain et je bois du lait",
+          "Je mange le pain et je bois le lait",
+          "Je mange de pain et je bois de lait"
+         ],
+         "a": 0,
+         "audio": "5a19ea3ad564.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Quanto custa o peixe?» escreve-se:",
+         "options": [
+          "Combien coûte le poisson",
+          "Comment coûte le poisson",
+          "Combien de coûte le poisson"
+         ],
+         "a": 0,
+         "audio": "e5658f664821.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Queres arroz? Sim, quero um pouco» escreve-se, com o pronome «en»:",
+         "options": [
+          "Tu veux du riz ? Oui, j'en veux un peu",
+          "Tu veux du riz ? Oui, je le veux un peu",
+          "Tu veux du riz ? Oui, je veux en un peu"
+         ],
+         "a": 0,
+         "audio": "f1befc66159f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«É preciso comer fruta» escreve-se:",
+         "options": [
+          "Il faut manger des fruits",
+          "Il faut mange des fruits",
+          "Il faut de manger des fruits"
+         ],
+         "a": 0,
+         "audio": "89d9a1a2ba5a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As refeições: «petit-déjeuner», «déjeuner», «goûter», «dîner». Os partitivos dizem uma parte: «du pain», «de la viande». «En» substitui a quantidade. «Il faut» e o infinitivo dá conselho e obrigação.",
+        "exemplo": "«Je mange du pain et je bois du lait.» «Combien coûte le poisson?» «Tu veux du riz? Oui, j'en veux un peu.» «Il faut manger des fruits.»",
+        "lembra": "Du, de la, des: uma parte do que há.",
+        "audio": "58d8345950d0.mp3"
+       }
+      },
+      {
+       "id": "n6",
+       "titulo": "A casa e as tarefas",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada divisão da casa ao francês.",
+         "pairs": [
+          [
+           "Quarto",
+           "La chambre"
+          ],
+          [
+           "Cozinha",
+           "La cuisine"
+          ],
+          [
+           "Sala de jantar",
+           "La salle à manger"
+          ],
+          [
+           "Casa de banho",
+           "La salle de bains"
+          ]
+         ],
+         "audio": "0ac1bb987f2c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada móvel ou aparelho ao francês.",
+         "pairs": [
+          [
+           "Cama",
+           "Le lit"
+          ],
+          [
+           "Armário",
+           "L'armoire"
+          ],
+          [
+           "Frigorífico",
+           "Le frigo"
+          ]
+         ],
+         "audio": "992ccd376359.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Não há ninguém na cozinha» escreve-se:",
+         "options": [
+          "Il n'y a personne dans la cuisine",
+          "Il n'y a pas personne dans la cuisine",
+          "Il y a personne ne dans la cuisine"
+         ],
+         "a": 0,
+         "audio": "d5e9c03d0d56.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Não comprei nada» escreve-se:",
+         "options": [
+          "Je n'ai rien acheté",
+          "Je n'ai pas rien acheté",
+          "Je rien ai acheté"
+         ],
+         "a": 0,
+         "audio": "030ba16502f0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em casa, as tarefas domésticas:",
+         "options": [
+          "Dividem-se entre rapazes e raparigas",
+          "São só das raparigas",
+          "São só dos adultos"
+         ],
+         "a": 0,
+         "audio": "7a16abf8bb4f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A casa: «la chambre», «la cuisine», «la salle à manger», «la salle de bains»; os móveis e aparelhos: «le lit», «l'armoire», «le frigo». «Personne» e «rien» negam com «ne», sem «pas».",
+        "exemplo": "«Il n'y a personne dans la cuisine.» «Je n'ai rien acheté.» As tarefas de casa dividem-se entre rapazes e raparigas.",
+        "lembra": "Ne ... personne, ne ... rien: nunca com pas.",
+        "audio": "02f3d863ce3a.mp3"
+       }
+      },
+      {
+       "id": "n7",
+       "titulo": "Os anúncios de arrendamento",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada verbo ao francês.",
+         "pairs": [
+          [
+           "Arrendar",
+           "Louer"
+          ],
+          [
+           "Vender",
+           "Vendre"
+          ],
+          [
+           "Procurar",
+           "Chercher"
+          ]
+         ],
+         "audio": "15efdef3df75.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num anúncio, «T3» ou «trois pièces» quer dizer:",
+         "options": [
+          "Uma casa com três divisões",
+          "Três casas",
+          "O terceiro andar"
+         ],
+         "a": 0,
+         "audio": "4e6600792ebe.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O apartamento fica no segundo andar» escreve-se, com o ordinal:",
+         "options": [
+          "L'appartement est au deuxième étage",
+          "L'appartement est au deux étage",
+          "L'appartement est au second étages"
+         ],
+         "a": 0,
+         "audio": "81396e417372.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Esta casa é a mais barata» escreve-se:",
+         "options": [
+          "Cette maison est la moins chère",
+          "Cette maison est la plus chère",
+          "Cette maison est moins chère que"
+         ],
+         "a": 0,
+         "audio": "378176d5ee7c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A casa é tão grande como o apartamento» escreve-se:",
+         "options": [
+          "La maison est aussi grande que l'appartement",
+          "La maison est plus grande l'appartement",
+          "La maison est aussi grande comme l'appartement"
+         ],
+         "a": 0,
+         "audio": "768ee2306bd8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os anúncios de arrendamento abreviam: «T3» é uma casa de três divisões. «Louer» é arrendar, «vendre» vender, «chercher» procurar. Os ordinais contam os andares; o superlativo e o comparativo comparam as casas.",
+        "exemplo": "«L'appartement est au deuxième étage.» «Cette maison est la moins chère.» «La maison est aussi grande que l'appartement.»",
+        "lembra": "Premier, deuxième, troisième: os ordinais.",
+        "audio": "5e06164d33a6.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "A escola, outra vez",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O regulamento escolar",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada frase do regulamento ao que ela exprime.",
+         "pairs": [
+          [
+           "On peut sortir à la récréation",
+           "Permissão"
+          ],
+          [
+           "Il est interdit de fumer",
+           "Proibição"
+          ],
+          [
+           "Il faut arriver à l'heure",
+           "Obrigação"
+          ]
+         ],
+         "audio": "09c2019828cd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Os alunos devem fazer os trabalhos» escreve-se:",
+         "options": [
+          "Les élèves doivent faire les devoirs",
+          "Les élèves doit faire les devoirs",
+          "Les élèves devons faire les devoirs"
+         ],
+         "a": 0,
+         "audio": "bbd565d8f798.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Proibido correr nos corredores» escreve-se:",
+         "options": [
+          "Défense de courir dans les couloirs",
+          "Il faut courir dans les couloirs",
+          "On peut courir dans les couloirs"
+         ],
+         "a": 0,
+         "audio": "73cce5eb9e3e.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra da escola ao francês.",
+         "pairs": [
+          [
+           "Atraso",
+           "Le retard"
+          ],
+          [
+           "Faltas",
+           "Les absences"
+          ],
+          [
+           "Recreio",
+           "La récréation"
+          ],
+          [
+           "Giz",
+           "La craie"
+          ]
+         ],
+         "audio": "841ebf6380e0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Não é preciso gritar» escreve-se:",
+         "options": [
+          "Il ne faut pas crier",
+          "Il faut ne pas crier",
+          "Il ne pas faut crier"
+         ],
+         "a": 0,
+         "audio": "a83a0254dce2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O regulamento escolar diz o que se pode, o que se não pode e o que se deve. Permissão: «on peut». Proibição: «il est interdit de», «défense de», «il ne faut pas». Obrigação: «il faut», «devoir».",
+        "exemplo": "«On peut sortir à la récréation.» «Il est interdit de fumer.» «Les élèves doivent faire les devoirs.» «Il ne faut pas crier.»",
+        "lembra": "On peut, il faut, il est interdit.",
+        "audio": "0ee115548ce5.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Apresentar uma escola",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada pessoa da escola ao francês.",
+         "pairs": [
+          [
+           "O director",
+           "Le directeur"
+          ],
+          [
+           "O director adjunto",
+           "Le directeur adjoint"
+          ],
+          [
+           "A secretária",
+           "La secrétaire"
+          ]
+         ],
+         "audio": "a9b47c5f3c6d.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada pergunta ao que ela pede.",
+         "pairs": [
+          [
+           "Qui ?",
+           "Uma pessoa"
+          ],
+          [
+           "Quand ?",
+           "Um tempo"
+          ],
+          [
+           "Pourquoi ?",
+           "Uma razão"
+          ],
+          [
+           "Combien ?",
+           "Uma quantidade"
+          ]
+         ],
+         "audio": "0637af5456d8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Quantos alunos há na escola?» escreve-se:",
+         "options": [
+          "Combien d'élèves il y a dans l'école",
+          "Comment d'élèves il y a dans l'école",
+          "Combien élèves il y a dans l'école"
+         ],
+         "a": 0,
+         "audio": "f35ad45f6b11.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A secretaria fica ao lado da biblioteca» escreve-se:",
+         "options": [
+          "Le secrétariat est à côté de la bibliothèque",
+          "Le secrétariat est à côté la bibliothèque",
+          "Le secrétariat est côté de la bibliothèque"
+         ],
+         "a": 0,
+         "audio": "ae12c12cd3ed.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Respeitar o guarda, a senhora da limpeza e o professor é:",
+         "options": [
+          "Respeitar todas as profissões da escola",
+          "Só obrigação dos pais",
+          "Desnecessário"
+         ],
+         "a": 0,
+         "audio": "42a23703fe1f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Para apresentar a escola dizem-se os seus espaços e as suas pessoas: «le directeur», «le directeur adjoint», «la secrétaire». As perguntas: «qui», «quand», «où», «pourquoi», «combien».",
+        "exemplo": "«Combien d'élèves il y a dans l'école?» «Le secrétariat est à côté de la bibliothèque.» Todas as profissões da escola merecem respeito.",
+        "lembra": "Qui, quand, où, pourquoi, combien.",
+        "audio": "cc52c4a091a2.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }
