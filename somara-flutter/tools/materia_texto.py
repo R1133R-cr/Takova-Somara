@@ -3000,4 +3000,147 @@ MATERIA = {
                    "onde morreu.",
         "lembra": "A ocupação colonial foi imposta pela força — e combatida.",
     },
+
+    # ---------------------------------------------------------------
+    # Biologia -- 8a classe
+    # ---------------------------------------------------------------
+    "bio-8c:u1:n1": {
+        "explica": "A célula é feita sobretudo de água, com sais, proteínas "
+                   "e lípidos. Cada organelo tem uma função: o núcleo guarda "
+                   "os genes, a mitocôndria produz energia, o cloroplasto faz "
+                   "a fotossíntese, a membrana controla o que entra e sai.",
+        "exemplo": "Só a célula vegetal tem parede celular e cloroplastos. O "
+                   "vacúolo, grande nas plantas, guarda água — é por isso que "
+                   "uma folha sem água murcha.",
+        "lembra": "Núcleo manda, mitocôndria dá energia, cloroplasto faz "
+                  "comida.",
+    },
+    "bio-8c:u1:n2": {
+        "explica": "Na fotossíntese, a planta junta água e dióxido de carbono "
+                   "com a luz, nos cloroplastos, e produz glicose e "
+                   "oxigénio. Na respiração, todas as células gastam glicose "
+                   "e oxigénio para ter energia, e libertam dióxido de "
+                   "carbono e água.",
+        "exemplo": "Uma vela num frasco fechado apaga-se: gastou o oxigénio. "
+                   "Com uma planta ao lado, à luz, aguenta mais tempo, porque "
+                   "a planta repõe oxigénio.",
+        "lembra": "Fotossíntese faz alimento com luz; respiração gasta-o para "
+                  "dar energia.",
+    },
+    "bio-8c:u2:n1": {
+        "explica": "Os recursos naturais são renováveis, como as florestas, "
+                   "a água e os animais, que se refazem, ou não renováveis, "
+                   "como o carvão, o gás e os minerais, que acabam. "
+                   "Conservá-los é usá-los sem os esgotar.",
+        "exemplo": "Moçambique tem carvão em Tete, gás em Inhambane e Cabo "
+                   "Delgado, rubis em Montepuez e florestas no Niassa. Cortar "
+                   "uma árvore e plantar duas é conservar.",
+        "lembra": "O que se refaz é renovável; o que acaba não é.",
+    },
+    "bio-8c:u3:n1": {
+        "explica": "O sangue tem quatro grupos, A, B, AB e O. Numa "
+                   "transfusão, o sangue do dador tem de ser compatível com "
+                   "o do doente: o grupo O pode dar a todos, e o AB pode "
+                   "receber de todos. Doar sangue salva vidas.",
+        "exemplo": "Uma mãe que perde muito sangue no parto precisa de uma "
+                   "transfusão compatível. É por isso que os hospitais "
+                   "pedem dadores de todos os grupos.",
+        "lembra": "O dá a todos; AB recebe de todos.",
+    },
+    "bio-8c:u3:n2": {
+        "explica": "Excretar é deitar fora o que o corpo não quer. Os rins "
+                   "filtram o sangue e fazem a urina, que desce pelos "
+                   "ureteres até à bexiga e sai pela uretra. Os pulmões "
+                   "excretam dióxido de carbono e a pele excreta o suor.",
+        "exemplo": "Dor ou ardor ao urinar é sinal de infecção urinária. "
+                   "Beber água, manter a higiene e não segurar a urina "
+                   "protegem os rins.",
+        "lembra": "Rins, ureteres, bexiga, uretra: é esse o caminho.",
+    },
+    "bio-8c:u3:n3": {
+        "explica": "As glândulas endócrinas produzem hormonas, mensageiros "
+                   "químicos que viajam no sangue. O pâncreas faz a "
+                   "insulina, a tiróide regula o metabolismo, as "
+                   "supra-renais fazem a adrenalina e as glândulas sexuais "
+                   "comandam a puberdade.",
+        "exemplo": "A falta de iodo faz a tiróide inchar: é o bócio. Hormona "
+                   "do crescimento a mais dá gigantismo; a menos, nanismo.",
+        "lembra": "Hormona é uma mensagem que vai no sangue.",
+    },
+    "bio-8c:u4:n1": {
+        "explica": "Uma alimentação equilibrada tem de todos os grupos da "
+                   "roda dos alimentos, na medida certa. As proteínas "
+                   "constroem, os hidratos de carbono dão energia, os lípidos "
+                   "são reserva. As vitaminas e os minerais regulam o corpo.",
+        "exemplo": "O feijão e o peixe dão proteínas; a xima e o arroz dão "
+                   "energia; as folhas verdes e o leite dão cálcio; a "
+                   "papaia e a manga dão vitamina A.",
+        "lembra": "Comer de tudo um pouco, e de cada coisa não de mais.",
+    },
+    "bio-8c:u4:n2": {
+        "explica": "Comer mal adoece. O kwashiorkor vem da falta de "
+                   "proteínas e o marasmo da falta geral de alimento. Falta "
+                   "de vitamina A dá cegueira nocturna, de vitamina D "
+                   "raquitismo, de vitamina C escorbuto, de ferro anemia. "
+                   "Comer a mais dá obesidade.",
+        "exemplo": "Uma criança com a barriga inchada e o cabelo a "
+                   "descolorar pode ter kwashiorkor: falta-lhe feijão, "
+                   "peixe, ovos, carne.",
+        "lembra": "Cada doença da má alimentação tem um nutriente em falta.",
+    },
+    "bio-8c:u4:n3": {
+        "explica": "A febre tifóide, a lombriga, a ténia e os oxiúros entram "
+                   "pela boca: água e comida contaminadas com fezes, carne "
+                   "mal cozida, mãos sujas. A prevenção é sempre a mesma: "
+                   "lavar as mãos, ferver a água, cozer bem a carne e usar "
+                   "latrina.",
+        "exemplo": "A ténia apanha-se em carne de porco mal passada. Os "
+                   "oxiúros passam das unhas para a boca — daí lavar as "
+                   "mãos antes de comer.",
+        "lembra": "Mãos lavadas, água fervida, carne bem cozida.",
+    },
+    "bio-8c:u5:n1": {
+        "explica": "Na reprodução assexuada um só progenitor dá seres "
+                   "iguais a ele; na sexuada juntam-se dois. As plantas "
+                   "multiplicam-se sem semente por estacaria, mergulhia, "
+                   "enxertia e alporquia — e o camponês usa isso todos os "
+                   "dias.",
+        "exemplo": "A mandioca e a batata-doce plantam-se por estaca: um "
+                   "pedaço de caule na terra dá uma planta igual à mãe, "
+                   "mais depressa do que uma semente.",
+        "lembra": "Estaca é um pedaço de caule que ganha raízes.",
+    },
+    "bio-8c:u5:n2": {
+        "explica": "Os estames têm o pólen e o pistilo tem os óvulos. A "
+                   "polinização leva o pólen ao pistilo, pelo vento, insectos "
+                   "ou aves. Depois da fecundação, o ovário vira fruto e os "
+                   "óvulos viram sementes, que o vento, a água e os animais "
+                   "espalham.",
+        "exemplo": "O coco viaja pelo mar; a semente do capim vai no vento; "
+                   "a do feijão leva um embrião e reservas para germinar.",
+        "lembra": "Pólen ao pistilo é polinização; ovário a fruto é "
+                  "frutificação.",
+    },
+    "bio-8c:u6:n1": {
+        "explica": "Na adolescência há conflitos com os pais e os amigos, e "
+                   "resolvem-se a conversar e a ouvir. Rapazes e raparigas "
+                   "partilham as tarefas e têm os mesmos direitos. Casar "
+                   "antes dos dezoito é uma união prematura, e a lei "
+                   "moçambicana proíbe-a.",
+        "exemplo": "Uma rapariga casada aos catorze anos quase sempre deixa "
+                   "a escola, e uma gravidez tão cedo é um risco para a "
+                   "vida dela.",
+        "lembra": "Dezoito anos: antes disso, escola e não casamento.",
+    },
+    "bio-8c:u6:n2": {
+        "explica": "A gonorreia, a sífilis e o HIV apanham-se em relações "
+                   "sexuais sem protecção. Sinais: corrimento, feridas, dor "
+                   "ao urinar. Previnem-se com abstinência e preservativo. O "
+                   "HIV destrói as defesas e deixa entrar a tuberculose e "
+                   "outras infecções.",
+        "exemplo": "Quem tem HIV e toma os anti-retrovirais todos os dias "
+                   "vive muitos anos com saúde e não transmite o vírus. O "
+                   "teste é gratuito no centro de saúde.",
+        "lembra": "Abstinência ou preservativo, e fazer o teste.",
+    },
 }
