@@ -30375,6 +30375,1184 @@
      ]
     }
    ]
+  },
+  {
+   "id": "ing-8c",
+   "disciplina": "Inglês",
+   "classe": "8ª classe",
+   "tag": "ING",
+   "fonte": "Programa de Ensino da Disciplina de Língua Inglesa — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, Grade 8, pp. 31-46. As nove unidades, o vocabulário e a gramática são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado. Os enunciados são em português e o inglês fica nas opções, porque a voz da app é portuguesa.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "O inglês em Moçambique",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Línguas e países vizinhos",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada país vizinho de Moçambique ao seu nome em inglês.",
+         "pairs": [
+          [
+           "África do Sul",
+           "South Africa"
+          ],
+          [
+           "Zimbabué",
+           "Zimbabwe"
+          ],
+          [
+           "Zâmbia",
+           "Zambia"
+          ],
+          [
+           "Tanzânia",
+           "Tanzania"
+          ]
+         ],
+         "audio": "ba2aac406274.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «eu falo português e inglês»?",
+         "options": [
+          "I speak Portuguese and English",
+          "I speaks Portuguese and English",
+          "I am speak Portuguese and English"
+         ],
+         "a": 0,
+         "audio": "d9bb7863ae83.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada língua ao seu nome em inglês.",
+         "pairs": [
+          [
+           "Francês",
+           "French"
+          ],
+          [
+           "Espanhol",
+           "Spanish"
+          ],
+          [
+           "Mandarim",
+           "Mandarin"
+          ]
+         ],
+         "audio": "51bbd5116c47.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «nacionalidade» em inglês?",
+         "options": [
+          "Nationality",
+          "Nation",
+          "National"
+         ],
+         "a": 0,
+         "audio": "e9c7aeacd093.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O inglês é importante para o turismo» escreve-se:",
+         "options": [
+          "English is important for tourism",
+          "English are important for tourism",
+          "English important is for tourism"
+         ],
+         "a": 0,
+         "audio": "d331f316cc5a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Moçambique está rodeado de países onde se fala inglês: «South Africa», «Zimbabwe», «Zambia», «Tanzania», «Malawi». Por isso o inglês serve para o comércio, o turismo e a escola. As línguas e as nacionalidades escrevem-se com letra grande.",
+        "exemplo": "«I speak Portuguese and English.» «She is Mozambican.» Repara: «Portuguese», «English» e «Mozambican» levam maiúscula, ao contrário do português.",
+        "lembra": "Línguas e nacionalidades, em inglês, com letra grande.",
+        "audio": "8ef002a6e998.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Presente e passado simples",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «ela trabalha num hotel»?",
+         "options": [
+          "She works in a hotel",
+          "She work in a hotel",
+          "She working in a hotel"
+         ],
+         "a": 0,
+         "audio": "9bc32899f314.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Nós visitámos a Tanzânia no ano passado» escreve-se:",
+         "options": [
+          "We visited Tanzania last year",
+          "We visit Tanzania last year",
+          "We visiting Tanzania last year"
+         ],
+         "a": 0,
+         "audio": "833763851bad.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eu sei nadar, mas não sei conduzir» escreve-se:",
+         "options": [
+          "I can swim, but I can't drive",
+          "I can swim, and I can't drive",
+          "I can swim, or I can't drive"
+         ],
+         "a": 0,
+         "audio": "75ab3b90bbc9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela fica em casa porque está a chover» escreve-se:",
+         "options": [
+          "She stays at home because it is raining",
+          "She stays at home but it is raining",
+          "She stays at home or it is raining"
+         ],
+         "a": 0,
+         "audio": "518426d149e6.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada advérbio de frequência ao seu significado.",
+         "pairs": [
+          [
+           "Sempre",
+           "Always"
+          ],
+          [
+           "Às vezes",
+           "Sometimes"
+          ],
+          [
+           "Nunca",
+           "Never"
+          ]
+         ],
+         "audio": "6734b4381719.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No presente simples, com «he», «she» e «it» o verbo ganha «s»: «she works». No passado simples os verbos regulares ganham «ed»: «we visited». «And», «but», «because» e «or» ligam frases; «can» diz o que se sabe fazer.",
+        "exemplo": "«She works in a hotel.» «We visited Tanzania last year.» «I can swim, but I can't drive.» «Always», «sometimes» e «never» dizem quantas vezes.",
+        "lembra": "Terceira pessoa no presente leva «s»; passado regular leva «ed».",
+        "audio": "92ebccc95229.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Medicina moderna e tradicional",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A saúde e o futuro",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada palavra da saúde ao inglês.",
+         "pairs": [
+          [
+           "Médico",
+           "Doctor"
+          ],
+          [
+           "Curandeiro",
+           "Healer"
+          ],
+          [
+           "Vacina",
+           "Vaccine"
+          ],
+          [
+           "Seringa",
+           "Syringe"
+          ]
+         ],
+         "audio": "0708c002f071.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «remédio de ervas» em inglês?",
+         "options": [
+          "Herbal medicine",
+          "Modern medicine",
+          "Hospital"
+         ],
+         "a": 0,
+         "audio": "0b2702be6cd8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Amanhã vou ao hospital» escreve-se, com o futuro de intenção:",
+         "options": [
+          "I am going to the hospital tomorrow",
+          "I go to the hospital tomorrow",
+          "I went to the hospital tomorrow"
+         ],
+         "a": 0,
+         "audio": "e4280138d1fe.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O médico vai ajudar-te» escreve-se:",
+         "options": [
+          "The doctor will help you",
+          "The doctor helped you",
+          "The doctor helping you"
+         ],
+         "a": 0,
+         "audio": "d6bcf9318d93.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «ela está a tomar o remédio agora»?",
+         "options": [
+          "She is taking the medicine now",
+          "She takes the medicine now",
+          "She took the medicine now"
+         ],
+         "a": 0,
+         "audio": "3eba3d2d7719.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A saúde tem o «doctor», o «healer» e a «herbal medicine». Para o futuro há «going to», quando já se decidiu, e «will», para o que se prevê ou promete. O que está a acontecer agora vai em «ing»: «she is taking».",
+        "exemplo": "«I am going to the hospital tomorrow.» «The doctor will help you.» «She is taking the medicine now.»",
+        "lembra": "«Going to» é plano; «will» é previsão ou promessa.",
+        "audio": "f1ff37be93db.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Conselhos, condições e quantidades",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Se tiveres febre, vai ao hospital» escreve-se:",
+         "options": [
+          "If you have a fever, go to the hospital",
+          "If you has a fever, go to the hospital",
+          "If you have a fever, went to the hospital"
+         ],
+         "a": 0,
+         "audio": "f06f78226177.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Se chover, ficaremos em casa» escreve-se:",
+         "options": [
+          "If it rains, we will stay at home",
+          "If it rains, we stayed at home",
+          "If it rain, we will stay at home"
+         ],
+         "a": 0,
+         "audio": "f0a8bc298d07.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «automedicação» em inglês?",
+         "options": [
+          "Self-medication",
+          "Self-service",
+          "Medical care"
+         ],
+         "a": 0,
+         "audio": "ff318ea05d51.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Há poucos médicos na aldeia» escreve-se:",
+         "options": [
+          "There are few doctors in the village",
+          "There are many doctors in the village",
+          "There are much doctors in the village"
+         ],
+         "a": 0,
+         "audio": "f32b225f9f1a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «tu devias ir ao médico»?",
+         "options": [
+          "You should go to the doctor",
+          "You should to go to the doctor",
+          "You should going to the doctor"
+         ],
+         "a": 0,
+         "audio": "0eb83f623908.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A condição de sempre usa o presente nas duas partes: «if you have a fever, go to the hospital». A condição provável usa «will» na segunda: «if it rains, we will stay». «Few» e «many» são para contáveis; «should» dá conselho.",
+        "exemplo": "«If it rains, we will stay at home.» «There are few doctors in the village.» «You should go to the doctor.» Automedicação é «self-medication», e faz mal.",
+        "lembra": "Depois de «if» não se usa «will».",
+        "audio": "be54d6c53467.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Costumes e tradições",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Cerimónias e a ordem das coisas",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada cerimónia ao inglês.",
+         "pairs": [
+          [
+           "Casamento",
+           "Wedding"
+          ],
+          [
+           "Funeral",
+           "Funeral"
+          ],
+          [
+           "Nascimento",
+           "Birth"
+          ],
+          [
+           "Ritos de iniciação",
+           "Initiation rites"
+          ]
+         ],
+         "audio": "70f28b6cfc06.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «tambor» em inglês?",
+         "options": [
+          "Drum",
+          "Dance",
+          "Song"
+         ],
+         "a": 0,
+         "audio": "4f09ea380cce.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada marcador de sequência ao inglês.",
+         "pairs": [
+          [
+           "Primeiro",
+           "First"
+          ],
+          [
+           "Depois",
+           "Then"
+          ],
+          [
+           "Finalmente",
+           "Finally"
+          ]
+         ],
+         "audio": "dece598d1ea4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Primeiro, a família reúne-se; depois, os anciãos falam» escreve-se:",
+         "options": [
+          "First, the family meets; then, the elders speak",
+          "Finally, the family meets; first, the elders speak",
+          "Then, the family meets; then, the elders speak"
+         ],
+         "a": 0,
+         "audio": "57ac7a82ce34.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «costume» em inglês?",
+         "options": [
+          "Custom",
+          "Customer",
+          "Cost"
+         ],
+         "a": 0,
+         "audio": "bfe7f7973df5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As cerimónias da comunidade têm nome em inglês: «wedding», «funeral», «birth», «initiation rites». Para contar como uma decorre usam-se os marcadores de sequência: «first», «then», «after that», «finally».",
+        "exemplo": "«First, the family meets; then, the elders speak; finally, everybody dances.» Um costume é «custom»; um cliente é «customer».",
+        "lembra": "«First», «then», «finally»: o princípio, o meio e o fim.",
+        "audio": "0f5d67142a90.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Dever e proibição",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Devemos respeitar os mais velhos» escreve-se:",
+         "options": [
+          "We must respect the elders",
+          "We mustn't respect the elders",
+          "We must respecting the elders"
+         ],
+         "a": 0,
+         "audio": "62921f141304.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Não deves faltar às aulas» escreve-se:",
+         "options": [
+          "You mustn't miss classes",
+          "You must miss classes",
+          "You mustn't to miss classes"
+         ],
+         "a": 0,
+         "audio": "988bd9c332b6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «os rapazes e as raparigas deviam partilhar as tarefas»?",
+         "options": [
+          "Boys and girls should share the tasks",
+          "Boys and girls should shares the tasks",
+          "Boys and girls should to share the tasks"
+         ],
+         "a": 0,
+         "audio": "4480a777a121.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela nunca chega atrasada, mas ele chega sempre» escreve-se:",
+         "options": [
+          "She is never late, but he always is",
+          "She is always late, but he never is",
+          "She is late never, but he is always"
+         ],
+         "a": 0,
+         "audio": "8a2bd35b3e2b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada expressão formal à informal.",
+         "pairs": [
+          [
+           "Good morning, Sir",
+           "Hi"
+          ],
+          [
+           "Thank you very much",
+           "Thanks"
+          ],
+          [
+           "Goodbye",
+           "Bye"
+          ]
+         ],
+         "audio": "5b22d074bf68.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "«Must» é obrigação forte e «mustn't» é proibição; «should» é o que é boa ideia. Nunca levam «to» a seguir. Com os mais velhos fala-se formal — «good morning, sir» — e com os amigos informal — «hi».",
+        "exemplo": "«We must respect the elders.» «You mustn't miss classes.» «Boys and girls should share the tasks.» «Thank you very much» é formal; «thanks» é entre amigos.",
+        "lembra": "«Must», «mustn't» e «should» nunca levam «to».",
+        "audio": "f1abc14935a9.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "A agricultura",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O campo e as suas palavras",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada palavra do campo ao inglês.",
+         "pairs": [
+          [
+           "Enxada",
+           "Hoe"
+          ],
+          [
+           "Charrua",
+           "Plough"
+          ],
+          [
+           "Colheita",
+           "Harvest"
+          ],
+          [
+           "Seca",
+           "Drought"
+          ]
+         ],
+         "audio": "746e3681760b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «cheia» em inglês?",
+         "options": [
+          "Flood",
+          "Cyclone",
+          "Earthquake"
+         ],
+         "a": 0,
+         "audio": "36429f85e410.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O milho é uma cultura importante» escreve-se:",
+         "options": [
+          "Maize is an important crop",
+          "Maize is a important crop",
+          "The maize is an important crops"
+         ],
+         "a": 0,
+         "audio": "fa603f49301c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «quanta água precisam as plantas»?",
+         "options": [
+          "How much water do the plants need",
+          "How many water do the plants need",
+          "How much waters do the plants need"
+         ],
+         "a": 0,
+         "audio": "871324dd0a26.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «criação de animais» em inglês?",
+         "options": [
+          "Animal husbandry",
+          "Animal hospital",
+          "Animal house"
+         ],
+         "a": 0,
+         "audio": "555dee392ee7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No campo há a «hoe», o «plough», a «harvest» e os desastres: «drought», «flood», «cyclone». «A» e «an» são os artigos indefinidos — «an» antes de vogal. A água não se conta, por isso pergunta-se «how much water».",
+        "exemplo": "«Maize is an important crop.» «How much water do the plants need?» Criar animais é «animal husbandry».",
+        "lembra": "«How much» para o que não se conta; «how many» para o que se conta.",
+        "audio": "d21c655e9d99.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O que estava a acontecer e o que já foi feito",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Os camponeses estavam a plantar quando a chuva começou» escreve-se:",
+         "options": [
+          "The farmers were planting when the rain started",
+          "The farmers planting when the rain started",
+          "The farmers are planting when the rain started"
+         ],
+         "a": 0,
+         "audio": "7057bf72b022.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Nós já colhemos o milho» escreve-se, com o present perfect:",
+         "options": [
+          "We have harvested the maize",
+          "We has harvested the maize",
+          "We have harvest the maize"
+         ],
+         "a": 0,
+         "audio": "41a47033d5ed.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O peixe é seco ao sol» escreve-se, na passiva:",
+         "options": [
+          "The fish is dried in the sun",
+          "The fish dries in the sun",
+          "The fish is dry in the sun"
+         ],
+         "a": 0,
+         "audio": "a8d7113aad66.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «onde é que guardam as sementes»?",
+         "options": [
+          "Where do they keep the seeds",
+          "What do they keep the seeds",
+          "Where they keep the seeds"
+         ],
+         "a": 0,
+         "audio": "3a4e0c5f11d7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Devíamos plantar árvores para travar a erosão» escreve-se:",
+         "options": [
+          "We should plant trees to stop erosion",
+          "We should planting trees to stop erosion",
+          "We should to plant trees to stop erosion"
+         ],
+         "a": 0,
+         "audio": "d13bc4c1f1e9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O passado contínuo diz o que estava a acontecer: «were planting». O present perfect diz o que já está feito: «have harvested». A passiva põe a coisa à frente: «the fish is dried». As perguntas de lugar começam por «where».",
+        "exemplo": "«The farmers were planting when the rain started.» «We have harvested the maize.» «The fish is dried in the sun.» «Where do they keep the seeds?»",
+        "lembra": "Present perfect é «have» ou «has» mais o particípio.",
+        "audio": "ac720c25ee12.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "As compras",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Lojas, preços e regatear",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada lugar de compras ao inglês.",
+         "pairs": [
+          [
+           "Mercado",
+           "Market"
+          ],
+          [
+           "Supermercado",
+           "Supermarket"
+          ],
+          [
+           "Padaria",
+           "Bakery"
+          ]
+         ],
+         "audio": "85b6e28cc0a8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «quanto custa esta camisa»?",
+         "options": [
+          "How much is this shirt",
+          "How many is this shirt",
+          "How much are this shirt"
+         ],
+         "a": 0,
+         "audio": "d2b143a248c4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Quantas laranjas quer?» escreve-se:",
+         "options": [
+          "How many oranges do you want",
+          "How much oranges do you want",
+          "How many orange do you want"
+         ],
+         "a": 0,
+         "audio": "4ecb2e4bd515.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «desconto» em inglês?",
+         "options": [
+          "Discount",
+          "Receipt",
+          "Invoice"
+         ],
+         "a": 0,
+         "audio": "5b13253a974d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Este vestido é mais caro do que aquele» escreve-se:",
+         "options": [
+          "This dress is more expensive than that one",
+          "This dress is expensiver than that one",
+          "This dress is more expensive that that one"
+         ],
+         "a": 0,
+         "audio": "4633d33e99d2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«É caro, não é?» escreve-se, com a pergunta no fim:",
+         "options": [
+          "It is expensive, isn't it",
+          "It is expensive, is it",
+          "It is expensive, doesn't it"
+         ],
+         "a": 0,
+         "audio": "64318633ef83.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Nas compras pergunta-se o preço com «how much is», a quantidade com «how many», e compara-se com «more expensive than» nos adjectivos longos. A pergunta no fim da frase, «isn't it», pede que o outro concorde.",
+        "exemplo": "«How much is this shirt?» «How many oranges do you want?» «This dress is more expensive than that one, isn't it?» Regatear é «bargaining»; desconto é «discount».",
+        "lembra": "Adjectivo longo compara-se com «more ... than».",
+        "audio": "f30d647b809c.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Turismo e vida selvagem",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Parques, praias e animais",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada animal ao inglês.",
+         "pairs": [
+          [
+           "Elefante",
+           "Elephant"
+          ],
+          [
+           "Leão",
+           "Lion"
+          ],
+          [
+           "Hipopótamo",
+           "Hippo"
+          ],
+          [
+           "Tartaruga",
+           "Turtle"
+          ]
+         ],
+         "audio": "26f3eccdea84.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «caçador furtivo» em inglês?",
+         "options": [
+          "Poacher",
+          "Tourist",
+          "Ranger"
+         ],
+         "a": 0,
+         "audio": "435019afad7d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «parque nacional» em inglês?",
+         "options": [
+          "National park",
+          "Natural place",
+          "Game reserve"
+         ],
+         "a": 0,
+         "audio": "9abf29e62a86.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O Gorongosa é o parque mais famoso de Moçambique» escreve-se:",
+         "options": [
+          "Gorongosa is the most famous park in Mozambique",
+          "Gorongosa is the more famous park in Mozambique",
+          "Gorongosa is the famousest park in Mozambique"
+         ],
+         "a": 0,
+         "audio": "d54d8871ae02.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «espécies em perigo» em inglês?",
+         "options": [
+          "Endangered species",
+          "Dangerous species",
+          "Wild species"
+         ],
+         "a": 0,
+         "audio": "9bda1390677c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Moçambique tem o «elephant», o «lion», o «hippo» e a «turtle», e parques como o Gorongosa. O superlativo dos adjectivos longos faz-se com «the most»; o caçador furtivo é «poacher» e as espécies em perigo, «endangered species».",
+        "exemplo": "«Gorongosa is the most famous park in Mozambique.» «Poachers kill elephants for ivory.» «The turtle is an endangered species.»",
+        "lembra": "Superlativo longo: «the most» antes do adjectivo.",
+        "audio": "f8087c0af75e.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Obrigações e reflexivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Os turistas têm de proteger a natureza» escreve-se:",
+         "options": [
+          "Tourists have to protect nature",
+          "Tourists has to protect nature",
+          "Tourists have protect nature"
+         ],
+         "a": 0,
+         "audio": "be28dd3999f9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Não podes dar de comer aos animais» escreve-se:",
+         "options": [
+          "You may not feed the animals",
+          "You may not feeding the animals",
+          "You not may feed the animals"
+         ],
+         "a": 0,
+         "audio": "aa793f6ff3f0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «ela divertiu-se na praia»?",
+         "options": [
+          "She enjoyed herself at the beach",
+          "She enjoyed himself at the beach",
+          "She enjoyed her at the beach"
+         ],
+         "a": 0,
+         "audio": "d2f5e438993d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Já visitaste a ilha de Moçambique?» escreve-se:",
+         "options": [
+          "Have you ever visited Mozambique Island",
+          "Did you ever visited Mozambique Island",
+          "Have you ever visit Mozambique Island"
+         ],
+         "a": 0,
+         "audio": "35bd31771e24.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «mergulho com tubo» em inglês?",
+         "options": [
+          "Snorkelling",
+          "Yachting",
+          "Hiking"
+         ],
+         "a": 0,
+         "audio": "2c6e186cd90d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "«Have to» é obrigação que vem de fora; «may not» é não ter licença. Os reflexivos — «myself», «herself», «themselves» — dizem que a acção volta para quem a faz. «Have you ever» pergunta se alguma vez aconteceu.",
+        "exemplo": "«Tourists have to protect nature.» «You may not feed the animals.» «She enjoyed herself at the beach.» «Have you ever visited Mozambique Island?»",
+        "lembra": "«She» dá «herself»; «he» dá «himself».",
+        "audio": "d627cea4baa1.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u7",
+     "titulo": "Cuidar do planeta",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O ambiente e o que faríamos por ele",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada palavra do ambiente ao inglês.",
+         "pairs": [
+          [
+           "Erosão",
+           "Erosion"
+          ],
+          [
+           "Poluição",
+           "Pollution"
+          ],
+          [
+           "Desflorestação",
+           "Deforestation"
+          ],
+          [
+           "Reciclar",
+           "Recycle"
+          ]
+         ],
+         "audio": "0a0754f641f3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«As árvores que plantámos estão a crescer» escreve-se, com o pronome relativo:",
+         "options": [
+          "The trees that we planted are growing",
+          "The trees who we planted are growing",
+          "The trees what we planted are growing"
+         ],
+         "a": 0,
+         "audio": "d9111b41f842.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Se eu fosse presidente, protegeria as florestas» escreve-se:",
+         "options": [
+          "If I were president, I would protect the forests",
+          "If I am president, I will protect the forests",
+          "If I was president, I protect the forests"
+         ],
+         "a": 0,
+         "audio": "b3269a52ffe6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «não deites lixo no rio»?",
+         "options": [
+          "Don't throw rubbish in the river",
+          "Doesn't throw rubbish in the river",
+          "Not throw rubbish in the river"
+         ],
+         "a": 0,
+         "audio": "b3026e7ce1d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Devíamos reciclar as garrafas de plástico» escreve-se:",
+         "options": [
+          "We should recycle the plastic bottles",
+          "We should recycled the plastic bottles",
+          "We should recycles the plastic bottles"
+         ],
+         "a": 0,
+         "audio": "61797509af39.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Do ambiente: «erosion», «pollution», «deforestation», «recycle». «That» e «which» ligam uma frase a uma coisa; «who» a uma pessoa. A segunda condicional imagina: «if I were president, I would protect the forests».",
+        "exemplo": "«The trees that we planted are growing.» «If I were president, I would protect the forests.» «Don't throw rubbish in the river.»",
+        "lembra": "Segunda condicional: «if» com passado, e «would» na outra parte.",
+        "audio": "7fd5d0c3779b.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u8",
+     "titulo": "Saúde e forma física",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Doenças, comida e plurais",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada doença ou sintoma ao inglês.",
+         "pairs": [
+          [
+           "Malária",
+           "Malaria"
+          ],
+          [
+           "Cólera",
+           "Cholera"
+          ],
+          [
+           "Febre",
+           "Fever"
+          ],
+          [
+           "Dor de cabeça",
+           "Headache"
+          ]
+         ],
+         "audio": "348560de6e19.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada grupo de nutrientes ao inglês.",
+         "pairs": [
+          [
+           "Proteínas",
+           "Proteins"
+          ],
+          [
+           "Hidratos de carbono",
+           "Carbohydrates"
+          ],
+          [
+           "Vitaminas",
+           "Vitamins"
+          ]
+         ],
+         "audio": "85b4c2efc3ba.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «anemia» em inglês?",
+         "options": [
+          "Anaemia",
+          "Blindness",
+          "Kwashiorkor"
+         ],
+         "a": 0,
+         "audio": "3d91b2cdbf96.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Uma criança, três crianças» escreve-se, com o plural certo:",
+         "options": [
+          "One child, three children",
+          "One child, three childs",
+          "One children, three childrens"
+         ],
+         "a": 0,
+         "audio": "edcd30094b89.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Deves fazer o teste no hospital» escreve-se:",
+         "options": [
+          "You should take the test at the hospital",
+          "You should takes the test at the hospital",
+          "You should to take the test at the hospital"
+         ],
+         "a": 0,
+         "audio": "7910dec66dfd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «eu prefiro fruta a doces»?",
+         "options": [
+          "I prefer fruit to sweets",
+          "I prefer fruit than sweets",
+          "I prefers fruit to sweets"
+         ],
+         "a": 0,
+         "audio": "37a01b23abf4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As doenças: «malaria», «cholera», «anaemia», «kwashiorkor»; os sintomas: «fever», «headache». Os nutrientes: «proteins», «carbohydrates», «vitamins». Alguns plurais são irregulares: «child» dá «children», «foot» dá «feet».",
+        "exemplo": "«One child, three children.» «You should take the test at the hospital.» «I prefer fruit to sweets.»",
+        "lembra": "«Prefer» pede «to», não «than».",
+        "audio": "17a89b83449d.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u9",
+     "titulo": "Ofícios e profissões",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Profissões e o que queremos ser",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada profissão ao inglês.",
+         "pairs": [
+          [
+           "Enfermeira",
+           "Nurse"
+          ],
+          [
+           "Engenheiro",
+           "Engineer"
+          ],
+          [
+           "Motorista",
+           "Driver"
+          ],
+          [
+           "Professor",
+           "Teacher"
+          ]
+         ],
+         "audio": "878c36782770.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em inglês, «eu quero ser médica porque gosto de ajudar as pessoas»?",
+         "options": [
+          "I want to be a doctor because I like helping people",
+          "I want be a doctor because I like helping people",
+          "I want to be a doctor because I like help people"
+         ],
+         "a": 0,
+         "audio": "23fd20bcc61e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela é enfermeira, não é?» escreve-se:",
+         "options": [
+          "She is a nurse, isn't she",
+          "She is a nurse, is she",
+          "She is a nurse, isn't it"
+         ],
+         "a": 0,
+         "audio": "49db4480b7bd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Se estudares, serás engenheiro» escreve-se:",
+         "options": [
+          "If you study, you will be an engineer",
+          "If you study, you would be an engineer",
+          "If you will study, you are an engineer"
+         ],
+         "a": 0,
+         "audio": "b40e7e9ec425.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Pode repetir, por favor?» escreve-se:",
+         "options": [
+          "Can you repeat that, please",
+          "Can you repeating that, please",
+          "You can repeat that, please"
+         ],
+         "a": 0,
+         "audio": "506baa78797a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «emprego» em inglês?",
+         "options": [
+          "Job",
+          "Jab",
+          "Joy"
+         ],
+         "a": 0,
+         "audio": "b19a6f37859d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As profissões: «nurse», «engineer», «driver», «teacher». Diz-se o que se quer ser com «I want to be a», e porquê com «because». A pergunta no fim confirma: «she is a nurse, isn't she?». Para pedir que repitam: «can you repeat, please?».",
+        "exemplo": "«I want to be a doctor because I like helping people.» «If you study, you will be an engineer.» Emprego é «job».",
+        "lembra": "«Want» leva «to»: «I want to be».",
+        "audio": "3884efa791a3.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

@@ -3452,4 +3452,162 @@ MATERIA = {
                    "30: libertaram-se 50, reacção exotérmica.",
         "lembra": "Combustível, oxigénio e calor: o triângulo do fogo.",
     },
+
+    # ---------------------------------------------------------------
+    # Ingles -- 8a classe
+    #
+    # Como na 7a: a explicacao e em portugues e o ingles vai entre
+    # aspas, pouco de cada vez, para a voz portuguesa nao se perder.
+    # ---------------------------------------------------------------
+    "ing-8c:u1:n1": {
+        "explica": "Moçambique está rodeado de países onde se fala inglês: "
+                   "«South Africa», «Zimbabwe», «Zambia», «Tanzania», "
+                   "«Malawi». Por isso o inglês serve para o comércio, o "
+                   "turismo e a escola. As línguas e as nacionalidades "
+                   "escrevem-se com letra grande.",
+        "exemplo": "«I speak Portuguese and English.» «She is Mozambican.» "
+                   "Repara: «Portuguese», «English» e «Mozambican» levam "
+                   "maiúscula, ao contrário do português.",
+        "lembra": "Línguas e nacionalidades, em inglês, com letra grande.",
+    },
+    "ing-8c:u1:n2": {
+        "explica": "No presente simples, com «he», «she» e «it» o verbo "
+                   "ganha «s»: «she works». No passado simples os verbos "
+                   "regulares ganham «ed»: «we visited». «And», «but», "
+                   "«because» e «or» ligam frases; «can» diz o que se sabe "
+                   "fazer.",
+        "exemplo": "«She works in a hotel.» «We visited Tanzania last "
+                   "year.» «I can swim, but I can't drive.» «Always», "
+                   "«sometimes» e «never» dizem quantas vezes.",
+        "lembra": "Terceira pessoa no presente leva «s»; passado regular "
+                  "leva «ed».",
+    },
+    "ing-8c:u2:n1": {
+        "explica": "A saúde tem o «doctor», o «healer» e a «herbal "
+                   "medicine». Para o futuro há «going to», quando já se "
+                   "decidiu, e «will», para o que se prevê ou promete. O "
+                   "que está a acontecer agora vai em «ing»: «she is "
+                   "taking».",
+        "exemplo": "«I am going to the hospital tomorrow.» «The doctor will "
+                   "help you.» «She is taking the medicine now.»",
+        "lembra": "«Going to» é plano; «will» é previsão ou promessa.",
+    },
+    "ing-8c:u2:n2": {
+        "explica": "A condição de sempre usa o presente nas duas partes: "
+                   "«if you have a fever, go to the hospital». A condição "
+                   "provável usa «will» na segunda: «if it rains, we will "
+                   "stay». «Few» e «many» são para contáveis; «should» dá "
+                   "conselho.",
+        "exemplo": "«If it rains, we will stay at home.» «There are few "
+                   "doctors in the village.» «You should go to the doctor.» "
+                   "Automedicação é «self-medication», e faz mal.",
+        "lembra": "Depois de «if» não se usa «will».",
+    },
+    "ing-8c:u3:n1": {
+        "explica": "As cerimónias da comunidade têm nome em inglês: "
+                   "«wedding», «funeral», «birth», «initiation rites». Para "
+                   "contar como uma decorre usam-se os marcadores de "
+                   "sequência: «first», «then», «after that», «finally».",
+        "exemplo": "«First, the family meets; then, the elders speak; "
+                   "finally, everybody dances.» Um costume é «custom»; um "
+                   "cliente é «customer».",
+        "lembra": "«First», «then», «finally»: o princípio, o meio e o fim.",
+    },
+    "ing-8c:u3:n2": {
+        "explica": "«Must» é obrigação forte e «mustn't» é proibição; "
+                   "«should» é o que é boa ideia. Nunca levam «to» a seguir. "
+                   "Com os mais velhos fala-se formal — «good morning, sir» "
+                   "— e com os amigos informal — «hi».",
+        "exemplo": "«We must respect the elders.» «You mustn't miss "
+                   "classes.» «Boys and girls should share the tasks.» "
+                   "«Thank you very much» é formal; «thanks» é entre "
+                   "amigos.",
+        "lembra": "«Must», «mustn't» e «should» nunca levam «to».",
+    },
+    "ing-8c:u4:n1": {
+        "explica": "No campo há a «hoe», o «plough», a «harvest» e os "
+                   "desastres: «drought», «flood», «cyclone». «A» e «an» "
+                   "são os artigos indefinidos — «an» antes de vogal. A água "
+                   "não se conta, por isso pergunta-se «how much water».",
+        "exemplo": "«Maize is an important crop.» «How much water do the "
+                   "plants need?» Criar animais é «animal husbandry».",
+        "lembra": "«How much» para o que não se conta; «how many» para o "
+                  "que se conta.",
+    },
+    "ing-8c:u4:n2": {
+        "explica": "O passado contínuo diz o que estava a acontecer: «were "
+                   "planting». O present perfect diz o que já está feito: "
+                   "«have harvested». A passiva põe a coisa à frente: «the "
+                   "fish is dried». As perguntas de lugar começam por "
+                   "«where».",
+        "exemplo": "«The farmers were planting when the rain started.» "
+                   "«We have harvested the maize.» «The fish is dried in "
+                   "the sun.» «Where do they keep the seeds?»",
+        "lembra": "Present perfect é «have» ou «has» mais o particípio.",
+    },
+    "ing-8c:u5:n1": {
+        "explica": "Nas compras pergunta-se o preço com «how much is», a "
+                   "quantidade com «how many», e compara-se com «more "
+                   "expensive than» nos adjectivos longos. A pergunta no "
+                   "fim da frase, «isn't it», pede que o outro concorde.",
+        "exemplo": "«How much is this shirt?» «How many oranges do you "
+                   "want?» «This dress is more expensive than that one, "
+                   "isn't it?» Regatear é «bargaining»; desconto é "
+                   "«discount».",
+        "lembra": "Adjectivo longo compara-se com «more ... than».",
+    },
+    "ing-8c:u6:n1": {
+        "explica": "Moçambique tem o «elephant», o «lion», o «hippo» e a "
+                   "«turtle», e parques como o Gorongosa. "
+                   "O superlativo dos adjectivos longos faz-se com «the "
+                   "most»; o caçador furtivo é «poacher» e as espécies em "
+                   "perigo, «endangered species».",
+        "exemplo": "«Gorongosa is the most famous park in Mozambique.» "
+                   "«Poachers kill elephants for ivory.» «The turtle is an "
+                   "endangered species.»",
+        "lembra": "Superlativo longo: «the most» antes do adjectivo.",
+    },
+    "ing-8c:u6:n2": {
+        "explica": "«Have to» é obrigação que vem de fora; «may not» é "
+                   "não ter licença. Os reflexivos — «myself», «herself», "
+                   "«themselves» — dizem que a acção volta para quem a faz. "
+                   "«Have you ever» pergunta se alguma vez aconteceu.",
+        "exemplo": "«Tourists have to protect nature.» «You may not feed "
+                   "the animals.» «She enjoyed herself at the beach.» «Have "
+                   "you ever visited Mozambique Island?»",
+        "lembra": "«She» dá «herself»; «he» dá «himself».",
+    },
+    "ing-8c:u7:n1": {
+        "explica": "Do ambiente: «erosion», «pollution», «deforestation», "
+                   "«recycle». «That» e «which» ligam uma frase a uma "
+                   "coisa; «who» a uma pessoa. A segunda condicional "
+                   "imagina: «if I were president, I would protect the "
+                   "forests».",
+        "exemplo": "«The trees that we planted are growing.» «If I were "
+                   "president, I would protect the forests.» «Don't throw "
+                   "rubbish in the river.»",
+        "lembra": "Segunda condicional: «if» com passado, e «would» na "
+                  "outra parte.",
+    },
+    "ing-8c:u8:n1": {
+        "explica": "As doenças: «malaria», «cholera», «anaemia», "
+                   "«kwashiorkor»; os sintomas: «fever», «headache». Os "
+                   "nutrientes: «proteins», «carbohydrates», «vitamins». "
+                   "Alguns plurais são irregulares: «child» dá «children», "
+                   "«foot» dá «feet».",
+        "exemplo": "«One child, three children.» «You should take the test "
+                   "at the hospital.» «I prefer fruit to sweets.»",
+        "lembra": "«Prefer» pede «to», não «than».",
+    },
+    "ing-8c:u9:n1": {
+        "explica": "As profissões: «nurse», «engineer», «driver», "
+                   "«teacher». Diz-se o que se quer ser com «I want to be "
+                   "a», e porquê com «because». A pergunta no fim "
+                   "confirma: «she is a nurse, isn't she?». Para pedir que "
+                   "repitam: «can you repeat, please?».",
+        "exemplo": "«I want to be a doctor because I like helping people.» "
+                   "«If you study, you will be an engineer.» Emprego é "
+                   "«job».",
+        "lembra": "«Want» leva «to»: «I want to be».",
+    },
 }
