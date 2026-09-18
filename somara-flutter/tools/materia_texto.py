@@ -3864,4 +3864,104 @@ MATERIA = {
                    "cota, com setas nas pontas.",
         "lembra": "Sem cotas não se constrói; com cotas não há dúvidas.",
     },
+
+    # ---------------------------------------------------------------
+    # Educacao Fisica -- 8a classe
+    # ---------------------------------------------------------------
+    "edf-8c:u1:n1": {
+        "explica": "Os jogos da comunidade ensinam a jogar em grupo e a "
+                   "respeitar regras. Quem conhece o jogo explica-o de "
+                   "forma clara antes de começar. Há jogos para pensar na "
+                   "poupança, no ambiente, na higiene, e todos jogam "
+                   "juntos, rapazes e raparigas.",
+        "exemplo": "Antes do jogo confere-se o campo: pedras e buracos "
+                   "tiram-se. Perder também se aprende: é a tolerância.",
+        "lembra": "Regras claras, campo seguro, todos a jogar.",
+    },
+    "edf-8c:u1:n2": {
+        "explica": "As danças tradicionais guardam a cultura de cada zona: "
+                   "o nhau no Niassa e em Tete, o mapiko em Cabo Delgado, o "
+                   "xigubo no sul. Aprendem-se os passos básicos e montam-se "
+                   "numa coreografia, ao ritmo do tambor.",
+        "exemplo": "Uma coreografia simples: quatro passos para a direita, "
+                   "quatro para a esquerda, uma volta, tudo ao compasso do "
+                   "batuque.",
+        "lembra": "Coreografia é a dança montada passo a passo.",
+    },
+    "edf-8c:u2:n1": {
+        "explica": "A ginástica geral treina as capacidades motoras: força, "
+                   "flexibilidade, equilíbrio, ritmo, coordenação. No salto "
+                   "à corda, a corda mede-se até às axilas e os movimentos "
+                   "aprendem-se primeiro parado. Com turmas grandes "
+                   "trabalha-se em circuito.",
+        "exemplo": "Estação um: saltos à corda; estação dois: equilíbrios; "
+                   "estação três: saltos no solo. Os grupos rodam e todos "
+                   "fazem tudo.",
+        "lembra": "A corda certa chega às axilas.",
+    },
+    "edf-8c:u2:n2": {
+        "explica": "Na ginástica artística de solo há posições de "
+                   "equilíbrio — o avião, a ponte, a espargata — que se "
+                   "aguentam alguns segundos, e saltos, voltas e afundos. "
+                   "Faz-se sempre aquecimento antes e um colega ajuda a "
+                   "segurar.",
+        "exemplo": "No avião, um pé no chão, o tronco à frente e os braços "
+                   "abertos: três segundos parado. A pares, um faz e o "
+                   "outro segura, e depois trocam.",
+        "lembra": "Aquecer primeiro; a pares, um faz e o outro segura.",
+    },
+    "edf-8c:u3:n1": {
+        "explica": "A corrida de resistência vai até dez minutos, em grupo, "
+                   "ao ritmo do mais lento, alternando com caminhada se for "
+                   "preciso. Nas estafetas o testemunho passa-se por baixo, "
+                   "dentro da zona marcada e sem parar de correr.",
+        "exemplo": "Quatro corredores de 100 metros fazem 400. A "
+                   "transmissão aprende-se a andar, depois em corrida lenta, "
+                   "depois a correr.",
+        "lembra": "Testemunho por baixo, na zona, a correr.",
+    },
+    "edf-8c:u3:n2": {
+        "explica": "O salto em comprimento tem quatro fases: corrida de "
+                   "balanço, chamada, voo e queda. Na técnica engrupada, "
+                   "durante o voo encolhem-se os joelhos ao peito. "
+                   "Aprende-se primeiro sem corrida, e a caixa de areia "
+                   "tem de estar limpa.",
+        "exemplo": "Correr, bater com um pé na tábua, encolher os joelhos "
+                   "no ar, cair com os pés à frente na areia: é o salto "
+                   "todo.",
+        "lembra": "Balanço, chamada, voo, queda.",
+    },
+    "edf-8c:u4:n1": {
+        "explica": "No basquetebol avança-se a driblar: a bola bate no "
+                   "chão. Os passes são de peito, picado e de ombro. Com a "
+                   "bola na mão, na tripla ameaça, pode-se passar, driblar "
+                   "ou lançar. No lançamento na passada dão-se dois apoios "
+                   "e salta-se.",
+        "exemplo": "Adversário perto: drible de protecção, com o corpo "
+                   "entre ele e a bola. Campo aberto: drible de progressão, "
+                   "a correr.",
+        "lembra": "Passar, driblar ou lançar: a tripla ameaça.",
+    },
+    "edf-8c:u4:n2": {
+        "explica": "Quem tem a bola ataca: mantém a posse, leva a bola ao "
+                   "cesto e lança. Quem não a tem defende: recupera a bola "
+                   "e protege o cesto. Na posição defensiva os joelhos "
+                   "flectem e os braços abrem, entre o adversário e o "
+                   "cesto.",
+        "exemplo": "Defender quem tem a bola é pressão; defender quem não "
+                   "a tem é sobremarcação e ajuda. Nos jogos reduzidos há "
+                   "pelo menos três por equipa.",
+        "lembra": "Com bola ataca-se; sem bola defende-se.",
+    },
+    "edf-8c:u5:n1": {
+        "explica": "No futebol, desmarcar-se é sair de perto do adversário "
+                   "para receber a bola, e ocupar o espaço é a equipa "
+                   "espalhar-se em vez de correr toda atrás dela. A finta "
+                   "engana o adversário; proteger a bola é pôr o corpo "
+                   "entre ela e ele.",
+        "exemplo": "Onze por equipa no jogo formal, com o guarda-redes. "
+                   "Quando o capitão decide, a equipa respeita e joga em "
+                   "conjunto.",
+        "lembra": "Desmarcar, ocupar o espaço, proteger a bola.",
+    },
 }
