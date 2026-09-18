@@ -4766,4 +4766,149 @@ MATERIA = {
                    "quem governa, em eleições livres.",
         "lembra": "Integração é ganhar com os vizinhos, não contra eles.",
     },
+
+    # ---------------------------------------------------------------
+    # Historia -- 9a classe  (o seculo XX)
+    # ---------------------------------------------------------------
+    "his-9c:u1:n1": {
+        "explica": "No fim do século XIX as potências europeias disputavam "
+                   "colónias, mercados e matérias-primas: é o "
+                   "imperialismo. Formaram blocos militares e correram "
+                   "aos armamentos, até que um atentado acendeu a guerra.",
+        "exemplo": "Inglaterra, França e Rússia de um lado; Alemanha, "
+                   "Áustria-Hungria e Itália do outro. A 28 de Junho de "
+                   "1914, em Sarajevo, mataram o herdeiro austríaco.",
+        "lembra": "Dois blocos, uma corrida às armas, um atentado.",
+    },
+    "his-9c:u1:n2": {
+        "explica": "A I Guerra Mundial teve três fases: movimentos, "
+                   "trincheiras, movimentos outra vez. Os Estados Unidos "
+                   "entraram em 1917; a Rússia saiu nesse ano, com a "
+                   "revolução. África deu soldados e carregadores à "
+                   "força; Moçambique teve combates no norte.",
+        "exemplo": "As tropas alemãs entraram por Cabo Delgado e o Niassa "
+                   "vindas da Tanzânia; milhares de moçambicanos foram "
+                   "levados como carregadores.",
+        "lembra": "Movimentos, trincheiras, movimentos.",
+    },
+    "his-9c:u1:n3": {
+        "explica": "O armistício de 1918 acabou a guerra. "
+                   "O Tratado de Versalhes culpou a Alemanha e impôs-lhe "
+                   "perdas, e a Sociedade das Nações nasceu "
+                   "para resolver conflitos em paz. Milhões de mortos, "
+                   "economias destruídas, impérios desfeitos.",
+        "exemplo": "As colónias alemãs em África foram repartidas pelos "
+                   "vencedores: o Tanganhica passou aos ingleses. Ninguém "
+                   "ficou independente.",
+        "lembra": "Versalhes humilhou a Alemanha; a Sociedade das Nações "
+                  "quis a paz.",
+    },
+    "his-9c:u1:n4": {
+        "explica": "A ocupação efectiva pôs a administração colonial: "
+                   "directa, por europeus, ou indirecta, por chefes "
+                   "africanos. Em Moçambique, as companhias, o chibalo, o imposto de palhota e as culturas "
+                   "obrigatórias exploravam o povo, que resistiu.",
+        "exemplo": "A Companhia do Niassa mandou no norte até 1929. "
+                   "Ngungunhane resistiu em Gaza em 1895, Makombe no Barué "
+                   "em 1917, e Menelik venceu os italianos em Adua.",
+        "lembra": "Chibalo é trabalho forçado.",
+    },
+    "his-9c:u2:n1": {
+        "explica": "Em 1917 a Revolução de Outubro fez da Rússia o primeiro "
+                   "Estado socialista, a URSS, com a economia nas mãos do "
+                   "Estado. Em 1929 a bolsa de Nova Iorque caiu e a crise "
+                   "fechou fábricas no mundo inteiro; Roosevelt "
+                   "respondeu com o New Deal.",
+        "exemplo": "Em Moçambique a crise fez cair os preços do algodão e "
+                   "do açúcar, e os camponeses ficaram a ganhar menos pelo "
+                   "mesmo trabalho.",
+        "lembra": "1917 revolução, 1929 crise.",
+    },
+    "his-9c:u2:n2": {
+        "explica": "Nos anos 30 nasceram ditaduras: o fascismo de "
+                   "Mussolini, o nazismo de Hitler, o Estado Novo de "
+                   "Salazar. Acabaram com as liberdades; o nazismo pregou "
+                   "o ódio racial e o Holocausto. Em Moçambique, o Estado "
+                   "Novo apertou o trabalho forçado.",
+        "exemplo": "O corporativismo foi o sistema do Estado Novo. Nas "
+                   "colónias, mais culturas obrigatórias, mais chibalo e "
+                   "censura à imprensa.",
+        "lembra": "Fascismo, nazismo, Estado Novo: três ditaduras.",
+    },
+    "his-9c:u2:n3": {
+        "explica": "A II Guerra Mundial começou em 1939 com a invasão da "
+                   "Polónia e acabou em 1945. Causas: a humilhação de "
+                   "Versalhes, a crise, o expansionismo de Hitler, o "
+                   "nazismo. África deu soldados e matérias-primas. No "
+                   "fim nasceu a ONU, para manter a paz.",
+        "exemplo": "Soldados africanos lutaram nos exércitos coloniais em "
+                   "África e na Europa. A bomba atómica em Hiroxima mostrou "
+                   "o perigo das armas de destruição maciça.",
+        "lembra": "1939 a 1945; no fim, a ONU.",
+    },
+    "his-9c:u3:n1": {
+        "explica": "No Estado Novo, Moçambique era «província ultramarina» "
+                   "e o indigenato negava direitos aos moçambicanos. O "
+                   "nacionalismo nasceu em greves, associações e jornais, "
+                   "e o massacre de Mueda, em 1960, mostrou que a "
+                   "independência não viria em paz.",
+        "exemplo": "A UDENAMO nasceu na Rodésia, a MANU no Tanganhica, a "
+                   "UNAMI no Malawi: três movimentos de emigrantes "
+                   "moçambicanos, que se juntariam.",
+        "lembra": "Mueda, 16 de Junho de 1960.",
+    },
+    "his-9c:u3:n2": {
+        "explica": "A 25 de Junho de 1962, em Dar es Salaam, os três "
+                   "movimentos fundiram-se na FRELIMO, com Eduardo Mondlane "
+                   "como presidente. Preparou combatentes em Kongwa e "
+                   "Nachingwea e, a 25 de Setembro de 1964, em Chai, "
+                   "começou a luta armada.",
+        "exemplo": "Samora Machel comandou a luta e foi o primeiro "
+                   "Presidente; Josina Machel cuidou dos assuntos sociais; "
+                   "Filipe Samuel Magaia foi o primeiro comandante militar.",
+        "lembra": "1962 a FRELIMO, 1964 a luta armada.",
+    },
+    "his-9c:u3:n3": {
+        "explica": "Nas zonas libertadas, a "
+                   "FRELIMO governava com escolas, postos de saúde, "
+                   "produção colectiva e a mulher na luta. A 7 de Setembro "
+                   "de 1974 os Acordos de Lusaka reconheceram a "
+                   "independência, proclamada a 25 de Junho de 1975.",
+        "exemplo": "A Constituição de 1975 fez de Moçambique a República "
+                   "Popular de Moçambique, um Estado independente sem a "
+                   "discriminação colonial.",
+        "lembra": "Lusaka em 1974, Independência em 1975.",
+    },
+    "his-9c:u4:n1": {
+        "explica": "A Guerra Fria opôs os Estados Unidos, com a NATO, à "
+                   "URSS, com o Pacto de Varsóvia, sem guerra directa "
+                   "entre eles. Os Não-Alinhados recusaram os blocos. O "
+                   "apartheid sul-africano desestabilizou Moçambique, e o "
+                   "muro de Berlim caiu em 1989.",
+        "exemplo": "Moçambique sofreu ataques e sabotagens apoiados pelo "
+                   "apartheid, que via no país independente uma ameaça.",
+        "lembra": "Guerra Fria: dois blocos, nunca frente a frente.",
+    },
+    "his-9c:u4:n2": {
+        "explica": "Depois da Independência, o Governo da FRELIMO e a "
+                   "RENAMO fizeram uma guerra de dezasseis anos. As "
+                   "negociações de Roma levaram ao Acordo Geral de Paz, a "
+                   "4 de Outubro de 1992. A Constituição de 1990 já tinha "
+                   "aberto o multipartidarismo.",
+        "exemplo": "As primeiras eleições gerais multipartidárias foram em "
+                   "1994: vários partidos, voto secreto, o povo a "
+                   "escolher.",
+        "lembra": "Roma, 4 de Outubro de 1992: a paz.",
+    },
+    "his-9c:u4:n3": {
+        "explica": "De cinco em cinco anos há eleições gerais, para o "
+                   "Presidente e a Assembleia; há também autárquicas, para "
+                   "os municípios, e provinciais. O voto é secreto. "
+                   "A cultura de paz é resolver os conflitos pelo diálogo, "
+                   "na escola como entre países.",
+        "exemplo": "Coexistência pacífica é países com sistemas diferentes "
+                   "a viver lado a lado sem guerra: foi o que a Guerra Fria "
+                   "acabou por aprender.",
+        "lembra": "Voto secreto, diálogo primeiro.",
+    },
 }

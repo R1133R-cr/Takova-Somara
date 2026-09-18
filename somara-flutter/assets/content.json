@@ -39331,6 +39331,922 @@
      ]
     }
    ]
+  },
+  {
+   "id": "his-9c",
+   "disciplina": "História",
+   "classe": "9ª classe",
+   "tag": "HIS",
+   "fonte": "Programa de Ensino da Disciplina de História — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, 9ª classe, pp. 35-45. As quatro unidades temáticas e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 9ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "As contradições imperialistas e a I Guerra Mundial",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "As potências e os blocos militares",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "No fim do século XIX, as potências europeias disputavam:",
+         "options": [
+          "Colónias, mercados e matérias-primas",
+          "Os melhores poetas",
+          "O direito de votar"
+         ],
+         "a": 0,
+         "audio": "b0859e3f9ba9.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada bloco militar aos seus países.",
+         "pairs": [
+          [
+           "Tríplice Entente",
+           "Inglaterra, França e Rússia"
+          ],
+          [
+           "Tríplice Aliança",
+           "Alemanha, Áustria-Hungria e Itália"
+          ]
+         ],
+         "audio": "25f9bc079fb8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A corrida aos armamentos foi:",
+         "options": [
+          "As potências a fabricar cada vez mais armas e navios, à espera da guerra",
+          "Uma competição desportiva",
+          "Uma feira de comércio"
+         ],
+         "a": 0,
+         "audio": "b10ca0601516.mp3"
+        },
+        {
+         "t": "input",
+         "q": "O atentado de Sarajevo, que acendeu a I Guerra Mundial, foi a 28 de Junho de que ano?",
+         "a": "1914",
+         "audio": "00bcbbf04fb2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Imperialismo é:",
+         "options": [
+          "A política de um país dominar outros territórios e povos",
+          "O governo de um imperador chinês",
+          "Uma religião"
+         ],
+         "a": 0,
+         "audio": "4104bbfbf183.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No fim do século XIX as potências europeias disputavam colónias, mercados e matérias-primas: é o imperialismo. Formaram blocos militares e correram aos armamentos, até que um atentado acendeu a guerra.",
+        "exemplo": "Inglaterra, França e Rússia de um lado; Alemanha, Áustria-Hungria e Itália do outro. A 28 de Junho de 1914, em Sarajevo, mataram o herdeiro austríaco.",
+        "lembra": "Dois blocos, uma corrida às armas, um atentado.",
+        "audio": "7b36a2739ff2.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A guerra e as suas fases",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada fase da I Guerra Mundial à sua característica.",
+         "pairs": [
+          [
+           "Primeira fase",
+           "Guerra de movimentos: avanços rápidos"
+          ],
+          [
+           "Segunda fase",
+           "Guerra de trincheiras: frentes paradas"
+          ],
+          [
+           "Terceira fase",
+           "Regresso aos movimentos, até ao fim"
+          ]
+         ],
+         "audio": "1c55c800621f.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em que ano entraram os Estados Unidos na I Guerra Mundial?",
+         "a": "1917",
+         "audio": "43e1973e95d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Rússia saiu da guerra em 1917 porque:",
+         "options": [
+          "A Revolução Socialista de Outubro tomou o poder e fez a paz",
+          "Tinha ganho a guerra",
+          "Não tinha exército"
+         ],
+         "a": 0,
+         "audio": "6a48475b4371.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os africanos participaram na I Guerra Mundial:",
+         "options": [
+          "Como soldados e carregadores das potências coloniais, muitas vezes à força",
+          "Como generais das potências",
+          "Não participaram"
+         ],
+         "a": 0,
+         "audio": "dc8e3de3da7b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em Moçambique, a I Guerra Mundial trouxe:",
+         "options": [
+          "Combates no norte, com a invasão alemã vinda da Tanzânia",
+          "Paz e prosperidade",
+          "Nada: ficou de fora"
+         ],
+         "a": 0,
+         "audio": "80aadaa76ba3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A I Guerra Mundial teve três fases: movimentos, trincheiras, movimentos outra vez. Os Estados Unidos entraram em 1917; a Rússia saiu nesse ano, com a revolução. África deu soldados e carregadores à força; Moçambique teve combates no norte.",
+        "exemplo": "As tropas alemãs entraram por Cabo Delgado e o Niassa vindas da Tanzânia; milhares de moçambicanos foram levados como carregadores.",
+        "lembra": "Movimentos, trincheiras, movimentos.",
+        "audio": "8657865515d5.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "O fim da guerra e a Sociedade das Nações",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "O armistício que acabou com a I Guerra Mundial foi assinado a 11 de Novembro de que ano?",
+         "a": "1918",
+         "audio": "36be463d55bd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Tratado de Versalhes:",
+         "options": [
+          "Impôs à Alemanha a culpa da guerra, perdas de território e pesadas reparações",
+          "Deu a vitória à Alemanha",
+          "Criou a União Europeia"
+         ],
+         "a": 0,
+         "audio": "e1e8fdd9a291.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Sociedade das Nações foi criada para:",
+         "options": [
+          "Resolver os conflitos entre países pela via pacífica",
+          "Preparar a guerra seguinte",
+          "Organizar os Jogos Olímpicos"
+         ],
+         "a": 0,
+         "audio": "a8d0fcc2fa75.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada consequência da I Guerra Mundial ao seu tipo.",
+         "pairs": [
+          [
+           "Milhões de mortos e feridos",
+           "Demográfica"
+          ],
+          [
+           "Cidades e fábricas destruídas",
+           "Económica"
+          ],
+          [
+           "Impérios desfeitos e novos países",
+           "Política"
+          ]
+         ],
+         "audio": "08e5be6e44a1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para África, a I Guerra Mundial significou:",
+         "options": [
+          "As colónias alemãs repartidas pelos vencedores",
+          "A independência de todos os países",
+          "O fim do colonialismo"
+         ],
+         "a": 0,
+         "audio": "49d9df43431a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O armistício de 1918 acabou a guerra. O Tratado de Versalhes culpou a Alemanha e impôs-lhe perdas, e a Sociedade das Nações nasceu para resolver conflitos em paz. Milhões de mortos, economias destruídas, impérios desfeitos.",
+        "exemplo": "As colónias alemãs em África foram repartidas pelos vencedores: o Tanganhica passou aos ingleses. Ninguém ficou independente.",
+        "lembra": "Versalhes humilhou a Alemanha; a Sociedade das Nações quis a paz.",
+        "audio": "a6a946252add.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "A ocupação efectiva e o sistema colonial",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada forma de administração colonial ao que ela era.",
+         "pairs": [
+          [
+           "Directa",
+           "Funcionários europeus a mandar em tudo"
+          ],
+          [
+           "Indirecta",
+           "Chefes africanos a governar sob controlo europeu"
+          ]
+         ],
+         "audio": "e5a64321012c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As companhias monopolistas, como a Companhia de Moçambique e a do Niassa:",
+         "options": [
+          "Exploravam grandes territórios e o seu trabalho em vez do Estado português",
+          "Eram escolas",
+          "Defendiam os camponeses"
+         ],
+         "a": 0,
+         "audio": "32a917a11231.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada forma de exploração colonial em Moçambique ao que ela era.",
+         "pairs": [
+          [
+           "Chibalo",
+           "Trabalho forçado"
+          ],
+          [
+           "Imposto de palhota",
+           "Imposto pago por cada casa"
+          ],
+          [
+           "Culturas obrigatórias",
+           "Algodão e arroz impostos aos camponeses"
+          ]
+         ],
+         "audio": "bc09be2cd5ba.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma particularidade do colonialismo português foi:",
+         "options": [
+          "Ser um país pobre a explorar as colónias com trabalho forçado e a exportar trabalhadores para as minas",
+          "Dar a independência cedo",
+          "Não ter colónias em África"
+         ],
+         "a": 0,
+         "audio": "50c63063e62d.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada resistência à ocupação ao seu líder ou lugar.",
+         "pairs": [
+          [
+           "Gaza, 1895",
+           "Ngungunhane"
+          ],
+          [
+           "Barué, 1917",
+           "Makombe"
+          ],
+          [
+           "Etiópia, 1896",
+           "Menelik vence os italianos em Adua"
+          ]
+         ],
+         "audio": "7cfc8f2f223f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A ocupação efectiva pôs a administração colonial: directa, por europeus, ou indirecta, por chefes africanos. Em Moçambique, as companhias, o chibalo, o imposto de palhota e as culturas obrigatórias exploravam o povo, que resistiu.",
+        "exemplo": "A Companhia do Niassa mandou no norte até 1929. Ngungunhane resistiu em Gaza em 1895, Makombe no Barué em 1917, e Menelik venceu os italianos em Adua.",
+        "lembra": "Chibalo é trabalho forçado.",
+        "audio": "5727f4791069.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "O mundo entre as duas guerras e a II Guerra Mundial",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A URSS e a crise de 1929",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Em que ano foi a Revolução Socialista de Outubro, na Rússia?",
+         "a": "1917",
+         "audio": "65c04f49adbc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A União das Repúblicas Socialistas Soviéticas foi:",
+         "options": [
+          "O Estado socialista nascido da revolução russa, com a economia nas mãos do Estado",
+          "Uma colónia inglesa",
+          "Um reino"
+         ],
+         "a": 0,
+         "audio": "2c429ef53bed.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em que ano rebentou a crise económica mundial, com a queda da bolsa de Nova Iorque?",
+         "a": "1929",
+         "audio": "442298bc097e.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada consequência da crise de 1929 ao lugar.",
+         "pairs": [
+          [
+           "Fábricas fechadas e milhões de desempregados",
+           "Estados Unidos e Europa"
+          ],
+          [
+           "Preços do algodão e do açúcar a cair",
+           "Moçambique e África"
+          ]
+         ],
+         "audio": "83f64ab574c8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Roosevelt combateu a crise com:",
+         "options": [
+          "O Estado a criar obras públicas e empregos: o New Deal",
+          "Uma nova guerra",
+          "O fim dos impostos"
+         ],
+         "a": 0,
+         "audio": "bcbfd8074119.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Em 1917 a Revolução de Outubro fez da Rússia o primeiro Estado socialista, a URSS, com a economia nas mãos do Estado. Em 1929 a bolsa de Nova Iorque caiu e a crise fechou fábricas no mundo inteiro; Roosevelt respondeu com o New Deal.",
+        "exemplo": "Em Moçambique a crise fez cair os preços do algodão e do açúcar, e os camponeses ficaram a ganhar menos pelo mesmo trabalho.",
+        "lembra": "1917 revolução, 1929 crise.",
+        "audio": "021f8aedd7ea.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Fascismo, nazismo e o Estado Novo",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada regime ditatorial ao seu país e chefe.",
+         "pairs": [
+          [
+           "Fascismo",
+           "Itália, Mussolini"
+          ],
+          [
+           "Nazismo",
+           "Alemanha, Hitler"
+          ],
+          [
+           "Estado Novo",
+           "Portugal, Salazar"
+          ]
+         ],
+         "audio": "96a22a51e7d8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os regimes ditatoriais dos anos 30:",
+         "options": [
+          "Acabaram com as liberdades e perseguiram quem discordava",
+          "Fizeram eleições livres",
+          "Deram a independência às colónias"
+         ],
+         "a": 0,
+         "audio": "ee40eb74b302.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O nazismo alemão defendia:",
+         "options": [
+          "A superioridade de uma raça e o ódio aos judeus, que levou ao Holocausto",
+          "A igualdade de todos os povos",
+          "A paz com os vizinhos"
+         ],
+         "a": 0,
+         "audio": "74b9ea46d6d6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em Moçambique, a política fascista de Portugal:",
+         "options": [
+          "Apertou o trabalho forçado, as culturas obrigatórias e a censura",
+          "Trouxe liberdade",
+          "Acabou com o colonialismo"
+         ],
+         "a": 0,
+         "audio": "584e8158baec.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Corporativismo foi o nome dado ao sistema económico e social:",
+         "options": [
+          "Do Estado Novo português",
+          "Da União Soviética",
+          "Dos Estados Unidos"
+         ],
+         "a": 0,
+         "audio": "da427d3ce0f4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Nos anos 30 nasceram ditaduras: o fascismo de Mussolini, o nazismo de Hitler, o Estado Novo de Salazar. Acabaram com as liberdades; o nazismo pregou o ódio racial e o Holocausto. Em Moçambique, o Estado Novo apertou o trabalho forçado.",
+        "exemplo": "O corporativismo foi o sistema do Estado Novo. Nas colónias, mais culturas obrigatórias, mais chibalo e censura à imprensa.",
+        "lembra": "Fascismo, nazismo, Estado Novo: três ditaduras.",
+        "audio": "237cf1c18c09.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A II Guerra Mundial e a ONU",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "A II Guerra Mundial começou com a invasão da Polónia pela Alemanha, em que ano?",
+         "a": "1939",
+         "audio": "3921f5d3a564.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada causa da II Guerra Mundial ao seu tipo.",
+         "pairs": [
+          [
+           "A humilhação de Versalhes e a crise",
+           "Económica e política"
+          ],
+          [
+           "O expansionismo de Hitler",
+           "Político-militar"
+          ],
+          [
+           "O nazismo e o fascismo",
+           "Ideológica"
+          ]
+         ],
+         "audio": "693ce02d98ad.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "África participou na II Guerra Mundial:",
+         "options": [
+          "Com soldados africanos nos exércitos coloniais e com as suas matérias-primas",
+          "Como país independente",
+          "Só a assistir"
+         ],
+         "a": 0,
+         "audio": "5d534d56d466.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A II Guerra Mundial acabou em que ano, com a rendição da Alemanha e do Japão?",
+         "a": "1945",
+         "audio": "cd210b7fb457.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Organização das Nações Unidas, criada em 1945, tem como fim:",
+         "options": [
+          "Manter a paz e a cooperação entre os povos",
+          "Governar todos os países",
+          "Fabricar armas"
+         ],
+         "a": 0,
+         "audio": "3f5bb57b816a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A II Guerra Mundial começou em 1939 com a invasão da Polónia e acabou em 1945. Causas: a humilhação de Versalhes, a crise, o expansionismo de Hitler, o nazismo. África deu soldados e matérias-primas. No fim nasceu a ONU, para manter a paz.",
+        "exemplo": "Soldados africanos lutaram nos exércitos coloniais em África e na Europa. A bomba atómica em Hiroxima mostrou o perigo das armas de destruição maciça.",
+        "lembra": "1939 a 1945; no fim, a ONU.",
+        "audio": "6e601eb5d4f7.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "A luta de libertação e a Independência de Moçambique",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O Estado Novo e o nascimento do nacionalismo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "No Estado Novo de Salazar, Moçambique era:",
+         "options": [
+          "Uma colónia chamada «província ultramarina», sem direitos para os moçambicanos",
+          "Um país independente",
+          "Uma república"
+         ],
+         "a": 0,
+         "audio": "f65360edd251.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O estatuto do indigenato dividia a população em:",
+         "options": [
+          "Indígenas, sem direitos de cidadão, e assimilados e colonos",
+          "Ricos e pobres",
+          "Norte e sul"
+         ],
+         "a": 0,
+         "audio": "387725150472.mp3"
+        },
+        {
+         "t": "input",
+         "q": "O massacre de Mueda, em que o exército colonial disparou sobre uma manifestação pacífica, foi a 16 de Junho de que ano?",
+         "a": "1960",
+         "audio": "c6bd052e3b32.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada movimento nacionalista que antecedeu a FRELIMO ao lugar onde nasceu.",
+         "pairs": [
+          [
+           "UDENAMO",
+           "Salisbúria, na Rodésia do Sul"
+          ],
+          [
+           "MANU",
+           "Tanganhica, entre os macondes"
+          ],
+          [
+           "UNAMI",
+           "Malawi"
+          ]
+         ],
+         "audio": "39f427b18f8f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As primeiras manifestações nacionalistas em Moçambique foram:",
+         "options": [
+          "Greves de estivadores, associações de trabalhadores e jornais como O Brado Africano",
+          "Eleições",
+          "Partidos legais"
+         ],
+         "a": 0,
+         "audio": "04df0c1b2fa7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No Estado Novo, Moçambique era «província ultramarina» e o indigenato negava direitos aos moçambicanos. O nacionalismo nasceu em greves, associações e jornais, e o massacre de Mueda, em 1960, mostrou que a independência não viria em paz.",
+        "exemplo": "A UDENAMO nasceu na Rodésia, a MANU no Tanganhica, a UNAMI no Malawi: três movimentos de emigrantes moçambicanos, que se juntariam.",
+        "lembra": "Mueda, 16 de Junho de 1960.",
+        "audio": "2977f07a91f3.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A FRELIMO e a luta armada",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "A FRELIMO foi fundada em Dar es Salaam, a 25 de Junho de que ano?",
+         "a": "1962",
+         "audio": "5119ea561a51.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O primeiro presidente da FRELIMO foi:",
+         "options": [
+          "Eduardo Mondlane",
+          "Samora Machel",
+          "Joaquim Chissano"
+         ],
+         "a": 0,
+         "audio": "a403e3e59382.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A luta armada de libertação nacional começou a 25 de Setembro de que ano, em Chai, Cabo Delgado?",
+         "a": "1964",
+         "audio": "88d1bf93c3fd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada figura da luta de libertação ao seu papel.",
+         "pairs": [
+          [
+           "Eduardo Mondlane",
+           "Fundador e primeiro presidente da FRELIMO"
+          ],
+          [
+           "Samora Machel",
+           "Comandante da luta armada e primeiro Presidente"
+          ],
+          [
+           "Josina Machel",
+           "Combatente e responsável pelos assuntos sociais"
+          ],
+          [
+           "Filipe Samuel Magaia",
+           "Primeiro comandante militar"
+          ]
+         ],
+         "audio": "a70a5c46f423.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Onde foram os primeiros centros de preparação político-militar da FRELIMO?",
+         "options": [
+          "Na Tanzânia, em Kongwa e Nachingwea",
+          "Em Lisboa",
+          "Em Maputo"
+         ],
+         "a": 0,
+         "audio": "ce6970182963.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A 25 de Junho de 1962, em Dar es Salaam, os três movimentos fundiram-se na FRELIMO, com Eduardo Mondlane como presidente. Preparou combatentes em Kongwa e Nachingwea e, a 25 de Setembro de 1964, em Chai, começou a luta armada.",
+        "exemplo": "Samora Machel comandou a luta e foi o primeiro Presidente; Josina Machel cuidou dos assuntos sociais; Filipe Samuel Magaia foi o primeiro comandante militar.",
+        "lembra": "1962 a FRELIMO, 1964 a luta armada.",
+        "audio": "8979e9b563f5.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "As zonas libertadas, Lusaka e a Independência",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "As zonas libertadas eram:",
+         "options": [
+          "Áreas de Cabo Delgado, Niassa e Tete onde a FRELIMO governava, com escolas e postos de saúde",
+          "Cidades portuguesas",
+          "Ilhas do Índico"
+         ],
+         "a": 0,
+         "audio": "1dae9b3edf8c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Nas zonas libertadas nasceram novas relações sociais:",
+         "options": [
+          "Produção colectiva, escolas para todos e a mulher na luta",
+          "O trabalho forçado",
+          "O imposto de palhota"
+         ],
+         "a": 0,
+         "audio": "dd2716bdc140.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Os Acordos de Lusaka, que reconheceram o direito de Moçambique à independência, foram assinados a 7 de Setembro de que ano?",
+         "a": "1974",
+         "audio": "8163b5212bd8.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em que ano foi proclamada a Independência Nacional, a 25 de Junho?",
+         "a": "1975",
+         "audio": "a662d998783d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Constituição da República Popular de Moçambique, de 1975:",
+         "options": [
+          "Fez de Moçambique um Estado independente e acabou com a discriminação colonial",
+          "Manteve o indigenato",
+          "Entregou o país a Portugal"
+         ],
+         "a": 0,
+         "audio": "88a6d5d060a4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Nas zonas libertadas, a FRELIMO governava com escolas, postos de saúde, produção colectiva e a mulher na luta. A 7 de Setembro de 1974 os Acordos de Lusaka reconheceram a independência, proclamada a 25 de Junho de 1975.",
+        "exemplo": "A Constituição de 1975 fez de Moçambique a República Popular de Moçambique, um Estado independente sem a discriminação colonial.",
+        "lembra": "Lusaka em 1974, Independência em 1975.",
+        "audio": "6b980ba71900.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Da Guerra Fria à paz em Moçambique",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A Guerra Fria",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Guerra Fria foi:",
+         "options": [
+          "O confronto entre os Estados Unidos e a URSS sem guerra directa entre eles",
+          "Uma guerra no Pólo Norte",
+          "Uma guerra entre Portugal e Espanha"
+         ],
+         "a": 0,
+         "audio": "c2d60f0e8a52.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada bloco militar da Guerra Fria ao seu líder.",
+         "pairs": [
+          [
+           "NATO",
+           "Estados Unidos"
+          ],
+          [
+           "Pacto de Varsóvia",
+           "União Soviética"
+          ]
+         ],
+         "audio": "0e5617449410.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Movimento dos Não-Alinhados juntou:",
+         "options": [
+          "Países do Terceiro Mundo que não queriam pertencer a nenhum dos blocos",
+          "Os aliados dos Estados Unidos",
+          "Os aliados da URSS"
+         ],
+         "a": 0,
+         "audio": "750549a7a409.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O regime do apartheid, na África do Sul, desestabilizou Moçambique:",
+         "options": [
+          "Apoiando a guerra contra o Governo, no contexto da Guerra Fria",
+          "Enviando professores",
+          "Comprando o caju"
+         ],
+         "a": 0,
+         "audio": "78959f1f589a.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A queda do muro de Berlim, que marcou o fim da Guerra Fria, foi em que ano?",
+         "a": "1989",
+         "audio": "581f25866e71.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Guerra Fria opôs os Estados Unidos, com a NATO, à URSS, com o Pacto de Varsóvia, sem guerra directa entre eles. Os Não-Alinhados recusaram os blocos. O apartheid sul-africano desestabilizou Moçambique, e o muro de Berlim caiu em 1989.",
+        "exemplo": "Moçambique sofreu ataques e sabotagens apoiados pelo apartheid, que via no país independente uma ameaça.",
+        "lembra": "Guerra Fria: dois blocos, nunca frente a frente.",
+        "audio": "116bfbc65355.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Os caminhos da paz em Moçambique",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A guerra que Moçambique viveu depois da Independência foi entre:",
+         "options": [
+          "O Governo da FRELIMO e a RENAMO",
+          "Moçambique e a Tanzânia",
+          "Portugal e a FRELIMO"
+         ],
+         "a": 0,
+         "audio": "99ba09393935.mp3"
+        },
+        {
+         "t": "input",
+         "q": "O Acordo Geral de Paz de Roma foi assinado a 4 de Outubro de que ano?",
+         "a": "1992",
+         "audio": "2052dfd2e7ce.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As negociações de Roma foram:",
+         "options": [
+          "Conversas entre o Governo e a RENAMO, com mediação, até ao acordo de paz",
+          "Uma batalha",
+          "Um campeonato"
+         ],
+         "a": 0,
+         "audio": "6ac1a961f6a3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Constituição de 1990 trouxe:",
+         "options": [
+          "O multipartidarismo e as liberdades: vários partidos e eleições",
+          "O partido único",
+          "O regresso do colonialismo"
+         ],
+         "a": 0,
+         "audio": "b2c6250d16fc.mp3"
+        },
+        {
+         "t": "input",
+         "q": "As primeiras eleições gerais multipartidárias de Moçambique foram em que ano?",
+         "a": "1994",
+         "audio": "2ebc82e9c45e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Depois da Independência, o Governo da FRELIMO e a RENAMO fizeram uma guerra de dezasseis anos. As negociações de Roma levaram ao Acordo Geral de Paz, a 4 de Outubro de 1992. A Constituição de 1990 já tinha aberto o multipartidarismo.",
+        "exemplo": "As primeiras eleições gerais multipartidárias foram em 1994: vários partidos, voto secreto, o povo a escolher.",
+        "lembra": "Roma, 4 de Outubro de 1992: a paz.",
+        "audio": "b78ac3585115.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "As eleições e a cultura de paz",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada eleição ao que ela escolhe.",
+         "pairs": [
+          [
+           "Eleições gerais",
+           "O Presidente da República e a Assembleia"
+          ],
+          [
+           "Eleições autárquicas",
+           "Os presidentes e assembleias dos municípios"
+          ],
+          [
+           "Eleições provinciais",
+           "As assembleias e os governadores das províncias"
+          ]
+         ],
+         "audio": "c11478c15972.mp3"
+        },
+        {
+         "t": "input",
+         "q": "De quantos em quantos anos se fazem as eleições gerais em Moçambique?",
+         "a": "5",
+         "audio": "5aae379ab347.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa eleição livre, o voto é:",
+         "options": [
+          "Secreto e de cada cidadão, sem ameaças",
+          "Público e obrigatório num partido",
+          "Só dos homens"
+         ],
+         "a": 0,
+         "audio": "43c8aeee5963.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A cultura de paz aprende-se:",
+         "options": [
+          "A resolver os conflitos pelo diálogo, na escola e na comunidade",
+          "Com armas",
+          "Ignorando os outros"
+         ],
+         "a": 0,
+         "audio": "79d550791138.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Coexistência pacífica quer dizer:",
+         "options": [
+          "Países com sistemas diferentes a viverem lado a lado sem guerra",
+          "Todos terem o mesmo governo",
+          "Não haver fronteiras"
+         ],
+         "a": 0,
+         "audio": "cd91b2ffb081.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "De cinco em cinco anos há eleições gerais, para o Presidente e a Assembleia; há também autárquicas, para os municípios, e provinciais. O voto é secreto. A cultura de paz é resolver os conflitos pelo diálogo, na escola como entre países.",
+        "exemplo": "Coexistência pacífica é países com sistemas diferentes a viver lado a lado sem guerra: foi o que a Guerra Fria acabou por aprender.",
+        "lembra": "Voto secreto, diálogo primeiro.",
+        "audio": "ea9398806f87.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }
