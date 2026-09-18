@@ -3610,4 +3610,122 @@ MATERIA = {
                    "«job».",
         "lembra": "«Want» leva «to»: «I want to be».",
     },
+
+    # ---------------------------------------------------------------
+    # Frances -- 8a classe  (o primeiro Frances da app)
+    #
+    # Como no Ingles: a explicacao e em portugues e o frances vai entre
+    # aspas, pouco de cada vez.
+    # ---------------------------------------------------------------
+    "fra-8c:u1:n1": {
+        "explica": "Em francês cumprimenta-se com «bonjour» de dia e "
+                   "«bonsoir» à noite; «salut» é entre amigos. Para se "
+                   "apresentar diz-se «je m'appelle» e o nome. Aos "
+                   "professores e aos desconhecidos trata-se por «vous»; "
+                   "aos amigos por «tu».",
+        "exemplo": "«Bonjour! Je m'appelle Amina. Merci, au revoir.» "
+                   "«Dix» é 10, «vingt» é 20, «cent» é 100. «Lundi» é "
+                   "segunda-feira e «dimanche» é domingo.",
+        "lembra": "«Tu» para os amigos, «vous» para o resto.",
+    },
+    "fra-8c:u1:n2": {
+        "explica": "«Être» é ser: «je suis», «tu es», «il est». «Avoir» é "
+                   "ter, e a idade diz-se com ele: «j'ai quatorze ans». Os "
+                   "verbos em «er» — «habiter», «parler», «étudier» — "
+                   "conjugam-se todos da mesma maneira: «nous habitons», "
+                   "«elle parle».",
+        "exemplo": "«Je suis mozambicain.» «Tu as quatorze ans.» «Nous "
+                   "habitons à Lichinga.» «Elle parle portugais.» A "
+                   "estudante é «étudiante», com «e» no fim.",
+        "lembra": "A idade em francês tem-se: «j'ai» tantos «ans».",
+    },
+    "fra-8c:u1:n3": {
+        "explica": "Para apresentar alguém usa-se «c'est» e o nome, e "
+                   "«il est» ou «elle est» e a profissão, sem artigo. A "
+                   "pergunta faz-se com «quel» ou «quelle», e a negação "
+                   "com «ne ... pas» à volta do verbo. «Aller», «venir» e "
+                   "«faire» são irregulares.",
+        "exemplo": "«C'est mon ami Paulo.» «Elle est professeure.» «Quelle "
+                   "est ta nationalité?» «Il n'est pas français.» «Je vais "
+                   "à l'école, tu viens de Maputo.»",
+        "lembra": "«C'est» com nome; «il est» com profissão.",
+    },
+    "fra-8c:u1:n4": {
+        "explica": "Descreve-se alguém pelo corpo — «les yeux», «les "
+                   "cheveux», «la bouche» — pela roupa e pelas cores. "
+                   "Os gostos dizem-se com «aimer», «adorer», «préférer», "
+                   "«détester», e compara-se com «plus», «aussi» ou «moins» "
+                   "... «que».",
+        "exemplo": "«J'adore la musique, mais je déteste les "
+                   "mathématiques.» «Paulo est plus grand que João.» «Cette "
+                   "chemise est jolie.» «Gentil» é o contrário de "
+                   "«méchant».",
+        "lembra": "«Plus ... que» é mais; «moins ... que» é menos.",
+    },
+    "fra-8c:u2:n1": {
+        "explica": "Pergunta-se onde alguém está com «où», e responde-se "
+                   "com as preposições de lugar: «à côté de», «devant», "
+                   "«derrière», «entre», «à gauche de», «à droite de». "
+                   "Sentado é «assis», de pé é «debout».",
+        "exemplo": "«Où est Maria?» «Pedro est assis à gauche de la "
+                   "fenêtre.» «Elle est debout près de la porte.» O "
+                   "quadro é «le tableau» e a mochila é «le sac à dos».",
+        "lembra": "«Où» pergunta onde; «assis» e «debout» dizem como.",
+    },
+    "fra-8c:u2:n2": {
+        "explica": "As ordens dão-se no imperativo, sem o pronome: "
+                   "«ouvrez», «écoute». A pergunta educada começa por "
+                   "«est-ce que». A negação é «ne ... pas» à volta do verbo. "
+                   "Os comportamentos têm adjectivo: «bruyant», "
+                   "«paresseux», «solidaire».",
+        "exemplo": "«Ouvrez le livre!» «Écoute le professeur!» «Est-ce que "
+                   "je peux sortir, s'il vous plaît?» «Je ne comprends "
+                   "pas.»",
+        "lembra": "Imperativo é o verbo sem «tu» nem «vous» à frente.",
+    },
+    "fra-8c:u2:n3": {
+        "explica": "«Quelle heure est-il?» pergunta as horas: «il est huit "
+                   "heures et demie». Os verbos pronominais levam «me», "
+                   "«te», «se»: «je me lève». O que decorre "
+                   "diz-se com «être en train de», e o dia "
+                   "conta-se com «d'abord», «ensuite», «enfin».",
+        "exemplo": "«Je me lève à six heures.» «Elle est en train "
+                   "d'étudier.» «D'abord je me lave, ensuite je mange, "
+                   "enfin je pars.» «Le matin», «l'après-midi», «le soir».",
+        "lembra": "«Et demie» é e meia; «et quart» é e um quarto.",
+    },
+    "fra-8c:u2:n4": {
+        "explica": "Os meses — «janvier», «juin», «décembre» — "
+                   "escrevem-se com minúscula. Pergunta-se quando com "
+                   "«quand», e um período vai «de ... à». O superlativo é "
+                   "«le plus» ou «le moins» e o adjectivo. Símbolos "
+                   "nacionais: «le drapeau», «l'hymne».",
+        "exemplo": "«Quand commencent les vacances?» «Les cours vont de "
+                   "février à novembre.» «Le 25 juin est le jour le plus "
+                   "important du Mozambique.»",
+        "lembra": "Superlativo: «le plus» ou «le moins» e o adjectivo.",
+    },
+    "fra-8c:u2:n5": {
+        "explica": "O que há na sala diz-se com «il y a», e o que não há "
+                   "com «il n'y a pas de». Pergunta-se o que há com "
+                   "«qu'est-ce qu'il y a». As preposições: «sur», «sous», "
+                   "«dans», «par terre». A uma pergunta negativa "
+                   "responde-se que sim com «si».",
+        "exemplo": "«Il y a un tableau dans la salle.» «Il n'y a pas "
+                   "d'ordinateur.» «Qu'est-ce qu'il y a sur la table?» "
+                   "«Tu n'as pas de stylo?» «Si, j'ai un stylo.»",
+        "lembra": "Depois de «il n'y a pas» vem «de», não «un».",
+    },
+    "fra-8c:u2:n6": {
+        "explica": "Os objectos da escola: «le cahier», «le stylo», «la "
+                   "règle», «la gomme». Os possessivos concordam com o "
+                   "objecto: «mon cahier», «ma règle», «son sac». O "
+                   "adjectivo concorda com o nome: «grand» e «vert» com "
+                   "«sac», que é masculino.",
+        "exemplo": "«Mon cahier et mon stylo.» «Son sac à dos est grand et "
+                   "vert.» Cuidar das carteiras e dos livros é preservar o "
+                   "património escolar.",
+        "lembra": "«Mon», «ma», «mes» concordam com a coisa, não com quem "
+                  "a tem.",
+    },
 }

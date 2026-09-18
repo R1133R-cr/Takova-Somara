@@ -31553,6 +31553,925 @@
      ]
     }
    ]
+  },
+  {
+   "id": "fra-8c",
+   "disciplina": "Francês",
+   "classe": "8ª classe",
+   "tag": "FRA",
+   "fonte": "Programme d'Enseignement de la Discipline de Langue Française — Enseignement Secondaire, 1er Cycle. INDE/MINEDH, Maputo, Setembro de 2024, 8ème classe, pp. 8 e 11-19. As duas unidades, os nove temas, o vocabulário e a gramática são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado. Os enunciados são em português e o francês fica nas opções, porque a voz da app é portuguesa.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Os meus amigos e eu",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Cumprimentar e apresentar-me",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada cumprimento ao francês.",
+         "pairs": [
+          [
+           "Bom dia",
+           "Bonjour"
+          ],
+          [
+           "Boa noite",
+           "Bonsoir"
+          ],
+          [
+           "Adeus",
+           "Au revoir"
+          ],
+          [
+           "Olá",
+           "Salut"
+          ]
+         ],
+         "audio": "bd63c6df8a04.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em francês, «chamo-me Amina»?",
+         "options": [
+          "Je m'appelle Amina",
+          "Je t'appelle Amina",
+          "Je suis appelle Amina"
+         ],
+         "a": 0,
+         "audio": "15ce174c7892.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se diz «obrigado» em francês?",
+         "options": [
+          "Merci",
+          "Pardon",
+          "Bonjour"
+         ],
+         "a": 0,
+         "audio": "1538bd10ec20.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A um professor ou a um desconhecido trata-se por:",
+         "options": [
+          "Vous",
+          "Tu",
+          "Il"
+         ],
+         "a": 0,
+         "audio": "b4972ee6226d.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada número ao francês.",
+         "pairs": [
+          [
+           "Dez",
+           "Dix"
+          ],
+          [
+           "Vinte",
+           "Vingt"
+          ],
+          [
+           "Cem",
+           "Cent"
+          ]
+         ],
+         "audio": "2821942c5f78.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada dia da semana ao francês.",
+         "pairs": [
+          [
+           "Segunda-feira",
+           "Lundi"
+          ],
+          [
+           "Sábado",
+           "Samedi"
+          ],
+          [
+           "Domingo",
+           "Dimanche"
+          ]
+         ],
+         "audio": "9383974bd9ee.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Em francês cumprimenta-se com «bonjour» de dia e «bonsoir» à noite; «salut» é entre amigos. Para se apresentar diz-se «je m'appelle» e o nome. Aos professores e aos desconhecidos trata-se por «vous»; aos amigos por «tu».",
+        "exemplo": "«Bonjour! Je m'appelle Amina. Merci, au revoir.» «Dix» é 10, «vingt» é 20, «cent» é 100. «Lundi» é segunda-feira e «dimanche» é domingo.",
+        "lembra": "«Tu» para os amigos, «vous» para o resto.",
+        "audio": "688f2747f912.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Ser, ter e os verbos em -er",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se escreve, em francês, «eu sou moçambicano»?",
+         "options": [
+          "Je suis mozambicain",
+          "Je es mozambicain",
+          "Je suis mozambicaine"
+         ],
+         "a": 0,
+         "audio": "60a0b9134fa8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Tu tens catorze anos» escreve-se:",
+         "options": [
+          "Tu as quatorze ans",
+          "Tu es quatorze ans",
+          "Tu a quatorze ans"
+         ],
+         "a": 0,
+         "audio": "3e836a970df6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Nós moramos em Lichinga» escreve-se:",
+         "options": [
+          "Nous habitons à Lichinga",
+          "Nous habitent à Lichinga",
+          "Nous habite à Lichinga"
+         ],
+         "a": 0,
+         "audio": "7f36b977470c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela fala português» escreve-se:",
+         "options": [
+          "Elle parle portugais",
+          "Elle parles portugais",
+          "Elle parlez portugais"
+         ],
+         "a": 0,
+         "audio": "e6b7957456de.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada profissão ao feminino, em francês.",
+         "pairs": [
+          [
+           "Étudiant",
+           "Étudiante"
+          ],
+          [
+           "Infirmier",
+           "Infirmière"
+          ],
+          [
+           "Professeur",
+           "Professeure"
+          ]
+         ],
+         "audio": "56b79d2860e5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "«Être» é ser: «je suis», «tu es», «il est». «Avoir» é ter, e a idade diz-se com ele: «j'ai quatorze ans». Os verbos em «er» — «habiter», «parler», «étudier» — conjugam-se todos da mesma maneira: «nous habitons», «elle parle».",
+        "exemplo": "«Je suis mozambicain.» «Tu as quatorze ans.» «Nous habitons à Lichinga.» «Elle parle portugais.» A estudante é «étudiante», com «e» no fim.",
+        "lembra": "A idade em francês tem-se: «j'ai» tantos «ans».",
+        "audio": "8c819d88afde.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Apresentar alguém",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Este é o meu amigo Paulo» escreve-se:",
+         "options": [
+          "C'est mon ami Paulo",
+          "Il est mon ami Paulo",
+          "Ce mon ami Paulo"
+         ],
+         "a": 0,
+         "audio": "9dc90f3c5f54.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela é professora» escreve-se:",
+         "options": [
+          "Elle est professeure",
+          "C'est professeure",
+          "Elle est une professeure"
+         ],
+         "a": 0,
+         "audio": "16055878ce54.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em francês, «qual é a tua nacionalidade»?",
+         "options": [
+          "Quelle est ta nationalité",
+          "Quel est ta nationalité",
+          "Quels est ta nationalité"
+         ],
+         "a": 0,
+         "audio": "6347b41cd89a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ele não é francês» escreve-se:",
+         "options": [
+          "Il n'est pas français",
+          "Il ne est pas français",
+          "Il est ne pas français"
+         ],
+         "a": 0,
+         "audio": "5305801d0762.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada frase ao verbo que ela usa.",
+         "pairs": [
+          [
+           "Je vais à l'école",
+           "Aller"
+          ],
+          [
+           "Tu viens de Maputo",
+           "Venir"
+          ],
+          [
+           "Nous faisons du sport",
+           "Faire"
+          ]
+         ],
+         "audio": "7c5c6a066424.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada artigo ao seu tipo.",
+         "pairs": [
+          [
+           "Le, la, les",
+           "Definidos"
+          ],
+          [
+           "Un, une, des",
+           "Indefinidos"
+          ]
+         ],
+         "audio": "faf17c21d88d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Para apresentar alguém usa-se «c'est» e o nome, e «il est» ou «elle est» e a profissão, sem artigo. A pergunta faz-se com «quel» ou «quelle», e a negação com «ne ... pas» à volta do verbo. «Aller», «venir» e «faire» são irregulares.",
+        "exemplo": "«C'est mon ami Paulo.» «Elle est professeure.» «Quelle est ta nationalité?» «Il n'est pas français.» «Je vais à l'école, tu viens de Maputo.»",
+        "lembra": "«C'est» com nome; «il est» com profissão.",
+        "audio": "1bc661238392.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Descrever alguém",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada parte do corpo ao francês.",
+         "pairs": [
+          [
+           "Os olhos",
+           "Les yeux"
+          ],
+          [
+           "O cabelo",
+           "Les cheveux"
+          ],
+          [
+           "A boca",
+           "La bouche"
+          ],
+          [
+           "O nariz",
+           "Le nez"
+          ]
+         ],
+         "audio": "f696bd1f6460.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada cor ao francês.",
+         "pairs": [
+          [
+           "Vermelho",
+           "Rouge"
+          ],
+          [
+           "Azul",
+           "Bleu"
+          ],
+          [
+           "Verde",
+           "Vert"
+          ],
+          [
+           "Preto",
+           "Noir"
+          ]
+         ],
+         "audio": "4380b4e6420b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eu adoro música, mas detesto matemática» escreve-se:",
+         "options": [
+          "J'adore la musique, mais je déteste les mathématiques",
+          "Je adore la musique, mais je déteste les mathématiques",
+          "J'adore la musique, mais je détester les mathématiques"
+         ],
+         "a": 0,
+         "audio": "1d5e780b407f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O Paulo é mais alto do que o João» escreve-se:",
+         "options": [
+          "Paulo est plus grand que João",
+          "Paulo est aussi grand que João",
+          "Paulo est moins grand que João"
+         ],
+         "a": 0,
+         "audio": "35d9f6f78824.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Esta camisa é bonita» escreve-se, com o demonstrativo:",
+         "options": [
+          "Cette chemise est jolie",
+          "Ce chemise est jolie",
+          "Cet chemise est jolie"
+         ],
+         "a": 0,
+         "audio": "ca998df708e6.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada qualidade ao seu contrário, em francês.",
+         "pairs": [
+          [
+           "Gentil",
+           "Méchant"
+          ],
+          [
+           "Grand",
+           "Petit"
+          ],
+          [
+           "Calme",
+           "Nerveux"
+          ]
+         ],
+         "audio": "f4e1e27a76e1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Descreve-se alguém pelo corpo — «les yeux», «les cheveux», «la bouche» — pela roupa e pelas cores. Os gostos dizem-se com «aimer», «adorer», «préférer», «détester», e compara-se com «plus», «aussi» ou «moins» ... «que».",
+        "exemplo": "«J'adore la musique, mais je déteste les mathématiques.» «Paulo est plus grand que João.» «Cette chemise est jolie.» «Gentil» é o contrário de «méchant».",
+        "lembra": "«Plus ... que» é mais; «moins ... que» é menos.",
+        "audio": "7c7fa0735f23.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "A escola e o dia-a-dia",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Onde está o colega",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se escreve, em francês, «onde está a Maria»?",
+         "options": [
+          "Où est Maria",
+          "Quand est Maria",
+          "Qui est Maria"
+         ],
+         "a": 0,
+         "audio": "41f42955582a.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada expressão de lugar ao francês.",
+         "pairs": [
+          [
+           "Ao lado de",
+           "À côté de"
+          ],
+          [
+           "À frente de",
+           "Devant"
+          ],
+          [
+           "Atrás de",
+           "Derrière"
+          ],
+          [
+           "Entre",
+           "Entre"
+          ]
+         ],
+         "audio": "59284b737ca1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O Pedro está sentado à esquerda da janela» escreve-se:",
+         "options": [
+          "Pedro est assis à gauche de la fenêtre",
+          "Pedro est debout à gauche de la fenêtre",
+          "Pedro est assis à droite de la fenêtre"
+         ],
+         "a": 0,
+         "audio": "1d14302cdcb5.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada coisa da sala ao francês.",
+         "pairs": [
+          [
+           "O quadro",
+           "Le tableau"
+          ],
+          [
+           "A janela",
+           "La fenêtre"
+          ],
+          [
+           "A cadeira",
+           "La chaise"
+          ],
+          [
+           "A mochila",
+           "Le sac à dos"
+          ]
+         ],
+         "audio": "be28eb52b263.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela está de pé perto da porta» escreve-se:",
+         "options": [
+          "Elle est debout près de la porte",
+          "Elle est assise près de la porte",
+          "Elle est debout loin de la porte"
+         ],
+         "a": 0,
+         "audio": "8e018355a740.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Pergunta-se onde alguém está com «où», e responde-se com as preposições de lugar: «à côté de», «devant», «derrière», «entre», «à gauche de», «à droite de». Sentado é «assis», de pé é «debout».",
+        "exemplo": "«Où est Maria?» «Pedro est assis à gauche de la fenêtre.» «Elle est debout près de la porte.» O quadro é «le tableau» e a mochila é «le sac à dos».",
+        "lembra": "«Où» pergunta onde; «assis» e «debout» dizem como.",
+        "audio": "4192589cd057.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Comportar-se na aula",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Abram o livro!» escreve-se, no imperativo:",
+         "options": [
+          "Ouvrez le livre",
+          "Vous ouvrez le livre",
+          "Ouvrir le livre"
+         ],
+         "a": 0,
+         "audio": "2c7ba99a5c2b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ouve o professor!» escreve-se:",
+         "options": [
+          "Écoute le professeur",
+          "Tu écoutes le professeur",
+          "Écouter le professeur"
+         ],
+         "a": 0,
+         "audio": "82dd5fc1919e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em francês, «posso sair, por favor»?",
+         "options": [
+          "Est-ce que je peux sortir, s'il vous plaît",
+          "Est-ce que je peut sortir, s'il vous plaît",
+          "Je peux est-ce que sortir, s'il vous plaît"
+         ],
+         "a": 0,
+         "audio": "0c011c7c802c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eu não percebo» escreve-se:",
+         "options": [
+          "Je ne comprends pas",
+          "Je comprends ne pas",
+          "Je pas comprends"
+         ],
+         "a": 0,
+         "audio": "a7860a571479.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada comportamento ao francês.",
+         "pairs": [
+          [
+           "Barulhento",
+           "Bruyant"
+          ],
+          [
+           "Preguiçoso",
+           "Paresseux"
+          ],
+          [
+           "Solidário",
+           "Solidaire"
+          ]
+         ],
+         "audio": "46ec7b94de1f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As ordens dão-se no imperativo, sem o pronome: «ouvrez», «écoute». A pergunta educada começa por «est-ce que». A negação é «ne ... pas» à volta do verbo. Os comportamentos têm adjectivo: «bruyant», «paresseux», «solidaire».",
+        "exemplo": "«Ouvrez le livre!» «Écoute le professeur!» «Est-ce que je peux sortir, s'il vous plaît?» «Je ne comprends pas.»",
+        "lembra": "Imperativo é o verbo sem «tu» nem «vous» à frente.",
+        "audio": "fecde977cf68.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "As horas e o dia de um aluno",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Como se escreve, em francês, «que horas são»?",
+         "options": [
+          "Quelle heure est-il",
+          "Quel heure est-il",
+          "Quelle heure il est"
+         ],
+         "a": 0,
+         "audio": "2860d5a05ff4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«São oito e meia» escreve-se:",
+         "options": [
+          "Il est huit heures et demie",
+          "Il est huit heures et quart",
+          "Il est huit heures moins le quart"
+         ],
+         "a": 0,
+         "audio": "d84df932f9bd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eu levanto-me às seis horas» escreve-se:",
+         "options": [
+          "Je me lève à six heures",
+          "Je lève à six heures",
+          "Je me lever à six heures"
+         ],
+         "a": 0,
+         "audio": "47cc3ca356c5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ela está a estudar» escreve-se, com a acção em curso:",
+         "options": [
+          "Elle est en train d'étudier",
+          "Elle est étudier",
+          "Elle en train étudie"
+         ],
+         "a": 0,
+         "audio": "a1a5f2d4a8e9.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada marcador de ordem ao francês.",
+         "pairs": [
+          [
+           "Primeiro",
+           "D'abord"
+          ],
+          [
+           "Depois",
+           "Ensuite"
+          ],
+          [
+           "Por fim",
+           "Enfin"
+          ]
+         ],
+         "audio": "60bee21c60ed.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada momento do dia ao francês.",
+         "pairs": [
+          [
+           "A manhã",
+           "Le matin"
+          ],
+          [
+           "A tarde",
+           "L'après-midi"
+          ],
+          [
+           "A noite",
+           "Le soir"
+          ]
+         ],
+         "audio": "81e7c088c4e1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "«Quelle heure est-il?» pergunta as horas: «il est huit heures et demie». Os verbos pronominais levam «me», «te», «se»: «je me lève». O que decorre diz-se com «être en train de», e o dia conta-se com «d'abord», «ensuite», «enfin».",
+        "exemplo": "«Je me lève à six heures.» «Elle est en train d'étudier.» «D'abord je me lave, ensuite je mange, enfin je pars.» «Le matin», «l'après-midi», «le soir».",
+        "lembra": "«Et demie» é e meia; «et quart» é e um quarto.",
+        "audio": "068e8d47da74.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "O calendário escolar",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada mês ao francês.",
+         "pairs": [
+          [
+           "Janeiro",
+           "Janvier"
+          ],
+          [
+           "Junho",
+           "Juin"
+          ],
+          [
+           "Setembro",
+           "Septembre"
+          ],
+          [
+           "Dezembro",
+           "Décembre"
+          ]
+         ],
+         "audio": "93bda7d7e333.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em francês, «quando começam as férias»?",
+         "options": [
+          "Quand commencent les vacances",
+          "Où commencent les vacances",
+          "Pourquoi commencent les vacances"
+         ],
+         "a": 0,
+         "audio": "f7cfd8b52716.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«As aulas vão de Fevereiro a Novembro» escreve-se:",
+         "options": [
+          "Les cours vont de février à novembre",
+          "Les cours vont à février de novembre",
+          "Les cours vont février jusqu'à novembre"
+         ],
+         "a": 0,
+         "audio": "960c3ca1ed41.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O 25 de Junho é o dia mais importante de Moçambique» escreve-se, com o superlativo:",
+         "options": [
+          "Le 25 juin est le jour le plus important du Mozambique",
+          "Le 25 juin est le jour plus important du Mozambique",
+          "Le 25 juin est le jour le moins important du Mozambique"
+         ],
+         "a": 0,
+         "audio": "ca74edc2b281.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada símbolo nacional ao francês.",
+         "pairs": [
+          [
+           "A bandeira",
+           "Le drapeau"
+          ],
+          [
+           "O hino nacional",
+           "L'hymne national"
+          ],
+          [
+           "O emblema",
+           "L'emblème"
+          ]
+         ],
+         "audio": "680a25d93df2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os meses — «janvier», «juin», «décembre» — escrevem-se com minúscula. Pergunta-se quando com «quand», e um período vai «de ... à». O superlativo é «le plus» ou «le moins» e o adjectivo. Símbolos nacionais: «le drapeau», «l'hymne».",
+        "exemplo": "«Quand commencent les vacances?» «Les cours vont de février à novembre.» «Le 25 juin est le jour le plus important du Mozambique.»",
+        "lembra": "Superlativo: «le plus» ou «le moins» e o adjectivo.",
+        "audio": "a340b3b039dc.mp3"
+       }
+      },
+      {
+       "id": "n5",
+       "titulo": "A sala de aula",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Há um quadro na sala» escreve-se:",
+         "options": [
+          "Il y a un tableau dans la salle",
+          "Il a un tableau dans la salle",
+          "Il est un tableau dans la salle"
+         ],
+         "a": 0,
+         "audio": "a4c22744e3e3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Não há computador» escreve-se:",
+         "options": [
+          "Il n'y a pas d'ordinateur",
+          "Il n'y a pas un ordinateur",
+          "Il y a ne pas ordinateur"
+         ],
+         "a": 0,
+         "audio": "1fea3afa64cf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Como se escreve, em francês, «o que há em cima da mesa»?",
+         "options": [
+          "Qu'est-ce qu'il y a sur la table",
+          "Où est-ce qu'il y a sur la table",
+          "Qu'est-ce qu'il y a sous la table"
+         ],
+         "a": 0,
+         "audio": "8cd344e0eedc.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada preposição de lugar ao francês.",
+         "pairs": [
+          [
+           "Em cima de",
+           "Sur"
+          ],
+          [
+           "Debaixo de",
+           "Sous"
+          ],
+          [
+           "Dentro de",
+           "Dans"
+          ],
+          [
+           "No chão",
+           "Par terre"
+          ]
+         ],
+         "audio": "a27b69fee9cd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "À pergunta «tu não tens caneta?» responde-se que sim com:",
+         "options": [
+          "Si",
+          "Oui",
+          "Non"
+         ],
+         "a": 0,
+         "audio": "4cc3322ef6a9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O que há na sala diz-se com «il y a», e o que não há com «il n'y a pas de». Pergunta-se o que há com «qu'est-ce qu'il y a». As preposições: «sur», «sous», «dans», «par terre». A uma pergunta negativa responde-se que sim com «si».",
+        "exemplo": "«Il y a un tableau dans la salle.» «Il n'y a pas d'ordinateur.» «Qu'est-ce qu'il y a sur la table?» «Tu n'as pas de stylo?» «Si, j'ai un stylo.»",
+        "lembra": "Depois de «il n'y a pas» vem «de», não «un».",
+        "audio": "3ff9294768df.mp3"
+       }
+      },
+      {
+       "id": "n6",
+       "titulo": "Os objectos da escola",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada objecto da escola ao francês.",
+         "pairs": [
+          [
+           "O caderno",
+           "Le cahier"
+          ],
+          [
+           "A caneta",
+           "Le stylo"
+          ],
+          [
+           "A régua",
+           "La règle"
+          ],
+          [
+           "A borracha",
+           "La gomme"
+          ]
+         ],
+         "audio": "c73722423c16.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O meu caderno e a minha caneta» escreve-se:",
+         "options": [
+          "Mon cahier et mon stylo",
+          "Ma cahier et ma stylo",
+          "Mon cahier et ma stylo"
+         ],
+         "a": 0,
+         "audio": "aaa0c004a9b8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A mochila dele é grande e verde» escreve-se:",
+         "options": [
+          "Son sac à dos est grand et vert",
+          "Sa sac à dos est grande et verte",
+          "Son sac à dos est grande et verte"
+         ],
+         "a": 0,
+         "audio": "b1872e64f6be.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada característica de um objecto ao francês.",
+         "pairs": [
+          [
+           "A forma",
+           "La forme"
+          ],
+          [
+           "O tamanho",
+           "La taille"
+          ],
+          [
+           "O peso",
+           "Le poids"
+          ],
+          [
+           "O material",
+           "La matière"
+          ]
+         ],
+         "audio": "57778de0f666.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cuidar das carteiras e dos livros da escola é preservar o:",
+         "options": [
+          "Património escolar",
+          "Calendário escolar",
+          "Horário escolar"
+         ],
+         "a": 0,
+         "audio": "f02a4fb74913.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os objectos da escola: «le cahier», «le stylo», «la règle», «la gomme». Os possessivos concordam com o objecto: «mon cahier», «ma règle», «son sac». O adjectivo concorda com o nome: «grand» e «vert» com «sac», que é masculino.",
+        "exemplo": "«Mon cahier et mon stylo.» «Son sac à dos est grand et vert.» Cuidar das carteiras e dos livros é preservar o património escolar.",
+        "lembra": "«Mon», «ma», «mes» concordam com a coisa, não com quem a tem.",
+        "audio": "753ac8613f53.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }
