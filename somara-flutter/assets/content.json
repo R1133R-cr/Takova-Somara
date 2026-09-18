@@ -29338,6 +29338,1043 @@
      ]
     }
    ]
+  },
+  {
+   "id": "qui-8c",
+   "disciplina": "Química",
+   "classe": "8ª classe",
+   "tag": "QUI",
+   "fonte": "Programa de Ensino da Disciplina de Química — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, pp. 8-12 e 17-26. As quatro unidades e os conteúdos são do programa (a unidade III, que o plano temático do PDF perdeu, vem da visão geral dos conteúdos); os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Introdução ao estudo da Química",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A Química e a sua história",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Química é a ciência que estuda:",
+         "options": [
+          "As substâncias e as suas transformações",
+          "Os astros e o céu",
+          "As rochas e os rios"
+         ],
+         "a": 0,
+         "audio": "73b6a7e3897e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes da Química moderna, os que procuravam transformar metais em ouro praticavam a:",
+         "options": [
+          "Alquimia",
+          "Biologia",
+          "Geometria"
+         ],
+         "a": 0,
+         "audio": "633aad226191.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada uso da Química ao seu campo.",
+         "pairs": [
+          [
+           "Adubos e pesticidas",
+           "Agricultura"
+          ],
+          [
+           "Medicamentos",
+           "Medicina"
+          ],
+          [
+           "Sabões e detergentes",
+           "Indústria"
+          ]
+         ],
+         "audio": "7c8f7d4c8cab.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No ensino primário, a Química vinha misturada com a Biologia, a Física e a Geografia numa disciplina chamada:",
+         "options": [
+          "Ciências Naturais",
+          "Ciências Sociais",
+          "Educação Visual"
+         ],
+         "a": 0,
+         "audio": "1901080bd146.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ferver água para a tornar potável e conservar alimentos com sal são exemplos da Química:",
+         "options": [
+          "Em casa",
+          "No espaço",
+          "No desporto"
+         ],
+         "a": 0,
+         "audio": "aa41dc130cf0.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Química estuda as substâncias e as suas transformações. Nasceu da alquimia, que procurava transformar metais em ouro, e hoje está em casa, na medicina, na agricultura e na indústria: sabões, adubos, medicamentos, purificação da água.",
+        "exemplo": "Ferver água para a tornar potável, conservar peixe com sal, deitar adubo na machamba, tomar um comprimido: é Química todos os dias.",
+        "lembra": "Química: substâncias e transformações.",
+        "audio": "3ab3ded41b63.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Segurança no laboratório e o relatório",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "No laboratório, uma substância desconhecida:",
+         "options": [
+          "Nunca se prova nem se cheira de perto",
+          "Prova-se para saber o que é",
+          "Cheira-se com o nariz encostado"
+         ],
+         "a": 0,
+         "audio": "35a089820550.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Durante uma experiência, o cabelo comprido deve estar:",
+         "options": [
+          "Preso",
+          "Solto",
+          "Molhado"
+         ],
+         "a": 0,
+         "audio": "1fb29832b313.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se um ácido cai na pele, a primeira coisa a fazer é:",
+         "options": [
+          "Lavar com muita água",
+          "Esfregar com um pano seco",
+          "Deitar outro ácido por cima"
+         ],
+         "a": 0,
+         "audio": "3511ae03d477.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada parte do relatório de uma experiência ao que ela diz.",
+         "pairs": [
+          [
+           "Objectivo",
+           "O que se queria saber"
+          ],
+          [
+           "Procedimento",
+           "O que se fez, passo a passo"
+          ],
+          [
+           "Conclusão",
+           "O que se ficou a saber"
+          ]
+         ],
+         "audio": "94e6b4b73238.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Mudança de cor, libertação de um gás e efervescência são sinais de:",
+         "options": [
+          "Uma reacção química",
+          "Uma mudança de estado",
+          "Uma mistura"
+         ],
+         "a": 0,
+         "audio": "3b26a8b8ab87.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No laboratório não se prova nem se cheira de perto nada, o cabelo vai preso, e um ácido na pele lava-se logo com muita água. Uma experiência acaba num relatório: objectivo, material, procedimento, observações e conclusão.",
+        "exemplo": "Mudança de cor, um gás a sair, efervescência, calor: são os sinais de que houve uma reacção química, e é isso que se escreve nas observações.",
+        "lembra": "Nunca provar, nunca cheirar de perto, e relatório no fim.",
+        "audio": "908b0167f622.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Matéria e suas propriedades",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A matéria e os estados",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Matéria é tudo o que:",
+         "options": [
+          "Tem massa e ocupa um lugar no espaço",
+          "Se pode ver",
+          "É duro"
+         ],
+         "a": 0,
+         "audio": "1bb7aa59a1ff.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada propriedade geral da matéria ao seu exemplo.",
+         "pairs": [
+          [
+           "Divisibilidade",
+           "Partir um pão em fatias"
+          ],
+          [
+           "Compressibilidade",
+           "Apertar o ar numa bomba"
+          ],
+          [
+           "Elasticidade",
+           "Esticar um elástico"
+          ]
+         ],
+         "audio": "d8724c4b8034.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada mudança de estado ao seu nome.",
+         "pairs": [
+          [
+           "Sólido a líquido",
+           "Fusão"
+          ],
+          [
+           "Líquido a gás",
+           "Vaporização"
+          ],
+          [
+           "Gás a líquido",
+           "Condensação"
+          ]
+         ],
+         "audio": "95e6833549d3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A matéria classifica-se em:",
+         "options": [
+          "Substâncias e misturas",
+          "Sólidos e líquidos",
+          "Metais e plásticos"
+         ],
+         "a": 0,
+         "audio": "9d59c464401d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Dois corpos não podem ocupar o mesmo lugar ao mesmo tempo. Essa propriedade chama-se:",
+         "options": [
+          "Impenetrabilidade",
+          "Elasticidade",
+          "Divisibilidade"
+         ],
+         "a": 0,
+         "audio": "e048640b05d4.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Matéria é tudo o que tem massa e ocupa lugar. Tem propriedades gerais — massa, volume, impenetrabilidade, divisibilidade, elasticidade, compressibilidade — e três estados: sólido, líquido e gasoso, que mudam com o calor.",
+        "exemplo": "Fusão é o gelo a virar água; vaporização é a água a virar vapor; condensação é o vapor a virar gotas na tampa da panela. Dois corpos não cabem no mesmo lugar: impenetrabilidade.",
+        "lembra": "Matéria: substâncias puras ou misturas.",
+        "audio": "9a22ca0bf3f3.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Substâncias e propriedades específicas",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada propriedade específica ao que ela diz.",
+         "pairs": [
+          [
+           "Ponto de fusão",
+           "A temperatura a que derrete"
+          ],
+          [
+           "Ponto de ebulição",
+           "A temperatura a que ferve"
+          ],
+          [
+           "Densidade",
+           "A massa de cada volume"
+          ]
+         ],
+         "audio": "1353e9512175.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Ao nível do mar, a que temperatura, em graus Celsius, ferve a água pura?",
+         "a": "100",
+         "audio": "5d29a2a280dd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma substância elementar é feita de:",
+         "options": [
+          "Um só elemento químico",
+          "Dois ou mais elementos",
+          "Água e sal"
+         ],
+         "a": 0,
+         "audio": "aaf613de108d.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada substância à sua classe.",
+         "pairs": [
+          [
+           "Oxigénio",
+           "Elementar"
+          ],
+          [
+           "Ferro",
+           "Elementar"
+          ],
+          [
+           "Água",
+           "Composta"
+          ]
+         ],
+         "audio": "32ca7b7a6ceb.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um pedaço de ferro tem 40 gramas e ocupa 5 centímetros cúbicos. Qual é a densidade, em gramas por centímetro cúbico?",
+         "a": "8",
+         "audio": "30bf228cc174.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Cada substância tem propriedades específicas que a identificam: ponto de fusão, ponto de ebulição, densidade, cor, cheiro. Uma substância elementar tem um só elemento, como o ferro; uma composta tem vários, como a água.",
+        "exemplo": "A água pura ferve a 100 graus ao nível do mar. Um pedaço de ferro de 40 gramas em 5 centímetros cúbicos tem densidade 8: a massa a dividir pelo volume.",
+        "lembra": "Densidade é massa a dividir por volume.",
+        "audio": "dbf30d11b92c.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Misturas e a sua separação",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada mistura ao seu tipo.",
+         "pairs": [
+          [
+           "Água com açúcar dissolvido",
+           "Homogénea"
+          ],
+          [
+           "Água com areia",
+           "Heterogénea"
+          ]
+         ],
+         "audio": "f40006c64ac1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O sal de cozinha obtém-se da água do mar por:",
+         "options": [
+          "Evaporação e cristalização",
+          "Filtração",
+          "Separação magnética"
+         ],
+         "a": 0,
+         "audio": "b02bbebfa7a8.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada mistura ao método que a separa.",
+         "pairs": [
+          [
+           "Areia e limalha de ferro",
+           "Separação magnética"
+          ],
+          [
+           "Água e areia",
+           "Filtração"
+          ],
+          [
+           "Feijão e pedrinhas",
+           "Catação"
+          ]
+         ],
+         "audio": "cb98126611f9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A destilação simples separa a água do álcool porque eles têm:",
+         "options": [
+          "Pontos de ebulição diferentes",
+          "Cores diferentes",
+          "O mesmo tamanho"
+         ],
+         "a": 0,
+         "audio": "fc4e76f49a59.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Deixar a água barrenta em repouso até a terra assentar e depois vazar a água limpa chama-se:",
+         "options": [
+          "Decantação",
+          "Peneiração",
+          "Cromatografia"
+         ],
+         "a": 0,
+         "audio": "d8f78e669d4e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma mistura homogénea não se distingue à vista, como a água com açúcar; uma heterogénea sim, como água com areia. Separam-se pelas propriedades: evaporação, cristalização, destilação; catação, peneiração, decantação, filtração, íman.",
+        "exemplo": "O sal vem da água do mar por evaporação e cristalização. A limalha de ferro sai da areia com um íman. A água barrenta decanta-se: espera-se que a terra assente.",
+        "lembra": "O método de separação escolhe-se pela propriedade que difere.",
+        "audio": "b8f939dea0cf.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Estrutura da matéria e reacções químicas",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O átomo e os elementos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O número atómico de um elemento é o número de:",
+         "options": [
+          "Protões no núcleo",
+          "Átomos numa molécula",
+          "Letras no símbolo"
+         ],
+         "a": 0,
+         "audio": "7128537e94f9.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um átomo tem 6 protões e 6 neutrões. Qual é o seu número de massa?",
+         "a": "12",
+         "audio": "f47b6fe30eea.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada elemento ao seu símbolo.",
+         "pairs": [
+          [
+           "Hidrogénio",
+           "H"
+          ],
+          [
+           "Oxigénio",
+           "O"
+          ],
+          [
+           "Carbono",
+           "C"
+          ],
+          [
+           "Ferro",
+           "Fe"
+          ]
+         ],
+         "audio": "a89a57784435.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada elemento à sua classe.",
+         "pairs": [
+          [
+           "Cobre",
+           "Metal"
+          ],
+          [
+           "Enxofre",
+           "Não metal"
+          ]
+         ],
+         "audio": "ede4ab57cd0a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os metais, em geral:",
+         "options": [
+          "Têm brilho e conduzem a corrente e o calor",
+          "São gases à temperatura ambiente",
+          "Não conduzem nada"
+         ],
+         "a": 0,
+         "audio": "cfa32e62ce58.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O átomo tem um núcleo com protões e neutrões. O número atómico é o número de protões; o número de massa é protões mais neutrões. Cada elemento tem um símbolo, e os elementos são metais, com brilho e bons condutores, ou não metais.",
+        "exemplo": "Carbono: 6 protões e 6 neutrões, número de massa 12, símbolo C. O cobre é metal e conduz a corrente; o enxofre é não metal.",
+        "lembra": "Número de massa é protões mais neutrões.",
+        "audio": "85b4712ab635.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Moléculas, fórmulas e valência",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "Uma molécula de água tem 2 átomos de hidrogénio e 1 de oxigénio. Quantos átomos tem ao todo?",
+         "a": "3",
+         "audio": "a58ed1e912dd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada substância à sua fórmula.",
+         "pairs": [
+          [
+           "Água",
+           "H₂O"
+          ],
+          [
+           "Dióxido de carbono",
+           "CO₂"
+          ],
+          [
+           "Oxigénio",
+           "O₂"
+          ]
+         ],
+         "audio": "9ecd9bff5b9d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A valência de um elemento diz:",
+         "options": [
+          "Quantas ligações o átomo faz",
+          "Quanto pesa o átomo",
+          "Que cor tem a substância"
+         ],
+         "a": 0,
+         "audio": "e57c6db21ba8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O hidrogénio tem valência 1 e o oxigénio valência 2. Por isso a água leva:",
+         "options": [
+          "2 hidrogénios para 1 oxigénio",
+          "1 hidrogénio para 2 oxigénios",
+          "3 hidrogénios para 1 oxigénio"
+         ],
+         "a": 0,
+         "audio": "3f6125181654.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada molécula ao seu tipo.",
+         "pairs": [
+          [
+           "Oxigénio, dois átomos iguais",
+           "Substância elementar"
+          ],
+          [
+           "Água, átomos diferentes",
+           "Substância composta"
+          ]
+         ],
+         "audio": "5ab6ab8eeef8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os átomos juntam-se em moléculas. A fórmula diz quantos átomos de cada elemento há: a água tem 2 de hidrogénio e 1 de oxigénio. A valência diz quantas ligações cada átomo faz, e é ela que dita a fórmula.",
+        "exemplo": "Hidrogénio valência 1, oxigénio valência 2: são precisos 2 hidrogénios para 1 oxigénio. A molécula de oxigénio, dois átomos iguais, é elementar; a de água é composta.",
+        "lembra": "A fórmula conta os átomos; a valência explica-a.",
+        "audio": "67bc65051296.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Massa atómica e molecular",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A massa atómica relativa de um elemento compara a massa do seu átomo com:",
+         "options": [
+          "Uma unidade de massa atómica",
+          "Um grama",
+          "Um quilograma"
+         ],
+         "a": 0,
+         "audio": "316b27802ea3.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A massa atómica do hidrogénio é 1 e a do oxigénio é 16. Qual é a massa molecular da água?",
+         "a": "18",
+         "audio": "f8893ab1048c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A massa atómica do carbono é 12 e a do oxigénio é 16. Qual é a massa molecular do dióxido de carbono?",
+         "a": "44",
+         "audio": "69f2bc18c8da.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A massa atómica do oxigénio é 16. Qual é a massa molecular do oxigénio, que tem dois átomos?",
+         "a": "32",
+         "audio": "8740c4c1817d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "O sal de cozinha tem um átomo de sódio, de massa 23, e um de cloro, de massa 35. Qual é a sua massa molecular?",
+         "a": "58",
+         "audio": "51fb9cd61696.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A massa atómica relativa compara o átomo com a unidade de massa atómica. A massa molecular é a soma das massas atómicas dos átomos da molécula, contando cada um as vezes que aparece.",
+        "exemplo": "Água: 2 vezes 1 mais 16 dá 18. Dióxido de carbono: 12 mais 2 vezes 16 dá 44. Oxigénio, dois átomos de 16: 32. Sal: 23 mais 35 dá 58.",
+        "lembra": "Massa molecular: soma-se cada átomo as vezes que aparece.",
+        "audio": "f94b12cfc048.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Reacções e equações químicas",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada fenómeno ao seu tipo: físico ou químico.",
+         "pairs": [
+          [
+           "Água a ferver",
+           "Fenómeno físico"
+          ],
+          [
+           "Ferro a enferrujar",
+           "Fenómeno químico"
+          ]
+         ],
+         "audio": "7eae14abee2d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A lei de Lavoisier diz que, numa reacção química, a massa:",
+         "options": [
+          "Dos produtos é igual à dos reagentes",
+          "Dos produtos é sempre maior",
+          "Desaparece"
+         ],
+         "a": 0,
+         "audio": "3e0683f62acd.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Numa reacção, 4 gramas de hidrogénio juntam-se a 32 gramas de oxigénio. Quantos gramas de água se formam?",
+         "a": "36",
+         "audio": "e04193c17e41.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada reacção ao seu tipo.",
+         "pairs": [
+          [
+           "Duas substâncias dão uma",
+           "Combinação"
+          ],
+          [
+           "Uma substância dá duas",
+           "Decomposição"
+          ],
+          [
+           "Liberta calor",
+           "Exotérmica"
+          ],
+          [
+           "Absorve calor",
+           "Endotérmica"
+          ]
+         ],
+         "audio": "f27e2b3237d1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Para acertar a equação do hidrogénio com o oxigénio a dar água, precisam-se 2 moléculas de hidrogénio e 1 de oxigénio. Quantas moléculas de água se formam?",
+         "a": "2",
+         "audio": "89620f90b44d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Num fenómeno químico nasce uma substância nova. A equação escreve a reacção; pela lei de Lavoisier, a massa dos produtos é igual à dos reagentes, e por isso se acerta. Há reacções de combinação, decomposição, exotérmicas e endotérmicas.",
+        "exemplo": "4 gramas de hidrogénio com 32 de oxigénio dão 36 gramas de água, nem mais nem menos. 2 moléculas de hidrogénio e 1 de oxigénio dão 2 moléculas de água.",
+        "lembra": "Na natureza nada se perde, nada se cria: tudo se transforma.",
+        "audio": "2066e4bc4d8d.mp3"
+       }
+      },
+      {
+       "id": "n5",
+       "titulo": "Cálculos químicos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma mole de qualquer substância tem sempre:",
+         "options": [
+          "O mesmo número de partículas: o número de Avogadro",
+          "A mesma massa em gramas",
+          "Um litro de volume"
+         ],
+         "a": 0,
+         "audio": "6d8c4551c650.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A massa molar da água é 18 gramas por mole. Quantos gramas pesam 2 moles de água?",
+         "a": "36",
+         "audio": "7f4a0533c694.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A massa molar do dióxido de carbono é 44 gramas por mole. Quantas moles há em 88 gramas?",
+         "a": "2",
+         "audio": "9717c50070c6.mp3"
+        },
+        {
+         "t": "input",
+         "q": "O metano tem 12 gramas de carbono em cada 16 gramas. Qual é a percentagem de carbono?",
+         "a": "75",
+         "audio": "8ee4fdd1e005.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Se 2 gramas de hidrogénio dão 18 gramas de água, quantos gramas de água dão 6 gramas de hidrogénio?",
+         "a": "54",
+         "audio": "0dac2fdf178d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma mole é um número fixo de partículas, o número de Avogadro. A massa molar é a massa de uma mole, em gramas: é a massa molecular em gramas. Com ela passa-se de gramas a moles e de moles a gramas.",
+        "exemplo": "Água: 18 gramas por mole, logo 2 moles são 36 gramas. Dióxido de carbono: 44 por mole, logo 88 gramas são 2 moles. O metano tem 12 de carbono em 16: 75 por cento.",
+        "lembra": "Massa é moles vezes massa molar.",
+        "audio": "fa35616a6237.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Água",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A água e a sua qualidade",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A água potável é a que:",
+         "options": [
+          "É própria para beber: sem cor, sem cheiro e sem micróbios",
+          "Tem muito sal",
+          "Vem de qualquer rio"
+         ],
+         "a": 0,
+         "audio": "66eb7e1bc0dd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de água ao que ela é.",
+         "pairs": [
+          [
+           "Salobra",
+           "Sais a mais, não se bebe"
+          ],
+          [
+           "Mineral",
+           "Poucos sais, brota de nascente"
+          ],
+          [
+           "Termal",
+           "Brota quente da nascente"
+          ]
+         ],
+         "audio": "6c748a015d47.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A cólera e a febre tifóide apanham-se por:",
+         "options": [
+          "Água contaminada com micróbios",
+          "Ar frio",
+          "Sol a mais"
+         ],
+         "a": 0,
+         "audio": "e443267b3539.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada método de tratamento da água ao que ele faz.",
+         "pairs": [
+          [
+           "Fervura",
+           "Mata os micróbios com calor"
+          ],
+          [
+           "Cloragem",
+           "Mata os micróbios com cloro"
+          ],
+          [
+           "Filtração",
+           "Tira a sujidade sólida"
+          ]
+         ],
+         "audio": "6cdd57b56eb8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Fechar a torneira enquanto se lava os dentes e reparar fugas são formas de:",
+         "options": [
+          "Conservar a água",
+          "Poluir a água",
+          "Tratar a água"
+         ],
+         "a": 0,
+         "audio": "92bcc719789d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A água potável é própria para beber: sem cor, sem cheiro, sem micróbios. A salobra tem sais a mais; a mineral brota de nascentes, fria ou termal. A água contaminada traz cólera e febre tifóide; trata-se por fervura, cloro e filtração.",
+        "exemplo": "Ferver a água mata os micróbios; umas gotas de cloro também. Fechar a torneira ao lavar os dentes e reparar as fugas conserva a água.",
+        "lembra": "Água que se bebe: fervida ou clorada.",
+        "audio": "b828cd0d23e2.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Soluções e concentração",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Na água com açúcar, liga cada coisa ao seu nome.",
+         "pairs": [
+          [
+           "A água",
+           "Solvente"
+          ],
+          [
+           "O açúcar",
+           "Soluto"
+          ],
+          [
+           "A água com açúcar",
+           "Solução"
+          ]
+         ],
+         "audio": "fdd6c1cd928f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Diluir uma solução é:",
+         "options": [
+          "Juntar-lhe mais solvente",
+          "Juntar-lhe mais soluto",
+          "Aquecê-la"
+         ],
+         "a": 0,
+         "audio": "9fd6deaa2c81.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma solução em que já não se dissolve mais soluto chama-se:",
+         "options": [
+          "Saturada",
+          "Diluída",
+          "Homogénea"
+         ],
+         "a": 0,
+         "audio": "ae4c060321f7.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Dissolvem-se 20 gramas de sal em 80 gramas de água. Qual é a concentração percentual da solução?",
+         "a": "20",
+         "audio": "2c3810ac7336.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Dissolvem-se 3 moles de soluto em 1 litro de solução. Qual é a concentração molar, em moles por litro?",
+         "a": "3",
+         "audio": "c359f2656cf6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma solução é o soluto dissolvido no solvente. Diluir é juntar solvente; uma solução saturada já não dissolve mais. A concentração percentual é os gramas de soluto em 100 de solução; a molar é as moles de soluto por litro.",
+        "exemplo": "20 gramas de sal em 80 de água são 100 gramas de solução: 20 por cento. 3 moles num litro: 3 moles por litro.",
+        "lembra": "Percentual em 100 gramas; molar por litro.",
+        "audio": "79fe1f133910.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Hidrogénio e oxigénio",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O hidrogénio é:",
+         "options": [
+          "O gás mais leve que existe",
+          "O gás mais pesado que existe",
+          "Um metal"
+         ],
+         "a": 0,
+         "audio": "ba46419e7fa7.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada cientista à sua descoberta.",
+         "pairs": [
+          [
+           "Cavendish",
+           "Hidrogénio"
+          ],
+          [
+           "Priestley",
+           "Oxigénio"
+          ]
+         ],
+         "audio": "ed2cfe63be56.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No laboratório, o oxigénio obtém-se decompondo o peróxido de hidrogénio com um catalisador. Um catalisador é uma substância que:",
+         "options": [
+          "Altera a rapidez de uma reacção",
+          "Se gasta toda na reacção",
+          "Apaga a reacção"
+         ],
+         "a": 0,
+         "audio": "879511a6d0a1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O hidrogénio a arder no oxigénio dá:",
+         "options": [
+          "Água",
+          "Sal",
+          "Ferro"
+         ],
+         "a": 0,
+         "audio": "010542b3caef.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada gás a uma aplicação.",
+         "pairs": [
+          [
+           "Oxigénio",
+           "Balões de hospital para respirar"
+          ],
+          [
+           "Hidrogénio",
+           "Combustível de foguetões"
+          ]
+         ],
+         "audio": "834b2d9650f3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O hidrogénio, descoberto por Cavendish, é o gás mais leve e arde no oxigénio a dar água. O oxigénio, descoberto por Priestley, obtém-se no laboratório do peróxido de hidrogénio com um catalisador, que acelera a reacção sem se gastar.",
+        "exemplo": "O oxigénio enche as balas dos hospitais e alimenta o fogo; o hidrogénio é combustível de foguetões. O fermento do pão é um catalisador da cozinha.",
+        "lembra": "Catalisador: muda a rapidez, não se gasta.",
+        "audio": "8500f718f636.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Ar, ozono e oxidação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O gás que há em maior quantidade no ar é o:",
+         "options": [
+          "Azoto",
+          "Oxigénio",
+          "Dióxido de carbono"
+         ],
+         "a": 0,
+         "audio": "cda8c9894481.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A camada de ozono protege a Terra:",
+         "options": [
+          "Dos raios ultravioleta do Sol",
+          "Da chuva",
+          "Do vento"
+         ],
+         "a": 0,
+         "audio": "f28158b5970c.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada oxidação ao seu tipo.",
+         "pairs": [
+          [
+           "Ferro a enferrujar",
+           "Oxidação lenta"
+          ],
+          [
+           "Lenha a arder",
+           "Oxidação rápida"
+          ]
+         ],
+         "audio": "9d26824b5705.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pintar o portão de ferro serve para:",
+         "options": [
+          "Evitar a corrosão, tirando-lhe o ar e a humidade",
+          "O tornar mais pesado",
+          "O fazer arder melhor"
+         ],
+         "a": 0,
+         "audio": "167d721374a0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para haver combustão precisa-se de combustível, calor e:",
+         "options": [
+          "Comburente, que é o oxigénio",
+          "Água",
+          "Sal"
+         ],
+         "a": 0,
+         "audio": "393959199f7b.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Numa reacção, os reagentes têm 80 unidades de energia e os produtos 30. Quantas unidades de energia se libertaram?",
+         "a": "50",
+         "audio": "2627653f1512.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O ar é sobretudo azoto e oxigénio, e a camada de ozono trava os raios ultravioleta. Ganhar oxigénio é oxidar: lenta, como o ferro a enferrujar, ou rápida, a combustão, que precisa de combustível, comburente e calor.",
+        "exemplo": "Pintar o portão tira-lhe o ar e a humidade e evita a ferrugem. Reagentes com 80 de energia e produtos com 30: libertaram-se 50, reacção exotérmica.",
+        "lembra": "Combustível, oxigénio e calor: o triângulo do fogo.",
+        "audio": "4b7ac07aea14.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

@@ -3289,4 +3289,167 @@ MATERIA = {
                    "periscópio usa dois espelhos inclinados.",
         "lembra": "Ângulo de incidência igual ao ângulo de reflexão.",
     },
+
+    # ---------------------------------------------------------------
+    # Quimica -- 8a classe  (a primeira Quimica da app)
+    #
+    # Sem formulas: "H2O" a voz le "aga dois o". Escreve-se "agua".
+    # ---------------------------------------------------------------
+    "qui-8c:u1:n1": {
+        "explica": "A Química estuda as substâncias e as suas "
+                   "transformações. Nasceu da alquimia, que procurava "
+                   "transformar metais em ouro, e hoje está em casa, na "
+                   "medicina, na agricultura e na indústria: sabões, "
+                   "adubos, medicamentos, purificação da água.",
+        "exemplo": "Ferver água para a tornar potável, conservar peixe com "
+                   "sal, deitar adubo na machamba, tomar um comprimido: é "
+                   "Química todos os dias.",
+        "lembra": "Química: substâncias e transformações.",
+    },
+    "qui-8c:u1:n2": {
+        "explica": "No laboratório não se prova nem se cheira de perto "
+                   "nada, o cabelo vai preso, e um ácido na pele lava-se "
+                   "logo com muita água. Uma experiência acaba num "
+                   "relatório: objectivo, material, procedimento, "
+                   "observações e conclusão.",
+        "exemplo": "Mudança de cor, um gás a sair, efervescência, calor: "
+                   "são os sinais de que houve uma reacção química, e é "
+                   "isso que se escreve nas observações.",
+        "lembra": "Nunca provar, nunca cheirar de perto, e relatório no "
+                  "fim.",
+    },
+    "qui-8c:u2:n1": {
+        "explica": "Matéria é tudo o que tem massa e ocupa lugar. Tem "
+                   "propriedades gerais — massa, volume, "
+                   "impenetrabilidade, divisibilidade, elasticidade, "
+                   "compressibilidade — e três estados: sólido, líquido e "
+                   "gasoso, que mudam com o calor.",
+        "exemplo": "Fusão é o gelo a virar água; vaporização é a água a "
+                   "virar vapor; condensação é o vapor a virar gotas na "
+                   "tampa da panela. Dois corpos não cabem no mesmo lugar: "
+                   "impenetrabilidade.",
+        "lembra": "Matéria: substâncias puras ou misturas.",
+    },
+    "qui-8c:u2:n2": {
+        "explica": "Cada substância tem propriedades específicas que a "
+                   "identificam: ponto de fusão, ponto de ebulição, "
+                   "densidade, cor, cheiro. Uma substância elementar tem um "
+                   "só elemento, como o ferro; uma composta tem vários, "
+                   "como a água.",
+        "exemplo": "A água pura ferve a 100 graus ao nível do mar. Um "
+                   "pedaço de ferro de 40 gramas em 5 centímetros cúbicos "
+                   "tem densidade 8: a massa a dividir pelo volume.",
+        "lembra": "Densidade é massa a dividir por volume.",
+    },
+    "qui-8c:u2:n3": {
+        "explica": "Uma mistura homogénea não se distingue à vista, como a "
+                   "água com açúcar; uma heterogénea sim, como água com "
+                   "areia. Separam-se pelas propriedades: evaporação, "
+                   "cristalização, destilação; catação, peneiração, "
+                   "decantação, filtração, íman.",
+        "exemplo": "O sal vem da água do mar por evaporação e cristalização. "
+                   "A limalha de ferro sai da areia com um íman. A água "
+                   "barrenta decanta-se: espera-se que a terra assente.",
+        "lembra": "O método de separação escolhe-se pela propriedade que "
+                  "difere.",
+    },
+    "qui-8c:u3:n1": {
+        "explica": "O átomo tem um núcleo com protões e neutrões. O número "
+                   "atómico é o número de protões; o número de massa é "
+                   "protões mais neutrões. Cada elemento tem um símbolo, e "
+                   "os elementos são metais, com brilho e bons condutores, "
+                   "ou não metais.",
+        "exemplo": "Carbono: 6 protões e 6 neutrões, número de massa 12, "
+                   "símbolo C. O cobre é metal e conduz a corrente; o "
+                   "enxofre é não metal.",
+        "lembra": "Número de massa é protões mais neutrões.",
+    },
+    "qui-8c:u3:n2": {
+        "explica": "Os átomos juntam-se em moléculas. A fórmula diz quantos "
+                   "átomos de cada elemento há: a água tem 2 de hidrogénio "
+                   "e 1 de oxigénio. A valência diz quantas ligações cada "
+                   "átomo faz, e é ela que dita a fórmula.",
+        "exemplo": "Hidrogénio valência 1, oxigénio valência 2: são "
+                   "precisos 2 hidrogénios para 1 oxigénio. A molécula de "
+                   "oxigénio, dois átomos iguais, é elementar; a de água é "
+                   "composta.",
+        "lembra": "A fórmula conta os átomos; a valência explica-a.",
+    },
+    "qui-8c:u3:n3": {
+        "explica": "A massa atómica relativa compara o átomo com a unidade "
+                   "de massa atómica. A massa molecular é a soma das "
+                   "massas atómicas dos átomos da molécula, contando cada "
+                   "um as vezes que aparece.",
+        "exemplo": "Água: 2 vezes 1 mais 16 dá 18. Dióxido de carbono: 12 "
+                   "mais 2 vezes 16 dá 44. Oxigénio, dois átomos de 16: 32. "
+                   "Sal: 23 mais 35 dá 58.",
+        "lembra": "Massa molecular: soma-se cada átomo as vezes que "
+                  "aparece.",
+    },
+    "qui-8c:u3:n4": {
+        "explica": "Num fenómeno químico nasce uma substância nova. A "
+                   "equação escreve a reacção; pela lei de Lavoisier, a "
+                   "massa dos produtos é igual à dos reagentes, e por isso "
+                   "se acerta. Há reacções de combinação, decomposição, "
+                   "exotérmicas e endotérmicas.",
+        "exemplo": "4 gramas de hidrogénio com 32 de oxigénio dão 36 gramas "
+                   "de água, nem mais nem menos. 2 moléculas de hidrogénio "
+                   "e 1 de oxigénio dão 2 moléculas de água.",
+        "lembra": "Na natureza nada se perde, nada se cria: tudo se "
+                  "transforma.",
+    },
+    "qui-8c:u3:n5": {
+        "explica": "Uma mole é um número fixo de partículas, o número de "
+                   "Avogadro. A massa molar é a massa de uma mole, em "
+                   "gramas: é a massa molecular em gramas. Com ela "
+                   "passa-se de gramas a moles e de moles a gramas.",
+        "exemplo": "Água: 18 gramas por mole, logo 2 moles são 36 gramas. "
+                   "Dióxido de carbono: 44 por mole, logo 88 gramas são 2 "
+                   "moles. O metano tem 12 de carbono em 16: 75 por cento.",
+        "lembra": "Massa é moles vezes massa molar.",
+    },
+    "qui-8c:u4:n1": {
+        "explica": "A água potável é própria para beber: sem cor, sem "
+                   "cheiro, sem micróbios. A salobra tem sais a mais; a "
+                   "mineral brota de nascentes, fria ou termal. A água "
+                   "contaminada traz cólera e febre tifóide; trata-se por "
+                   "fervura, cloro e filtração.",
+        "exemplo": "Ferver a água mata os micróbios; umas gotas de cloro "
+                   "também. Fechar a torneira ao lavar os dentes e reparar "
+                   "as fugas conserva a água.",
+        "lembra": "Água que se bebe: fervida ou clorada.",
+    },
+    "qui-8c:u4:n2": {
+        "explica": "Uma solução é o soluto dissolvido no solvente. Diluir "
+                   "é juntar solvente; uma solução saturada já não "
+                   "dissolve mais. A concentração percentual é os gramas "
+                   "de soluto em 100 de solução; a molar é as moles de "
+                   "soluto por litro.",
+        "exemplo": "20 gramas de sal em 80 de água são 100 gramas de "
+                   "solução: 20 por cento. 3 moles num litro: 3 moles por "
+                   "litro.",
+        "lembra": "Percentual em 100 gramas; molar por litro.",
+    },
+    "qui-8c:u4:n3": {
+        "explica": "O hidrogénio, descoberto por Cavendish, é o gás mais "
+                   "leve e arde no oxigénio a dar água. O oxigénio, "
+                   "descoberto por Priestley, obtém-se no laboratório do "
+                   "peróxido de hidrogénio com um catalisador, que acelera "
+                   "a reacção sem se gastar.",
+        "exemplo": "O oxigénio enche as balas dos hospitais e alimenta o "
+                   "fogo; o hidrogénio é combustível de foguetões. O "
+                   "fermento do pão é um catalisador da cozinha.",
+        "lembra": "Catalisador: muda a rapidez, não se gasta.",
+    },
+    "qui-8c:u4:n4": {
+        "explica": "O ar é sobretudo azoto e oxigénio, e a camada de ozono "
+                   "trava os raios ultravioleta. Ganhar oxigénio é oxidar: "
+                   "lenta, como o ferro a enferrujar, ou rápida, a "
+                   "combustão, que precisa de combustível, comburente e "
+                   "calor.",
+        "exemplo": "Pintar o portão tira-lhe o ar e a humidade e evita a "
+                   "ferrugem. Reagentes com 80 de energia e produtos com "
+                   "30: libertaram-se 50, reacção exotérmica.",
+        "lembra": "Combustível, oxigénio e calor: o triângulo do fogo.",
+    },
 }

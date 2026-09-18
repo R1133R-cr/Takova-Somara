@@ -15,7 +15,7 @@ void main() {
   });
 
   test('cobre o primário inteiro, e o primeiro degrau do secundário', () {
-    expect(c.cursos.length, 37);
+    expect(c.cursos.length, 38);
 
     final classes = c.cursos.map((x) => x.classe).toSet();
     expect(classes, {
@@ -106,12 +106,13 @@ void main() {
     //  1920  com a História da 8ª classe (62)
     //  1986  com a Biologia da 8ª classe (66)
     //  2051  com a Física da 8ª classe (65)
+    //  2122  com a Química da 8ª classe (71)
     final total = c.cursos
         .expand((cu) => cu.units)
         .expand((u) => u.niveis)
         .expand((n) => n.questoes)
         .length;
-    expect(total, 2051);
+    expect(total, 2122);
   });
 
   test('as cores da Educação Visual estão bem formadas', () {
