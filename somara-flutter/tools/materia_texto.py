@@ -3143,4 +3143,150 @@ MATERIA = {
                    "teste é gratuito no centro de saúde.",
         "lembra": "Abstinência ou preservativo, e fazer o teste.",
     },
+
+    # ---------------------------------------------------------------
+    # Fisica -- 8a classe  (a primeira Fisica da app)
+    #
+    # As unidades escrevem-se por extenso, como nos enunciados: a voz nao
+    # sabe dizer "m/s" nem "J".
+    # ---------------------------------------------------------------
+    "fis-8c:u1:n1": {
+        "explica": "A Física estuda os fenómenos em que a matéria não muda de "
+                   "substância: o gelo derrete e continua a ser água. Matéria "
+                   "é tudo o que tem massa e ocupa espaço, e tem propriedades "
+                   "gerais como a inércia e a impenetrabilidade.",
+        "exemplo": "Lenha a arder é fenómeno químico: vira cinza e fumo. Água "
+                   "a subir por um pavio é capilaridade, um fenómeno físico.",
+        "lembra": "Físico muda a forma; químico muda a substância.",
+    },
+    "fis-8c:u1:n2": {
+        "explica": "As grandezas fundamentais são o comprimento, a massa e o "
+                   "tempo: medem-se em metros, quilogramas e segundos, as "
+                   "unidades do Sistema Internacional. A velocidade, a área e "
+                   "a força são derivadas: calculam-se a partir delas.",
+        "exemplo": "1 metro e meio são 150 centímetros; 2 quilogramas são "
+                   "2000 gramas. A fita métrica mede o comprimento, a balança "
+                   "a massa, o cronómetro o tempo.",
+        "lembra": "Metro, quilograma, segundo: as três unidades de base.",
+    },
+    "fis-8c:u2:n1": {
+        "explica": "Um corpo está em movimento quando muda de posição em "
+                   "relação a um ponto de referência — e pode estar parado em "
+                   "relação a um e em movimento em relação a outro. A "
+                   "velocidade é a distância a dividir pelo tempo, em metros "
+                   "por segundo.",
+        "exemplo": "100 metros em 20 segundos: 100 a dividir por 20 dá 5 "
+                   "metros por segundo. Sentado no autocarro, estás parado "
+                   "em relação a ele e em movimento em relação à estrada.",
+        "lembra": "Velocidade é distância a dividir pelo tempo.",
+    },
+    "fis-8c:u2:n2": {
+        "explica": "No movimento rectilíneo uniforme a trajectória é uma "
+                   "recta e a velocidade não muda. Distância é velocidade "
+                   "vezes tempo. No gráfico da distância pelo tempo sai uma "
+                   "recta inclinada; no da velocidade pelo tempo, uma recta "
+                   "horizontal.",
+        "exemplo": "A 60 quilómetros por hora, em 2 horas andam-se 120 "
+                   "quilómetros. A 5 metros por segundo, 200 metros levam "
+                   "200 a dividir por 5, ou seja 40 segundos.",
+        "lembra": "Uniforme: a mesma velocidade do princípio ao fim.",
+    },
+    "fis-8c:u2:n3": {
+        "explica": "A aceleração é quanto a velocidade muda por segundo. "
+                   "Se cresce ao mesmo ritmo é uniformemente acelerado; se "
+                   "diminui, retardado. Na queda livre todos os corpos caem "
+                   "com a mesma aceleração, perto de 10 metros por segundo "
+                   "em cada segundo.",
+        "exemplo": "Parte do repouso e ganha 2 metros por segundo a cada "
+                   "segundo: ao fim de 5 segundos vai a 10. Em queda livre, "
+                   "ao fim de 3 segundos vai a 30 metros por segundo.",
+        "lembra": "Velocidade final é aceleração vezes tempo, partindo do "
+                  "repouso.",
+    },
+    "fis-8c:u3:n1": {
+        "explica": "Uma força põe um corpo em movimento, pára-o ou "
+                   "deforma-o. Tem ponto de aplicação, direcção, sentido e "
+                   "intensidade, e mede-se em newtons. Forças na mesma "
+                   "direcção somam-se se têm o mesmo sentido e subtraem-se "
+                   "se têm sentidos contrários.",
+        "exemplo": "Duas pessoas a empurrar no mesmo sentido, com 200 e 300 "
+                   "newtons, fazem 500. A puxar uma corda em sentidos "
+                   "contrários, com 400 e 150, a resultante é 250.",
+        "lembra": "Mesmo sentido soma; sentidos contrários subtraem.",
+    },
+    "fis-8c:u3:n2": {
+        "explica": "Primeira lei: sem forças, o corpo fica como está — parado "
+                   "ou em movimento uniforme. É a inércia. Segunda lei: força "
+                   "é massa vezes aceleração. Terceira lei: a toda a acção "
+                   "corresponde uma reacção igual e de sentido contrário.",
+        "exemplo": "O autocarro trava e tu vais para a frente: inércia. 2 "
+                   "quilogramas com aceleração de 3 pedem 6 newtons. Empurras "
+                   "a parede e a parede empurra-te.",
+        "lembra": "Inércia, força igual a massa vezes aceleração, acção e "
+                  "reacção.",
+    },
+    "fis-8c:u4:n1": {
+        "explica": "Uma força realiza trabalho quando desloca o corpo: "
+                   "trabalho é força vezes distância, em joules. Energia é a "
+                   "capacidade de realizar trabalho — potencial, cinética, "
+                   "química, eléctrica — e não se cria nem se destrói, só se "
+                   "transforma.",
+        "exemplo": "10 newtons ao longo de 2 metros são 20 joules. Numa "
+                   "lâmpada, a energia eléctrica vira luz e calor; numa "
+                   "pedra a cair, a potencial vira cinética.",
+        "lembra": "Trabalho é força vezes distância; a energia só se "
+                  "transforma.",
+    },
+    "fis-8c:u4:n2": {
+        "explica": "A potência é o trabalho realizado em cada segundo, em "
+                   "watts. A electricidade produz-se a partir de outras "
+                   "energias: a água de Cahora Bassa, o carvão, o sol e o "
+                   "vento. Sol e vento são renováveis; carvão e petróleo não.",
+        "exemplo": "100 joules em 5 segundos são 20 watts. Apagar a luz ao "
+                   "sair de uma sala é poupar energia e dinheiro.",
+        "lembra": "Potência é trabalho a dividir pelo tempo.",
+    },
+    "fis-8c:u5:n1": {
+        "explica": "A temperatura diz quão quente ou frio está um corpo e "
+                   "mede-se com o termómetro, em graus Celsius, kelvin ou "
+                   "Fahrenheit. Dois corpos em contacto trocam calor do "
+                   "mais quente para o mais frio até ficarem iguais: é o "
+                   "equilíbrio térmico.",
+        "exemplo": "A água ferve a 100 graus Celsius, 373 kelvin ou 212 "
+                   "Fahrenheit. Para passar de Celsius a kelvin soma-se 273: "
+                   "25 graus são 298 kelvin.",
+        "lembra": "Kelvin é Celsius mais 273.",
+    },
+    "fis-8c:u5:n2": {
+        "explica": "Aquecido, um corpo dilata: aumenta de volume. O calor "
+                   "transmite-se por condução nos sólidos, por convecção nos "
+                   "líquidos e gases, e por radiação mesmo sem matéria, como "
+                   "o do Sol. Os metais são bons condutores.",
+        "exemplo": "Os carris têm folgas para não empenarem no calor. A "
+                   "colher aquece na panela por condução; o ar quente sobe "
+                   "por convecção; o sol aquece a pele por radiação.",
+        "lembra": "Condução toca, convecção sobe, radiação atravessa o vazio.",
+    },
+    "fis-8c:u6:n1": {
+        "explica": "O Sol e uma lâmpada são corpos luminosos; a Lua e uma "
+                   "parede são iluminados. Num meio homogéneo a luz anda em "
+                   "linha recta, e por isso há sombra atrás dos corpos "
+                   "opacos, penumbra à volta, e eclipses quando um astro "
+                   "tapa outro.",
+        "exemplo": "No eclipse do Sol, a Lua fica entre o Sol e a Terra. No "
+                   "eclipse da Lua, é a Terra que fica no meio e faz sombra "
+                   "na Lua.",
+        "lembra": "A luz vai a direito; o que se mete à frente faz sombra.",
+    },
+    "fis-8c:u6:n2": {
+        "explica": "Na reflexão a luz volta ao bater numa "
+                   "superfície, e o ângulo de reflexão é igual ao de "
+                   "incidência. Num espelho plano a imagem tem o mesmo "
+                   "tamanho, está direita, à mesma distância atrás do "
+                   "espelho, e trocada da esquerda para a direita.",
+        "exemplo": "Um raio que chega a 40 graus sai a 40 graus. A 1 metro do "
+                   "espelho, a imagem parece estar 1 metro atrás dele. O "
+                   "periscópio usa dois espelhos inclinados.",
+        "lembra": "Ângulo de incidência igual ao ângulo de reflexão.",
+    },
 }

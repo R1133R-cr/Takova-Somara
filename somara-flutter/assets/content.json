@@ -28440,6 +28440,904 @@
      ]
     }
    ]
+  },
+  {
+   "id": "fis-8c",
+   "disciplina": "Física",
+   "classe": "8ª classe",
+   "tag": "FIS",
+   "fonte": "Programa de Ensino da Disciplina de Física — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, pp. 19-31. As seis unidades e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Introdução ao estudo da Física",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A Física e a matéria",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Física é a ciência que estuda:",
+         "options": [
+          "Os fenómenos da natureza em que a matéria não muda de substância",
+          "Só os seres vivos",
+          "A história dos povos"
+         ],
+         "a": 0,
+         "audio": "0c9622ee375d.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada fenómeno ao seu tipo.",
+         "pairs": [
+          [
+           "O gelo a derreter",
+           "Fenómeno físico"
+          ],
+          [
+           "A lenha a arder",
+           "Fenómeno químico"
+          ]
+         ],
+         "audio": "95c2157d6247.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Matéria é:",
+         "options": [
+          "Tudo o que tem massa e ocupa espaço",
+          "Só o que se vê",
+          "Só o que é sólido"
+         ],
+         "a": 0,
+         "audio": "66ee7fc7e0dd.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A inércia, a divisibilidade e a impenetrabilidade são:",
+         "options": [
+          "Propriedades gerais da matéria",
+          "Propriedades só dos líquidos",
+          "Ramos da Física"
+         ],
+         "a": 0,
+         "audio": "56d3ffd8324d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A água sobe por um pedaço de papel ou por um pavio. Esse fenómeno chama-se:",
+         "options": [
+          "Capilaridade",
+          "Inércia",
+          "Reflexão"
+         ],
+         "a": 0,
+         "audio": "e8e5991664bd.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Física estuda os fenómenos em que a matéria não muda de substância: o gelo derrete e continua a ser água. Matéria é tudo o que tem massa e ocupa espaço, e tem propriedades gerais como a inércia e a impenetrabilidade.",
+        "exemplo": "Lenha a arder é fenómeno químico: vira cinza e fumo. Água a subir por um pavio é capilaridade, um fenómeno físico.",
+        "lembra": "Físico muda a forma; químico muda a substância.",
+        "audio": "0f4ac644a9ff.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Grandezas e unidades",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada grandeza fundamental à sua unidade no Sistema Internacional.",
+         "pairs": [
+          [
+           "Comprimento",
+           "metro"
+          ],
+          [
+           "Massa",
+           "quilograma"
+          ],
+          [
+           "Tempo",
+           "segundo"
+          ]
+         ],
+         "audio": "6d99fb661569.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas é uma grandeza derivada?",
+         "options": [
+          "A velocidade",
+          "A massa",
+          "O tempo"
+         ],
+         "a": 0,
+         "audio": "0dd14711d382.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada grandeza ao instrumento que a mede.",
+         "pairs": [
+          [
+           "Comprimento",
+           "Fita métrica"
+          ],
+          [
+           "Massa",
+           "Balança"
+          ],
+          [
+           "Tempo",
+           "Cronómetro"
+          ]
+         ],
+         "audio": "6abbe38702e0.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos centímetros tem 1 metro e meio?",
+         "a": "150",
+         "audio": "5fd4bc9990ef.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos gramas tem 2 quilogramas?",
+         "a": "2000",
+         "audio": "b997eac5aaa1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As grandezas fundamentais são o comprimento, a massa e o tempo: medem-se em metros, quilogramas e segundos, as unidades do Sistema Internacional. A velocidade, a área e a força são derivadas: calculam-se a partir delas.",
+        "exemplo": "1 metro e meio são 150 centímetros; 2 quilogramas são 2000 gramas. A fita métrica mede o comprimento, a balança a massa, o cronómetro o tempo.",
+        "lembra": "Metro, quilograma, segundo: as três unidades de base.",
+        "audio": "1ff595bca76f.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Cinemática",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Repouso, movimento e velocidade",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um corpo está em movimento quando:",
+         "options": [
+          "Muda de posição em relação a um ponto de referência",
+          "Faz barulho",
+          "Tem muita massa"
+         ],
+         "a": 0,
+         "audio": "ccaf50da2aed.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um passageiro sentado num autocarro em andamento está:",
+         "options": [
+          "Em repouso em relação ao autocarro e em movimento em relação à estrada",
+          "Sempre em repouso",
+          "Sempre em movimento"
+         ],
+         "a": 0,
+         "audio": "4d0d37d95288.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A velocidade calcula-se dividindo:",
+         "options": [
+          "A distância pelo tempo",
+          "O tempo pela distância",
+          "A massa pelo tempo"
+         ],
+         "a": 0,
+         "audio": "d6046377a1d1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um carro percorre 100 metros em 20 segundos. Qual é a velocidade, em metros por segundo?",
+         "a": "5",
+         "audio": "cc06373db137.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No Sistema Internacional, a velocidade mede-se em:",
+         "options": [
+          "m/s",
+          "km",
+          "kg"
+         ],
+         "a": 0,
+         "audio": "0d8a9f7d6e08.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um corpo está em movimento quando muda de posição em relação a um ponto de referência — e pode estar parado em relação a um e em movimento em relação a outro. A velocidade é a distância a dividir pelo tempo, em metros por segundo.",
+        "exemplo": "100 metros em 20 segundos: 100 a dividir por 20 dá 5 metros por segundo. Sentado no autocarro, estás parado em relação a ele e em movimento em relação à estrada.",
+        "lembra": "Velocidade é distância a dividir pelo tempo.",
+        "audio": "3647ceff352b.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O movimento rectilíneo uniforme",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "No movimento rectilíneo uniforme, a velocidade:",
+         "options": [
+          "É constante e a trajectória é uma recta",
+          "Aumenta sempre",
+          "É sempre zero"
+         ],
+         "a": 0,
+         "audio": "79dda249d378.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um autocarro anda a 60 quilómetros por hora, sempre à mesma velocidade. Quantos quilómetros percorre em 2 horas?",
+         "a": "120",
+         "audio": "70f54e421ac1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um ciclista a 5 metros por segundo, em movimento uniforme, leva quantos segundos a percorrer 200 metros?",
+         "a": "40",
+         "audio": "c488cb17bf1d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No gráfico da distância em função do tempo, o movimento uniforme é:",
+         "options": [
+          "Uma recta inclinada",
+          "Uma curva",
+          "Uma recta vertical"
+         ],
+         "a": 0,
+         "audio": "9484c92e1dbf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No gráfico da velocidade em função do tempo, o movimento uniforme é:",
+         "options": [
+          "Uma recta horizontal",
+          "Uma recta que sobe",
+          "Uma curva"
+         ],
+         "a": 0,
+         "audio": "3bbe179d0fd2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No movimento rectilíneo uniforme a trajectória é uma recta e a velocidade não muda. Distância é velocidade vezes tempo. No gráfico da distância pelo tempo sai uma recta inclinada; no da velocidade pelo tempo, uma recta horizontal.",
+        "exemplo": "A 60 quilómetros por hora, em 2 horas andam-se 120 quilómetros. A 5 metros por segundo, 200 metros levam 200 a dividir por 5, ou seja 40 segundos.",
+        "lembra": "Uniforme: a mesma velocidade do princípio ao fim.",
+        "audio": "b6f8db2ea2ca.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Movimento variado e queda livre",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A aceleração mede:",
+         "options": [
+          "Quanto a velocidade muda em cada segundo",
+          "A distância percorrida",
+          "O peso do corpo"
+         ],
+         "a": 0,
+         "audio": "9e94fbcadc32.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um carro parte do repouso e ganha 2 metros por segundo em cada segundo. Que velocidade tem ao fim de 5 segundos, em metros por segundo?",
+         "a": "10",
+         "audio": "9b9c4ef9e2df.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um movimento em que a velocidade diminui de forma regular chama-se:",
+         "options": [
+          "Uniformemente retardado",
+          "Uniformemente acelerado",
+          "Uniforme"
+         ],
+         "a": 0,
+         "audio": "821e6de4d436.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na queda livre, todos os corpos caem:",
+         "options": [
+          "Com a mesma aceleração, se não houver ar a travar",
+          "Mais depressa quanto mais pesados",
+          "À mesma velocidade constante"
+         ],
+         "a": 0,
+         "audio": "e6de2cf9ab20.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um corpo cai em queda livre. Tomando a aceleração da gravidade como 10 metros por segundo em cada segundo, que velocidade tem ao fim de 3 segundos, em metros por segundo?",
+         "a": "30",
+         "audio": "f7db89a4e7f3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A aceleração é quanto a velocidade muda por segundo. Se cresce ao mesmo ritmo é uniformemente acelerado; se diminui, retardado. Na queda livre todos os corpos caem com a mesma aceleração, perto de 10 metros por segundo em cada segundo.",
+        "exemplo": "Parte do repouso e ganha 2 metros por segundo a cada segundo: ao fim de 5 segundos vai a 10. Em queda livre, ao fim de 3 segundos vai a 30 metros por segundo.",
+        "lembra": "Velocidade final é aceleração vezes tempo, partindo do repouso.",
+        "audio": "0c3656af9975.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Dinâmica: as leis de Newton",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A força",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma força pode:",
+         "options": [
+          "Pôr um corpo em movimento, pará-lo ou deformá-lo",
+          "Só deformar",
+          "Só aquecer"
+         ],
+         "a": 0,
+         "audio": "67f7c973b462.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os elementos de uma força são:",
+         "options": [
+          "Ponto de aplicação, direcção, sentido e intensidade",
+          "Massa, volume e tempo",
+          "Cor, forma e tamanho"
+         ],
+         "a": 0,
+         "audio": "2a94dd1f10b0.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Duas pessoas empurram um carro no mesmo sentido, uma com 200 newtons e outra com 300. Qual é a força resultante, em newtons?",
+         "a": "500",
+         "audio": "c7c6a1a917fd.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Dois rapazes puxam uma corda em sentidos contrários, um com 400 newtons e outro com 150. Qual é a força resultante, em newtons?",
+         "a": "250",
+         "audio": "a43138f94bb4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No Sistema Internacional, a força mede-se em:",
+         "options": [
+          "Newton",
+          "Quilograma",
+          "Metro"
+         ],
+         "a": 0,
+         "audio": "fbb87dd924e5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma força põe um corpo em movimento, pára-o ou deforma-o. Tem ponto de aplicação, direcção, sentido e intensidade, e mede-se em newtons. Forças na mesma direcção somam-se se têm o mesmo sentido e subtraem-se se têm sentidos contrários.",
+        "exemplo": "Duas pessoas a empurrar no mesmo sentido, com 200 e 300 newtons, fazem 500. A puxar uma corda em sentidos contrários, com 400 e 150, a resultante é 250.",
+        "lembra": "Mesmo sentido soma; sentidos contrários subtraem.",
+        "audio": "16a2d9710a23.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "As três leis de Newton",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Pela primeira lei de Newton, um corpo sem forças a actuar:",
+         "options": [
+          "Fica em repouso ou em movimento uniforme",
+          "Pára sempre",
+          "Acelera"
+         ],
+         "a": 0,
+         "audio": "9ac2bc5d78d7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando o autocarro trava de repente, os passageiros vão para a frente por causa da:",
+         "options": [
+          "Inércia",
+          "Gravidade",
+          "Reflexão"
+         ],
+         "a": 0,
+         "audio": "28aa5397798a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A segunda lei de Newton diz que a força é igual a:",
+         "options": [
+          "Massa vezes aceleração",
+          "Massa vezes velocidade",
+          "Distância a dividir pelo tempo"
+         ],
+         "a": 0,
+         "audio": "6fad55548af7.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Que força, em newtons, é preciso para dar a um corpo de 2 quilogramas uma aceleração de 3 metros por segundo em cada segundo?",
+         "a": "6",
+         "audio": "0e520bb6f642.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pela terceira lei de Newton, quando empurras uma parede:",
+         "options": [
+          "A parede empurra-te com uma força igual e de sentido contrário",
+          "A parede não faz nada",
+          "A parede empurra-te com o dobro da força"
+         ],
+         "a": 0,
+         "audio": "3fa55ebc510e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Primeira lei: sem forças, o corpo fica como está — parado ou em movimento uniforme. É a inércia. Segunda lei: força é massa vezes aceleração. Terceira lei: a toda a acção corresponde uma reacção igual e de sentido contrário.",
+        "exemplo": "O autocarro trava e tu vais para a frente: inércia. 2 quilogramas com aceleração de 3 pedem 6 newtons. Empurras a parede e a parede empurra-te.",
+        "lembra": "Inércia, força igual a massa vezes aceleração, acção e reacção.",
+        "audio": "fe9a37ba792b.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Trabalho e energia",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O trabalho e a energia",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Em Física, uma força realiza trabalho quando:",
+         "options": [
+          "Desloca o corpo em que actua",
+          "Está a suar",
+          "O corpo fica parado"
+         ],
+         "a": 0,
+         "audio": "9353d9d078a1.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma força de 10 newtons empurra uma caixa ao longo de 2 metros. Qual é o trabalho realizado, em joules?",
+         "a": "20",
+         "audio": "e9bff963e5c6.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada situação ao tipo de energia.",
+         "pairs": [
+          [
+           "Uma pedra no alto de um monte",
+           "Energia potencial"
+          ],
+          [
+           "Uma bola a rolar",
+           "Energia cinética"
+          ],
+          [
+           "Uma pilha",
+           "Energia química"
+          ]
+         ],
+         "audio": "8d3e4f1ef76e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O princípio da conservação da energia diz que a energia:",
+         "options": [
+          "Não se cria nem se destrói, só se transforma",
+          "Desaparece quando se gasta",
+          "Aparece do nada"
+         ],
+         "a": 0,
+         "audio": "887fe9b2f1b2.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa lâmpada, a energia eléctrica transforma-se em:",
+         "options": [
+          "Luz e calor",
+          "Energia química",
+          "Massa"
+         ],
+         "a": 0,
+         "audio": "6b22c15c3613.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Uma força realiza trabalho quando desloca o corpo: trabalho é força vezes distância, em joules. Energia é a capacidade de realizar trabalho — potencial, cinética, química, eléctrica — e não se cria nem se destrói, só se transforma.",
+        "exemplo": "10 newtons ao longo de 2 metros são 20 joules. Numa lâmpada, a energia eléctrica vira luz e calor; numa pedra a cair, a potencial vira cinética.",
+        "lembra": "Trabalho é força vezes distância; a energia só se transforma.",
+        "audio": "014c339abc7d.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Potência e energia eléctrica",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A potência mede:",
+         "options": [
+          "O trabalho realizado em cada segundo",
+          "A força total",
+          "A distância percorrida"
+         ],
+         "a": 0,
+         "audio": "fcd9a8157d63.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma máquina realiza 100 joules de trabalho em 5 segundos. Qual é a potência, em watts?",
+         "a": "20",
+         "audio": "ea6c8af1fbe5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A barragem de Cahora Bassa produz electricidade a partir de:",
+         "options": [
+          "Água em movimento: energia hidroeléctrica",
+          "Carvão",
+          "Vento"
+         ],
+         "a": 0,
+         "audio": "c54f87e710e2.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada fonte de energia ao seu tipo.",
+         "pairs": [
+          [
+           "Sol e vento",
+           "Renovável"
+          ],
+          [
+           "Carvão e petróleo",
+           "Não renovável"
+          ]
+         ],
+         "audio": "6850601ab41b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Poupar energia eléctrica em casa é:",
+         "options": [
+          "Apagar as luzes e desligar o que não se usa",
+          "Deixar tudo ligado",
+          "Usar lâmpadas mais fracas na rua"
+         ],
+         "a": 0,
+         "audio": "68f7f3a30857.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A potência é o trabalho realizado em cada segundo, em watts. A electricidade produz-se a partir de outras energias: a água de Cahora Bassa, o carvão, o sol e o vento. Sol e vento são renováveis; carvão e petróleo não.",
+        "exemplo": "100 joules em 5 segundos são 20 watts. Apagar a luz ao sair de uma sala é poupar energia e dinheiro.",
+        "lembra": "Potência é trabalho a dividir pelo tempo.",
+        "audio": "17d54a5a2b94.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Fenómenos térmicos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Temperatura e escalas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A temperatura mede:",
+         "options": [
+          "Quão quente ou frio está um corpo",
+          "O peso de um corpo",
+          "A quantidade de água"
+         ],
+         "a": 0,
+         "audio": "6ac6101f6496.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O instrumento que mede a temperatura é:",
+         "options": [
+          "O termómetro",
+          "A balança",
+          "O cronómetro"
+         ],
+         "a": 0,
+         "audio": "5f01aacf499d.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada escala ao ponto em que a água ferve.",
+         "pairs": [
+          [
+           "Celsius",
+           "100 graus"
+          ],
+          [
+           "Kelvin",
+           "373 kelvin"
+          ],
+          [
+           "Fahrenheit",
+           "212 graus"
+          ]
+         ],
+         "audio": "e29921078535.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Para passar de graus Celsius a kelvin soma-se 273. Quantos kelvin são 25 graus Celsius?",
+         "a": "298",
+         "audio": "b63e42b42151.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando dois corpos a temperaturas diferentes ficam em contacto:",
+         "options": [
+          "O calor passa do mais quente para o mais frio até ficarem iguais",
+          "O frio passa para o quente",
+          "Nada acontece"
+         ],
+         "a": 0,
+         "audio": "2a39853675e1.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A temperatura diz quão quente ou frio está um corpo e mede-se com o termómetro, em graus Celsius, kelvin ou Fahrenheit. Dois corpos em contacto trocam calor do mais quente para o mais frio até ficarem iguais: é o equilíbrio térmico.",
+        "exemplo": "A água ferve a 100 graus Celsius, 373 kelvin ou 212 Fahrenheit. Para passar de Celsius a kelvin soma-se 273: 25 graus são 298 kelvin.",
+        "lembra": "Kelvin é Celsius mais 273.",
+        "audio": "207f7a2a08b9.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Calor: dilatação e transmissão",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Quando se aquece um corpo, em geral ele:",
+         "options": [
+          "Dilata: aumenta de volume",
+          "Encolhe",
+          "Fica igual"
+         ],
+         "a": 0,
+         "audio": "0de2b2ac5da4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os carris do comboio têm folgas entre eles para:",
+         "options": [
+          "Não empenarem quando dilatam com o calor",
+          "Fazerem barulho",
+          "Poupar ferro"
+         ],
+         "a": 0,
+         "audio": "3e86337863a9.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada forma de transmissão de calor ao exemplo.",
+         "pairs": [
+          [
+           "Condução",
+           "A colher aquece na panela"
+          ],
+          [
+           "Convecção",
+           "O ar quente sobe na sala"
+          ],
+          [
+           "Radiação",
+           "O sol aquece a pele"
+          ]
+         ],
+         "audio": "06c10f267bb8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os metais são bons:",
+         "options": [
+          "Condutores de calor",
+          "Isoladores de calor",
+          "Reflectores de som"
+         ],
+         "a": 0,
+         "audio": "ec095cecdcd5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As mudanças climáticas estão ligadas ao aumento:",
+         "options": [
+          "Dos gases que prendem o calor na atmosfera",
+          "Do número de rios",
+          "Da altura das montanhas"
+         ],
+         "a": 0,
+         "audio": "f12015e54af6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Aquecido, um corpo dilata: aumenta de volume. O calor transmite-se por condução nos sólidos, por convecção nos líquidos e gases, e por radiação mesmo sem matéria, como o do Sol. Os metais são bons condutores.",
+        "exemplo": "Os carris têm folgas para não empenarem no calor. A colher aquece na panela por condução; o ar quente sobe por convecção; o sol aquece a pele por radiação.",
+        "lembra": "Condução toca, convecção sobe, radiação atravessa o vazio.",
+        "audio": "0621f172145f.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u6",
+     "titulo": "Óptica geométrica",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A luz e a sua propagação",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada corpo ao seu tipo.",
+         "pairs": [
+          [
+           "O Sol",
+           "Corpo luminoso"
+          ],
+          [
+           "A Lua",
+           "Corpo iluminado"
+          ]
+         ],
+         "audio": "9d5de26fc67e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num meio homogéneo, a luz propaga-se:",
+         "options": [
+          "Em linha recta",
+          "Em curva",
+          "Em ziguezague"
+         ],
+         "a": 0,
+         "audio": "81f175cffc63.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A sombra forma-se porque:",
+         "options": [
+          "A luz não contorna os corpos opacos",
+          "A luz é fria",
+          "O corpo absorve o ar"
+         ],
+         "a": 0,
+         "audio": "ffa56eacca3e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Num eclipse do Sol:",
+         "options": [
+          "A Lua fica entre o Sol e a Terra",
+          "A Terra fica entre o Sol e a Lua",
+          "O Sol se apaga"
+         ],
+         "a": 0,
+         "audio": "0469e5bcf3fa.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A zona de sombra parcial à volta da sombra chama-se:",
+         "options": [
+          "Penumbra",
+          "Reflexo",
+          "Eclipse"
+         ],
+         "a": 0,
+         "audio": "24640783f80a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O Sol e uma lâmpada são corpos luminosos; a Lua e uma parede são iluminados. Num meio homogéneo a luz anda em linha recta, e por isso há sombra atrás dos corpos opacos, penumbra à volta, e eclipses quando um astro tapa outro.",
+        "exemplo": "No eclipse do Sol, a Lua fica entre o Sol e a Terra. No eclipse da Lua, é a Terra que fica no meio e faz sombra na Lua.",
+        "lembra": "A luz vai a direito; o que se mete à frente faz sombra.",
+        "audio": "29e827066f92.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Reflexão e espelhos planos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A reflexão da luz é:",
+         "options": [
+          "A luz a voltar para trás ao bater numa superfície",
+          "A luz a atravessar o vidro",
+          "A luz a apagar-se"
+         ],
+         "a": 0,
+         "audio": "af1dd3181aa5.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um raio de luz bate num espelho plano com um ângulo de incidência de 40 graus. Quantos graus tem o ângulo de reflexão?",
+         "a": "40",
+         "audio": "2546c676e17a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A imagem num espelho plano é:",
+         "options": [
+          "Do mesmo tamanho, direita e invertida da esquerda para a direita",
+          "Mais pequena e de pernas para o ar",
+          "Maior e de cor diferente"
+         ],
+         "a": 0,
+         "audio": "abdfd325ba19.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se estás a 1 metro de um espelho plano, a tua imagem parece estar:",
+         "options": [
+          "A 1 metro atrás do espelho",
+          "Em cima do espelho",
+          "A 2 metros atrás do espelho"
+         ],
+         "a": 0,
+         "audio": "ab61d7a5b50e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um periscópio serve para ver por cima de um obstáculo e usa:",
+         "options": [
+          "Dois espelhos planos inclinados",
+          "Uma lâmpada",
+          "Um íman"
+         ],
+         "a": 0,
+         "audio": "748777abe29c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na reflexão a luz volta ao bater numa superfície, e o ângulo de reflexão é igual ao de incidência. Num espelho plano a imagem tem o mesmo tamanho, está direita, à mesma distância atrás do espelho, e trocada da esquerda para a direita.",
+        "exemplo": "Um raio que chega a 40 graus sai a 40 graus. A 1 metro do espelho, a imagem parece estar 1 metro atrás dele. O periscópio usa dois espelhos inclinados.",
+        "lembra": "Ângulo de incidência igual ao ângulo de reflexão.",
+        "audio": "1ddfcd69f92f.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }
