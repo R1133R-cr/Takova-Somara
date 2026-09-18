@@ -2861,4 +2861,143 @@ MATERIA = {
         "lembra": "Cidade planeada é cidade com água, escola e ruas para "
                   "todos.",
     },
+
+    # ---------------------------------------------------------------
+    # Historia -- 8a classe
+    # ---------------------------------------------------------------
+    "his-8c:u1:n1": {
+        "explica": "No século XV a Europa vivia o Antigo Regime: uma "
+                   "sociedade de ordens — clero, nobreza e povo — e uma "
+                   "economia agrária. A África tinha reinos e impérios "
+                   "fortes, como o Monomotapa, o Mali e o Congo, que "
+                   "comerciavam ouro, marfim e escravos.",
+        "exemplo": "Na costa de Moçambique, antes dos portugueses, o ouro do "
+                   "Monomotapa saía por Sofala para os comerciantes árabes e "
+                   "suaílis do Índico.",
+        "lembra": "A África do século XV não estava vazia nem atrasada: tinha "
+                  "reinos e comércio.",
+    },
+    "his-8c:u1:n2": {
+        "explica": "Os europeus lançaram-se ao mar à procura de ouro e "
+                   "especiarias. Vasco da Gama passou por Moçambique em 1498, "
+                   "a caminho da Índia, e os portugueses ficaram na costa: "
+                   "Sofala e a Ilha de Moçambique. Vieram as trocas desiguais "
+                   "e o tráfico.",
+        "exemplo": "Milhões de africanos foram levados à força para as "
+                   "plantações da América e para as ilhas do Índico. A "
+                   "África perdeu gente e riquezas, e os reinos "
+                   "enfraqueceram.",
+        "lembra": "Expansão para uns foi pilhagem para outros.",
+    },
+    "his-8c:u1:n3": {
+        "explica": "O Renascimento, nascido em Itália, pôs o ser humano no "
+                   "centro: é o Humanismo. Nasceram a imprensa e a ciência "
+                   "moderna. Em 1517 Lutero abriu a Reforma Protestante, e a "
+                   "Igreja Católica respondeu com a Contra-Reforma.",
+        "exemplo": "Gutenberg inventou a imprensa; Copérnico disse que a "
+                   "Terra gira à volta do Sol. Luteranismo na Alemanha, "
+                   "Calvinismo na Suíça, Anglicanismo em Inglaterra.",
+        "lembra": "Renascimento é olhar para o homem; Reforma é dividir a "
+                  "Igreja.",
+    },
+    "his-8c:u1:n4": {
+        "explica": "O mercantilismo media a riqueza pelo ouro e prata "
+                   "acumulados, e usava as colónias para fornecer "
+                   "matérias-primas e comprar produtos. O absolutismo pôs "
+                   "todo o poder no rei, que dizia recebê-lo de Deus.",
+        "exemplo": "Luís XIV, em França, é o exemplo do rei absoluto: «O "
+                   "Estado sou eu». O ouro que vinha das colónias enchia os "
+                   "cofres da Europa.",
+        "lembra": "Mercantilismo é a economia; absolutismo é o poder.",
+    },
+    "his-8c:u1:n5": {
+        "explica": "As revoluções burguesas derrubaram o Antigo Regime. Em "
+                   "Inglaterra o Parlamento limitou o rei. A América fez-se "
+                   "independente e escreveu a Constituição de 1787. Em 1789 a "
+                   "Revolução Francesa proclamou liberdade, igualdade e "
+                   "fraternidade.",
+        "exemplo": "Em França o povo passava fome enquanto o clero e a "
+                   "nobreza não pagavam impostos. A 14 de Julho de 1789 "
+                   "tomou a Bastilha.",
+        "lembra": "1787 é a Constituição americana; 1789 é a Bastilha.",
+    },
+    "his-8c:u2:n1": {
+        "explica": "Enquanto a Europa fazia revoluções, quase toda a África "
+                   "era governada por reinos africanos. Em Moçambique os "
+                   "portugueses estavam na costa e no vale do Zambeze, nos "
+                   "prazos, e a economia assentava no marfim e no tráfico de "
+                   "escravos.",
+        "exemplo": "Um prazo era uma grande terra concedida pela Coroa a um "
+                   "colono, que a explorava e cobrava aos habitantes. A "
+                   "indústria europeia passou a querer mais matérias-primas "
+                   "de África.",
+        "lembra": "No início do século XIX a ocupação europeia de África era "
+                  "ainda pequena.",
+    },
+    "his-8c:u3:n1": {
+        "explica": "A Revolução Industrial começou em Inglaterra, no século "
+                   "XVIII, porque havia carvão, ferro, capitais e mercados. A "
+                   "máquina a vapor deu energia às fábricas e à locomotiva. "
+                   "A segunda fase trouxe a electricidade, o petróleo e o "
+                   "aço.",
+        "exemplo": "O tear mecânico fazia num dia o que um artesão fazia num "
+                   "mês. O comboio levou o carvão e os tecidos por todo o "
+                   "país.",
+        "lembra": "Primeira fase: carvão e vapor. Segunda: electricidade e "
+                  "petróleo.",
+    },
+    "his-8c:u3:n2": {
+        "explica": "A produção saiu das oficinas para as fábricas. Cresceram "
+                   "duas classes: a burguesia, dona das fábricas, e o "
+                   "proletariado, que vendia o seu trabalho. As cidades "
+                   "cresceram depressa, e com elas a poluição e os bairros "
+                   "pobres.",
+        "exemplo": "Manchester passou de vila a cidade de fábricas em poucas "
+                   "décadas, com o ar negro do fumo do carvão.",
+        "lembra": "Fábrica, cidade, burguesia e proletariado nascem juntos.",
+    },
+    "his-8c:u3:n3": {
+        "explica": "Os operários trabalhavam catorze horas por salários "
+                   "baixos, e mulheres e crianças recebiam ainda menos. Para "
+                   "se defenderem criaram sindicatos — os trade-unions — e "
+                   "partidos operários, que exigiam menos horas, mais "
+                   "salário e o voto.",
+        "exemplo": "Uma greve parava a fábrica até o patrão negociar. Foi "
+                   "assim que se conquistou o dia de oito horas.",
+        "lembra": "Sozinho o operário não podia nada; junto, podia parar a "
+                  "fábrica.",
+    },
+    "his-8c:u4:n1": {
+        "explica": "Da concorrência entre muitas empresas passou-se aos "
+                   "monopólios: poucas empresas a dominar um mercado, por "
+                   "concentração horizontal ou vertical, com os bancos a "
+                   "mandar na indústria. É o capitalismo monopolista, que "
+                   "leva ao imperialismo.",
+        "exemplo": "Horizontal: várias fábricas de aço juntam-se numa. "
+                   "Vertical: o mesmo dono tem a mina, a fundição e a "
+                   "fábrica.",
+        "lembra": "Monopólio é um mercado nas mãos de poucos.",
+    },
+    "his-8c:u4:n2": {
+        "explica": "Na Conferência de Berlim, de 1884 a 1885, as potências "
+                   "europeias repartiram a África, com a regra da ocupação "
+                   "efectiva. Portugal cedeu ao Ultimato inglês de 1890 e "
+                   "entregou regiões de Moçambique a companhias "
+                   "majestáticas.",
+        "exemplo": "A Companhia do Niassa administrou o norte de Moçambique "
+                   "como se fosse dona dele, a cobrar impostos e a obrigar a "
+                   "trabalhar.",
+        "lembra": "Berlim repartiu; a ocupação efectiva obrigou a conquistar.",
+    },
+    "his-8c:u4:n3": {
+        "explica": "Os povos africanos resistiram à ocupação: os zulus "
+                   "venceram os ingleses em Isandlwana, os hereros e namas "
+                   "lutaram contra os alemães, e em Moçambique Ngungunhane "
+                   "foi preso em Chaimite, em 1895, e o Barué revoltou-se em "
+                   "1917.",
+        "exemplo": "Ngungunhane, imperador de Gaza, resistiu anos aos "
+                   "portugueses. Depois de preso foi levado para os Açores, "
+                   "onde morreu.",
+        "lembra": "A ocupação colonial foi imposta pela força — e combatida.",
+    },
 }

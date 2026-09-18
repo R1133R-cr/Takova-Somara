@@ -26563,6 +26563,884 @@
      ]
     }
    ]
+  },
+  {
+   "id": "his-8c",
+   "disciplina": "História",
+   "classe": "8ª classe",
+   "tag": "HIS",
+   "fonte": "Programa de Ensino da Disciplina de História — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, pp. 24-34. As quatro unidades e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 8ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "A formação do sistema capitalista",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A Europa e a África no século XV",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "No Antigo Regime, a sociedade europeia dividia-se em:",
+         "options": [
+          "Clero, nobreza e povo",
+          "Operários e patrões",
+          "Cidadãos todos iguais"
+         ],
+         "a": 0,
+         "audio": "ae648fcdad58.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A economia europeia do Antigo Regime era, sobretudo:",
+         "options": [
+          "Agrária, com a terra nas mãos dos senhores",
+          "Industrial, com fábricas",
+          "Baseada em bancos e bolsas"
+         ],
+         "a": 0,
+         "audio": "7648e9dd1b06.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada reino ou império africano à sua região.",
+         "pairs": [
+          [
+           "Monomotapa",
+           "Vale do Zambeze"
+          ],
+          [
+           "Mali e Songai",
+           "África Ocidental"
+          ],
+          [
+           "Congo",
+           "África Central"
+          ]
+         ],
+         "audio": "cf23edb980b5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Entre os séculos XV e XVII, a África comerciava com o exterior sobretudo:",
+         "options": [
+          "Ouro, marfim e escravos",
+          "Automóveis e máquinas",
+          "Petróleo e gás"
+         ],
+         "a": 0,
+         "audio": "58c151ecf806.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Antes da chegada dos europeus, o comércio da costa de Moçambique fazia-se com:",
+         "options": [
+          "Os árabes e os suaílis do Índico",
+          "Os ingleses",
+          "Os americanos"
+         ],
+         "a": 0,
+         "audio": "9f3ce920dc4c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No século XV a Europa vivia o Antigo Regime: uma sociedade de ordens — clero, nobreza e povo — e uma economia agrária. A África tinha reinos e impérios fortes, como o Monomotapa, o Mali e o Congo, que comerciavam ouro, marfim e escravos.",
+        "exemplo": "Na costa de Moçambique, antes dos portugueses, o ouro do Monomotapa saía por Sofala para os comerciantes árabes e suaílis do Índico.",
+        "lembra": "A África do século XV não estava vazia nem atrasada: tinha reinos e comércio.",
+        "audio": "7cf1c3cd7b4b.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A expansão europeia e o comércio colonial",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um dos objectivos da expansão europeia do século XV foi:",
+         "options": [
+          "Chegar às especiarias e ao ouro por mar",
+          "Fugir da peste",
+          "Estudar as estrelas"
+         ],
+         "a": 0,
+         "audio": "a381ed9ee34c.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em que ano Vasco da Gama chegou à costa de Moçambique, a caminho da Índia?",
+         "a": "1498",
+         "audio": "74c8ac2a585f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os portugueses instalaram-se primeiro em Moçambique:",
+         "options": [
+          "Na costa: Sofala e a Ilha de Moçambique",
+          "No interior: em Lichinga",
+          "Nas montanhas: em Gorongosa"
+         ],
+         "a": 0,
+         "audio": "e365ef751c1d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Trocas desiguais» quer dizer que:",
+         "options": [
+          "Os europeus davam pouco valor pelo muito que levavam",
+          "As trocas eram justas para todos",
+          "Só os africanos ganhavam"
+         ],
+         "a": 0,
+         "audio": "bc137fa0ac6e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O tráfico de escravos levou milhões de africanos, à força, sobretudo para:",
+         "options": [
+          "As plantações da América e as ilhas do Índico",
+          "As universidades europeias",
+          "A China"
+         ],
+         "a": 0,
+         "audio": "ad730cbb500a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma consequência da expansão europeia para a África foi:",
+         "options": [
+          "A perda de gente e de riquezas, e reinos enfraquecidos",
+          "O fim da escravatura",
+          "A independência imediata"
+         ],
+         "a": 0,
+         "audio": "6949776ae02a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os europeus lançaram-se ao mar à procura de ouro e especiarias. Vasco da Gama passou por Moçambique em 1498, a caminho da Índia, e os portugueses ficaram na costa: Sofala e a Ilha de Moçambique. Vieram as trocas desiguais e o tráfico.",
+        "exemplo": "Milhões de africanos foram levados à força para as plantações da América e para as ilhas do Índico. A África perdeu gente e riquezas, e os reinos enfraqueceram.",
+        "lembra": "Expansão para uns foi pilhagem para outros.",
+        "audio": "cd6f518dd612.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Renascimento, Humanismo e Reforma",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O Renascimento foi um movimento cultural que nasceu:",
+         "options": [
+          "Em Itália, nos séculos XIV a XVI",
+          "Em Moçambique, no século XX",
+          "Na Rússia, no século XIX"
+         ],
+         "a": 0,
+         "audio": "f69a7e2d80ec.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Humanismo pôs no centro das preocupações:",
+         "options": [
+          "O ser humano",
+          "Só Deus",
+          "O rei"
+         ],
+         "a": 0,
+         "audio": "6a80479aad72.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada nome ao que fez.",
+         "pairs": [
+          [
+           "Gutenberg",
+           "A imprensa"
+          ],
+          [
+           "Copérnico",
+           "A Terra gira à volta do Sol"
+          ],
+          [
+           "Leonardo da Vinci",
+           "Pintura e invenções"
+          ]
+         ],
+         "audio": "bb0f18a6bf89.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Reforma Protestante começou em 1517 com:",
+         "options": [
+          "Martinho Lutero",
+          "Calvino",
+          "O Papa"
+         ],
+         "a": 0,
+         "audio": "293ef9bde527.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada corrente protestante ao seu país de origem.",
+         "pairs": [
+          [
+           "Luteranismo",
+           "Alemanha"
+          ],
+          [
+           "Calvinismo",
+           "Suíça"
+          ],
+          [
+           "Anglicanismo",
+           "Inglaterra"
+          ]
+         ],
+         "audio": "5ece541869b3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A resposta da Igreja Católica à Reforma chamou-se:",
+         "options": [
+          "Contra-Reforma",
+          "Renascimento",
+          "Mercantilismo"
+         ],
+         "a": 0,
+         "audio": "86ae635aeb8a.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O Renascimento, nascido em Itália, pôs o ser humano no centro: é o Humanismo. Nasceram a imprensa e a ciência moderna. Em 1517 Lutero abriu a Reforma Protestante, e a Igreja Católica respondeu com a Contra-Reforma.",
+        "exemplo": "Gutenberg inventou a imprensa; Copérnico disse que a Terra gira à volta do Sol. Luteranismo na Alemanha, Calvinismo na Suíça, Anglicanismo em Inglaterra.",
+        "lembra": "Renascimento é olhar para o homem; Reforma é dividir a Igreja.",
+        "audio": "977477f62627.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Mercantilismo e Absolutismo",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Para o mercantilismo, a riqueza de um país media-se:",
+         "options": [
+          "Pelo ouro e prata que acumulava",
+          "Pelo número de escolas",
+          "Pela extensão das florestas"
+         ],
+         "a": 0,
+         "audio": "7a66d4ad649d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No mercantilismo, as colónias serviam para:",
+         "options": [
+          "Fornecer matérias-primas e comprar os produtos da metrópole",
+          "Governar a metrópole",
+          "Nada"
+         ],
+         "a": 0,
+         "audio": "3b93de8c95d0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No absolutismo, o poder estava:",
+         "options": [
+          "Todo nas mãos do rei",
+          "Dividido por um parlamento eleito",
+          "Nas mãos do povo"
+         ],
+         "a": 0,
+         "audio": "bf2ab27b25fa.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os reis absolutos diziam que o seu poder vinha:",
+         "options": [
+          "De Deus",
+          "Das eleições",
+          "Dos operários"
+         ],
+         "a": 0,
+         "audio": "c58d931d3d7d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O Estado sou eu» é a frase atribuída a:",
+         "options": [
+          "Luís XIV, rei de França",
+          "Lutero",
+          "Vasco da Gama"
+         ],
+         "a": 0,
+         "audio": "c7010579ef73.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O mercantilismo media a riqueza pelo ouro e prata acumulados, e usava as colónias para fornecer matérias-primas e comprar produtos. O absolutismo pôs todo o poder no rei, que dizia recebê-lo de Deus.",
+        "exemplo": "Luís XIV, em França, é o exemplo do rei absoluto: «O Estado sou eu». O ouro que vinha das colónias enchia os cofres da Europa.",
+        "lembra": "Mercantilismo é a economia; absolutismo é o poder.",
+        "audio": "bc80dc2f4c14.mp3"
+       }
+      },
+      {
+       "id": "n5",
+       "titulo": "As revoluções burguesas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Revolução Inglesa do século XVII acabou por:",
+         "options": [
+          "Limitar o poder do rei e reforçar o Parlamento",
+          "Dar ao rei todo o poder",
+          "Abolir o Parlamento para sempre"
+         ],
+         "a": 0,
+         "audio": "ce519cdd874a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As treze colónias inglesas da América do Norte revoltaram-se, entre outras razões, porque:",
+         "options": [
+          "Pagavam impostos sem ter representantes",
+          "Queriam mais reis",
+          "Não tinham terra"
+         ],
+         "a": 0,
+         "audio": "03543db745bd.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em que ano foi aprovada a Constituição dos Estados Unidos da América?",
+         "a": "1787",
+         "audio": "d84732b0749d.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em que ano começou a Revolução Francesa, com a tomada da Bastilha?",
+         "a": "1789",
+         "audio": "3f68fe2d7fae.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma causa da Revolução Francesa foi:",
+         "options": [
+          "Os privilégios do clero e da nobreza e a fome do povo",
+          "A falta de reis",
+          "A descoberta da América"
+         ],
+         "a": 0,
+         "audio": "5f381a08ed7a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O lema da Revolução Francesa era:",
+         "options": [
+          "Liberdade, igualdade, fraternidade",
+          "Ordem e progresso",
+          "Deus, pátria e rei"
+         ],
+         "a": 0,
+         "audio": "e54b10d519f0.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As revoluções burguesas derrubaram o Antigo Regime. Em Inglaterra o Parlamento limitou o rei. A América fez-se independente e escreveu a Constituição de 1787. Em 1789 a Revolução Francesa proclamou liberdade, igualdade e fraternidade.",
+        "exemplo": "Em França o povo passava fome enquanto o clero e a nobreza não pagavam impostos. A 14 de Julho de 1789 tomou a Bastilha.",
+        "lembra": "1787 é a Constituição americana; 1789 é a Bastilha.",
+        "audio": "77c9f43f7be2.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "África e Moçambique na época das revoluções",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O mapa de África e a presença europeia",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "No fim do século XVIII, a presença portuguesa em Moçambique limitava-se, sobretudo:",
+         "options": [
+          "À costa e ao vale do Zambeze",
+          "A todo o território",
+          "Ao Niassa"
+         ],
+         "a": 0,
+         "audio": "2f59c8c8b402.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os prazos da Zambézia eram:",
+         "options": [
+          "Grandes terras concedidas pela Coroa a colonos, no vale do Zambeze",
+          "Datas de exames",
+          "Barcos de pesca"
+         ],
+         "a": 0,
+         "audio": "8f8d6dc55154.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No início do século XIX, a economia de Moçambique assentava sobretudo:",
+         "options": [
+          "No comércio de marfim e de escravos",
+          "Na indústria automóvel",
+          "No turismo"
+         ],
+         "a": 0,
+         "audio": "bded1d99db0a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No início do século XIX, a maior parte da África:",
+         "options": [
+          "Era governada por reinos e estados africanos",
+          "Já estava toda ocupada pelos europeus",
+          "Estava vazia"
+         ],
+         "a": 0,
+         "audio": "89e26415d66a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Revolução Industrial na Europa fez aumentar em África a procura de:",
+         "options": [
+          "Matérias-primas e mercados",
+          "Escolas",
+          "Reis"
+         ],
+         "a": 0,
+         "audio": "8eb96610c4bd.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Enquanto a Europa fazia revoluções, quase toda a África era governada por reinos africanos. Em Moçambique os portugueses estavam na costa e no vale do Zambeze, nos prazos, e a economia assentava no marfim e no tráfico de escravos.",
+        "exemplo": "Um prazo era uma grande terra concedida pela Coroa a um colono, que a explorava e cobrava aos habitantes. A indústria europeia passou a querer mais matérias-primas de África.",
+        "lembra": "No início do século XIX a ocupação europeia de África era ainda pequena.",
+        "audio": "fad883094e47.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "A Revolução Industrial e o movimento operário",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A Revolução Industrial",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Revolução Industrial começou em Inglaterra porque lá havia:",
+         "options": [
+          "Carvão, ferro, capitais e mercados coloniais",
+          "Muitas montanhas",
+          "Pouca gente"
+         ],
+         "a": 0,
+         "audio": "a4bb30277466.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada invenção ao que mudou.",
+         "pairs": [
+          [
+           "Máquina a vapor",
+           "Energia para as fábricas"
+          ],
+          [
+           "Locomotiva",
+           "Transporte por caminho-de-ferro"
+          ],
+          [
+           "Tear mecânico",
+           "Tecidos em grande quantidade"
+          ]
+         ],
+         "audio": "bb69c7438bab.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A fonte de energia da primeira fase da Revolução Industrial foi:",
+         "options": [
+          "O carvão",
+          "O petróleo",
+          "O sol"
+         ],
+         "a": 0,
+         "audio": "94781aad6240.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na segunda fase da Revolução Industrial entraram:",
+         "options": [
+          "A electricidade, o petróleo e o aço",
+          "A enxada e o arado",
+          "O carvão pela primeira vez"
+         ],
+         "a": 0,
+         "audio": "b91157802c53.mp3"
+        },
+        {
+         "t": "input",
+         "q": "James Watt aperfeiçoou a máquina a vapor no século dezoito. Escreve esse século em algarismos.",
+         "a": "18",
+         "audio": "cd3fecf52d3c.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Revolução Industrial começou em Inglaterra, no século XVIII, porque havia carvão, ferro, capitais e mercados. A máquina a vapor deu energia às fábricas e à locomotiva. A segunda fase trouxe a electricidade, o petróleo e o aço.",
+        "exemplo": "O tear mecânico fazia num dia o que um artesão fazia num mês. O comboio levou o carvão e os tecidos por todo o país.",
+        "lembra": "Primeira fase: carvão e vapor. Segunda: electricidade e petróleo.",
+        "audio": "d56fe077c140.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Consequências da Revolução Industrial",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Com a Revolução Industrial, a produção passou:",
+         "options": [
+          "Das oficinas artesanais para as fábricas",
+          "Das fábricas para as oficinas",
+          "Do campo para o mar"
+         ],
+         "a": 0,
+         "audio": "802634b60160.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As duas classes sociais que a industrialização fez crescer foram:",
+         "options": [
+          "A burguesia e o proletariado",
+          "O clero e a nobreza",
+          "Os reis e os escravos"
+         ],
+         "a": 0,
+         "audio": "fe13863a146f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma consequência social da Revolução Industrial foi:",
+         "options": [
+          "O crescimento rápido das cidades",
+          "O regresso ao campo",
+          "O fim das cidades"
+         ],
+         "a": 0,
+         "audio": "26e81e404699.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma consequência ambiental das fábricas foi:",
+         "options": [
+          "A poluição do ar e dos rios",
+          "O ar mais limpo",
+          "Mais florestas"
+         ],
+         "a": 0,
+         "audio": "31a9cabe40f6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A produção saiu das oficinas para as fábricas. Cresceram duas classes: a burguesia, dona das fábricas, e o proletariado, que vendia o seu trabalho. As cidades cresceram depressa, e com elas a poluição e os bairros pobres.",
+        "exemplo": "Manchester passou de vila a cidade de fábricas em poucas décadas, com o ar negro do fumo do carvão.",
+        "lembra": "Fábrica, cidade, burguesia e proletariado nascem juntos.",
+        "audio": "979f974ef845.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "O movimento operário",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Nas primeiras fábricas, os operários trabalhavam:",
+         "options": [
+          "Catorze horas ou mais, por salários baixos",
+          "Seis horas, com férias",
+          "Só quando queriam"
+         ],
+         "a": 0,
+         "audio": "44860e497f7f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As mulheres e as crianças eram contratadas nas fábricas porque:",
+         "options": [
+          "Recebiam ainda menos do que os homens",
+          "Trabalhavam menos horas",
+          "Eram as donas das fábricas"
+         ],
+         "a": 0,
+         "audio": "30abcfd1c7a6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um sindicato é:",
+         "options": [
+          "Uma organização de trabalhadores para defender os seus direitos",
+          "Uma fábrica",
+          "Um partido do rei"
+         ],
+         "a": 0,
+         "audio": "752e9989f30f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os primeiros sindicatos, os trade-unions, nasceram:",
+         "options": [
+          "Em Inglaterra",
+          "Em Moçambique",
+          "No Brasil"
+         ],
+         "a": 0,
+         "audio": "fe646ca6a7a0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os partidos operários europeus lutavam por:",
+         "options": [
+          "Melhores salários, menos horas e direito de voto",
+          "Mais horas de trabalho",
+          "O regresso do absolutismo"
+         ],
+         "a": 0,
+         "audio": "c20ab194dc23.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os operários trabalhavam catorze horas por salários baixos, e mulheres e crianças recebiam ainda menos. Para se defenderem criaram sindicatos — os trade-unions — e partidos operários, que exigiam menos horas, mais salário e o voto.",
+        "exemplo": "Uma greve parava a fábrica até o patrão negociar. Foi assim que se conquistou o dia de oito horas.",
+        "lembra": "Sozinho o operário não podia nada; junto, podia parar a fábrica.",
+        "audio": "96a29f3a7b8d.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Do capitalismo industrial ao imperialismo",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Do capitalismo de concorrência aos monopólios",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um monopólio existe quando:",
+         "options": [
+          "Uma empresa, ou poucas, domina todo um mercado",
+          "Há muitas empresas pequenas a competir",
+          "O Estado proíbe o comércio"
+         ],
+         "a": 0,
+         "audio": "bbf6069ef1ff.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada forma de concentração ao seu exemplo.",
+         "pairs": [
+          [
+           "Horizontal",
+           "Várias fábricas do mesmo produto juntam-se"
+          ],
+          [
+           "Vertical",
+           "A mina, a fundição e a fábrica no mesmo dono"
+          ]
+         ],
+         "audio": "e5b9d5d5b84d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na passagem ao capitalismo monopolista, os bancos:",
+         "options": [
+          "Ganharam poder sobre a indústria",
+          "Desapareceram",
+          "Passaram a ser do Estado"
+         ],
+         "a": 0,
+         "audio": "93837f7c6682.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O imperialismo é a fase em que os países industrializados:",
+         "options": [
+          "Disputam colónias por matérias-primas, mercados e prestígio",
+          "Fecham as fronteiras",
+          "Devolvem as colónias"
+         ],
+         "a": 0,
+         "audio": "110d5ed72b9d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Da concorrência entre muitas empresas passou-se aos monopólios: poucas empresas a dominar um mercado, por concentração horizontal ou vertical, com os bancos a mandar na indústria. É o capitalismo monopolista, que leva ao imperialismo.",
+        "exemplo": "Horizontal: várias fábricas de aço juntam-se numa. Vertical: o mesmo dono tem a mina, a fundição e a fábrica.",
+        "lembra": "Monopólio é um mercado nas mãos de poucos.",
+        "audio": "c062b94e9522.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "A partilha de África e Moçambique",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Conferência de Berlim, de 1884 a 1885, serviu para:",
+         "options": [
+          "As potências europeias repartirem a África entre si",
+          "Dar a independência à África",
+          "Acabar com o comércio"
+         ],
+         "a": 0,
+         "audio": "b40cd7f5d727.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pelo princípio da ocupação efectiva, uma potência só tinha direito a um território se:",
+         "options": [
+          "O ocupasse e administrasse de facto",
+          "O desenhasse num mapa",
+          "O visitasse uma vez"
+         ],
+         "a": 0,
+         "audio": "aebfa152b0b4.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada potência às suas colónias em África.",
+         "pairs": [
+          [
+           "Portugal",
+           "Moçambique e Angola"
+          ],
+          [
+           "Inglaterra",
+           "Nigéria e África do Sul"
+          ],
+          [
+           "França",
+           "Argélia e Senegal"
+          ]
+         ],
+         "audio": "aec210934104.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O Ultimato inglês de 1890 obrigou Portugal a:",
+         "options": [
+          "Desistir das terras entre Angola e Moçambique",
+          "Deixar Moçambique",
+          "Comprar a África do Sul"
+         ],
+         "a": 0,
+         "audio": "a2559c969757.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A Companhia de Moçambique e a Companhia do Niassa eram:",
+         "options": [
+          "Companhias majestáticas que exploravam e administravam regiões inteiras",
+          "Equipas de futebol",
+          "Escolas"
+         ],
+         "a": 0,
+         "audio": "56fe24cc7813.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na Conferência de Berlim, de 1884 a 1885, as potências europeias repartiram a África, com a regra da ocupação efectiva. Portugal cedeu ao Ultimato inglês de 1890 e entregou regiões de Moçambique a companhias majestáticas.",
+        "exemplo": "A Companhia do Niassa administrou o norte de Moçambique como se fosse dona dele, a cobrar impostos e a obrigar a trabalhar.",
+        "lembra": "Berlim repartiu; a ocupação efectiva obrigou a conquistar.",
+        "audio": "0cdba321fa24.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A resistência dos povos africanos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Os zulus, na África do Sul, resistiram:",
+         "options": [
+          "Aos ingleses, e venceram-nos em Isandlwana, em 1879",
+          "Aos portugueses, no Niassa",
+          "Aos franceses, no Senegal"
+         ],
+         "a": 0,
+         "audio": "2271eb50137b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na Namíbia, os hereros e os namas revoltaram-se contra:",
+         "options": [
+          "Os alemães",
+          "Os portugueses",
+          "Os belgas"
+         ],
+         "a": 0,
+         "audio": "940404dd7f0b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Ngungunhane, imperador de Gaza, foi preso pelos portugueses em:",
+         "options": [
+          "Chaimite, em 1895",
+          "Lichinga, em 1975",
+          "Berlim, em 1884"
+         ],
+         "a": 0,
+         "audio": "20383abb29da.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Em que ano os portugueses prenderam Ngungunhane em Chaimite?",
+         "a": "1895",
+         "audio": "6ded21ccfa3b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A revolta do Barué, em 1917, foi:",
+         "options": [
+          "Uma grande resistência armada contra a ocupação portuguesa no centro de Moçambique",
+          "Uma festa tradicional",
+          "Uma eleição"
+         ],
+         "a": 0,
+         "audio": "321d15673195.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A resistência dos povos africanos mostra que a ocupação colonial:",
+         "options": [
+          "Foi imposta pela força e contra a vontade dos povos",
+          "Foi aceite sem luta",
+          "Nunca aconteceu"
+         ],
+         "a": 0,
+         "audio": "48d9f3fcb751.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os povos africanos resistiram à ocupação: os zulus venceram os ingleses em Isandlwana, os hereros e namas lutaram contra os alemães, e em Moçambique Ngungunhane foi preso em Chaimite, em 1895, e o Barué revoltou-se em 1917.",
+        "exemplo": "Ngungunhane, imperador de Gaza, resistiu anos aos portugueses. Depois de preso foi levado para os Açores, onde morreu.",
+        "lembra": "A ocupação colonial foi imposta pela força — e combatida.",
+        "audio": "2395d1cbdd54.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }
