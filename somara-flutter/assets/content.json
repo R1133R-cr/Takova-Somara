@@ -36951,6 +36951,1177 @@
      ]
     }
    ]
+  },
+  {
+   "id": "por-9c",
+   "disciplina": "Português",
+   "classe": "9ª classe",
+   "tag": "POR",
+   "fonte": "Programa de Ensino da Disciplina de Português — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, 9ª classe, pp. 55-74. As quinze unidades do programa estão agrupadas nos cinco tipos de texto que ele repete em cada trimestre; os conteúdos são os dele e os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 9ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Textos normativos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A Declaração dos Direitos Humanos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "A Declaração Universal dos Direitos Humanos é um texto:",
+         "options": [
+          "Normativo: diz o que se deve e o que não se pode fazer",
+          "Publicitário",
+          "Poético"
+         ],
+         "a": 0,
+         "audio": "19f21ac478b7.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada direito ao seu tipo.",
+         "pairs": [
+          [
+           "Direito à vida e à liberdade",
+           "Pessoal"
+          ],
+          [
+           "Direito a um julgamento justo",
+           "Judiciário"
+          ],
+          [
+           "Direito à educação e ao trabalho",
+           "Social"
+          ]
+         ],
+         "audio": "1555bf189bf5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O objectivo principal da Declaração é:",
+         "options": [
+          "Garantir a todas as pessoas os mesmos direitos, sem distinção",
+          "Dar mais direitos a quem tem dinheiro",
+          "Organizar o trânsito"
+         ],
+         "a": 0,
+         "audio": "00e952afa05a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A linguagem de um texto normativo é:",
+         "options": [
+          "Clara, objectiva e sem ambiguidades",
+          "Cheia de rimas",
+          "Familiar e brincalhona"
+         ],
+         "a": 0,
+         "audio": "82cf6b13e505.mp3"
+        },
+        {
+         "t": "input",
+         "q": "A Declaração Universal dos Direitos Humanos foi adoptada pelas Nações Unidas em que ano?",
+         "a": "1948",
+         "audio": "fa0355b0a60d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Declaração dos Direitos Humanos é um texto normativo: diz, em linguagem clara, os direitos de todas as pessoas, sem distinção. Há direitos pessoais, como a liberdade; judiciários, como o julgamento justo; sociais, como a educação.",
+        "exemplo": "«Todos os seres humanos nascem livres e iguais em dignidade e em direitos» é o primeiro artigo. Não conta uma história nem vende nada: manda e garante.",
+        "lembra": "Normativo: diz o que se deve e o que se pode.",
+        "audio": "b0ffb771086d.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Os verbos fazer, dar e poder",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Ontem eu … os trabalhos de casa.» O verbo fazer fica:",
+         "options": [
+          "fiz",
+          "fazi",
+          "fazia"
+         ],
+         "a": 0,
+         "audio": "e40159267264.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Amanhã eles … o sangue no hospital.» O verbo dar fica:",
+         "options": [
+          "darão",
+          "dão",
+          "deram"
+         ],
+         "a": 0,
+         "audio": "b05a9aab6dc8.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Se tu …, vem à reunião.» O verbo poder fica:",
+         "options": [
+          "puderes",
+          "poderes",
+          "podes"
+         ],
+         "a": 0,
+         "audio": "a9d8dc363a34.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Nós … tudo o que podíamos.» O verbo fazer, no pretérito perfeito, fica:",
+         "options": [
+          "fizemos",
+          "fazemos",
+          "fizémos"
+         ],
+         "a": 0,
+         "audio": "0dc145b60915.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Fazer, dar e poder são verbos:",
+         "options": [
+          "Irregulares: mudam o radical ao conjugar",
+          "Regulares da primeira conjugação",
+          "Defectivos"
+         ],
+         "a": 0,
+         "audio": "c29e7dd57729.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Fazer, dar e poder são verbos irregulares: mudam o radical ao conjugar. Fiz, fizeste, fez; dei, deste, deu; pude, pudeste, pôde. No futuro: farei, darei, poderei. No conjuntivo: faça, dê, possa; se fizer, se der, se puder.",
+        "exemplo": "«Ontem fiz os trabalhos.» «Amanhã eles darão sangue.» «Se tu puderes, vem.» «Nós fizemos tudo o que podíamos.»",
+        "lembra": "Fiz, dei, pude: o pretérito muda o radical.",
+        "audio": "131ac30fa534.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Pontuação, sinónimos e antónimos",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada sinal de pontuação ao seu uso.",
+         "pairs": [
+          [
+           "Vírgula",
+           "Separa elementos de uma enumeração"
+          ],
+          [
+           "Dois pontos",
+           "Anuncia uma explicação ou uma fala"
+          ],
+          [
+           "Ponto e vírgula",
+           "Separa partes longas de uma frase"
+          ],
+          [
+           "Travessão",
+           "Introduz a fala de uma personagem"
+          ]
+         ],
+         "audio": "3c9b611bbc7c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas frases está bem pontuada?",
+         "options": [
+          "Todos têm direitos: à vida, à liberdade e à educação.",
+          "Todos têm direitos à vida: à liberdade, e à educação.",
+          "Todos, têm direitos à vida à liberdade e à educação."
+         ],
+         "a": 0,
+         "audio": "ee47b48767e1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um sinónimo de «liberdade» é:",
+         "options": [
+          "Autonomia",
+          "Prisão",
+          "Dever"
+         ],
+         "a": 0,
+         "audio": "bbfaad060357.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O antónimo de «justo» é:",
+         "options": [
+          "Injusto",
+          "Correcto",
+          "Legal"
+         ],
+         "a": 0,
+         "audio": "2876442dcaed.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra ao seu antónimo.",
+         "pairs": [
+          [
+           "Igualdade",
+           "Desigualdade"
+          ],
+          [
+           "Respeito",
+           "Desprezo"
+          ],
+          [
+           "Paz",
+           "Guerra"
+          ]
+         ],
+         "audio": "b0bcd3a140d8.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A vírgula separa enumerações e orações; os dois pontos anunciam uma explicação ou uma fala; o ponto e vírgula separa partes longas; o travessão abre a fala. Sinónimos dizem o mesmo por outra palavra; antónimos dizem o contrário.",
+        "exemplo": "«Todos têm direitos: à vida, à liberdade e à educação.» Liberdade e autonomia são sinónimos; justo e injusto, igualdade e desigualdade, são antónimos.",
+        "lembra": "Dois pontos anunciam; a vírgula separa.",
+        "audio": "76b434653e28.mp3"
+       }
+      },
+      {
+       "id": "n4",
+       "titulo": "Os Direitos da Criança e os adjectivos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Segundo a Declaração dos Direitos da Criança, uma criança de dez anos:",
+         "options": [
+          "Tem direito a estudar e a brincar, e não a trabalhar",
+          "Deve trabalhar para ajudar em casa",
+          "Só tem direitos depois dos dezoito"
+         ],
+         "a": 0,
+         "audio": "8320d868929b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada adjectivo ao seu tipo.",
+         "pairs": [
+          [
+           "Alto, alta",
+           "Biforme: tem duas formas"
+          ],
+          [
+           "Feliz",
+           "Uniforme: uma forma só"
+          ]
+         ],
+         "audio": "c0b9bb52bcc6.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O feminino de «português» é:",
+         "options": [
+          "portuguesa",
+          "portuguêsa",
+          "portugueza"
+         ],
+         "a": 0,
+         "audio": "f95f4bfb38bc.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O feminino de «europeu» é:",
+         "options": [
+          "europeia",
+          "europea",
+          "europeua"
+         ],
+         "a": 0,
+         "audio": "6ba1ad40a823.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em «uma história sem pés nem cabeça», «sem pés nem cabeça» é:",
+         "options": [
+          "Uma locução adjectiva",
+          "Um advérbio",
+          "Um verbo"
+         ],
+         "a": 0,
+         "audio": "46b7fbc6ccb2.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A Declaração dos Direitos da Criança garante a quem tem menos de dezoito anos escola, saúde, protecção e brincadeira, e proíbe o trabalho infantil. Os adjectivos biformes têm duas formas, alto e alta; os uniformes uma só, feliz.",
+        "exemplo": "Português dá portuguesa, europeu dá europeia, espanhol dá espanhola, comilão dá comilona. «Sem pés nem cabeça» e «às direitas» são locuções adjectivas.",
+        "lembra": "Biforme muda com o género; uniforme não.",
+        "audio": "6aec31c0acc9.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Textos administrativos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A carta de apresentação",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Uma carta de apresentação serve para:",
+         "options": [
+          "Apresentar-se a uma empresa ou instituição e pedir uma oportunidade",
+          "Contar as férias a um amigo",
+          "Vender um produto"
+         ],
+         "a": 0,
+         "audio": "0727852626aa.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada parte da carta de apresentação à sua ordem.",
+         "pairs": [
+          [
+           "Local, data e destinatário",
+           "Primeiro"
+          ],
+          [
+           "Quem sou e o que peço",
+           "Depois"
+          ],
+          [
+           "Despedida e assinatura",
+           "Por fim"
+          ]
+         ],
+         "audio": "80a548958a55.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A um director que não se conhece escreve-se:",
+         "options": [
+          "Excelentíssimo Senhor Director",
+          "Olá, chefe",
+          "Querido amigo"
+         ],
+         "a": 0,
+         "audio": "69b9dd5abdaf.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A linguagem de uma carta de apresentação é:",
+         "options": [
+          "Formal e cuidada",
+          "Familiar, com calão",
+          "Poética"
+         ],
+         "a": 0,
+         "audio": "d2678bc140e1.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Pagar impostos é importante porque:",
+         "options": [
+          "É com eles que o Estado paga escolas, hospitais e estradas",
+          "Faz as pessoas mais ricas",
+          "É só um costume antigo"
+         ],
+         "a": 0,
+         "audio": "2523923ad1d6.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A carta de apresentação é um texto administrativo: apresenta-se a uma empresa ou instituição e pede uma oportunidade. Tem local e data, destinatário, corpo — quem sou, o que sei, o que peço — despedida e assinatura, em linguagem formal.",
+        "exemplo": "«Excelentíssimo Senhor Director» para quem não se conhece; «Com os melhores cumprimentos» a fechar. Os impostos que se pagam são as escolas e os hospitais que se têm.",
+        "lembra": "Formal: tratamento certo, sem calão.",
+        "audio": "032af348e3a7.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O Curriculum Vitae e as palavras compostas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um Curriculum Vitae é:",
+         "options": [
+          "O resumo da vida escolar e profissional de uma pessoa",
+          "Uma carta de amor",
+          "Um relato de viagem"
+         ],
+         "a": 0,
+         "audio": "409841b405cd.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada dado ao campo do Curriculum Vitae onde entra.",
+         "pairs": [
+          [
+           "Nome, data de nascimento, contacto",
+           "Dados pessoais"
+          ],
+          [
+           "9ª classe na Escola Secundária de Lichinga",
+           "Formação"
+          ],
+          [
+           "Ajudante numa oficina, dois anos",
+           "Experiência"
+          ]
+         ],
+         "audio": "b2fd35532dc8.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada palavra composta ao processo que a formou.",
+         "pairs": [
+          [
+           "Guarda-chuva",
+           "Justaposição"
+          ],
+          [
+           "Aguardente",
+           "Aglutinação"
+          ],
+          [
+           "Fidalgo",
+           "Aglutinação"
+          ]
+         ],
+         "audio": "9509ca0b104e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na justaposição, as palavras juntam-se:",
+         "options": [
+          "Sem perder letras, em geral com hífen",
+          "Perdendo letras e fundindo-se",
+          "Trocando a ordem"
+         ],
+         "a": 0,
+         "audio": "997dba54fff0.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Praticar actividade física regularmente:",
+         "options": [
+          "Fortalece o corpo e previne doenças",
+          "Só serve para atletas",
+          "Faz mal ao coração"
+         ],
+         "a": 0,
+         "audio": "fd9fb2b99f83.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O Curriculum Vitae resume a vida escolar e profissional: dados pessoais, formação, experiência, por ordem e sem enfeites. As palavras compostas formam-se por justaposição, sem perder letras, ou por aglutinação, fundindo-se.",
+        "exemplo": "Guarda-chuva e couve-flor são justaposição; aguardente (água ardente) e fidalgo (filho de algo) são aglutinação. Desporto no Curriculum também conta.",
+        "lembra": "Justaposição junta; aglutinação funde.",
+        "audio": "edfd695fdb01.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "O requerimento e a concordância verbal",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um requerimento é um texto em que:",
+         "options": [
+          "Se pede algo a uma entidade, por escrito e com formalidade",
+          "Se conta uma história",
+          "Se anuncia um produto"
+         ],
+         "a": 0,
+         "audio": "ef5c12886f35.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um camponês que quer um terreno para cultivar escreve um requerimento:",
+         "options": [
+          "Ao Administrador do Distrito, a pedir a concessão da terra",
+          "Ao vizinho",
+          "Ao jornal"
+         ],
+         "a": 0,
+         "audio": "1b797e4f010f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas frases tem a concordância certa?",
+         "options": [
+          "Os alunos pedem um terreno para a horta.",
+          "Os alunos pede um terreno para a horta.",
+          "Os alunos pedes um terreno para a horta."
+         ],
+         "a": 0,
+         "audio": "88ca21a67500.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eu e tu … ao campo amanhã.» O verbo ir fica:",
+         "options": [
+          "vamos",
+          "vão",
+          "vais"
+         ],
+         "a": 0,
+         "audio": "f69093d083a9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O requerimento termina com:",
+         "options": [
+          "«Pede deferimento», o local, a data e a assinatura",
+          "«Beijinhos»",
+          "Um poema"
+         ],
+         "a": 0,
+         "audio": "514bc9b2738d.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O requerimento pede algo por escrito a uma entidade: destinatário, identificação de quem pede, o pedido e os seus motivos, «pede deferimento», local, data e assinatura. O verbo concorda com o sujeito em pessoa e número.",
+        "exemplo": "Um camponês pede ao Administrador do Distrito a concessão de um terreno. «Os alunos pedem», «eu e tu vamos»: o verbo segue o sujeito.",
+        "lembra": "Sujeito no plural, verbo no plural.",
+        "audio": "2a1ab03b32f7.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Textos jornalísticos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A entrevista",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Antes de uma entrevista, o entrevistador prepara:",
+         "options": [
+          "Um guião com as perguntas",
+          "As respostas do entrevistado",
+          "Um poema"
+         ],
+         "a": 0,
+         "audio": "22e920dc8e60.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A enfermeira disse: — A malária previne-se com rede.» Este discurso é:",
+         "options": [
+          "Directo",
+          "Indirecto",
+          "Poético"
+         ],
+         "a": 0,
+         "audio": "aa9e6ab513aa.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Em discurso indirecto, «A enfermeira disse: — Eu durmo com rede» fica:",
+         "options": [
+          "A enfermeira disse que dormia com rede.",
+          "A enfermeira disse: eu durmo com rede.",
+          "A enfermeira dorme com rede, disse."
+         ],
+         "a": 0,
+         "audio": "a3aa5e899731.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O médico está a explicar os sintomas.» A forma «está a explicar» é:",
+         "options": [
+          "Uma conjugação perifrástica: verbo auxiliar mais infinitivo",
+          "Um tempo simples",
+          "Um adjectivo"
+         ],
+         "a": 0,
+         "audio": "cf8383f256d2.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada perifrástica ao que ela exprime.",
+         "pairs": [
+          [
+           "Está a estudar",
+           "Acção a decorrer"
+          ],
+          [
+           "Começou a estudar",
+           "Início da acção"
+          ],
+          [
+           "Acabou de estudar",
+           "Fim da acção"
+          ]
+         ],
+         "audio": "c439d4d9c3c9.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "A entrevista faz-se com um guião de perguntas e escreve-se em discurso directo, com travessão, ou indirecto, com «que» e o verbo a recuar no tempo. A conjugação perifrástica junta um auxiliar ao infinitivo: estar a, começar a, acabar de.",
+        "exemplo": "«A enfermeira disse: — Eu durmo com rede» vira «a enfermeira disse que dormia com rede». «Está a explicar» decorre; «começou a» inicia; «acabou de» terminou.",
+        "lembra": "Indirecto: «que», e o verbo recua.",
+        "audio": "5859b4bd321a.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O texto publicitário",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Num anúncio, a imagem e as cores são a parte:",
+         "options": [
+          "Não verbal",
+          "Verbal",
+          "Gramatical"
+         ],
+         "a": 0,
+         "audio": "519e810bd961.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Sabão Sol: brilho que dura!» é um:",
+         "options": [
+          "Slogan",
+          "Requerimento",
+          "Relato"
+         ],
+         "a": 0,
+         "audio": "8c698eb3a7ad.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada frase à preposição que lhe falta.",
+         "pairs": [
+          [
+           "Vou … Lichinga de autocarro.",
+           "até"
+          ],
+          [
+           "Trabalha … a manhã.",
+           "desde"
+          ],
+          [
+           "Ficou … casa.",
+           "sem"
+          ],
+          [
+           "Lutamos … a malária.",
+           "contra"
+          ]
+         ],
+         "audio": "c251f719e415.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Qual destas palavras está bem acentuada?",
+         "options": [
+          "Saúde",
+          "Saude",
+          "Sáude"
+         ],
+         "a": 0,
+         "audio": "4203dbfc3f9d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Eles … razão.» A forma do verbo ter, na terceira pessoa do plural, é:",
+         "options": [
+          "têm",
+          "tem",
+          "tèm"
+         ],
+         "a": 0,
+         "audio": "3af0af457bbf.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O texto publicitário tem parte verbal, o slogan e o texto, e parte não verbal, a imagem e as cores. As preposições até, com, contra, desde, entre e sem ligam palavras. Acentuam-se os monossílabos tónicos, os hiatos e o «têm» do plural.",
+        "exemplo": "«Sabão Sol: brilho que dura!» é um slogan. «Vou até Lichinga», «trabalha desde a manhã», «ficou sem casa». Saúde leva acento no hiato; eles têm, ele tem.",
+        "lembra": "Ele tem, eles têm: o acento marca o plural.",
+        "audio": "2f6823029bf3.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Orações subordinadas",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "«Pergunto se vens à entrevista.» A oração «se vens à entrevista» é:",
+         "options": [
+          "Subordinada interrogativa indirecta",
+          "Subordinada concessiva",
+          "Coordenada"
+         ],
+         "a": 0,
+         "audio": "9189046161d9.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Embora chovesse, fomos à entrevista.» A oração «embora chovesse» é:",
+         "options": [
+          "Concessiva",
+          "Consecutiva",
+          "Relativa"
+         ],
+         "a": 0,
+         "audio": "80d980ab9e5d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Falou tão alto que todos ouviram.» A oração «que todos ouviram» é:",
+         "options": [
+          "Consecutiva",
+          "Concessiva",
+          "Integrante"
+         ],
+         "a": 0,
+         "audio": "577650232c72.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada conjunção ao tipo de oração que introduz.",
+         "pairs": [
+          [
+           "Embora, apesar de",
+           "Concessiva"
+          ],
+          [
+           "De modo que, tanto que",
+           "Consecutiva"
+          ],
+          [
+           "Se, quando (numa pergunta)",
+           "Interrogativa indirecta"
+          ]
+         ],
+         "audio": "e8db2c3eee0b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Dormir com rede mosquiteira e tirar as águas paradas previnem:",
+         "options": [
+          "A malária",
+          "A diabetes",
+          "A gripe"
+         ],
+         "a": 0,
+         "audio": "7d988f25f000.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As orações subordinadas dependem de outra. A interrogativa indirecta faz a pergunta por dentro: «pergunto se vens». A concessiva admite um obstáculo: «embora chovesse». A consecutiva diz a consequência: «tão alto que todos ouviram».",
+        "exemplo": "Embora e apesar de abrem concessivas; de modo que e tanto que abrem consecutivas; se e quando, numa pergunta indirecta, abrem interrogativas.",
+        "lembra": "Embora concede; tanto que resulta.",
+        "audio": "10f134156008.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Textos multiuso",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O guia turístico e as orações integrantes",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um guia turístico serve para:",
+         "options": [
+          "Dar a conhecer os lugares de interesse de uma região",
+          "Pedir um terreno",
+          "Contar um romance"
+         ],
+         "a": 0,
+         "audio": "0b214cd3a187.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada lugar de interesse do Niassa ao que ele é.",
+         "pairs": [
+          [
+           "Lago Niassa",
+           "Praias de água doce e pesca"
+          ],
+          [
+           "Reserva do Niassa",
+           "Elefantes e leões"
+          ],
+          [
+           "Monte Massangulo",
+           "Montanha e paisagem"
+          ]
+         ],
+         "audio": "052443926b34.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Sabemos que o lago é lindo.» A oração «que o lago é lindo» é:",
+         "options": [
+          "Subordinada integrante",
+          "Subordinada relativa",
+          "Coordenada"
+         ],
+         "a": 0,
+         "audio": "2fac0086496b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A oração integrante completa o sentido de:",
+         "options": [
+          "Um verbo como saber, dizer, pensar",
+          "Um nome",
+          "Um adjectivo apenas"
+         ],
+         "a": 0,
+         "audio": "c550b5c5cdcb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A linguagem de um guia turístico é:",
+         "options": [
+          "Informativa e atraente",
+          "Só de ordens",
+          "Cheia de calão"
+         ],
+         "a": 0,
+         "audio": "30e84ad3ee66.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O guia turístico dá a conhecer os lugares de uma região em linguagem informativa e atraente: onde ficam, o que têm, como se chega. A oração subordinada integrante completa um verbo como saber, dizer ou pensar: «sabemos que o lago é lindo».",
+        "exemplo": "O Niassa tem o lago, com praias e pesca; a Reserva do Niassa, com elefantes; o monte Massangulo. «Dizem que a água é morna»: «que a água é morna» é integrante.",
+        "lembra": "Integrante: completa o que se sabe, se diz, se pensa.",
+        "audio": "ede6ea30e979.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O relato de viagem e os pronomes relativos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um relato de viagem conta:",
+         "options": [
+          "Uma viagem real ou imaginada, por ordem, com o que se viu e sentiu",
+          "As regras de um jogo",
+          "Um anúncio"
+         ],
+         "a": 0,
+         "audio": "16b57bf6e036.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A aldeia onde nasci fica perto do lago.» O pronome relativo é:",
+         "options": [
+          "onde",
+          "aldeia",
+          "perto"
+         ],
+         "a": 0,
+         "audio": "ee695d66d8ae.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«O guia que nos levou era de Lichinga.» A oração «que nos levou» é:",
+         "options": [
+          "Subordinada relativa",
+          "Subordinada integrante",
+          "Coordenada"
+         ],
+         "a": 0,
+         "audio": "5ff5f19d3346.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada frase ao pronome relativo que lhe falta.",
+         "pairs": [
+          [
+           "O barco … apanhámos era pequeno.",
+           "que"
+          ],
+          [
+           "A senhora … falámos vendia peixe.",
+           "com quem"
+          ],
+          [
+           "A ilha … chegámos chama-se Likoma.",
+           "aonde"
+          ]
+         ],
+         "audio": "b92f787eb67d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Preservar o património cultural é:",
+         "options": [
+          "Guardar as danças, as línguas e os monumentos para quem vem depois",
+          "Vender os objectos antigos",
+          "Esquecer as tradições"
+         ],
+         "a": 0,
+         "audio": "96b5f8b4121e.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O relato de viagem conta uma viagem, real ou imaginada, por ordem, com o que se viu e se sentiu. Os pronomes relativos — que, quem, onde, o qual — ligam uma oração relativa ao nome que ela explica.",
+        "exemplo": "«O guia que nos levou era de Lichinga.» «A aldeia onde nasci fica perto do lago.» «A senhora com quem falámos vendia peixe.» Guardar as danças e as línguas é preservar o património.",
+        "lembra": "Relativo aponta para trás: para o nome que explica.",
+        "audio": "ebd6f428db86.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Textos literários",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O romance",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O romance distingue-se do conto por ser:",
+         "options": [
+          "Mais longo, com mais personagens e mais acções",
+          "Sempre em verso",
+          "Sempre verdadeiro"
+         ],
+         "a": 0,
+         "audio": "7f1c0952acf4.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada momento do texto narrativo ao que ele é.",
+         "pairs": [
+          [
+           "Narração",
+           "A acção avança"
+          ],
+          [
+           "Descrição",
+           "A acção pára para mostrar"
+          ]
+         ],
+         "audio": "4c2ddf1f114a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Meledina, a rapariga da Zambézia, chegou a Lourenço Marques.» «A rapariga da Zambézia» é:",
+         "options": [
+          "Aposto",
+          "Atributo",
+          "Sujeito"
+         ],
+         "a": 0,
+         "audio": "668268259d08.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«A cidade era enorme.» «Enorme» é:",
+         "options": [
+          "Atributo",
+          "Aposto",
+          "Complemento directo"
+         ],
+         "a": 0,
+         "audio": "2e2a93374ee7.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada obra ao seu autor.",
+         "pairs": [
+          [
+           "Da Chegada de Meledina a Lourenço Marques",
+           "Aldino Muianga"
+          ],
+          [
+           "A Personalidade de Pedro Trago",
+           "Germano Almeida"
+          ]
+         ],
+         "audio": "190d872a0492.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O romance é a narrativa longa: mais personagens, mais acções, mais tempo que o conto ou a novela. Na narração a acção avança; na descrição pára para mostrar. O atributo qualifica por ser ou estar; o aposto explica um nome ao lado dele.",
+        "exemplo": "«Meledina, a rapariga da Zambézia, chegou»: «a rapariga da Zambézia» é aposto. «A cidade era enorme»: «enorme» é atributo. Aldino Muianga e Germano Almeida lêem-se nesta classe.",
+        "lembra": "Aposto explica; atributo qualifica.",
+        "audio": "8e885bdec2fe.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "O poema",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada elemento do poema ao que ele é.",
+         "pairs": [
+          [
+           "Verso",
+           "Cada linha"
+          ],
+          [
+           "Estrofe",
+           "Um grupo de versos"
+          ],
+          [
+           "Rima",
+           "Sons iguais no fim dos versos"
+          ]
+         ],
+         "audio": "7e094088f8de.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada recurso estilístico ao seu exemplo.",
+         "pairs": [
+          [
+           "Hipérbole",
+           "Chorei um rio de lágrimas"
+          ],
+          [
+           "Anáfora",
+           "Terra minha, terra livre, terra mãe"
+          ],
+          [
+           "Ironia",
+           "Que bela chuva, no dia da festa"
+          ]
+         ],
+         "audio": "cdfd05aef705.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quem escreveu o poema «Se me queres conhecer»?",
+         "options": [
+          "Noémia de Sousa",
+          "Luís de Camões",
+          "Rui Knopfli"
+         ],
+         "a": 0,
+         "audio": "ca59348f4f80.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Amor é fogo que arde sem se ver» é um verso de:",
+         "options": [
+          "Luís Vaz de Camões",
+          "José Craveirinha",
+          "Orlando Mendes"
+         ],
+         "a": 0,
+         "audio": "202b44071f1a.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada advérbio ao seu tipo.",
+         "pairs": [
+          [
+           "Sim, certamente",
+           "Afirmação"
+          ],
+          [
+           "Muito, bastante",
+           "Intensidade"
+          ],
+          [
+           "Só, apenas",
+           "Exclusão"
+          ]
+         ],
+         "audio": "551e83b3ec27.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O poema faz-se de versos, em estrofes, muitas vezes com rima. Os recursos estilísticos dão-lhe força: a hipérbole exagera, a anáfora repete no início dos versos, a ironia diz o contrário. Os advérbios afirmam, intensificam ou excluem.",
+        "exemplo": "Noémia de Sousa, «Se me queres conhecer»; Craveirinha, «Um homem nunca chora»; Camões, «Amor é fogo que arde sem se ver». «Certamente» afirma, «muito» intensifica, «só» exclui.",
+        "lembra": "Verso, estrofe, rima: a forma do poema.",
+        "audio": "005b72469e0e.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "O texto dramático",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um texto dramático é escrito para:",
+         "options": [
+          "Ser representado em palco",
+          "Ser cantado",
+          "Ser lido em silêncio apenas"
+         ],
+         "a": 0,
+         "audio": "e16c92d7cfb4.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A tragédia é o texto dramático que:",
+         "options": [
+          "Acaba mal, com a desgraça da personagem",
+          "Faz rir do princípio ao fim",
+          "Não tem personagens"
+         ],
+         "a": 0,
+         "audio": "fecad0bc7459.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "«Ai! Que dor!» A palavra «ai» é:",
+         "options": [
+          "Uma interjeição",
+          "Um verbo",
+          "Um pronome"
+         ],
+         "a": 0,
+         "audio": "fc6f81aca853.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "No texto dramático, as indicações entre parêntesis sobre gestos e cenário chamam-se:",
+         "options": [
+          "Didascálias",
+          "Estrofes",
+          "Apostos"
+         ],
+         "a": 0,
+         "audio": "a895794eef1c.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma gravidez precoce, na adolescência:",
+         "options": [
+          "Põe em risco a saúde da rapariga e afasta-a da escola",
+          "Não tem consequências",
+          "É obrigatória"
+         ],
+         "a": 0,
+         "audio": "4084871babe7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O texto dramático escreve-se para ser representado: falas das personagens e didascálias, as indicações sobre gestos e cenário. A tragédia acaba mal. As interjeições — ai, oh — exprimem emoção; as falas passam de directo a indirecto.",
+        "exemplo": "«Ai! Que dor!» tem uma interjeição. Uma cena sobre uma gravidez precoce mostra o que ela custa: a saúde da rapariga e a escola que fica para trás.",
+        "lembra": "Didascália: o que se faz, não o que se diz.",
+        "audio": "8342b2e42e3a.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

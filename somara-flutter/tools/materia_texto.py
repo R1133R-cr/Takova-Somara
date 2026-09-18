@@ -4424,4 +4424,178 @@ MATERIA = {
                    "10 dá 60.",
         "lembra": "Cone é um terço do cilindro com a mesma base e altura.",
     },
+
+    # ---------------------------------------------------------------
+    # Portugues -- 9a classe
+    # ---------------------------------------------------------------
+    "por-9c:u1:n1": {
+        "explica": "A Declaração dos Direitos Humanos é um "
+                   "texto normativo: diz, em linguagem clara, os direitos "
+                   "de todas as pessoas, sem distinção. Há direitos "
+                   "pessoais, como a liberdade; judiciários, como o "
+                   "julgamento justo; sociais, como a educação.",
+        "exemplo": "«Todos os seres humanos nascem livres e iguais em "
+                   "dignidade e em direitos» é o primeiro artigo. Não "
+                   "conta uma história nem vende nada: manda e garante.",
+        "lembra": "Normativo: diz o que se deve e o que se pode.",
+    },
+    "por-9c:u1:n2": {
+        "explica": "Fazer, dar e poder são verbos irregulares: mudam o "
+                   "radical ao conjugar. Fiz, fizeste, fez; dei, deste, "
+                   "deu; pude, pudeste, pôde. No futuro: farei, darei, "
+                   "poderei. No conjuntivo: faça, dê, possa; se fizer, se "
+                   "der, se puder.",
+        "exemplo": "«Ontem fiz os trabalhos.» «Amanhã eles darão sangue.» "
+                   "«Se tu puderes, vem.» «Nós fizemos tudo o que "
+                   "podíamos.»",
+        "lembra": "Fiz, dei, pude: o pretérito muda o radical.",
+    },
+    "por-9c:u1:n3": {
+        "explica": "A vírgula separa enumerações e orações; os dois pontos "
+                   "anunciam uma explicação ou uma fala; o ponto e vírgula "
+                   "separa partes longas; o travessão abre a fala. "
+                   "Sinónimos dizem o mesmo por outra palavra; antónimos "
+                   "dizem o contrário.",
+        "exemplo": "«Todos têm direitos: à vida, à liberdade e à "
+                   "educação.» Liberdade e autonomia são sinónimos; justo e "
+                   "injusto, igualdade e desigualdade, são antónimos.",
+        "lembra": "Dois pontos anunciam; a vírgula separa.",
+    },
+    "por-9c:u1:n4": {
+        "explica": "A Declaração dos Direitos da Criança garante a quem "
+                   "tem menos de dezoito anos escola, saúde, protecção e "
+                   "brincadeira, e proíbe o trabalho infantil. Os "
+                   "adjectivos biformes têm duas formas, alto e alta; os "
+                   "uniformes uma só, feliz.",
+        "exemplo": "Português dá portuguesa, europeu dá europeia, "
+                   "espanhol dá espanhola, comilão dá comilona. «Sem pés "
+                   "nem cabeça» e «às direitas» são locuções adjectivas.",
+        "lembra": "Biforme muda com o género; uniforme não.",
+    },
+    "por-9c:u2:n1": {
+        "explica": "A carta de apresentação é um texto administrativo: "
+                   "apresenta-se a uma empresa ou instituição e pede uma "
+                   "oportunidade. Tem local e data, destinatário, corpo — "
+                   "quem sou, o que sei, o que peço — despedida e "
+                   "assinatura, em linguagem formal.",
+        "exemplo": "«Excelentíssimo Senhor Director» para quem não se "
+                   "conhece; «Com os melhores cumprimentos» a fechar. Os "
+                   "impostos que se pagam são as escolas e os hospitais que "
+                   "se têm.",
+        "lembra": "Formal: tratamento certo, sem calão.",
+    },
+    "por-9c:u2:n2": {
+        "explica": "O Curriculum Vitae resume a vida escolar e "
+                   "profissional: dados pessoais, formação, experiência, "
+                   "por ordem e sem enfeites. As palavras compostas "
+                   "formam-se por "
+                   "justaposição, sem perder letras, ou por aglutinação, "
+                   "fundindo-se.",
+        "exemplo": "Guarda-chuva e couve-flor são justaposição; aguardente "
+                   "(água ardente) e fidalgo (filho de algo) são "
+                   "aglutinação. Desporto no Curriculum também conta.",
+        "lembra": "Justaposição junta; aglutinação funde.",
+    },
+    "por-9c:u2:n3": {
+        "explica": "O requerimento pede algo por escrito a uma entidade: "
+                   "destinatário, identificação de quem pede, o pedido e "
+                   "os seus motivos, «pede deferimento», local, data e "
+                   "assinatura. O verbo concorda com o sujeito em pessoa e "
+                   "número.",
+        "exemplo": "Um camponês pede ao Administrador do Distrito a "
+                   "concessão de um terreno. «Os alunos pedem», «eu e tu "
+                   "vamos»: o verbo segue o sujeito.",
+        "lembra": "Sujeito no plural, verbo no plural.",
+    },
+    "por-9c:u3:n1": {
+        "explica": "A entrevista faz-se com um guião de perguntas e "
+                   "escreve-se em discurso directo, com travessão, ou "
+                   "indirecto, com «que» e o verbo a recuar no tempo. A "
+                   "conjugação perifrástica junta um auxiliar ao "
+                   "infinitivo: estar a, começar a, acabar de.",
+        "exemplo": "«A enfermeira disse: — Eu durmo com rede» vira «a "
+                   "enfermeira disse que dormia com rede». «Está a "
+                   "explicar» decorre; «começou a» inicia; «acabou de» "
+                   "terminou.",
+        "lembra": "Indirecto: «que», e o verbo recua.",
+    },
+    "por-9c:u3:n2": {
+        "explica": "O texto publicitário tem parte verbal, o slogan e o "
+                   "texto, e parte não verbal, a imagem e as cores. As "
+                   "preposições até, com, contra, desde, entre e sem ligam "
+                   "palavras. Acentuam-se os monossílabos tónicos, os "
+                   "hiatos e o «têm» do plural.",
+        "exemplo": "«Sabão Sol: brilho que dura!» é um slogan. «Vou até "
+                   "Lichinga», «trabalha desde a manhã», «ficou sem casa». "
+                   "Saúde leva acento no hiato; eles têm, ele tem.",
+        "lembra": "Ele tem, eles têm: o acento marca o plural.",
+    },
+    "por-9c:u3:n3": {
+        "explica": "As orações subordinadas dependem de outra. A "
+                   "interrogativa indirecta faz a pergunta por dentro: "
+                   "«pergunto se vens». A concessiva admite um obstáculo: "
+                   "«embora chovesse». A consecutiva diz a consequência: "
+                   "«tão alto que todos ouviram».",
+        "exemplo": "Embora e apesar de abrem concessivas; de modo que e "
+                   "tanto que abrem consecutivas; se e quando, numa "
+                   "pergunta indirecta, abrem interrogativas.",
+        "lembra": "Embora concede; tanto que resulta.",
+    },
+    "por-9c:u4:n1": {
+        "explica": "O guia turístico dá a conhecer os lugares de uma "
+                   "região em linguagem informativa e atraente: onde ficam, "
+                   "o que têm, como se chega. A oração subordinada "
+                   "integrante completa um verbo como saber, dizer ou "
+                   "pensar: «sabemos que o lago é lindo».",
+        "exemplo": "O Niassa tem o lago, com praias e pesca; a Reserva do "
+                   "Niassa, com elefantes; o monte Massangulo. «Dizem que "
+                   "a água é morna»: «que a água é morna» é integrante.",
+        "lembra": "Integrante: completa o que se sabe, se diz, se pensa.",
+    },
+    "por-9c:u4:n2": {
+        "explica": "O relato de viagem conta uma viagem, real ou "
+                   "imaginada, por ordem, com o que se viu e se sentiu. Os "
+                   "pronomes relativos — que, quem, onde, o qual — ligam "
+                   "uma oração relativa ao nome que ela explica.",
+        "exemplo": "«O guia que nos levou era de Lichinga.» «A aldeia "
+                   "onde nasci fica perto do lago.» «A senhora com quem "
+                   "falámos vendia peixe.» Guardar as danças e as línguas "
+                   "é preservar o património.",
+        "lembra": "Relativo aponta para trás: para o nome que explica.",
+    },
+    "por-9c:u5:n1": {
+        "explica": "O romance é a narrativa longa: mais personagens, mais "
+                   "acções, mais tempo que o conto ou a novela. Na narração "
+                   "a acção avança; na descrição pára para mostrar. O "
+                   "atributo qualifica por ser ou estar; o aposto "
+                   "explica um nome ao lado dele.",
+        "exemplo": "«Meledina, a rapariga da Zambézia, chegou»: «a "
+                   "rapariga da Zambézia» é aposto. «A cidade era enorme»: "
+                   "«enorme» é atributo. Aldino Muianga e Germano Almeida "
+                   "lêem-se nesta classe.",
+        "lembra": "Aposto explica; atributo qualifica.",
+    },
+    "por-9c:u5:n2": {
+        "explica": "O poema faz-se de versos, em estrofes, muitas vezes "
+                   "com rima. Os recursos estilísticos dão-lhe força: a "
+                   "hipérbole exagera, a anáfora repete no início dos "
+                   "versos, a ironia diz o contrário. Os advérbios "
+                   "afirmam, intensificam ou excluem.",
+        "exemplo": "Noémia de Sousa, «Se me queres conhecer»; Craveirinha, "
+                   "«Um homem nunca chora»; Camões, «Amor é fogo que arde "
+                   "sem se ver». «Certamente» afirma, «muito» intensifica, "
+                   "«só» exclui.",
+        "lembra": "Verso, estrofe, rima: a forma do poema.",
+    },
+    "por-9c:u5:n3": {
+        "explica": "O texto dramático escreve-se para ser representado: "
+                   "falas das personagens e didascálias, as indicações "
+                   "sobre gestos e cenário. A tragédia acaba mal. As "
+                   "interjeições — ai, oh — exprimem emoção; as falas "
+                   "passam de directo a indirecto.",
+        "exemplo": "«Ai! Que dor!» tem uma interjeição. Uma cena sobre "
+                   "uma gravidez precoce mostra o que ela custa: a saúde da "
+                   "rapariga e a escola que fica para trás.",
+        "lembra": "Didascália: o que se faz, não o que se diz.",
+    },
 }
