@@ -40247,6 +40247,1253 @@
      ]
     }
    ]
+  },
+  {
+   "id": "bio-9c",
+   "disciplina": "Biologia",
+   "classe": "9ª classe",
+   "tag": "BIO",
+   "fonte": "Programa de Ensino da Disciplina de Biologia — Ensino Secundário, 1º Ciclo. INDE/MINEDH, Maputo, Setembro de 2024, 9ª classe, pp. 44-57. As cinco unidades temáticas e os conteúdos são do programa; os exercícios foram escritos a partir deles, porque um programa de ensino não traz exercícios e não há livro do aluno da 9ª classe publicado.",
+   "units": [
+    {
+     "id": "u1",
+     "titulo": "Seres vivos e ambiente",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O ecossistema",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "Um ecossistema é:",
+         "options": [
+          "Os seres vivos de um lugar e o ambiente em que vivem, a trocar matéria e energia",
+          "Só as plantas de um lugar",
+          "Só o clima"
+         ],
+         "a": 0,
+         "audio": "fd54a929a66f.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada ecossistema ao seu tipo.",
+         "pairs": [
+          [
+           "O lago Niassa",
+           "Natural"
+          ],
+          [
+           "Uma machamba",
+           "Artificial"
+          ],
+          [
+           "Um aquário",
+           "Artificial"
+          ],
+          [
+           "A floresta de miombo",
+           "Natural"
+          ]
+         ],
+         "audio": "66a91008818b.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada factor do ecossistema ao seu tipo.",
+         "pairs": [
+          [
+           "Plantas, animais e micróbios",
+           "Bióticos"
+          ],
+          [
+           "Luz, água, temperatura e solo",
+           "Abióticos"
+          ]
+         ],
+         "audio": "aafe74119090.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Se a água de um lago seca, o factor que mudou é:",
+         "options": [
+          "Abiótico",
+          "Biótico",
+          "Nenhum"
+         ],
+         "a": 0,
+         "audio": "1fe5fe38cdff.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa machamba de milho, o homem que a sacha é:",
+         "options": [
+          "Um factor biótico que altera o ecossistema",
+          "Um factor abiótico",
+          "Parte do solo"
+         ],
+         "a": 0,
+         "audio": "4e5cdd7c8f7f.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Um ecossistema são os seres vivos de um lugar e o ambiente em que vivem. É natural, como o lago ou o miombo, ou artificial, como a machamba. Os factores bióticos são os seres vivos; os abióticos são a luz, a água, a temperatura.",
+        "exemplo": "Num aquário, os peixes e as algas são bióticos; a água, a luz e a temperatura são abióticos. Se o lago seca, mudou um factor abiótico e tudo muda.",
+        "lembra": "Biótico vive; abiótico não.",
+        "audio": "a4cdaf508973.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Cadeias, teias e energia",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Na cadeia capim, cabra, leão, liga cada ser ao seu nível trófico.",
+         "pairs": [
+          [
+           "Capim",
+           "Produtor"
+          ],
+          [
+           "Cabra",
+           "Consumidor primário"
+          ],
+          [
+           "Leão",
+           "Consumidor secundário"
+          ]
+         ],
+         "audio": "155a21fc5696.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma teia alimentar é:",
+         "options": [
+          "Várias cadeias alimentares cruzadas",
+          "Uma só cadeia",
+          "A teia de uma aranha"
+         ],
+         "a": 0,
+         "audio": "84425e017809.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A energia numa cadeia alimentar:",
+         "options": [
+          "Flui num só sentido e diminui de um nível para o seguinte",
+          "Aumenta de nível para nível",
+          "Anda em círculo"
+         ],
+         "a": 0,
+         "audio": "c11b8282210e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "De onde vem a energia que entra na cadeia alimentar?",
+         "options": [
+          "Do Sol, pela fotossíntese",
+          "Do solo",
+          "Dos animais"
+         ],
+         "a": 0,
+         "audio": "0b421b2980b2.mp3"
+        },
+        {
+         "t": "input",
+         "q": "De cada nível trófico só passa cerca de 10 por cento da energia ao seguinte. Se o capim tem 1000 unidades, quantas chegam à cabra?",
+         "a": "100",
+         "audio": "169ac03e4bf7.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Na cadeia alimentar, o produtor faz o alimento com a luz do Sol, o consumidor primário come-o, o secundário come o primário. Várias cadeias cruzadas são uma teia. A energia flui num só sentido e perde-se de nível para nível.",
+        "exemplo": "Capim, cabra, leão. Se o capim tem 1000 unidades de energia, só uns 100 chegam à cabra e uns 10 ao leão: por isso comer produtores rende mais.",
+        "lembra": "A energia desce a cadeia e não volta.",
+        "audio": "504f36fa10df.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "A acção do Homem",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada acção do Homem à sua consequência.",
+         "pairs": [
+          [
+           "Desmatamento",
+           "Erosão e perda de habitat"
+          ],
+          [
+           "Caça furtiva",
+           "Espécies em perigo de extinção"
+          ],
+          [
+           "Lixo no rio",
+           "Água poluída e doenças"
+          ]
+         ],
+         "audio": "95b6f19e5df9.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de água ao que ela é.",
+         "pairs": [
+          [
+           "Potável",
+           "Própria para beber"
+          ],
+          [
+           "Poluída",
+           "Com substâncias químicas ou lixo"
+          ],
+          [
+           "Contaminada",
+           "Com micróbios que causam doenças"
+          ]
+         ],
+         "audio": "6c748a015d47.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada resíduo sólido ao seu tipo.",
+         "pairs": [
+          [
+           "Cascas e restos de comida",
+           "Doméstico"
+          ],
+          [
+           "Seringas e ligaduras usadas",
+           "Hospitalar"
+          ],
+          [
+           "Sobras de metal e químicos",
+           "Das fábricas"
+          ]
+         ],
+         "audio": "8bea96b4343f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os resíduos hospitalares tratam-se:",
+         "options": [
+          "Queimando-os em incineradoras, longe das pessoas",
+          "Deitando-os no rio",
+          "Misturando-os com o lixo de casa"
+         ],
+         "a": 0,
+         "audio": "20901c12c221.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Separar em casa o papel, o plástico e o vidro serve para:",
+         "options": [
+          "Reciclar: fazer coisas novas com o que se deitava fora",
+          "Ocupar mais espaço",
+          "Atrair moscas"
+         ],
+         "a": 0,
+         "audio": "067abd85c374.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O desmatamento traz erosão, a caça furtiva extingue espécies, o lixo polui a água. A água potável bebe-se; a poluída tem químicos; a contaminada tem micróbios. Os resíduos domésticos separam-se e reciclam-se; os hospitalares queimam-se.",
+        "exemplo": "Papel, plástico e vidro separados em casa voltam a ser coisas novas. Seringas e ligaduras vão para a incineradora, nunca para o rio.",
+        "lembra": "Separar, reciclar, e o hospitalar ao fogo.",
+        "audio": "f9934c83ceeb.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u2",
+     "titulo": "Sistemas do corpo humano",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O esqueleto",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O esqueleto serve para:",
+         "options": [
+          "Dar forma e suporte ao corpo, proteger os órgãos e permitir o movimento",
+          "Só para andar",
+          "Digerir os alimentos"
+         ],
+         "a": 0,
+         "audio": "141bf95d4064.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada osso à sua forma.",
+         "pairs": [
+          [
+           "Fémur",
+           "Longo"
+          ],
+          [
+           "Ossos do pulso",
+           "Curtos"
+          ],
+          [
+           "Omoplata",
+           "Plano"
+          ],
+          [
+           "Vértebra",
+           "Irregular"
+          ]
+         ],
+         "audio": "97f404cc3ca8.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada osso à parte do esqueleto onde está.",
+         "pairs": [
+          [
+           "Crânio",
+           "Cabeça"
+          ],
+          [
+           "Costelas e coluna",
+           "Tronco"
+          ],
+          [
+           "Úmero",
+           "Membro superior"
+          ],
+          [
+           "Tíbia",
+           "Membro inferior"
+          ]
+         ],
+         "audio": "74ececb3dde7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os ossos são feitos de:",
+         "options": [
+          "Osteína, que dá flexibilidade, e sais de cálcio, que dão dureza, mais água",
+          "Só de cálcio",
+          "Só de água"
+         ],
+         "a": 0,
+         "audio": "deedd5deceba.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Quantos ossos tem o esqueleto de um adulto?",
+         "a": "206",
+         "audio": "07a9ffa17264.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O esqueleto dá forma e suporte, protege os órgãos e permite o movimento. Tem 206 ossos: longos como o fémur, curtos como os do pulso, planos como a omoplata, irregulares como as vértebras. São feitos de osteína, sais de cálcio e água.",
+        "exemplo": "A osteína dá flexibilidade e o cálcio dá dureza: os ossos das crianças, com mais osteína, partem-se menos; os dos idosos, com mais cálcio, partem-se mais.",
+        "lembra": "Osteína dobra, cálcio endurece.",
+        "audio": "6a12f988be95.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Músculos, articulações e saúde",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada tipo de músculo ao seu exemplo.",
+         "pairs": [
+          [
+           "Estriado",
+           "Os músculos dos braços, que se comandam"
+          ],
+          [
+           "Liso",
+           "Os do estômago e do intestino"
+          ],
+          [
+           "Cardíaco",
+           "O coração"
+          ]
+         ],
+         "audio": "8cef274fc175.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada articulação ao seu tipo.",
+         "pairs": [
+          [
+           "Joelho e ombro",
+           "Móvel"
+          ],
+          [
+           "Entre as vértebras",
+           "Semimóvel"
+          ],
+          [
+           "Ossos do crânio",
+           "Imóvel"
+          ]
+         ],
+         "audio": "1e016a264988.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada lesão ao que ela é.",
+         "pairs": [
+          [
+           "Entorse",
+           "Torcer uma articulação, sem sair do lugar"
+          ],
+          [
+           "Luxação",
+           "O osso sai da articulação"
+          ],
+          [
+           "Escoliose",
+           "A coluna curvada para o lado"
+          ]
+         ],
+         "audio": "0aa44a44e608.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Cifose e lordose são:",
+         "options": [
+          "Curvaturas anormais da coluna, para trás e para a frente",
+          "Doenças dos músculos",
+          "Tipos de articulação"
+         ],
+         "a": 0,
+         "audio": "ae725124ce75.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para cuidar dos ossos e músculos deve-se:",
+         "options": [
+          "Fazer exercício, sentar direito, comer cálcio e não carregar pesos a mais",
+          "Ficar sempre sentado",
+          "Carregar tudo às costas"
+         ],
+         "a": 0,
+         "audio": "1688deb3d3c0.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os músculos estriados comandam-se, os lisos trabalham sozinhos no intestino, o cardíaco é o coração. As articulações são móveis, semimóveis ou imóveis. Entorse torce, luxação desloca; cifose, lordose e escoliose curvam a coluna.",
+        "exemplo": "Sentar direito, fazer exercício, comer cálcio e não carregar pesos a mais protegem os ossos e os músculos.",
+        "lembra": "Joelho é móvel, vértebra semimóvel, crânio imóvel.",
+        "audio": "6404af55b92d.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "O sistema nervoso",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada órgão à parte do sistema nervoso a que pertence.",
+         "pairs": [
+          [
+           "Cérebro, cerebelo e medula espinal",
+           "Sistema nervoso central"
+          ],
+          [
+           "Nervos e gânglios",
+           "Sistema nervoso periférico"
+          ]
+         ],
+         "audio": "a5ed55bcd115.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada acto ao seu tipo.",
+         "pairs": [
+          [
+           "Levantar o braço para responder",
+           "Voluntário"
+          ],
+          [
+           "Tirar a mão do fogo sem pensar",
+           "Reflexo"
+          ]
+         ],
+         "audio": "3d0bf8b23ac5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O arco reflexo é:",
+         "options": [
+          "O caminho do estímulo: receptor, nervo, medula, nervo, músculo",
+          "Um osso do braço",
+          "Um tipo de articulação"
+         ],
+         "a": 0,
+         "audio": "40a7d1cb5d9e.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na experiência de Pavlov, o cão salivava ao ouvir a campainha porque:",
+         "options": [
+          "Aprendeu a associar o som à comida: um reflexo condicionado",
+          "Tinha fome de campainhas",
+          "Estava doente"
+         ],
+         "a": 0,
+         "audio": "fab63b711466.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Quando o médico bate no joelho e a perna salta, é:",
+         "options": [
+          "Um acto reflexo, comandado pela medula",
+          "Um acto voluntário",
+          "Uma luxação"
+         ],
+         "a": 0,
+         "audio": "2d4a6686c884.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O sistema nervoso central é o cérebro, o cerebelo e a medula espinal; o periférico são os nervos e os gânglios. Os actos voluntários dependem da vontade; os reflexos não: o estímulo vai pelo arco reflexo até à medula e volta ao músculo.",
+        "exemplo": "Tirar a mão do fogo antes de sentir a dor é um reflexo. O cão de Pavlov salivava à campainha: um reflexo condicionado, aprendido.",
+        "lembra": "Reflexo passa pela medula, não pelo cérebro.",
+        "audio": "47d29773c321.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u3",
+     "titulo": "Reprodução nos seres vivos",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "A reprodução no Homem",
+       "questoes": [
+        {
+         "t": "input",
+         "q": "O ciclo menstrual dura, em média, quantos dias?",
+         "a": "28",
+         "audio": "b9ac318d3065.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A ovulação, o dia mais fértil, dá-se:",
+         "options": [
+          "A meio do ciclo, por volta do dia 14",
+          "No primeiro dia da menstruação",
+          "No último dia do ciclo"
+         ],
+         "a": 0,
+         "audio": "4c2294500f30.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A fecundação é:",
+         "options": [
+          "A união do espermatozóide com o óvulo, na trompa",
+          "O nascimento do bebé",
+          "A menstruação"
+         ],
+         "a": 0,
+         "audio": "9007e0bfc4c5.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma gravidez na adolescência traz:",
+         "options": [
+          "Riscos para a saúde da rapariga, abandono da escola e um bebé sem condições",
+          "Só alegria",
+          "Nenhuma consequência"
+         ],
+         "a": 0,
+         "audio": "5fb341253718.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Uma gravidez dura cerca de quantas semanas?",
+         "a": "40",
+         "audio": "46508e4f7b56.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O ciclo menstrual dura uns 28 dias e a ovulação, o dia mais fértil, é a meio, no dia 14. A fecundação junta o espermatozóide ao óvulo na trompa, e a gravidez dura 40 semanas. Na adolescência é um risco para a mãe e para o bebé.",
+        "exemplo": "Uma rapariga de catorze anos grávida deixa a escola, e o seu corpo ainda não está pronto: mais partos difíceis e mais bebés com pouco peso.",
+        "lembra": "Dia 14: o mais fértil.",
+        "audio": "41697a953e17.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Os métodos anti-conceptivos",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada método anti-conceptivo ao seu tipo.",
+         "pairs": [
+          [
+           "Preservativo",
+           "Artificial"
+          ],
+          [
+           "Calendário",
+           "Natural"
+          ],
+          [
+           "Pílula",
+           "Artificial"
+          ],
+          [
+           "Temperatura basal",
+           "Natural"
+          ]
+         ],
+         "audio": "3a13bccf43a7.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O único método que evita a gravidez e também as infecções de transmissão sexual é:",
+         "options": [
+          "O preservativo",
+          "A pílula",
+          "O calendário"
+         ],
+         "a": 0,
+         "audio": "96e30d91fbe3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os métodos naturais têm a desvantagem de:",
+         "options": [
+          "Falharem muito, porque o ciclo nem sempre é regular",
+          "Custarem caro",
+          "Precisarem de médico"
+         ],
+         "a": 0,
+         "audio": "bb1a16e3b0ef.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada método ao que ele é.",
+         "pairs": [
+          [
+           "Dispositivo intra-uterino",
+           "Colocado no útero por um profissional, dura anos"
+          ],
+          [
+           "Injecção",
+           "Hormona dada de três em três meses"
+          ],
+          [
+           "Pílula",
+           "Comprimido tomado todos os dias"
+          ]
+         ],
+         "audio": "e29f0d88fe0a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os adolescentes têm direito a:",
+         "options": [
+          "Informação e serviços de saúde sexual e reprodutiva, sem serem julgados",
+          "Nada, até casarem",
+          "Só a conselhos dos amigos"
+         ],
+         "a": 0,
+         "audio": "5995f4a3bc3b.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Os métodos naturais — calendário, temperatura — falham, porque o ciclo nem sempre é regular. Os artificiais — preservativo, pílula, injecção, dispositivo intra-uterino — são mais seguros, e só o preservativo protege também das infecções.",
+        "exemplo": "A pílula toma-se todos os dias; a injecção de três em três meses; o dispositivo dura anos. Os adolescentes têm direito a informação no centro de saúde.",
+        "lembra": "Preservativo: dois em um, gravidez e infecções.",
+        "audio": "c5314ab1d443.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "As plantas: hormonas e tropismos",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada hormona vegetal à sua acção.",
+         "pairs": [
+          [
+           "Auxinas",
+           "Fazem crescer o caule e as raízes"
+          ],
+          [
+           "Giberelinas",
+           "Fazem germinar e alongar"
+          ],
+          [
+           "Etileno",
+           "Amadurece os frutos"
+          ],
+          [
+           "Ácido abscísico",
+           "Faz cair as folhas e dormir as sementes"
+          ]
+         ],
+         "audio": "3591a8f14c64.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Para amadurecer bananas mais depressa, tapam-se num saco porque:",
+         "options": [
+          "O etileno que elas libertam fica junto delas",
+          "Ficam mais quentes",
+          "Não apanham luz"
+         ],
+         "a": 0,
+         "audio": "6ea32aa3cd4a.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada movimento da planta ao seu nome.",
+         "pairs": [
+          [
+           "O caule cresce para a luz",
+           "Fototropismo"
+          ],
+          [
+           "A raiz cresce para baixo",
+           "Geotropismo"
+          ],
+          [
+           "A mimosa fecha as folhas ao toque",
+           "Nastismo"
+          ]
+         ],
+         "audio": "ea731a4e54ad.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A diferença entre tropismo e nastismo é que:",
+         "options": [
+          "O tropismo segue a direcção do estímulo; o nastismo não",
+          "O nastismo é mais lento",
+          "Não há diferença"
+         ],
+         "a": 0,
+         "audio": "9748f2856a6a.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Numa experiência, feijões com luz, com pouca luz e sem luz. Ao fim de duas semanas, os sem luz:",
+         "options": [
+          "Ficam amarelos, fracos e compridos",
+          "Crescem melhor",
+          "Ficam iguais aos outros"
+         ],
+         "a": 0,
+         "audio": "811d83b505c5.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As plantas têm hormonas: as auxinas fazem crescer, as giberelinas germinar, o etileno amadurece, o ácido abscísico faz cair as folhas. Reagem ao ambiente: o tropismo segue o estímulo, como o caule para a luz; o nastismo não.",
+        "exemplo": "Bananas num saco amadurecem depressa porque o etileno fica junto delas. Feijões sem luz crescem amarelos, fracos e compridos.",
+        "lembra": "Fototropismo para a luz, geotropismo para a terra.",
+        "audio": "e152bb70c2b1.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u4",
+     "titulo": "Agricultura",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "O solo",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada componente do solo à sua parte.",
+         "pairs": [
+          [
+           "Areia, argila, limo e cascalho",
+           "Parte mineral"
+          ],
+          [
+           "Húmus",
+           "Parte orgânica"
+          ],
+          [
+           "Ar e água",
+           "Os espaços entre as partículas"
+          ]
+         ],
+         "audio": "5ea0faa09192.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada tipo de solo ao que ele faz com a água.",
+         "pairs": [
+          [
+           "Arenoso",
+           "Deixa-a passar depressa e seca"
+          ],
+          [
+           "Argiloso",
+           "Retém-na e encharca"
+          ],
+          [
+           "Misto",
+           "Retém o suficiente: o melhor para cultivar"
+          ]
+         ],
+         "audio": "69f0e140b078.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O húmus é:",
+         "options": [
+          "Matéria orgânica decomposta, que dá fertilidade ao solo",
+          "Uma pedra",
+          "Um tipo de areia"
+         ],
+         "a": 0,
+         "audio": "475a14387424.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Na experiência da permeabilidade, deita-se água em frascos com solos diferentes para ver:",
+         "options": [
+          "Qual retém mais e qual deixa passar mais água",
+          "Qual é mais bonito",
+          "Qual pesa mais"
+         ],
+         "a": 0,
+         "audio": "19465ae19565.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um solo escuro e fofo, com minhocas, é:",
+         "options": [
+          "Fértil",
+          "Estéril",
+          "Arenoso"
+         ],
+         "a": 0,
+         "audio": "6c12dc1cacca.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O solo tem uma parte mineral — areia, argila, limo, cascalho — uma parte orgânica, o húmus, e ar e água nos espaços. O arenoso deixa passar a água, o argiloso encharca, o misto retém o suficiente e é o melhor para cultivar.",
+        "exemplo": "Água em três frascos com solos diferentes mostra qual retém mais. Um solo escuro e fofo, com minhocas, é fértil.",
+        "lembra": "Misto é o meio-termo, e é o bom.",
+        "audio": "cca6c2ed82ef.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "Organismos, fertilidade e conservação",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada organismo do solo ao seu papel.",
+         "pairs": [
+          [
+           "Plantas",
+           "Produtores"
+          ],
+          [
+           "Insectos e ratos",
+           "Consumidores"
+          ],
+          [
+           "Bactérias, fungos e minhocas",
+           "Decompositores"
+          ]
+         ],
+         "audio": "5cfff4fc5d26.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Os decompositores são importantes porque:",
+         "options": [
+          "Transformam os restos em húmus e devolvem os nutrientes ao solo",
+          "Comem as colheitas",
+          "Secam o solo"
+         ],
+         "a": 0,
+         "audio": "031d9c0f6a20.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A irrigação permite:",
+         "options": [
+          "Cultivar na época seca, com água levada ao campo",
+          "Cultivar sem solo",
+          "Evitar as pragas"
+         ],
+         "a": 0,
+         "audio": "993cf1f89b81.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada prática de conservação do solo ao que ela evita.",
+         "pairs": [
+          [
+           "Curvas de nível nas encostas",
+           "A erosão pela chuva"
+          ],
+          [
+           "Rotação de culturas",
+           "O esgotamento dos nutrientes"
+          ],
+          [
+           "Cobertura com palha",
+           "A secura e as ervas"
+          ]
+         ],
+         "audio": "34bc0a98edeb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "As queimadas antes de cultivar:",
+         "options": [
+          "Matam os organismos do solo e empobrecem-no",
+          "Fertilizam para sempre",
+          "Não têm efeito"
+         ],
+         "a": 0,
+         "audio": "6edd087acba3.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "No solo há produtores, as plantas, consumidores, como os insectos, e decompositores, as bactérias e as minhocas, que fazem o húmus. A irrigação permite cultivar na seca. Conserva-se o solo com curvas de nível, rotação e cobertura.",
+        "exemplo": "As queimadas matam os organismos do solo e empobrecem-no. Curvas de nível na encosta travam a chuva; palha por cima guarda a humidade.",
+        "lembra": "Decompositor faz húmus; queimada mata-o.",
+        "audio": "f58243001937.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Culturas alimentares e adubos",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada cultura alimentar ao seu grupo.",
+         "pairs": [
+          [
+           "Milho e arroz",
+           "Cereais"
+          ],
+          [
+           "Feijão e amendoim",
+           "Leguminosas"
+          ],
+          [
+           "Mandioca e batata-doce",
+           "Raízes e tubérculos"
+          ],
+          [
+           "Couve e tomate",
+           "Hortícolas"
+          ]
+         ],
+         "audio": "1f53ed971129.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O adubo orgânico faz-se de:",
+         "options": [
+          "Estrume, restos de plantas e de cozinha, deixados a decompor",
+          "Produtos químicos da fábrica",
+          "Areia e pedras"
+         ],
+         "a": 0,
+         "audio": "6daeba47fec3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Uma vantagem do adubo orgânico é:",
+         "options": [
+          "Ser barato, feito em casa, e melhorar o solo sem o envenenar",
+          "Agir só num dia",
+          "Vir em saco"
+         ],
+         "a": 0,
+         "audio": "948fa5f70ccb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Com os adubos artificiais deve-se:",
+         "options": [
+          "Usar a dose certa, com luvas, e longe da água e das crianças",
+          "Deitar o mais possível",
+          "Guardá-los na cozinha"
+         ],
+         "a": 0,
+         "audio": "66aaee895f91.mp3"
+        },
+        {
+         "t": "input",
+         "q": "Um composto orgânico leva cerca de 3 meses a ficar pronto. Se se começou em Março, em que mês do ano está pronto? Responde com o número do mês.",
+         "a": "6",
+         "audio": "271c69255b33.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As culturas alimentares são os cereais, as leguminosas, as raízes e tubérculos e as hortícolas. O adubo orgânico faz-se de estrume e restos a decompor: barato, melhora o solo. O artificial usa-se na dose certa, com luvas, longe da água.",
+        "exemplo": "Um composto de restos de cozinha e estrume leva uns três meses: começado em Março, está pronto em Junho.",
+        "lembra": "Orgânico alimenta o solo; artificial só a planta.",
+        "audio": "95abe5a4bd6b.mp3"
+       }
+      }
+     ]
+    },
+    {
+     "id": "u5",
+     "titulo": "Auto-descobrimento",
+     "niveis": [
+      {
+       "id": "n1",
+       "titulo": "Inclusão e diversidade",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada conceito ao que ele é.",
+         "pairs": [
+          [
+           "Preconceito",
+           "Julgar alguém antes de o conhecer"
+          ],
+          [
+           "Discriminação",
+           "Tratar pior por ser diferente"
+          ],
+          [
+           "Estigma",
+           "Marca de vergonha posta num grupo"
+          ],
+          [
+           "Exclusão",
+           "Deixar de fora"
+          ]
+         ],
+         "audio": "d8d4eb75968b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "O estigma sobre quem tem HIV faz com que:",
+         "options": [
+          "As pessoas escondam a doença e não procurem tratamento",
+          "A doença desapareça",
+          "Todos fiquem mais saudáveis"
+         ],
+         "a": 0,
+         "audio": "14c412ce75ed.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Inclusão é:",
+         "options": [
+          "Respeitar as diferenças e dar lugar a todos",
+          "Fazer todos iguais",
+          "Separar os diferentes"
+         ],
+         "a": 0,
+         "audio": "5bb719305916.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um colega com deficiência na turma:",
+         "options": [
+          "Tem os mesmos direitos e a turma ganha com a diversidade",
+          "Deve ficar em casa",
+          "Atrasa os outros"
+         ],
+         "a": 0,
+         "audio": "84367c4869ec.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Discriminar alguém é:",
+         "options": [
+          "Uma violação dos direitos humanos",
+          "Uma opinião como outra qualquer",
+          "Permitido se for por brincadeira"
+         ],
+         "a": 0,
+         "audio": "a5f3ef239d91.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "Preconceito é julgar sem conhecer; discriminação é tratar pior; estigma é a marca de vergonha; exclusão é deixar de fora. Fazem mal à saúde: quem tem HIV esconde-se e não se trata. Inclusão é respeitar as diferenças e dar lugar a todos.",
+        "exemplo": "Um colega com deficiência na turma tem os mesmos direitos, e a turma ganha com a diversidade. Discriminar é violar os direitos humanos.",
+        "lembra": "Diferente não é menos.",
+        "audio": "9e0a560ed694.mp3"
+       }
+      },
+      {
+       "id": "n2",
+       "titulo": "As doenças",
+       "questoes": [
+        {
+         "t": "match",
+         "q": "Liga cada doença ao seu tipo.",
+         "pairs": [
+          [
+           "Malária e cólera",
+           "Transmissível"
+          ],
+          [
+           "Diabetes e hipertensão",
+           "Não transmissível"
+          ],
+          [
+           "Tuberculose",
+           "Transmissível"
+          ],
+          [
+           "Asma",
+           "Não transmissível"
+          ]
+         ],
+         "audio": "f80faf1595dc.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada vector à doença que transmite.",
+         "pairs": [
+          [
+           "Mosquito anófeles",
+           "Malária"
+          ],
+          [
+           "Mosca",
+           "Diarreias"
+          ],
+          [
+           "Água contaminada",
+           "Cólera"
+          ]
+         ],
+         "audio": "3e25a182fe1d.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um factor de risco para a hipertensão é:",
+         "options": [
+          "Comer muito sal e não fazer exercício",
+          "Beber água",
+          "Dormir bem"
+         ],
+         "a": 0,
+         "audio": "8d1066b1014b.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A tinha e a sarna passam de pessoa para pessoa:",
+         "options": [
+          "Pelo contacto e pela roupa partilhada",
+          "Pelo ar",
+          "Não passam"
+         ],
+         "a": 0,
+         "audio": "46380a8c7f5f.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "A obesidade previne-se com:",
+         "options": [
+          "Alimentação equilibrada e exercício",
+          "Refrescos e fritos",
+          "Jejum total"
+         ],
+         "a": 0,
+         "audio": "f726758950da.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "As doenças transmissíveis passam por vectores: malária pelo mosquito, cólera pela água, tuberculose pelo ar, tinha e sarna pelo contacto. As não transmissíveis — asma, diabetes, hipertensão, obesidade — vêm de factores de risco.",
+        "exemplo": "Sal a mais e falta de exercício sobem a tensão; refrescos e fritos engordam. Rede mosquiteira e água fervida travam a malária e a cólera.",
+        "lembra": "Vector transmite; factor de risco predispõe.",
+        "audio": "378e0888977e.mp3"
+       }
+      },
+      {
+       "id": "n3",
+       "titulo": "Sistema reprodutor e medicamentos",
+       "questoes": [
+        {
+         "t": "choice",
+         "q": "O cancro mais frequente na mulher em Moçambique é:",
+         "options": [
+          "O do colo do útero, ligado ao vírus do papiloma humano",
+          "O da pele",
+          "O do osso"
+         ],
+         "a": 0,
+         "audio": "903d31f2a456.mp3"
+        },
+        {
+         "t": "match",
+         "q": "Liga cada cancro ao exame que o detecta cedo.",
+         "pairs": [
+          [
+           "Da mama",
+           "Auto-exame e mamografia"
+          ],
+          [
+           "Do colo do útero",
+           "Rastreio no centro de saúde"
+          ],
+          [
+           "Da próstata",
+           "Análise ao sangue e exame médico"
+          ]
+         ],
+         "audio": "269a39a8fecb.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Um caroço na mama ou uma hemorragia fora do período:",
+         "options": [
+          "São sinais para ir ao centro de saúde sem demora",
+          "Passam sozinhos",
+          "Não têm importância"
+         ],
+         "a": 0,
+         "audio": "9f0839a91671.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Com os medicamentos deve-se:",
+         "options": [
+          "Tomar só com receita, na dose e no tempo certos, e ver o prazo",
+          "Tomar os do vizinho",
+          "Parar assim que se sente melhor"
+         ],
+         "a": 0,
+         "audio": "92b449679ac3.mp3"
+        },
+        {
+         "t": "choice",
+         "q": "Comichão, manchas na pele e inchaço depois de um medicamento são:",
+         "options": [
+          "Uma reacção alérgica: pára-se e vai-se ao centro de saúde",
+          "Sinal de que está a fazer efeito",
+          "Normal em todos"
+         ],
+         "a": 0,
+         "audio": "61ac9288bf03.mp3"
+        }
+       ],
+       "materia": {
+        "explica": "O cancro do colo do útero é o mais frequente na mulher em Moçambique, ligado ao vírus do papiloma humano; há também o da mama e o da próstata. Detectam-se cedo com exames. Os medicamentos tomam-se com receita, na dose e no tempo certos.",
+        "exemplo": "Um caroço na mama ou uma hemorragia fora do período pedem o centro de saúde sem demora. Comichão e inchaço depois de um remédio são alergia: pára-se.",
+        "lembra": "Exame cedo salva; remédio só com receita.",
+        "audio": "73f5bab82d0e.mp3"
+       }
+      }
+     ]
+    }
+   ]
   }
  ]
 }

@@ -4911,4 +4911,173 @@ MATERIA = {
                    "acabou por aprender.",
         "lembra": "Voto secreto, diálogo primeiro.",
     },
+
+    # ---------------------------------------------------------------
+    # Biologia -- 9a classe
+    # ---------------------------------------------------------------
+    "bio-9c:u1:n1": {
+        "explica": "Um ecossistema são os seres vivos de um lugar e o "
+                   "ambiente em que vivem. É natural, como o lago ou o "
+                   "miombo, ou artificial, como a machamba. Os factores "
+                   "bióticos são os seres vivos; os abióticos são a luz, "
+                   "a água, a temperatura.",
+        "exemplo": "Num aquário, os peixes e as algas são bióticos; a água, "
+                   "a luz e a temperatura são abióticos. Se o lago seca, "
+                   "mudou um factor abiótico e tudo muda.",
+        "lembra": "Biótico vive; abiótico não.",
+    },
+    "bio-9c:u1:n2": {
+        "explica": "Na cadeia alimentar, o produtor faz o alimento com a "
+                   "luz do Sol, o consumidor primário come-o, o secundário "
+                   "come o primário. Várias cadeias cruzadas são uma teia. "
+                   "A energia flui num só sentido e perde-se de nível "
+                   "para nível.",
+        "exemplo": "Capim, cabra, leão. Se o capim tem 1000 unidades de "
+                   "energia, só uns 100 chegam à cabra e uns 10 ao leão: "
+                   "por isso comer produtores rende mais.",
+        "lembra": "A energia desce a cadeia e não volta.",
+    },
+    "bio-9c:u1:n3": {
+        "explica": "O desmatamento traz "
+                   "erosão, a caça furtiva extingue espécies, o lixo polui "
+                   "a água. A água potável bebe-se; a poluída tem "
+                   "químicos; a contaminada tem micróbios. Os resíduos "
+                   "domésticos separam-se e reciclam-se; os hospitalares "
+                   "queimam-se.",
+        "exemplo": "Papel, plástico e vidro separados em casa voltam a ser "
+                   "coisas novas. Seringas e ligaduras vão para a "
+                   "incineradora, nunca para o rio.",
+        "lembra": "Separar, reciclar, e o hospitalar ao fogo.",
+    },
+    "bio-9c:u2:n1": {
+        "explica": "O esqueleto dá forma e suporte, protege os órgãos e "
+                   "permite o movimento. Tem 206 ossos: "
+                   "longos como o fémur, curtos como os do pulso, planos "
+                   "como a omoplata, irregulares como as vértebras. São "
+                   "feitos de osteína, sais de cálcio e água.",
+        "exemplo": "A osteína dá flexibilidade e o cálcio dá dureza: os "
+                   "ossos das crianças, com mais osteína, partem-se menos; "
+                   "os dos idosos, com mais cálcio, partem-se mais.",
+        "lembra": "Osteína dobra, cálcio endurece.",
+    },
+    "bio-9c:u2:n2": {
+        "explica": "Os músculos estriados comandam-se, os lisos "
+                   "trabalham sozinhos no intestino, o "
+                   "cardíaco é o coração. As articulações são móveis, "
+                   "semimóveis ou imóveis. Entorse torce, luxação desloca; "
+                   "cifose, lordose e escoliose curvam a coluna.",
+        "exemplo": "Sentar direito, fazer exercício, comer cálcio e não "
+                   "carregar pesos a mais protegem os ossos e os "
+                   "músculos.",
+        "lembra": "Joelho é móvel, vértebra semimóvel, crânio imóvel.",
+    },
+    "bio-9c:u2:n3": {
+        "explica": "O sistema nervoso central é o cérebro, o cerebelo "
+                   "e a medula espinal; o periférico são os nervos e "
+                   "os gânglios. Os actos voluntários dependem da vontade; "
+                   "os reflexos não: o estímulo vai pelo arco reflexo até "
+                   "à medula e volta ao músculo.",
+        "exemplo": "Tirar a mão do fogo antes de sentir a dor é um "
+                   "reflexo. O cão de Pavlov salivava à campainha: um "
+                   "reflexo condicionado, aprendido.",
+        "lembra": "Reflexo passa pela medula, não pelo cérebro.",
+    },
+    "bio-9c:u3:n1": {
+        "explica": "O ciclo menstrual dura uns 28 dias e a ovulação, o "
+                   "dia mais fértil, é a meio, no dia 14. A "
+                   "fecundação junta o espermatozóide ao óvulo na trompa, "
+                   "e a gravidez dura 40 semanas. Na adolescência é um "
+                   "risco para a mãe e para o bebé.",
+        "exemplo": "Uma rapariga de catorze anos grávida deixa a escola, "
+                   "e o seu corpo ainda não está pronto: mais partos "
+                   "difíceis e mais bebés com pouco peso.",
+        "lembra": "Dia 14: o mais fértil.",
+    },
+    "bio-9c:u3:n2": {
+        "explica": "Os métodos naturais — calendário, temperatura — "
+                   "falham, porque o ciclo nem sempre é regular. Os "
+                   "artificiais — preservativo, pílula, injecção, "
+                   "dispositivo intra-uterino — são mais seguros, e só o "
+                   "preservativo protege também das infecções.",
+        "exemplo": "A pílula toma-se todos os dias; a injecção de três em "
+                   "três meses; o dispositivo dura anos. Os adolescentes "
+                   "têm direito a informação no centro de saúde.",
+        "lembra": "Preservativo: dois em um, gravidez e infecções.",
+    },
+    "bio-9c:u3:n3": {
+        "explica": "As plantas têm hormonas: as auxinas fazem crescer, as "
+                   "giberelinas germinar, o etileno amadurece, o ácido "
+                   "abscísico faz cair as folhas. Reagem ao ambiente: o "
+                   "tropismo segue o estímulo, como o caule para a luz; o "
+                   "nastismo não.",
+        "exemplo": "Bananas num saco amadurecem depressa porque o etileno "
+                   "fica junto delas. Feijões sem luz crescem amarelos, "
+                   "fracos e compridos.",
+        "lembra": "Fototropismo para a luz, geotropismo para a terra.",
+    },
+    "bio-9c:u4:n1": {
+        "explica": "O solo tem uma parte mineral — areia, argila, limo, "
+                   "cascalho — uma parte orgânica, o húmus, e ar e água "
+                   "nos espaços. O arenoso deixa passar a água, o argiloso "
+                   "encharca, o misto retém o suficiente e é o melhor para "
+                   "cultivar.",
+        "exemplo": "Água em três frascos com solos diferentes mostra qual "
+                   "retém mais. Um solo escuro e fofo, com minhocas, é "
+                   "fértil.",
+        "lembra": "Misto é o meio-termo, e é o bom.",
+    },
+    "bio-9c:u4:n2": {
+        "explica": "No solo há produtores, as plantas, consumidores, como "
+                   "os insectos, e decompositores, as bactérias "
+                   "e as minhocas, que fazem o húmus. A irrigação permite "
+                   "cultivar na seca. Conserva-se o solo com curvas de "
+                   "nível, rotação e cobertura.",
+        "exemplo": "As queimadas matam os organismos do solo e "
+                   "empobrecem-no. Curvas de nível na encosta travam a "
+                   "chuva; palha por cima guarda a humidade.",
+        "lembra": "Decompositor faz húmus; queimada mata-o.",
+    },
+    "bio-9c:u4:n3": {
+        "explica": "As culturas alimentares são os cereais, as "
+                   "leguminosas, as raízes e tubérculos e as hortícolas. O "
+                   "adubo orgânico faz-se de estrume e restos a decompor: "
+                   "barato, melhora o solo. O artificial "
+                   "usa-se na dose certa, com luvas, longe da água.",
+        "exemplo": "Um composto de restos de cozinha e estrume leva uns "
+                   "três meses: começado em Março, está pronto em Junho.",
+        "lembra": "Orgânico alimenta o solo; artificial só a planta.",
+    },
+    "bio-9c:u5:n1": {
+        "explica": "Preconceito é julgar sem conhecer; discriminação é "
+                   "tratar pior; estigma é a marca de vergonha; exclusão é "
+                   "deixar de fora. Fazem mal à saúde: quem tem HIV "
+                   "esconde-se e não se trata. Inclusão é respeitar as "
+                   "diferenças e dar lugar a todos.",
+        "exemplo": "Um colega com deficiência na turma tem os mesmos "
+                   "direitos, e a turma ganha com a diversidade. "
+                   "Discriminar é violar os direitos humanos.",
+        "lembra": "Diferente não é menos.",
+    },
+    "bio-9c:u5:n2": {
+        "explica": "As doenças transmissíveis passam "
+                   "por vectores: malária pelo mosquito, cólera pela água, "
+                   "tuberculose pelo ar, tinha e sarna pelo contacto. As "
+                   "não transmissíveis — asma, diabetes, hipertensão, "
+                   "obesidade — vêm de factores de risco.",
+        "exemplo": "Sal a mais e falta de exercício sobem a tensão; "
+                   "refrescos e fritos engordam. Rede mosquiteira e água "
+                   "fervida travam a malária e a cólera.",
+        "lembra": "Vector transmite; factor de risco predispõe.",
+    },
+    "bio-9c:u5:n3": {
+        "explica": "O cancro do colo do útero é o mais frequente na mulher "
+                   "em Moçambique, ligado ao vírus do papiloma humano; há "
+                   "também o da mama e o da próstata. Detectam-se cedo com "
+                   "exames. Os medicamentos tomam-se com receita, na dose "
+                   "e no tempo certos.",
+        "exemplo": "Um caroço na mama ou uma hemorragia fora do período "
+                   "pedem o centro de saúde sem demora. Comichão e "
+                   "inchaço depois de um remédio são alergia: pára-se.",
+        "lembra": "Exame cedo salva; remédio só com receita.",
+    },
 }
