@@ -382,9 +382,43 @@ class _LessonScreenState extends State<LessonScreen> with TickerProviderStateMix
                   style: const TextStyle(
                       color: S.life, fontWeight: FontWeight.w700, fontSize: 16)),
             ]),
+            // Só na versão de testes: varrer níveis sem voltar ao mapa de
+            // cada vez. Vinte níveis à procura de uma pergunta mal escrita
+            // são vinte idas e vindas ao tabuleiro — e é aí que se desiste
+            // de testar.
+            if (st.saltoLivre && !widget.eAvulsa) ..._setasDeTeste(st),
           ],
         ),
       );
+
+  /// As setas de nível anterior / nível seguinte do modo de testes.
+  List<Widget> _setasDeTeste(AppState st) {
+    final ultimo = st.niveis.length - 1;
+    Widget seta(IconData icone, int destino, String dica) => IconButton(
+          icon: Icon(icone, size: 22),
+          color: destino < 0 || destino > ultimo ? S.txMut : S.life,
+          tooltip: dica,
+          visualDensity: VisualDensity.compact,
+          onPressed: destino < 0 || destino > ultimo
+              ? null
+              : () {
+                  Sons.i.toque();
+                  // Substitui em vez de empilhar: ao fim de trinta saltos,
+                  // empilhar deixava trinta lições abertas por trás.
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (_) => LessonScreen(indice: destino),
+                    ),
+                  );
+                },
+        );
+    return [
+      seta(Icons.keyboard_arrow_left_rounded, widget.indice - 1,
+          'Nível anterior'),
+      seta(Icons.keyboard_arrow_right_rounded, widget.indice + 1,
+          'Nível seguinte'),
+    ];
+  }
 
   Future<void> _confirmarSaida() async {
     final sair = await showDialog<bool>(

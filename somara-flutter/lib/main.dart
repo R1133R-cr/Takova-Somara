@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'modo_teste.dart';
 import 'services/ciclo_de_vida.dart';
 import 'services/nuvem.dart';
 import 'services/sons.dart';
@@ -39,7 +40,7 @@ class SomaraApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (_) => AppState()..carregar(),
       child: MaterialApp(
-        title: 'Somara',
+        title: ModoTeste.activo ? 'Somara TESTE' : 'Somara',
         debugShowCheckedModeBanner: false,
         theme: somaraTheme(),
         // A faixa das conquistas vive AQUI, por cima do Navigator, e não
@@ -83,10 +84,62 @@ class _ArranqueState extends State<_Arranque> {
 
   @override
   Widget build(BuildContext context) {
+    // Antes de tudo: uma versão de testes velha não abre. Ver o porquê em
+    // `lib/modo_teste.dart`.
+    if (ModoTeste.caducou()) return const _Caducou();
     final st = context.watch<AppState>();
     if (!st.pronto) {
       return const Carregando(mensagem: 'A preparar as tuas lições...');
     }
     return const WelcomeScreen();
   }
+}
+
+/// O que se vê quando a versão de testes passou da validade.
+///
+/// Diz o que fazer, e não só que não dá. Quem tem este ficheiro recebeu-o de
+/// alguém, e a frase tem de servir para essa pessoa pedir a versão nova.
+class _Caducou extends StatelessWidget {
+  const _Caducou();
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    backgroundColor: S.gm950,
+    body: Center(
+      child: Padding(
+        padding: const EdgeInsets.all(32),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.hourglass_disabled_rounded,
+                color: S.life, size: 64),
+            const SizedBox(height: 20),
+            const Text(
+              'Esta versão de testes caducou',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: S.tx,
+                fontSize: 21,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Foi compilada em ${ModoTeste.compiladaEm} e só serve durante '
+              '${ModoTeste.validade.inDays} dias. Peça a versão nova a quem '
+              'lhe deu esta.',
+              textAlign: TextAlign.center,
+              style: const TextStyle(color: S.txSoft, fontSize: 15, height: 1.5),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'A Somara a sério está na loja e não caduca.',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: S.txMut, fontSize: 13),
+            ),
+          ],
+        ),
+      ),
+    ),
+  );
 }

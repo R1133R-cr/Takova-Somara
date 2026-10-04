@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import '../modo_teste.dart';
 import '../services/sons.dart';
 import '../state/app_state.dart';
 import '../theme.dart';
@@ -8,6 +9,7 @@ import '../widgets/roby.dart';
 import 'guardados_screen.dart';
 import 'joguinhos_screen.dart';
 import 'map_screen.dart';
+import 'painel_teste.dart';
 import 'perfil_screen.dart';
 import 'praticar_screen.dart';
 import 'ranking_screen.dart';
@@ -53,10 +55,36 @@ class _HomeShellState extends State<HomeShell> {
       },
       child: Scaffold(
         backgroundColor: S.gm950,
+        // O botão do painel de testes. Fixo e vermelho, e só existe no APK
+        // de testes — ver `lib/modo_teste.dart`. Não está escondido atrás de
+        // nenhum gesto secreto: numa app que já se chama «Somara TESTE»,
+        // esconder o painel não protegeria nada.
+        floatingActionButton: ModoTeste.activo
+            ? FloatingActionButton.extended(
+                backgroundColor: S.life,
+                foregroundColor: Colors.white,
+                icon: const Icon(Icons.build_rounded, size: 20),
+                label: const Text(
+                  'TESTE',
+                  style: TextStyle(fontWeight: FontWeight.w800),
+                ),
+                onPressed: () {
+                  Sons.i.toque();
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const PainelTeste()),
+                  );
+                },
+              )
+            : null,
         body: SafeArea(
           bottom: false,
           child: Column(
             children: [
+              // A tira vermelha da versão de testes. Três pixels e sem
+              // texto de propósito: uma faixa atravessada tapava justamente
+              // a interface que se está a testar, e o nome «Somara TESTE»
+              // debaixo do ícone já evita o engano de enviar o APK errado.
+              if (ModoTeste.activo) Container(height: 3, color: S.life),
               _barraEstado(st),
               Expanded(
                 // IndexedStack e não troca de widget: assim a amarelinha

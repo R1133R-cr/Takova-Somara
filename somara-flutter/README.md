@@ -19,12 +19,31 @@ silêncio quando não há.
 ## Compilar
 
 ```bash
-./compilar.sh release      # ou: ./compilar.sh debug
+./compilar.sh release ambas    # a normal e a de testes
 ```
 
 Corre a análise e os testes antes de compilar, e recusa-se a gerar um APK
-com uma versão que já exista. O ficheiro fica em `../APKs/`, com as
-versões anteriores ao lado.
+com uma versão que já exista. Os ficheiros ficam em `../APKs/`, com as
+versões anteriores ao lado. Sem o segundo argumento sai só a normal;
+`teste` sai só a de testes, e `abi` corta por arquitectura.
+
+### As duas versões
+
+| | normal | de testes |
+|---|---|---|
+| níveis | por ordem | qualquer um, em qualquer ordem |
+| joguinhos | sobe-se a jogar | escolhe-se o degrau à mão |
+| bolsa de tempo | 60 min por dia | sem limite |
+| corações e ouro | contam | contam, com interruptor para desligar |
+| nuvem e ranking | ligados | **desligados** |
+| nome no telemóvel | Somara | Somara TESTE |
+| validade | não caduca | 60 dias |
+
+Instalam-se as duas no mesmo telemóvel ao mesmo tempo, com dados
+separados: a de testes leva o sufixo `.teste` no identificador. O painel
+vermelho, dentro dela, tem o saltador de níveis, os interruptores e o
+«pôr à venda», que repõe todos os bloqueios de uma vez para se poder ver
+a app como ela vai sair. Ver [`lib/modo_teste.dart`](lib/modo_teste.dart).
 
 **Não usar `./gradlew` directamente.** O Gradle lê a versão de
 `android/local.properties`, que só o `flutter build` regenera a partir do

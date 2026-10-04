@@ -21,7 +21,9 @@ class PraticarScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final st = context.watch<AppState>();
     final rever = st.paraRever;
-    final temFeitos = st.niveisConcluidos > 0;
+    // Na versão de testes o treino abre sem haver níveis feitos: as
+    // perguntas vêm da classe inteira. Ver [AppState.treinoLivre].
+    final temFeitos = st.niveisConcluidos > 0 || st.treinoLivre;
     final comPalavras = st.unidadesComPalavras;
 
     return ListView(

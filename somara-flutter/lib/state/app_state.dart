@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../modo_teste.dart';
 import '../models/bolsa_de_tempo.dart';
 import '../models/campanha.dart';
 import '../models/carteira.dart';
@@ -84,6 +85,127 @@ class AppState extends ChangeNotifier {
     }
   }
 
+  /* ---------------- Versão de testes ----------------
+     Tudo o que se segue é inerte na app que a criança recebe: [ModoTeste
+     .activo] é uma constante de compilação, e o compilador corta o que
+     depende dela. Ver `lib/modo_teste.dart`. */
+
+  static const _chaveTeste = 'somara_teste_v1';
+  InterruptoresDeTeste _teste = const InterruptoresDeTeste();
+
+  InterruptoresDeTeste get interruptores => _teste;
+
+  /// A app está a correr sem fila — versão de testes, com o «pôr à venda»
+  /// desligado.
+  bool get modoTeste => ModoTeste.activo && !_teste.aVenda;
+
+  /// Qualquer nível se abre em qualquer ordem, incluindo o último.
+  bool get saltoLivre => modoTeste;
+
+  /// O tempo de jogo não acaba, e qualquer nível de qualquer joguinho se
+  /// escolhe à mão.
+  bool get jogosLivres => modoTeste;
+
+  /// O treino abre sem haver níveis feitos. Sem isto era uma porta para um
+  /// quarto vazio: o treino tira as perguntas dos níveis concluídos, e numa
+  /// app acabada de instalar não há nenhum.
+  bool get treinoLivre => modoTeste;
+
+  bool get coracoesInfinitos => modoTeste && _teste.coracoesInfinitos;
+  bool get nadaCusta => modoTeste && _teste.nadaCusta;
+
+  /// O desvio do calendário continua de pé com o «pôr à venda» ligado: ver
+  /// a app *real* no dia seguinte é um teste que faz sentido.
+  int get desvioDeDias => ModoTeste.activo ? _teste.desvioDeDias : 0;
+
+  /// Muda os interruptores do painel. Não faz nada na versão normal.
+  ///
+  /// Reavalia logo o que depende do dia — corações, campanha, bloqueio —
+  /// para o efeito de empurrar o calendário se ver no ecrã a seguir, e não
+  /// só na próxima abertura.
+  Future<void> definirInterruptores(InterruptoresDeTeste novos) async {
+    if (!ModoTeste.activo) return;
+    _teste = novos;
+    _reporVidasSeMudouODia();
+    verificarCampanha();
+    verificarFimDoBloqueio();
+    notifyListeners();
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_chaveTeste, json.encode(novos.paraJson()));
+  }
+
+  /// Enche a carteira, para se poderem ver as compras e as ajudas sem
+  /// passar uma semana a juntar ouro. Só na versão de testes.
+  ///
+  /// Entra como ganho verdadeiro — o saldo no ecrã é um saldo a sério, e
+  /// não um número falso por cima de uma carteira vazia. É o que distingue
+  /// isto do interruptor «nada custa», que deixa a carteira quieta.
+  Future<void> darMoedas({int ouro = 0, int cristais = 0}) async {
+    if (!ModoTeste.activo) return;
+    if (ouro > 0) _carteira = _carteira.comGanho(Moeda.gc, ouro);
+    if (cristais > 0) _carteira = _carteira.comGanho(Moeda.cc, cristais);
+    notifyListeners();
+    await _gravar();
+  }
+
+  /// Leva a app a um nível qualquer: muda a classe e a disciplina, e
+  /// devolve o índice desse nível na amarelinha nova.
+  ///
+  /// Devolve -1 quando o nível não está onde se disse. Só na versão de
+  /// testes.
+  ///
+  /// Pede a unidade **e** o nível, e não só o nível, porque os ids dos
+  /// níveis repetem-se entre unidades da mesma disciplina. Procurar só pelo
+  /// id do nível devolvia o primeiro com aquele nome — o terceiro nível da
+  /// primeira unidade em vez do último da última.
+  int saltarPara(Curso destino, Unidade unidade, Nivel nivel) {
+    if (!ModoTeste.activo) return -1;
+    classe = destino.classe;
+    cursoId = destino.id;
+    final i = destino.niveisEmSequencia.indexWhere(
+      (e) => e.unit.id == unidade.id && e.nivel.id == nivel.id,
+    );
+    notifyListeners();
+    _gravar();
+    return i;
+  }
+
+  /// Apaga o trabalho todo e deixa a app como recém-instalada.
+  ///
+  /// Guarda o nome, a classe e o som: quem está a testar não quer repetir a
+  /// entrada da app vinte vezes por dia. Os interruptores também ficam —
+  /// vivem noutra chave de propósito.
+  Future<void> apagarProgresso() async {
+    if (!ModoTeste.activo) return;
+    progresso.clear();
+    _estudadoEm.clear();
+    _marcosPagos.clear();
+    _niveisDosJogos.clear();
+    _conquistas.clear();
+    erradas.clear();
+    xp = 0;
+    lives = maxLives;
+    _sequencia = const Sequencia();
+    _bolsa = const BolsaDeTempo(dia: '');
+    _carteira = const Carteira();
+    _coleccao = const Coleccao();
+    _sortes = const Sortes();
+    _campanha = null;
+    _semanaVerificada = null;
+    _recuperadas = 0;
+    _especiaisNoPomar = 0;
+    _sopasPerfeitas = 0;
+    _diasAEstudarPrimeiro = 0;
+    _ultimoDiaAEstudarPrimeiro = null;
+    _diaDasVidas = null;
+    _vezesSemVidas = 0;
+    _bloqueadoAte = null;
+    _reporVidasSeMudouODia();
+    verificarCampanha();
+    notifyListeners();
+    await _gravar();
+  }
+
   /* ---------------- Tempo de jogo ----------------
      Os corações limitam os exercícios; a bolsa limita os jogos. São coisas
      separadas de propósito, e o estudo NUNCA é travado por esta. Ver
@@ -101,6 +223,17 @@ class AppState extends ChangeNotifier {
   @visibleForTesting
   DateTime Function() relogio = DateTime.now;
 
+  /// A hora de agora, já com o desvio do painel de testes.
+  ///
+  /// Toda a app lê o calendário por aqui. Na versão normal é o [relogio]
+  /// cru; na de testes pode estar empurrada uns dias para a frente, que é a
+  /// única maneira de ver a sequência de dias, a bolsa e a campanha da
+  /// semana a virar sem esperar pela meia-noite.
+  DateTime _agora() {
+    final d = desvioDeDias;
+    return d == 0 ? relogio() : relogio().add(Duration(days: d));
+  }
+
   /// Há um jogo aberto (mesmo que a app esteja minimizada).
   bool _aJogar = false;
 
@@ -108,12 +241,12 @@ class AppState extends ChangeNotifier {
   /// é assim que o tempo pára quando o ecrã se apaga.
   DateTime? _correDesde;
 
-  String get _hoje => Sequencia.iso(relogio());
+  String get _hoje => Sequencia.iso(_agora());
 
   Duration get _decorrido {
     final desde = _correDesde;
     if (desde == null) return Duration.zero;
-    final d = relogio().difference(desde);
+    final d = _agora().difference(desde);
     return d.isNegative ? Duration.zero : d;
   }
 
@@ -121,7 +254,12 @@ class AppState extends ChangeNotifier {
   BolsaDeTempo get bolsa => _bolsa.noDia(_hoje);
 
   /// Quanto tempo de jogo ainda há, contando o jogo que está a decorrer.
+  ///
+  /// Na versão de testes dá sempre o tecto do dia: sem isto, dez minutos
+  /// depois de abrir a app os cinco joguinhos fechavam-se e não havia como
+  /// continuar a vê-los.
   Duration get tempoDeJogo {
+    if (jogosLivres) return BolsaDeTempo.tecto;
     final falta = bolsa.restante - _decorrido;
     return falta.isNegative ? Duration.zero : falta;
   }
@@ -143,7 +281,7 @@ class AppState extends ChangeNotifier {
     _registarActo(estudo: false);
     _bolsa = bolsa;
     _aJogar = true;
-    _correDesde = relogio();
+    _correDesde = _agora();
   }
 
   /// O jogo fechou: assenta o gasto e guarda.
@@ -166,7 +304,7 @@ class AppState extends ChangeNotifier {
   /// A app voltou à frente. Só reata se ainda houver um jogo aberto.
   void retomarTempoDeJogo() {
     if (!_aJogar || _correDesde != null) return;
-    _correDesde = relogio();
+    _correDesde = _agora();
   }
 
   /// Estudar enche a bolsa.
@@ -219,7 +357,10 @@ class AppState extends ChangeNotifier {
     // Vender tempo que o tecto ia deitar fora seria vender nada.
     if (item.tempo != null && bolsa.noTecto) return ResultadoDaCompra.noTecto;
 
-    final paga = _carteira.comGasto(item.moeda, item.preco);
+    // Com «nada custa», a compra passa sem tocar na carteira. A recusa por
+    // saldo deixa de existir; as outras duas — já tem, e tecto da bolsa —
+    // ficam, porque não são de dinheiro.
+    final paga = nadaCusta ? _carteira : _carteira.comGasto(item.moeda, item.preco);
     if (paga == null) return ResultadoDaCompra.semSaldo;
     _carteira = paga;
 
@@ -247,6 +388,10 @@ class AppState extends ChangeNotifier {
   /// dentro do jogo e naquele nível. O que os dois têm em comum é a
   /// carteira, e é ela que decide.
   bool gastar(Moeda moeda, int preco) {
+    // Versão de testes com «nada custa»: a ajuda acontece e a carteira não
+    // mexe. Serve para ver as ajudas todas de um jogo sem ter de juntar o
+    // ouro para cada uma.
+    if (nadaCusta) return true;
     final paga = _carteira.comGasto(moeda, preco);
     if (paga == null) return false;
     _carteira = paga;
@@ -337,7 +482,7 @@ class AppState extends ChangeNotifier {
   /// não muda até domingo. Uma que aparecesse a meio da semana quebrava a
   /// única coisa que a define, que é ter prazo.
   void verificarCampanha() {
-    final semana = segundaDe(relogio());
+    final semana = segundaDe(_agora());
     if (_campanha?.semana == semana || _semanaVerificada == semana) return;
     _semanaVerificada = semana;
 
@@ -487,7 +632,7 @@ class AppState extends ChangeNotifier {
       return;
     }
 
-    final ontem = Sequencia.iso(relogio().subtract(const Duration(days: 1)));
+    final ontem = Sequencia.iso(_agora().subtract(const Duration(days: 1)));
     _diasAEstudarPrimeiro =
         _ultimoDiaAEstudarPrimeiro == ontem ? _diasAEstudarPrimeiro + 1 : 1;
     _ultimoDiaAEstudarPrimeiro = hoje;
@@ -629,6 +774,16 @@ class AppState extends ChangeNotifier {
         }
       }
     }
+    // Versão de testes sem nenhum nível feito: em vez de um treino vazio,
+    // tira as perguntas de toda a classe. Um cartão que abre para zero
+    // perguntas lê-se como defeito, e não é um.
+    if (feitas.isEmpty && treinoLivre) {
+      final vistasTodas = <String>{};
+      feitas.addAll([
+        for (final q in _todasDaClasse)
+          if (vistasTodas.add(q.q)) q,
+      ]);
+    }
     feitas.shuffle();
     return feitas.take(quantas).toList();
   }
@@ -681,7 +836,7 @@ class AppState extends ChangeNotifier {
   /// Dias seguidos de estudo. Conta níveis concluídos, não aberturas da app,
   /// como o roadmap pede. A contagem vive em [Sequencia], que é testada à
   /// parte com meses inteiros de calendário.
-  int get streak => _sequencia.visivelEm(relogio());
+  int get streak => _sequencia.visivelEm(_agora());
 
   /// As unidades com vocabulário que a criança já começou a estudar.
   ///
@@ -771,6 +926,20 @@ class AppState extends ChangeNotifier {
         // Estado corrompido: recomeça limpo em vez de rebentar o arranque.
       }
     }
+    // Os interruptores de teste, antes de tudo o que depende do dia: o
+    // desvio do calendário tem de estar lido quando as vidas se repõem.
+    if (ModoTeste.activo) {
+      final rawTeste = prefs.getString(_chaveTeste);
+      if (rawTeste != null) {
+        try {
+          _teste = InterruptoresDeTeste.deJson(
+            json.decode(rawTeste) as Map<String, dynamic>,
+          );
+        } catch (_) {
+          _teste = const InterruptoresDeTeste();
+        }
+      }
+    }
     _reporVidasSeMudouODia();
     // Sem mostrar: quem já tinha meia classe feita quando esta versão
     // chegou recebe as medalhas e os cristais que merecia, mas não leva com
@@ -803,7 +972,7 @@ class AppState extends ChangeNotifier {
     if (!Nuvem.i.temSessao) return;
     final daNuvem = await Nuvem.i.puxar();
     if (daNuvem != null) fundirDaNuvem(daNuvem);
-    await Nuvem.i.contarAbertura(Sequencia.iso(DateTime.now()));
+    await Nuvem.i.contarAbertura(Sequencia.iso(_agora()));
   }
 
   Future<void> _procurarConteudoNovo() async {
@@ -1019,7 +1188,7 @@ class AppState extends ChangeNotifier {
       // Sobe já o resultado da fusão: se a app fechasse agora, o que a
       // criança fez offline ficaria só neste telemóvel.
       await Nuvem.i.empurrarJa(paraNuvem());
-      await Nuvem.i.contarAbertura(Sequencia.iso(DateTime.now()));
+      await Nuvem.i.contarAbertura(Sequencia.iso(_agora()));
       notifyListeners();
       return null;
     } catch (e) {
@@ -1085,7 +1254,7 @@ class AppState extends ChangeNotifier {
   Duration get esperaRestante {
     final ate = _bloqueadoAte;
     if (ate == null) return Duration.zero;
-    final falta = ate.difference(DateTime.now());
+    final falta = ate.difference(_agora());
     return falta.isNegative ? Duration.zero : falta;
   }
 
@@ -1118,7 +1287,7 @@ class AppState extends ChangeNotifier {
   /// criança.
   void concluirTreino(int acertos) {
     xp += acertos * xpPorAcerto;
-    _sequencia = _sequencia.comActividadeEm(relogio());
+    _sequencia = _sequencia.comActividadeEm(_agora());
     _verificarConquistas();
     notifyListeners();
     _gravar();
@@ -1132,7 +1301,7 @@ class AppState extends ChangeNotifier {
   /// criança fora da app, que seria o pior dos dois mundos numa app de
   /// escola.
   void _reporVidasSeMudouODia() {
-    final hoje = Sequencia.iso(relogio());
+    final hoje = Sequencia.iso(_agora());
     if (_diaDasVidas == hoje) return;
     _diaDasVidas = hoje;
     lives = maxLives;
@@ -1144,10 +1313,13 @@ class AppState extends ChangeNotifier {
   /// praticar não pode custar, senão a criança que mais precisa de treinar
   /// é a que fica mais depressa sem poder treinar.
   void perderVida() {
+    // Na versão de testes com o interruptor ligado, errar não custa — é o
+    // que permite varrer cinquenta níveis seguidos sem parar à espera.
+    if (coracoesInfinitos) return;
     if (lives <= 0) return;
     lives--;
     if (lives == 0) {
-      _bloqueadoAte = DateTime.now().add(proximaEspera);
+      _bloqueadoAte = _agora().add(proximaEspera);
       _vezesSemVidas++;
     }
     notifyListeners();
@@ -1174,7 +1346,7 @@ class AppState extends ChangeNotifier {
     // Sem um único erro: mais uma sorte para gastar nos jogos. É a única
     // porta que existe entre a escola e a ajuda lá dentro.
     if (pct == 100) _sortes = _sortes.comGanho();
-    _sequencia = _sequencia.comActividadeEm(relogio());
+    _sequencia = _sequencia.comActividadeEm(_agora());
     _registarActo(estudo: true);
     _pagarMarcosDeCristal(lv.unit);
     _verificarConquistas();
@@ -1205,7 +1377,7 @@ class AppState extends ChangeNotifier {
     // assim quem já tinha vinte e um dias antes desta versão não recebe três
     // cristais de uma vez, e quem perde a sequência e recomeça não volta a
     // ser pago pela primeira.
-    final semanas = _sequencia.visivelEm(relogio()) ~/ 7;
+    final semanas = _sequencia.visivelEm(_agora()) ~/ 7;
     for (var w = 1; w <= semanas; w++) {
       _pagarMarco('semana:$w', Moeda.cc, Carteira.cristalPorSemanaSeguida);
     }

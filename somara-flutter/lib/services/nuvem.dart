@@ -6,6 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 
+import '../modo_teste.dart';
 import 'firebase_config.dart';
 
 /// Contas e progresso guardado fora do telemóvel.
@@ -61,7 +62,15 @@ class Nuvem {
   ///
   /// Devolve sem fazer nada — e sem se queixar — quando não está. É o
   /// caminho normal enquanto a consola não estiver preenchida.
+  ///
+  /// **Na versão de testes não arranca nunca.** É aqui que esse guarda vive,
+  /// e não nos sítios que chamam a nuvem, porque são muitos e basta
+  /// esquecer um: sem `_auth` o [disponivel] é falso, o cartão da conta não
+  /// aparece no Perfil e todos os métodos deste objecto não fazem nada.
+  /// Centenas de níveis feitos a saltar à vontade não podem ir para o
+  /// mesmo sítio — nem para o mesmo ranking — que o trabalho das crianças.
   Future<void> arrancar() async {
+    if (ModoTeste.activo) return;
     if (!FirebaseConfig.configurado) return;
     try {
       await Firebase.initializeApp(options: FirebaseConfig.opcoes);

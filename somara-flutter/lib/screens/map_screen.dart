@@ -311,7 +311,14 @@ class _MapScreenState extends State<MapScreen>
       // num risco de giz também nunca foi o efeito certo.
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
-        onTap: bloqueado ? null : () => _abrirNivel(st, cell.index),
+        // A casa por abrir continua a ser desenhada como tal na versão de
+        // testes — escura, com o número apagado. Muda só o toque, que lá
+        // passa a funcionar. É de propósito: quem anda a testar precisa de
+        // ver o mapa como a criança o vê, e um tabuleiro todo aceso não é
+        // esse mapa.
+        onTap: bloqueado && !st.saltoLivre
+            ? null
+            : () => _abrirNivel(st, cell.index),
         // O conteúdo acompanha a inclinação da fita; a direito dentro de uma
         // casa torta, denunciava logo que a fita é um desenho por baixo.
         child: Transform.rotate(
