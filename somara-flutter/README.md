@@ -96,6 +96,20 @@ desta pasta.
 A voz é sempre a mesma — `pt-PT-RaquelNeural`, tom `+25Hz`, ritmo `-5%`.
 Mudar isto faz a app soar a duas pessoas diferentes.
 
+## As personagens
+
+A matilha do Roby atravessa o país de classe em classe, e da 4ª em diante
+há um animal-professor por disciplina. As fichas — história, carácter,
+roupa, cores, o que diz quando a criança acerta e quando erra, e o que
+nunca faz — estão em
+[`docs/personagens/`](docs/personagens/README.md), uma por personagem.
+São a encomenda de quem vai desenhar.
+
+Os nomes vivem em
+[`lib/models/personagens.dart`](lib/models/personagens.dart), e o
+`personagens_test` não deixa entrar uma disciplina nova sem professor. Até
+os desenhos existirem, nada disto aparece no ecrã.
+
 ## Notas de manutenção
 
 - O nome do ficheiro de áudio é o SHA-1 do próprio texto, 12 hex. Mudar
